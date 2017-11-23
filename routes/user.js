@@ -7,26 +7,24 @@ const User = require("../model/user");
 
   
  
-router.post('/register',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
+router.post('/register',(req,res)=>{
     let newUser = User({
         name: req.body.name,
         email : req.body.email,
         phone : req.body.phone,
         password : req.body.password,
-        block_status : req.body.block_status,
-        delete_status : req.body.delete_status,
-        verified : req.body.verified,
         verification_code : req.body.verification_code,
-        fb_id : req.body.fb_id,
-        google_id : req.body.google_id,
-        date_tym : req.body.date_tym,
-        role : req.body.role,
         role: (req.body.role) ? req.body.role: 'user' ,
 
     });
-    User.addUser(newUser,(err, user)=>{
+    console.log(newUser);
+    // User.addUser(newUser,(err, user)=>{
+    //     if(err){
+    //         res.json({success: false, msg : "Failed, Email Already Exists"});
+    newUser.save(function(err, InsertedUser){
+        
         if(err){
-            res.json({success: false, msg : "Failed, Email Already Exists"});
+            console.log("Error on Insertion");
         }else{
             // var email = {
             //     from: 'yasirpoongadan@gmail.com',

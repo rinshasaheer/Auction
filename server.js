@@ -1,5 +1,8 @@
 const express = require("express");
 const path = require("path");
+
+const users = require("./routes/user");
+
 const bodyParser = require("body-parser");
 const cors = require('cors');
 const mongoose = require("mongoose");
@@ -17,7 +20,6 @@ mongoose.connection.on('error',(err)=>{
 
 const app = express();
 
-const users = require("./routes/user");
 
 const port = 3000;
 
@@ -27,6 +29,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname,"public")));
+
+app.use('/user',users);
 
 app.get('/', (req,res)=>{
     res.send("Invalid end point");
