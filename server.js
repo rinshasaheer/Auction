@@ -7,6 +7,7 @@ const config = require("./config/database");
 const http = require("http");
 
 mongoose.connect(config.database);
+mongoose.Promise = global.Promise;
 mongoose.connection.on('connected',()=>{
     console.log("database connected");
 });
@@ -14,8 +15,10 @@ mongoose.connection.on('error',(err)=>{
     console.log("database Error" + err);
 });
 
-
 const app = express();
+
+const users = require("./routes/user");
+
 const port = 3000;
 
 app.use(cors());
