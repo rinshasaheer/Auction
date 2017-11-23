@@ -2,8 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const config = require('../config/database');
-const Product = require("../models/product");
-const socketIo = require("socket.io");
+const Product = require("../model/product");
  
 router.post('/addnew',(req,res,next)=>{
 
@@ -45,7 +44,7 @@ router.delete('/delete/:id',(req,res,next)=>{
     })
 });
 
-router.get('/product/:id',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
+router.get('/product/:id',(req,res,next)=>{
     Product.getProductById(req.params.id,(err,poll)=>{
         if(err) throw err;
         return res.json(poll);
