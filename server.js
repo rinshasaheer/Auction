@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 
 const users = require("./routes/user");
+const products = require("./routes/products");
 
 const bodyParser = require("body-parser");
 const cors = require('cors');
@@ -31,6 +32,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname,"public")));
 
 app.use('/user',users);
+app.use('/products',products);
 
 app.get('/', (req,res)=>{
     res.send("Invalid end point");
