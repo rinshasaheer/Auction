@@ -1,14 +1,14 @@
 const express = require("express");
 const router = express.Router();
+// const mongoose = require('mongoose');
 const passport = require("passport");
 const jwt = require("jsonwebtoken");
 const config = require('../config/database');
 const User = require("../model/user");
 
-  
- 
 router.post('/register',(req,res)=>{
-    let newUser = User({
+    console.log(req.body);
+    let newUser = new User({
         name: req.body.name,
         email : req.body.email,
         phone : req.body.phone,
@@ -17,14 +17,10 @@ router.post('/register',(req,res)=>{
         role: (req.body.role) ? req.body.role: 'user' ,
 
     });
-    console.log(newUser);
-    // User.addUser(newUser,(err, user)=>{
-    //     if(err){
-    //         res.json({success: false, msg : "Failed, Email Already Exists"});
-    newUser.save(function(err, InsertedUser){
-        
+    // console.log(newUser);
+    User.addUser(newUser,(err, user)=>{
         if(err){
-            console.log("Error on Insertion");
+            res.json({success: false, msg : "Failed"});
         }else{
             // var email = {
             //     from: 'yasirpoongadan@gmail.com',
@@ -45,6 +41,7 @@ router.post('/register',(req,res)=>{
         }
     });
 });
+
 
 router.get('/users',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
     User.getUsers((err,user)=>{

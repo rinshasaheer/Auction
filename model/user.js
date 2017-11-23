@@ -7,9 +7,9 @@ const UserSchema = mongoose.Schema({
     email : String,
     phone : String,
     password : String,
-    block_status : { type: String, default: 'false' },
-    delete_status :{ type: String, default: 'false' },
-    verified : { type: String, default: 'false' },
+    block_status : { type: String, default: false },
+    delete_status :{ type: String, default: false },
+    verified : { type: String, default: false },
     verification_code :String,
     fb_id : String,
     google_id : String,
@@ -20,15 +20,16 @@ const UserSchema = mongoose.Schema({
 const User = module.exports = mongoose.model('User', UserSchema);
 
 module.exports.addUser = function(newUser,callback){
-    bcrypt.genSalt(10,(err, salt)=>{
-        bcrypt.hash(newUser.password,salt,(err, hash) =>{
-            if(err) throw err;
-            newUser.password = hash;
+    // bcrypt.genSalt(10,(err, salt)=>{
+    //     bcrypt.hash(newUser.password,salt,(err, hash) =>{
+    //         if(err) throw err;
+    //         newUser.password = hash;
             newUser.save(callback);
-        })
-    })
+        // })
+    // })
 
 }
+
 module.exports.getUserById = function(id,callback){
     User.findById(id,callback);
 }
