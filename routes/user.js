@@ -18,8 +18,17 @@ var options = {
 router.post('/register',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
     let newUser = User({
         name: req.body.name,
-        email: req.body.email,
-        password: req.body.password,
+        email : req.body.email,
+        phone : req.body.phone,
+        password : req.body.password,
+        block_status : req.body.block_status,
+        delete_status : req.body.delete_status,
+        verified : req.body.verified,
+        verification_code : req.body.verification_code,
+        fb_id : req.body.fb_id,
+        google_id : req.body.google_id,
+        date_tym : req.body.date_tym,
+        role : req.body.role,
         role: (req.body.role) ? req.body.role: 'user' ,
 
     });
