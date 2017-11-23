@@ -3,16 +3,8 @@ const router = express.Router();
 const passport = require("passport");
 const jwt = require("jsonwebtoken");
 const config = require('../config/database');
-const User = require("../models/user");
-var nodemailer = require('nodemailer');
-var sgTransport = require('nodemailer-sendgrid-transport');
-var options = {
-    auth: {
-      api_user: 'rinshacp',
-      api_key: 'rinsha@sendgrid1'
-    }
-  }
-  var client = nodemailer.createTransport(sgTransport(options));
+const User = require("../model/user");
+
   
  
 router.post('/register',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
