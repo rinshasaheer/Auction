@@ -1,0 +1,273 @@
+.tg-ad {
+    width: 100%;
+    float: left;
+    padding: 15px;
+    margin: 15px 0;
+    background: #fff;
+    border-radius: 5px;
+}
+
+*::after, *::before, p a, a, .tg-socialicons li a, .tg-roundicontext, .tg-roundicontext .tg-usericonholder, .sub-menu, .mega-menu, .tg-themedropdownmenu li a, .tg-themedropdownmenu, .tg-themedropdownmenu li.menu-item-has-children ul, .sub-menu li, .tg-categories .item, .tg-categories .item h3, .tg-prev, .tg-next, .tg-ad, .tg-btnphone, .tg-like, .tg-post figure img, .tg-post figure a img, .tg-categoryholder, .tg-category h4, .tg-feature, .tg-team figure figcaption, .tg-applyedfilters ul li.alert-dismissable a.close, .tg-collapsetitle a span::before, .tg-btn, .tg-user, .tg-socialandappicons, .tg-logo, .tg-btnmenutoggle, .cls-1, .tg-wrapper, .tg-sidebarwrapper, .tg-dropdownmenu, .tg-dropdownmenu li, .tg-dashboardbox, .ct-bar, .tg-offerer, .tg-navtabledata ul li a, .tg-dashboardtable tr, .tg-package, .tg-profilephotogallery ul li figure i, .tg-btndelete {
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+.tg-ad figure {
+    margin: 0;
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.tg-themetag {
+    top: 12px;
+    left: -5px;
+    z-index: 2;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 10px;
+    position: absolute;
+    background: #2882f7;
+    padding: 5px 3px 3px 10px;
+    text-transform: uppercase;
+}
+.tg-featuretag::before {
+    top: 0;
+    left: 100%;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 10px solid #2882f7;
+}
+.tg-featuretag::before, .tg-featuretag::after {
+    width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+}
+.tg-featuretag::after {
+    top: 100%;
+    left: 0;
+    border-top: 5px solid #0052b6;
+    border-left: 5px solid transparent;
+}
+.tg-featuretag::before, .tg-featuretag::after {
+    width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+}
+.tg-ad figure a, .tg-ad figure img, .tg-ad figure a img {
+    z-index: 1;
+    display: block;
+    position: relative;
+}
+.tg-ad figure a, .tg-ad figure img {
+    overflow: hidden;
+    border-radius: 5px;
+}
+.tg-ad figure img, .tg-ad figure a img {
+    width: 100%;
+}
+.tg-ad figure a, .tg-ad figure img, .tg-ad figure a img {
+    z-index: 1;
+    display: block;
+    position: relative;
+}
+.tg-ad figure a, .tg-ad figure img {
+    overflow: hidden;
+    border-radius: 5px;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+img {
+    border: 0;
+}
+.tg-adcontent {
+    width: 100%;
+    float: left;
+}
+.tg-ad:hover {
+    -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);
+}
+.tg-productcagegories {
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    line-height: 18px;
+    list-style: none;
+    margin: 0 0 12px;
+    padding: 20px 0 10px;
+    border-bottom: 1px solid #dbdbdb;
+}
+ul {
+    margin: 0;
+}
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.tg-productcagegories li {
+    float: left;
+    line-height: inherit;
+    list-style-type: none;
+}
+li {
+    line-height: 28px;
+    list-style: disc inside none;
+        list-style-type: disc;
+}
+.tg-productcagegories li a {
+    color: #363b4d;
+}
+.tg-adtitle {
+    width: 100%;
+    float: left;
+    position: relative;
+    padding: 20px 32px 6px 5px;
+    border-bottom: 1px solid #ccc;
+}
+.card-pro-desc{
+
+}
+.tg-ad.tg-verifiedad .tg-adtitle::before {
+    display: block;
+}
+/* .tg-adtitle::before {
+    top: 0;
+    right: 0;
+    content: '';
+    width: 26px;
+    height: 26px;
+    display: none;
+    text-align: center;
+    position: absolute;
+    background: url(http://exprostudio.com/html/classified/images/ads/img-01.jpg) no-repeat 50% 50%;
+} */
+.tg-adtitle h3 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+    color: #363b4d;
+    margin: 0 0 8px;
+    font-weight: 500;
+    line-height: 1.5;
+    font-style: normal;
+    text-transform: capitalize;
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+}
+.tg-adcontent time {
+    width: 100%;
+    float: left;
+    color: #484848;
+    font-size: 14px;
+    line-height: 15px;
+}
+.tg-adprice {
+    width: 100%;
+    float: left;
+    padding: 14px 0 14px;
+    background-color: #2882f7;
+    color: #fff;
+    border: none;
+}
+.tg-adprice h4 {
+    margin: 0;
+    color: #363b4d;
+    font-size: 18px;
+    line-height: 17px;
+}
+.tg-adcontent address {
+    margin: 0;
+    width: 100%;
+    float: left;
+    color: #484848;
+    font-size: 14px;
+    line-height: 14px;
+    font-style: normal;
+    position: relative;
+    padding: 0 0 0 24px;
+}
+.tg-adcontent address::before {
+    top: 0;
+    left: 0;
+    content: '\e9a3';
+    line-height: 14px;
+    position: absolute;
+    font-family: 'icomoon';
+}
+.tg-phonelike {
+    width: 100%;
+    float: left;
+    height: 33px;
+    margin: 20px 0 0;
+    position: relative;
+    padding: 0 38px 0 0;
+}
+.tg-btnphone {
+    margin: 0 0 10px;
+}
+.tg-btnphone {
+    width: 100%;
+    float: left;
+    color: #363b4d;
+    border-radius: 3px;
+    text-align: center;
+    background: #f7f7f7;
+}
+.tg-btnphone i {
+    font-size: 16px;
+    padding: 0 5px 0 0;
+}
+.tg-btnphone i, .tg-btnphone span, .tg-btnphone span em {
+    font-size: 14px;
+    line-height: 33px;
+    font-style: normal;
+}
+.tg-btnphone i, .tg-btnphone span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon-phone-handset::before {
+    content: "\e93c";
+}
+.tg-like:hover, .tg-like.tg-liked {
+    color: #fff;
+    background: #2882f7;
+}
+.tg-like {
+    top: 0;
+    right: 0;
+    width: 33px;
+    color: #363b4d;
+    display: block;
+    cursor: pointer;
+    padding: 2px 0 1px;
+    text-align: center;
+    position: absolute;
+    border-radius: 3px;
+    background: #f7f7f7;
+}
+.tg-like:hover i, .tg-like.tg-liked i {
+    color: #fff;
+}
+.tg-like i {
+    color: #363b4d;
+    display: block;
+    font-size: 12px;
+    line-height: 30px;
+}
+.fa-heart::before {
+    content: "\f004";
+}
+
+.tg-desc{
+    margin: 25px auto;
+}
