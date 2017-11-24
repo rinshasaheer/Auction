@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import {RouterModule, Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
+
+import { EqualValidator } from './equal-validator.directive';
 
 const appRoutes: Routes = [
   {path:'', redirectTo:'/registration', pathMatch:'full'},
@@ -13,10 +16,13 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    EqualValidator
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
