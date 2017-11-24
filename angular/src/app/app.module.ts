@@ -22,7 +22,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     RegistrationComponent,
-    ClosedAuctionComponent
+    ClosedAuctionComponent,
     NavigationComponent,
     HomeComponent,
     CardComponent
