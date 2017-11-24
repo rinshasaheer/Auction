@@ -14,7 +14,7 @@ const ProductsSchema = mongoose.Schema({
         },
         bid_amount: {
             type : Number,
-            required : true,
+            require : true,
         },
         min_bid_rate: {
             type : Number,
@@ -71,14 +71,14 @@ const Product = module.exports = mongoose.model('Product', ProductsSchema);
 module.exports.addProduct = function(product,callback){
     console.log(product);
     var newProduct = new Product(product);
-    Product.save(callback);
+    newProduct.save(callback);
 }
 
 module.exports.getAllProduct = function(callback){
     Product.find({},callback);
 }
 module.exports.getAllCloasedProduct = function(callback){
-    Product.find({"end_date" : {"$lt" : Date.now}},callback);
+    Product.find({"end_date" : {"$lt" : Date()}},callback);
 }
 
 module.exports.deleteProduct = function(id,callback){
