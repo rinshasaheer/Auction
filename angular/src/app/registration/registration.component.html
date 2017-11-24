@@ -1,8 +1,9 @@
 
 <br>
+<!-- f.form.valid && -->
 <div class="wrapper">
   <br>
-  <form class="form-horizontal" role="form"  #f="ngForm" (ngSubmit)="f.form.valid && onRegisterSubmit();" novalidate>
+  <form class="form-horizontal" role="form"  #f="ngForm" (ngSubmit)=" onRegisterSubmit();" novalidate>
 
     <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !name.valid }">
         <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
@@ -37,7 +38,7 @@
      </div> 
 
     <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }"> 
-      <!-- <label for="exampleInputPassword1">Password</label> -->
+      
       <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
         <input type="password" class="form-control" id="password" placeholder="Password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$" required validateEqual="confirmPassword" reverse="true" [(ngModel)]="newUser.password" name="password" #password="ngModel"> 
         <div *ngIf="f.submitted && password.invalid">
@@ -48,13 +49,11 @@
     </div> 
 
     <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !confirmPassword.valid }">
-      <!-- <label for="exampleInputPassword1">Password</label> -->
+     
       <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
-        <input type="password" class="form-control" id="confirmPassword" required validateEqual="password" placeholder="Confirm Password" required validateEqual="password" reverse="false" [(ngModel)]="newUser.confirmPassword" name="confirmPassword" #confirmPassword="ngModel"> 
-        <!-- <div *ngIf="f.submitted && confirmPassword.invalid"> -->
-            <!-- <div [hidden]="confirmPassword.valid || (confirmPassword.pristine && !f.submitted)" class="help-block">! Password not Match</div>    -->
-            <div *ngIf="!confirmPassword.valid || (!confirmPassword.pristine && f.submitted)" class="help-block">! Password not Match</div>   
-        <!-- </div>  -->
+        <input type="password" class="form-control" id="confirmPassword" required validateEqual="password" placeholder="Confirm Password" required validateEqual="password" reverse="false" [(ngModel)]="User.confirmPassword" name="confirmPassword" #confirmPassword="ngModel"> 
+        <div *ngIf="!confirmPassword.valid || (!confirmPassword.pristine && f.submitted)" class="help-block">! Password not Match</div>   
+        
         </div>
     </div> 
 

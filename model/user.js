@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const config = require("../config/database");
 
 const UserSchema = mongoose.Schema({
-    name : {type : String, required : true, unique : true},
+    name : {type : String, require : true, unique : true},
     email : String,
     phone : String,
     password : String,
