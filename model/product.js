@@ -78,7 +78,7 @@ module.exports.getAllProduct = function(callback){
     Product.find({},callback);
 }
 module.exports.getAllCloasedProduct = function(callback){
-    Product.find({"end_date" : {"$lt" : Date.now}},callback);
+    Product.find({"end_date" : {"$lt" : Date()}},callback);
 }
 
 module.exports.deleteProduct = function(id,callback){

@@ -32,6 +32,13 @@ router.get('/products',(req,res,next)=>{
     })
     
 });
+router.get('/closed_products',(req,res,next)=>{
+    Product.getAllCloasedProduct((err,poll)=>{
+        if(err) throw err;
+        return res.json(poll);
+    })
+    
+});
 
 router.delete('/delete/:id',(req,res,next)=>{
     Product.deleteProduct(req.params.id,(err,user)=>{
