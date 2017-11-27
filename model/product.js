@@ -77,8 +77,11 @@ module.exports.addProduct = function(product,callback){
 module.exports.getAllProduct = function(callback){
     Product.find({},callback);
 }
-module.exports.getAllCloasedProduct = function(callback){
-    Product.find({"end_date" : {"$lt" : Date()}},callback);
+module.exports.getAllClosedProduct = function(callback){
+    Product.find({"end_date" : {"$lt" : Date()}, "bidders.bid_status": { "$ne": "rejected"}},callback);
+}
+module.exports.getAllUpcomingProduct = function(callback){
+    Product.find({"start_date" : {"$gt" : Date()}},callback);
 }
 
 module.exports.deleteProduct = function(id,callback){

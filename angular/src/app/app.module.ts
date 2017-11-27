@@ -14,12 +14,18 @@ import { ProductService } from './services/product.service';
 import { EqualValidator } from './equal-validator.directive';
 import { LoginComponent } from './login/login.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
+import { ClosedAuctionBackComponent } from './closed-auction-back/closed-auction-back.component';
+import { UpcomingAuctionBackComponent } from './upcoming-auction-back/upcoming-auction-back.component';
+import { RunningAuctionBackComponent } from './running-auction-back/running-auction-back.component';
 
 
 const appRoutes: Routes = [
   {path:'', redirectTo:'/registration', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
+  {path:'closed-auction', component:ClosedAuctionBackComponent},
+  {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
+
 ]
 
 @NgModule({
@@ -29,6 +35,9 @@ const appRoutes: Routes = [
     EqualValidator,
     LoginComponent,
     EmailVerificationComponent,
+    ClosedAuctionBackComponent,
+    UpcomingAuctionBackComponent,
+    RunningAuctionBackComponent,
 
   ],
   imports: [
