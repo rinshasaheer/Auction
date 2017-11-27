@@ -5,9 +5,11 @@ const passport = require("passport");
 const jwt = require("jsonwebtoken");
 const config = require('../config/database');
 const User = require("../model/user");
+'use strict';
+const nodemailer = require('nodemailer');
 
 router.post('/register',(req,res)=>{
-    console.log(req.body);
+    // console.log(req.body);
     let newUser = new User({
         name: req.body.name,
         email : req.body.email,
@@ -17,26 +19,44 @@ router.post('/register',(req,res)=>{
         role: (req.body.role) ? req.body.role: 'user' ,
 
     });
-    // console.log(newUser);
     User.addUser(newUser,(err, user)=>{
+       
         if(err){
             res.json({success: false, msg : "Failed"});
         }else{
-            // var email = {
-            //     from: 'yasirpoongadan@gmail.com',
-            //     to: req.body.email,
-            //     subject: 'Poll Registration Completd Successfully',
-            //   //  text: 'Hello ' + req.body.name,
-            //     html: '<b>Hello ' + req.body.name + '</b><p></p><p>username : ' + req.body.email +'</p><p>Password : ' + req.body.password +'</p><p>Link : http://localhost:4200/login</p>'
-            //   };
-            //   client.sendMail(email, function(err, info){
-            //     if (err ){
-            //       console.log(error);
-            //     }
-            //     else {
-            //       console.log('Message sent: ' + info.response);
-            //     }
-            // });  
+            nodemailer.createTestAccount((err, account) => {
+                
+                    // create reusable transporter object using the default SMTP transport
+                    let transporter = nodemailer.createTransport({
+                        service: 'gmail',
+                        auth: {
+                            user: "mean.symptots@gmail.com", // generated ethereal user
+                            pass: "Symptots@2017"  // generated ethereal password
+                        }
+                    });
+                
+                    // setup email data with unicode symbols
+                    let mailOptions = {
+                        from: 'mean.symptots@gmail.com', // sender address
+                        to: req.body.email, // list of receivers
+                        subject: 'Please log in to your account', // Subject line
+                        text: '', // plain text body
+                        html: '<b><h3>Hi Rinsha,</h3><br/>We’re excited to get you started using Auction! You’re on your way to being fully set up, but first, you must finish your account verification by clicking the below link:<br/>Username: '+req.body.email+'<br/>Password: '+req.body.password+'<br/>Verification Link:</a> http://192.168.1.9:3000/email-verification/'+req.body.verification_code+'</a><br/> Thank You!</b>' // html body
+                    };
+                
+                    // send mail with defined transport object
+                    transporter.sendMail(mailOptions, (error, info) => {
+                        if (error) {
+                            return console.log(error);
+                        }
+                        console.log('Message sent: %s', info.messageId);
+                        // Preview only available when sending through an Ethereal account
+                        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+                
+                        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
+                        // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+                    });
+                });
             res.json({success: true, msg : "User registered, Redirecting..."});
         }
     });
@@ -85,5 +105,20 @@ router.post('/authenticate',(req,res,next)=>{
     })
 });
 
+router.put('/verify/:id', function(req, res){
+    console.log("Verify a user");
+    User.findOneAndUpdate({ "verification_code" : req.params.id }, 
+        { $set: { verified: true } }, 
+        { new: true }, 
+        function(err, doc) {
+            if(err){
+                return res.json({success:false, msg: 'User Not verified'});
+            }
+            else{
+                return res.json({success:true, msg: 'User verified'});
+            }
+        
+        });
+    });
 
 module.exports = router;

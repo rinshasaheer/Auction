@@ -12,12 +12,14 @@ import { ProductService } from './services/product.service';
 // import { LoginComponent } from './login/login.component';
 
 import { EqualValidator } from './equal-validator.directive';
+import { LoginComponent } from './login/login.component';
+import { EmailVerificationComponent } from './email-verification/email-verification.component';
 
 
 const appRoutes: Routes = [
   {path:'', redirectTo:'/registration', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
-
+  {path:'email-verification/:id', component:EmailVerificationComponent},
 ]
 
 @NgModule({
@@ -25,6 +27,8 @@ const appRoutes: Routes = [
     AppComponent,
     RegistrationComponent,
     EqualValidator,
+    LoginComponent,
+    EmailVerificationComponent,
 
   ],
   imports: [
