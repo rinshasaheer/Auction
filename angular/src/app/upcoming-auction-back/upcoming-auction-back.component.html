@@ -1,0 +1,53 @@
+<div class="container" style="padding-top:20px;">
+  
+    <div *ngIf="products?.length > 0" id="products" class="row list-group">
+        <div  *ngFor="let product of products;let i = index;" class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                
+                <!-- <img class="group list-group-image" src="http://placehold.it/400x250/ccc/fff" alt="" /> -->
+                <img  class="group list-group-image" src="assets/uploads/{{product.image||'default.png'}}" alt="{{product.name}}" />
+           
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        {{product.name}}</h4>
+                    <p class="group inner list-group-item-text">{{product.desc}}</p>
+          
+                    <div class="row text-center">
+                        <div class="col-xs-12 col-md-4 col-md-offset-1">
+                            Bid Start On<br>
+                            <b>
+                              {{product.start_date | date: 'dd-MM-yyyy'}}
+                              <br>
+                              {{product.start_date | date : 'mediumTime'}}
+                            </b>
+                        </div>
+                         <div class="col-xs-12 col-md-4 col-md-offset-1">
+                            Bid End On<br>
+                            <b>
+                                {{product.end_date | date: 'dd-MM-yyyy'}}
+                                <br>
+                                {{product.end_date | date : 'mediumTime'}}
+                            </b>
+                        </div>
+                    </div>
+                    <div class="row margn">
+                        
+                        <div class="col-xs-12 col-md-12">
+                            <div  class="alert alert-success text-center ">
+                              <div >
+                              <strong>Bid Start Price - ${{product.bid_amount | number:'1.2-2'}}</strong>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+  
+    <div *ngIf="products?.length == 0" id="products" class="row list-group">
+      No Product Found
+    </div>
+    </div>
+        
+       

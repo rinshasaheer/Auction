@@ -1,0 +1,71 @@
+<div class="container" style="padding-top:20px;">
+  
+    <div *ngIf="products?.length > 0" id="products" class="row list-group">
+        <div  *ngFor="let product of products;let i = index;" class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                
+                <!-- <img class="group list-group-image" src="http://placehold.it/400x250/ccc/fff" alt="" /> -->
+                <img  class="group list-group-image" src="assets/uploads/{{product.image||'default.png'}}" alt="{{product.name}}" />
+           
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        {{product.name}}</h4>
+                    <p class="group inner list-group-item-text">{{product.desc}}</p>
+                    <div class="row text-center">
+                        <div class="col-xs-12 col-md-4 col-md-offset-1">
+                            Basic Price
+                            <p class="lead">{{product.bid_amount | number:'1.2-2'}}</p>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-md-offset-1">
+                            Bid Price
+                            
+                            <p *ngIf="product.bidders.length > 0" class="lead">{{product.bidders[product.bidders.length-1].amount | number:'1.2-2'}}</p>
+                            <p *ngIf="product.bidders.length == 0 " class="alert-danger lead">No bid</p>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-xs-12 col-md-4 col-md-offset-1">
+                            Started<br>
+                            <b>
+                              {{product.start_date | date: 'dd-MM-yyyy'}}
+                              <br>
+                              {{product.start_date | date : 'mediumTime'}}
+                            </b>
+                        </div>
+                         <div class="col-xs-12 col-md-4 col-md-offset-1">
+                            Ended<br>
+                            <b>
+                                {{product.end_date | date: 'dd-MM-yyyy'}}
+                                <br>
+                                {{product.end_date | date : 'mediumTime'}}
+                            </b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-xs-12 col-md-12">
+                            <div *ngIf="product.bidders.length > 0" class="alert alert-success text-center margn">
+                              <div *ngIf="product.is_bid_completed">
+                              <strong>Winner! </strong> Manu Prasad
+                              </div>
+                              <div *ngIf="!product.is_bid_completed">
+                              <a class="alert-success" href="#">Assign - Winner</a>
+                              </div>
+                          </div>
+                            <div *ngIf="product.bidders.length == 0" class="alert alert-danger text-center margn">
+                            <a class="alert-danger" href="#">Re-submit</a>
+                          </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+  
+    <div *ngIf="products?.length == 0" id="products" class="row list-group">
+      No Product Found
+    </div>
+    </div>
+        
+       
