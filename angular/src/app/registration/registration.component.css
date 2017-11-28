@@ -1,0 +1,95 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: table;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+a {
+  color: #6897bb !important;
+  outline: none !important;
+  text-decoration: underline !important;
+}
+
+.checkbox {
+  color:black;
+}
+
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  /* border: 3px solid; */
+  box-shadow: none;
+  outline: 0 none;
+  height: 50px;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border: 3px solid #6897bb;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+.modal-footer .btn-default {
+  border: 1px solid #ccc;
+}
+
+.modal-footer .btn-default:hover {
+  border: 1px solid #6897bb;
+  background: #fff;
+}
+
+/* .btn-default {
+  border: 3px solid transparent;
+} */
+
+.btn-default:hover {
+  border: 3px solid #6897bb;
+  background: #fff;
+}
+
+/* /* .wrapper {
+  /* display: table-cell; */
+  /* vertical-align: middle; */
+/* } */  */
+
+
+.wrapper
+{
+    border: 3px solid bl;
+}
+.modal-body {
+  height: 300px;
+  overflow-y: scroll;
+}

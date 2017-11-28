@@ -32,8 +32,17 @@ router.get('/products',(req,res,next)=>{
     })
     
 });
+
+router.get('/upcoming_products',(req,res,next)=>{
+    Product.getAllUpcomingProduct((err,product)=>{
+        if(err) throw err;
+        return res.json(product);
+    })
+    
+});
+
 router.get('/closed_products',(req,res,next)=>{
-    Product.getAllCloasedProduct((err,poll)=>{
+    Product.getAllClosedProduct((err,poll)=>{
         if(err) throw err;
         return res.json(poll);
     })
