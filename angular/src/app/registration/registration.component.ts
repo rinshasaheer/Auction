@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PasswordValidation } from './password-validation';
 // import { EqualTextValidator } from "angular2-text-equality-validator"; 
 import { UserService} from '../services/user.service';
-import {  CanActivate, Router } from '@angular/router';
+import { CanActivate, Router } from '@angular/router';
 
 @Component({
   selector: 'registration',
@@ -37,7 +37,7 @@ export class RegistrationComponent implements OnInit {
     this.userService.registerUser(this.newUser).subscribe(data => {
       if(data){
        alert("Account created successfully, Please verify your Email address");
-      //  this.routes.navigate(['/login']);
+       this.routes.navigate(['/login']);
         console.log("successfull created user");
       
       } else {
