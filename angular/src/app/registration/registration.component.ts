@@ -13,18 +13,20 @@ import {  CanActivate, Router } from '@angular/router';
 })
 
 export class RegistrationComponent implements OnInit {
-
+  timestamp = new Date().getTime().toString();
   newUser = {
     name : '',
     email : '',
     phone : '',
     password : '',
     // confirmPassword : ''
+    verification_code : this.timestamp + Math.floor(100000 + Math.random() * 900000),
     };
 
     User = {
       confirmPassword : ''
     }
+
   constructor(private userService:UserService, private routes: Router) { }
 
   ngOnInit() {
@@ -32,9 +34,9 @@ export class RegistrationComponent implements OnInit {
 
   onRegisterSubmit(){
     console.log(this.newUser);
-    this.userService.registerUser(this.newUser.name).subscribe(data => {
+    this.userService.registerUser(this.newUser).subscribe(data => {
       if(data){
-       alert("Success");
+       alert("Account created successfully, Please verify your Email address");
       //  this.routes.navigate(['/login']);
         console.log("successfull created user");
       
@@ -44,5 +46,4 @@ export class RegistrationComponent implements OnInit {
       }
     });
   }
-debugger;
 }

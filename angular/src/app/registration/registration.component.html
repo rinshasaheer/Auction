@@ -1,9 +1,8 @@
 
 <br>
-<!-- f.form.valid && -->
 <div class="wrapper">
   <br>
-  <form class="form-horizontal" role="form"  #f="ngForm" (ngSubmit)=" onRegisterSubmit();" novalidate>
+  <form class="form-horizontal" role="form"  #f="ngForm" (ngSubmit)="f.form.valid && onRegisterSubmit();" novalidate>
 
     <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !name.valid }">
         <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">

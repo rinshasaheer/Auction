@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+.page-head{
+    text-align: center;
+    font-size: 27px;
+    color: #ABAAAA;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.mrgn-nav-top{
+    margin-top: 180px;
+}
+.auction-section{
+    margin-top: 115px;
+}
+.no-item{
+    min-height: 400px
+
+}
+.no-item h4{
+    text-align: center;
+    font-size: 25px;
+    color: rgb(99, 99, 99);
+    padding-top: 180px;
+}
