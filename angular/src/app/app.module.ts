@@ -39,7 +39,9 @@ import { CountDownTimerComponent } from './count-down-timer/count-down-timer.com
 
 import {ProductServiceService} from './product-service.service';
 import { MyauctionsComponent } from './myauctions/myauctions.component';
-import { CapitalizePipe } from './capitalize.pipe'
+import { CapitalizePipe } from './capitalize.pipe';
+import { RunningauctionComponent } from './runningauction/runningauction.component';
+import { CardRunningComponent } from './card-running/card-running.component'
 const appRoutes: Routes = [
   {path:'Dashboard', component: DashboardComponent},
   {path:'AllUsers', component: AllUsersComponent},
@@ -82,6 +84,8 @@ const appRoutes: Routes = [
     RunningAuctionBackComponent,
     ReadMoreComponent,
     CountDownTimerComponent,
+    RunningauctionComponent,
+    CardRunningComponent,
   ],
   
   providers: [ProductServiceService,
