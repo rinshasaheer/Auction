@@ -197,11 +197,14 @@ nav.tm_navbar li:hover > a {
 .navbar-brand {
     float: left;
     height: auto;
-    padding: 35px 14px;
+    padding: 15px 14px;
     font-size: 18px;
     line-height: 20px;
     overflow: hidden;
     color: #ffffff;
+}
+.navbar-brand img{
+    width:48%;
 }
 .navbar-nav > li > a {
     padding-top: 8px !important;
@@ -244,4 +247,9 @@ default .navbar-toggle:hover {
 }
 .navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar{
     background-color: #084da7;
+}
+@media only screen and (max-width: 500px) {
+    .navbar-brand {
+        width:78%;
+    }
 }

@@ -5,6 +5,13 @@
     margin: 15px 0;
     background: #fff;
     border-radius: 5px;
+    padding-bottom: 0;
+    -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
 }
 
 *::after, *::before, p a, a, .tg-socialicons li a, .tg-roundicontext, .tg-roundicontext .tg-usericonholder, .sub-menu, .mega-menu, .tg-themedropdownmenu li a, .tg-themedropdownmenu, .tg-themedropdownmenu li.menu-item-has-children ul, .sub-menu li, .tg-categories .item, .tg-categories .item h3, .tg-prev, .tg-next, .tg-ad, .tg-btnphone, .tg-like, .tg-post figure img, .tg-post figure a img, .tg-categoryholder, .tg-category h4, .tg-feature, .tg-team figure figcaption, .tg-applyedfilters ul li.alert-dismissable a.close, .tg-collapsetitle a span::before, .tg-btn, .tg-user, .tg-socialandappicons, .tg-logo, .tg-btnmenutoggle, .cls-1, .tg-wrapper, .tg-sidebarwrapper, .tg-dropdownmenu, .tg-dropdownmenu li, .tg-dashboardbox, .ct-bar, .tg-offerer, .tg-navtabledata ul li a, .tg-dashboardtable tr, .tg-package, .tg-profilephotogallery ul li figure i, .tg-btndelete {
@@ -91,8 +98,11 @@ img {
     float: left;
 }
 .tg-ad:hover {
-    -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);
-    box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+    cursor: pointer;
 }
 .tg-productcagegories {
     width: 100%;
@@ -177,6 +187,9 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     background-color: #2882f7;
     color: #fff;
     border: none;
+    text-align: center;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 .tg-adprice h4 {
     margin: 0;
@@ -270,4 +283,5 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 
 .tg-desc{
     margin: 25px auto;
+    min-height: 123px;
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductServiceService } from './../product-service.service';
+import {product} from './../schema/product';  
+import { Http, Headers } from '@angular/http';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  products : Array<product>;
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

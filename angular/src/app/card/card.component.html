@@ -1,3 +1,4 @@
+<!-- <div *ngIf="!itemStatus" class="col-md-8 col-xs-12 col-sm-6 col-lg-8"><h4>Sorry! No Items to display.</h4></div> -->
 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
   <div class="tg-ad tg-verifiedad">
       <figure>
@@ -11,11 +12,11 @@
           </ul> -->
           
           <div class="tg-adtitle">
-              <h3><a href="javascript:void(0);">iPhone X for sale</a></h3>
+              <h3><a href="javascript:void(0);">{{item?.name | capitalize}}</a></h3>
           </div>
           <div class="clearfix"></div>
-          <div class="tg-desc">
-                  <p class="card-pro-desc">Consectetur adipicing elit sed eiusmod temporie incidint ut labore et dolore magna enim ad minim veniam, quis nostrud.</p>
+          <div class="tg-desc" >
+                  <h4>Description: </h4><p class="card-pro-desc">{{item?.desc | capitalize}}</p>
           </div>
           
           <!-- <time datetime="2017-06-06">Last Updated: 4 hours ago</time> -->
@@ -29,23 +30,26 @@
               <span class="tg-like tg-liked"><i class="fa fa-heart"></i></span>
           </div> -->
       </div>
-      <button class="btn btn-primary tg-adprice"> Final Price: $200</button>
+      <div class="row">
+        <div class="btn-primary tg-adprice">${{highest}}</div>
+      </div>
+      
   </div>
 </div>
-  
+<!--   
 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
       <div class="tg-ad tg-verifiedad">
           <figure>
               <span class="tg-themetag tg-featuretag">featured</span>
-              <a href="javascript:void(0);"><img src="http://exprostudio.com/html/classified/images/ads/img-01.jpg" alt="image description"></a>
+              <a href="javascript:void(0);"><img src="http://exprostudio.com/html/classified/images/ads/img-01.jpg" alt="image description"></a> -->
               <!-- <span class="tg-photocount">See 18 Photos</span> -->
-          </figure>
-          <div class="tg-adcontent">
+          <!-- </figure>
+          <div class="tg-adcontent"> -->
               <!-- <ul class="tg-productcagegories">
                   <li><a href="javascript:void(0);">Mobiles</a></li>
               </ul> -->
               
-              <div class="tg-adtitle">
+              <!-- <div class="tg-adtitle">
                   <h3><a href="javascript:void(0);">iPhone X for sale</a></h3>
               </div>
               <div class="clearfix"></div>
@@ -56,7 +60,7 @@
               <div class="clearfix"></div>
               <div class="tg-days">
                       <h4>Days Left: 4Days</h4>
-              </div>
+              </div> -->
               <!-- <time datetime="2017-06-06">Last Updated: 4 hours ago</time> -->
               
               <!-- <address>44-46 abc Road, Manchester</address> -->
@@ -67,7 +71,7 @@
                   </a>
                   <span class="tg-like tg-liked"><i class="fa fa-heart"></i></span>
               </div> -->
-          </div>
+          <!-- </div>
           <button class="btn btn-primary tg-adprice"> Basic Price: $200</button>
       </div>
   </div>
@@ -75,22 +79,22 @@
           <div class="tg-ad tg-verifiedad">
               <figure>
                   <span class="tg-themetag tg-featuretag">featured</span>
-                  <a href="javascript:void(0);"><img src="http://exprostudio.com/html/classified/images/ads/img-01.jpg" alt="image description"></a>
+                  <a href="javascript:void(0);"><img src="http://exprostudio.com/html/classified/images/ads/img-01.jpg" alt="image description"></a> -->
                   <!-- <span class="tg-photocount">See 18 Photos</span> -->
-              </figure>
-              <div class="tg-adcontent">
+              <!-- </figure>
+              <div class="tg-adcontent"> -->
                   <!-- <ul class="tg-productcagegories">
                       <li><a href="javascript:void(0);">Mobiles</a></li>
                   </ul> -->
                   
-                  <div class="tg-adtitle">
+                  <!-- <div class="tg-adtitle">
                       <h3><a href="javascript:void(0);">iPhone X for sale</a></h3>
                   </div>
                   <div class="clearfix"></div>
                   <div class="tg-desc">
                           <p class="card-pro-desc">Consectetur adipicing elit sed eiusmod temporie incidint ut labore et dolore magna enim ad minim veniam, quis nostrud.</p>
                   </div>
-                  
+                   -->
                   <!-- <time datetime="2017-06-06">Last Updated: 4 hours ago</time> -->
                   
                   <!-- <address>44-46 abc Road, Manchester</address> -->
@@ -101,7 +105,7 @@
                       </a>
                       <span class="tg-like tg-liked"><i class="fa fa-heart"></i></span>
                   </div> -->
-              </div>
+              <!-- </div>
               <button class="btn btn-primary tg-adprice"> Final Price: $200</button>
           </div>
-      </div>
+      </div> -->
