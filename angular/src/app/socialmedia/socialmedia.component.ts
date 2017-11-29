@@ -21,10 +21,10 @@ export class SocialmediaComponent implements OnInit {
           this.userService.storeUserData(data.token, data.user);
           if(data.user.role=="user"){
             
-            this.router.navigate(['/registration']);
+            this.router.navigate(['/home']);
           }
           if(data.user.role=="admin"){
-            this.router.navigate(['/login']);
+            this.router.navigate(['/dashboard']);
           }
         }
       });

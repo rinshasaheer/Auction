@@ -116,7 +116,7 @@ passport.deserializeUser(function(id, done) {
         clientSecret:configAuth.googleAuth.clientSecret,
         callbackURL: configAuth.googleAuth.callbackURL,
     },
-    function(token, refreshToken, profile, done) {
+    function(req, token, refreshToken, profile, done) {
         // console.log(profile);
         process.nextTick(function() {
             if(!req.user){

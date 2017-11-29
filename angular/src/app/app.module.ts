@@ -46,7 +46,7 @@ import { RunningauctionComponent } from './runningauction/runningauction.compone
 import { CardRunningComponent } from './card-running/card-running.component'
 
 const appRoutes: Routes = [
-  // {path:'', redirectTo:'/login', pathMatch:'full'},
+  {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
   {path:'login', component:LoginComponent},  
@@ -72,6 +72,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
     RegistrationComponent,
     NavigationComponent,
     HomeComponent,

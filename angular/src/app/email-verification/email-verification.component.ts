@@ -19,7 +19,7 @@ export class EmailVerificationComponent implements OnInit {
       this.userService.generateToken(params.id).subscribe(data => {
         if(data==true){
          alert("Success, Redirecting ...");
-         this.router.navigate(['/login']);
+         this.router.navigate(['/home']);
           console.log("successfull verified user");
         
         } else {

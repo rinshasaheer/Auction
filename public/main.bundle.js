@@ -17,6 +17,67 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 
 /***/ }),
 
+/***/ "../../../../../src/app/all-users/all-users.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/all-users/all-users.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"page-wrapper\">\r\n  <div class=\"row\">\r\n      <div class=\"col-lg-12\">\r\n          <h1 class=\"page-header\">All Users</h1>\r\n      </div>\r\n      <!-- /.col-lg-12 -->\r\n  </div>\r\n<table datatable class=\"row-border hover\">\r\n  <thead>\r\n    <tr>\r\n      <th>ID</th>\r\n      <th>Name</th>\r\n      <th>Email</th>\r\n      <th>Phone</th>\r\n      <th>Block</th>\r\n      <th>Delete</th>\r\n      \r\n     \r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <tr>\r\n      <td>1</td>\r\n      <td>Foo</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n     \r\n    </tr>\r\n    <tr>\r\n      <td>2</td>\r\n      <td>Someone</td>\r\n      <td>Youknow</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n    </tr>\r\n    <tr>\r\n      <td>3</td>\r\n      <td>Iamout</td>\r\n      <td>Ofinspiration</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n    </tr>\r\n    <tr>\r\n      <td>4</td>\r\n      <td>Yoda</td>\r\n      <td>Skywalker</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n    </tr>\r\n    <tr>\r\n      <td>5</td>\r\n      <td>Patrick</td>\r\n      <td>Dupont</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n    </tr>\r\n    <tr>\r\n      <td>6</td>\r\n      <td>Barack</td>\r\n      <td>Obama</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n    </tr>\r\n    <tr>\r\n      <td>7</td>\r\n      <td>François</td>\r\n      <td>Holland</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n    </tr>\r\n    <tr>\r\n      <td>8</td>\r\n      <td>Michel</td>\r\n      <td>Popo</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n    </tr>\r\n    <tr>\r\n      <td>9</td>\r\n      <td>Chuck</td>\r\n      <td>Norris</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n    </tr>\r\n    <tr>\r\n      <td>10</td>\r\n      <td>Simon</td>\r\n      <td>Robin</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n    </tr>\r\n    <tr>\r\n      <td>11</td>\r\n      <td>Louis</td>\r\n      <td>Lin</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n    </tr>\r\n    <tr>\r\n      <td>12</td>\r\n      <td>Zelda</td>\r\n      <td>Link</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n      <td>Bar</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/all-users/all-users.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AllUsersComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AllUsersComponent = (function () {
+    function AllUsersComponent() {
+    }
+    AllUsersComponent.prototype.ngOnInit = function () {
+    };
+    return AllUsersComponent;
+}());
+AllUsersComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-all-users',
+        template: __webpack_require__("../../../../../src/app/all-users/all-users.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/all-users/all-users.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], AllUsersComponent);
+
+//# sourceMappingURL=all-users.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/app.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -78,29 +139,79 @@ AppComponent = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__equal_validator_directive__ = __webpack_require__("../../../../../src/app/equal-validator.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__email_verification_email_verification_component__ = __webpack_require__("../../../../../src/app/email-verification/email-verification.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__closed_auction_back_closed_auction_back_component__ = __webpack_require__("../../../../../src/app/closed-auction-back/closed-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__upcoming_auction_back_upcoming_auction_back_component__ = __webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__running_auction_back_running_auction_back_component__ = __webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__socialmedia_socialmedia_component__ = __webpack_require__("../../../../../src/app/socialmedia/socialmedia.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es7_reflect__ = __webpack_require__("../../../../core-js/es7/reflect.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es7_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_core_js_es7_reflect__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__("../../../../zone.js/dist/zone.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_zone_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_reflect_metadata__ = __webpack_require__("../../../../reflect-metadata/Reflect.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_reflect_metadata___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_reflect_metadata__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__side_bar_side_bar_component__ = __webpack_require__("../../../../../src/app/side-bar/side-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__top_bar_top_bar_component__ = __webpack_require__("../../../../../src/app/top-bar/top-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__all_users_all_users_component__ = __webpack_require__("../../../../../src/app/all-users/all-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__ = __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__ = __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__finishedauction_finishedauction_component__ = __webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__upcomingauctions_upcomingauctions_component__ = __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__equal_validator_directive__ = __webpack_require__("../../../../../src/app/equal-validator.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__email_verification_email_verification_component__ = __webpack_require__("../../../../../src/app/email-verification/email-verification.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__closed_auction_back_closed_auction_back_component__ = __webpack_require__("../../../../../src/app/closed-auction-back/closed-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__upcoming_auction_back_upcoming_auction_back_component__ = __webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__running_auction_back_running_auction_back_component__ = __webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__socialmedia_socialmedia_component__ = __webpack_require__("../../../../../src/app/socialmedia/socialmedia.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__read_more_read_more_component__ = __webpack_require__("../../../../../src/app/read-more/read-more.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__count_down_timer_count_down_timer_component__ = __webpack_require__("../../../../../src/app/count-down-timer/count-down-timer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__product_service_service__ = __webpack_require__("../../../../../src/app/product-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__myauctions_myauctions_component__ = __webpack_require__("../../../../../src/app/myauctions/myauctions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__capitalize_pipe__ = __webpack_require__("../../../../../src/app/capitalize.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__runningauction_runningauction_component__ = __webpack_require__("../../../../../src/app/runningauction/runningauction.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__card_running_card_running_component__ = __webpack_require__("../../../../../src/app/card-running/card-running.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
+
+// import { DataTablesModule } from 'angular-datatables';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -119,13 +230,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var appRoutes = [
-    // {path:'', redirectTo:'/login', pathMatch:'full'},
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_11__registration_registration_component__["a" /* RegistrationComponent */] },
-    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_12__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_10__login_login_component__["a" /* LoginComponent */] },
-    { path: 'closed-auction', component: __WEBPACK_IMPORTED_MODULE_13__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */] },
-    { path: 'upcoming-auction', component: __WEBPACK_IMPORTED_MODULE_14__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */] },
-    { path: 'socialmedia/:id', component: __WEBPACK_IMPORTED_MODULE_16__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */] },
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_27__registration_registration_component__["a" /* RegistrationComponent */] },
+    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_28__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_26__login_login_component__["a" /* LoginComponent */] },
+    { path: 'closed-auction', component: __WEBPACK_IMPORTED_MODULE_29__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */] },
+    { path: 'upcoming-auction', component: __WEBPACK_IMPORTED_MODULE_30__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */] },
+    { path: 'socialmedia/:id', component: __WEBPACK_IMPORTED_MODULE_32__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */] },
+    { path: 'Dashboard', component: __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */] },
+    { path: 'AllUsers', component: __WEBPACK_IMPORTED_MODULE_13__all_users_all_users_component__["a" /* AllUsersComponent */] },
+    { path: 'DeletedUser', component: __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */] },
+    { path: 'DisabledUsers', component: __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */] },
+    { path: '', redirectTo: '/registration', pathMatch: 'full' },
+    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_27__registration_registration_component__["a" /* RegistrationComponent */] },
+    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_17__home_home_component__["a" /* HomeComponent */] },
+    { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_36__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
+    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_28__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
+    { path: 'closed-auction', component: __WEBPACK_IMPORTED_MODULE_29__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */] },
+    { path: 'upcoming-auction', component: __WEBPACK_IMPORTED_MODULE_30__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */] },
+    { path: 'running-auction', component: __WEBPACK_IMPORTED_MODULE_31__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */] }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -133,33 +256,260 @@ var AppModule = (function () {
     return AppModule;
 }());
 AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+    Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__registration_registration_component__["a" /* RegistrationComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__equal_validator_directive__["a" /* EqualValidator */],
-            __WEBPACK_IMPORTED_MODULE_10__login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__email_verification_email_verification_component__["a" /* EmailVerificationComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_26__login_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_27__registration_registration_component__["a" /* RegistrationComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__navigation_navigation_component__["a" /* NavigationComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__home_home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__card_card_component__["a" /* CardComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */],
+            __WEBPACK_IMPORTED_MODULE_36__myauctions_myauctions_component__["a" /* MyauctionsComponent */],
+            __WEBPACK_IMPORTED_MODULE_25__equal_validator_directive__["a" /* EqualValidator */],
+            __WEBPACK_IMPORTED_MODULE_37__capitalize_pipe__["a" /* CapitalizePipe */],
+            __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__side_bar_side_bar_component__["a" /* SideBarComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__top_bar_top_bar_component__["a" /* TopBarComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__footer_footer_component__["a" /* FooterComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__all_users_all_users_component__["a" /* AllUsersComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */],
+            __WEBPACK_IMPORTED_MODULE_28__email_verification_email_verification_component__["a" /* EmailVerificationComponent */],
+            __WEBPACK_IMPORTED_MODULE_29__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */],
+            __WEBPACK_IMPORTED_MODULE_30__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */],
+            __WEBPACK_IMPORTED_MODULE_31__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */],
+            __WEBPACK_IMPORTED_MODULE_32__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */],
+            __WEBPACK_IMPORTED_MODULE_33__read_more_read_more_component__["a" /* ReadMoreComponent */],
+            __WEBPACK_IMPORTED_MODULE_34__count_down_timer_count_down_timer_component__["a" /* CountDownTimerComponent */],
+            __WEBPACK_IMPORTED_MODULE_38__runningauction_runningauction_component__["a" /* RunningauctionComponent */],
+            __WEBPACK_IMPORTED_MODULE_39__card_running_card_running_component__["a" /* CardRunningComponent */],
+        ],
+        providers: [__WEBPACK_IMPORTED_MODULE_35__product_service_service__["a" /* ProductServiceService */],
+            __WEBPACK_IMPORTED_MODULE_24__services_user_service__["a" /* UserService */],
+            __WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__["a" /* AuthGuard */],
+            __WEBPACK_IMPORTED_MODULE_22__services_product_service__["a" /* ProductService */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* ReactiveFormsModule */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_http__["HttpModule"],
-            __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* RouterModule */].forRoot(appRoutes)
+            __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
+            // DataTablesModule,
+            __WEBPACK_IMPORTED_MODULE_7__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_forms__["c" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_router__["f" /* RouterModule */].forRoot(appRoutes),
+            __WEBPACK_IMPORTED_MODULE_20_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_http__["HttpModule"],
+            __WEBPACK_IMPORTED_MODULE_5__angular_router__["f" /* RouterModule */].forRoot(appRoutes)
         ],
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_7__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_8__services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_6__guards_auth_guard__["a" /* AuthGuard */]
-        ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
 //# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/capitalize.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CapitalizePipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var CapitalizePipe = (function () {
+    function CapitalizePipe() {
+    }
+    CapitalizePipe.prototype.transform = function (value) {
+        if (value) {
+            return value.charAt(0).toUpperCase() + value.slice(1);
+        }
+        return value;
+    };
+    return CapitalizePipe;
+}());
+CapitalizePipe = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+        name: 'capitalize'
+    })
+], CapitalizePipe);
+
+//# sourceMappingURL=capitalize.pipe.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/card-running/card-running.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/card-running/card-running.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <div *ngIf=\"!itemStatus\" class=\"col-md-8 col-xs-12 col-sm-6 col-lg-8\"><h4>Sorry! No Items to display.</h4></div> -->\r\n<div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3\">\r\n    <div class=\"tg-ad tg-verifiedad\">\r\n        <figure>\r\n            <span class=\"tg-themetag tg-featuretag\">featured</span>\r\n            <a href=\"javascript:void(0);\"><img src=\"http://exprostudio.com/html/classified/images/ads/img-01.jpg\" alt=\"image description\"></a>\r\n            <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\r\n        </figure>\r\n        <div class=\"tg-adcontent\">\r\n            <!-- <ul class=\"tg-productcagegories\">\r\n                <li><a href=\"javascript:void(0);\">Mobiles</a></li>\r\n            </ul> -->\r\n            \r\n            <div class=\"tg-adtitle\">\r\n                <h3><a href=\"javascript:void(0);\">{{item?.name | capitalize}}</a></h3>\r\n            </div>\r\n            <div class=\"clearfix\"></div>\r\n            <div class=\"tg-desc\" >\r\n                    <h4>Description: </h4><p class=\"card-pro-desc\">{{item?.desc | capitalize}}</p>\r\n            </div>\r\n            \r\n            <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\r\n            \r\n            <!-- <address>44-46 abc Road, Manchester</address> -->\r\n            <!-- <div class=\"tg-phonelike\">\r\n                <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\r\n                    <i class=\"icon-phone-handset\"></i>\r\n                    <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\r\n                </a>\r\n                <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\r\n            </div> -->\r\n        </div>\r\n        <div class=\"row\">\r\n          <div class=\"btn-primary tg-adprice\">${{highest}}</div>\r\n        </div>\r\n        \r\n    </div>\r\n  </div>\r\n  <!--   \r\n  <div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3\">\r\n        <div class=\"tg-ad tg-verifiedad\">\r\n            <figure>\r\n                <span class=\"tg-themetag tg-featuretag\">featured</span>\r\n                <a href=\"javascript:void(0);\"><img src=\"http://exprostudio.com/html/classified/images/ads/img-01.jpg\" alt=\"image description\"></a> -->\r\n                <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\r\n            <!-- </figure>\r\n            <div class=\"tg-adcontent\"> -->\r\n                <!-- <ul class=\"tg-productcagegories\">\r\n                    <li><a href=\"javascript:void(0);\">Mobiles</a></li>\r\n                </ul> -->\r\n                \r\n                <!-- <div class=\"tg-adtitle\">\r\n                    <h3><a href=\"javascript:void(0);\">iPhone X for sale</a></h3>\r\n                </div>\r\n                <div class=\"clearfix\"></div>\r\n                <div class=\"tg-desc\">\r\n                    <h4>Description</h4>\r\n                        <p class=\"card-pro-desc\">Consectetur adipicing elit sed eiusmod temporie incidint ut labore et dolore magna enim ad minim veniam, quis nostrud.</p>\r\n                </div>\r\n                <div class=\"clearfix\"></div>\r\n                <div class=\"tg-days\">\r\n                        <h4>Days Left: 4Days</h4>\r\n                </div> -->\r\n                <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\r\n                \r\n                <!-- <address>44-46 abc Road, Manchester</address> -->\r\n                <!-- <div class=\"tg-phonelike\">\r\n                    <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\r\n                        <i class=\"icon-phone-handset\"></i>\r\n                        <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\r\n                    </a>\r\n                    <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\r\n                </div> -->\r\n            <!-- </div>\r\n            <button class=\"btn btn-primary tg-adprice\"> Basic Price: $200</button>\r\n        </div>\r\n    </div>\r\n    <div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3\">\r\n            <div class=\"tg-ad tg-verifiedad\">\r\n                <figure>\r\n                    <span class=\"tg-themetag tg-featuretag\">featured</span>\r\n                    <a href=\"javascript:void(0);\"><img src=\"http://exprostudio.com/html/classified/images/ads/img-01.jpg\" alt=\"image description\"></a> -->\r\n                    <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\r\n                <!-- </figure>\r\n                <div class=\"tg-adcontent\"> -->\r\n                    <!-- <ul class=\"tg-productcagegories\">\r\n                        <li><a href=\"javascript:void(0);\">Mobiles</a></li>\r\n                    </ul> -->\r\n                    \r\n                    <!-- <div class=\"tg-adtitle\">\r\n                        <h3><a href=\"javascript:void(0);\">iPhone X for sale</a></h3>\r\n                    </div>\r\n                    <div class=\"clearfix\"></div>\r\n                    <div class=\"tg-desc\">\r\n                            <p class=\"card-pro-desc\">Consectetur adipicing elit sed eiusmod temporie incidint ut labore et dolore magna enim ad minim veniam, quis nostrud.</p>\r\n                    </div>\r\n                     -->\r\n                    <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\r\n                    \r\n                    <!-- <address>44-46 abc Road, Manchester</address> -->\r\n                    <!-- <div class=\"tg-phonelike\">\r\n                        <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\r\n                            <i class=\"icon-phone-handset\"></i>\r\n                            <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\r\n                        </a>\r\n                        <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\r\n                    </div> -->\r\n                <!-- </div>\r\n                <button class=\"btn btn-primary tg-adprice\"> Final Price: $200</button>\r\n            </div>\r\n        </div> -->"
+
+/***/ }),
+
+/***/ "../../../../../src/app/card-running/card-running.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardRunningComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CardRunningComponent = (function () {
+    function CardRunningComponent() {
+    }
+    CardRunningComponent.prototype.ngOnInit = function () {
+    };
+    return CardRunningComponent;
+}());
+CardRunningComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-card-running',
+        template: __webpack_require__("../../../../../src/app/card-running/card-running.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/card-running/card-running.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], CardRunningComponent);
+
+//# sourceMappingURL=card-running.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/card/card.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".tg-ad {\r\n    width: 100%;\r\n    float: left;\r\n    padding: 15px;\r\n    margin: 15px 0;\r\n    background: #fff;\r\n    border-radius: 5px;\r\n    padding-bottom: 0;\r\n    box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);\r\n    transition: 1s ease;\r\n}\r\n\r\n*::after, *::before, p a, a, .tg-socialicons li a, .tg-roundicontext, .tg-roundicontext .tg-usericonholder, .sub-menu, .mega-menu, .tg-themedropdownmenu li a, .tg-themedropdownmenu, .tg-themedropdownmenu li.menu-item-has-children ul, .sub-menu li, .tg-categories .item, .tg-categories .item h3, .tg-prev, .tg-next, .tg-ad, .tg-btnphone, .tg-like, .tg-post figure img, .tg-post figure a img, .tg-categoryholder, .tg-category h4, .tg-feature, .tg-team figure figcaption, .tg-applyedfilters ul li.alert-dismissable a.close, .tg-collapsetitle a span::before, .tg-btn, .tg-user, .tg-socialandappicons, .tg-logo, .tg-btnmenutoggle, .cls-1, .tg-wrapper, .tg-sidebarwrapper, .tg-dropdownmenu, .tg-dropdownmenu li, .tg-dashboardbox, .ct-bar, .tg-offerer, .tg-navtabledata ul li a, .tg-dashboardtable tr, .tg-package, .tg-profilephotogallery ul li figure i, .tg-btndelete {\r\n    transition: all 300ms ease-in-out;\r\n}\r\n.tg-ad figure {\r\n    margin: 0;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n}\r\n.tg-themetag {\r\n    top: 12px;\r\n    left: -5px;\r\n    z-index: 2;\r\n    color: #fff;\r\n    font-size: 10px;\r\n    font-weight: 500;\r\n    line-height: 10px;\r\n    position: absolute;\r\n    background: #2882f7;\r\n    padding: 5px 3px 3px 10px;\r\n    text-transform: uppercase;\r\n}\r\n.tg-featuretag::before {\r\n    top: 0;\r\n    left: 100%;\r\n    border-top: 9px solid transparent;\r\n    border-bottom: 9px solid transparent;\r\n    border-left: 10px solid #2882f7;\r\n}\r\n.tg-featuretag::before, .tg-featuretag::after {\r\n    width: 0;\r\n    height: 0;\r\n    content: '';\r\n    position: absolute;\r\n}\r\n.tg-featuretag::after {\r\n    top: 100%;\r\n    left: 0;\r\n    border-top: 5px solid #0052b6;\r\n    border-left: 5px solid transparent;\r\n}\r\n.tg-featuretag::before, .tg-featuretag::after {\r\n    width: 0;\r\n    height: 0;\r\n    content: '';\r\n    position: absolute;\r\n}\r\n.tg-ad figure a, .tg-ad figure img, .tg-ad figure a img {\r\n    z-index: 1;\r\n    display: block;\r\n    position: relative;\r\n}\r\n.tg-ad figure a, .tg-ad figure img {\r\n    overflow: hidden;\r\n    border-radius: 5px;\r\n}\r\n.tg-ad figure img, .tg-ad figure a img {\r\n    width: 100%;\r\n}\r\n.tg-ad figure a, .tg-ad figure img, .tg-ad figure a img {\r\n    z-index: 1;\r\n    display: block;\r\n    position: relative;\r\n}\r\n.tg-ad figure a, .tg-ad figure img {\r\n    overflow: hidden;\r\n    border-radius: 5px;\r\n}\r\nimg {\r\n    height: auto;\r\n    max-width: 100%;\r\n}\r\nimg {\r\n    border: 0;\r\n}\r\n.tg-adcontent {\r\n    width: 100%;\r\n    float: left;\r\n}\r\n.tg-ad:hover {\r\n    -webkit-transform: scale(1.05);\r\n    transform: scale(1.05);\r\n    cursor: pointer;\r\n}\r\n.tg-productcagegories {\r\n    width: 100%;\r\n    float: left;\r\n    font-size: 14px;\r\n    line-height: 18px;\r\n    list-style: none;\r\n    margin: 0 0 12px;\r\n    padding: 20px 0 10px;\r\n    border-bottom: 1px solid #dbdbdb;\r\n}\r\nul {\r\n    margin: 0;\r\n}\r\nol, ul {\r\n    margin-top: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.tg-productcagegories li {\r\n    float: left;\r\n    line-height: inherit;\r\n    list-style-type: none;\r\n}\r\nli {\r\n    line-height: 28px;\r\n    list-style: disc inside none;\r\n        list-style-type: disc;\r\n}\r\n.tg-productcagegories li a {\r\n    color: #363b4d;\r\n}\r\n.tg-adtitle {\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n    padding: 20px 32px 6px 5px;\r\n    border-bottom: 1px solid #ccc;\r\n}\r\n.card-pro-desc{\r\n\r\n}\r\n.tg-ad.tg-verifiedad .tg-adtitle::before {\r\n    display: block;\r\n}\r\n/* .tg-adtitle::before {\r\n    top: 0;\r\n    right: 0;\r\n    content: '';\r\n    width: 26px;\r\n    height: 26px;\r\n    display: none;\r\n    text-align: center;\r\n    position: absolute;\r\n    background: url(http://exprostudio.com/html/classified/images/ads/img-01.jpg) no-repeat 50% 50%;\r\n} */\r\n.tg-adtitle h3 {\r\n    margin: 0;\r\n    font-size: 18px;\r\n    line-height: 26px;\r\n    text-transform: none;\r\n}\r\nbody h1, body h2, body h3, body h4, body h5, body h6 {\r\n    color: #363b4d;\r\n    margin: 0 0 8px;\r\n    font-weight: 500;\r\n    line-height: 1.5;\r\n    font-style: normal;\r\n    text-transform: capitalize;\r\n    font-family: 'Quicksand', Arial, Helvetica, sans-serif;\r\n}\r\n.tg-adcontent time {\r\n    width: 100%;\r\n    float: left;\r\n    color: #484848;\r\n    font-size: 14px;\r\n    line-height: 15px;\r\n}\r\n.tg-adprice {\r\n    width: 100%;\r\n    float: left;\r\n    padding: 14px 0 14px;\r\n    background-color: #2882f7;\r\n    color: #fff;\r\n    border: none;\r\n    text-align: center;\r\n    border-bottom-left-radius: 4px;\r\n    border-bottom-right-radius: 4px;\r\n}\r\n.tg-adprice h4 {\r\n    margin: 0;\r\n    color: #363b4d;\r\n    font-size: 18px;\r\n    line-height: 17px;\r\n}\r\n.tg-adcontent address {\r\n    margin: 0;\r\n    width: 100%;\r\n    float: left;\r\n    color: #484848;\r\n    font-size: 14px;\r\n    line-height: 14px;\r\n    font-style: normal;\r\n    position: relative;\r\n    padding: 0 0 0 24px;\r\n}\r\n.tg-adcontent address::before {\r\n    top: 0;\r\n    left: 0;\r\n    content: '\\E9A3';\r\n    line-height: 14px;\r\n    position: absolute;\r\n    font-family: 'icomoon';\r\n}\r\n.tg-phonelike {\r\n    width: 100%;\r\n    float: left;\r\n    height: 33px;\r\n    margin: 20px 0 0;\r\n    position: relative;\r\n    padding: 0 38px 0 0;\r\n}\r\n.tg-btnphone {\r\n    margin: 0 0 10px;\r\n}\r\n.tg-btnphone {\r\n    width: 100%;\r\n    float: left;\r\n    color: #363b4d;\r\n    border-radius: 3px;\r\n    text-align: center;\r\n    background: #f7f7f7;\r\n}\r\n.tg-btnphone i {\r\n    font-size: 16px;\r\n    padding: 0 5px 0 0;\r\n}\r\n.tg-btnphone i, .tg-btnphone span, .tg-btnphone span em {\r\n    font-size: 14px;\r\n    line-height: 33px;\r\n    font-style: normal;\r\n}\r\n.tg-btnphone i, .tg-btnphone span {\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n}\r\n.icon-phone-handset::before {\r\n    content: \"\\E93C\";\r\n}\r\n.tg-like:hover, .tg-like.tg-liked {\r\n    color: #fff;\r\n    background: #2882f7;\r\n}\r\n.tg-like {\r\n    top: 0;\r\n    right: 0;\r\n    width: 33px;\r\n    color: #363b4d;\r\n    display: block;\r\n    cursor: pointer;\r\n    padding: 2px 0 1px;\r\n    text-align: center;\r\n    position: absolute;\r\n    border-radius: 3px;\r\n    background: #f7f7f7;\r\n}\r\n.tg-like:hover i, .tg-like.tg-liked i {\r\n    color: #fff;\r\n}\r\n.tg-like i {\r\n    color: #363b4d;\r\n    display: block;\r\n    font-size: 12px;\r\n    line-height: 30px;\r\n}\r\n.fa-heart::before {\r\n    content: \"\\F004\";\r\n}\r\n\r\n.tg-desc{\r\n    margin: 25px auto;\r\n    min-height: 123px;\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/card/card.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <div *ngIf=\"!itemStatus\" class=\"col-md-8 col-xs-12 col-sm-6 col-lg-8\"><h4>Sorry! No Items to display.</h4></div> -->\r\n<div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3\">\r\n  <div class=\"tg-ad tg-verifiedad\">\r\n      <figure>\r\n          <span class=\"tg-themetag tg-featuretag\">featured</span>\r\n          <a href=\"javascript:void(0);\"><img src=\"http://exprostudio.com/html/classified/images/ads/img-01.jpg\" alt=\"image description\"></a>\r\n          <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\r\n      </figure>\r\n      <div class=\"tg-adcontent\">\r\n          <!-- <ul class=\"tg-productcagegories\">\r\n              <li><a href=\"javascript:void(0);\">Mobiles</a></li>\r\n          </ul> -->\r\n          \r\n          <div class=\"tg-adtitle\">\r\n              <h3><a href=\"javascript:void(0);\">{{item?.name | capitalize}}</a></h3>\r\n          </div>\r\n          <div class=\"clearfix\"></div>\r\n          <div class=\"tg-desc\" >\r\n                  <h4>Description: </h4><p class=\"card-pro-desc\">{{item?.desc | capitalize}}</p>\r\n          </div>\r\n          \r\n          <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\r\n          \r\n          <!-- <address>44-46 abc Road, Manchester</address> -->\r\n          <!-- <div class=\"tg-phonelike\">\r\n              <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\r\n                  <i class=\"icon-phone-handset\"></i>\r\n                  <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\r\n              </a>\r\n              <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\r\n          </div> -->\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"btn-primary tg-adprice\">${{highest}}</div>\r\n      </div>\r\n      \r\n  </div>\r\n</div>\r\n<!--   \r\n<div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3\">\r\n      <div class=\"tg-ad tg-verifiedad\">\r\n          <figure>\r\n              <span class=\"tg-themetag tg-featuretag\">featured</span>\r\n              <a href=\"javascript:void(0);\"><img src=\"http://exprostudio.com/html/classified/images/ads/img-01.jpg\" alt=\"image description\"></a> -->\r\n              <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\r\n          <!-- </figure>\r\n          <div class=\"tg-adcontent\"> -->\r\n              <!-- <ul class=\"tg-productcagegories\">\r\n                  <li><a href=\"javascript:void(0);\">Mobiles</a></li>\r\n              </ul> -->\r\n              \r\n              <!-- <div class=\"tg-adtitle\">\r\n                  <h3><a href=\"javascript:void(0);\">iPhone X for sale</a></h3>\r\n              </div>\r\n              <div class=\"clearfix\"></div>\r\n              <div class=\"tg-desc\">\r\n                  <h4>Description</h4>\r\n                      <p class=\"card-pro-desc\">Consectetur adipicing elit sed eiusmod temporie incidint ut labore et dolore magna enim ad minim veniam, quis nostrud.</p>\r\n              </div>\r\n              <div class=\"clearfix\"></div>\r\n              <div class=\"tg-days\">\r\n                      <h4>Days Left: 4Days</h4>\r\n              </div> -->\r\n              <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\r\n              \r\n              <!-- <address>44-46 abc Road, Manchester</address> -->\r\n              <!-- <div class=\"tg-phonelike\">\r\n                  <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\r\n                      <i class=\"icon-phone-handset\"></i>\r\n                      <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\r\n                  </a>\r\n                  <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\r\n              </div> -->\r\n          <!-- </div>\r\n          <button class=\"btn btn-primary tg-adprice\"> Basic Price: $200</button>\r\n      </div>\r\n  </div>\r\n  <div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3\">\r\n          <div class=\"tg-ad tg-verifiedad\">\r\n              <figure>\r\n                  <span class=\"tg-themetag tg-featuretag\">featured</span>\r\n                  <a href=\"javascript:void(0);\"><img src=\"http://exprostudio.com/html/classified/images/ads/img-01.jpg\" alt=\"image description\"></a> -->\r\n                  <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\r\n              <!-- </figure>\r\n              <div class=\"tg-adcontent\"> -->\r\n                  <!-- <ul class=\"tg-productcagegories\">\r\n                      <li><a href=\"javascript:void(0);\">Mobiles</a></li>\r\n                  </ul> -->\r\n                  \r\n                  <!-- <div class=\"tg-adtitle\">\r\n                      <h3><a href=\"javascript:void(0);\">iPhone X for sale</a></h3>\r\n                  </div>\r\n                  <div class=\"clearfix\"></div>\r\n                  <div class=\"tg-desc\">\r\n                          <p class=\"card-pro-desc\">Consectetur adipicing elit sed eiusmod temporie incidint ut labore et dolore magna enim ad minim veniam, quis nostrud.</p>\r\n                  </div>\r\n                   -->\r\n                  <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\r\n                  \r\n                  <!-- <address>44-46 abc Road, Manchester</address> -->\r\n                  <!-- <div class=\"tg-phonelike\">\r\n                      <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\r\n                          <i class=\"icon-phone-handset\"></i>\r\n                          <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\r\n                      </a>\r\n                      <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\r\n                  </div> -->\r\n              <!-- </div>\r\n              <button class=\"btn btn-primary tg-adprice\"> Final Price: $200</button>\r\n          </div>\r\n      </div> -->"
+
+/***/ }),
+
+/***/ "../../../../../src/app/card/card.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__product_service_service__ = __webpack_require__("../../../../../src/app/product-service.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CardComponent = (function () {
+    // itemStatus: boolean = true;
+    function CardComponent(_productService) {
+        this._productService = _productService;
+        // this.x = this.item; 
+        // console.log(this.x);
+    }
+    CardComponent.prototype.ngOnInit = function () {
+        // let item : any;
+        // this.item = item;
+        // console.log(this.item);
+        // this.highestBid = this.getHighestBid(this.item);
+        if (this.item) {
+            // console.log(this.item.bidders[0].amount);
+            var tmp = void 0;
+            // this.lowest = Number.POSITIVE_INFINITY;
+            this.highest = 0;
+            for (var i = this.item.bidders.length - 1; i >= 0; i--) {
+                tmp = this.item.bidders[i].amount;
+                // if (tmp < this.lowest) this.lowest = tmp;
+                if (tmp > this.highest && this.item.bidders[i].bid_status != "rejected")
+                    this.highest = tmp;
+            }
+            // if(this.item.length == 0){
+            //   this.itemStatus = false;
+            // }
+            // console.log(this.highest);
+            // this.item.bidders.forEach(element => {
+            //   tmp = element.amount;
+            //   if(this.highest > tmp){
+            //     tmp
+            //   }
+            // });
+            // this.highestBid = this.getHighestBid(this.item);
+            // // Math.max(this.highestBid.amount);
+            // console.log(this.highestBid);
+        }
+    };
+    CardComponent.prototype.getHighestBid = function (o) {
+        // Math.max.apply(Math,o.map(function(o){return o.y;}))
+        // console.log(o);
+        // var maxValue = Math.max.apply(Math, tmp);
+        // var tmp = o.map(function(o) {
+        //   return o.amount;
+        // });
+        // console.log(maxValue);
+        // o.sort(function(a, b){return a.value-b.value});
+    };
+    return CardComponent;
+}());
+CardComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-card',
+        template: __webpack_require__("../../../../../src/app/card/card.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/card/card.component.css")],
+        inputs: ['item'],
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__product_service_service__["a" /* ProductServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__product_service_service__["a" /* ProductServiceService */]) === "function" && _a || Object])
+], CardComponent);
+
+var _a;
+//# sourceMappingURL=card.component.js.map
 
 /***/ }),
 
@@ -253,6 +603,261 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/app/count-down-timer/count-down-timer.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CountDownTimerComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__ = __webpack_require__("../../../../rxjs/_esm5/Rx.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CountDownTimerComponent = (function () {
+    function CountDownTimerComponent(elm) {
+        this.futureString = elm.nativeElement.getAttribute('inputDate');
+    }
+    CountDownTimerComponent.prototype.dhms = function (t) {
+        var days, hours, minutes, seconds;
+        // days = Math.floor(t / 86400);
+        // t -= days * 86400;
+        hours = Math.floor(t / 3600);
+        t -= hours * 3600;
+        minutes = Math.floor(t / 60) % 60;
+        t -= minutes * 60;
+        seconds = t % 60;
+        return [
+            // days + 'd',
+            hours + ':',
+            this.lpad(minutes) + ':',
+            this.lpad(seconds)
+        ].join('');
+    };
+    CountDownTimerComponent.prototype.lpad = function (num) {
+        var s = num + "";
+        if (s.length < 2)
+            s = "0" + s;
+        return s;
+    };
+    CountDownTimerComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.future = new Date(this.inputDate);
+        this.$counter = __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__["a" /* Observable */].interval(1000).map(function (x) {
+            _this.diff = Math.floor((_this.future.getTime() - new Date().getTime()) / 1000);
+            return x;
+        });
+        this.subscription = this.$counter.subscribe(function (x) { return _this.message = _this.dhms(_this.diff); });
+    };
+    CountDownTimerComponent.prototype.ngOnDestroy = function () {
+        this.subscription.unsubscribe();
+    };
+    return CountDownTimerComponent;
+}());
+CountDownTimerComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-count-down-timer',
+        template: "\n  <div>\n    {{message}}\n  </div>\n",
+        inputs: ["inputDate"]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object])
+], CountDownTimerComponent);
+
+var _a;
+//# sourceMappingURL=count-down-timer.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/dashboard/dashboard.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/dashboard/dashboard.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\r\n  dashboard works!\r\n</p>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/dashboard/dashboard.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DashboardComponent = (function () {
+    function DashboardComponent() {
+    }
+    DashboardComponent.prototype.ngOnInit = function () {
+    };
+    return DashboardComponent;
+}());
+DashboardComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-dashboard',
+        template: __webpack_require__("../../../../../src/app/dashboard/dashboard.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/dashboard/dashboard.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], DashboardComponent);
+
+//# sourceMappingURL=dashboard.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/deleted-users/deleted-users.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/deleted-users/deleted-users.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\r\n  deleted-users works!\r\n</p>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/deleted-users/deleted-users.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeletedUsersComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DeletedUsersComponent = (function () {
+    function DeletedUsersComponent() {
+    }
+    DeletedUsersComponent.prototype.ngOnInit = function () {
+    };
+    return DeletedUsersComponent;
+}());
+DeletedUsersComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-deleted-users',
+        template: __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], DeletedUsersComponent);
+
+//# sourceMappingURL=deleted-users.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/disabled-users/disabled-users.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/disabled-users/disabled-users.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\r\n  disabled-users works!\r\n</p>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/disabled-users/disabled-users.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DisabledUsersComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DisabledUsersComponent = (function () {
+    function DisabledUsersComponent() {
+    }
+    DisabledUsersComponent.prototype.ngOnInit = function () {
+    };
+    return DisabledUsersComponent;
+}());
+DisabledUsersComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-disabled-users',
+        template: __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], DisabledUsersComponent);
+
+//# sourceMappingURL=disabled-users.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/email-verification/email-verification.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -310,7 +915,7 @@ var EmailVerificationComponent = (function () {
             _this.userService.generateToken(params.id).subscribe(function (data) {
                 if (data == true) {
                     alert("Success, Redirecting ...");
-                    _this.router.navigate(['/login']);
+                    _this.router.navigate(['/home']);
                     console.log("successfull verified user");
                 }
                 else {
@@ -330,7 +935,7 @@ EmailVerificationComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/email-verification/email-verification.component.css")],
         providers: [__WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */]) === "function" && _c || Object])
 ], EmailVerificationComponent);
 
 var _a, _b, _c;
@@ -417,6 +1022,145 @@ var EqualValidator_1;
 
 /***/ }),
 
+/***/ "../../../../../src/app/finishedauction/finishedauction.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/finishedauction/finishedauction.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\r\n  <div id=\"f-auction\" class=\"auction-section\">\r\n      <h4 class=\"page-head\">Closed Auctions</h4>\r\n      <div *ngIf=\"existStatus; else noProduct\">\r\n        <div  *ngFor=\"let item of products\">\r\n          <!-- {{item}} -->\r\n          <app-card [item]=\"item\"></app-card>\r\n        </div>\r\n      </div>\r\n      <ng-template #noProduct>\r\n        <div class=\"no-item\">\r\n            <h4>Sorrry! No items to display!</h4>\r\n        </div>\r\n      </ng-template>\r\n      \r\n      \r\n  </div>\r\n    \r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/finishedauction/finishedauction.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FinishedauctionComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__product_service_service__ = __webpack_require__("../../../../../src/app/product-service.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var FinishedauctionComponent = (function () {
+    function FinishedauctionComponent(_productService) {
+        this._productService = _productService;
+        this.existStatus = false;
+    }
+    FinishedauctionComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._productService.loadClosedProduct()
+            .subscribe(function (resProducts) {
+            _this.products = resProducts;
+            // console.log(resProducts);
+            if (resProducts.length > 0) {
+                _this.existStatus = true;
+            }
+            console.log(_this.existStatus);
+        });
+        // console.log(this.products);
+    };
+    return FinishedauctionComponent;
+}());
+FinishedauctionComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-finishedauction',
+        template: __webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.css")],
+        inputs: ['products']
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__product_service_service__["a" /* ProductServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__product_service_service__["a" /* ProductServiceService */]) === "function" && _a || Object])
+], FinishedauctionComponent);
+
+var _a;
+//# sourceMappingURL=finishedauction.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/footer/footer.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/footer/footer.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<footer class=\"sticky-footer\">\r\n  <div class=\"container\">\r\n    <div class=\"text-center\">\r\n      <small>Copyright © Your Website 2017</small>\r\n    </div>\r\n  </div>\r\n</footer>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/footer/footer.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FooterComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FooterComponent = (function () {
+    function FooterComponent() {
+    }
+    FooterComponent.prototype.ngOnInit = function () {
+    };
+    return FooterComponent;
+}());
+FooterComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-footer',
+        template: __webpack_require__("../../../../../src/app/footer/footer.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/footer/footer.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], FooterComponent);
+
+//# sourceMappingURL=footer.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/guards/auth.guard.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -455,11 +1199,72 @@ var AuthGuard = (function () {
 }());
 AuthGuard = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */]) === "function" && _b || Object])
 ], AuthGuard);
 
 var _a, _b;
 //# sourceMappingURL=auth.guard.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/home.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/home.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-navigation></app-navigation>\r\n<app-runningauction></app-runningauction>\r\n<app-finishedauction></app-finishedauction>\r\n<app-upcomingauctions></app-upcomingauctions>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/home.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var HomeComponent = (function () {
+    function HomeComponent() {
+    }
+    HomeComponent.prototype.ngOnInit = function () {
+    };
+    return HomeComponent;
+}());
+HomeComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-home',
+        template: __webpack_require__("../../../../../src/app/home/home.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/home/home.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], HomeComponent);
+
+//# sourceMappingURL=home.component.js.map
 
 /***/ }),
 
@@ -551,11 +1356,260 @@ LoginComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/login/login.component.css")],
         providers: [__WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */]) === "function" && _b || Object])
 ], LoginComponent);
 
 var _a, _b;
 //# sourceMappingURL=login.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/myauctions/myauctions.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/myauctions/myauctions.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-navigation></app-navigation>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/myauctions/myauctions.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyauctionsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MyauctionsComponent = (function () {
+    function MyauctionsComponent() {
+    }
+    MyauctionsComponent.prototype.ngOnInit = function () {
+    };
+    return MyauctionsComponent;
+}());
+MyauctionsComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-myauctions',
+        template: __webpack_require__("../../../../../src/app/myauctions/myauctions.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/myauctions/myauctions.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], MyauctionsComponent);
+
+//# sourceMappingURL=myauctions.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/navigation/navigation.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "body{\r\n    font: sans-serif;\r\n    background: #E8E8E8;\r\n}\r\nheader {\r\n    position: relative;\r\n    margin: 0;\r\n    padding: 0 0 ;\r\n    z-index: 11;\r\n    /* background: #E8E8E8; */\r\n    border-bottom: none;\r\n}\r\nheader .box {\r\n    background: #084da7;\r\n    padding: 6px 0;\r\n    text-align: left;\r\n}\r\nheader .box .title1 {\r\n    font-size: 25px ;\r\n    color: #ffffff;\r\n    margin: 0 9px 0 0;\r\n    float: left;\r\n}\r\nheader .box .title2 {\r\n    font-size: 14px ;\r\n    color: #888;\r\n    margin: 10px 0 0 0;\r\n    float: left;\r\n}\r\n\r\nheader .btn-default.btn1 {\r\n    margin: 0 0 0 6px;\r\n    float: right;\r\n}\r\n.box .dropdown {\r\n    float: right;\r\n    clear: right;\r\n    list-style: none;\r\n}\r\n.box .dropdown ul{\r\n    padding: 0;\r\n    background: #084DA7;\r\n}\r\n.box .dropdown ul li a{\r\n    padding: 10px 20px;\r\n    \r\n}\r\n.box .dropdown ul li:hover{\r\n    background: #fff;\r\n    \r\n}\r\n.box .dropdown ul li:hover a{\r\n    color: #084DA7;\r\n}\r\n.navbar-toggle{\r\n    margin-top: 25px;\r\n}\r\na {\r\n    color: #ffffff;\r\n}\r\na:hover, a:focus {\r\n    color: #FFD213;\r\n}\r\n.box .dropdown-menu{\r\n    margin-top: 5px;\r\n    border-radius: 0;\r\n}\r\n.box .dropdown li a{\r\n    color: #ffd613;\r\n}\r\n.btn-default.btn1 {\r\n    box-shadow: none;\r\n    position: relative;\r\n    text-decoration: none;\r\n    display: inline-block;\r\n    margin: 0;\r\n    padding: 10px 15px;\r\n    font-size: 17px ;\r\n    font-weight: 600;\r\n    background: #373737;\r\n    border-radius: 7px;\r\n    color: #ffffff;\r\n    float: none;\r\n    transition: all 0.35s;\r\n}\r\n\r\nheader .btn-default.btn1 {\r\n    margin: 0 0 0 6px;\r\n    float: right;\r\n}\r\n.btn-default.btn1 {\r\n    box-shadow: none;\r\n    position: relative;\r\n    text-decoration: none;\r\n    display: inline-block;\r\n    margin: 0;\r\n    padding: 4px 15px;\r\n    font-size: 17px ;\r\n    font-weight: 600;\r\n    background: #ffd613;\r\n    border-radius: 4px;\r\n    color: #ffffff;\r\n    float: none;\r\n    transition: all 0.35s;\r\n}\r\n.btn-default.btn1:hover {\r\n    color: #191919;\r\n    background: #ffd613;\r\n    text-decoration: none;\r\n}\r\nh1.navbar-brand_ {\r\n    margin: 31px 0 0 0;\r\n    padding: 0;\r\n    float: left;\r\n    height: auto;\r\n    position: relative;\r\n    z-index: 10;\r\n}\r\n\r\nh1.navbar-brand_ a {\r\n    display: inline-block;\r\n}\r\na {\r\n    text-decoration: none;\r\n    outline: none;\r\n}\r\n\r\nh1.navbar-brand_ a img {\r\n    width: 100%;\r\n}\r\n\r\nnav.tm_navbar {\r\n    border: none;\r\n    padding: 0;\r\n    margin: 62px 0 0 0;\r\n    float: right;\r\n    min-height: 0;\r\n    background: none;\r\n}\r\n\r\nnav.tm_navbar li:first-child {\r\n    margin: 0;\r\n}\r\nnav.tm_navbar li {\r\n    position: relative;\r\n    font-size: 15px;\r\n    line-height: 25px;\r\n    padding: 0;\r\n    margin: 0 0 0 30px;\r\n    float: left;\r\n}\r\n\r\nav.tm_navbar li.active > a {\r\n    color: #191919;\r\n    background: none !important;\r\n}\r\nnav.tm_navbar li a {\r\n    padding: 0;\r\n    font: 600 21px 'Raleway';\r\n    color: #777;\r\n    background: none;\r\n    position: relative;\r\n    transition: all 0.25s;\r\n}\r\n\r\nnav.tm_navbar li.active > a::after {\r\n    width: 100%;\r\n}\r\nnav.tm_navbar li a::after {\r\n    position: absolute;\r\n    bottom: -15px;\r\n    left: 0;\r\n    height: 11px;\r\n    width: 0;\r\n    background: #ffd613;\r\n    content: '';\r\n    display: block;\r\n    transition: all 0.25s;\r\n}\r\n\r\nnav.tm_navbar li:hover > a {\r\n    color: #191919;\r\n    background: none !important;\r\n    transition: all 0.3s;\r\n}\r\n\r\n.navbar-brand {\r\n    float: left;\r\n    height: auto;\r\n    padding: 15px 14px;\r\n    font-size: 18px;\r\n    line-height: 20px;\r\n    overflow: hidden;\r\n    color: #ffffff;\r\n}\r\n.navbar-brand img{\r\n    width:48%;\r\n}\r\n.navbar-nav > li > a {\r\n    padding-top: 8px !important;\r\n    padding-bottom: 4px !important;\r\n    font-size: 18px;\r\n    color: #ffffff;\r\n    margin: 28px 0;\r\n    padding: 10px 7px;\r\n    cursor: pointer;\r\n}\r\n.navbar-nav > li {\r\n    margin-left: 6px;\r\n}\r\n.navbar-default {\r\n    /* background-color: #f8f8f8; */\r\n    border: none;\r\n    background: #2882F7;\r\n}\r\n.navbar-right .active a{\r\n    border-bottom: 3px solid #ffffff;\r\n  }\r\n  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {\r\n    color: #ffffff;\r\n    background-color: transparent !important;\r\n}\r\n.navbar {\r\n    border-radius: 0 !important;\r\n}\r\n.navbar-default .navbar-toggle {\r\n    border-color: #ffffff;\r\n}\r\n.navbar-default .navbar-toggle .icon-bar {\r\n    background-color: #ffffff;\r\n}\r\ndefault .navbar-toggle:hover {\r\n    background-color: #AD1457;\r\n}\r\n.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {\r\n    background-color: #fff;\r\n}\r\n.navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar{\r\n    background-color: #084da7;\r\n}\r\n@media only screen and (max-width: 500px) {\r\n    .navbar-brand {\r\n        width:78%;\r\n    }\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/navigation/navigation.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<header>\r\n  \r\n  <div class=\"fluid-container\">\r\n    <nav class=\"navbar navbar-default  navbar-fixed-top\">\r\n        <div class=\"box\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                     <!-- <div class=\"col-lg-8 col-md-8\">\r\n                        <p class=\"title1\">Free phone: <strong>800-2345-6789</strong></p>\r\n                        <p class=\"title2\">Hours:  8am-8pm PST M-Th;   6am-3pm PST Fri</p>\r\n                    </div> -->\r\n                    <div class=\"col-lg-4 col-md-4 pull-right\">\r\n                        <li class=\"dropdown\" >\r\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">My Account <span class=\"caret\"></span></a>\r\n                        <ul class=\"dropdown-menu\">\r\n                          \r\n                          <li><a [routerLink]=\"['/myauctions']\">My Bids</a></li>\r\n                          <li><a href=\"#\">Log Out</a></li>\r\n                          \r\n                        </ul>\r\n                      </li>\r\n                        <!-- <a href=\"#\" class=\"btn-default btn1\">Sign In</a> -->\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div> \r\n      <div class=\"container\">\r\n        <div class=\"container-fluid\">\r\n          <!-- Brand and toggle get grouped for better mobile display -->\r\n          <div class=\"navbar-header\">\r\n            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n              <span class=\"sr-only\">Toggle navigation</span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n            </button>\r\n            <a class=\"navbar-brand\" [routerLink]=\"['/home']\"><img src=\"../../assets/images/brand.png\" alt=\"brand\"></a>\r\n          </div>\r\n      \r\n          <!-- Collect the nav links, forms, and other content for toggling -->\r\n          <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n            \r\n           \r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n                <li class=\"active\" ><a [routerLink]=\"['/home']\" >Home <span class=\"sr-only\">(current)</span></a></li>\r\n                <!-- <li class=\"dropdown\" >\r\n                  <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Manage <span class=\"caret\"></span></a>\r\n                  <ul class=\"dropdown-menu\">\r\n                    \r\n                    <li><a href=\"#\">Users</a></li>\r\n                    <li><a href=\"#\">Polls</a></li>\r\n                    <li><a href=\"#\">Asign Poll</a></li>\r\n                    \r\n                  </ul>\r\n                </li> -->\r\n              <li ><a pageScroll href=\"#c-auction\">Running Auctions</a></li>\r\n              <!-- <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/registration']\">Registration</a></li> -->\r\n              <li ><a pageScroll [pageScrollOffset]=\"180\" href=\"#f-auction\">Closed Auctions</a></li>\r\n              <!-- <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/register']\">Register</a></li> -->\r\n              <li ><a  pageScroll [pageScrollOffset]=\"180\" href=\"#u-auction\">Upcoming Auctions</a></li>\r\n            </ul>\r\n          </div><!-- /.navbar-collapse -->\r\n        </div><!-- /.container-fluid -->\r\n      </div>\r\n    </nav>\r\n  \r\n</div>\r\n</header>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/navigation/navigation.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavigationComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var NavigationComponent = (function () {
+    function NavigationComponent(router) {
+        this.router = router;
+        this.brand_logo = "brand.png";
+    }
+    NavigationComponent.prototype.ngOnInit = function () {
+    };
+    return NavigationComponent;
+}());
+NavigationComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-navigation',
+        template: __webpack_require__("../../../../../src/app/navigation/navigation.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/navigation/navigation.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */]) === "function" && _a || Object])
+], NavigationComponent);
+
+var _a;
+//# sourceMappingURL=navigation.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/product-service.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductServiceService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ProductServiceService = (function () {
+    function ProductServiceService(_http) {
+        this._http = _http;
+    }
+    ProductServiceService.prototype.loadClosedProduct = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this._http.get('http://localhost:3000/products/completedproduct', { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    ProductServiceService.prototype.loadHighestBidder = function (id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this._http.get('http://localhost:3000/products/highBid/' + id, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    ProductServiceService.prototype.loadUpcomingProduct = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this._http.get('http://localhost:3000/products/upcomingproduct', { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    return ProductServiceService;
+}());
+ProductServiceService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
+], ProductServiceService);
+
+var _a;
+//# sourceMappingURL=product-service.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/read-more/read-more.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReadMoreComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ReadMoreComponent = (function () {
+    function ReadMoreComponent(elementRef) {
+        this.elementRef = elementRef;
+        this.maxLength = 100;
+        this.hideToggle = true;
+        this.isCollapsed = true;
+    }
+    ReadMoreComponent.prototype.toggleView = function () {
+        this.isCollapsed = !this.isCollapsed;
+        this.determineView();
+    };
+    ReadMoreComponent.prototype.determineView = function () {
+        if (this.text.length <= this.maxLength) {
+            this.currentText = this.text;
+            this.isCollapsed = false;
+            this.hideToggle = true;
+            return;
+        }
+        this.hideToggle = false;
+        if (this.isCollapsed == true) {
+            this.currentText = this.text.substring(0, this.maxLength) + "...";
+        }
+        else if (this.isCollapsed == false) {
+            this.currentText = this.text;
+        }
+    };
+    ReadMoreComponent.prototype.ngOnChanges = function () {
+        this.determineView();
+    };
+    return ReadMoreComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", String)
+], ReadMoreComponent.prototype, "text", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Number)
+], ReadMoreComponent.prototype, "maxLength", void 0);
+ReadMoreComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'read-more',
+        template: "\n        <div [innerHTML]=\"currentText\">\n        </div>\n            <a [class.hidden]=\"hideToggle\" (click)=\"toggleView()\">Read {{isCollapsed? 'more':'less'}}</a>\n    "
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object])
+], ReadMoreComponent);
+
+var _a;
+//# sourceMappingURL=read-more.component.js.map
 
 /***/ }),
 
@@ -648,7 +1702,7 @@ RegistrationComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/registration/registration.component.css")],
         providers: [__WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */]) === "function" && _b || Object])
 ], RegistrationComponent);
 
 var _a, _b;
@@ -743,6 +1797,67 @@ RunningAuctionBackComponent = __decorate([
 
 var _a;
 //# sourceMappingURL=running-auction-back.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/runningauction/runningauction.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/runningauction/runningauction.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\" id=\"c-auction\">\r\n    <h4 class=\"page-head mrgn-nav-top\">Running Auctions</h4>\r\n    <app-card-running></app-card-running>\r\n  </div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/runningauction/runningauction.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RunningauctionComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var RunningauctionComponent = (function () {
+    function RunningauctionComponent() {
+    }
+    RunningauctionComponent.prototype.ngOnInit = function () {
+    };
+    return RunningauctionComponent;
+}());
+RunningauctionComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-runningauction',
+        template: __webpack_require__("../../../../../src/app/runningauction/runningauction.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/runningauction/runningauction.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], RunningauctionComponent);
+
+//# sourceMappingURL=runningauction.component.js.map
 
 /***/ }),
 
@@ -886,6 +2001,67 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/app/side-bar/side-bar.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/side-bar/side-bar.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ul class=\"navbar-nav navbar-sidenav\" id=\"exampleAccordion\">\r\n  <li class=\"nav-item\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"Dashboard\">\r\n    <a class=\"nav-link\" routerLink=\"/\">\r\n      <i class=\"fa fa-fw fa-dashboard\"></i>\r\n      <span class=\"nav-link-text\">Dashboard</span>\r\n    </a>\r\n  </li>\r\n \r\n  \r\n  <li class=\"nav-item\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"Components\">\r\n    <a class=\"nav-link nav-link-collapse collapsed\" data-toggle=\"collapse\" href=\"#collapseComponents\" data-parent=\"#exampleAccordion\">\r\n      <i class=\"fa fa-users\"></i>\r\n      <span class=\"nav-link-text\">Users Management</span>\r\n    </a>\r\n    <ul class=\"sidenav-second-level collapse\" id=\"collapseComponents\">\r\n      <li>\r\n        <a routerLink=\"/AllUsers\">All Users</a>\r\n      </li>\r\n      <li>\r\n        <a routerLink=\"/DisabledUsers\">Disabled Users</a>\r\n      </li>\r\n      <li>\r\n        <a routerLink=\"/DeletedUser\">Deleted Users</a>\r\n      </li>\r\n    </ul>\r\n  </li>\r\n  <li class=\"nav-item\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"Example Pages\">\r\n    <a class=\"nav-link nav-link-collapse collapsed\" data-toggle=\"collapse\" href=\"#collapseExamplePages\" data-parent=\"#exampleAccordion\">\r\n      <i class=\"fa fa-product-hunt\"></i>\r\n      <span class=\"nav-link-text\">Product Management</span>\r\n    </a>\r\n    <ul class=\"sidenav-second-level collapse\" id=\"collapseExamplePages\">\r\n      <li>\r\n        <a routerLink=\"/allusers\">Add Product</a>\r\n      </li>\r\n      <li>\r\n        <a routerLink=\"/allusers\">Manage Product</a>\r\n      </li>\r\n      \r\n      \r\n    </ul>\r\n  </li>\r\n  <li class=\"nav-item\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"Menu Levels\">\r\n    <a class=\"nav-link nav-link-collapse collapsed\" data-toggle=\"collapse\" href=\"#collapseMulti\" data-parent=\"#exampleAccordion\">\r\n      <i class=\"fa fa-snowflake-o\"></i>\r\n      <span class=\"nav-link-text\">Auction</span>\r\n    </a>\r\n    <ul class=\"sidenav-second-level collapse\" id=\"collapseMulti\">\r\n      <li>\r\n        <a href=\"#\">Running Auction</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"#\">Upcoming Auction</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"#\">Closed Auction</a>\r\n      </li>\r\n     \r\n    </ul>\r\n  </li>\r\n \r\n</ul>\r\n<!--<ul class=\"navbar-nav sidenav-toggler\">\r\n  <li class=\"nav-item\">\r\n    <a class=\"nav-link text-center\" id=\"sidenavToggler\">\r\n      <i class=\"fa fa-fw fa-angle-left\"></i>\r\n    </a>\r\n  </li>\r\n</ul>-->"
+
+/***/ }),
+
+/***/ "../../../../../src/app/side-bar/side-bar.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SideBarComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SideBarComponent = (function () {
+    function SideBarComponent() {
+    }
+    SideBarComponent.prototype.ngOnInit = function () {
+    };
+    return SideBarComponent;
+}());
+SideBarComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-side-bar',
+        template: __webpack_require__("../../../../../src/app/side-bar/side-bar.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/side-bar/side-bar.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], SideBarComponent);
+
+//# sourceMappingURL=side-bar.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/socialmedia/socialmedia.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -945,10 +2121,10 @@ var SocialmediaComponent = (function () {
                 if (data.success) {
                     _this.userService.storeUserData(data.token, data.user);
                     if (data.user.role == "user") {
-                        _this.router.navigate(['/registration']);
+                        _this.router.navigate(['/home']);
                     }
                     if (data.user.role == "admin") {
-                        _this.router.navigate(['/login']);
+                        _this.router.navigate(['/dashboard']);
                     }
                 }
             });
@@ -962,11 +2138,72 @@ SocialmediaComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/socialmedia/socialmedia.component.html"),
         styles: [__webpack_require__("../../../../../src/app/socialmedia/socialmedia.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */]) === "function" && _c || Object])
 ], SocialmediaComponent);
 
 var _a, _b, _c;
 //# sourceMappingURL=socialmedia.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/top-bar/top-bar.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".navbar-nav .dropdown-menu{left:inherit !important;right:0;}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/top-bar/top-bar.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark fixed-top\" id=\"mainNav\">\r\n <img src=\"./assets/image/jk.png\">\r\n  <a class=\"navbar-brand\" routerLink=\"/\">AUCTION</a>\r\n  <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n  <div class=\"collapse navbar-collapse\" id=\"navbarResponsive\">\r\n   \r\n\r\n    <app-side-bar></app-side-bar>\r\n\r\n\r\n    \r\n    <ul class=\"navbar-nav ml-auto\">\r\n      <!--<li class=\"nav-item dropdown\">\r\n        <a class=\"nav-link dropdown-toggle mr-lg-2\" id=\"messagesDropdown\" href=\"#\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <i class=\"fa fa-fw fa-envelope\"></i>\r\n          <span class=\"d-lg-none\">Messages\r\n            <span class=\"badge badge-pill badge-primary\">12 New</span>\r\n          </span>\r\n          <span class=\"indicator text-primary d-none d-lg-block\">\r\n            <i class=\"fa fa-fw fa-circle\"></i>\r\n          </span>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"messagesDropdown\">\r\n          <h6 class=\"dropdown-header\">New Messages:</h6>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item\" href=\"#\">\r\n            <strong>David Miller</strong>\r\n            <span class=\"small float-right text-muted\">11:21 AM</span>\r\n            <div class=\"dropdown-message small\">Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</div>\r\n          </a>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item\" href=\"#\">\r\n            <strong>Jane Smith</strong>\r\n            <span class=\"small float-right text-muted\">11:21 AM</span>\r\n            <div class=\"dropdown-message small\">I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!</div>\r\n          </a>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item\" href=\"#\">\r\n            <strong>John Doe</strong>\r\n            <span class=\"small float-right text-muted\">11:21 AM</span>\r\n            <div class=\"dropdown-message small\">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>\r\n          </a>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item small\" href=\"#\">View all messages</a>\r\n        </div>\r\n      </li>-->\r\n      <li class=\"nav-item dropdown\">\r\n        <a class=\"nav-link dropdown-toggle mr-lg-2\" id=\"alertsDropdown\" href=\"#\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <i class=\"fa fa-fw fa-bell\"></i>\r\n          <span class=\"d-lg-none\">Alerts\r\n            <span class=\"badge badge-pill badge-warning\">6 New</span>\r\n          </span>\r\n          <span class=\"indicator text-warning d-none d-lg-block\">\r\n            <i class=\"fa fa-fw fa-circle\"></i>\r\n          </span>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"alertsDropdown\">\r\n          <h6 class=\"dropdown-header\">New Alerts:</h6>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item\" href=\"#\">\r\n            <span class=\"text-success\">\r\n              <strong>\r\n                <i class=\"fa fa-long-arrow-up fa-fw\"></i>Status Update</strong>\r\n            </span>\r\n            <span class=\"small float-right text-muted\">11:21 AM</span>\r\n            <div class=\"dropdown-message small\">This is an automated server response message. All systems are online.</div>\r\n          </a>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item\" href=\"#\">\r\n            <span class=\"text-danger\">\r\n              <strong>\r\n                <i class=\"fa fa-long-arrow-down fa-fw\"></i>Status Update</strong>\r\n            </span>\r\n            <span class=\"small float-right text-muted\">11:21 AM</span>\r\n            <div class=\"dropdown-message small\">This is an automated server response message. All systems are online.</div>\r\n          </a>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item\" href=\"#\">\r\n            <span class=\"text-success\">\r\n              <strong>\r\n                <i class=\"fa fa-long-arrow-up fa-fw\"></i>Status Update</strong>\r\n            </span>\r\n            <span class=\"small float-right text-muted\">11:21 AM</span>\r\n            <div class=\"dropdown-message small\">This is an automated server response message. All systems are online.</div>\r\n          </a>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item small\" href=\"#\">View all alerts</a>\r\n        </div>\r\n      </li>\r\n      <!--<li class=\"nav-item\">\r\n        <form class=\"form-inline my-2 my-lg-0 mr-lg-2\">\r\n          <div class=\"input-group\">\r\n            <input class=\"form-control\" type=\"text\" placeholder=\"Search for...\">\r\n            <span class=\"input-group-btn\">\r\n              <button class=\"btn btn-primary\" type=\"button\">\r\n                <i class=\"fa fa-search\"></i>\r\n              </button>\r\n            </span>\r\n          </div>\r\n        </form>\r\n      </li>-->\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" data-toggle=\"modal\" data-target=\"#exampleModal\">\r\n          <i class=\"fa fa-fw fa-sign-out\"></i>Logout</a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/top-bar/top-bar.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TopBarComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TopBarComponent = (function () {
+    function TopBarComponent() {
+    }
+    TopBarComponent.prototype.ngOnInit = function () {
+    };
+    return TopBarComponent;
+}());
+TopBarComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-top-bar',
+        template: __webpack_require__("../../../../../src/app/top-bar/top-bar.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/top-bar/top-bar.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], TopBarComponent);
+
+//# sourceMappingURL=top-bar.component.js.map
 
 /***/ }),
 
@@ -1040,6 +2277,81 @@ UpcomingAuctionBackComponent = __decorate([
 
 var _a;
 //# sourceMappingURL=upcoming-auction-back.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/upcomingauctions/upcomingauctions.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/upcomingauctions/upcomingauctions.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\r\n    <div id=\"u-auction\" class=\"auction-section\">\r\n        <h4 class=\"page-head\">Upcoming Auctions</h4>\r\n        <div *ngIf=\"existStatus; else noProduct\">\r\n            <div *ngFor=\"let item of products\">\r\n                <!-- {{item}} -->\r\n                <app-card [item]=\"item\"></app-card>\r\n            </div>\r\n        </div>\r\n       \r\n        <ng-template #noProduct>\r\n            <div class=\"no-item\">\r\n                <h4>Sorrry! No items to display!</h4>\r\n            </div>\r\n        </ng-template>\r\n      \r\n  </div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/upcomingauctions/upcomingauctions.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UpcomingauctionsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__product_service_service__ = __webpack_require__("../../../../../src/app/product-service.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var UpcomingauctionsComponent = (function () {
+    function UpcomingauctionsComponent(_productService) {
+        this._productService = _productService;
+        this.existStatus = false;
+    }
+    UpcomingauctionsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._productService.loadUpcomingProduct()
+            .subscribe(function (resProducts) {
+            _this.products = resProducts;
+            console.log(resProducts);
+            if (resProducts.length > 0) {
+                _this.existStatus = true;
+            }
+        });
+    };
+    return UpcomingauctionsComponent;
+}());
+UpcomingauctionsComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-upcomingauctions',
+        template: __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__product_service_service__["a" /* ProductServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__product_service_service__["a" /* ProductServiceService */]) === "function" && _a || Object])
+], UpcomingauctionsComponent);
+
+var _a;
+//# sourceMappingURL=upcomingauctions.component.js.map
 
 /***/ }),
 
