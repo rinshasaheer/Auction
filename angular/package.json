@@ -21,17 +21,12 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
-<<<<<<< HEAD
-    "angular-datatables": "^5.0.0",
-    "core-js": "^2.4.1",
-    "datatables.net": "^1.10.16",
-    "datatables.net-dt": "^1.10.16",
-=======
     "angular2-text-equality-validator": "^2.0.0",
     "bcrypt-nodejs": "0.0.3",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
->>>>>>> 1e102df0168f9310e6b81c200a62bf55ccdd58a7
+    "datatables.net": "^1.10.16",
+    "datatables.net-dt": "^1.10.16",
     "jquery": "^3.2.1",
     "ng2-page-scroll": "^4.0.0-beta.12",
     "rxjs": "^5.4.2",

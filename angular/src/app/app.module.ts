@@ -1,3 +1,6 @@
+import 'core-js/es7/reflect';
+import 'zone.js';
+import 'reflect-metadata';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
@@ -65,10 +68,9 @@ const appRoutes: Routes = [
     FinishedauctionComponent,
     UpcomingauctionsComponent,
     MyauctionsComponent,
-    CapitalizePipe
-  ],
-  
-  providers: [ProductServiceService,
+    EqualValidator,
+    CapitalizePipe,
+    DashboardComponent,
     SideBarComponent,
     TopBarComponent,
     FooterComponent,
@@ -76,19 +78,18 @@ const appRoutes: Routes = [
     AllUsersComponent,
     DisabledUsersComponent,
     DeletedUsersComponent,
+    EmailVerificationComponent,
+    ClosedAuctionBackComponent,
+    UpcomingAuctionBackComponent
+  ],
+  
+  providers: [ProductServiceService,
+    
     ProductService
   ],
   imports: [
     BrowserModule,
     // DataTablesModule,
-   
-    RegistrationComponent,
-    EqualValidator,
-    LoginComponent,
-    EmailVerificationComponent,
-    ClosedAuctionBackComponent,
-    UpcomingAuctionBackComponent,
-    RunningAuctionBackComponent,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
