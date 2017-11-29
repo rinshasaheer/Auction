@@ -15,6 +15,8 @@ import { EqualValidator } from './equal-validator.directive';
 import { ClosedAuctionBackComponent } from './closed-auction-back/closed-auction-back.component';
 import { UpcomingAuctionBackComponent } from './upcoming-auction-back/upcoming-auction-back.component';
 import { RunningAuctionBackComponent } from './running-auction-back/running-auction-back.component';
+import { ReadMoreComponent } from './read-more/read-more.component';
+import { CountDownTimerComponent } from './count-down-timer/count-down-timer.component';
 
 
 const appRoutes: Routes = [
@@ -22,6 +24,7 @@ const appRoutes: Routes = [
   {path:'registration', component:RegistrationComponent},
   {path:'closed-auction', component:ClosedAuctionBackComponent},
   {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
+  {path:'running-auction', component:RunningAuctionBackComponent},
 
 ]
 
@@ -33,6 +36,8 @@ const appRoutes: Routes = [
     ClosedAuctionBackComponent,
     UpcomingAuctionBackComponent,
     RunningAuctionBackComponent,
+    ReadMoreComponent,
+    CountDownTimerComponent,
 
   ],
   imports: [

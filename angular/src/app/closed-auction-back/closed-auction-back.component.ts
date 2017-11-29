@@ -10,6 +10,7 @@ import { Router} from '@angular/router';
 export class ClosedAuctionBackComponent implements OnInit {
   products: object;
   winnerId : object;
+  involvedUsers : any = [];
   constructor(
      private productService: ProductService
   ){ }
@@ -17,13 +18,31 @@ export class ClosedAuctionBackComponent implements OnInit {
 
   ngOnInit() {
     this.productService.getAllClosedProduct().subscribe(data=>{
+     
+      data.forEach((item, index) => {
+        var lastBidprice = item.bid_amount;
+        var lastBiduser = '';
+        var lastBidTime = '';
+
+        item.bidders.forEach((user, i) => {
+          if(user.amount >= lastBidprice && user.bid_status != "rejected"){
+             lastBidprice = user.amount;
+             lastBiduser = item.user_details[i].name;
+             lastBidTime = user.date_time;
+          }
+        });
+        data[index].lastBidprice = lastBidprice;
+        data[index].lastBiduser = lastBiduser;
+        data[index].lastBidTime = lastBidTime;
+      });
       console.log(data);
       this.products = data;
-      if(data.bidders.length >0){
-         this.winnerId = data.bidders[data.bidders.length-1].user_id;
-          
-      }
     });
+  }
+
+  updateInvolved(product){
+    this.involvedUsers = product.bidders
+    console.log(this.involvedUsers);
   }
 
 }

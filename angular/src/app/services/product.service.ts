@@ -13,6 +13,12 @@ export class ProductService {
       return this.http.get(this.url + 'products/closed_products',{headers:headers})
       .map(res =>res.json());
   }
+  getAllrunningProduct(){
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      return this.http.get(this.url + 'products/runnig_products',{headers:headers})
+      .map(res =>res.json());
+  }
   getAllUpcomingProduct(){
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');

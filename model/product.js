@@ -62,8 +62,8 @@ const ProductsSchema = mongoose.Schema({
         closing_informed :{
             type: Boolean,
             default: false
-        }
-       
+        },
+       test_id:String
 });
 
 const Product = module.exports = mongoose.model('Product', ProductsSchema);

@@ -15,6 +15,7 @@ const UserSchema = mongoose.Schema({
     google_id : String,
     date_tym : { type: Date, default: Date.now },
     role : { type: String, default: 'user' },
+    test_id:String
 });
 
 const User = module.exports = mongoose.model('User', UserSchema);
