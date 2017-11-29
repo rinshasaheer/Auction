@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\r\n\r\n"
+module.exports = "\r\n  <!-- Navigation-->\r\n  <!-- <app-top-bar></app-top-bar> -->\r\n  <!-- <div class=\"content-wrapper\">\r\n    <div class=\"container-fluid\"> -->\r\n      <!-- Breadcrumbs-->\r\n     \r\n      \r\n         <router-outlet></router-outlet>\r\n       \r\n    <!-- </div> -->\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -171,7 +171,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\r\n.margn{\r\n    margin-bottom: 15px;\r\n}\r\nhr {\r\n    margin-top: 10px;\r\n    margin-bottom: 10px;\r\n    border: 0;\r\n    border-top: 1px solid #eee;\r\n}\r\n.list-group-item-text{\r\n    text-align: justify;\r\n}\r\n.alert {\r\n    margin-bottom: 8px;\r\n    padding: 5px;\r\n}\r\n.lead {\r\n    margin-bottom: 10px;\r\n}    ", ""]);
 
 // exports
 
@@ -184,7 +184,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/closed-auction-back/closed-auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" style=\"padding-top:20px;\">\r\n  \r\n    <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n        <div  *ngFor=\"let product of products;let i = index;\" class=\"item  col-xs-4 col-lg-4\">\r\n            <div class=\"thumbnail\">\r\n                \r\n                <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n           \r\n                <div class=\"caption\">\r\n                    <h4 class=\"group inner list-group-item-heading\">\r\n                        {{product.name}}</h4>\r\n                    <p class=\"group inner list-group-item-text\">{{product.desc}}</p>\r\n                    <div class=\"row text-center\">\r\n                        <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                            Basic Price\r\n                            <p class=\"lead\">{{product.bid_amount | number:'1.2-2'}}</p>\r\n                        </div>\r\n                        <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                            Bid Price\r\n                            \r\n                            <p *ngIf=\"product.bidders.length > 0\" class=\"lead\">{{product.bidders[product.bidders.length-1].amount | number:'1.2-2'}}</p>\r\n                            <p *ngIf=\"product.bidders.length == 0 \" class=\"alert-danger lead\">No bid</p>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row text-center\">\r\n                        <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                            Started<br>\r\n                            <b>\r\n                              {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                              <br>\r\n                              {{product.start_date | date : 'mediumTime'}}\r\n                            </b>\r\n                        </div>\r\n                         <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                            Ended<br>\r\n                            <b>\r\n                                {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                <br>\r\n                                {{product.end_date | date : 'mediumTime'}}\r\n                            </b>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row\">\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12\">\r\n                            <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center margn\">\r\n                              <div *ngIf=\"product.is_bid_completed\">\r\n                              <strong>Winner! </strong> Manu Prasad\r\n                              </div>\r\n                              <div *ngIf=\"!product.is_bid_completed\">\r\n                              <a class=\"alert-success\" href=\"#\">Assign - Winner</a>\r\n                              </div>\r\n                          </div>\r\n                            <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center margn\">\r\n                            <a class=\"alert-danger\" href=\"#\">Re-submit</a>\r\n                          </div>\r\n                       \r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n  \r\n    </div>\r\n  \r\n    <div *ngIf=\"products?.length == 0\" id=\"products\" class=\"row list-group\">\r\n      No Product Found\r\n    </div>\r\n    </div>\r\n        \r\n       "
+module.exports = "<div class=\"container\" style=\"padding-top:20px;\">\r\n  \r\n    <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n        <div  *ngFor=\"let product of products\" class=\"item  col-xs-4 col-lg-4\">\r\n            <div class=\"thumbnail\">\r\n                \r\n                <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n           \r\n                <div class=\"caption\">\r\n                    <h4 class=\"group inner list-group-item-heading text-center\">\r\n                        {{product.name}}</h4>\r\n                        <hr>\r\n                        <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                        <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                      </p>\r\n                    <hr>\r\n                    <div class=\"row text-center\">\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                            Bid Start Price\r\n                            <p class=\"lead\">{{product.bid_amount | number:'1.2-2'}}</p>\r\n                        </div>\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                            Last Bid Price\r\n                            \r\n                            <p *ngIf=\"product.bidders.length > 0\" class=\"lead\">{{product.lastBidprice | number:'1.2-2'}}</p>\r\n                            <p *ngIf=\"product.bidders.length == 0 \" class=\"alert-danger lead\">No bid</p>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row text-center\">\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                            Bid Started On<br>\r\n                            <b>\r\n                              {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                              <br>\r\n                              {{product.start_date | date : 'mediumTime'}}\r\n                            </b>\r\n                        </div>\r\n                         <div class=\"col-xs-12 col-md-6\">\r\n                            Bid Ended On<br>\r\n                            <b>\r\n                                {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                <br>\r\n                                {{product.end_date | date : 'mediumTime'}}\r\n                            </b>\r\n                        </div>\r\n                    </div>\r\n                    <hr>\r\n                    <div class=\"row margn\" >\r\n                      \r\n                      <div class=\"col-xs-12 col-md-12 text-center\">\r\n                         <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.bidders.length}}</a>\r\n                         \r\n                      </div>\r\n                      <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                          <div class=\"modal-dialog\">\r\n                        \r\n                            <!-- Modal content-->\r\n                            <div class=\"modal-content\">\r\n                              <div class=\"modal-header\">\r\n                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                <h4 class=\"modal-title\">User Involved - {{involvedUsers.length}}</h4>\r\n                              </div>\r\n                              <div class=\"modal-body\">\r\n                                  <table class=\"table\">\r\n                                      <thead class=\"thead-inverse\">\r\n                                  <tr>\r\n                                    <th>Slno</th>\r\n                                    <th>Name</th>\r\n                                    <th>Bid Amount</th>\r\n                                    <th>Time</th>\r\n                                    <th>Status</th>\r\n                                  \r\n                                  </tr>\r\n                                </thead>\r\n                                <tbody *ngIf=\"involvedUsers.length ==0\">\r\n                                    <tr >\r\n                                          <td colspan=\"5\" class=\"text-center\">No User Involved</td>\r\n                                    </tr>\r\n                                </tbody>\r\n                                <tbody *ngIf=\"involvedUsers.length > 0\" >\r\n                              \r\n                                    <tr  *ngFor=\"let usr of involvedUsers;let i = index\" >\r\n                                          <td >{{i+1}}</td>\r\n                                          <td >{{product.user_details[i].name}}</td>\r\n                                          <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                          <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                          <td >{{usr.bid_status}}</td>\r\n                                    </tr>\r\n                                </tbody>\r\n                                </table>\r\n                              \r\n                              </div>\r\n                              <div class=\"modal-footer\">\r\n                                <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                              </div>\r\n                            </div>\r\n                        \r\n                          </div>\r\n                        </div>\r\n                  </div>\r\n                  \r\n                    <div class=\"row\">\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12\">\r\n                            <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center \">\r\n                              <div *ngIf=\"product.is_bid_completed\">\r\n                                  <div class=\"alert alert-success text-center \">\r\n                                      Winner! \r\n                                      <br> <strong> {{product.lastBiduser}}</strong>\r\n                                      <br>\r\n                                      {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                            \r\n                              </div>\r\n                              <div *ngIf=\"!product.is_bid_completed\">\r\n                              <a class=\"alert-success\" href=\"#\">Assign - Winner</a>\r\n                              </div>\r\n                          </div>\r\n                            <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                            <a class=\"alert-danger\" href=\"#\">Re-submit</a>\r\n                          </div>\r\n                       \r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n  \r\n    </div>\r\n    </div>\r\n  \r\n    <div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n        <h3 class=\"text-center\"> No Product Found</h3>\r\n    </div>\r\n    </div>\r\n     \r\n    \r\n       "
 
 /***/ }),
 
@@ -209,16 +209,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ClosedAuctionBackComponent = (function () {
     function ClosedAuctionBackComponent(productService) {
         this.productService = productService;
+        this.involvedUsers = [];
     }
     ClosedAuctionBackComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.productService.getAllClosedProduct().subscribe(function (data) {
+            data.forEach(function (item, index) {
+                var lastBidprice = item.bid_amount;
+                var lastBiduser = '';
+                var lastBidTime = '';
+                item.bidders.forEach(function (user, i) {
+                    if (user.amount >= lastBidprice && user.bid_status != "rejected") {
+                        lastBidprice = user.amount;
+                        lastBiduser = item.user_details[i].name;
+                        lastBidTime = user.date_time;
+                    }
+                });
+                data[index].lastBidprice = lastBidprice;
+                data[index].lastBiduser = lastBiduser;
+                data[index].lastBidTime = lastBidTime;
+            });
             console.log(data);
             _this.products = data;
-            if (data.bidders.length > 0) {
-                _this.winnerId = data.bidders[data.bidders.length - 1].user_id;
-            }
         });
+    };
+    ClosedAuctionBackComponent.prototype.updateInvolved = function (product) {
+        this.involvedUsers = product.bidders;
+        console.log(this.involvedUsers);
     };
     return ClosedAuctionBackComponent;
 }());
@@ -647,7 +664,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\r\n.margn{\r\n    margin-bottom: 15px;\r\n}\r\nhr {\r\n    margin-top: 10px;\r\n    margin-bottom: 10px;\r\n    border: 0;\r\n    border-top: 1px solid #eee;\r\n}\r\n.list-group-item-text{\r\n    text-align: justify;\r\n}\r\n.alert {\r\n    margin-bottom: 8px;\r\n}\r\n.lead {\r\n    margin-bottom: 10px;\r\n}    ", ""]);
 
 // exports
 
@@ -660,7 +677,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/running-auction-back/running-auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  running-auction-back works!\r\n</p>\r\n"
+module.exports = "<div class=\"container\" style=\"padding-top:20px;\">\r\n    <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n        <div *ngFor=\"let product of products\"  class=\"item  col-xs-4 col-lg-4\">\r\n            <div class=\"thumbnail\">\r\n                \r\n                <img class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n                <div class=\"caption\">\r\n                    <h4 class=\"group inner list-group-item-heading text-center\">\r\n                        {{product.name}}</h4>\r\n                        <hr>\r\n                        <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                        <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                      </p>\r\n                    <hr>\r\n                    <div class=\"row text-center\">\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                            Bid Start Price\r\n                            <p class=\"lead\"> {{product.bid_amount | number:'1.2-2'}}</p>\r\n                        </div>\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                          Ends In\r\n                            <p class=\"lead\">\r\n                              <!-- {{product.end_date | date: 'dd-mm-yyyy h:mm:ss'}} -->\r\n                              <app-count-down-timer [inputDate]=\"product.end_date\"></app-count-down-timer>\r\n                              <!-- <app-count-down-timer inputDate=\"product.end_date | date: 'MMMM dd, yyyy h:mm:ss'\"></app-count-down-timer> -->\r\n\r\n                             \r\n                              \r\n                              <!-- <app-count-down-timer inputDate=\"product.end_date\"></app-count-down-timer> -->\r\n                            </p>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row margn\" >\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12 text-center\">\r\n                           <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.bidders.length}}</a>\r\n                           \r\n                        </div>\r\n                        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                            <div class=\"modal-dialog\">\r\n                          \r\n                              <!-- Modal content-->\r\n                              <div class=\"modal-content\">\r\n                                <div class=\"modal-header\">\r\n                                  <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                  <h4 class=\"modal-title\">User Involved - {{involvedUsers.length}}</h4>\r\n                                </div>\r\n                                <div class=\"modal-body\">\r\n                                    <table class=\"table\">\r\n                                        <thead class=\"thead-inverse\">\r\n                                    <tr>\r\n                                      <th>Slno</th>\r\n                                      <th>Name</th>\r\n                                      <th>Bid Amount</th>\r\n                                      <th>Time</th>\r\n                                      <th>Status</th>\r\n                                    \r\n                                    </tr>\r\n                                  </thead>\r\n                                  <tbody *ngIf=\"involvedUsers.length ==0\">\r\n                                      <tr >\r\n                                            <td colspan=\"4\" class=\"text-center\">No User Involved</td>\r\n                                      </tr>\r\n                                  </tbody>\r\n                                  <tbody *ngIf=\"involvedUsers.length > 0\" >\r\n                                \r\n                                      <tr  *ngFor=\"let usr of involvedUsers;let i = index\" >\r\n                                            <td >{{i+1}}</td>\r\n                                            <td >{{product.user_details[i].name}}</td>\r\n                                            <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                            <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                            <td >{{usr.bid_status}}</td>\r\n                                      </tr>\r\n                                  </tbody>\r\n                                  </table>\r\n                                \r\n                                </div>\r\n                                <div class=\"modal-footer\">\r\n                                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                                </div>\r\n                              </div>\r\n                          \r\n                            </div>\r\n                          </div>\r\n                    </div>\r\n                    <hr>\r\n                    <div class=\"row\">\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12\">\r\n                            <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center margn\">\r\n                                <strong>Last Bid Amount - {{product.lastBidprice | number:'1.2-2'}}</strong>\r\n                                 <br>\r\n                                 {{product.lastBiduser}} \r\n                                 <br> {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                      \r\n                        </div>\r\n                        <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                           No bidder Found\r\n                          </div>\r\n               \r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        </div>\r\n\r\n</div>\r\n<div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n    <h3 class=\"text-center\"> No Product Found</h3>\r\n</div>\r\n</div>"
 
 /***/ }),
 
@@ -670,6 +687,7 @@ module.exports = "<p>\r\n  running-auction-back works!\r\n</p>\r\n"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RunningAuctionBackComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -680,10 +698,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var RunningAuctionBackComponent = (function () {
-    function RunningAuctionBackComponent() {
+    function RunningAuctionBackComponent(productService) {
+        this.productService = productService;
+        this.involvedUsers = [];
     }
     RunningAuctionBackComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.productService.getAllrunningProduct().subscribe(function (data) {
+            data.forEach(function (item, index) {
+                var lastBidprice = item.bid_amount;
+                var lastBiduser = '';
+                var lastBidTime = '';
+                item.bidders.forEach(function (user, i) {
+                    if (user.amount >= lastBidprice) {
+                        lastBidprice = user.amount;
+                        lastBiduser = item.user_details[i].name;
+                        lastBidTime = user.date_time;
+                    }
+                });
+                data[index].lastBidprice = lastBidprice;
+                data[index].lastBiduser = lastBiduser;
+                data[index].lastBidTime = lastBidTime;
+            });
+            console.log(data);
+            _this.products = data;
+        });
+    };
+    RunningAuctionBackComponent.prototype.updateInvolved = function (product) {
+        this.involvedUsers = product.bidders;
+        console.log(this.involvedUsers);
     };
     return RunningAuctionBackComponent;
 }());
@@ -693,9 +738,10 @@ RunningAuctionBackComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.html"),
         styles: [__webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object])
 ], RunningAuctionBackComponent);
 
+var _a;
 //# sourceMappingURL=running-auction-back.component.js.map
 
 /***/ }),
@@ -729,6 +775,12 @@ var ProductService = (function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.get(this.url + 'products/closed_products', { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    ProductService.prototype.getAllrunningProduct = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get(this.url + 'products/runnig_products', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     ProductService.prototype.getAllUpcomingProduct = function () {
@@ -926,7 +978,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\r\n\r\nhr {\r\n    margin-top: 10px;\r\n    margin-bottom: 10px;\r\n    border: 0;\r\n    border-top: 1px solid #eee;\r\n}\r\n.list-group-item-text{\r\n    text-align: justify;\r\n}\r\n.alert {\r\n    margin-bottom: 8px;\r\n}\r\n.lead {\r\n    margin-bottom: 10px;\r\n}    ", ""]);
 
 // exports
 
@@ -939,7 +991,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" style=\"padding-top:20px;\">\r\n  \r\n    <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n        <div  *ngFor=\"let product of products;let i = index;\" class=\"item  col-xs-4 col-lg-4\">\r\n            <div class=\"thumbnail\">\r\n                \r\n                <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n           \r\n                <div class=\"caption\">\r\n                    <h4 class=\"group inner list-group-item-heading\">\r\n                        {{product.name}}</h4>\r\n                    <p class=\"group inner list-group-item-text\">{{product.desc}}</p>\r\n          \r\n                    <div class=\"row text-center\">\r\n                        <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                            Bid Start On<br>\r\n                            <b>\r\n                              {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                              <br>\r\n                              {{product.start_date | date : 'mediumTime'}}\r\n                            </b>\r\n                        </div>\r\n                         <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                            Bid End On<br>\r\n                            <b>\r\n                                {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                <br>\r\n                                {{product.end_date | date : 'mediumTime'}}\r\n                            </b>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row margn\">\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12\">\r\n                            <div  class=\"alert alert-success text-center \">\r\n                              <div >\r\n                              <strong>Bid Start Price - ${{product.bid_amount | number:'1.2-2'}}</strong>\r\n                              </div>\r\n                          </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n  \r\n    </div>\r\n  \r\n    <div *ngIf=\"products?.length == 0\" id=\"products\" class=\"row list-group\">\r\n      No Product Found\r\n    </div>\r\n    </div>\r\n        \r\n       "
+module.exports = "<div class=\"container\" style=\"padding-top:20px;\">\r\n    \r\n      <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n          <div  *ngFor=\"let product of products;let i = index;\" class=\"item  col-xs-4 col-lg-4\">\r\n              <div class=\"thumbnail\">\r\n                  \r\n                  <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                  <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n             \r\n                  <div class=\"caption\">\r\n                      <h4 class=\"group inner list-group-item-heading text-center\">\r\n                          {{product.name}}</h4>\r\n                          <hr>\r\n                          <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                          <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                        </p>\r\n                      <hr>\r\n            \r\n                      <div class=\"row text-center\">\r\n                          <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                              Bid Start On<br>\r\n                              <b>\r\n                                {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                                <br>\r\n                                {{product.start_date | date : 'mediumTime'}}\r\n                              </b>\r\n                          </div>\r\n                           <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                              Bid End On<br>\r\n                              <b>\r\n                                  {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                  <br>\r\n                                  {{product.end_date | date : 'mediumTime'}}\r\n                              </b>\r\n                          </div>\r\n                      </div>\r\n                      <hr>\r\n                      <div class=\"row \">\r\n                          \r\n                          <div class=\"col-xs-12 col-md-12\">\r\n                              <div  class=\"alert alert-success text-center \">\r\n                                <div >\r\n                                <strong>Bid Start Price - {{product.bid_amount | number:'1.2-2'}}</strong>\r\n                                </div>\r\n                            </div>\r\n                      </div>\r\n                  </div>\r\n              </div>\r\n          </div>\r\n    \r\n      </div>\r\n    </div>\r\n      <div *ngIf=\"products?.length == 0\" id=\"products\" class=\"row list-group\">\r\n       <h3 class=\"text-center\"> No Product Found</h3>\r\n      </div>\r\n      </div>\r\n          \r\n         "
 
 /***/ }),
 
@@ -970,9 +1022,9 @@ var UpcomingAuctionBackComponent = (function () {
         this.productService.getAllUpcomingProduct().subscribe(function (data) {
             console.log(data);
             _this.products = data;
-            if (data.bidders.length > 0) {
-                data.bidders[data.bidders.length - 1];
-            }
+            // if(data.bidders.length >0){
+            //    // data.bidders[data.bidders.length-1]
+            // }
         });
     };
     return UpcomingAuctionBackComponent;

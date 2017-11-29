@@ -14,7 +14,16 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
+    "datatables.net": "^1.10.16",
+    "datatables.net-dt": "^1.10.16",
     "express": "^4.16.2",
+    "jquery": "^3.2.1",
+    "mongoose": "^4.13.4"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.5.4",
+    "@types/datatables.net": "^1.10.7",
+    "@types/jquery": "^3.2.16",
     "jsonwebtoken": "^8.1.0",
     "mongoose": "^4.13.4",
     "nodemailer": "^4.4.0",

@@ -97,7 +97,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n.page-head{\r\n    text-align: center;\r\n    font-size: 27px;\r\n    color: #ABAAAA;\r\n    text-transform: uppercase;\r\n    font-weight: 700;\r\n}\r\n.mrgn-nav-top{\r\n    margin-top: 180px;\r\n}\r\n.auction-section{\r\n    margin-top: 115px;\r\n}\r\n.no-item{\r\n    min-height: 400px\r\n\r\n}\r\n.no-item h4{\r\n    text-align: center;\r\n    font-size: 25px;\r\n    color: rgb(99, 99, 99);\r\n    padding-top: 180px;\r\n}", ""]);
 
 // exports
 

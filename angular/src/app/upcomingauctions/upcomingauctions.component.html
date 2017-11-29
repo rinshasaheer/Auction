@@ -1,0 +1,17 @@
+<div class="container">
+    <div id="u-auction" class="auction-section">
+        <h4 class="page-head">Upcoming Auctions</h4>
+        <div *ngIf="existStatus; else noProduct">
+            <div *ngFor="let item of products">
+                <!-- {{item}} -->
+                <app-card [item]="item"></app-card>
+            </div>
+        </div>
+       
+        <ng-template #noProduct>
+            <div class="no-item">
+                <h4>Sorrry! No items to display!</h4>
+            </div>
+        </ng-template>
+      
+  </div>
