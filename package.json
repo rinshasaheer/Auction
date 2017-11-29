@@ -9,14 +9,33 @@
   "author": "mrjys",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
+    "angular-datatables": "^5.0.0",
+=======
     "bcrypt": "^1.0.3",
     "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+>>>>>>> 1e102df0168f9310e6b81c200a62bf55ccdd58a7
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
+    "datatables.net": "^1.10.16",
+    "datatables.net-dt": "^1.10.16",
     "express": "^4.16.2",
+<<<<<<< HEAD
+    "jquery": "^3.2.1",
+    "mongoose": "^4.13.4"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.5.4",
+    "@types/datatables.net": "^1.10.7",
+    "@types/jquery": "^3.2.16"
+=======
     "jsonwebtoken": "^8.1.0",
     "mongoose": "^4.13.4",
+    "nodemailer": "^4.4.0",
     "passport": "^0.4.0",
-    "passport-jwt": "^3.0.1"
+    "passport-jwt": "^3.0.1",
+    "random-number": "0.0.9"
+>>>>>>> 1e102df0168f9310e6b81c200a62bf55ccdd58a7
   }
 }

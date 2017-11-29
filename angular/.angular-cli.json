@@ -19,13 +19,22 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/bootstrap/dist/css/bootstrap.css",
-        
-      "styles.css"
+        "styles.css",
+        "./assets/vendor/bootstrap/css/bootstrap.min.css",
+        "./assets/vendor/font-awesome/css/font-awesome.min.css",
+        "./assets/css/sb-admin.css",
+        "../node_modules/datatables.net-dt/css/jquery.dataTables.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.css"
       ],
       "scripts": [
+        "./assets/vendor/jquery/jquery.min.js",
         "../node_modules/jquery/dist/jquery.min.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.js"
+        "../node_modules/bootstrap/dist/js/bootstrap.js",
+        "./assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
+        "./assets/vendor/jquery-easing/jquery.easing.min.js",
+        "./assets/js/sb-admin.min.js",
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/datatables.net/js/jquery.dataTables.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
