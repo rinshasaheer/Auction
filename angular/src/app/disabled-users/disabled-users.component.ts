@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-disabled-users',
+  selector: 'disabled-users',
   templateUrl: './disabled-users.component.html',
   styleUrls: ['./disabled-users.component.css']
 })

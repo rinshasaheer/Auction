@@ -67,7 +67,7 @@ var AllUsersComponent = (function () {
 }());
 AllUsersComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-all-users',
+        selector: 'all-users',
         template: __webpack_require__("../../../../../src/app/all-users/all-users.component.html"),
         styles: [__webpack_require__("../../../../../src/app/all-users/all-users.component.css")]
     }),
@@ -234,15 +234,11 @@ var appRoutes = [
     { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_27__registration_registration_component__["a" /* RegistrationComponent */] },
     { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_28__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_26__login_login_component__["a" /* LoginComponent */] },
-    { path: 'closed-auction', component: __WEBPACK_IMPORTED_MODULE_29__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */] },
-    { path: 'upcoming-auction', component: __WEBPACK_IMPORTED_MODULE_30__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */] },
     { path: 'socialmedia/:id', component: __WEBPACK_IMPORTED_MODULE_32__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */] },
-    { path: 'Dashboard', component: __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */] },
-    { path: 'AllUsers', component: __WEBPACK_IMPORTED_MODULE_13__all_users_all_users_component__["a" /* AllUsersComponent */] },
-    { path: 'DeletedUser', component: __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */] },
-    { path: 'DisabledUsers', component: __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */] },
-    { path: '', redirectTo: '/registration', pathMatch: 'full' },
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_27__registration_registration_component__["a" /* RegistrationComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */] },
+    { path: 'all-users', component: __WEBPACK_IMPORTED_MODULE_13__all_users_all_users_component__["a" /* AllUsersComponent */] },
+    { path: 'deleted-users', component: __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */] },
+    { path: 'disabled-users', component: __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */] },
     { path: 'home', component: __WEBPACK_IMPORTED_MODULE_17__home_home_component__["a" /* HomeComponent */] },
     { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_36__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
     { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_28__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
@@ -725,7 +721,7 @@ var DashboardComponent = (function () {
 }());
 DashboardComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-dashboard',
+        selector: 'dashboard',
         template: __webpack_require__("../../../../../src/app/dashboard/dashboard.component.html"),
         styles: [__webpack_require__("../../../../../src/app/dashboard/dashboard.component.css")]
     }),
@@ -786,7 +782,7 @@ var DeletedUsersComponent = (function () {
 }());
 DeletedUsersComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-deleted-users',
+        selector: 'deleted-users',
         template: __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.html"),
         styles: [__webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.css")]
     }),
@@ -847,7 +843,7 @@ var DisabledUsersComponent = (function () {
 }());
 DisabledUsersComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-disabled-users',
+        selector: 'disabled-users',
         template: __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.html"),
         styles: [__webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.css")]
     }),
@@ -1446,7 +1442,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/navigation/navigation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  \r\n  <div class=\"fluid-container\">\r\n    <nav class=\"navbar navbar-default  navbar-fixed-top\">\r\n        <div class=\"box\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                     <!-- <div class=\"col-lg-8 col-md-8\">\r\n                        <p class=\"title1\">Free phone: <strong>800-2345-6789</strong></p>\r\n                        <p class=\"title2\">Hours:  8am-8pm PST M-Th;   6am-3pm PST Fri</p>\r\n                    </div> -->\r\n                    <div class=\"col-lg-4 col-md-4 pull-right\">\r\n                        <li class=\"dropdown\" >\r\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">My Account <span class=\"caret\"></span></a>\r\n                        <ul class=\"dropdown-menu\">\r\n                          \r\n                          <li><a [routerLink]=\"['/myauctions']\">My Bids</a></li>\r\n                          <li><a href=\"#\">Log Out</a></li>\r\n                          \r\n                        </ul>\r\n                      </li>\r\n                        <!-- <a href=\"#\" class=\"btn-default btn1\">Sign In</a> -->\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div> \r\n      <div class=\"container\">\r\n        <div class=\"container-fluid\">\r\n          <!-- Brand and toggle get grouped for better mobile display -->\r\n          <div class=\"navbar-header\">\r\n            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n              <span class=\"sr-only\">Toggle navigation</span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n            </button>\r\n            <a class=\"navbar-brand\" [routerLink]=\"['/home']\"><img src=\"../../assets/images/brand.png\" alt=\"brand\"></a>\r\n          </div>\r\n      \r\n          <!-- Collect the nav links, forms, and other content for toggling -->\r\n          <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n            \r\n           \r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n                <li class=\"active\" ><a [routerLink]=\"['/home']\" >Home <span class=\"sr-only\">(current)</span></a></li>\r\n                <!-- <li class=\"dropdown\" >\r\n                  <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Manage <span class=\"caret\"></span></a>\r\n                  <ul class=\"dropdown-menu\">\r\n                    \r\n                    <li><a href=\"#\">Users</a></li>\r\n                    <li><a href=\"#\">Polls</a></li>\r\n                    <li><a href=\"#\">Asign Poll</a></li>\r\n                    \r\n                  </ul>\r\n                </li> -->\r\n              <li ><a pageScroll href=\"#c-auction\">Running Auctions</a></li>\r\n              <!-- <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/registration']\">Registration</a></li> -->\r\n              <li ><a pageScroll [pageScrollOffset]=\"180\" href=\"#f-auction\">Closed Auctions</a></li>\r\n              <!-- <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/register']\">Register</a></li> -->\r\n              <li ><a  pageScroll [pageScrollOffset]=\"180\" href=\"#u-auction\">Upcoming Auctions</a></li>\r\n            </ul>\r\n          </div><!-- /.navbar-collapse -->\r\n        </div><!-- /.container-fluid -->\r\n      </div>\r\n    </nav>\r\n  \r\n</div>\r\n</header>"
+module.exports = "<header>\r\n  \r\n  <div class=\"fluid-container\">\r\n    <nav class=\"navbar navbar-default  navbar-fixed-top\">\r\n        <div class=\"box\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                     <!-- <div class=\"col-lg-8 col-md-8\">\r\n                        <p class=\"title1\">Free phone: <strong>800-2345-6789</strong></p>\r\n                        <p class=\"title2\">Hours:  8am-8pm PST M-Th;   6am-3pm PST Fri</p>\r\n                    </div> -->\r\n                    <div class=\"col-lg-4 col-md-4 pull-right\">\r\n                        <li class=\"dropdown\" >\r\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">My Account <span class=\"caret\"></span></a>\r\n                        <ul class=\"dropdown-menu\">\r\n                          \r\n                          <li><a [routerLink]=\"['/myauctions']\">My Bids</a></li>\r\n                          <li><a (click)=\"logout()\" href=\"#\">Log Out</a></li>\r\n                          \r\n                        </ul>\r\n                      </li>\r\n                        <!-- <a href=\"#\" class=\"btn-default btn1\">Sign In</a> -->\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div> \r\n      <div class=\"container\">\r\n        <div class=\"container-fluid\">\r\n          <!-- Brand and toggle get grouped for better mobile display -->\r\n          <div class=\"navbar-header\">\r\n            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n              <span class=\"sr-only\">Toggle navigation</span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n            </button>\r\n            <a class=\"navbar-brand\" [routerLink]=\"['/home']\"><img src=\"../../assets/images/brand.png\" alt=\"brand\"></a>\r\n          </div>\r\n      \r\n          <!-- Collect the nav links, forms, and other content for toggling -->\r\n          <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n            \r\n           \r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n                <li class=\"active\" ><a [routerLink]=\"['/home']\" >Home <span class=\"sr-only\">(current)</span></a></li>\r\n                <!-- <li class=\"dropdown\" >\r\n                  <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Manage <span class=\"caret\"></span></a>\r\n                  <ul class=\"dropdown-menu\">\r\n                    \r\n                    <li><a href=\"#\">Users</a></li>\r\n                    <li><a href=\"#\">Polls</a></li>\r\n                    <li><a href=\"#\">Asign Poll</a></li>\r\n                    \r\n                  </ul>\r\n                </li> -->\r\n              <li ><a pageScroll href=\"#c-auction\">Running Auctions</a></li>\r\n              <!-- <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/registration']\">Registration</a></li> -->\r\n              <li ><a pageScroll [pageScrollOffset]=\"180\" href=\"#f-auction\">Closed Auctions</a></li>\r\n              <!-- <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/register']\">Register</a></li> -->\r\n              <li ><a  pageScroll [pageScrollOffset]=\"180\" href=\"#u-auction\">Upcoming Auctions</a></li>\r\n            </ul>\r\n          </div><!-- /.navbar-collapse -->\r\n        </div><!-- /.container-fluid -->\r\n      </div>\r\n    </nav>\r\n  \r\n</div>\r\n</header>"
 
 /***/ }),
 
@@ -1457,6 +1453,7 @@ module.exports = "<header>\r\n  \r\n  <div class=\"fluid-container\">\r\n    <na
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavigationComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1468,12 +1465,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var NavigationComponent = (function () {
-    function NavigationComponent(router) {
+    function NavigationComponent(userService, router) {
+        this.userService = userService;
         this.router = router;
         this.brand_logo = "brand.png";
     }
     NavigationComponent.prototype.ngOnInit = function () {
+    };
+    NavigationComponent.prototype.logout = function () {
+        this.userService.logout();
+        this.router.navigate(['/login']);
+        return false;
     };
     return NavigationComponent;
 }());
@@ -1483,10 +1487,10 @@ NavigationComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/navigation/navigation.component.html"),
         styles: [__webpack_require__("../../../../../src/app/navigation/navigation.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */]) === "function" && _b || Object])
 ], NavigationComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=navigation.component.js.map
 
 /***/ }),
