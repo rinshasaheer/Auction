@@ -30,10 +30,10 @@ export class LoginComponent implements OnInit {
         this.userService.storeUserData(data.token, data.user);
         if(data.user.role=="user"){
           
-          this.routes.navigate(['/registration']);
+          this.routes.navigate(['/home']);
         }
         if(data.user.role=="admin"){
-          this.routes.navigate(['/registration']);
+          this.routes.navigate(['/dashboard']);
         }
       } else {
         // console.log(data.msg);

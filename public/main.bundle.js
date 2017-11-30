@@ -1334,10 +1334,10 @@ var LoginComponent = (function () {
             if (data.success) {
                 _this.userService.storeUserData(data.token, data.user);
                 if (data.user.role == "user") {
-                    _this.routes.navigate(['/registration']);
+                    _this.routes.navigate(['/home']);
                 }
                 if (data.user.role == "admin") {
-                    _this.routes.navigate(['/registration']);
+                    _this.routes.navigate(['/dashboard']);
                 }
             }
             else {
