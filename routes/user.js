@@ -80,6 +80,7 @@ router.post('/authenticate',(req,res,next)=>{
         if(!user){
             return res.json({success:false, msg: 'User Not found'});
         }
+        console.log(user);
         User.comparePassword(password, user.password,(err, isMatch)=>{
             if(err) throw err;
             if(isMatch){
@@ -115,8 +116,9 @@ router.post('/authenticate',(req,res,next)=>{
 });
 
 router.put('/verify/:id', function(req, res){
+    // console.log(req.params.id);
     User.findOneAndUpdate({verification_code : req.params.id }, 
-        { $set: { verified: "true" } }, 
+        { $set: { verified: true } }, 
         { new: true }, 
         function(err, doc) {
             if(doc==null){

@@ -16,8 +16,9 @@ export class EmailVerificationComponent implements OnInit {
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.userService.generateToken(params.id).subscribe(data => {
-        if(data==true){
+      this.userService.verifyUser(params.id).subscribe(data => {
+        console.log(data);
+        if(data.success){
          alert("Success, Redirecting ...");
          this.router.navigate(['/home']);
           console.log("successfull verified user");

@@ -43,7 +43,8 @@ import {ProductServiceService} from './product-service.service';
 import { MyauctionsComponent } from './myauctions/myauctions.component';
 import { CapitalizePipe } from './capitalize.pipe';
 import { RunningauctionComponent } from './runningauction/runningauction.component';
-import { CardRunningComponent } from './card-running/card-running.component'
+import { CardRunningComponent } from './card-running/card-running.component';
+import { WinnerconfirmComponent } from './winnerconfirm/winnerconfirm.component'
 
 const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
@@ -60,7 +61,8 @@ const appRoutes: Routes = [
   {path:'email-verification/:id', component:EmailVerificationComponent},
   {path:'closed-auction', component:ClosedAuctionBackComponent},
   {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
-  {path:'running-auction', component:RunningAuctionBackComponent}
+  {path:'running-auction', component:RunningAuctionBackComponent},
+  {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
 ]
 
 @NgModule({
@@ -94,6 +96,7 @@ const appRoutes: Routes = [
     CountDownTimerComponent,
     RunningauctionComponent,
     CardRunningComponent,
+    WinnerconfirmComponent,
   ],
   
   providers: [ProductServiceService,

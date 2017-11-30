@@ -31,6 +31,7 @@ router.get('/closed_products',(req,res)=>{
         // fs.writeFile('test.json', JSON.stringify(results, null, 4));
      })
 });
+
 router.get('/runnig_products',(req,res)=>{
 
     Product.aggregate([
@@ -146,4 +147,6 @@ router.get('/highBid/:id',(req,res,next)=>{
         return res.json(products);
     })
 });
+
+
 module.exports = router;
