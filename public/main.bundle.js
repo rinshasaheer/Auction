@@ -148,28 +148,28 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__side_bar_side_bar_component__ = __webpack_require__("../../../../../src/app/side-bar/side-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__top_bar_top_bar_component__ = __webpack_require__("../../../../../src/app/top-bar/top-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__all_users_all_users_component__ = __webpack_require__("../../../../../src/app/all-users/all-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__ = __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__ = __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__finishedauction_finishedauction_component__ = __webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__upcomingauctions_upcomingauctions_component__ = __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__equal_validator_directive__ = __webpack_require__("../../../../../src/app/equal-validator.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__product_product_component__ = __webpack_require__("../../../../../src/app/product/product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__side_bar_side_bar_component__ = __webpack_require__("../../../../../src/app/side-bar/side-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__top_bar_top_bar_component__ = __webpack_require__("../../../../../src/app/top-bar/top-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__all_users_all_users_component__ = __webpack_require__("../../../../../src/app/all-users/all-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__disabled_users_disabled_users_component__ = __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__deleted_users_deleted_users_component__ = __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__finishedauction_finishedauction_component__ = __webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__upcomingauctions_upcomingauctions_component__ = __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__equal_validator_directive__ = __webpack_require__("../../../../../src/app/equal-validator.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__email_verification_email_verification_component__ = __webpack_require__("../../../../../src/app/email-verification/email-verification.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__closed_auction_back_closed_auction_back_component__ = __webpack_require__("../../../../../src/app/closed-auction-back/closed-auction-back.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__upcoming_auction_back_upcoming_auction_back_component__ = __webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.ts");
@@ -183,12 +183,19 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__runningauction_runningauction_component__ = __webpack_require__("../../../../../src/app/runningauction/runningauction.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__card_running_card_running_component__ = __webpack_require__("../../../../../src/app/card-running/card-running.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__winnerconfirm_winnerconfirm_component__ = __webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42_ng2_datetime_ng2_datetime__ = __webpack_require__("../../../../ng2-datetime/ng2-datetime.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__product_list_product_list_component__ = __webpack_require__("../../../../../src/app/product-list/product-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__filter_pipe__ = __webpack_require__("../../../../../src/app/filter.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__manage_product_manage_product_component__ = __webpack_require__("../../../../../src/app/manage-product/manage-product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__product_detail_product_detail_component__ = __webpack_require__("../../../../../src/app/product-detail/product-detail.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -231,17 +238,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+// import { ImageUploadModule } from "angular2-image-upload";
+
+
+
+
+
+// import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 var appRoutes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_27__registration_registration_component__["a" /* RegistrationComponent */] },
+    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_41__registration_registration_component__["a" /* RegistrationComponent */] },
+    { path: 'product', component: __WEBPACK_IMPORTED_MODULE_6__product_product_component__["a" /* ProductComponent */] },
+    { path: 'manage-product', component: __WEBPACK_IMPORTED_MODULE_45__manage_product_manage_product_component__["a" /* ManageProductComponent */] },
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_41__registration_registration_component__["a" /* RegistrationComponent */] },
     { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_28__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_26__login_login_component__["a" /* LoginComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_27__login_login_component__["a" /* LoginComponent */] },
     { path: 'socialmedia/:id', component: __WEBPACK_IMPORTED_MODULE_32__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */] },
-    { path: 'all-users', component: __WEBPACK_IMPORTED_MODULE_13__all_users_all_users_component__["a" /* AllUsersComponent */] },
-    { path: 'deleted-users', component: __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */] },
-    { path: 'disabled-users', component: __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */] },
-    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_17__home_home_component__["a" /* HomeComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_13__dashboard_dashboard_component__["a" /* DashboardComponent */] },
+    { path: 'all-users', component: __WEBPACK_IMPORTED_MODULE_14__all_users_all_users_component__["a" /* AllUsersComponent */] },
+    { path: 'deleted-users', component: __WEBPACK_IMPORTED_MODULE_16__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */] },
+    { path: 'disabled-users', component: __WEBPACK_IMPORTED_MODULE_15__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */] },
+    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_18__home_home_component__["a" /* HomeComponent */] },
     { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_36__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
     { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_28__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
     { path: 'closed-auction', component: __WEBPACK_IMPORTED_MODULE_29__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */] },
@@ -257,25 +275,30 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_26__login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_27__registration_registration_component__["a" /* RegistrationComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__navigation_navigation_component__["a" /* NavigationComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__card_card_component__["a" /* CardComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__product_product_component__["a" /* ProductComponent */],
+            __WEBPACK_IMPORTED_MODULE_41__registration_registration_component__["a" /* RegistrationComponent */],
+            __WEBPACK_IMPORTED_MODULE_43__product_list_product_list_component__["a" /* ProductListComponent */],
+            __WEBPACK_IMPORTED_MODULE_44__filter_pipe__["a" /* FilterPipe */],
+            __WEBPACK_IMPORTED_MODULE_45__manage_product_manage_product_component__["a" /* ManageProductComponent */],
+            __WEBPACK_IMPORTED_MODULE_46__product_detail_product_detail_component__["a" /* ProductDetailComponent */],
+            __WEBPACK_IMPORTED_MODULE_27__login_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_41__registration_registration_component__["a" /* RegistrationComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__navigation_navigation_component__["a" /* NavigationComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__home_home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__card_card_component__["a" /* CardComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */],
             __WEBPACK_IMPORTED_MODULE_36__myauctions_myauctions_component__["a" /* MyauctionsComponent */],
-            __WEBPACK_IMPORTED_MODULE_25__equal_validator_directive__["a" /* EqualValidator */],
+            __WEBPACK_IMPORTED_MODULE_26__equal_validator_directive__["a" /* EqualValidator */],
             __WEBPACK_IMPORTED_MODULE_37__capitalize_pipe__["a" /* CapitalizePipe */],
-            __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__side_bar_side_bar_component__["a" /* SideBarComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__top_bar_top_bar_component__["a" /* TopBarComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__footer_footer_component__["a" /* FooterComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__all_users_all_users_component__["a" /* AllUsersComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__dashboard_dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__side_bar_side_bar_component__["a" /* SideBarComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__top_bar_top_bar_component__["a" /* TopBarComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__footer_footer_component__["a" /* FooterComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__all_users_all_users_component__["a" /* AllUsersComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */],
             __WEBPACK_IMPORTED_MODULE_28__email_verification_email_verification_component__["a" /* EmailVerificationComponent */],
             __WEBPACK_IMPORTED_MODULE_29__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */],
             __WEBPACK_IMPORTED_MODULE_30__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */],
@@ -285,24 +308,27 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_34__count_down_timer_count_down_timer_component__["a" /* CountDownTimerComponent */],
             __WEBPACK_IMPORTED_MODULE_38__runningauction_runningauction_component__["a" /* RunningauctionComponent */],
             __WEBPACK_IMPORTED_MODULE_39__card_running_card_running_component__["a" /* CardRunningComponent */],
-            __WEBPACK_IMPORTED_MODULE_40__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */],
-        ],
-        providers: [__WEBPACK_IMPORTED_MODULE_35__product_service_service__["a" /* ProductServiceService */],
-            __WEBPACK_IMPORTED_MODULE_24__services_user_service__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__["a" /* AuthGuard */],
-            __WEBPACK_IMPORTED_MODULE_22__services_product_service__["a" /* ProductService */]
+            __WEBPACK_IMPORTED_MODULE_40__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
             // DataTablesModule,
-            __WEBPACK_IMPORTED_MODULE_7__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_7__angular_forms__["c" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_8__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_8__angular_forms__["d" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_21_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_http__["HttpModule"],
             __WEBPACK_IMPORTED_MODULE_5__angular_router__["f" /* RouterModule */].forRoot(appRoutes),
-            __WEBPACK_IMPORTED_MODULE_20_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_http__["HttpModule"],
-            __WEBPACK_IMPORTED_MODULE_5__angular_router__["f" /* RouterModule */].forRoot(appRoutes)
+            // DataTablesModule,
+            // ImageUploadModule,
+            // NKDatetimeModule,
+            __WEBPACK_IMPORTED_MODULE_42_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
         ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_35__product_service_service__["a" /* ProductServiceService */],
+            __WEBPACK_IMPORTED_MODULE_25__services_user_service__["a" /* UserService */],
+            __WEBPACK_IMPORTED_MODULE_24__guards_auth_guard__["a" /* AuthGuard */],
+            __WEBPACK_IMPORTED_MODULE_23__services_product_service__["a" /* ProductService */]
+        ],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -352,7 +378,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".tg-ad {\r\n    width: 100%;\r\n    float: left;\r\n    padding: 15px;\r\n    margin: 15px 0;\r\n    background: #fff;\r\n    border-radius: 5px;\r\n}\r\n\r\n::after, ::before, p a, a, .tg-socialicons li a, .tg-roundicontext, .tg-roundicontext .tg-usericonholder, .sub-menu, .mega-menu, .tg-themedropdownmenu li a, .tg-themedropdownmenu, .tg-themedropdownmenu li.menu-item-has-children ul, .sub-menu li, .tg-categories .item, .tg-categories .item h3, .tg-prev, .tg-next, .tg-ad, .tg-btnphone, .tg-like, .tg-post figure img, .tg-post figure a img, .tg-categoryholder, .tg-category h4, .tg-feature, .tg-team figure figcaption, .tg-applyedfilters ul li.alert-dismissable a.close, .tg-collapsetitle a span::before, .tg-btn, .tg-user, .tg-socialandappicons, .tg-logo, .tg-btnmenutoggle, .cls-1, .tg-wrapper, .tg-sidebarwrapper, .tg-dropdownmenu, .tg-dropdownmenu li, .tg-dashboardbox, .ct-bar, .tg-offerer, .tg-navtabledata ul li a, .tg-dashboardtable tr, .tg-package, .tg-profilephotogallery ul li figure i, .tg-btndelete {\r\n    transition: all 300ms ease-in-out;\r\n}\r\n.tg-ad figure {\r\n    margin: 0;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n}\r\n.tg-themetag {\r\n    top: 12px;\r\n    left: -5px;\r\n    z-index: 2;\r\n    color: #fff;\r\n    font-size: 10px;\r\n    font-weight: 500;\r\n    line-height: 10px;\r\n    position: absolute;\r\n    background: #2882f7;\r\n    padding: 5px 3px 3px 10px;\r\n    text-transform: uppercase;\r\n}\r\n.tg-featuretag::before {\r\n    top: 0;\r\n    left: 100%;\r\n    border-top: 9px solid transparent;\r\n    border-bottom: 9px solid transparent;\r\n    border-left: 10px solid #2882f7;\r\n}\r\n.tg-featuretag::before, .tg-featuretag::after {\r\n    width: 0;\r\n    height: 0;\r\n    content: '';\r\n    position: absolute;\r\n}\r\n.tg-featuretag::after {\r\n    top: 100%;\r\n    left: 0;\r\n    border-top: 5px solid #0052b6;\r\n    border-left: 5px solid transparent;\r\n}\r\n.tg-featuretag::before, .tg-featuretag::after {\r\n    width: 0;\r\n    height: 0;\r\n    content: '';\r\n    position: absolute;\r\n}\r\n.tg-ad figure a, .tg-ad figure img, .tg-ad figure a img {\r\n    z-index: 1;\r\n    display: block;\r\n    position: relative;\r\n}\r\n.tg-ad figure a, .tg-ad figure img {\r\n    overflow: hidden;\r\n    border-radius: 5px;\r\n}\r\n.tg-ad figure img, .tg-ad figure a img {\r\n    width: 100%;\r\n}\r\n.tg-ad figure a, .tg-ad figure img, .tg-ad figure a img {\r\n    z-index: 1;\r\n    display: block;\r\n    position: relative;\r\n}\r\n.tg-ad figure a, .tg-ad figure img {\r\n    overflow: hidden;\r\n    border-radius: 5px;\r\n}\r\nimg {\r\n    height: auto;\r\n    max-width: 100%;\r\n}\r\nimg {\r\n    border: 0;\r\n}\r\n.tg-adcontent {\r\n    width: 100%;\r\n    float: left;\r\n}\r\n.tg-ad {\r\n    box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);\r\n}\r\n.tg-ad:hover {\r\n    -webkit-transform: scale(1.05);\r\n    transform: scale(1.05);\r\n    cursor: pointer;\r\n}\r\n/* .tg-ad {\r\n    -webkit-box-shadow: 0 0 2px 0 rgba(0,0,0,0.20);\r\n    box-shadow: 0 0 2px 0 rgba(0,0,0,0.20);\r\n} */\r\n.tg-productcagegories {\r\n    width: 100%;\r\n    float: left;\r\n    font-size: 14px;\r\n    line-height: 18px;\r\n    list-style: none;\r\n    margin: 0 0 12px;\r\n    padding: 20px 0 10px;\r\n    border-bottom: 1px solid #dbdbdb;\r\n}\r\nul {\r\n    margin: 0;\r\n}\r\nol, ul {\r\n    margin-top: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.tg-productcagegories li {\r\n    float: left;\r\n    line-height: inherit;\r\n    list-style-type: none;\r\n}\r\nli {\r\n    line-height: 28px;\r\n    list-style: disc inside none;\r\n        list-style-type: disc;\r\n}\r\n.tg-productcagegories li a {\r\n    color: #363b4d;\r\n}\r\n.tg-adtitle {\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n    padding: 20px 32px 6px 5px;\r\n    border-bottom: 1px solid #ccc;\r\n}\r\n.card-pro-desc{\r\n\r\n}\r\n.tg-ad.tg-verifiedad .tg-adtitle::before {\r\n    display: block;\r\n}\r\n/* .tg-adtitle::before {\r\n    top: 0;\r\n    right: 0;\r\n    content: '';\r\n    width: 26px;\r\n    height: 26px;\r\n    display: none;\r\n    text-align: center;\r\n    position: absolute;\r\n    background: url(http://exprostudio.com/html/classified/images/ads/img-01.jpg) no-repeat 50% 50%;\r\n} */\r\n.tg-adtitle h3 {\r\n    margin: 0;\r\n    font-size: 18px;\r\n    line-height: 26px;\r\n    text-transform: none;\r\n}\r\nbody h1, body h2, body h3, body h4, body h5, body h6 {\r\n    color: #363b4d;\r\n    margin: 0 0 8px;\r\n    font-weight: 500;\r\n    line-height: 1.5;\r\n    font-style: normal;\r\n    text-transform: capitalize;\r\n    font-family: 'Quicksand', Arial, Helvetica, sans-serif;\r\n}\r\n.tg-adcontent time {\r\n    width: 100%;\r\n    float: left;\r\n    color: #484848;\r\n    font-size: 14px;\r\n    line-height: 15px;\r\n}\r\n.tg-adprice {\r\n    width: 100%;\r\n    float: left;\r\n    padding: 14px 0 14px;\r\n    background-color: #2882f7;\r\n    color: #fff;\r\n    border: none;\r\n}\r\n.tg-adprice h4 {\r\n    margin: 0;\r\n    color: #363b4d;\r\n    font-size: 18px;\r\n    line-height: 17px;\r\n}\r\n.tg-adcontent address {\r\n    margin: 0;\r\n    width: 100%;\r\n    float: left;\r\n    color: #484848;\r\n    font-size: 14px;\r\n    line-height: 14px;\r\n    font-style: normal;\r\n    position: relative;\r\n    padding: 0 0 0 24px;\r\n}\r\n.tg-adcontent address::before {\r\n    top: 0;\r\n    left: 0;\r\n    content: '\\E9A3';\r\n    line-height: 14px;\r\n    position: absolute;\r\n    font-family: 'icomoon';\r\n}\r\n.tg-phonelike {\r\n    width: 100%;\r\n    float: left;\r\n    height: 33px;\r\n    margin: 20px 0 0;\r\n    position: relative;\r\n    padding: 0 38px 0 0;\r\n}\r\n.tg-btnphone {\r\n    margin: 0 0 10px;\r\n}\r\n.tg-btnphone {\r\n    width: 100%;\r\n    float: left;\r\n    color: #363b4d;\r\n    border-radius: 3px;\r\n    text-align: center;\r\n    background: #f7f7f7;\r\n}\r\n.tg-btnphone i {\r\n    font-size: 16px;\r\n    padding: 0 5px 0 0;\r\n}\r\n.tg-btnphone i, .tg-btnphone span, .tg-btnphone span em {\r\n    font-size: 14px;\r\n    line-height: 33px;\r\n    font-style: normal;\r\n}\r\n.tg-btnphone i, .tg-btnphone span {\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n}\r\n.icon-phone-handset::before {\r\n    content: \"\\E93C\";\r\n}\r\n.tg-like:hover, .tg-like.tg-liked {\r\n    color: #fff;\r\n    background: #2882f7;\r\n}\r\n.tg-like {\r\n    top: 0;\r\n    right: 0;\r\n    width: 33px;\r\n    color: #363b4d;\r\n    display: block;\r\n    cursor: pointer;\r\n    padding: 2px 0 1px;\r\n    text-align: center;\r\n    position: absolute;\r\n    border-radius: 3px;\r\n    background: #f7f7f7;\r\n}\r\n.tg-like:hover i, .tg-like.tg-liked i {\r\n    color: #fff;\r\n}\r\n.tg-like i {\r\n    color: #363b4d;\r\n    display: block;\r\n    font-size: 12px;\r\n    line-height: 30px;\r\n}\r\n.fa-heart::before {\r\n    content: \"\\F004\";\r\n}\r\n\r\n.tg-desc{\r\n    margin: 25px auto;\r\n}\r\n.margn{\r\n    margin: 20px 0;\r\n}\r\n.lead{\r\n    margin-bottom: 0px !important;\r\n}", ""]);
 
 // exports
 
@@ -365,7 +391,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/card-running/card-running.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div *ngIf=\"!itemStatus\" class=\"col-md-8 col-xs-12 col-sm-6 col-lg-8\"><h4>Sorry! No Items to display.</h4></div> -->\r\n<div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3\">\r\n    <div class=\"tg-ad tg-verifiedad\">\r\n        <figure>\r\n            <span class=\"tg-themetag tg-featuretag\">featured</span>\r\n            <a href=\"javascript:void(0);\"><img src=\"http://exprostudio.com/html/classified/images/ads/img-01.jpg\" alt=\"image description\"></a>\r\n            <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\r\n        </figure>\r\n        <div class=\"tg-adcontent\">\r\n            <!-- <ul class=\"tg-productcagegories\">\r\n                <li><a href=\"javascript:void(0);\">Mobiles</a></li>\r\n            </ul> -->\r\n            \r\n            <div class=\"tg-adtitle\">\r\n                <h3><a href=\"javascript:void(0);\">{{item?.name | capitalize}}</a></h3>\r\n            </div>\r\n            <div class=\"clearfix\"></div>\r\n            <div class=\"tg-desc\" >\r\n                    <h4>Description: </h4><p class=\"card-pro-desc\">{{item?.desc | capitalize}}</p>\r\n            </div>\r\n            \r\n            <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\r\n            \r\n            <!-- <address>44-46 abc Road, Manchester</address> -->\r\n            <!-- <div class=\"tg-phonelike\">\r\n                <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\r\n                    <i class=\"icon-phone-handset\"></i>\r\n                    <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\r\n                </a>\r\n                <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\r\n            </div> -->\r\n        </div>\r\n        <div class=\"row\">\r\n          <div class=\"btn-primary tg-adprice\">${{highest}}</div>\r\n        </div>\r\n        \r\n    </div>\r\n  </div>\r\n  <!--   \r\n  <div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3\">\r\n        <div class=\"tg-ad tg-verifiedad\">\r\n            <figure>\r\n                <span class=\"tg-themetag tg-featuretag\">featured</span>\r\n                <a href=\"javascript:void(0);\"><img src=\"http://exprostudio.com/html/classified/images/ads/img-01.jpg\" alt=\"image description\"></a> -->\r\n                <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\r\n            <!-- </figure>\r\n            <div class=\"tg-adcontent\"> -->\r\n                <!-- <ul class=\"tg-productcagegories\">\r\n                    <li><a href=\"javascript:void(0);\">Mobiles</a></li>\r\n                </ul> -->\r\n                \r\n                <!-- <div class=\"tg-adtitle\">\r\n                    <h3><a href=\"javascript:void(0);\">iPhone X for sale</a></h3>\r\n                </div>\r\n                <div class=\"clearfix\"></div>\r\n                <div class=\"tg-desc\">\r\n                    <h4>Description</h4>\r\n                        <p class=\"card-pro-desc\">Consectetur adipicing elit sed eiusmod temporie incidint ut labore et dolore magna enim ad minim veniam, quis nostrud.</p>\r\n                </div>\r\n                <div class=\"clearfix\"></div>\r\n                <div class=\"tg-days\">\r\n                        <h4>Days Left: 4Days</h4>\r\n                </div> -->\r\n                <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\r\n                \r\n                <!-- <address>44-46 abc Road, Manchester</address> -->\r\n                <!-- <div class=\"tg-phonelike\">\r\n                    <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\r\n                        <i class=\"icon-phone-handset\"></i>\r\n                        <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\r\n                    </a>\r\n                    <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\r\n                </div> -->\r\n            <!-- </div>\r\n            <button class=\"btn btn-primary tg-adprice\"> Basic Price: $200</button>\r\n        </div>\r\n    </div>\r\n    <div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3\">\r\n            <div class=\"tg-ad tg-verifiedad\">\r\n                <figure>\r\n                    <span class=\"tg-themetag tg-featuretag\">featured</span>\r\n                    <a href=\"javascript:void(0);\"><img src=\"http://exprostudio.com/html/classified/images/ads/img-01.jpg\" alt=\"image description\"></a> -->\r\n                    <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\r\n                <!-- </figure>\r\n                <div class=\"tg-adcontent\"> -->\r\n                    <!-- <ul class=\"tg-productcagegories\">\r\n                        <li><a href=\"javascript:void(0);\">Mobiles</a></li>\r\n                    </ul> -->\r\n                    \r\n                    <!-- <div class=\"tg-adtitle\">\r\n                        <h3><a href=\"javascript:void(0);\">iPhone X for sale</a></h3>\r\n                    </div>\r\n                    <div class=\"clearfix\"></div>\r\n                    <div class=\"tg-desc\">\r\n                            <p class=\"card-pro-desc\">Consectetur adipicing elit sed eiusmod temporie incidint ut labore et dolore magna enim ad minim veniam, quis nostrud.</p>\r\n                    </div>\r\n                     -->\r\n                    <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\r\n                    \r\n                    <!-- <address>44-46 abc Road, Manchester</address> -->\r\n                    <!-- <div class=\"tg-phonelike\">\r\n                        <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\r\n                            <i class=\"icon-phone-handset\"></i>\r\n                            <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\r\n                        </a>\r\n                        <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\r\n                    </div> -->\r\n                <!-- </div>\r\n                <button class=\"btn btn-primary tg-adprice\"> Final Price: $200</button>\r\n            </div>\r\n        </div> -->"
+module.exports = "<div class=\"col-xs-6 col-sm-6 col-md-4 col-lg-4\">\n    <div class=\"tg-ad tg-verifiedad\">\n        <figure>\n            <a href=\"javascript:void(0);\"><img src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\"></a>\n        </figure>\n        <div class=\"tg-adcontent\">\n            \n            <div class=\"tg-adtitle\">\n                <h3><a href=\"javascript:void(0);\">{{product.name}}</a></h3>\n            </div>\n            <div class=\"clearfix\"></div>\n            <div class=\"tg-desc\">\n                <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\n                    <read-more [text]=\"product.desc\" [maxLength]=\"80\"></read-more>\n                  </p>\n            </div>\n            \n            <div class=\"row text-center \">\n            <div class=\"col-xs-12 col-md-6\">\n                Last Bid Price\n                <p class=\"lead\"> {{product.lastBidprice | number:'1.2-2'}}</p>\n            </div>\n            <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\n               Ends In\n                <p class=\"lead\">\n                    <app-count-down-timer [inputDate]=\"product.end_date\"></app-count-down-timer>\n                </p>\n            </div>\n        </div>\n            <div class=\"row text-center \">\n\n            <div class=\"col-xs-12 col-md-12 margn form-group \" [ngClass]=\"{'has-error': isError}\">\n                    <div *ngIf=\"isError\" class=\"text-danger text-left\">\n                           {{errMsg}}\n                      </div>\n                <input [(ngModel)]=\"amount\" (keyup)=\"validateAmount()\"  class=\"form-control \" type=\"text\" placeholder=\"Minimum bid amount {{(product.lastBidprice  * 1 ) + product.min_bid_rate | number:'1.2-2'}}\">\n                \n            </div>\n           \n        </div>\n            \n  \n        </div>\n        <button (click)=\"bidbtnClicked()\" class=\"btn btn-primary tg-adprice\"> Bid Now</button>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -375,6 +401,7 @@ module.exports = "<!-- <div *ngIf=\"!itemStatus\" class=\"col-md-8 col-xs-12 col
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardRunningComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -385,10 +412,41 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var CardRunningComponent = (function () {
-    function CardRunningComponent() {
+    function CardRunningComponent(productService) {
+        this.productService = productService;
+        this.isError = false;
+        this.errMsg = '';
     }
     CardRunningComponent.prototype.ngOnInit = function () {
+        console.log(this.product);
+    };
+    CardRunningComponent.prototype.bidbtnClicked = function () {
+        this.validateAmount();
+        console.log(this.product);
+        console.log(this.amount);
+    };
+    CardRunningComponent.prototype.validateAmount = function () {
+        this.isError = false;
+        if (Number(this.amount)) {
+            console.log(this.product.min_bid_rate * 1 + this.product.lastBidprice * 1);
+            if (Number(this.amount) >= (this.product.min_bid_rate * 1 + this.product.lastBidprice * 1)) {
+                var data = {
+                    pid: this.product._id,
+                    amount: Number(this.amount),
+                };
+                this.productService.bidProduct(data);
+            }
+            else {
+                this.isError = true;
+                this.errMsg = "You Can Bid Only From " + (this.product.min_bid_rate * 1 + this.product.lastBidprice * 1).toFixed(2);
+            }
+        }
+        else {
+            this.isError = true;
+            this.errMsg = "Please Enter Valid Amount";
+        }
     };
     return CardRunningComponent;
 }());
@@ -396,11 +454,13 @@ CardRunningComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-card-running',
         template: __webpack_require__("../../../../../src/app/card-running/card-running.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/card-running/card-running.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/card-running/card-running.component.css")],
+        inputs: ['product'],
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object])
 ], CardRunningComponent);
 
+var _a;
 //# sourceMappingURL=card-running.component.js.map
 
 /***/ }),
@@ -534,7 +594,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/closed-auction-back/closed-auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" style=\"padding-top:20px;\">\r\n  \r\n    <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n        <div  *ngFor=\"let product of products\" class=\"item  col-xs-4 col-lg-4\">\r\n            <div class=\"thumbnail\">\r\n                \r\n                <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n           \r\n                <div class=\"caption\">\r\n                    <h4 class=\"group inner list-group-item-heading text-center\">\r\n                        {{product.name}}</h4>\r\n                        <hr>\r\n                        <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                        <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                      </p>\r\n                    <hr>\r\n                    <div class=\"row text-center\">\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                            Bid Start Price\r\n                            <p class=\"lead\">{{product.bid_amount | number:'1.2-2'}}</p>\r\n                        </div>\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                            Last Bid Price\r\n                            \r\n                            <p *ngIf=\"product.bidders.length > 0\" class=\"lead\">{{product.lastBidprice | number:'1.2-2'}}</p>\r\n                            <p *ngIf=\"product.bidders.length == 0 \" class=\"alert-danger lead\">No bid</p>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row text-center\">\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                            Bid Started On<br>\r\n                            <b>\r\n                              {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                              <br>\r\n                              {{product.start_date | date : 'mediumTime'}}\r\n                            </b>\r\n                        </div>\r\n                         <div class=\"col-xs-12 col-md-6\">\r\n                            Bid Ended On<br>\r\n                            <b>\r\n                                {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                <br>\r\n                                {{product.end_date | date : 'mediumTime'}}\r\n                            </b>\r\n                        </div>\r\n                    </div>\r\n                    <hr>\r\n                    <div class=\"row margn\" >\r\n                      \r\n                      <div class=\"col-xs-12 col-md-12 text-center\">\r\n                         <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.bidders.length}}</a>\r\n                         \r\n                      </div>\r\n                      <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                          <div class=\"modal-dialog\">\r\n                        \r\n                            <!-- Modal content-->\r\n                            <div class=\"modal-content\">\r\n                              <div class=\"modal-header\">\r\n                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                <h4 class=\"modal-title\">User Involved - {{involvedUsers.length}}</h4>\r\n                              </div>\r\n                              <div class=\"modal-body\">\r\n                                  <table class=\"table\">\r\n                                      <thead class=\"thead-inverse\">\r\n                                  <tr>\r\n                                    <th>Slno</th>\r\n                                    <th>Name</th>\r\n                                    <th>Bid Amount</th>\r\n                                    <th>Time</th>\r\n                                    <th>Status</th>\r\n                                  \r\n                                  </tr>\r\n                                </thead>\r\n                                <tbody *ngIf=\"involvedUsers.length ==0\">\r\n                                    <tr >\r\n                                          <td colspan=\"5\" class=\"text-center\">No User Involved</td>\r\n                                    </tr>\r\n                                </tbody>\r\n                                <tbody *ngIf=\"involvedUsers.length > 0\" >\r\n                              \r\n                                    <tr  *ngFor=\"let usr of involvedUsers;let i = index\" >\r\n                                          <td >{{i+1}}</td>\r\n                                          <td >{{product.user_details[i].name}}</td>\r\n                                          <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                          <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                          <td >{{usr.bid_status}}</td>\r\n                                    </tr>\r\n                                </tbody>\r\n                                </table>\r\n                              \r\n                              </div>\r\n                              <div class=\"modal-footer\">\r\n                                <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                              </div>\r\n                            </div>\r\n                        \r\n                          </div>\r\n                        </div>\r\n                  </div>\r\n                  \r\n                    <div class=\"row\">\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12\">\r\n                            <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center \">\r\n                              <div *ngIf=\"product.is_bid_completed\">\r\n                                  <div class=\"alert alert-success text-center \">\r\n                                      Winner! \r\n                                      <br> <strong> {{product.lastBiduser}}</strong>\r\n                                      <br>\r\n                                      {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                            \r\n                              </div>\r\n                              <div *ngIf=\"!product.is_bid_completed\">\r\n                              <a class=\"alert-success\" href=\"#\">Assign - Winner</a>\r\n                              </div>\r\n                          </div>\r\n                            <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                            <a class=\"alert-danger\" href=\"#\">Re-submit</a>\r\n                          </div>\r\n                       \r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n  \r\n    </div>\r\n    </div>\r\n  \r\n    <div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n        <h3 class=\"text-center\"> No Product Found</h3>\r\n    </div>\r\n    </div>\r\n     \r\n    \r\n       "
+module.exports = "<div class=\"container\" style=\"padding-top:20px;\">\n  \n    <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\n        <div  *ngFor=\"let product of products\" class=\"item  col-xs-4 col-lg-4\">\n            <div class=\"thumbnail\">\n                \n                <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\n                <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\n           \n                <div class=\"caption\">\n                    <h4 class=\"group inner list-group-item-heading text-center\">\n                        {{product.name}}</h4>\n                        <hr>\n                        <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\n                        <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\n                      </p>\n                    <hr>\n                    <div class=\"row text-center\">\n                        <div class=\"col-xs-12 col-md-6\">\n                            Bid Start Price\n                            <p class=\"lead\">{{product.bid_amount | number:'1.2-2'}}</p>\n                        </div>\n                        <div class=\"col-xs-12 col-md-6\">\n                            Last Bid Price\n                            \n                            <p *ngIf=\"product.bidders.length > 0\" class=\"lead\">{{product.lastBidprice | number:'1.2-2'}}</p>\n                            <p *ngIf=\"product.bidders.length == 0 \" class=\"alert-danger lead\">No bid</p>\n                        </div>\n                    </div>\n                    <div class=\"row text-center\">\n                        <div class=\"col-xs-12 col-md-6\">\n                            Bid Started On<br>\n                            <b>\n                              {{product.start_date | date: 'dd-MM-yyyy'}}\n                              <br>\n                              {{product.start_date | date : 'mediumTime'}}\n                            </b>\n                        </div>\n                         <div class=\"col-xs-12 col-md-6\">\n                            Bid Ended On<br>\n                            <b>\n                                {{product.end_date | date: 'dd-MM-yyyy'}}\n                                <br>\n                                {{product.end_date | date : 'mediumTime'}}\n                            </b>\n                        </div>\n                    </div>\n                    <hr>\n                    <div class=\"row margn\" >\n                      \n                      <div class=\"col-xs-12 col-md-12 text-center\">\n                         <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.bidders.length}}</a>\n                         \n                      </div>\n                      <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\n                          <div class=\"modal-dialog\">\n                        \n                            <!-- Modal content-->\n                            <div class=\"modal-content\">\n                              <div class=\"modal-header\">\n                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n                                <h4 class=\"modal-title\">User Involved - {{involvedUsers.length}}</h4>\n                              </div>\n                              <div class=\"modal-body\">\n                                  <table class=\"table\">\n                                      <thead class=\"thead-inverse\">\n                                  <tr>\n                                    <th>Slno</th>\n                                    <th>Name</th>\n                                    <th>Bid Amount</th>\n                                    <th>Time</th>\n                                    <th>Status</th>\n                                  \n                                  </tr>\n                                </thead>\n                                <tbody *ngIf=\"involvedUsers.length ==0\">\n                                    <tr >\n                                          <td colspan=\"5\" class=\"text-center\">No User Involved</td>\n                                    </tr>\n                                </tbody>\n                                <tbody *ngIf=\"involvedUsers.length > 0\" >\n                              \n                                    <tr  *ngFor=\"let usr of involvedUsers;let i = index\" >\n                                          <td >{{i+1}}</td>\n                                          <td >{{product.user_details[i].name}}</td>\n                                          <td >{{usr.amount | number:'1.2-2'}}</td>\n                                          <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\n                                          <td >{{usr.bid_status}}</td>\n                                    </tr>\n                                </tbody>\n                                </table>\n                              \n                              </div>\n                              <div class=\"modal-footer\">\n                                <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n                              </div>\n                            </div>\n                        \n                          </div>\n                        </div>\n                  </div>\n                  \n                    <div class=\"row\">\n                        \n                        <div class=\"col-xs-12 col-md-12\">\n                            <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center \">\n                              <div *ngIf=\"product.is_bid_completed\">\n                                  <div class=\"alert alert-success text-center \">\n                                      Winner! \n                                      <br> <strong> {{product.lastBiduser}}</strong>\n                                      <br>\n                                      {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\n                            \n                              </div>\n                              <div *ngIf=\"!product.is_bid_completed\">\n                              <a class=\"alert-success\" href=\"#\">Assign - Winner</a>\n                              </div>\n                          </div>\n                            <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\n                            <a class=\"alert-danger\" href=\"#\">Re-submit</a>\n                          </div>\n                       \n                    </div>\n                </div>\n            </div>\n        </div>\n  \n    </div>\n    </div>\n  \n    <div *ngIf=\"products?.length == 0\" class=\"row list-group\">\n        <h3 class=\"text-center\"> No Product Found</h3>\n    </div>\n    </div>\n     \n    \n       "
 
 /***/ }),
 
@@ -1023,6 +1083,37 @@ var EqualValidator_1;
 
 /***/ }),
 
+/***/ "../../../../../src/app/filter.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var FilterPipe = (function () {
+    function FilterPipe() {
+    }
+    FilterPipe.prototype.transform = function (value, args) {
+        return null;
+    };
+    return FilterPipe;
+}());
+FilterPipe = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+        name: 'filter'
+    })
+], FilterPipe);
+
+//# sourceMappingURL=filter.pipe.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/finishedauction/finishedauction.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1290,7 +1381,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"row\">\n\n    <div class=\"main\">\n\n      <h3>Please Log In, or <a [routerLink]=\"['/registration']\">Sign Up</a></h3>\n      <div class=\"row\">\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\n          <a href=\"/auth/facebook\" target=\"_blank\" class=\"btn btn-lg btn-primary btn-block\">Facebook</a>\n        </div>\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\n          <a href=\"/auth/google\" target=\"_blank\" class=\"btn btn-lg btn-info btn-block\">Google</a>\n        </div>\n      </div>\n      <div class=\"login-or\">\n        <hr class=\"hr-or\">\n        <span class=\"span-or\">or</span>\n      </div>\n\n      <form role=\"form\" #f=\"ngForm\" (ngSubmit)=\"f.form.valid && login()\" novalidate>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\n          <label for=\"inputUsernameEmail\">Username or email</label>\n          <input type=\"text\" class=\"form-control\" id=\"inputUsernameEmail\" required [(ngModel)]=\"newLogin.email\" name=\"email\" #email=\"ngModel\">\n          <div *ngIf=\"f.submitted && !email.valid\" class=\"help-block\">Username is required</div>\n        </div>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\n          <label for=\"inputPassword\">Password</label>\n          <input type=\"password\" class=\"form-control\" id=\"inputPassword\" required [(ngModel)]=\"newLogin.password\" name=\"password\" #password=\"ngModel\">\n          <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\n        </div>\n        <button type=\"submit\" class=\"btn btn btn-primary\">\n          Log In\n        </button>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && status }\">\n            <div *ngIf=\"status\" class=\"help-block\">!{{msg}}</div>\n       </div> \n      </form>\n      \n    </div>\n    \n  </div>\n</div>\n\n"
+module.exports = "<div class=\"container\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"main\">\r\n\r\n      <h3>Please Log In, or <a [routerLink]=\"['/registration']\">Sign Up</a></h3>\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n          <a href=\"/auth/facebook\" target=\"_blank\" class=\"btn btn-lg btn-primary btn-block\">Facebook</a>\r\n        </div>\r\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n          <a href=\"/auth/google\" target=\"_blank\" class=\"btn btn-lg btn-info btn-block\">Google</a>\r\n        </div>\r\n      </div>\r\n      <div class=\"login-or\">\r\n        <hr class=\"hr-or\">\r\n        <span class=\"span-or\">or</span>\r\n      </div>\r\n\r\n      <form role=\"form\" #f=\"ngForm\" (ngSubmit)=\"f.form.valid && login()\" novalidate>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\r\n          <label for=\"inputUsernameEmail\">Username or email</label>\r\n          <input type=\"text\" class=\"form-control\" id=\"inputUsernameEmail\" required [(ngModel)]=\"newLogin.email\" name=\"email\" #email=\"ngModel\">\r\n          <div *ngIf=\"f.submitted && !email.valid\" class=\"help-block\">Username is required</div>\r\n        </div>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\r\n          <label for=\"inputPassword\">Password</label>\r\n          <input type=\"password\" class=\"form-control\" id=\"inputPassword\" required [(ngModel)]=\"newLogin.password\" name=\"password\" #password=\"ngModel\">\r\n          <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\r\n        </div>\r\n        <button type=\"submit\" class=\"btn btn btn-primary\">\r\n          Log In\r\n        </button>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && status }\">\r\n            <div *ngIf=\"status\" class=\"help-block\">!{{msg}}</div>\r\n       </div> \r\n      </form>\r\n      \r\n    </div>\r\n    \r\n  </div>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -1362,6 +1453,92 @@ LoginComponent = __decorate([
 
 var _a, _b;
 //# sourceMappingURL=login.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/manage-product/manage-product.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/manage-product/manage-product.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<product-detail (updateProEvent)=\"onUpdateProEvent($event)\"   (deleteProEvent)=\"onDeleteProEvent($event)\"     *ngIf=\"selectedPro\" [pro]=\"selectedPro\"></product-detail>\r\n\r\n\r\n<br>\r\n<br>\r\n\r\n<product-list  (SelectPro)=\"onSelectPro($event)\" [pros]=\"pros\" ></product-list>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/manage-product/manage-product.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ManageProductComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ManageProductComponent = (function () {
+    function ManageProductComponent(_productService) {
+        this._productService = _productService;
+    }
+    ManageProductComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._productService.getProducts()
+            .subscribe(function (resProData) { return _this.pros = resProData; });
+    };
+    ManageProductComponent.prototype.onSelectPro = function (pro) {
+        this.selectedPro = pro;
+        console.log(this.selectedPro);
+    };
+    ManageProductComponent.prototype.onUpdateProEvent = function (pro) {
+        this._productService.updateProduct(pro)
+            .subscribe(function (resUpdatedPro) { return pro = resUpdatedPro; });
+        this.selectedPro = null;
+    };
+    ;
+    ManageProductComponent.prototype.onDeleteProEvent = function (pro) {
+        //  console.log("manahe delete");
+        this._productService.updateProduct(pro)
+            .subscribe(function (resUpdatedPro) { return pro = resUpdatedPro; });
+        this.selectedPro = null;
+    };
+    ;
+    return ManageProductComponent;
+}());
+ManageProductComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-manage-product',
+        template: __webpack_require__("../../../../../src/app/manage-product/manage-product.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/manage-product/manage-product.component.css")],
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object])
+], ManageProductComponent);
+
+var _a;
+//# sourceMappingURL=manage-product.component.js.map
 
 /***/ }),
 
@@ -1500,6 +1677,157 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/product-detail/product-detail.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/product-detail/product-detail.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n    <div class=\"col-md-9 shadow\">\r\n      <h3>Edit  a Product</h3>\r\n      <br>\r\n      <form class=\"well\" >\r\n          <div class=\"form-group\" >\r\n              <label > Name *</label>\r\n              <input type=\"text\"  name=\"name\"  [(ngModel)]=\"pro.name\" class=\"form-control\" required  />\r\n          </div>\r\n          <div class=\"form-group\" >\r\n              <label > Bid Amount *</label>\r\n              <input type=\"text\"  name=\"bid_amount\" [(ngModel)]=\"pro.bid_amount\"  class=\"form-control\" required  />\r\n          </div>\r\n       \r\n\r\n          <div class=\"form-group\" >\r\n              <label > Minimum Bid Rate</label>\r\n              <input type=\"text\"  name=\"min_bid_rate\" [(ngModel)]=\"pro.min_bid_rate\" class=\"form-control\" />\r\n          </div>\r\n\r\n           <div class=\"form-group\" >\r\n                  <label > Bid Start time *</label>\r\n                  <datetime name=\"start_date\" [(ngModel)]=\"pro.start_date\"></datetime>\r\n              </div>\r\n              <div class=\"form-group\" >\r\n                      <label > Bid End time *</label>\r\n                      <datetime name = \"end_date\"  [(ngModel)]=\"pro.end_date\"></datetime>\r\n                  </div>\r\n\r\n          \r\n\r\n           <!-- <image-upload name=\"image\"  [(ngModel)]=\"newproduct.image\"\r\n          [style]=\"'customStyle'\" \r\n          [class]=\"'prev-img'\" \r\n          [max]=\"100\"\r\n          \r\n          [headers]=\"{Authorization: 'MyToken'}\"\r\n          [buttonCaption]=\"'Select Images!'\"\r\n          [dropBoxMessage]=\"'Drop Product images here!'\"\r\n          [extensions]=\"['jpg','png','gif']\"\r\n       \r\n          (removed)=\"onRemoved($event)\"\r\n          (uploadFinished)=\"onUploadFinished($event)\"\r\n          (uploadStateChanged)=\"onUploadStateChanged($event)\"></image-upload>  -->\r\n          <!-- <div>\r\n              <label > Image</label>\r\n              <input type=\"file\"  name=\"pollqtn\"   required />\r\n          </div> -->\r\n         \r\n         \r\n          <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n          <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n          \r\n          <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n          \r\n        \r\n\r\n          <div class=\"form-group\" >\r\n              <label > Description</label>\r\n              <br>\r\n              <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"pro.desc\" ></textarea>\r\n          </div>\r\n         \r\n          <input type=\"submit\" (click)=\"updateProduct()\" class=\"btn btn-info blakbtn\" value=\"Udate\"  >\r\n          <input type=\"submit\" (click)=\"deleteProduct()\" class=\"btn btn-info blakbtn\" value=\"Delete\"  >\r\n         \r\n      </form>\r\n\r\n    </div>\r\n   "
+
+/***/ }),
+
+/***/ "../../../../../src/app/product-detail/product-detail.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductDetailComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ProductDetailComponent = (function () {
+    function ProductDetailComponent() {
+        // tableview: boolean = false;
+        this.updateProEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.deleteProEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    ProductDetailComponent.prototype.ngOnInit = function () {
+    };
+    ProductDetailComponent.prototype.updateProduct = function () {
+        this.updateProEvent.emit(this.pro);
+        //  window.location.reload();
+        //  this.tableview = true;
+    };
+    ProductDetailComponent.prototype.deleteProduct = function () {
+        // console.log("sdd");
+        this.deleteProEvent.emit(this.pro);
+        //  window.location.reload();
+        //  this.tableview = true;
+    };
+    return ProductDetailComponent;
+}());
+ProductDetailComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'product-detail',
+        template: __webpack_require__("../../../../../src/app/product-detail/product-detail.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/product-detail/product-detail.component.css")],
+        inputs: ['pro'],
+        outputs: ['updateProEvent', 'deleteProEvent']
+    }),
+    __metadata("design:paramtypes", [])
+], ProductDetailComponent);
+
+//# sourceMappingURL=product-detail.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/product-list/product-list.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "table {\r\n    font-family: arial, sans-serif;\r\n    border-collapse: collapse;\r\n    width: 50%;\r\n    margin-left:50px;\r\n}\r\n\r\ntd, th {\r\n    border: 1px solid black;\r\n    text-align: left;\r\n    padding: 8px;\r\n}\r\n\r\ntr:nth-child(even) {\r\n    background-color: #dddddd;\r\n}\r\n.btn{\r\n    background-color:grey;\r\n    border: 1px solid;\r\n    color:white;\r\n}\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/product-list/product-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <ul>\r\n    <li (click) =\"onSelect(pro)\" *ngFor=\"let pro of pros\"><a>{{pro.name}}</a></li>\r\n</ul> -->\r\n<div *ngIf=\"tableview\">\r\n<table>\r\n    <tr>\r\n      <th>Name</th>\r\n      <th>Bid Amount</th>\r\n      <th>Minimum Bid Rate</th>\r\n      <th>Start date</th>\r\n      <th>End Date</th>\r\n      <th>Description</th>\r\n      <th>status</th>\r\n      <th>Action</th>\r\n    </tr>\r\n    <tr *ngFor=\"let pro of pros\">\r\n\r\n    <td>{{pro.name}}</td>\r\n    <td>{{pro.bid_amount}}</td>\r\n    <td>{{pro.min_bid_rate}}</td>\r\n    <td>{{pro.start_date}}</td>\r\n    <td>{{pro.start_date}}</td>\r\n    <td>{{pro.desc}}</td>\r\n    <td>{{pro.status}}</td>\r\n    <!-- <td>{{pro.status}}</td> -->\r\n    <td (click) =\"onSelect(pro)\" ><input type=\"submit\" value=\"Action\" class=\"btn\" ><br>\r\n\r\n    </tr>\r\n  </table>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/product-list/product-list.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductListComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ProductListComponent = (function () {
+    function ProductListComponent() {
+        this.tableview = true;
+        // private deleteProEvent = new EventEmitter();
+        this.SelectPro = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    ProductListComponent.prototype.ngOnInit = function () {
+    };
+    ProductListComponent.prototype.onSelect = function (prod) {
+        this.SelectPro.emit(prod);
+        this.tableview = false;
+    };
+    ProductListComponent.prototype.deletePro = function (prod) {
+        this.SelectPro.emit(prod);
+        this.tableview = false;
+    };
+    return ProductListComponent;
+}());
+ProductListComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'product-list',
+        template: __webpack_require__("../../../../../src/app/product-list/product-list.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/product-list/product-list.component.css")],
+        inputs: ['pros'],
+        outputs: ['SelectPro']
+    }),
+    __metadata("design:paramtypes", [])
+], ProductListComponent);
+
+//# sourceMappingURL=product-list.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/product-service.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1551,6 +1879,107 @@ ProductServiceService = __decorate([
 
 var _a;
 //# sourceMappingURL=product-service.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/product/product.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".shadow{\r\n\r\n     margin-left: 100px;\r\n   \r\n}\r\n.blakbtn{\r\n    background-color: black;\r\n    width:90px;\r\n}\r\n.blakbtn:hover{\r\n    background-color: white;\r\n    color:black;\r\n}\r\n.colorbtn{\r\n    background-color: black;\r\n    width:200px;\r\n}\r\n.colorbtn:hover{\r\n    background-color: white;\r\n    color:black;\r\n    \r\n}\r\n\r\n\r\n\r\n ", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/product/product.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n    <div class=\"col-md-9 shadow\">\r\n            <h3>Add a Product</h3>\r\n            <br>\r\n            <form #form='ngForm' (ngSubmit)=\"addProduct()\" class=\"well\" >\r\n                <div class=\"form-group\" >\r\n                    <label > Name *</label>\r\n                    <input type=\"text\"  name=\"name\"  [(ngModel)]=\"newproduct.name\" class=\"form-control\" required  />\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                    <label > Bid Amount *</label>\r\n                    <input type=\"text\"  name=\"bid_amount\" [(ngModel)]=\"newproduct.bid_amount\"  class=\"form-control\" required  />\r\n                </div>\r\n             \r\n\r\n                <div class=\"form-group\" >\r\n                    <label > Minimum Bid Rate</label>\r\n                    <input type=\"text\"  name=\"min_bid_rate\" [(ngModel)]=\"newproduct.min_bid_rate\" class=\"form-control\" />\r\n                </div>\r\n\r\n                 <div class=\"form-group\" >\r\n                        <label > Bid Start time *</label>\r\n                        <datetime name=\"start_date\" [(ngModel)]=\"newproduct.start_date\"></datetime>\r\n                    </div>\r\n                    <div class=\"form-group\" >\r\n                            <label > Bid End time *</label>\r\n                            <datetime name = \"end_date\"  [(ngModel)]=\"newproduct.end_date\"></datetime>\r\n                        </div>\r\n\r\n                \r\n\r\n                 <!-- <image-upload name=\"image\"  [(ngModel)]=\"newproduct.image\"\r\n                [style]=\"'customStyle'\" \r\n                [class]=\"'prev-img'\" \r\n                [max]=\"100\"\r\n                \r\n                [headers]=\"{Authorization: 'MyToken'}\"\r\n                [buttonCaption]=\"'Select Images!'\"\r\n                [dropBoxMessage]=\"'Drop Product images here!'\"\r\n                [extensions]=\"['jpg','png','gif']\"\r\n             \r\n                (removed)=\"onRemoved($event)\"\r\n                (uploadFinished)=\"onUploadFinished($event)\"\r\n                (uploadStateChanged)=\"onUploadStateChanged($event)\"></image-upload>  -->\r\n                <!-- <div>\r\n                    <label > Image</label>\r\n                    <input type=\"file\"  name=\"pollqtn\"   required />\r\n                </div> -->\r\n               \r\n               \r\n                <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n                <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n                \r\n                <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n                \r\n                <input type=\"file\" name =\"myfile\" ng-disabled=\"uploading\" style=\"display: none\">\r\n\r\n                <div class=\"form-group\" >\r\n                    <label > Description</label>\r\n                    <br>\r\n                    <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"newproduct.desc\" ></textarea>\r\n                </div>\r\n               \r\n                <input type=\"submit\" class=\"btn btn-info blakbtn\" value=\"Submit\"  >\r\n            \r\n               \r\n            </form>\r\n      \r\n          </div>\r\n         "
+
+/***/ }),
+
+/***/ "../../../../../src/app/product/product.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+// import { ProductService } from '../services/product.service';
+// import { Poll } from '../poll';
+// import { FormsModule, FormControl, FormGroup, Validators }   from '@angular/forms';
+// import { answer } from './../answer';
+var ProductComponent = (function () {
+    function ProductComponent(_prductService, _userService, router) {
+        this._prductService = _prductService;
+        this._userService = _userService;
+        this.router = router;
+        this.newproduct = {
+            name: '',
+            desc: '',
+            bid_amount: '',
+            min_bid_rate: '',
+            start_date: '',
+            end_date: '',
+        };
+    }
+    ProductComponent.prototype.ngOnInit = function () {
+    };
+    ProductComponent.prototype.addProduct = function () {
+        var _this = this;
+        this._prductService.addProduct(this.newproduct).subscribe(function (data) {
+            if (data) {
+                _this._userService.sendmail().subscribe(function (data1) {
+                });
+                alert("Add Product Successfully");
+                window.location.reload();
+                //  this.router.navigate(['/registration'])
+            }
+            else {
+                alert("Error");
+                console.log("error");
+            }
+        });
+    };
+    return ProductComponent;
+}());
+ProductComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-product',
+        template: __webpack_require__("../../../../../src/app/product/product.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/product/product.component.css")],
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]]
+        // providers: [ProductService]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]) === "function" && _c || Object])
+], ProductComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=product.component.js.map
 
 /***/ }),
 
@@ -1643,7 +2072,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/registration/registration.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<br>\n<div class=\"wrapper\">\n  <br>\n  <form class=\"form-horizontal\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && onRegisterSubmit();\" novalidate>\n\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !name.valid }\">\n        <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\n        <!-- <label for=\"exampleInputEmail1\">Name</label> -->\n          <input type=\"text\" class=\"form-control\" placeholder=\"Name\" required [(ngModel)]=\"newUser.name\" name=\"name\" #name=\"ngModel\">\n          <div *ngIf=\"f.submitted && !name.valid\" class=\"help-block\">! Name is required</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\n      <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\n      <!-- <label >User Name</label> -->\n        <input type=\"text\" class=\"form-control\" placeholder=\"Email\" required [(ngModel)]=\"newUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" name=\"email\" #email=\"ngModel\">\n        <div *ngIf=\"f.submitted && email.invalid\">\n            <!-- <div *ngIf=\"!email.valid && newUser.email=='' \" class=\"help-block\">Email is required</div> -->\n          <div *ngIf=\"email.errors.pattern\" class=\"help-block\">! Email id is not valid</div>\n          <div *ngIf=\"email.errors.required\" class=\"help-block\">! Email id is required</div>\n        </div> \n      </div>\n    </div>\n\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !phone.valid }\">\n      <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\n      <!-- <label >Phone Number</label> --> \n        <input type=\"text\" class=\"form-control\" placeholder=\"Phone Number\" minlength=\"10\" maxlength=\"10\" pattern=\"^\\d{9}|^\\d{3}-\\d{3}-\\d{3}|^\\d{3}\\s\\d{3}\\s\\d{3}\" required [(ngModel)]=\"newUser.phone\" name=\"phone\" #phone=\"ngModel\">\n        <div *ngIf=\"f.submitted && phone.invalid\">\n          <div *ngIf=\"phone.errors.minlength || phone.errors.maxlength\" class=\"help-block\">! Phone Number should be 10 digits</div>\n          <div *ngIf=\"phone.errors.required\" class=\"help-block\">! Phone Number is required</div>\n          <div *ngIf=\"phone.errors.pattern\" class=\"help-block\">! Valid Phone Number is required</div>\n        </div> \n      </div>\n     </div> \n\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\"> \n      \n      <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\n        <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\" pattern=\"^(?=.*[A-Za-z])(?=.*\\d)(?=.*[$@$!%*#?&])[A-Za-z\\d$@$!%*#?&]{8,}$\" required validateEqual=\"confirmPassword\" reverse=\"true\" [(ngModel)]=\"newUser.password\" name=\"password\" #password=\"ngModel\"> \n        <div *ngIf=\"f.submitted && password.invalid\">\n            <div *ngIf=\"password.errors.required\" class=\"help-block\">! Password is required</div>\n            <div *ngIf=\"password.errors.pattern\" class=\"help-block\">! Password contain atleast 6 characters and should contain one number,one character and one special character</div>\n        </div> \n        </div>\n    </div> \n\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !confirmPassword.valid }\">\n     \n      <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\n        <input type=\"password\" class=\"form-control\" id=\"confirmPassword\" required validateEqual=\"password\" placeholder=\"Confirm Password\" required validateEqual=\"password\" reverse=\"false\" [(ngModel)]=\"User.confirmPassword\" name=\"confirmPassword\" #confirmPassword=\"ngModel\"> \n        <div *ngIf=\"!confirmPassword.valid || (!confirmPassword.pristine && f.submitted)\" class=\"help-block\">! Password not Match</div>   \n        \n        </div>\n    </div> \n\n\n    <div class=\"form-group\">\n      <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\n        <button type=\"submit\" class=\"btn btn-default\">Sign up</button>\n      </div>\n    </div>\n\n    <div class=\"form-group\">\n        <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\n          <div class=\"checkbox\">\n            <label>\n              By creating an account, you agree to Auction's<a href=\"#myModal\" data-toggle=\"modal\" data-target=\"#myModal\">\n            Terms and Conditions\n            </a>\n          </label>\n          </div>\n        </div>\n      </div>\n    \n    <div class=\"form-group\">\n        <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\n          \n            <label>Already have an account?  <a [routerLink]=\"['/login']\">\n            Sign In\n            </a>\n          </label>\n          \n        </div>\n    </div>\n\n</form>\n</div>\n\n<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\n    <div class=\"modal-dialog modal-md\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n          <h4 class=\"modal-title\"> \n            Terms and Conditions</h4>\n        </div>\n        <div class=\"modal-body\">\n          <h4>Conditions of Use</h4>\n          \n          <p>Welcome to Auction. Auction Services LLC and/or its affiliates (\"Auction\") provide website features and other products and services to you when you visit or bid at Auction.com, use Auction products or services, use Auction applications for mobile, or use software provided by Auction in connection with any of the foregoing (collectively, \"Auction Services\"). Auction provides the Auction Services subject to the following conditions.\n              <br>\n              <b>By using Auction Services, you agree to these conditions. Please read them carefully.</b>\n              <br>\n             When you using Auction, you also will be subject to the guidelines, terms and agreements applicable to that Auction Service (\"Service Terms\"). If these Conditions of Use are inconsistent with the Service Terms, those Service Terms will control.\n              <br>\n             <b> ELECTRONIC COMMUNICATIONS</b>\n              <br>\n              When you use Auction Services, or send e-mails, text messages, and other communications from your desktop or mobile device to us, you may be communicating with us electronically. You consent to receive communications from us electronically, such as e-mails, texts, mobile push notices, or notices and messages on this site or through the other Auction Services, such as our Message Center, and you can retain copies of these communications for your records. You agree that all agreements, notices, disclosures, and other communications that we provide to you electronically satisfy any legal requirement that such communications be in writing.\n              <br>\n              <b>COPYRIGHT</b>\n              <br>\n              All content included in or made available through any Auction Service, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software is the property of Auction or its content suppliers and protected by United States and international copyright laws. The compilation of all content included in or made available through any Auction Service is the exclusive property of Auction and protected by U.S. and international copyright laws.\n              <br>\n              <b>LICENSE AND ACCESS</b>\n              <br>\n              Subject to your compliance with these Conditions of Use and any Service Terms, and your payment of any applicable fees, Auction or its content providers grant you a limited, non-exclusive, non-transferable, non-sublicensable license to access and make personal and non-commercial use of the Auction Services. This license does not include any resale or commercial use of any Auction Service, or its contents; any collection and use of any product listings, descriptions, or prices; any derivative use of any Auction Service or its contents; any downloading, copying, or other use of account information for the benefit of any third party; or any use of data mining, robots, or similar data gathering and extraction tools. All rights not expressly granted to you in these Conditions of Use or any Service Terms are reserved and retained by Auction or its licensors, suppliers, publishers, rightsholders, or other content providers. No Auction Service, nor any part of any Auction Service, may be reproduced, duplicated, copied, sold, resold, visited, or otherwise exploited for any commercial purpose without express written consent of Auction. You may not frame or utilize framing techniques to enclose any trademark, logo, or other proprietary information (including images, text, page layout, or form) of Auction without express written consent. You may not use any meta tags or any other \"hidden text\" utilizing Auction's name or trademarks without the express written consent of Auction. You may not misuse the Auction Services. You may use the Auction Services only as permitted by law. The licenses granted by Auction terminate if you do not comply with these Conditions of Use or any Service Terms.\n              </p>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>"
+module.exports = "\r\n<br>\r\n<div class=\"wrapper\">\r\n  <br>\r\n  <form class=\"form-horizontal\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && onRegisterSubmit();\" novalidate>\r\n\r\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !name.valid }\">\r\n        <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\r\n        <!-- <label for=\"exampleInputEmail1\">Name</label> -->\r\n          <input type=\"text\" class=\"form-control\" placeholder=\"Name\" required [(ngModel)]=\"newUser.name\" name=\"name\" #name=\"ngModel\">\r\n          <div *ngIf=\"f.submitted && !name.valid\" class=\"help-block\">! Name is required</div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\r\n      <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\r\n      <!-- <label >User Name</label> -->\r\n        <input type=\"text\" class=\"form-control\" placeholder=\"Email\" required [(ngModel)]=\"newUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" name=\"email\" #email=\"ngModel\">\r\n        <div *ngIf=\"f.submitted && email.invalid\">\r\n            <!-- <div *ngIf=\"!email.valid && newUser.email=='' \" class=\"help-block\">Email is required</div> -->\r\n          <div *ngIf=\"email.errors.pattern\" class=\"help-block\">! Email id is not valid</div>\r\n          <div *ngIf=\"email.errors.required\" class=\"help-block\">! Email id is required</div>\r\n        </div> \r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !phone.valid }\">\r\n      <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\r\n      <!-- <label >Phone Number</label> --> \r\n        <input type=\"text\" class=\"form-control\" placeholder=\"Phone Number\" minlength=\"10\" maxlength=\"10\" pattern=\"^\\d{9}|^\\d{3}-\\d{3}-\\d{3}|^\\d{3}\\s\\d{3}\\s\\d{3}\" required [(ngModel)]=\"newUser.phone\" name=\"phone\" #phone=\"ngModel\">\r\n        <div *ngIf=\"f.submitted && phone.invalid\">\r\n          <div *ngIf=\"phone.errors.minlength || phone.errors.maxlength\" class=\"help-block\">! Phone Number should be 10 digits</div>\r\n          <div *ngIf=\"phone.errors.required\" class=\"help-block\">! Phone Number is required</div>\r\n          <div *ngIf=\"phone.errors.pattern\" class=\"help-block\">! Valid Phone Number is required</div>\r\n        </div> \r\n      </div>\r\n     </div> \r\n\r\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\"> \r\n      \r\n      <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\r\n        <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\" pattern=\"^(?=.*[A-Za-z])(?=.*\\d)(?=.*[$@$!%*#?&])[A-Za-z\\d$@$!%*#?&]{8,}$\" required validateEqual=\"confirmPassword\" reverse=\"true\" [(ngModel)]=\"newUser.password\" name=\"password\" #password=\"ngModel\"> \r\n        <div *ngIf=\"f.submitted && password.invalid\">\r\n            <div *ngIf=\"password.errors.required\" class=\"help-block\">! Password is required</div>\r\n            <div *ngIf=\"password.errors.pattern\" class=\"help-block\">! Password contain atleast 6 characters and should contain one number,one character and one special character</div>\r\n        </div> \r\n        </div>\r\n    </div> \r\n\r\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !confirmPassword.valid }\">\r\n     \r\n      <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\r\n        <input type=\"password\" class=\"form-control\" id=\"confirmPassword\" required validateEqual=\"password\" placeholder=\"Confirm Password\" required validateEqual=\"password\" reverse=\"false\" [(ngModel)]=\"User.confirmPassword\" name=\"confirmPassword\" #confirmPassword=\"ngModel\"> \r\n        <div *ngIf=\"!confirmPassword.valid || (!confirmPassword.pristine && f.submitted)\" class=\"help-block\">! Password not Match</div>   \r\n        \r\n        </div>\r\n    </div> \r\n\r\n\r\n    <div class=\"form-group\">\r\n      <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\r\n        <button type=\"submit\" class=\"btn btn-default\">Sign up</button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\r\n          <div class=\"checkbox\">\r\n            <label>\r\n              By creating an account, you agree to Auction's<a href=\"#myModal\" data-toggle=\"modal\" data-target=\"#myModal\">\r\n            Terms and Conditions\r\n            </a>\r\n          </label>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    \r\n    <div class=\"form-group\">\r\n        <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\">\r\n          \r\n            <label>Already have an account?  <a [routerLink]=\"['/login']\">\r\n            Sign In\r\n            </a>\r\n          </label>\r\n          \r\n        </div>\r\n    </div>\r\n\r\n</form>\r\n</div>\r\n\r\n<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\r\n    <div class=\"modal-dialog modal-md\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n          <h4 class=\"modal-title\"> \r\n            Terms and Conditions</h4>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <h4>Conditions of Use</h4>\r\n          \r\n          <p>Welcome to Auction. Auction Services LLC and/or its affiliates (\"Auction\") provide website features and other products and services to you when you visit or bid at Auction.com, use Auction products or services, use Auction applications for mobile, or use software provided by Auction in connection with any of the foregoing (collectively, \"Auction Services\"). Auction provides the Auction Services subject to the following conditions.\r\n              <br>\r\n              <b>By using Auction Services, you agree to these conditions. Please read them carefully.</b>\r\n              <br>\r\n             When you using Auction, you also will be subject to the guidelines, terms and agreements applicable to that Auction Service (\"Service Terms\"). If these Conditions of Use are inconsistent with the Service Terms, those Service Terms will control.\r\n              <br>\r\n             <b> ELECTRONIC COMMUNICATIONS</b>\r\n              <br>\r\n              When you use Auction Services, or send e-mails, text messages, and other communications from your desktop or mobile device to us, you may be communicating with us electronically. You consent to receive communications from us electronically, such as e-mails, texts, mobile push notices, or notices and messages on this site or through the other Auction Services, such as our Message Center, and you can retain copies of these communications for your records. You agree that all agreements, notices, disclosures, and other communications that we provide to you electronically satisfy any legal requirement that such communications be in writing.\r\n              <br>\r\n              <b>COPYRIGHT</b>\r\n              <br>\r\n              All content included in or made available through any Auction Service, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software is the property of Auction or its content suppliers and protected by United States and international copyright laws. The compilation of all content included in or made available through any Auction Service is the exclusive property of Auction and protected by U.S. and international copyright laws.\r\n              <br>\r\n              <b>LICENSE AND ACCESS</b>\r\n              <br>\r\n              Subject to your compliance with these Conditions of Use and any Service Terms, and your payment of any applicable fees, Auction or its content providers grant you a limited, non-exclusive, non-transferable, non-sublicensable license to access and make personal and non-commercial use of the Auction Services. This license does not include any resale or commercial use of any Auction Service, or its contents; any collection and use of any product listings, descriptions, or prices; any derivative use of any Auction Service or its contents; any downloading, copying, or other use of account information for the benefit of any third party; or any use of data mining, robots, or similar data gathering and extraction tools. All rights not expressly granted to you in these Conditions of Use or any Service Terms are reserved and retained by Auction or its licensors, suppliers, publishers, rightsholders, or other content providers. No Auction Service, nor any part of any Auction Service, may be reproduced, duplicated, copied, sold, resold, visited, or otherwise exploited for any commercial purpose without express written consent of Auction. You may not frame or utilize framing techniques to enclose any trademark, logo, or other proprietary information (including images, text, page layout, or form) of Auction without express written consent. You may not use any meta tags or any other \"hidden text\" utilizing Auction's name or trademarks without the express written consent of Auction. You may not misuse the Auction Services. You may use the Auction Services only as permitted by law. The licenses granted by Auction terminate if you do not comply with these Conditions of Use or any Service Terms.\r\n              </p>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>"
 
 /***/ }),
 
@@ -1740,7 +2169,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/running-auction-back/running-auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" style=\"padding-top:20px;\">\r\n    <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n        <div *ngFor=\"let product of products\"  class=\"item  col-xs-4 col-lg-4\">\r\n            <div class=\"thumbnail\">\r\n                \r\n                <img class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n                <div class=\"caption\">\r\n                    <h4 class=\"group inner list-group-item-heading text-center\">\r\n                        {{product.name}}</h4>\r\n                        <hr>\r\n                        <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                        <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                      </p>\r\n                    <hr>\r\n                    <div class=\"row text-center\">\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                            Bid Start Price\r\n                            <p class=\"lead\"> {{product.bid_amount | number:'1.2-2'}}</p>\r\n                        </div>\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                          Ends In\r\n                            <p class=\"lead\">\r\n                              <!-- {{product.end_date | date: 'dd-mm-yyyy h:mm:ss'}} -->\r\n                              <app-count-down-timer [inputDate]=\"product.end_date\"></app-count-down-timer>\r\n                              <!-- <app-count-down-timer inputDate=\"product.end_date | date: 'MMMM dd, yyyy h:mm:ss'\"></app-count-down-timer> -->\r\n\r\n                             \r\n                              \r\n                              <!-- <app-count-down-timer inputDate=\"product.end_date\"></app-count-down-timer> -->\r\n                            </p>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row margn\" >\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12 text-center\">\r\n                           <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.bidders.length}}</a>\r\n                           \r\n                        </div>\r\n                        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                            <div class=\"modal-dialog\">\r\n                          \r\n                              <!-- Modal content-->\r\n                              <div class=\"modal-content\">\r\n                                <div class=\"modal-header\">\r\n                                  <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                  <h4 class=\"modal-title\">User Involved - {{involvedUsers.length}}</h4>\r\n                                </div>\r\n                                <div class=\"modal-body\">\r\n                                    <table class=\"table\">\r\n                                        <thead class=\"thead-inverse\">\r\n                                    <tr>\r\n                                      <th>Slno</th>\r\n                                      <th>Name</th>\r\n                                      <th>Bid Amount</th>\r\n                                      <th>Time</th>\r\n                                      <th>Status</th>\r\n                                    \r\n                                    </tr>\r\n                                  </thead>\r\n                                  <tbody *ngIf=\"involvedUsers.length ==0\">\r\n                                      <tr >\r\n                                            <td colspan=\"4\" class=\"text-center\">No User Involved</td>\r\n                                      </tr>\r\n                                  </tbody>\r\n                                  <tbody *ngIf=\"involvedUsers.length > 0\" >\r\n                                \r\n                                      <tr  *ngFor=\"let usr of involvedUsers;let i = index\" >\r\n                                            <td >{{i+1}}</td>\r\n                                            <td >{{product.user_details[i].name}}</td>\r\n                                            <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                            <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                            <td >{{usr.bid_status}}</td>\r\n                                      </tr>\r\n                                  </tbody>\r\n                                  </table>\r\n                                \r\n                                </div>\r\n                                <div class=\"modal-footer\">\r\n                                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                                </div>\r\n                              </div>\r\n                          \r\n                            </div>\r\n                          </div>\r\n                    </div>\r\n                    <hr>\r\n                    <div class=\"row\">\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12\">\r\n                            <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center margn\">\r\n                                <strong>Last Bid Amount - {{product.lastBidprice | number:'1.2-2'}}</strong>\r\n                                 <br>\r\n                                 {{product.lastBiduser}} \r\n                                 <br> {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                      \r\n                        </div>\r\n                        <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                           No bidder Found\r\n                          </div>\r\n               \r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        </div>\r\n\r\n</div>\r\n<div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n    <h3 class=\"text-center\"> No Product Found</h3>\r\n</div>\r\n</div>"
+module.exports = "<div class=\"container\" style=\"padding-top:20px;\">\n    <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\n        <div *ngFor=\"let product of products\"  class=\"item  col-xs-4 col-lg-4\">\n            <div class=\"thumbnail\">\n                \n                <img class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\n                <div class=\"caption\">\n                    <h4 class=\"group inner list-group-item-heading text-center\">\n                        {{product.name}}</h4>\n                        <hr>\n                        <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\n                        <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\n                      </p>\n                    <hr>\n                    <div class=\"row text-center\">\n                        <div class=\"col-xs-12 col-md-6\">\n                            Bid Start Price\n                            <p class=\"lead\"> {{product.bid_amount | number:'1.2-2'}}</p>\n                        </div>\n                        <div class=\"col-xs-12 col-md-6\">\n                          Ends In\n                            <p class=\"lead\">\n                              <!-- {{product.end_date | date: 'dd-mm-yyyy h:mm:ss'}} -->\n                              <app-count-down-timer [inputDate]=\"product.end_date\"></app-count-down-timer>\n                              <!-- <app-count-down-timer inputDate=\"product.end_date | date: 'MMMM dd, yyyy h:mm:ss'\"></app-count-down-timer> -->\n\n                             \n                              \n                              <!-- <app-count-down-timer inputDate=\"product.end_date\"></app-count-down-timer> -->\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"row margn\" >\n                        \n                        <div class=\"col-xs-12 col-md-12 text-center\">\n                           <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.bidders.length}}</a>\n                           \n                        </div>\n                        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\n                            <div class=\"modal-dialog\">\n                          \n                              <!-- Modal content-->\n                              <div class=\"modal-content\">\n                                <div class=\"modal-header\">\n                                  <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n                                  <h4 class=\"modal-title\">User Involved - {{involvedUsers.length}}</h4>\n                                </div>\n                                <div class=\"modal-body\">\n                                    <table class=\"table\">\n                                        <thead class=\"thead-inverse\">\n                                    <tr>\n                                      <th>Slno</th>\n                                      <th>Name</th>\n                                      <th>Bid Amount</th>\n                                      <th>Time</th>\n                                      <th>Status</th>\n                                    \n                                    </tr>\n                                  </thead>\n                                  <tbody *ngIf=\"involvedUsers.length ==0\">\n                                      <tr >\n                                            <td colspan=\"4\" class=\"text-center\">No User Involved</td>\n                                      </tr>\n                                  </tbody>\n                                  <tbody *ngIf=\"involvedUsers.length > 0\" >\n                                \n                                      <tr  *ngFor=\"let usr of involvedUsers;let i = index\" >\n                                            <td >{{i+1}}</td>\n                                            <td >{{product.user_details[i].name}}</td>\n                                            <td >{{usr.amount | number:'1.2-2'}}</td>\n                                            <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\n                                            <td >{{usr.bid_status}}</td>\n                                      </tr>\n                                  </tbody>\n                                  </table>\n                                \n                                </div>\n                                <div class=\"modal-footer\">\n                                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n                                </div>\n                              </div>\n                          \n                            </div>\n                          </div>\n                    </div>\n                    <hr>\n                    <div class=\"row\">\n                        \n                        <div class=\"col-xs-12 col-md-12\">\n                            <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center margn\">\n                                <strong>Last Bid Amount - {{product.lastBidprice | number:'1.2-2'}}</strong>\n                                 <br>\n                                 {{product.lastBiduser}} \n                                 <br> {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\n                      \n                        </div>\n                        <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\n                           No bidder Found\n                          </div>\n               \n                    </div>\n                </div>\n            </div>\n        </div>\n        </div>\n\n</div>\n<div *ngIf=\"products?.length == 0\" class=\"row list-group\">\n    <h3 class=\"text-center\"> No Product Found</h3>\n</div>\n</div>"
 
 /***/ }),
 
@@ -1830,7 +2259,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/runningauction/runningauction.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" id=\"c-auction\">\r\n    <h4 class=\"page-head mrgn-nav-top\">Running Auctions</h4>\r\n    <app-card-running></app-card-running>\r\n  </div>"
+module.exports = "<div class=\"container\" id=\"c-auction\">\n    <h4 class=\"page-head mrgn-nav-top\">Running Auctions</h4>\n    <div *ngIf=\"products?.length > 0; else noProduct\">\n        <div  *ngFor=\"let product of products\">\n          <app-card-running [product]=\"product\"></app-card-running>\n      </div>\n    </div>\n    <ng-template #noProduct>\n        <div class=\"no-item\">\n            <h4>Sorrry! No items to display!</h4>\n        </div>\n      </ng-template>\n  </div>\n\n    "
 
 /***/ }),
 
@@ -1840,6 +2269,7 @@ module.exports = "<div class=\"container\" id=\"c-auction\">\r\n    <h4 class=\"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RunningauctionComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1850,10 +2280,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var RunningauctionComponent = (function () {
-    function RunningauctionComponent() {
+    function RunningauctionComponent(productService) {
+        this.productService = productService;
+        this.involvedUsers = [];
     }
     RunningauctionComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.productService.getAllrunningProduct().subscribe(function (data) {
+            data.forEach(function (item, index) {
+                var lastBidprice = item.bid_amount;
+                var lastBiduser = '';
+                var lastBidTime = '';
+                item.bidders.forEach(function (user, i) {
+                    if (user.amount >= lastBidprice) {
+                        lastBidprice = user.amount;
+                        lastBiduser = item.user_details[i].name;
+                        lastBidTime = user.date_time;
+                    }
+                });
+                data[index].lastBidprice = lastBidprice;
+                data[index].lastBiduser = lastBiduser;
+                data[index].lastBidTime = lastBidTime;
+            });
+            console.log(data);
+            _this.products = data;
+        });
     };
     return RunningauctionComponent;
 }());
@@ -1863,9 +2316,10 @@ RunningauctionComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/runningauction/runningauction.component.html"),
         styles: [__webpack_require__("../../../../../src/app/runningauction/runningauction.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object])
 ], RunningauctionComponent);
 
+var _a;
 //# sourceMappingURL=runningauction.component.js.map
 
 /***/ }),
@@ -1942,6 +2396,12 @@ var ProductService = (function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.get(this.url + 'products/upcoming_products', { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    ProductService.prototype.bidProduct = function (data) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.put(this.url + 'products/bid_a_aproduct', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     return ProductService;
@@ -2276,7 +2736,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" style=\"padding-top:20px;\">\r\n    \r\n      <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n          <div  *ngFor=\"let product of products;let i = index;\" class=\"item  col-xs-4 col-lg-4\">\r\n              <div class=\"thumbnail\">\r\n                  \r\n                  <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                  <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n             \r\n                  <div class=\"caption\">\r\n                      <h4 class=\"group inner list-group-item-heading text-center\">\r\n                          {{product.name}}</h4>\r\n                          <hr>\r\n                          <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                          <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                        </p>\r\n                      <hr>\r\n            \r\n                      <div class=\"row text-center\">\r\n                          <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                              Bid Start On<br>\r\n                              <b>\r\n                                {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                                <br>\r\n                                {{product.start_date | date : 'mediumTime'}}\r\n                              </b>\r\n                          </div>\r\n                           <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                              Bid End On<br>\r\n                              <b>\r\n                                  {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                  <br>\r\n                                  {{product.end_date | date : 'mediumTime'}}\r\n                              </b>\r\n                          </div>\r\n                      </div>\r\n                      <hr>\r\n                      <div class=\"row \">\r\n                          \r\n                          <div class=\"col-xs-12 col-md-12\">\r\n                              <div  class=\"alert alert-success text-center \">\r\n                                <div >\r\n                                <strong>Bid Start Price - {{product.bid_amount | number:'1.2-2'}}</strong>\r\n                                </div>\r\n                            </div>\r\n                      </div>\r\n                  </div>\r\n              </div>\r\n          </div>\r\n    \r\n      </div>\r\n    </div>\r\n      <div *ngIf=\"products?.length == 0\" id=\"products\" class=\"row list-group\">\r\n       <h3 class=\"text-center\"> No Product Found</h3>\r\n      </div>\r\n      </div>\r\n          \r\n         "
+module.exports = "<div class=\"container\" style=\"padding-top:20px;\">\n    \n      <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\n          <div  *ngFor=\"let product of products;let i = index;\" class=\"item  col-xs-4 col-lg-4\">\n              <div class=\"thumbnail\">\n                  \n                  <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\n                  <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\n             \n                  <div class=\"caption\">\n                      <h4 class=\"group inner list-group-item-heading text-center\">\n                          {{product.name}}</h4>\n                          <hr>\n                          <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\n                          <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\n                        </p>\n                      <hr>\n            \n                      <div class=\"row text-center\">\n                          <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\n                              Bid Start On<br>\n                              <b>\n                                {{product.start_date | date: 'dd-MM-yyyy'}}\n                                <br>\n                                {{product.start_date | date : 'mediumTime'}}\n                              </b>\n                          </div>\n                           <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\n                              Bid End On<br>\n                              <b>\n                                  {{product.end_date | date: 'dd-MM-yyyy'}}\n                                  <br>\n                                  {{product.end_date | date : 'mediumTime'}}\n                              </b>\n                          </div>\n                      </div>\n                      <hr>\n                      <div class=\"row \">\n                          \n                          <div class=\"col-xs-12 col-md-12\">\n                              <div  class=\"alert alert-success text-center \">\n                                <div >\n                                <strong>Bid Start Price - {{product.bid_amount | number:'1.2-2'}}</strong>\n                                </div>\n                            </div>\n                      </div>\n                  </div>\n              </div>\n          </div>\n    \n      </div>\n    </div>\n      <div *ngIf=\"products?.length == 0\" id=\"products\" class=\"row list-group\">\n       <h3 class=\"text-center\"> No Product Found</h3>\n      </div>\n      </div>\n          \n         "
 
 /***/ }),
 
@@ -2424,7 +2884,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/winnerconfirm/winnerconfirm.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navigation></app-navigation>\n"
+module.exports = "<app-navigation></app-navigation>\r\n"
 
 /***/ }),
 

@@ -76,9 +76,6 @@ const ProductsSchema = mongoose.Schema({
 const Product = module.exports = mongoose.model('Product', ProductsSchema,'products');
 
 
-
-const Product = module.exports = mongoose.model('Product', ProductsSchema);
-
 module.exports.addProduct = function(product,callback){
     console.log(product);
     var newProduct = new Product(product);
