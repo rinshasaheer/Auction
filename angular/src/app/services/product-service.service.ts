@@ -27,4 +27,11 @@ export class ProductServiceService {
     return this._http.get('http://localhost:3000/products/upcomingproduct',  {headers: headers})
       .map(res => res.json());
   }
+
+  loadMyAuctionProduct(){
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this._http.get('http://localhost:3000/products/myauctionproduct',  {headers: headers})
+      .map(res => res.json());
+  }
 }

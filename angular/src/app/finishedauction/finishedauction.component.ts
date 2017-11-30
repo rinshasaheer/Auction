@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { product } from './../schema/product';
-import { ProductServiceService } from './../product-service.service';
+import { ProductServiceService } from './../services/product-service.service';
 
 @Component({
   selector: 'app-finishedauction',

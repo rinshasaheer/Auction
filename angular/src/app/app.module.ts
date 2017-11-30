@@ -35,7 +35,7 @@ import { ClosedAuctionBackComponent } from './closed-auction-back/closed-auction
 import { UpcomingAuctionBackComponent } from './upcoming-auction-back/upcoming-auction-back.component';
 import { RunningAuctionBackComponent } from './running-auction-back/running-auction-back.component';
 
-import {ProductServiceService} from './product-service.service';
+import {ProductServiceService} from './services/product-service.service';
 import { MyauctionsComponent } from './myauctions/myauctions.component';
 import { CapitalizePipe } from './capitalize.pipe'
 const appRoutes: Routes = [

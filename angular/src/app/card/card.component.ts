@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { product } from './../schema/product';
 import { CapitalizePipe } from './../capitalize.pipe';
-import { ProductServiceService } from './../product-service.service';
+import { ProductServiceService } from './../services/product-service.service';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
