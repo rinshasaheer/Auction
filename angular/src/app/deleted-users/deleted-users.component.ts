@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-deleted-users',
+  selector: 'deleted-users',
   templateUrl: './deleted-users.component.html',
   styleUrls: ['./deleted-users.component.css']
 })

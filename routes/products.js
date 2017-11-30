@@ -4,6 +4,56 @@ const router = express.Router();
 const config = require('../config/database');
 const Product = require("../model/product");
 const User = require("../model/user");
+
+const pro = require('../model/product');
+
+
+//     prodObj = {
+//         name:  req.body.name,
+//        // image: req.body.image,
+//         desc: req.body.desc,
+//         bid_amount: req.body.bid_amount,
+//         min_bid_rate: req.body.min_bid_rate,
+//         //start_date : req.body.start_date,
+//         // end_date : req.body.end_date,
+//     };
+//     // console.log(req.body);
+//     Product.addProduct(prodObj,(err, user)=>{
+//          console.log(user);
+//         if(err){
+//             res.json({success: false, msg : "Failed, went somthing wrong "});
+//         }else{
+//             res.json({success: true, msg : "Poll Added Seccessfully, Redirecting..."});
+//         }
+//     });
+// });
+
+
+
+
+    router.post('/addnew',function(req,res){
+    console.log("Insert a Product");
+    var newPro = new pro();
+    newPro.name = req.body.name;
+    newPro.desc = req.body.desc;
+    newPro.bid_amount = req.body.bid_amount;
+    newPro.min_bid_rate = req.body.min_bid_rate;
+    newPro.start_date = req.body.start_date;
+    newPro.end_date = req.body.end_date;
+    // newPoll.answers = req.body.answers;
+    newPro.save(function(err,insertedPro){
+        if(err){
+            console.log("Error " + err);
+        }else{
+         
+
+            res.json(insertedPro);
+        }
+    })
+
+});
+
+
 var async = require('async');
 
 router.get('/closed_products',(req,res)=>{
@@ -31,6 +81,7 @@ router.get('/closed_products',(req,res)=>{
         // fs.writeFile('test.json', JSON.stringify(results, null, 4));
      })
 });
+
 router.get('/runnig_products',(req,res)=>{
 
     Product.aggregate([
@@ -75,6 +126,7 @@ router.post('/addnew',(req,res,next)=>{
     });
 });
 
+
 router.get('/products',(req,res,next)=>{
     Product.getAllProduct((err,poll)=>{
         if(err) throw err;
@@ -83,10 +135,18 @@ router.get('/products',(req,res,next)=>{
     
 });
 
+router.get('/closed_products',(req,res,next)=>{
+    Product.getAllCloasedProduct((err,poll)=>{
+        if(err) throw err;
+        return res.json(poll);
+    });
+});
+
 router.get('/upcoming_products',(req,res,next)=>{
     Product.getAllUpcomingProduct((err,product)=>{
         if(err) throw err;
         return res.json(product);
+
     })
     
 });
@@ -105,6 +165,7 @@ router.get('/upcoming_products',(req,res,next)=>{
     
 // });
 
+
 router.delete('/delete/:id',(req,res,next)=>{
     Product.deleteProduct(req.params.id,(err,user)=>{
         if(err) throw err;
@@ -113,7 +174,7 @@ router.delete('/delete/:id',(req,res,next)=>{
         }else{
             return res.json({success:true, msg: 'deleted successfully'});
         }
-    })
+    });
 });
 
 router.get('/product/:id',(req,res,next)=>{
@@ -122,6 +183,50 @@ router.get('/product/:id',(req,res,next)=>{
         return res.json(poll);
     })
 });
+
+
+router.put('/update/:id',function(req,res){
+//    console.log(req);
+   pro.findByIdAndUpdate(req.params.id,
+    {
+        $set : {name: req.body.name, desc : req.body.desc, bid_amount : req.body.bid_amount, min_bid_rate : req.body.min_bid_rate, start_date : req.body.start_date, end_date : req.body.end_date  }
+    },
+    {
+    new :true
+    },
+    function(err, updatedPro){
+        if(err){
+            res.send("error updating product");
+        }else{
+            res.json(updatedPro);
+        }
+    }
+
+   )
+});
+
+
+
+router.put('/updatedel/:id',function(req,res){
+    //    console.log(req);
+       pro.findByIdAndUpdate(req.params.id,
+        {
+            $set : {status : false  }
+        },
+        {
+        new :true
+        },
+        function(err, updatedPro){
+            if(err){
+                res.send("error deleting product");
+            }else{
+                res.json(updatedPro);
+            }
+        }
+    
+       )
+    });
+
 
 router.get('/completedproduct',(req,res,next)=>{
     Product.getAllClosedProduct((err,products)=>{
@@ -146,4 +251,6 @@ router.get('/highBid/:id',(req,res,next)=>{
         return res.json(products);
     })
 });
+
+
 module.exports = router;

@@ -16,11 +16,11 @@ export class EmailVerificationComponent implements OnInit {
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.verif_id = +params['id']; // (+) converts string 'id' to a number
-      this.userService.verifyUser(this.verif_id).subscribe(data => {
-        if(data){
+      this.userService.verifyUser(params.id).subscribe(data => {
+        console.log(data);
+        if(data.success){
          alert("Success, Redirecting ...");
-         this.router.navigate(['/login']);
+         this.router.navigate(['/home']);
           console.log("successfull verified user");
         
         } else {

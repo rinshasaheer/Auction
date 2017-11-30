@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { CanActivate, Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-navigation',
@@ -9,9 +10,15 @@ import { Router } from '@angular/router';
 export class NavigationComponent implements OnInit {
 
   brand_logo: String = "brand.png";
-  constructor(private router: Router) { }
+  constructor(private userService : UserService, private router: Router) { }
 
   ngOnInit() {
+  }
+
+  logout(){
+    this.userService.logout();
+    this.router.navigate(['/login']);
+    return false;
   }
 
 }
