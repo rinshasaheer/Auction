@@ -1,5 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-<<<<<<< HEAD
+
 .prev-img {
     /* background-color: #dd3; */
     border-radius: 5px;
@@ -29,8 +28,8 @@
 }
 .img-ul-image{
   width: 150px !important;
-  height : 150px !important;
-=======
+  height : 150px !important;}
+
 .page-head{
     text-align: center;
     font-size: 27px;
@@ -53,5 +52,5 @@
     font-size: 25px;
     color: rgb(99, 99, 99);
     padding-top: 180px;
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+
 }

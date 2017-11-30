@@ -18,7 +18,10 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /***/ }),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ "../../../../../src/app/all-users/all-users.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -80,6 +83,9 @@ AllUsersComponent = __decorate([
 
 /***/ }),
 
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ "../../../../../src/app/app.component.css":
 /***/ (function(module, exports, __webpack_require__) {
@@ -103,7 +109,11 @@ module.exports = module.exports.toString();
 /***/ (function(module, exports) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = "<router-outlet></router-outlet>\r\n\r\n"
+=======
+module.exports = "\r\n  <!-- Navigation-->\r\n  <!-- <app-top-bar></app-top-bar> -->\r\n  <!-- <div class=\"content-wrapper\">\r\n    <div class=\"container-fluid\"> -->\r\n      <!-- Breadcrumbs-->\r\n     \r\n      \r\n         <router-outlet></router-outlet>\r\n       \r\n    <!-- </div> -->\r\n\r\n\r\n"
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 =======
 module.exports = "\r\n  <!-- Navigation-->\r\n  <!-- <app-top-bar></app-top-bar> -->\r\n  <!-- <div class=\"content-wrapper\">\r\n    <div class=\"container-fluid\"> -->\r\n      <!-- Breadcrumbs-->\r\n     \r\n      \r\n         <router-outlet></router-outlet>\r\n       \r\n    <!-- </div> -->\r\n\r\n\r\n"
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
@@ -134,7 +144,11 @@ AppComponent = __decorate([
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
 <<<<<<< HEAD
+<<<<<<< HEAD
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
+=======
+        styles: [__webpack_require__("../../../../../src/app/app.component.css")],
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 =======
         styles: [__webpack_require__("../../../../../src/app/app.component.css")],
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
@@ -151,6 +165,7 @@ AppComponent = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
@@ -165,6 +180,8 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__manage_product_manage_product_component__ = __webpack_require__("../../../../../src/app/manage-product/manage-product.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__product_detail_product_detail_component__ = __webpack_require__("../../../../../src/app/product-detail/product-detail.component.ts");
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es7_reflect__ = __webpack_require__("../../../../core-js/es7/reflect.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es7_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_core_js_es7_reflect__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__("../../../../zone.js/dist/zone.js");
@@ -208,6 +225,9 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__capitalize_pipe__ = __webpack_require__("../../../../../src/app/capitalize.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__runningauction_runningauction_component__ = __webpack_require__("../../../../../src/app/runningauction/runningauction.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__card_running_card_running_component__ = __webpack_require__("../../../../../src/app/card-running/card-running.component.ts");
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -223,7 +243,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 // import { DataTablesModule } from 'angular-datatables';
 
 
@@ -252,6 +275,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 
 
@@ -260,6 +286,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 var appRoutes = [
     { path: '', redirectTo: '/registration', pathMatch: 'full' },
@@ -267,6 +294,8 @@ var appRoutes = [
     { path: 'product', component: __WEBPACK_IMPORTED_MODULE_5__product_product_component__["a" /* ProductComponent */] },
     { path: 'manage-product', component: __WEBPACK_IMPORTED_MODULE_11__manage_product_manage_product_component__["a" /* ManageProductComponent */] },
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 var appRoutes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_27__registration_registration_component__["a" /* RegistrationComponent */] },
@@ -283,6 +312,9 @@ var appRoutes = [
     { path: 'closed-auction', component: __WEBPACK_IMPORTED_MODULE_29__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */] },
     { path: 'upcoming-auction', component: __WEBPACK_IMPORTED_MODULE_30__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */] },
     { path: 'running-auction', component: __WEBPACK_IMPORTED_MODULE_31__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */] }
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 ];
 var AppModule = (function () {
@@ -291,6 +323,7 @@ var AppModule = (function () {
     return AppModule;
 }());
 AppModule = __decorate([
+<<<<<<< HEAD
 <<<<<<< HEAD
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
@@ -313,6 +346,8 @@ AppModule = __decorate([
         providers: [],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
     Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["NgModule"])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
@@ -360,6 +395,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_5__angular_router__["f" /* RouterModule */].forRoot(appRoutes)
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
     })
 ], AppModule);
@@ -369,17 +407,23 @@ AppModule = __decorate([
 /***/ }),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /***/ "../../../../../src/app/filter.pipe.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterPipe; });
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ "../../../../../src/app/capitalize.pipe.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CapitalizePipe; });
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -389,6 +433,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var FilterPipe = (function () {
     function FilterPipe() {
@@ -410,6 +455,8 @@ FilterPipe = __decorate([
 
 /***/ "../../../../../src/app/manage-product/manage-product.component.css":
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 var CapitalizePipe = (function () {
     function CapitalizePipe() {
     }
@@ -432,6 +479,9 @@ CapitalizePipe = __decorate([
 /***/ }),
 
 /***/ "../../../../../src/app/card-running/card-running.component.css":
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -451,6 +501,7 @@ module.exports = module.exports.toString();
 /***/ }),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /***/ "../../../../../src/app/manage-product/manage-product.component.html":
 /***/ (function(module, exports) {
 
@@ -466,6 +517,8 @@ module.exports = "<product-detail (updateProEvent)=\"onUpdateProEvent($event)\" 
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ "../../../../../src/app/card-running/card-running.component.html":
 /***/ (function(module, exports) {
 
@@ -479,6 +532,9 @@ module.exports = "<!-- <div *ngIf=\"!itemStatus\" class=\"col-md-8 col-xs-12 col
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardRunningComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -490,6 +546,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 var ManageProductComponent = (function () {
@@ -537,6 +594,8 @@ var _a;
 
 /***/ "../../../../../src/app/product-detail/product-detail.component.css":
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 var CardRunningComponent = (function () {
     function CardRunningComponent() {
     }
@@ -558,6 +617,9 @@ CardRunningComponent = __decorate([
 /***/ }),
 
 /***/ "../../../../../src/app/card/card.component.css":
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -567,7 +629,11 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 // module
 <<<<<<< HEAD
+<<<<<<< HEAD
 exports.push([module.i, "", ""]);
+=======
+exports.push([module.i, ".tg-ad {\r\n    width: 100%;\r\n    float: left;\r\n    padding: 15px;\r\n    margin: 15px 0;\r\n    background: #fff;\r\n    border-radius: 5px;\r\n    padding-bottom: 0;\r\n    box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);\r\n    transition: 1s ease;\r\n}\r\n\r\n*::after, *::before, p a, a, .tg-socialicons li a, .tg-roundicontext, .tg-roundicontext .tg-usericonholder, .sub-menu, .mega-menu, .tg-themedropdownmenu li a, .tg-themedropdownmenu, .tg-themedropdownmenu li.menu-item-has-children ul, .sub-menu li, .tg-categories .item, .tg-categories .item h3, .tg-prev, .tg-next, .tg-ad, .tg-btnphone, .tg-like, .tg-post figure img, .tg-post figure a img, .tg-categoryholder, .tg-category h4, .tg-feature, .tg-team figure figcaption, .tg-applyedfilters ul li.alert-dismissable a.close, .tg-collapsetitle a span::before, .tg-btn, .tg-user, .tg-socialandappicons, .tg-logo, .tg-btnmenutoggle, .cls-1, .tg-wrapper, .tg-sidebarwrapper, .tg-dropdownmenu, .tg-dropdownmenu li, .tg-dashboardbox, .ct-bar, .tg-offerer, .tg-navtabledata ul li a, .tg-dashboardtable tr, .tg-package, .tg-profilephotogallery ul li figure i, .tg-btndelete {\r\n    transition: all 300ms ease-in-out;\r\n}\r\n.tg-ad figure {\r\n    margin: 0;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n}\r\n.tg-themetag {\r\n    top: 12px;\r\n    left: -5px;\r\n    z-index: 2;\r\n    color: #fff;\r\n    font-size: 10px;\r\n    font-weight: 500;\r\n    line-height: 10px;\r\n    position: absolute;\r\n    background: #2882f7;\r\n    padding: 5px 3px 3px 10px;\r\n    text-transform: uppercase;\r\n}\r\n.tg-featuretag::before {\r\n    top: 0;\r\n    left: 100%;\r\n    border-top: 9px solid transparent;\r\n    border-bottom: 9px solid transparent;\r\n    border-left: 10px solid #2882f7;\r\n}\r\n.tg-featuretag::before, .tg-featuretag::after {\r\n    width: 0;\r\n    height: 0;\r\n    content: '';\r\n    position: absolute;\r\n}\r\n.tg-featuretag::after {\r\n    top: 100%;\r\n    left: 0;\r\n    border-top: 5px solid #0052b6;\r\n    border-left: 5px solid transparent;\r\n}\r\n.tg-featuretag::before, .tg-featuretag::after {\r\n    width: 0;\r\n    height: 0;\r\n    content: '';\r\n    position: absolute;\r\n}\r\n.tg-ad figure a, .tg-ad figure img, .tg-ad figure a img {\r\n    z-index: 1;\r\n    display: block;\r\n    position: relative;\r\n}\r\n.tg-ad figure a, .tg-ad figure img {\r\n    overflow: hidden;\r\n    border-radius: 5px;\r\n}\r\n.tg-ad figure img, .tg-ad figure a img {\r\n    width: 100%;\r\n}\r\n.tg-ad figure a, .tg-ad figure img, .tg-ad figure a img {\r\n    z-index: 1;\r\n    display: block;\r\n    position: relative;\r\n}\r\n.tg-ad figure a, .tg-ad figure img {\r\n    overflow: hidden;\r\n    border-radius: 5px;\r\n}\r\nimg {\r\n    height: auto;\r\n    max-width: 100%;\r\n}\r\nimg {\r\n    border: 0;\r\n}\r\n.tg-adcontent {\r\n    width: 100%;\r\n    float: left;\r\n}\r\n.tg-ad:hover {\r\n    -webkit-transform: scale(1.05);\r\n    transform: scale(1.05);\r\n    cursor: pointer;\r\n}\r\n.tg-productcagegories {\r\n    width: 100%;\r\n    float: left;\r\n    font-size: 14px;\r\n    line-height: 18px;\r\n    list-style: none;\r\n    margin: 0 0 12px;\r\n    padding: 20px 0 10px;\r\n    border-bottom: 1px solid #dbdbdb;\r\n}\r\nul {\r\n    margin: 0;\r\n}\r\nol, ul {\r\n    margin-top: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.tg-productcagegories li {\r\n    float: left;\r\n    line-height: inherit;\r\n    list-style-type: none;\r\n}\r\nli {\r\n    line-height: 28px;\r\n    list-style: disc inside none;\r\n        list-style-type: disc;\r\n}\r\n.tg-productcagegories li a {\r\n    color: #363b4d;\r\n}\r\n.tg-adtitle {\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n    padding: 20px 32px 6px 5px;\r\n    border-bottom: 1px solid #ccc;\r\n}\r\n.card-pro-desc{\r\n\r\n}\r\n.tg-ad.tg-verifiedad .tg-adtitle::before {\r\n    display: block;\r\n}\r\n/* .tg-adtitle::before {\r\n    top: 0;\r\n    right: 0;\r\n    content: '';\r\n    width: 26px;\r\n    height: 26px;\r\n    display: none;\r\n    text-align: center;\r\n    position: absolute;\r\n    background: url(http://exprostudio.com/html/classified/images/ads/img-01.jpg) no-repeat 50% 50%;\r\n} */\r\n.tg-adtitle h3 {\r\n    margin: 0;\r\n    font-size: 18px;\r\n    line-height: 26px;\r\n    text-transform: none;\r\n}\r\nbody h1, body h2, body h3, body h4, body h5, body h6 {\r\n    color: #363b4d;\r\n    margin: 0 0 8px;\r\n    font-weight: 500;\r\n    line-height: 1.5;\r\n    font-style: normal;\r\n    text-transform: capitalize;\r\n    font-family: 'Quicksand', Arial, Helvetica, sans-serif;\r\n}\r\n.tg-adcontent time {\r\n    width: 100%;\r\n    float: left;\r\n    color: #484848;\r\n    font-size: 14px;\r\n    line-height: 15px;\r\n}\r\n.tg-adprice {\r\n    width: 100%;\r\n    float: left;\r\n    padding: 14px 0 14px;\r\n    background-color: #2882f7;\r\n    color: #fff;\r\n    border: none;\r\n    text-align: center;\r\n    border-bottom-left-radius: 4px;\r\n    border-bottom-right-radius: 4px;\r\n}\r\n.tg-adprice h4 {\r\n    margin: 0;\r\n    color: #363b4d;\r\n    font-size: 18px;\r\n    line-height: 17px;\r\n}\r\n.tg-adcontent address {\r\n    margin: 0;\r\n    width: 100%;\r\n    float: left;\r\n    color: #484848;\r\n    font-size: 14px;\r\n    line-height: 14px;\r\n    font-style: normal;\r\n    position: relative;\r\n    padding: 0 0 0 24px;\r\n}\r\n.tg-adcontent address::before {\r\n    top: 0;\r\n    left: 0;\r\n    content: '\\E9A3';\r\n    line-height: 14px;\r\n    position: absolute;\r\n    font-family: 'icomoon';\r\n}\r\n.tg-phonelike {\r\n    width: 100%;\r\n    float: left;\r\n    height: 33px;\r\n    margin: 20px 0 0;\r\n    position: relative;\r\n    padding: 0 38px 0 0;\r\n}\r\n.tg-btnphone {\r\n    margin: 0 0 10px;\r\n}\r\n.tg-btnphone {\r\n    width: 100%;\r\n    float: left;\r\n    color: #363b4d;\r\n    border-radius: 3px;\r\n    text-align: center;\r\n    background: #f7f7f7;\r\n}\r\n.tg-btnphone i {\r\n    font-size: 16px;\r\n    padding: 0 5px 0 0;\r\n}\r\n.tg-btnphone i, .tg-btnphone span, .tg-btnphone span em {\r\n    font-size: 14px;\r\n    line-height: 33px;\r\n    font-style: normal;\r\n}\r\n.tg-btnphone i, .tg-btnphone span {\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n}\r\n.icon-phone-handset::before {\r\n    content: \"\\E93C\";\r\n}\r\n.tg-like:hover, .tg-like.tg-liked {\r\n    color: #fff;\r\n    background: #2882f7;\r\n}\r\n.tg-like {\r\n    top: 0;\r\n    right: 0;\r\n    width: 33px;\r\n    color: #363b4d;\r\n    display: block;\r\n    cursor: pointer;\r\n    padding: 2px 0 1px;\r\n    text-align: center;\r\n    position: absolute;\r\n    border-radius: 3px;\r\n    background: #f7f7f7;\r\n}\r\n.tg-like:hover i, .tg-like.tg-liked i {\r\n    color: #fff;\r\n}\r\n.tg-like i {\r\n    color: #363b4d;\r\n    display: block;\r\n    font-size: 12px;\r\n    line-height: 30px;\r\n}\r\n.fa-heart::before {\r\n    content: \"\\F004\";\r\n}\r\n\r\n.tg-desc{\r\n    margin: 25px auto;\r\n    min-height: 123px;\r\n}", ""]);
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 =======
 exports.push([module.i, ".tg-ad {\r\n    width: 100%;\r\n    float: left;\r\n    padding: 15px;\r\n    margin: 15px 0;\r\n    background: #fff;\r\n    border-radius: 5px;\r\n    padding-bottom: 0;\r\n    box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);\r\n    transition: 1s ease;\r\n}\r\n\r\n*::after, *::before, p a, a, .tg-socialicons li a, .tg-roundicontext, .tg-roundicontext .tg-usericonholder, .sub-menu, .mega-menu, .tg-themedropdownmenu li a, .tg-themedropdownmenu, .tg-themedropdownmenu li.menu-item-has-children ul, .sub-menu li, .tg-categories .item, .tg-categories .item h3, .tg-prev, .tg-next, .tg-ad, .tg-btnphone, .tg-like, .tg-post figure img, .tg-post figure a img, .tg-categoryholder, .tg-category h4, .tg-feature, .tg-team figure figcaption, .tg-applyedfilters ul li.alert-dismissable a.close, .tg-collapsetitle a span::before, .tg-btn, .tg-user, .tg-socialandappicons, .tg-logo, .tg-btnmenutoggle, .cls-1, .tg-wrapper, .tg-sidebarwrapper, .tg-dropdownmenu, .tg-dropdownmenu li, .tg-dashboardbox, .ct-bar, .tg-offerer, .tg-navtabledata ul li a, .tg-dashboardtable tr, .tg-package, .tg-profilephotogallery ul li figure i, .tg-btndelete {\r\n    transition: all 300ms ease-in-out;\r\n}\r\n.tg-ad figure {\r\n    margin: 0;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n}\r\n.tg-themetag {\r\n    top: 12px;\r\n    left: -5px;\r\n    z-index: 2;\r\n    color: #fff;\r\n    font-size: 10px;\r\n    font-weight: 500;\r\n    line-height: 10px;\r\n    position: absolute;\r\n    background: #2882f7;\r\n    padding: 5px 3px 3px 10px;\r\n    text-transform: uppercase;\r\n}\r\n.tg-featuretag::before {\r\n    top: 0;\r\n    left: 100%;\r\n    border-top: 9px solid transparent;\r\n    border-bottom: 9px solid transparent;\r\n    border-left: 10px solid #2882f7;\r\n}\r\n.tg-featuretag::before, .tg-featuretag::after {\r\n    width: 0;\r\n    height: 0;\r\n    content: '';\r\n    position: absolute;\r\n}\r\n.tg-featuretag::after {\r\n    top: 100%;\r\n    left: 0;\r\n    border-top: 5px solid #0052b6;\r\n    border-left: 5px solid transparent;\r\n}\r\n.tg-featuretag::before, .tg-featuretag::after {\r\n    width: 0;\r\n    height: 0;\r\n    content: '';\r\n    position: absolute;\r\n}\r\n.tg-ad figure a, .tg-ad figure img, .tg-ad figure a img {\r\n    z-index: 1;\r\n    display: block;\r\n    position: relative;\r\n}\r\n.tg-ad figure a, .tg-ad figure img {\r\n    overflow: hidden;\r\n    border-radius: 5px;\r\n}\r\n.tg-ad figure img, .tg-ad figure a img {\r\n    width: 100%;\r\n}\r\n.tg-ad figure a, .tg-ad figure img, .tg-ad figure a img {\r\n    z-index: 1;\r\n    display: block;\r\n    position: relative;\r\n}\r\n.tg-ad figure a, .tg-ad figure img {\r\n    overflow: hidden;\r\n    border-radius: 5px;\r\n}\r\nimg {\r\n    height: auto;\r\n    max-width: 100%;\r\n}\r\nimg {\r\n    border: 0;\r\n}\r\n.tg-adcontent {\r\n    width: 100%;\r\n    float: left;\r\n}\r\n.tg-ad:hover {\r\n    -webkit-transform: scale(1.05);\r\n    transform: scale(1.05);\r\n    cursor: pointer;\r\n}\r\n.tg-productcagegories {\r\n    width: 100%;\r\n    float: left;\r\n    font-size: 14px;\r\n    line-height: 18px;\r\n    list-style: none;\r\n    margin: 0 0 12px;\r\n    padding: 20px 0 10px;\r\n    border-bottom: 1px solid #dbdbdb;\r\n}\r\nul {\r\n    margin: 0;\r\n}\r\nol, ul {\r\n    margin-top: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.tg-productcagegories li {\r\n    float: left;\r\n    line-height: inherit;\r\n    list-style-type: none;\r\n}\r\nli {\r\n    line-height: 28px;\r\n    list-style: disc inside none;\r\n        list-style-type: disc;\r\n}\r\n.tg-productcagegories li a {\r\n    color: #363b4d;\r\n}\r\n.tg-adtitle {\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n    padding: 20px 32px 6px 5px;\r\n    border-bottom: 1px solid #ccc;\r\n}\r\n.card-pro-desc{\r\n\r\n}\r\n.tg-ad.tg-verifiedad .tg-adtitle::before {\r\n    display: block;\r\n}\r\n/* .tg-adtitle::before {\r\n    top: 0;\r\n    right: 0;\r\n    content: '';\r\n    width: 26px;\r\n    height: 26px;\r\n    display: none;\r\n    text-align: center;\r\n    position: absolute;\r\n    background: url(http://exprostudio.com/html/classified/images/ads/img-01.jpg) no-repeat 50% 50%;\r\n} */\r\n.tg-adtitle h3 {\r\n    margin: 0;\r\n    font-size: 18px;\r\n    line-height: 26px;\r\n    text-transform: none;\r\n}\r\nbody h1, body h2, body h3, body h4, body h5, body h6 {\r\n    color: #363b4d;\r\n    margin: 0 0 8px;\r\n    font-weight: 500;\r\n    line-height: 1.5;\r\n    font-style: normal;\r\n    text-transform: capitalize;\r\n    font-family: 'Quicksand', Arial, Helvetica, sans-serif;\r\n}\r\n.tg-adcontent time {\r\n    width: 100%;\r\n    float: left;\r\n    color: #484848;\r\n    font-size: 14px;\r\n    line-height: 15px;\r\n}\r\n.tg-adprice {\r\n    width: 100%;\r\n    float: left;\r\n    padding: 14px 0 14px;\r\n    background-color: #2882f7;\r\n    color: #fff;\r\n    border: none;\r\n    text-align: center;\r\n    border-bottom-left-radius: 4px;\r\n    border-bottom-right-radius: 4px;\r\n}\r\n.tg-adprice h4 {\r\n    margin: 0;\r\n    color: #363b4d;\r\n    font-size: 18px;\r\n    line-height: 17px;\r\n}\r\n.tg-adcontent address {\r\n    margin: 0;\r\n    width: 100%;\r\n    float: left;\r\n    color: #484848;\r\n    font-size: 14px;\r\n    line-height: 14px;\r\n    font-style: normal;\r\n    position: relative;\r\n    padding: 0 0 0 24px;\r\n}\r\n.tg-adcontent address::before {\r\n    top: 0;\r\n    left: 0;\r\n    content: '\\E9A3';\r\n    line-height: 14px;\r\n    position: absolute;\r\n    font-family: 'icomoon';\r\n}\r\n.tg-phonelike {\r\n    width: 100%;\r\n    float: left;\r\n    height: 33px;\r\n    margin: 20px 0 0;\r\n    position: relative;\r\n    padding: 0 38px 0 0;\r\n}\r\n.tg-btnphone {\r\n    margin: 0 0 10px;\r\n}\r\n.tg-btnphone {\r\n    width: 100%;\r\n    float: left;\r\n    color: #363b4d;\r\n    border-radius: 3px;\r\n    text-align: center;\r\n    background: #f7f7f7;\r\n}\r\n.tg-btnphone i {\r\n    font-size: 16px;\r\n    padding: 0 5px 0 0;\r\n}\r\n.tg-btnphone i, .tg-btnphone span, .tg-btnphone span em {\r\n    font-size: 14px;\r\n    line-height: 33px;\r\n    font-style: normal;\r\n}\r\n.tg-btnphone i, .tg-btnphone span {\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n}\r\n.icon-phone-handset::before {\r\n    content: \"\\E93C\";\r\n}\r\n.tg-like:hover, .tg-like.tg-liked {\r\n    color: #fff;\r\n    background: #2882f7;\r\n}\r\n.tg-like {\r\n    top: 0;\r\n    right: 0;\r\n    width: 33px;\r\n    color: #363b4d;\r\n    display: block;\r\n    cursor: pointer;\r\n    padding: 2px 0 1px;\r\n    text-align: center;\r\n    position: absolute;\r\n    border-radius: 3px;\r\n    background: #f7f7f7;\r\n}\r\n.tg-like:hover i, .tg-like.tg-liked i {\r\n    color: #fff;\r\n}\r\n.tg-like i {\r\n    color: #363b4d;\r\n    display: block;\r\n    font-size: 12px;\r\n    line-height: 30px;\r\n}\r\n.fa-heart::before {\r\n    content: \"\\F004\";\r\n}\r\n\r\n.tg-desc{\r\n    margin: 25px auto;\r\n    min-height: 123px;\r\n}", ""]);
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
@@ -580,6 +646,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /***/ "../../../../../src/app/product-detail/product-detail.component.html":
 /***/ (function(module, exports) {
@@ -595,6 +662,8 @@ module.exports = "\n    <div class=\"col-md-9 shadow\">\n      <h3>Edit  a Produ
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductDetailComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ "../../../../../src/app/card/card.component.html":
 /***/ (function(module, exports) {
 
@@ -609,6 +678,9 @@ module.exports = "<!-- <div *ngIf=\"!itemStatus\" class=\"col-md-8 col-xs-12 col
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__product_service_service__ = __webpack_require__("../../../../../src/app/product-service.service.ts");
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -620,6 +692,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var ProductDetailComponent = (function () {
     function ProductDetailComponent() {
@@ -659,6 +732,8 @@ ProductDetailComponent = __decorate([
 
 /***/ "../../../../../src/app/product-list/product-list.component.css":
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 
 var CardComponent = (function () {
     // itemStatus: boolean = true;
@@ -726,6 +801,9 @@ var _a;
 /***/ }),
 
 /***/ "../../../../../src/app/closed-auction-back/closed-auction-back.component.css":
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -735,7 +813,11 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 // module
 <<<<<<< HEAD
+<<<<<<< HEAD
 exports.push([module.i, "table {\r\n    font-family: arial, sans-serif;\r\n    border-collapse: collapse;\r\n    width: 50%;\r\n    margin-left:50px;\r\n}\r\n\r\ntd, th {\r\n    border: 1px solid black;\r\n    text-align: left;\r\n    padding: 8px;\r\n}\r\n\r\ntr:nth-child(even) {\r\n    background-color: #dddddd;\r\n}\r\n.btn{\r\n    background-color:grey;\r\n    border: 1px solid;\r\n    color:white;\r\n}\r\n", ""]);
+=======
+exports.push([module.i, "\r\n.margn{\r\n    margin-bottom: 15px;\r\n}\r\nhr {\r\n    margin-top: 10px;\r\n    margin-bottom: 10px;\r\n    border: 0;\r\n    border-top: 1px solid #eee;\r\n}\r\n.list-group-item-text{\r\n    text-align: justify;\r\n}\r\n.alert {\r\n    margin-bottom: 8px;\r\n    padding: 5px;\r\n}\r\n.lead {\r\n    margin-bottom: 10px;\r\n}    ", ""]);
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 =======
 exports.push([module.i, "\r\n.margn{\r\n    margin-bottom: 15px;\r\n}\r\nhr {\r\n    margin-top: 10px;\r\n    margin-bottom: 10px;\r\n    border: 0;\r\n    border-top: 1px solid #eee;\r\n}\r\n.list-group-item-text{\r\n    text-align: justify;\r\n}\r\n.alert {\r\n    margin-bottom: 8px;\r\n    padding: 5px;\r\n}\r\n.lead {\r\n    margin-bottom: 10px;\r\n}    ", ""]);
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
@@ -748,6 +830,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /***/ "../../../../../src/app/product-list/product-list.component.html":
 /***/ (function(module, exports) {
@@ -763,6 +846,8 @@ module.exports = "<!-- <ul>\r\n    <li (click) =\"onSelect(pro)\" *ngFor=\"let p
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductListComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ "../../../../../src/app/closed-auction-back/closed-auction-back.component.html":
 /***/ (function(module, exports) {
 
@@ -842,6 +927,9 @@ var _a;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CountDownTimerComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__ = __webpack_require__("../../../../rxjs/_esm5/Rx.js");
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -853,6 +941,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var ProductListComponent = (function () {
     function ProductListComponent() {
@@ -889,6 +978,8 @@ ProductListComponent = __decorate([
 
 /***/ "../../../../../src/app/product/product.component.css":
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 
 var CountDownTimerComponent = (function () {
     function CountDownTimerComponent(elm) {
@@ -945,6 +1036,9 @@ var _a;
 /***/ }),
 
 /***/ "../../../../../src/app/dashboard/dashboard.component.css":
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -954,7 +1048,11 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 // module
 <<<<<<< HEAD
+<<<<<<< HEAD
 exports.push([module.i, ".shadow{\r\n\r\n     margin-left: 100px;\r\n   \r\n}\r\n.blakbtn{\r\n    background-color: black;\r\n    width:90px;\r\n}\r\n.blakbtn:hover{\r\n    background-color: white;\r\n    color:black;\r\n}\r\n.colorbtn{\r\n    background-color: black;\r\n    width:200px;\r\n}\r\n.colorbtn:hover{\r\n    background-color: white;\r\n    color:black;\r\n    \r\n}\r\n\r\n\r\n\r\n ", ""]);
+=======
+exports.push([module.i, "", ""]);
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 =======
 exports.push([module.i, "", ""]);
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
@@ -967,6 +1065,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /***/ "../../../../../src/app/product/product.component.html":
 /***/ (function(module, exports) {
@@ -985,6 +1084,8 @@ module.exports = "\n    <div class=\"col-md-9 shadow\">\n            <h3>Add a P
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ "../../../../../src/app/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
@@ -998,6 +1099,9 @@ module.exports = "<p>\r\n  dashboard works!\r\n</p>\r\n"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1009,6 +1113,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1069,6 +1174,8 @@ var _a, _b, _c;
 
 /***/ "../../../../../src/app/registration/registration.component.css":
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 var DashboardComponent = (function () {
     function DashboardComponent() {
     }
@@ -1090,6 +1197,9 @@ DashboardComponent = __decorate([
 /***/ }),
 
 /***/ "../../../../../src/app/deleted-users/deleted-users.component.css":
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1099,7 +1209,11 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 // module
 <<<<<<< HEAD
+<<<<<<< HEAD
 exports.push([module.i, "body,\r\nhtml {\r\n  width: 100%;\r\n  height: 100%;\r\n  display: table;\r\n  overflow: hidden;\r\n  background: #1a1a1a;\r\n}\r\n\r\na {\r\n  color: #6897bb !important;\r\n  outline: none !important;\r\n  text-decoration: underline !important;\r\n}\r\n\r\n.checkbox {\r\n  color: #fff;\r\n}\r\n\r\ntextarea,\r\ninput[type=\"text\"],\r\ninput[type=\"password\"],\r\ninput[type=\"datetime\"],\r\ninput[type=\"datetime-local\"],\r\ninput[type=\"date\"],\r\ninput[type=\"month\"],\r\ninput[type=\"time\"],\r\ninput[type=\"week\"],\r\ninput[type=\"number\"],\r\ninput[type=\"email\"],\r\ninput[type=\"url\"],\r\ninput[type=\"search\"],\r\ninput[type=\"tel\"],\r\ninput[type=\"color\"],\r\n.uneditable-input {\r\n  border: 3px solid transparent;\r\n  box-shadow: none;\r\n  outline: 0 none;\r\n  height: 50px;\r\n}\r\n\r\ntextarea:focus,\r\ninput[type=\"text\"]:focus,\r\ninput[type=\"password\"]:focus,\r\ninput[type=\"datetime\"]:focus,\r\ninput[type=\"datetime-local\"]:focus,\r\ninput[type=\"date\"]:focus,\r\ninput[type=\"month\"]:focus,\r\ninput[type=\"time\"]:focus,\r\ninput[type=\"week\"]:focus,\r\ninput[type=\"number\"]:focus,\r\ninput[type=\"email\"]:focus,\r\ninput[type=\"url\"]:focus,\r\ninput[type=\"search\"]:focus,\r\ninput[type=\"tel\"]:focus,\r\ninput[type=\"color\"]:focus,\r\n.uneditable-input:focus {\r\n  border: 3px solid #6897bb;\r\n  box-shadow: none;\r\n  outline: 0 none;\r\n}\r\n\r\n.modal-footer .btn-default {\r\n  border: 1px solid #ccc;\r\n}\r\n\r\n.modal-footer .btn-default:hover {\r\n  border: 1px solid #6897bb;\r\n  background: #fff;\r\n}\r\n\r\n.btn-default {\r\n  border: 3px solid transparent;\r\n}\r\n\r\n.btn-default:hover {\r\n  border: 3px solid #6897bb;\r\n  background: #fff;\r\n}\r\n\r\n.wrapper {\r\n  display: table-cell;\r\n  vertical-align: middle;\r\n}\r\n\r\n.modal-body {\r\n  height: 300px;\r\n  overflow-y: scroll;\r\n}", ""]);
+=======
+exports.push([module.i, "", ""]);
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 =======
 exports.push([module.i, "", ""]);
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
@@ -1112,6 +1226,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /***/ "../../../../../src/app/registration/registration.component.html":
 /***/ (function(module, exports) {
@@ -1126,6 +1241,8 @@ module.exports = "<div class=\"wrapper\">\r\n  <form class=\"form-horizontal \" 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegistrationComponent; });
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ "../../../../../src/app/deleted-users/deleted-users.component.html":
 /***/ (function(module, exports) {
 
@@ -1138,6 +1255,9 @@ module.exports = "<p>\r\n  deleted-users works!\r\n</p>\r\n"
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeletedUsersComponent; });
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1150,6 +1270,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var RegistrationComponent = (function () {
     function RegistrationComponent() {
@@ -1180,6 +1301,8 @@ RegistrationComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 var DeletedUsersComponent = (function () {
     function DeletedUsersComponent() {
     }
@@ -1231,6 +1354,9 @@ module.exports = "<p>\r\n  disabled-users works!\r\n</p>\r\n"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DisabledUsersComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1242,6 +1368,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1308,6 +1435,8 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 var DisabledUsersComponent = (function () {
     function DisabledUsersComponent() {
     }
@@ -1361,6 +1490,9 @@ module.exports = ""
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1375,6 +1507,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 var UserService = (function () {
     function UserService(http) {
         this.http = http;
@@ -1385,6 +1518,8 @@ var UserService = (function () {
     UserService.prototype.registerUser = function (user) {
         // console.log(JSON.stringify(user));
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 var EmailVerificationComponent = (function () {
     function EmailVerificationComponent(userService, route, router) {
         this.userService = userService;
@@ -2439,6 +2574,9 @@ var UserService = (function () {
     }
     UserService.prototype.registerUser = function (user) {
         // console.log(JSON.stringify(user));
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]({ 'Content-Type': 'application/json' });
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({ headers: headers });
@@ -2448,6 +2586,7 @@ var UserService = (function () {
     UserService.prototype.verifyUser = function (verif_id) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]({ 'Content-Type': 'application/json' });
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({ headers: headers });
+<<<<<<< HEAD
 <<<<<<< HEAD
         return this.http.put(this._verifyUrl + verif_id, options)
             .map(function (response) { return response.json(); });
@@ -2460,6 +2599,8 @@ var UserService = (function () {
             .map(function (res) { return res.json(); });
     };
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
         console.log(this._verifyUrl + verif_id);
         return this.http.put(this._verifyUrl + verif_id, options)
             .map(function (response) { return response.json(); });
@@ -2492,6 +2633,9 @@ var UserService = (function () {
         this.user = null;
         localStorage.clear();
     };
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
     return UserService;
 }());
@@ -2506,7 +2650,10 @@ var _a;
 /***/ }),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ "../../../../../src/app/side-bar/side-bar.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2861,6 +3008,9 @@ var _a;
 
 /***/ }),
 
+<<<<<<< HEAD
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+=======
 >>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 /***/ "../../../../../src/environments/environment.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {

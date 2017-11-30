@@ -6,10 +6,8 @@ const jwt = require("jsonwebtoken");
 const config = require('../config/database');
 const User = require("../model/user");
 'use strict';
-const nodemailer = require('nodemailer');
 
 // router.post('/addnew',(req,res,next)=>{
-'use strict';
 const nodemailer = require('nodemailer');
 let transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -41,13 +39,6 @@ router.post('/register',(req,res)=>{
             nodemailer.createTestAccount((err, account) => {
                 
                     // create reusable transporter object using the default SMTP transport
-                    let transporter = nodemailer.createTransport({
-                        service: 'gmail',
-                        auth: {
-                            user: "mean.symptots@gmail.com", // generated ethereal user
-                            pass: "Symptots@2017"  // generated ethereal password
-                        }
-                    });
                 
                     // setup email data with unicode symbols
                     let mailOptions = {
@@ -164,7 +155,6 @@ router.put('/genToken/:id', function(req, res){
     }).lean();
     });
 
-<<<<<<< HEAD
 
 
 
@@ -265,6 +255,5 @@ router.get('/getemail',function(req,res){
 
 
 module.exports = router;
-=======
-module.exports = router;
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+
+

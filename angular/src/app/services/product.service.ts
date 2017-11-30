@@ -1,29 +1,21 @@
-<<<<<<< HEAD
+
 import { Injectable, } from '@angular/core';
 import { Http,Response,Headers,RequestOptions} from '@angular/http';
 import 'rxjs/add/operator/map';
 import { pro } from '../pro';
 
-@Injectable()
-export class ProductService {
-  // private _getUrl = '/api/polls';
-  private _postUrl = '/products/addnew';
-  private _putUrl = '/products/update/';
-  private _getUrl ='/products/products';
-  private _deleteUrl ='/products/updatedel';
-
-  url = "http://localhost:3000/";
-  constructor(private http: Http) { }
-=======
-import { Injectable } from '@angular/core';
-import { Http, Headers} from '@angular/http';
-import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ProductService {
-  url = "http://localhost:3000/";
+    // private _getUrl = '/api/polls';
+    private _postUrl = '/products/addnew';
+    private _putUrl = '/products/update/';
+    private _getUrl ='/products/products';
+    private _deleteUrl ='/products/updatedel';
+  
+    url = "http://localhost:3000/";
+
   constructor(private http:Http) { }
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 
   getAllClosedProduct(){
       let headers = new Headers();
@@ -31,7 +23,7 @@ export class ProductService {
       return this.http.get(this.url + 'products/closed_products',{headers:headers})
       .map(res =>res.json());
   }
-<<<<<<< HEAD
+
 
 
   addProduct(prod : any){
@@ -66,7 +58,6 @@ export class ProductService {
     .map(res =>res.json());
   }
  
-=======
   getAllrunningProduct(){
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');
@@ -79,5 +70,5 @@ export class ProductService {
       return this.http.get(this.url + 'products/upcoming_products',{headers:headers})
       .map(res =>res.json());
   }
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+
 }

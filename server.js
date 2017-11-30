@@ -6,10 +6,7 @@ const products = require("./routes/products");
 
 const bodyParser = require("body-parser");
 const passport = require('passport');
-<<<<<<< HEAD
-=======
 var session = require('express-session');
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 const cors = require('cors');
 const mongoose = require("mongoose");
 const config = require("./config/database");
@@ -34,24 +31,16 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
-<<<<<<< HEAD
-// app.use(passport.initialize());
-// app.use(passport.session());
-// require('./config/passport')(passport);
-=======
 app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: true, cookie: { secure: true } }));
 app.use(passport.initialize());
 app.use(passport.session());
 
 require('./config/passport')(passport);
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 
 app.use(express.static(path.join(__dirname,"public")));
 
 app.use('/user',users);
 app.use('/products',products);
-<<<<<<< HEAD
-=======
 app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email'}));
 app.get('/auth/facebook/callback',passport.authenticate('facebook'),
 function(req, res) {
@@ -64,7 +53,6 @@ app.get('/auth/google/callback', passport.authenticate('google'),
     return res.redirect("/socialmedia/" + req.user._id);
         });
 
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 app.use('*',(req, res)=>{
     res.sendFile(path.join(__dirname,'public/index.html'));
 });
@@ -76,10 +64,4 @@ app.get('/', (req,res)=>{
 app.listen(port,() => {
     console.log("Server Started On Port " + port);
 
-<<<<<<< HEAD
 });
-=======
-});
-
-
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24

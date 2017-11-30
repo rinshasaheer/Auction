@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
 const express = require("express");
 const router = express.Router();
 const config = require('../config/database');
 const Product = require("../model/product");
 const User = require("../model/user");
-<<<<<<< HEAD
+
 const pro = require('../model/product');
 
 
@@ -57,7 +54,6 @@ const pro = require('../model/product');
 });
 
 
-=======
 var async = require('async');
 
 router.get('/closed_products',(req,res)=>{
@@ -129,7 +125,7 @@ router.post('/addnew',(req,res,next)=>{
     });
 });
 
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+
 router.get('/products',(req,res,next)=>{
     Product.getAllProduct((err,poll)=>{
         if(err) throw err;
@@ -137,24 +133,22 @@ router.get('/products',(req,res,next)=>{
     })
     
 });
-<<<<<<< HEAD
+
 router.get('/closed_products',(req,res,next)=>{
     Product.getAllCloasedProduct((err,poll)=>{
         if(err) throw err;
         return res.json(poll);
-=======
+
 
 router.get('/upcoming_products',(req,res,next)=>{
     Product.getAllUpcomingProduct((err,product)=>{
         if(err) throw err;
         return res.json(product);
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+
     })
     
 });
 
-<<<<<<< HEAD
-=======
 // router.get('/closed_products',(req,res,next)=>{
 //     Product.getAllClosedProduct((err,products)=>{
 //         if(err) throw err;
@@ -169,7 +163,7 @@ router.get('/upcoming_products',(req,res,next)=>{
     
 // });
 
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+
 router.delete('/delete/:id',(req,res,next)=>{
     Product.deleteProduct(req.params.id,(err,user)=>{
         if(err) throw err;
@@ -188,7 +182,7 @@ router.get('/product/:id',(req,res,next)=>{
     })
 });
 
-<<<<<<< HEAD
+
 router.put('/update/:id',function(req,res){
 //    console.log(req);
    pro.findByIdAndUpdate(req.params.id,
@@ -222,38 +216,7 @@ router.put('/update/:id',function(req,res){
    )
 });
 
-router.put('/updatedel/:id',function(req,res){
-    //    console.log(req);
-       pro.findByIdAndUpdate(req.params.id,
-        {
-            $set : {name: req.body.name, desc : req.body.desc, bid_amount : req.body.bid_amount, min_bid_rate : req.body.min_bid_rate, start_date : req.body.start_date, end_date : req.body.end_date  }
-        },
-        {
-        new :true
-        },
-        function(err, updatedPro){
-            if(err){
-                res.send("error updating product");
-            }else{
-                res.json(updatedPro);
-            }
-        }
-    //     {
-    //         $inc:{"pollans.$.count": 1}
-    //     },{new: true},
-    //     function (err, updatedPoll) {
-    //         if(err){
-    //             console.log("Error " + err);
-    //         }else{
-    //             res.json(updatedPoll);
-    //         }
-    //     }
-    
-    //     );
-    
-    // });
-       )
-    });
+
 
 
 
@@ -282,20 +245,7 @@ router.put('/updatedel/:id',function(req,res){
                 res.json(updatedPro);
             }
         }
-    //     {
-    //         $inc:{"pollans.$.count": 1}
-    //     },{new: true},
-    //     function (err, updatedPoll) {
-    //         if(err){
-    //             console.log("Error " + err);
-    //         }else{
-    //             res.json(updatedPoll);
-    //         }
-    //     }
     
-    //     );
-    
-    // });
        )
     });
 
@@ -314,8 +264,7 @@ router.put('/updatedel/:id',function(req,res){
      
 // });
 
-module.exports = router;
-=======
+
 router.get('/completedproduct',(req,res,next)=>{
     Product.getAllClosedProduct((err,products)=>{
         if(err) throw err;
@@ -339,5 +288,5 @@ router.get('/highBid/:id',(req,res,next)=>{
         return res.json(products);
     })
 });
+
 module.exports = router;
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24

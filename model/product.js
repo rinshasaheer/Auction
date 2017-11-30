@@ -4,11 +4,7 @@ const config = require("../config/database");
 const ProductsSchema = mongoose.Schema({
         name: {
             type : String,
-<<<<<<< HEAD
-            required : true,
-=======
             require : true,
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
         },
         image: {
             type : String,
@@ -36,13 +32,12 @@ const ProductsSchema = mongoose.Schema({
             type : Date,
             default: Date.now
         },
-<<<<<<< HEAD
+
         status : {
             type : Boolean,
             default: true
         },
-=======
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+
         intrested_ids: [{
             user_id: String ,
             date_time : { 
@@ -73,38 +68,30 @@ const ProductsSchema = mongoose.Schema({
         closing_informed :{
             type: Boolean,
             default: false
-<<<<<<< HEAD
+
         }
        
 });
 
 const Product = module.exports = mongoose.model('Product', ProductsSchema,'products');
 
-module.exports.addProduct = function(product,callback){
-    // console.log(product);
-    var newProduct = new Product(product);
-    // console.log(newProduct);
-=======
-        },
-       test_id:String
-});
+
 
 const Product = module.exports = mongoose.model('Product', ProductsSchema);
 
 module.exports.addProduct = function(product,callback){
     console.log(product);
     var newProduct = new Product(product);
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
     newProduct.save(callback);
 }
 
 module.exports.getAllProduct = function(callback){
     Product.find({},callback);
 }
-<<<<<<< HEAD
+
 module.exports.getAllCloasedProduct = function(callback){
     Product.find({"end_date" : {"$lt" : Date()}},callback);
-=======
+}
 module.exports.getAllClosedProduct = function(callback){
     // console.log(new Date);
     // Product.find({"end_date" : {"$lt" : new Date()}},callback);
@@ -112,7 +99,7 @@ module.exports.getAllClosedProduct = function(callback){
 }
 module.exports.getAllUpcomingProduct = function(callback){
     Product.find({"start_date" : {"$gt" : Date()}},callback);
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+
 }
 
 module.exports.deleteProduct = function(id,callback){
@@ -120,13 +107,13 @@ module.exports.deleteProduct = function(id,callback){
     Product.remove(query,callback);
 }
 
-<<<<<<< HEAD
+
 // module.exports.getProductById = function(id,callback){
 //     Product.findOne({_id: id},callback);
 
 module.exports.getProductById = function(callback){
     Product.find({"status" : true},callback);
-=======
+}
 module.exports.getProductById = function(id,callback){
     Product.findOne({_id: id},callback);
 }
@@ -181,9 +168,9 @@ module.exports.getFinishedAuctionProduct = function(callback){
     //     {'subjects':{"$elemMatch":{'bid_status':'confirmed'}}}
     //     ]
     //     })
-}
 
+}
 module.exports.getHighestBid = function(id, callback){
     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
->>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+
 }
