@@ -12,6 +12,7 @@ export class ProductService {
     private _putUrl = '/products/update/';
     private _getUrl ='/products/products';
     private _deleteUrl ='/products/updatedel';
+    authToken = '';
   
     url = "http://localhost:3000/";
 
@@ -72,8 +73,14 @@ export class ProductService {
   }
   bidProduct(data){
     let headers = new Headers();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.put(this.url + 'products/bid_a_aproduct',{headers:headers})
+    return this.http.put(this.url + 'products/bid_a_product',data,{headers:headers})
     .map(res =>res.json());
+  }
+
+  loadToken(){
+    this.authToken = localStorage.getItem('id_token');
   }
 }

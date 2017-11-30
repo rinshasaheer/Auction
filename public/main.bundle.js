@@ -391,7 +391,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/card-running/card-running.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-xs-6 col-sm-6 col-md-4 col-lg-4\">\n    <div class=\"tg-ad tg-verifiedad\">\n        <figure>\n            <a href=\"javascript:void(0);\"><img src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\"></a>\n        </figure>\n        <div class=\"tg-adcontent\">\n            \n            <div class=\"tg-adtitle\">\n                <h3><a href=\"javascript:void(0);\">{{product.name}}</a></h3>\n            </div>\n            <div class=\"clearfix\"></div>\n            <div class=\"tg-desc\">\n                <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\n                    <read-more [text]=\"product.desc\" [maxLength]=\"80\"></read-more>\n                  </p>\n            </div>\n            \n            <div class=\"row text-center \">\n            <div class=\"col-xs-12 col-md-6\">\n                Last Bid Price\n                <p class=\"lead\"> {{product.lastBidprice | number:'1.2-2'}}</p>\n            </div>\n            <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\n               Ends In\n                <p class=\"lead\">\n                    <app-count-down-timer [inputDate]=\"product.end_date\"></app-count-down-timer>\n                </p>\n            </div>\n        </div>\n            <div class=\"row text-center \">\n\n            <div class=\"col-xs-12 col-md-12 margn form-group \" [ngClass]=\"{'has-error': isError}\">\n                    <div *ngIf=\"isError\" class=\"text-danger text-left\">\n                           {{errMsg}}\n                      </div>\n                <input [(ngModel)]=\"amount\" (keyup)=\"validateAmount()\"  class=\"form-control \" type=\"text\" placeholder=\"Minimum bid amount {{(product.lastBidprice  * 1 ) + product.min_bid_rate | number:'1.2-2'}}\">\n                \n            </div>\n           \n        </div>\n            \n  \n        </div>\n        <button (click)=\"bidbtnClicked()\" class=\"btn btn-primary tg-adprice\"> Bid Now</button>\n    </div>\n</div>"
+module.exports = "<div class=\"col-xs-6 col-sm-6 col-md-4 col-lg-4\">\n    <div class=\"tg-ad tg-verifiedad\">\n        <figure>\n            <a href=\"javascript:void(0);\"><img src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\"></a>\n        </figure>\n        <div class=\"tg-adcontent\">\n            \n            <div class=\"tg-adtitle\">\n                <h3><a href=\"javascript:void(0);\">{{product.name}}</a></h3>\n            </div>\n            <div class=\"clearfix\"></div>\n            <div class=\"tg-desc\">\n                <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\n                    <read-more [text]=\"product.desc\" [maxLength]=\"80\"></read-more>\n                  </p>\n            </div>\n            \n            <div class=\"row text-center \">\n            <div class=\"col-xs-12 col-md-6\">\n                Last Bid Price\n                <p class=\"lead\"> {{product.lastBidprice | number:'1.2-2'}}</p>\n            </div>\n            <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\n               Ends In\n                <p class=\"lead\">\n                    <app-count-down-timer [inputDate]=\"product.end_date\"></app-count-down-timer>\n                </p>\n            </div>\n        </div>\n            <div class=\"row text-center \">\n\n            <div class=\"col-xs-12 col-md-12 margn form-group \" [ngClass]=\"{'has-error': isError}\">\n                    <div *ngIf=\"isError\" class=\"text-danger text-left\">\n                           {{errMsg}}\n                      </div>\n                <input [disabled]=\"btnDisbled\" [(ngModel)]=\"amount\" (keyup)=\"validateAmount()\"  class=\"form-control \" type=\"text\" placeholder=\"Minimum bid amount {{(product.lastBidprice  * 1 ) + product.min_bid_rate | number:'1.2-2'}}\">\n                \n            </div>\n           \n        </div>\n            \n  \n        </div>\n        <button (click)=\"bidbtnClicked()\" class=\"btn btn-primary tg-adprice\"> Bid Now</button>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -418,27 +418,34 @@ var CardRunningComponent = (function () {
         this.productService = productService;
         this.isError = false;
         this.errMsg = '';
+        this.btnDisbled = false;
     }
     CardRunningComponent.prototype.ngOnInit = function () {
         console.log(this.product);
     };
     CardRunningComponent.prototype.bidbtnClicked = function () {
+        this.btnDisbled = true;
         this.validateAmount();
         console.log(this.product);
         console.log(this.amount);
+        if (!this.isError) {
+            var data = {
+                pid: this.product._id,
+                amount: Number(this.amount),
+            };
+            this.productService.bidProduct(data).subscribe(function (data) {
+                console.log(data);
+            });
+        }
+        else {
+            this.btnDisbled = false;
+        }
     };
     CardRunningComponent.prototype.validateAmount = function () {
         this.isError = false;
         if (Number(this.amount)) {
             console.log(this.product.min_bid_rate * 1 + this.product.lastBidprice * 1);
-            if (Number(this.amount) >= (this.product.min_bid_rate * 1 + this.product.lastBidprice * 1)) {
-                var data = {
-                    pid: this.product._id,
-                    amount: Number(this.amount),
-                };
-                this.productService.bidProduct(data);
-            }
-            else {
+            if (Number(this.amount) < (this.product.min_bid_rate * 1 + this.product.lastBidprice * 1)) {
                 this.isError = true;
                 this.errMsg = "You Can Bid Only From " + (this.product.min_bid_rate * 1 + this.product.lastBidprice * 1).toFixed(2);
             }
@@ -2352,6 +2359,7 @@ var ProductService = (function () {
         this._putUrl = '/products/update/';
         this._getUrl = '/products/products';
         this._deleteUrl = '/products/updatedel';
+        this.authToken = '';
         this.url = "http://localhost:3000/";
     }
     ProductService.prototype.getAllClosedProduct = function () {
@@ -2400,9 +2408,14 @@ var ProductService = (function () {
     };
     ProductService.prototype.bidProduct = function (data) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        this.loadToken();
+        headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.put(this.url + 'products/bid_a_aproduct', { headers: headers })
+        return this.http.put(this.url + 'products/bid_a_product', data, { headers: headers })
             .map(function (res) { return res.json(); });
+    };
+    ProductService.prototype.loadToken = function () {
+        this.authToken = localStorage.getItem('id_token');
     };
     return ProductService;
 }());

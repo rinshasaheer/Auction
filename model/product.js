@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const config = require("../config/database");
 
+var Schema = mongoose.Schema;
 const ProductsSchema = mongoose.Schema({
         name: {
             type : String,
@@ -46,7 +47,7 @@ const ProductsSchema = mongoose.Schema({
             } 
         }],
         bidders: [{
-            user_id: String ,
+            user_id: Schema.ObjectId ,
             amount: Number,
             date_time : { 
                 type : Date, 
