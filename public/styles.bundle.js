@@ -97,7 +97,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n.page-head{\r\n    text-align: center;\r\n    font-size: 27px;\r\n    color: #ABAAAA;\r\n    text-transform: uppercase;\r\n    font-weight: 700;\r\n}\r\n.mrgn-nav-top{\r\n    margin-top: 180px;\r\n}\r\n.auction-section{\r\n    margin-top: 115px;\r\n}\r\n.no-item{\r\n    min-height: 400px\r\n\r\n}\r\n.no-item h4{\r\n    text-align: center;\r\n    font-size: 25px;\r\n    color: rgb(99, 99, 99);\r\n    padding-top: 180px;\r\n}", ""]);
+exports.push([module.i, "\r\n.prev-img {\r\n    /* background-color: #dd3; */\r\n    border-radius: 5px;\r\n    margin-left:5px;\r\n    /* width: 500px; */\r\n}\r\n\r\n.prev-img .img-ul-image {\r\n    /* width: 1000px; */\r\n}\r\n\r\n.prev-img .img-ul-upload {\r\n    background-color: #000 !important;\r\n}\r\n\r\n.prev-img .img-ul-clear {\r\n    background-color:white !important;\r\n    color:black !important;\r\n}\r\n\r\n.prev-img .img-ul-drag-box-msg {\r\n    color:black !important;\r\n}\r\n\r\n.prev-img .img-ul-container {\r\n    /* background-color: none !important; */\r\n}\r\n.img-ul-image{\r\n  width: 150px !important;\r\n  height : 150px !important;}\r\n\r\n.page-head{\r\n    text-align: center;\r\n    font-size: 27px;\r\n    color: #ABAAAA;\r\n    text-transform: uppercase;\r\n    font-weight: 700;\r\n}\r\n.mrgn-nav-top{\r\n    margin-top: 180px;\r\n}\r\n.auction-section{\r\n    margin-top: 115px;\r\n}\r\n.no-item{\r\n    min-height: 400px\r\n\r\n}\r\n.no-item h4{\r\n    text-align: center;\r\n    font-size: 25px;\r\n    color: rgb(99, 99, 99);\r\n    padding-top: 180px;\r\n\r\n}", ""]);
 
 // exports
 

@@ -12,7 +12,7 @@ export class UserService {
   private _verifyUrl = "/user/verify/";
   private _genTokenUrl = "/user/genToken/";
   private _authUrl = "/user/authenticate";
-  
+  url = "http://localhost:3000/";
   constructor(private http:Http) { }
 
   registerUser(user){
@@ -27,9 +27,19 @@ export class UserService {
     let headers = new Headers({ 'Content-Type' : 'application/json'});
     let options = new RequestOptions({ headers : headers});
     console.log(this._verifyUrl+verif_id);
-    return this.http.put(this._verifyUrl + verif_id,options)
-      .map((response : Response) => response.json());
+   return this.http.put(this._verifyUrl + verif_id,options)
+   .map((response : Response) => response.json());
   }
+
+  sendmail(){
+// console.log("hi");
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.get(this.url + 'user/getemail',{headers:headers})
+    .map(res =>res.json());
+     
+}
+
 
   generateToken(id){
     let headers = new Headers({ 'Content-Type' : 'application/json'});

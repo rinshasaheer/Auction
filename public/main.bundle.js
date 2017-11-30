@@ -1893,12 +1893,43 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ProductService = (function () {
     function ProductService(http) {
         this.http = http;
+        // private _getUrl = '/api/polls';
+        this._postUrl = '/products/addnew';
+        this._putUrl = '/products/update/';
+        this._getUrl = '/products/products';
+        this._deleteUrl = '/products/updatedel';
         this.url = "http://localhost:3000/";
     }
     ProductService.prototype.getAllClosedProduct = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.get(this.url + 'products/closed_products', { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    ProductService.prototype.addProduct = function (prod) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]({ 'Content-Type': 'application/json' });
+        var Options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({ headers: headers });
+        return this.http.post(this._postUrl, JSON.stringify(prod), Options)
+            .map(function (res) { return res.json(); });
+    };
+    ProductService.prototype.getProducts = function () {
+        return this.http.get(this._getUrl)
+            .map(function (response) { return response.json(); });
+        // let headers = new Headers();
+        // headers.append('Content-Type', 'application/json');
+        // return this.http.get(this.url + 'products/products',{headers:headers})
+        // .map(res =>res.json());
+    };
+    ProductService.prototype.updateProduct = function (pro) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]({ 'Content-Type': 'application/json' });
+        var Options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({ headers: headers });
+        return this.http.put(this._putUrl + pro._id, JSON.stringify(pro), Options)
+            .map(function (res) { return res.json(); });
+    };
+    ProductService.prototype.deleteProduct = function (pro) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]({ 'Content-Type': 'application/json' });
+        var Options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({ headers: headers });
+        return this.http.put(this._deleteUrl + pro._id, JSON.stringify(pro), Options)
             .map(function (res) { return res.json(); });
     };
     ProductService.prototype.getAllrunningProduct = function () {
@@ -1955,6 +1986,7 @@ var UserService = (function () {
         this._verifyUrl = "/user/verify/";
         this._genTokenUrl = "/user/genToken/";
         this._authUrl = "/user/authenticate";
+        this.url = "http://localhost:3000/";
     }
     UserService.prototype.registerUser = function (user) {
         // console.log(JSON.stringify(user));
@@ -1969,6 +2001,13 @@ var UserService = (function () {
         console.log(this._verifyUrl + verif_id);
         return this.http.put(this._verifyUrl + verif_id, options)
             .map(function (response) { return response.json(); });
+    };
+    UserService.prototype.sendmail = function () {
+        // console.log("hi");
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get(this.url + 'user/getemail', { headers: headers })
+            .map(function (res) { return res.json(); });
     };
     UserService.prototype.generateToken = function (id) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]({ 'Content-Type': 'application/json' });

@@ -1,0 +1,70 @@
+
+    <div class="col-md-9 shadow">
+      <h3>Edit  a Product</h3>
+      <br>
+      <form class="well" >
+          <div class="form-group" >
+              <label > Name *</label>
+              <input type="text"  name="name"  [(ngModel)]="pro.name" class="form-control" required  />
+          </div>
+          <div class="form-group" >
+              <label > Bid Amount *</label>
+              <input type="text"  name="bid_amount" [(ngModel)]="pro.bid_amount"  class="form-control" required  />
+          </div>
+       
+
+          <div class="form-group" >
+              <label > Minimum Bid Rate</label>
+              <input type="text"  name="min_bid_rate" [(ngModel)]="pro.min_bid_rate" class="form-control" />
+          </div>
+
+           <div class="form-group" >
+                  <label > Bid Start time *</label>
+                  <datetime name="start_date" [(ngModel)]="pro.start_date"></datetime>
+              </div>
+              <div class="form-group" >
+                      <label > Bid End time *</label>
+                      <datetime name = "end_date"  [(ngModel)]="pro.end_date"></datetime>
+                  </div>
+
+          
+
+           <!-- <image-upload name="image"  [(ngModel)]="newproduct.image"
+          [style]="'customStyle'" 
+          [class]="'prev-img'" 
+          [max]="100"
+          
+          [headers]="{Authorization: 'MyToken'}"
+          [buttonCaption]="'Select Images!'"
+          [dropBoxMessage]="'Drop Product images here!'"
+          [extensions]="['jpg','png','gif']"
+       
+          (removed)="onRemoved($event)"
+          (uploadFinished)="onUploadFinished($event)"
+          (uploadStateChanged)="onUploadStateChanged($event)"></image-upload>  -->
+          <!-- <div>
+              <label > Image</label>
+              <input type="file"  name="pollqtn"   required />
+          </div> -->
+         
+         
+          <!-- <img class="mythumbnail" ng-src="{{ thumbnail.dataUrl || default }}"> -->
+          <!-- <img ng-src= "{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}"> -->
+          
+          <!-- <label class="btn btn-success colorbtn"> Browse</label> -->
+          
+        
+
+          <div class="form-group" >
+              <label > Description</label>
+              <br>
+              <textarea rows="4" cols="70" name="desc" [(ngModel)]="pro.desc" ></textarea>
+          </div>
+         
+          <input type="submit" (click)="updateProduct()" class="btn btn-info blakbtn" value="Udate"  >
+          <input type="submit" (click)="deleteProduct()" class="btn btn-info blakbtn" value="Delete"  >
+         
+      </form>
+
+    </div>
+   

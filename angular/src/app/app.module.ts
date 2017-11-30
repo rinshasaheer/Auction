@@ -4,6 +4,7 @@ import 'reflect-metadata';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import { ProductComponent } from './product/product.component';
 import { HttpModule } from '@angular/http';
 // import { DataTablesModule } from 'angular-datatables';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
@@ -30,7 +31,6 @@ import { UserService } from './services/user.service';
 
 import { EqualValidator } from './equal-validator.directive';
 import { LoginComponent } from './login/login.component';
-import { RegistrationComponent } from './registration/registration.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
 import { ClosedAuctionBackComponent } from './closed-auction-back/closed-auction-back.component';
 import { UpcomingAuctionBackComponent } from './upcoming-auction-back/upcoming-auction-back.component';
@@ -46,7 +46,21 @@ import { RunningauctionComponent } from './runningauction/runningauction.compone
 import { CardRunningComponent } from './card-running/card-running.component';
 import { WinnerconfirmComponent } from './winnerconfirm/winnerconfirm.component'
 
+import { RegistrationComponent } from './registration/registration.component';
+import { ImageUploadModule } from "angular2-image-upload";
+import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+//  import { DataTablesModule } from 'angular-datatables';
+import * as $ from 'jquery';
+import { ProductListComponent } from './product-list/product-list.component';
+import { FilterPipe } from './filter.pipe';
+import { ManageProductComponent } from './manage-product/manage-product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+// import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 const appRoutes: Routes = [
+  {path:'', redirectTo:'/login', pathMatch:'full'},
+  {path:'registration', component:RegistrationComponent},
+   {path:'product', component:ProductComponent},
+  {path:'manage-product', component:ManageProductComponent},
   {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
@@ -68,6 +82,27 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    ProductComponent,
+    RegistrationComponent,
+    ProductListComponent,
+    FilterPipe,
+    ManageProductComponent,
+    ProductDetailComponent
+  ],
+  imports: [
+    BrowserModule,
+    // DataTablesModule,
+    FormsModule,
+    ReactiveFormsModule,
+    Ng2PageScrollModule,
+    HttpModule,
+    RouterModule.forRoot(appRoutes),
+    // DataTablesModule,
+    // ImageUploadModule,
+    // NKDatetimeModule,
+    NKDatetimeModule,
+    //  DataTablesModule
+    // Ng2DatetimePickerModule
     LoginComponent,
     RegistrationComponent,
     NavigationComponent,
@@ -82,7 +117,6 @@ const appRoutes: Routes = [
     SideBarComponent,
     TopBarComponent,
     FooterComponent,
-    DashboardComponent,
     AllUsersComponent,
     DisabledUsersComponent,
     DeletedUsersComponent,
@@ -103,16 +137,6 @@ const appRoutes: Routes = [
     UserService,
     AuthGuard,
     ProductService
-  ],
-  imports: [
-    BrowserModule,
-    // DataTablesModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes),
-    Ng2PageScrollModule,
-    HttpModule,
-    RouterModule.forRoot(appRoutes)
   ],
  
   bootstrap: [AppComponent]
