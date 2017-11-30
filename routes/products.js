@@ -1,0 +1,343 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+const express = require("express");
+const router = express.Router();
+const config = require('../config/database');
+const Product = require("../model/product");
+const User = require("../model/user");
+<<<<<<< HEAD
+const pro = require('../model/product');
+
+
+//     prodObj = {
+//         name:  req.body.name,
+//        // image: req.body.image,
+//         desc: req.body.desc,
+//         bid_amount: req.body.bid_amount,
+//         min_bid_rate: req.body.min_bid_rate,
+//         //start_date : req.body.start_date,
+//         // end_date : req.body.end_date,
+//     };
+//     // console.log(req.body);
+//     Product.addProduct(prodObj,(err, user)=>{
+//          console.log(user);
+//         if(err){
+//             res.json({success: false, msg : "Failed, went somthing wrong "});
+//         }else{
+//             res.json({success: true, msg : "Poll Added Seccessfully, Redirecting..."});
+//         }
+//     });
+// });
+
+
+
+
+    router.post('/addnew',function(req,res){
+    console.log("Insert a Product");
+    var newPro = new pro();
+    newPro.name = req.body.name;
+    newPro.desc = req.body.desc;
+    newPro.bid_amount = req.body.bid_amount;
+    newPro.min_bid_rate = req.body.min_bid_rate;
+    newPro.start_date = req.body.start_date;
+    newPro.end_date = req.body.end_date;
+    // newPoll.answers = req.body.answers;
+    newPro.save(function(err,insertedPro){
+        if(err){
+            console.log("Error " + err);
+        }else{
+         
+
+            res.json(insertedPro);
+        }
+    })
+
+});
+
+
+=======
+var async = require('async');
+
+router.get('/closed_products',(req,res)=>{
+
+    Product.aggregate([
+          {
+            $match:{
+                "end_date" : {"$lt" : new Date()},
+            }
+         },
+        {
+            $lookup: {
+                from: "users",
+                localField: "bidders.user_id",
+                foreignField: "_id",
+                as: "user_details"
+            }
+        },
+
+        ]).exec(function(err, results){
+      //  console.log(results);
+      return res.json(results);
+        // res.json(results);
+        // var fs = require('fs');
+        // fs.writeFile('test.json', JSON.stringify(results, null, 4));
+     })
+});
+router.get('/runnig_products',(req,res)=>{
+
+    Product.aggregate([
+          {
+            $match:{
+                "end_date" : {"$gt" : new Date()},
+                "start_date" : {"$lt" : new Date()},
+            }
+         },
+        {
+            $lookup: {
+                from: "users",
+                localField: "bidders.user_id",
+                foreignField: "_id",
+                as: "user_details"
+            }
+        },
+
+        ]).exec(function(err, results){
+      return res.json(results);
+     })
+});
+ 
+router.post('/addnew',(req,res,next)=>{
+
+
+    prodObj = {
+        name:  req.body.name,
+        image: req.body.image,
+        desc: req.body.desc,
+        bid_amount: req.body.amount,
+        min_bid_rate: req.body.min_bid_rate,
+        start_date : req.body.start_date,
+        end_date : req.body.end_date,
+    };
+    Product.addProduct(prodObj,(err, user)=>{
+        if(err){
+            res.json({success: false, msg : "Failed, went somthing wrong "});
+        }else{
+            res.json({success: true, msg : "Poll Added Seccessfully, Redirecting..."});
+        }
+    });
+});
+
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+router.get('/products',(req,res,next)=>{
+    Product.getAllProduct((err,poll)=>{
+        if(err) throw err;
+        return res.json(poll);
+    })
+    
+});
+<<<<<<< HEAD
+router.get('/closed_products',(req,res,next)=>{
+    Product.getAllCloasedProduct((err,poll)=>{
+        if(err) throw err;
+        return res.json(poll);
+=======
+
+router.get('/upcoming_products',(req,res,next)=>{
+    Product.getAllUpcomingProduct((err,product)=>{
+        if(err) throw err;
+        return res.json(product);
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+    })
+    
+});
+
+<<<<<<< HEAD
+=======
+// router.get('/closed_products',(req,res,next)=>{
+//     Product.getAllClosedProduct((err,products)=>{
+//         if(err) throw err;
+
+//         products.forEach(function(product) {
+//             product.bidders.forEach(function(bidder) {
+//                 adTimes.push(friend.adTime);
+//             });
+//         });
+//         return res.json(products);
+//     })
+    
+// });
+
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+router.delete('/delete/:id',(req,res,next)=>{
+    Product.deleteProduct(req.params.id,(err,user)=>{
+        if(err) throw err;
+        if(!user){
+            return res.json({success:false, msg: 'Faild to delete user'});
+        }else{
+            return res.json({success:true, msg: 'deleted successfully'});
+        }
+    })
+});
+
+router.get('/product/:id',(req,res,next)=>{
+    Product.getProductById(req.params.id,(err,poll)=>{
+        if(err) throw err;
+        return res.json(poll);
+    })
+});
+
+<<<<<<< HEAD
+router.put('/update/:id',function(req,res){
+//    console.log(req);
+   pro.findByIdAndUpdate(req.params.id,
+    {
+        $set : {name: req.body.name, desc : req.body.desc, bid_amount : req.body.bid_amount, min_bid_rate : req.body.min_bid_rate, start_date : req.body.start_date, end_date : req.body.end_date  }
+    },
+    {
+    new :true
+    },
+    function(err, updatedPro){
+        if(err){
+            res.send("error updating product");
+        }else{
+            res.json(updatedPro);
+        }
+    }
+//     {
+//         $inc:{"pollans.$.count": 1}
+//     },{new: true},
+//     function (err, updatedPoll) {
+//         if(err){
+//             console.log("Error " + err);
+//         }else{
+//             res.json(updatedPoll);
+//         }
+//     }
+
+//     );
+
+// });
+   )
+});
+
+router.put('/updatedel/:id',function(req,res){
+    //    console.log(req);
+       pro.findByIdAndUpdate(req.params.id,
+        {
+            $set : {name: req.body.name, desc : req.body.desc, bid_amount : req.body.bid_amount, min_bid_rate : req.body.min_bid_rate, start_date : req.body.start_date, end_date : req.body.end_date  }
+        },
+        {
+        new :true
+        },
+        function(err, updatedPro){
+            if(err){
+                res.send("error updating product");
+            }else{
+                res.json(updatedPro);
+            }
+        }
+    //     {
+    //         $inc:{"pollans.$.count": 1}
+    //     },{new: true},
+    //     function (err, updatedPoll) {
+    //         if(err){
+    //             console.log("Error " + err);
+    //         }else{
+    //             res.json(updatedPoll);
+    //         }
+    //     }
+    
+    //     );
+    
+    // });
+       )
+    });
+
+
+
+    // router.get('/products1',(req,res,next)=>{
+    //     Product.getProduct1((err,pro)=>{
+    //         if(err) throw err;
+    //         console.log(pro);
+    //         return res.json(pro);
+    //     })
+        
+    // });
+
+router.put('/updatedel/:id',function(req,res){
+    //    console.log(req);
+       pro.findByIdAndUpdate(req.params.id,
+        {
+            $set : {status : false  }
+        },
+        {
+        new :true
+        },
+        function(err, updatedPro){
+            if(err){
+                res.send("error deleting product");
+            }else{
+                res.json(updatedPro);
+            }
+        }
+    //     {
+    //         $inc:{"pollans.$.count": 1}
+    //     },{new: true},
+    //     function (err, updatedPoll) {
+    //         if(err){
+    //             console.log("Error " + err);
+    //         }else{
+    //             res.json(updatedPoll);
+    //         }
+    //     }
+    
+    //     );
+    
+    // });
+       )
+    });
+
+
+
+
+// router.delete('/deletep/:id',(req,res,next)=>{
+//     console.log("deleting a product");
+//     pro.findByIdAndRemove(req.params.id, function(err, deletedPro){
+//         if(err){
+//             res.send("error deleting product");
+//         }else{
+//             res.json(deletedPro)
+//         }
+//     });
+     
+// });
+
+module.exports = router;
+=======
+router.get('/completedproduct',(req,res,next)=>{
+    Product.getAllClosedProduct((err,products)=>{
+        if(err) throw err;
+        // console.log(products[0].start_date);
+        return res.json(products);
+    })
+});
+
+router.get('/upcomingproduct',(req,res,next)=>{
+    // console.log("s");
+    Product.getUpcomingAuctionProduct((err,products)=>{
+        if(err) throw err;
+        return res.json(products);
+    })
+});
+
+router.get('/highBid/:id',(req,res,next)=>{
+    Product.getHighestBid(req.params.id,(err,products)=>{
+        if(err) throw err;
+        console.log(products);
+        return res.json(products);
+    })
+});
+module.exports = router;
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24

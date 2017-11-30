@@ -1,0 +1,111 @@
+<div class="container" style="padding-top:20px;">
+    <div *ngIf="products?.length > 0" id="products" class="row list-group">
+        <div *ngFor="let product of products"  class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                
+                <img class="group list-group-image" src="assets/uploads/{{product.image||'default.png'}}" alt="{{product.name}}" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading text-center">
+                        {{product.name}}</h4>
+                        <hr>
+                        <p class="group inner list-group-item-text" style="min-height: 50px;">
+                        <read-more [text]="product.desc" [maxLength]="100"></read-more>
+                      </p>
+                    <hr>
+                    <div class="row text-center">
+                        <div class="col-xs-12 col-md-6">
+                            Bid Start Price
+                            <p class="lead"> {{product.bid_amount | number:'1.2-2'}}</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                          Ends In
+                            <p class="lead">
+                              <!-- {{product.end_date | date: 'dd-mm-yyyy h:mm:ss'}} -->
+                              <app-count-down-timer [inputDate]="product.end_date"></app-count-down-timer>
+                              <!-- <app-count-down-timer inputDate="product.end_date | date: 'MMMM dd, yyyy h:mm:ss'"></app-count-down-timer> -->
+
+                             
+                              
+                              <!-- <app-count-down-timer inputDate="product.end_date"></app-count-down-timer> -->
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row margn" >
+                        
+                        <div class="col-xs-12 col-md-12 text-center">
+                           <a href="#" (click)="updateInvolved(product)" data-target="#myModal" data-toggle="modal" > Users Involved - {{product.bidders.length}}</a>
+                           
+                        </div>
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                          
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title">User Involved - {{involvedUsers.length}}</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <table class="table">
+                                        <thead class="thead-inverse">
+                                    <tr>
+                                      <th>Slno</th>
+                                      <th>Name</th>
+                                      <th>Bid Amount</th>
+                                      <th>Time</th>
+                                      <th>Status</th>
+                                    
+                                    </tr>
+                                  </thead>
+                                  <tbody *ngIf="involvedUsers.length ==0">
+                                      <tr >
+                                            <td colspan="4" class="text-center">No User Involved</td>
+                                      </tr>
+                                  </tbody>
+                                  <tbody *ngIf="involvedUsers.length > 0" >
+                                
+                                      <tr  *ngFor="let usr of involvedUsers;let i = index" >
+                                            <td >{{i+1}}</td>
+                                            <td >{{product.user_details[i].name}}</td>
+                                            <td >{{usr.amount | number:'1.2-2'}}</td>
+                                            <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>
+                                            <td >{{usr.bid_status}}</td>
+                                      </tr>
+                                  </tbody>
+                                  </table>
+                                
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                          
+                            </div>
+                          </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        
+                        <div class="col-xs-12 col-md-12">
+                            <div *ngIf="product.bidders.length > 0" class="alert alert-success text-center margn">
+                                <strong>Last Bid Amount - {{product.lastBidprice | number:'1.2-2'}}</strong>
+                                 <br>
+                                 {{product.lastBiduser}} 
+                                 <br> {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}
+                      
+                        </div>
+                        <div *ngIf="product.bidders.length == 0" class="alert alert-danger text-center ">
+                           No bidder Found
+                          </div>
+               
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+</div>
+<div *ngIf="products?.length == 0" class="row list-group">
+    <h3 class="text-center"> No Product Found</h3>
+</div>
+</div>

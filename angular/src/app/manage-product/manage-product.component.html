@@ -1,0 +1,7 @@
+<product-detail (updateProEvent)="onUpdateProEvent($event)"   (deleteProEvent)="onDeleteProEvent($event)"     *ngIf="selectedPro" [pro]="selectedPro"></product-detail>
+
+
+<br>
+<br>
+
+<product-list  (SelectPro)="onSelectPro($event)" [pros]="pros" ></product-list>

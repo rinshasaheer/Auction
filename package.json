@@ -1,0 +1,49 @@
+{
+  "name": "auction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mrjys",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^3.3.7",
+    "bootstrap-datepicker": "^1.7.1",
+    "bootstrap-timepicker": "^0.5.2",
+    "cors": "^2.8.4",
+<<<<<<< HEAD
+    "datepicker": "0.0.0",
+    "express": "^4.16.2",
+    "jquery": "^3.2.1",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.13.4",
+    "ng2-datetime": "^1.4.0",
+=======
+    "datatables.net": "^1.10.16",
+    "datatables.net-dt": "^1.10.16",
+    "express": "^4.16.2",
+    "jquery": "^3.2.1",
+    "mongoose": "^4.13.4",
+    "ng2-page-scroll": "^4.0.0-beta.12"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.5.4",
+    "@types/datatables.net": "^1.10.7",
+    "@types/jquery": "^3.2.16",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.13.4",
+>>>>>>> 97571871f429a69376c69a38fcd9bca2650b3b24
+    "nodemailer": "^4.4.0",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth": "^1.0.0",
+    "passport-jwt": "^3.0.1",
+    "random-number": "0.0.9"
+  }
+}

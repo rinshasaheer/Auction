@@ -1,0 +1,127 @@
+
+<br>
+<div class="wrapper">
+  <br>
+  <form class="form-horizontal" role="form"  #f="ngForm" (ngSubmit)="f.form.valid && onRegisterSubmit();" novalidate>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !name.valid }">
+        <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+        <!-- <label for="exampleInputEmail1">Name</label> -->
+          <input type="text" class="form-control" placeholder="Name" required [(ngModel)]="newUser.name" name="name" #name="ngModel">
+          <div *ngIf="f.submitted && !name.valid" class="help-block">! Name is required</div>
+        </div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+      <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+      <!-- <label >User Name</label> -->
+        <input type="text" class="form-control" placeholder="Email" required [(ngModel)]="newUser.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" name="email" #email="ngModel">
+        <div *ngIf="f.submitted && email.invalid">
+            <!-- <div *ngIf="!email.valid && newUser.email=='' " class="help-block">Email is required</div> -->
+          <div *ngIf="email.errors.pattern" class="help-block">! Email id is not valid</div>
+          <div *ngIf="email.errors.required" class="help-block">! Email id is required</div>
+        </div> 
+      </div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !phone.valid }">
+      <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+      <!-- <label >Phone Number</label> --> 
+        <input type="text" class="form-control" placeholder="Phone Number" minlength="10" maxlength="10" pattern="^\d{9}|^\d{3}-\d{3}-\d{3}|^\d{3}\s\d{3}\s\d{3}" required [(ngModel)]="newUser.phone" name="phone" #phone="ngModel">
+        <div *ngIf="f.submitted && phone.invalid">
+          <div *ngIf="phone.errors.minlength || phone.errors.maxlength" class="help-block">! Phone Number should be 10 digits</div>
+          <div *ngIf="phone.errors.required" class="help-block">! Phone Number is required</div>
+          <div *ngIf="phone.errors.pattern" class="help-block">! Valid Phone Number is required</div>
+        </div> 
+      </div>
+     </div> 
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }"> 
+      
+      <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+        <input type="password" class="form-control" id="password" placeholder="Password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$" required validateEqual="confirmPassword" reverse="true" [(ngModel)]="newUser.password" name="password" #password="ngModel"> 
+        <div *ngIf="f.submitted && password.invalid">
+            <div *ngIf="password.errors.required" class="help-block">! Password is required</div>
+            <div *ngIf="password.errors.pattern" class="help-block">! Password contain atleast 6 characters and should contain one number,one character and one special character</div>
+        </div> 
+        </div>
+    </div> 
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !confirmPassword.valid }">
+     
+      <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+        <input type="password" class="form-control" id="confirmPassword" required validateEqual="password" placeholder="Confirm Password" required validateEqual="password" reverse="false" [(ngModel)]="User.confirmPassword" name="confirmPassword" #confirmPassword="ngModel"> 
+        <div *ngIf="!confirmPassword.valid || (!confirmPassword.pristine && f.submitted)" class="help-block">! Password not Match</div>   
+        
+        </div>
+    </div> 
+
+
+    <div class="form-group">
+      <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+        <button type="submit" class="btn btn-default">Sign up</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+          <div class="checkbox">
+            <label>
+              By creating an account, you agree to Auction's<a href="#myModal" data-toggle="modal" data-target="#myModal">
+            Terms and Conditions
+            </a>
+          </label>
+          </div>
+        </div>
+      </div>
+    
+    <div class="form-group">
+        <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+          
+            <label>Already have an account?  <a [routerLink]="['/login']">
+            Sign In
+            </a>
+          </label>
+          
+        </div>
+    </div>
+
+</form>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"> 
+            Terms and Conditions</h4>
+        </div>
+        <div class="modal-body">
+          <h4>Conditions of Use</h4>
+          
+          <p>Welcome to Auction. Auction Services LLC and/or its affiliates ("Auction") provide website features and other products and services to you when you visit or bid at Auction.com, use Auction products or services, use Auction applications for mobile, or use software provided by Auction in connection with any of the foregoing (collectively, "Auction Services"). Auction provides the Auction Services subject to the following conditions.
+              <br>
+              <b>By using Auction Services, you agree to these conditions. Please read them carefully.</b>
+              <br>
+             When you using Auction, you also will be subject to the guidelines, terms and agreements applicable to that Auction Service ("Service Terms"). If these Conditions of Use are inconsistent with the Service Terms, those Service Terms will control.
+              <br>
+             <b> ELECTRONIC COMMUNICATIONS</b>
+              <br>
+              When you use Auction Services, or send e-mails, text messages, and other communications from your desktop or mobile device to us, you may be communicating with us electronically. You consent to receive communications from us electronically, such as e-mails, texts, mobile push notices, or notices and messages on this site or through the other Auction Services, such as our Message Center, and you can retain copies of these communications for your records. You agree that all agreements, notices, disclosures, and other communications that we provide to you electronically satisfy any legal requirement that such communications be in writing.
+              <br>
+              <b>COPYRIGHT</b>
+              <br>
+              All content included in or made available through any Auction Service, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software is the property of Auction or its content suppliers and protected by United States and international copyright laws. The compilation of all content included in or made available through any Auction Service is the exclusive property of Auction and protected by U.S. and international copyright laws.
+              <br>
+              <b>LICENSE AND ACCESS</b>
+              <br>
+              Subject to your compliance with these Conditions of Use and any Service Terms, and your payment of any applicable fees, Auction or its content providers grant you a limited, non-exclusive, non-transferable, non-sublicensable license to access and make personal and non-commercial use of the Auction Services. This license does not include any resale or commercial use of any Auction Service, or its contents; any collection and use of any product listings, descriptions, or prices; any derivative use of any Auction Service or its contents; any downloading, copying, or other use of account information for the benefit of any third party; or any use of data mining, robots, or similar data gathering and extraction tools. All rights not expressly granted to you in these Conditions of Use or any Service Terms are reserved and retained by Auction or its licensors, suppliers, publishers, rightsholders, or other content providers. No Auction Service, nor any part of any Auction Service, may be reproduced, duplicated, copied, sold, resold, visited, or otherwise exploited for any commercial purpose without express written consent of Auction. You may not frame or utilize framing techniques to enclose any trademark, logo, or other proprietary information (including images, text, page layout, or form) of Auction without express written consent. You may not use any meta tags or any other "hidden text" utilizing Auction's name or trademarks without the express written consent of Auction. You may not misuse the Auction Services. You may use the Auction Services only as permitted by law. The licenses granted by Auction terminate if you do not comply with these Conditions of Use or any Service Terms.
+              </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

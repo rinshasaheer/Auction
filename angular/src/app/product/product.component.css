@@ -1,0 +1,26 @@
+.shadow{
+
+     margin-left: 100px;
+   
+}
+.blakbtn{
+    background-color: black;
+    width:90px;
+}
+.blakbtn:hover{
+    background-color: white;
+    color:black;
+}
+.colorbtn{
+    background-color: black;
+    width:200px;
+}
+.colorbtn:hover{
+    background-color: white;
+    color:black;
+    
+}
+
+
+
+ 
