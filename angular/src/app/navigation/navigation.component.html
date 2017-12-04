@@ -42,7 +42,7 @@
             
            
             <ul class="nav navbar-nav navbar-right">
-                <li class="active" ><a [routerLink]="['/home']" >Home <span class="sr-only">(current)</span></a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a  [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a></li>
                 <!-- <li class="dropdown" >
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manage <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -53,16 +53,20 @@
                     
                   </ul>
                 </li> -->
-              <li ><a pageScroll href="#c-auction">Running Auctions</a></li>
-              <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/registration']">Registration</a></li> -->
-              <li ><a pageScroll [pageScrollOffset]="180" href="#f-auction">Closed Auctions</a></li>
-              <!-- <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/register']">Register</a></li> -->
-              <li ><a  pageScroll [pageScrollOffset]="180" href="#u-auction">Upcoming Auctions</a></li>
+                
+                    <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/runningauction']" >Running Auctions</a></li>
+                    <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/registration']">Registration</a></li> -->
+                    <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/finishedauction']" >Closed Auctions</a></li>
+                    <!-- <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/register']">Register</a></li> -->
+                    <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/upcomingauction']" >Upcoming Auctions</a></li>
+                
+                
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </div>
     </nav>
   
+    
 </div>
 </header>

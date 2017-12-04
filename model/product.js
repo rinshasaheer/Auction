@@ -157,7 +157,7 @@ module.exports.getFinishedAuctionProduct = function(callback){
         
     // ];
     // Product.aggregate(pipeline,callback);
-    Product.find({"end_date" : {"$gt" : new Date()}},callback);
+    Product.find({"end_date" : {"$lt" : new Date()}},callback);
     // Product.find({is_bid_completed: true},callback);
     // Product.find({}, {$pull:{"bidders.bid_status":  "rejected"}},callback);
     // Product.aggregate({ $group: { _id: null, "bidders.bid_status": { $max: '$balance' }}},
@@ -171,5 +171,33 @@ module.exports.getFinishedAuctionProduct = function(callback){
 }
 module.exports.getHighestBid = function(id, callback){
     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
+<<<<<<< HEAD
+}
 
+module.exports.getMyAuctionProduct = function(id, callback){
+    console.log("fhg");
+//     Product.aggregate([
+//    {
+//     $project: {
+//         bidders: {
+//           $filter: {
+//              input: "$bidders",
+//              as: "bidders",
+//              cond: { 'userid':id }
+//           }
+//        }
+//     }
+//  }
+// ], callback)
+    // Product.find({"bidders.userid" : id}, {bidders: {$elemMatch: {userid: id}}}, callback);
+    Product.find({
+        "bidders.userid" : id
+        }, {bidders:{$slice: 1}}, callback);
+}
+
+module.exports.getHighestBid = function(id, callback){
+    Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
+=======
+
+>>>>>>> 80e4e6629249816d599d321923b29db7339bc871
 }

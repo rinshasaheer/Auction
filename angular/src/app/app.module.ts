@@ -24,6 +24,7 @@ import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import { UpcomingauctionsComponent } from './upcomingauctions/upcomingauctions.component';
 // import { ImageUploadModule } from "angular2-image-upload";
 
+
 import { ProductService } from './services/product.service';
 
 import {AuthGuard} from './guards/auth.guard' ;
@@ -39,7 +40,7 @@ import { SocialmediaComponent } from './socialmedia/socialmedia.component';
 import { ReadMoreComponent } from './read-more/read-more.component';
 import { CountDownTimerComponent } from './count-down-timer/count-down-timer.component';
 
-import {ProductServiceService} from './product-service.service';
+import {ProductServiceService} from './services/product-service.service';
 import { MyauctionsComponent } from './myauctions/myauctions.component';
 import { CapitalizePipe } from './capitalize.pipe';
 import { RunningauctionComponent } from './runningauction/runningauction.component';
@@ -67,6 +68,18 @@ const appRoutes: Routes = [
   {path:'email-verification/:id', component:EmailVerificationComponent},
   {path:'login', component:LoginComponent},  
   {path:'socialmedia/:id', component:SocialmediaComponent},
+
+  {path:'Dashboard', component: DashboardComponent},
+  {path:'AllUsers', component: AllUsersComponent},
+  {path:'DeletedUser', component: DeletedUsersComponent},
+
+  {path:'upcomingauction', component: UpcomingauctionsComponent},
+  {path:'finishedauction', component: FinishedauctionComponent},
+  {path:'runningauction', component: RunningauctionComponent},
+
+  {path:'DisabledUsers', component: DisabledUsersComponent},
+  {path:'', redirectTo:'/registration', pathMatch:'full'},
+  {path:'registration', component:RegistrationComponent},
   {path:'dashboard', component: DashboardComponent},
   {path:'all-users', component: AllUsersComponent},
   {path:'deleted-users', component: DeletedUsersComponent},

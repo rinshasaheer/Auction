@@ -262,7 +262,7 @@ router.put('/updatedel/:id',function(req,res){
 
 
 router.get('/completedproduct',(req,res,next)=>{
-    Product.getAllClosedProduct((err,products)=>{
+    Product.getFinishedAuctionProduct((err,products)=>{
         if(err) throw err;
         // console.log(products[0].start_date);
         return res.json(products);
@@ -285,5 +285,19 @@ router.get('/highBid/:id',(req,res,next)=>{
     })
 });
 
+router.get('/myauctionproduct/:id',(req,res,next)=>{
+    // console.log("s");
+    Product.getMyAuctionProduct(req.params.id,(err,products)=>{
+        if(err) throw err;
+        return res.json(products);
+    })
+});
 
+router.update('/updateInterested/:id',(req,res,next)=>{
+    // console.log("s");
+    Product.updateInterested(req.params.id,(err,products)=>{
+        if(err) throw err;
+        return res.json(products);
+    })
+});
 module.exports = router;
