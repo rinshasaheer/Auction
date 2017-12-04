@@ -4,15 +4,18 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.css']
+  styleUrls: ['./navigation.component.css'],
+  // inputs: ['page']
 })
 export class NavigationComponent implements OnInit {
 
   brand_logo: String = "brand.png";
   clicked: any = "";
   constructor(private router: Router) { }
-
+  page: any;
   ngOnInit() {
+    // console.log(this.page);
+    
   }
 
   // changeClass(event){
@@ -20,12 +23,11 @@ export class NavigationComponent implements OnInit {
     
   //     var pElement = target.parentElement.parentElement;
   //     var pclassEle = pElement.querySelectorAll('.active').remove('active');
-  //     console.log(pclassEle);
   // }
-  clickedlink(name){
-    this.clicked = name;
-  }
-  refresh(): void {
-    window.location.reload();
-}
+//   clickedlink(name){
+//     this.clicked = name;
+//   }
+//   refresh(): void {
+//     window.location.reload();
+// }
 }

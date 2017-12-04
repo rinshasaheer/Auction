@@ -47,11 +47,11 @@ router.post('/register',(req,res)=>{
                     // send mail with defined transport object
                     transporter.sendMail(mailOptions, (error, info) => {
                         if (error) {
-                            return console.log(error);
+                            // return console.log(error);
                         }
-                        console.log('Message sent: %s', info.messageId);
-                        // Preview only available when sending through an Ethereal account
-                        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+                        // console.log('Message sent: %s', info.messageId);
+                        
+                        // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
                 
                         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
                         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
@@ -75,43 +75,51 @@ router.get('/users',passport.authenticate('jwt',{session:false}),(req,res,next)=
 router.post('/authenticate',(req,res,next)=>{
     const email = req.body.email;
     const password = req.body.password;
-    User.getUserByUsername(email, (err,user)=>{
+    User.findOne({email:email}, (err,user)=>{
         if(err) throw err;
         if(!user){
             return res.json({success:false, msg: 'User Not found'});
         }
-        //console.log(user.passsword);
         User.comparePassword(password, user.password,(err, isMatch)=>{
             if(err) throw err;
             if(isMatch){
-                const token = jwt.sign(user, config.secret,{
-                    expiresIn: 60400 // sec 1 week
-                });
-                return res.json({
-                    success:true, 
-                    token : 'JWT '+ token,
-                    user:{
-                        id:user._id,
-                        name : user.name,
-                        email: user.email,
-                        role: user.role
-                    }
-                });
-
+                if(user.block_status == "true"){
+                    return res.json({success:false, msg: 'Account blocked'});
+                }
+                if(user.delete_status == "true"){
+                    return res.json({success:false, msg: 'Account deleted'});
+                }
+                if(user.verified == "false"){
+                    return res.json({success:false, msg: 'User not verified'});
+                }
+                else if(user.block_status == "false" && user.delete_status == "false" && user.verified == "true"){
+                    const token = jwt.sign(user, config.secret,{
+                        expiresIn: 60400 // sec 1 week
+                    });
+                    return res.json({
+                        success:true, 
+                        token : 'JWT '+ token,
+                        user:{
+                            id:user._id,
+                            name : user.name,
+                            email: user.email,
+                            role: user.role
+                        }
+                    });
+                }
             }else{
                 return res.json({success:false, msg: 'Wrong Password'});
             }
-        })
-    })
+        });
+    }).lean();
 });
 
 router.put('/verify/:id', function(req, res){
-    console.log("Verify a user");
-    User.findOneAndUpdate({ "verification_code" : req.params.id }, 
-        { $set: { verified: true } }, 
+    User.findOneAndUpdate({verification_code : req.params.id }, 
+        { $set: { verified: "true" } }, 
         { new: true }, 
         function(err, doc) {
-            if(err){
+            if(doc==null){
                 return res.json({success:false, msg: 'User Not verified'});
             }
             else{
@@ -119,6 +127,27 @@ router.put('/verify/:id', function(req, res){
             }
         
         });
+    });
+
+router.put('/genToken/:id', function(req, res){
+    User.findOne({"_id":req.params.id}, (err,user)=>{
+        if(err) throw err;
+        else{
+            const token = jwt.sign(user, config.secret,{
+                expiresIn: 60400 // sec 1 week
+            });
+            return res.json({
+                success:true, 
+                token : 'JWT '+ token,
+                user:{
+                    id:user._id,
+                    name : user.name,
+                    email: user.email,
+                    role: user.role
+                }
+            });
+        }
+    }).lean();
     });
 
 module.exports = router;

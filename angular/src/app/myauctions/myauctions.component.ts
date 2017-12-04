@@ -14,7 +14,7 @@ export class MyauctionsComponent implements OnInit {
   constructor(private _productService: ProductServiceService) { }
 
   ngOnInit() {
-    this._productService.loadMyAuctionProduct()
+    this._productService.loadMyAuctionProduct('5a17c1dcb13ed55')
     .subscribe(resProducts => {
       this.products = resProducts;
       console.log(resProducts);

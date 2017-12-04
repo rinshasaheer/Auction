@@ -11,10 +11,21 @@ const UserSchema = mongoose.Schema({
     delete_status :{ type: String, default: false },
     verified : { type: String, default: false },
     verification_code :String,
-    fb_id : String,
-    google_id : String,
+    facebook         : {
+        id           : String,
+        token        : String,
+        name         : String,
+        email        : String
+    },
+    google         : {
+        id           : String,
+        token        : String,
+        name         : String,
+        email        : String
+    },
     date_tym : { type: Date, default: Date.now },
     role : { type: String, default: 'user' },
+    test_id:String
 });
 
 const User = module.exports = mongoose.model('User', UserSchema);

@@ -17,10 +17,10 @@ export class UpcomingAuctionBackComponent implements OnInit {
     this.productService.getAllUpcomingProduct().subscribe(data=>{
       console.log(data);
       this.products = data;
-      if(data.bidders.length >0){
-          data.bidders[data.bidders.length-1]
+      // if(data.bidders.length >0){
+      //    // data.bidders[data.bidders.length-1]
           
-      }
+      // }
     });
   }
 

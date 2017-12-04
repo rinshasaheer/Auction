@@ -3,6 +3,56 @@ const express = require("express");
 const router = express.Router();
 const config = require('../config/database');
 const Product = require("../model/product");
+const User = require("../model/user");
+var async = require('async');
+
+router.get('/closed_products',(req,res)=>{
+
+    Product.aggregate([
+          {
+            $match:{
+                "end_date" : {"$lt" : new Date()},
+            }
+         },
+        {
+            $lookup: {
+                from: "users",
+                localField: "bidders.user_id",
+                foreignField: "_id",
+                as: "user_details"
+            }
+        },
+
+        ]).exec(function(err, results){
+      //  console.log(results);
+      return res.json(results);
+        // res.json(results);
+        // var fs = require('fs');
+        // fs.writeFile('test.json', JSON.stringify(results, null, 4));
+     })
+});
+router.get('/runnig_products',(req,res)=>{
+
+    Product.aggregate([
+          {
+            $match:{
+                "end_date" : {"$gt" : new Date()},
+                "start_date" : {"$lt" : new Date()},
+            }
+         },
+        {
+            $lookup: {
+                from: "users",
+                localField: "bidders.user_id",
+                foreignField: "_id",
+                as: "user_details"
+            }
+        },
+
+        ]).exec(function(err, results){
+      return res.json(results);
+     })
+});
  
 router.post('/addnew',(req,res,next)=>{
 
@@ -41,13 +91,19 @@ router.get('/upcoming_products',(req,res,next)=>{
     
 });
 
-router.get('/closed_products',(req,res,next)=>{
-    Product.getAllClosedProduct((err,poll)=>{
-        if(err) throw err;
-        return res.json(poll);
-    })
+// router.get('/closed_products',(req,res,next)=>{
+//     Product.getAllClosedProduct((err,products)=>{
+//         if(err) throw err;
+
+//         products.forEach(function(product) {
+//             product.bidders.forEach(function(bidder) {
+//                 adTimes.push(friend.adTime);
+//             });
+//         });
+//         return res.json(products);
+//     })
     
-});
+// });
 
 router.delete('/delete/:id',(req,res,next)=>{
     Product.deleteProduct(req.params.id,(err,user)=>{
@@ -92,8 +148,16 @@ router.get('/highBid/:id',(req,res,next)=>{
 });
 
 router.get('/myauctionproduct/:id',(req,res,next)=>{
-    console.log("s");
+    // console.log("s");
     Product.getMyAuctionProduct(req.params.id,(err,products)=>{
+        if(err) throw err;
+        return res.json(products);
+    })
+});
+
+router.update('/updateInterested/:id',(req,res,next)=>{
+    // console.log("s");
+    Product.updateInterested(req.params.id,(err,products)=>{
         if(err) throw err;
         return res.json(products);
     })

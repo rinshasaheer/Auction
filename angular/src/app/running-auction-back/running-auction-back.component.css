@@ -1,0 +1,19 @@
+
+.margn{
+    margin-bottom: 15px;
+}
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.list-group-item-text{
+    text-align: justify;
+}
+.alert {
+    margin-bottom: 8px;
+}
+.lead {
+    margin-bottom: 10px;
+}    

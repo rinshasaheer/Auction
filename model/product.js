@@ -62,8 +62,8 @@ const ProductsSchema = mongoose.Schema({
         closing_informed :{
             type: Boolean,
             default: false
-        }
-       
+        },
+       test_id:String
 });
 
 const Product = module.exports = mongoose.model('Product', ProductsSchema);
@@ -170,4 +170,8 @@ module.exports.getMyAuctionProduct = function(id, callback){
     Product.find({
         "bidders.userid" : id
         }, {bidders:{$slice: 1}}, callback);
+}
+
+module.exports.getHighestBid = function(id, callback){
+    Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
 }
