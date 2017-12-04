@@ -8,7 +8,6 @@ import { ProductComponent } from './product/product.component';
 import { HttpModule } from '@angular/http';
 // import { DataTablesModule } from 'angular-datatables';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
-
 import { AppComponent } from './app.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -23,6 +22,7 @@ import { CardComponent } from './card/card.component';
 import { FinishedauctionComponent } from './finishedauction/finishedauction.component';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import { UpcomingauctionsComponent } from './upcomingauctions/upcomingauctions.component';
+// import { ImageUploadModule } from "angular2-image-upload";
 
 
 import { ProductService } from './services/product.service';
@@ -48,7 +48,7 @@ import { CardRunningComponent } from './card-running/card-running.component';
 import { WinnerconfirmComponent } from './winnerconfirm/winnerconfirm.component'
 
 import { RegistrationComponent } from './registration/registration.component';
-// import { ImageUploadModule } from "angular2-image-upload";
+import { ImageUploadModule } from "angular2-image-upload";
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 //  import { DataTablesModule } from 'angular-datatables';
 import * as $ from 'jquery';
@@ -56,7 +56,9 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { FilterPipe } from './filter.pipe';
 import { ManageProductComponent } from './manage-product/manage-product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductPipe } from './product.pipe';
 // import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+
 const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
@@ -90,6 +92,7 @@ const appRoutes: Routes = [
   {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
   {path:'running-auction', component:RunningAuctionBackComponent},
   {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
+
 ]
 
 @NgModule({
@@ -102,7 +105,6 @@ const appRoutes: Routes = [
     ManageProductComponent,
     ProductDetailComponent,
     LoginComponent,
-    RegistrationComponent,
     NavigationComponent,
     HomeComponent,
     CardComponent,
@@ -128,9 +130,24 @@ const appRoutes: Routes = [
     CountDownTimerComponent,
     RunningauctionComponent,
     CardRunningComponent,
-    WinnerconfirmComponent
+    WinnerconfirmComponent,
+    ProductPipe
   ],
   imports: [
+    BrowserModule,
+    // DataTablesModule,
+    FormsModule,
+    ReactiveFormsModule,
+    Ng2PageScrollModule,
+    HttpModule,
+    // ImageUploadModule,
+    RouterModule.forRoot(appRoutes),
+    // DataTablesModule,
+    ImageUploadModule,
+    // NKDatetimeModule,
+    NKDatetimeModule,
+    //  DataTablesModule
+    // Ng2DatetimePickerModule
     BrowserModule,
     // DataTablesModule,
     FormsModule,

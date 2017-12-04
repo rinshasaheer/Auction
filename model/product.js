@@ -75,8 +75,17 @@ module.exports.addProduct = function(product,callback){
     newProduct.save(callback);
 }
 
+<<<<<<< HEAD
 module.exports.getAllProduct = function(callback){
     Product.find({},callback);
+=======
+// module.exports.getAllProduct = function(callback){
+//     Product.find({},callback);
+// }
+
+module.exports.getAllCloasedProduct = function(callback){
+    Product.find({"end_date" : {"$lt" : Date()}},callback);
+>>>>>>> f2e72978cb9886f78be4974f6bf6a44f8ce26987
 }
 module.exports.getAllClosedProduct = function(callback){
     // console.log(new Date);
@@ -92,6 +101,17 @@ module.exports.deleteProduct = function(id,callback){
     Product.remove(query,callback);
 }
 
+<<<<<<< HEAD
+=======
+
+// module.exports.getProductById = function(id,callback){
+//     Product.findOne({_id: id},callback);
+
+module.exports.getAllProduct = function(callback){
+    Product.find({status : true},callback);
+    // Product.find({status: "true"},callback);
+}
+>>>>>>> f2e72978cb9886f78be4974f6bf6a44f8ce26987
 module.exports.getProductById = function(id,callback){
     Product.findOne({_id: id},callback);
 }
@@ -173,6 +193,13 @@ module.exports.getMyAuctionProduct = function(id, callback){
         }, {bidders:{$slice: 1}}, callback);
 }
 
+<<<<<<< HEAD
 // module.exports.updateInterested = function(id, callback){
 //     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
 // }
+=======
+module.exports.getHighestBid = function(id, callback){
+    Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
+
+}
+>>>>>>> f2e72978cb9886f78be4974f6bf6a44f8ce26987
