@@ -21,18 +21,17 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
-<<<<<<< HEAD
-=======
     "@ngui/datetime-picker": "^0.16.2",
     "angular-datatables": "^5.0.0",
     "angular-material-source": "github:angular/material",
     "angular2-datetimepicker": "^1.0.1",
     "angular2-image-upload": "^1.0.0-rc.0",
->>>>>>> 80e4e6629249816d599d321923b29db7339bc871
     "angular2-jwt": "^0.2.3",
     "angular2-text-equality-validator": "^2.0.0",
     "bcrypt-nodejs": "0.0.3",
     "bootstrap": "^3.3.7",
+    "bootstrap-datepicker": "^1.7.1",
+    "bootstrap-timepicker": "^0.5.2",
     "core-js": "^2.4.1",
     "datatables.net": "^1.10.16",
     "datatables.net-dt": "^1.10.16",
