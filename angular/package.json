@@ -21,14 +21,11 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
-<<<<<<< HEAD
-=======
     "@ngui/datetime-picker": "^0.16.2",
     "angular-datatables": "^5.0.0",
     "angular-material-source": "github:angular/material",
     "angular2-datetimepicker": "^1.0.1",
     "angular2-image-upload": "^1.0.0-rc.0",
->>>>>>> 80e4e6629249816d599d321923b29db7339bc871
     "angular2-jwt": "^0.2.3",
     "angular2-text-equality-validator": "^2.0.0",
     "bcrypt-nodejs": "0.0.3",

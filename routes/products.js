@@ -293,7 +293,7 @@ router.get('/myauctionproduct/:id',(req,res,next)=>{
     })
 });
 
-router.update('/updateInterested/:id',(req,res,next)=>{
+router.put('/updateInterested/:id',(req,res,next)=>{
     // console.log("s");
     Product.updateInterested(req.params.id,(err,products)=>{
         if(err) throw err;

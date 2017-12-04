@@ -171,7 +171,6 @@ module.exports.getFinishedAuctionProduct = function(callback){
 }
 module.exports.getHighestBid = function(id, callback){
     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
-<<<<<<< HEAD
 }
 
 module.exports.getMyAuctionProduct = function(id, callback){
@@ -197,7 +196,5 @@ module.exports.getMyAuctionProduct = function(id, callback){
 
 module.exports.getHighestBid = function(id, callback){
     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
-=======
 
->>>>>>> 80e4e6629249816d599d321923b29db7339bc871
 }
