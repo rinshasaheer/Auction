@@ -47,7 +47,7 @@ import { CardRunningComponent } from './card-running/card-running.component';
 import { WinnerconfirmComponent } from './winnerconfirm/winnerconfirm.component'
 
 import { RegistrationComponent } from './registration/registration.component';
-import { ImageUploadModule } from "angular2-image-upload";
+// import { ImageUploadModule } from "angular2-image-upload";
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 //  import { DataTablesModule } from 'angular-datatables';
 import * as $ from 'jquery';
@@ -56,6 +56,7 @@ import { FilterPipe } from './filter.pipe';
 import { ManageProductComponent } from './manage-product/manage-product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 // import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+
 const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
@@ -77,6 +78,7 @@ const appRoutes: Routes = [
   {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
   {path:'running-auction', component:RunningAuctionBackComponent},
   {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
+
 ]
 
 @NgModule({
@@ -87,22 +89,7 @@ const appRoutes: Routes = [
     ProductListComponent,
     FilterPipe,
     ManageProductComponent,
-    ProductDetailComponent
-  ],
-  imports: [
-    BrowserModule,
-    // DataTablesModule,
-    FormsModule,
-    ReactiveFormsModule,
-    Ng2PageScrollModule,
-    HttpModule,
-    RouterModule.forRoot(appRoutes),
-    // DataTablesModule,
-    // ImageUploadModule,
-    // NKDatetimeModule,
-    NKDatetimeModule,
-    //  DataTablesModule
-    // Ng2DatetimePickerModule
+    ProductDetailComponent,
     LoginComponent,
     RegistrationComponent,
     NavigationComponent,
@@ -131,6 +118,22 @@ const appRoutes: Routes = [
     RunningauctionComponent,
     CardRunningComponent,
     WinnerconfirmComponent,
+  ],
+  imports: [
+    BrowserModule,
+    // DataTablesModule,
+    FormsModule,
+    ReactiveFormsModule,
+    Ng2PageScrollModule,
+    HttpModule,
+    RouterModule.forRoot(appRoutes),
+    // DataTablesModule,
+    // ImageUploadModule,
+    // NKDatetimeModule,
+    NKDatetimeModule,
+    //  DataTablesModule
+    // Ng2DatetimePickerModule
+    
   ],
   
   providers: [ProductServiceService,

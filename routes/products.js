@@ -178,9 +178,9 @@ router.delete('/delete/:id',(req,res,next)=>{
 });
 
 router.get('/product/:id',(req,res,next)=>{
-    Product.getProductById(req.params.id,(err,poll)=>{
+    Product.getProductById(req.params.id, (err,product)=>{
         if(err) throw err;
-        return res.json(poll);
+        return res.json(product);
     })
 });
 

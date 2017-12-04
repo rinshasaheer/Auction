@@ -148,28 +148,28 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__side_bar_side_bar_component__ = __webpack_require__("../../../../../src/app/side-bar/side-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__top_bar_top_bar_component__ = __webpack_require__("../../../../../src/app/top-bar/top-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__all_users_all_users_component__ = __webpack_require__("../../../../../src/app/all-users/all-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__ = __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__ = __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__finishedauction_finishedauction_component__ = __webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__upcomingauctions_upcomingauctions_component__ = __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__equal_validator_directive__ = __webpack_require__("../../../../../src/app/equal-validator.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__product_product_component__ = __webpack_require__("../../../../../src/app/product/product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__side_bar_side_bar_component__ = __webpack_require__("../../../../../src/app/side-bar/side-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__top_bar_top_bar_component__ = __webpack_require__("../../../../../src/app/top-bar/top-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__all_users_all_users_component__ = __webpack_require__("../../../../../src/app/all-users/all-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__disabled_users_disabled_users_component__ = __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__deleted_users_deleted_users_component__ = __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__finishedauction_finishedauction_component__ = __webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__upcomingauctions_upcomingauctions_component__ = __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__equal_validator_directive__ = __webpack_require__("../../../../../src/app/equal-validator.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__email_verification_email_verification_component__ = __webpack_require__("../../../../../src/app/email-verification/email-verification.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__closed_auction_back_closed_auction_back_component__ = __webpack_require__("../../../../../src/app/closed-auction-back/closed-auction-back.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__upcoming_auction_back_upcoming_auction_back_component__ = __webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.ts");
@@ -183,12 +183,19 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__runningauction_runningauction_component__ = __webpack_require__("../../../../../src/app/runningauction/runningauction.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__card_running_card_running_component__ = __webpack_require__("../../../../../src/app/card-running/card-running.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__winnerconfirm_winnerconfirm_component__ = __webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42_ng2_datetime_ng2_datetime__ = __webpack_require__("../../../../ng2-datetime/ng2-datetime.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__product_list_product_list_component__ = __webpack_require__("../../../../../src/app/product-list/product-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__filter_pipe__ = __webpack_require__("../../../../../src/app/filter.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__manage_product_manage_product_component__ = __webpack_require__("../../../../../src/app/manage-product/manage-product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__product_detail_product_detail_component__ = __webpack_require__("../../../../../src/app/product-detail/product-detail.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -231,17 +238,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+// import { ImageUploadModule } from "angular2-image-upload";
+
+
+
+
+
+// import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 var appRoutes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_27__registration_registration_component__["a" /* RegistrationComponent */] },
+    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_41__registration_registration_component__["a" /* RegistrationComponent */] },
+    { path: 'product', component: __WEBPACK_IMPORTED_MODULE_6__product_product_component__["a" /* ProductComponent */] },
+    { path: 'manage-product', component: __WEBPACK_IMPORTED_MODULE_45__manage_product_manage_product_component__["a" /* ManageProductComponent */] },
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_41__registration_registration_component__["a" /* RegistrationComponent */] },
     { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_28__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_26__login_login_component__["a" /* LoginComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_27__login_login_component__["a" /* LoginComponent */] },
     { path: 'socialmedia/:id', component: __WEBPACK_IMPORTED_MODULE_32__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */] },
-    { path: 'all-users', component: __WEBPACK_IMPORTED_MODULE_13__all_users_all_users_component__["a" /* AllUsersComponent */] },
-    { path: 'deleted-users', component: __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */] },
-    { path: 'disabled-users', component: __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */] },
-    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_17__home_home_component__["a" /* HomeComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_13__dashboard_dashboard_component__["a" /* DashboardComponent */] },
+    { path: 'all-users', component: __WEBPACK_IMPORTED_MODULE_14__all_users_all_users_component__["a" /* AllUsersComponent */] },
+    { path: 'deleted-users', component: __WEBPACK_IMPORTED_MODULE_16__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */] },
+    { path: 'disabled-users', component: __WEBPACK_IMPORTED_MODULE_15__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */] },
+    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_18__home_home_component__["a" /* HomeComponent */] },
     { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_36__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
     { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_28__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
     { path: 'closed-auction', component: __WEBPACK_IMPORTED_MODULE_29__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */] },
@@ -257,25 +275,30 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_26__login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_27__registration_registration_component__["a" /* RegistrationComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__navigation_navigation_component__["a" /* NavigationComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__card_card_component__["a" /* CardComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__product_product_component__["a" /* ProductComponent */],
+            __WEBPACK_IMPORTED_MODULE_41__registration_registration_component__["a" /* RegistrationComponent */],
+            __WEBPACK_IMPORTED_MODULE_43__product_list_product_list_component__["a" /* ProductListComponent */],
+            __WEBPACK_IMPORTED_MODULE_44__filter_pipe__["a" /* FilterPipe */],
+            __WEBPACK_IMPORTED_MODULE_45__manage_product_manage_product_component__["a" /* ManageProductComponent */],
+            __WEBPACK_IMPORTED_MODULE_46__product_detail_product_detail_component__["a" /* ProductDetailComponent */],
+            __WEBPACK_IMPORTED_MODULE_27__login_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_41__registration_registration_component__["a" /* RegistrationComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__navigation_navigation_component__["a" /* NavigationComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__home_home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__card_card_component__["a" /* CardComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */],
             __WEBPACK_IMPORTED_MODULE_36__myauctions_myauctions_component__["a" /* MyauctionsComponent */],
-            __WEBPACK_IMPORTED_MODULE_25__equal_validator_directive__["a" /* EqualValidator */],
+            __WEBPACK_IMPORTED_MODULE_26__equal_validator_directive__["a" /* EqualValidator */],
             __WEBPACK_IMPORTED_MODULE_37__capitalize_pipe__["a" /* CapitalizePipe */],
-            __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__side_bar_side_bar_component__["a" /* SideBarComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__top_bar_top_bar_component__["a" /* TopBarComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__footer_footer_component__["a" /* FooterComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__all_users_all_users_component__["a" /* AllUsersComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__dashboard_dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__side_bar_side_bar_component__["a" /* SideBarComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__top_bar_top_bar_component__["a" /* TopBarComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__footer_footer_component__["a" /* FooterComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__all_users_all_users_component__["a" /* AllUsersComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */],
             __WEBPACK_IMPORTED_MODULE_28__email_verification_email_verification_component__["a" /* EmailVerificationComponent */],
             __WEBPACK_IMPORTED_MODULE_29__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */],
             __WEBPACK_IMPORTED_MODULE_30__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */],
@@ -287,22 +310,25 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_39__card_running_card_running_component__["a" /* CardRunningComponent */],
             __WEBPACK_IMPORTED_MODULE_40__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */],
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_35__product_service_service__["a" /* ProductServiceService */],
-            __WEBPACK_IMPORTED_MODULE_24__services_user_service__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__["a" /* AuthGuard */],
-            __WEBPACK_IMPORTED_MODULE_22__services_product_service__["a" /* ProductService */]
-        ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
             // DataTablesModule,
-            __WEBPACK_IMPORTED_MODULE_7__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_7__angular_forms__["c" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_8__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_8__angular_forms__["d" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_21_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_http__["HttpModule"],
             __WEBPACK_IMPORTED_MODULE_5__angular_router__["f" /* RouterModule */].forRoot(appRoutes),
-            __WEBPACK_IMPORTED_MODULE_20_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_http__["HttpModule"],
-            __WEBPACK_IMPORTED_MODULE_5__angular_router__["f" /* RouterModule */].forRoot(appRoutes)
+            // DataTablesModule,
+            // ImageUploadModule,
+            // NKDatetimeModule,
+            __WEBPACK_IMPORTED_MODULE_42_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
         ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_35__product_service_service__["a" /* ProductServiceService */],
+            __WEBPACK_IMPORTED_MODULE_25__services_user_service__["a" /* UserService */],
+            __WEBPACK_IMPORTED_MODULE_24__guards_auth_guard__["a" /* AuthGuard */],
+            __WEBPACK_IMPORTED_MODULE_23__services_product_service__["a" /* ProductService */]
+        ],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -1023,6 +1049,37 @@ var EqualValidator_1;
 
 /***/ }),
 
+/***/ "../../../../../src/app/filter.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var FilterPipe = (function () {
+    function FilterPipe() {
+    }
+    FilterPipe.prototype.transform = function (value, args) {
+        return null;
+    };
+    return FilterPipe;
+}());
+FilterPipe = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+        name: 'filter'
+    })
+], FilterPipe);
+
+//# sourceMappingURL=filter.pipe.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/finishedauction/finishedauction.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1365,6 +1422,92 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/manage-product/manage-product.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/manage-product/manage-product.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<product-detail (updateProEvent)=\"onUpdateProEvent($event)\"   (deleteProEvent)=\"onDeleteProEvent($event)\"     *ngIf=\"selectedPro\" [pro]=\"selectedPro\"></product-detail>\r\n\r\n\r\n<br>\r\n<br>\r\n\r\n<product-list  (SelectPro)=\"onSelectPro($event)\" [pros]=\"pros\" ></product-list>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/manage-product/manage-product.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ManageProductComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ManageProductComponent = (function () {
+    function ManageProductComponent(_productService) {
+        this._productService = _productService;
+    }
+    ManageProductComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._productService.getProducts()
+            .subscribe(function (resProData) { return _this.pros = resProData; });
+    };
+    ManageProductComponent.prototype.onSelectPro = function (pro) {
+        this.selectedPro = pro;
+        console.log(this.selectedPro);
+    };
+    ManageProductComponent.prototype.onUpdateProEvent = function (pro) {
+        this._productService.updateProduct(pro)
+            .subscribe(function (resUpdatedPro) { return pro = resUpdatedPro; });
+        this.selectedPro = null;
+    };
+    ;
+    ManageProductComponent.prototype.onDeleteProEvent = function (pro) {
+        //  console.log("manahe delete");
+        this._productService.updateProduct(pro)
+            .subscribe(function (resUpdatedPro) { return pro = resUpdatedPro; });
+        this.selectedPro = null;
+    };
+    ;
+    return ManageProductComponent;
+}());
+ManageProductComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-manage-product',
+        template: __webpack_require__("../../../../../src/app/manage-product/manage-product.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/manage-product/manage-product.component.css")],
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object])
+], ManageProductComponent);
+
+var _a;
+//# sourceMappingURL=manage-product.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/myauctions/myauctions.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1500,6 +1643,157 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/product-detail/product-detail.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/product-detail/product-detail.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n    <div class=\"col-md-9 shadow\">\r\n      <h3>Edit  a Product</h3>\r\n      <br>\r\n      <form class=\"well\" >\r\n          <div class=\"form-group\" >\r\n              <label > Name *</label>\r\n              <input type=\"text\"  name=\"name\"  [(ngModel)]=\"pro.name\" class=\"form-control\" required  />\r\n          </div>\r\n          <div class=\"form-group\" >\r\n              <label > Bid Amount *</label>\r\n              <input type=\"text\"  name=\"bid_amount\" [(ngModel)]=\"pro.bid_amount\"  class=\"form-control\" required  />\r\n          </div>\r\n       \r\n\r\n          <div class=\"form-group\" >\r\n              <label > Minimum Bid Rate</label>\r\n              <input type=\"text\"  name=\"min_bid_rate\" [(ngModel)]=\"pro.min_bid_rate\" class=\"form-control\" />\r\n          </div>\r\n\r\n           <div class=\"form-group\" >\r\n                  <label > Bid Start time *</label>\r\n                  <datetime name=\"start_date\" [(ngModel)]=\"pro.start_date\"></datetime>\r\n              </div>\r\n              <div class=\"form-group\" >\r\n                      <label > Bid End time *</label>\r\n                      <datetime name = \"end_date\"  [(ngModel)]=\"pro.end_date\"></datetime>\r\n                  </div>\r\n\r\n          \r\n\r\n           <!-- <image-upload name=\"image\"  [(ngModel)]=\"newproduct.image\"\r\n          [style]=\"'customStyle'\" \r\n          [class]=\"'prev-img'\" \r\n          [max]=\"100\"\r\n          \r\n          [headers]=\"{Authorization: 'MyToken'}\"\r\n          [buttonCaption]=\"'Select Images!'\"\r\n          [dropBoxMessage]=\"'Drop Product images here!'\"\r\n          [extensions]=\"['jpg','png','gif']\"\r\n       \r\n          (removed)=\"onRemoved($event)\"\r\n          (uploadFinished)=\"onUploadFinished($event)\"\r\n          (uploadStateChanged)=\"onUploadStateChanged($event)\"></image-upload>  -->\r\n          <!-- <div>\r\n              <label > Image</label>\r\n              <input type=\"file\"  name=\"pollqtn\"   required />\r\n          </div> -->\r\n         \r\n         \r\n          <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n          <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n          \r\n          <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n          \r\n        \r\n\r\n          <div class=\"form-group\" >\r\n              <label > Description</label>\r\n              <br>\r\n              <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"pro.desc\" ></textarea>\r\n          </div>\r\n         \r\n          <input type=\"submit\" (click)=\"updateProduct()\" class=\"btn btn-info blakbtn\" value=\"Udate\"  >\r\n          <input type=\"submit\" (click)=\"deleteProduct()\" class=\"btn btn-info blakbtn\" value=\"Delete\"  >\r\n         \r\n      </form>\r\n\r\n    </div>\r\n   "
+
+/***/ }),
+
+/***/ "../../../../../src/app/product-detail/product-detail.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductDetailComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ProductDetailComponent = (function () {
+    function ProductDetailComponent() {
+        // tableview: boolean = false;
+        this.updateProEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.deleteProEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    ProductDetailComponent.prototype.ngOnInit = function () {
+    };
+    ProductDetailComponent.prototype.updateProduct = function () {
+        this.updateProEvent.emit(this.pro);
+        //  window.location.reload();
+        //  this.tableview = true;
+    };
+    ProductDetailComponent.prototype.deleteProduct = function () {
+        // console.log("sdd");
+        this.deleteProEvent.emit(this.pro);
+        //  window.location.reload();
+        //  this.tableview = true;
+    };
+    return ProductDetailComponent;
+}());
+ProductDetailComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'product-detail',
+        template: __webpack_require__("../../../../../src/app/product-detail/product-detail.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/product-detail/product-detail.component.css")],
+        inputs: ['pro'],
+        outputs: ['updateProEvent', 'deleteProEvent']
+    }),
+    __metadata("design:paramtypes", [])
+], ProductDetailComponent);
+
+//# sourceMappingURL=product-detail.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/product-list/product-list.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "table {\r\n    font-family: arial, sans-serif;\r\n    border-collapse: collapse;\r\n    width: 50%;\r\n    margin-left:50px;\r\n}\r\n\r\ntd, th {\r\n    border: 1px solid black;\r\n    text-align: left;\r\n    padding: 8px;\r\n}\r\n\r\ntr:nth-child(even) {\r\n    background-color: #dddddd;\r\n}\r\n.btn{\r\n    background-color:grey;\r\n    border: 1px solid;\r\n    color:white;\r\n}\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/product-list/product-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <ul>\r\n    <li (click) =\"onSelect(pro)\" *ngFor=\"let pro of pros\"><a>{{pro.name}}</a></li>\r\n</ul> -->\r\n<div *ngIf=\"tableview\">\r\n<table>\r\n    <tr>\r\n      <th>Name</th>\r\n      <th>Bid Amount</th>\r\n      <th>Minimum Bid Rate</th>\r\n      <th>Start date</th>\r\n      <th>End Date</th>\r\n      <th>Description</th>\r\n      <th>status</th>\r\n      <th>Action</th>\r\n    </tr>\r\n    <tr *ngFor=\"let pro of pros\">\r\n\r\n    <td>{{pro.name}}</td>\r\n    <td>{{pro.bid_amount}}</td>\r\n    <td>{{pro.min_bid_rate}}</td>\r\n    <td>{{pro.start_date}}</td>\r\n    <td>{{pro.start_date}}</td>\r\n    <td>{{pro.desc}}</td>\r\n    <td>{{pro.status}}</td>\r\n    <!-- <td>{{pro.status}}</td> -->\r\n    <td (click) =\"onSelect(pro)\" ><input type=\"submit\" value=\"Action\" class=\"btn\" ><br>\r\n\r\n    </tr>\r\n  </table>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/product-list/product-list.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductListComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ProductListComponent = (function () {
+    function ProductListComponent() {
+        this.tableview = true;
+        // private deleteProEvent = new EventEmitter();
+        this.SelectPro = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    ProductListComponent.prototype.ngOnInit = function () {
+    };
+    ProductListComponent.prototype.onSelect = function (prod) {
+        this.SelectPro.emit(prod);
+        this.tableview = false;
+    };
+    ProductListComponent.prototype.deletePro = function (prod) {
+        this.SelectPro.emit(prod);
+        this.tableview = false;
+    };
+    return ProductListComponent;
+}());
+ProductListComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'product-list',
+        template: __webpack_require__("../../../../../src/app/product-list/product-list.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/product-list/product-list.component.css")],
+        inputs: ['pros'],
+        outputs: ['SelectPro']
+    }),
+    __metadata("design:paramtypes", [])
+], ProductListComponent);
+
+//# sourceMappingURL=product-list.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/product-service.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1551,6 +1845,107 @@ ProductServiceService = __decorate([
 
 var _a;
 //# sourceMappingURL=product-service.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/product/product.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".shadow{\r\n\r\n     margin-left: 100px;\r\n   \r\n}\r\n.blakbtn{\r\n    background-color: black;\r\n    width:90px;\r\n}\r\n.blakbtn:hover{\r\n    background-color: white;\r\n    color:black;\r\n}\r\n.colorbtn{\r\n    background-color: black;\r\n    width:200px;\r\n}\r\n.colorbtn:hover{\r\n    background-color: white;\r\n    color:black;\r\n    \r\n}\r\n\r\n\r\n\r\n ", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/product/product.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n    <div class=\"col-md-9 shadow\">\r\n            <h3>Add a Product</h3>\r\n            <br>\r\n            <form #form='ngForm' (ngSubmit)=\"addProduct()\" class=\"well\" >\r\n                <div class=\"form-group\" >\r\n                    <label > Name *</label>\r\n                    <input type=\"text\"  name=\"name\"  [(ngModel)]=\"newproduct.name\" class=\"form-control\" required  />\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                    <label > Bid Amount *</label>\r\n                    <input type=\"text\"  name=\"bid_amount\" [(ngModel)]=\"newproduct.bid_amount\"  class=\"form-control\" required  />\r\n                </div>\r\n             \r\n\r\n                <div class=\"form-group\" >\r\n                    <label > Minimum Bid Rate</label>\r\n                    <input type=\"text\"  name=\"min_bid_rate\" [(ngModel)]=\"newproduct.min_bid_rate\" class=\"form-control\" />\r\n                </div>\r\n\r\n                 <div class=\"form-group\" >\r\n                        <label > Bid Start time *</label>\r\n                        <datetime name=\"start_date\" [(ngModel)]=\"newproduct.start_date\"></datetime>\r\n                    </div>\r\n                    <div class=\"form-group\" >\r\n                            <label > Bid End time *</label>\r\n                            <datetime name = \"end_date\"  [(ngModel)]=\"newproduct.end_date\"></datetime>\r\n                        </div>\r\n\r\n                \r\n\r\n                 <!-- <image-upload name=\"image\"  [(ngModel)]=\"newproduct.image\"\r\n                [style]=\"'customStyle'\" \r\n                [class]=\"'prev-img'\" \r\n                [max]=\"100\"\r\n                \r\n                [headers]=\"{Authorization: 'MyToken'}\"\r\n                [buttonCaption]=\"'Select Images!'\"\r\n                [dropBoxMessage]=\"'Drop Product images here!'\"\r\n                [extensions]=\"['jpg','png','gif']\"\r\n             \r\n                (removed)=\"onRemoved($event)\"\r\n                (uploadFinished)=\"onUploadFinished($event)\"\r\n                (uploadStateChanged)=\"onUploadStateChanged($event)\"></image-upload>  -->\r\n                <!-- <div>\r\n                    <label > Image</label>\r\n                    <input type=\"file\"  name=\"pollqtn\"   required />\r\n                </div> -->\r\n               \r\n               \r\n                <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n                <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n                \r\n                <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n                \r\n                <input type=\"file\" name =\"myfile\" ng-disabled=\"uploading\" style=\"display: none\">\r\n\r\n                <div class=\"form-group\" >\r\n                    <label > Description</label>\r\n                    <br>\r\n                    <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"newproduct.desc\" ></textarea>\r\n                </div>\r\n               \r\n                <input type=\"submit\" class=\"btn btn-info blakbtn\" value=\"Submit\"  >\r\n            \r\n               \r\n            </form>\r\n      \r\n          </div>\r\n         "
+
+/***/ }),
+
+/***/ "../../../../../src/app/product/product.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+// import { ProductService } from '../services/product.service';
+// import { Poll } from '../poll';
+// import { FormsModule, FormControl, FormGroup, Validators }   from '@angular/forms';
+// import { answer } from './../answer';
+var ProductComponent = (function () {
+    function ProductComponent(_prductService, _userService, router) {
+        this._prductService = _prductService;
+        this._userService = _userService;
+        this.router = router;
+        this.newproduct = {
+            name: '',
+            desc: '',
+            bid_amount: '',
+            min_bid_rate: '',
+            start_date: '',
+            end_date: '',
+        };
+    }
+    ProductComponent.prototype.ngOnInit = function () {
+    };
+    ProductComponent.prototype.addProduct = function () {
+        var _this = this;
+        this._prductService.addProduct(this.newproduct).subscribe(function (data) {
+            if (data) {
+                _this._userService.sendmail().subscribe(function (data1) {
+                });
+                alert("Add Product Successfully");
+                window.location.reload();
+                //  this.router.navigate(['/registration'])
+            }
+            else {
+                alert("Error");
+                console.log("error");
+            }
+        });
+    };
+    return ProductComponent;
+}());
+ProductComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-product',
+        template: __webpack_require__("../../../../../src/app/product/product.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/product/product.component.css")],
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]]
+        // providers: [ProductService]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]) === "function" && _c || Object])
+], ProductComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=product.component.js.map
 
 /***/ }),
 
@@ -1898,6 +2293,7 @@ var ProductService = (function () {
         this._putUrl = '/products/update/';
         this._getUrl = '/products/products';
         this._deleteUrl = '/products/updatedel';
+        this._getOneUrl = '/products/product/';
         this.url = "http://localhost:3000/";
     }
     ProductService.prototype.getAllClosedProduct = function () {
@@ -1943,6 +2339,13 @@ var ProductService = (function () {
         headers.append('Content-Type', 'application/json');
         return this.http.get(this.url + 'products/upcoming_products', { headers: headers })
             .map(function (res) { return res.json(); });
+    };
+    ProductService.prototype.getProduct = function (id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({ headers: headers });
+        console.log(this._getOneUrl + id);
+        return this.http.get(this._getOneUrl + id, options)
+            .map(function (response) { return response.json(); });
     };
     return ProductService;
 }());
@@ -2411,7 +2814,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".cont{\r\n margin-top: 170px;\r\n}", ""]);
 
 // exports
 
@@ -2424,7 +2827,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/winnerconfirm/winnerconfirm.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navigation></app-navigation>\n"
+module.exports = "<app-navigation></app-navigation>\n<div class=\"container cont\">\n    <div *ngIf=\"!isConfirm\">\n    <h3>Do you wish to continue ..?</h3>\n    <button type=\"button\" (click)=\"confirmed()\" class=\"btn btn-default\">Confirm</button> \n    <button type=\"button\" (click)=\"rejected()\" class=\"btn btn-default\">Reject</button> \n</div>\n<br>\n <div class=\"col-md-9 shadow\" *ngIf=\"isConfirm\">\n        <h3>Add a delivery address</h3>\n    <br>\n    <form #f='ngForm' class=\"well\"  role=\"form\" (ngSubmit)=\"f.form.valid && onWinnerConfirm();\" novalidate >\n        \n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !name.valid }\" >\n            <label > Name :</label>\n            <input type=\"text\"  name=\"name\" #name=\"ngModel\" [(ngModel)]=\"newproduct.name\" class=\"form-control\" required  />\n            <div *ngIf=\"f.submitted && !name.valid\" class=\"help-block\">! Required</div>\n        </div>\n\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !phone.valid }\"> \n                <!-- <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\"> -->\n                <label >Phone Number :</label> \n                  <input type=\"text\" class=\"form-control\" minlength=\"10\" maxlength=\"10\" pattern=\"^\\d{9}|^\\d{3}-\\d{3}-\\d{3}|^\\d{3}\\s\\d{3}\\s\\d{3}\" required [(ngModel)]=\"newproduct.phone\" name=\"phone\" #phone=\"ngModel\">\n                  <div *ngIf=\"f.submitted && phone.invalid\">\n                    <div *ngIf=\"phone.errors.minlength || phone.errors.maxlength\" class=\"help-block\">! Phone Number should be 10 digits</div>\n                    <div *ngIf=\"phone.errors.required\" class=\"help-block\">! Required</div>\n                    <div *ngIf=\"phone.errors.pattern\" class=\"help-block\">! Valid Phone Number is required</div>\n                  </div> \n                <!-- </div> -->\n        </div> \n\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !pin.valid }\"> \n                <!-- <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\"> -->\n                <label >Pincode :</label> \n                  <input type=\"text\" class=\"form-control\" minlength=\"6\" maxlength=\"6\" pattern=\"^[1-9][0-9]{5}$\" required [(ngModel)]=\"newproduct.pin\" name=\"pin\" #pin=\"ngModel\">\n                  <div *ngIf=\"f.submitted && pin.invalid\">\n                    <div *ngIf=\"pin.errors.minlength || pin.errors.maxlength\" class=\"help-block\">! Pincode should be 10 digits</div>\n                    <div *ngIf=\"pin.errors.required\" class=\"help-block\">! Required</div>\n                    <div *ngIf=\"pin.errors.pattern\" class=\"help-block\">! Valid Pincode is required</div>\n                  </div> \n                <!-- </div> -->\n        </div> \n\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr1.valid }\" >\n                <label > Flat / House No. / Floor / Building: </label>\n                <input type=\"text\"  name=\"addr1\" #addr1=\"ngModel\" [(ngModel)]=\"newproduct.addr1\" class=\"form-control\" required  />\n                <div *ngIf=\"f.submitted && !addr1.valid\" class=\"help-block\">! Required</div>\n        </div>\n     \n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr2.valid }\" >\n                <label > Colony / Street / Locality:  </label>\n                <input type=\"text\"  name=\"addr2\" #addr2=\"ngModel\" [(ngModel)]=\"newproduct.add2\" class=\"form-control\" required  />\n                <div *ngIf=\"f.submitted && !addr2.valid\" class=\"help-block\">! Required</div>\n        </div>\n     \n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr3.valid }\" >\n                <label > Town/City:  </label>\n                <input type=\"text\"  name=\"addr3\" #addr3=\"ngModel\" [(ngModel)]=\"newproduct.addr3\" class=\"form-control\" required  />\n                <div *ngIf=\"f.submitted && !addr3.valid\" class=\"help-block\">! Required</div>\n        </div>\n     \n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr4.valid }\" >\n                <label > State :  </label>\n                <input type=\"text\"  name=\"addr4\" #addr4=\"ngModel\" [(ngModel)]=\"newproduct.addr4\" class=\"form-control\" required  />\n                <div *ngIf=\"f.submitted && !addr4.valid\" class=\"help-block\">! Required</div>\n        </div>\n\n        <button type=\"submit\" class=\"btn btn-primary\">Deliver to this address</button> \n \n       \n    </form>\n\n  </div>\n  </div>"
 
 /***/ }),
 
@@ -2436,6 +2839,7 @@ module.exports = "<app-navigation></app-navigation>\n"
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2448,16 +2852,43 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var WinnerconfirmComponent = (function () {
-    function WinnerconfirmComponent(userService, route, router) {
+    function WinnerconfirmComponent(userService, productService, route, router) {
         this.userService = userService;
+        this.productService = productService;
         this.route = route;
         this.router = router;
+        this.isConfirm = false;
+        this.newproduct = {
+            name: '',
+            pin: '',
+            phone: '',
+            addr1: '',
+            addr2: '',
+            addr3: '',
+            addr4: '',
+        };
     }
     WinnerconfirmComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.sub = this.route.params.subscribe(function (params) {
-            console.log(params.id);
+            // console.log(params.id);
+            _this.productService.getProduct(params.id).subscribe(function (data) {
+                console.log(data);
+                //check here that the user is proper
+            });
         });
+    };
+    WinnerconfirmComponent.prototype.confirmed = function () {
+        this.isConfirm = true;
+        //update status
+    };
+    WinnerconfirmComponent.prototype.rejected = function () {
+        //update status n send mail to second person
+    };
+    WinnerconfirmComponent.prototype.onWinnerConfirm = function () {
+        console.log("hello");
     };
     return WinnerconfirmComponent;
 }());
@@ -2467,10 +2898,10 @@ WinnerconfirmComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.html"),
         styles: [__webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_product_service__["a" /* ProductService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */]) === "function" && _d || Object])
 ], WinnerconfirmComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=winnerconfirm.component.js.map
 
 /***/ }),
