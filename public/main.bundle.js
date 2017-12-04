@@ -617,6 +617,9 @@ var CardComponent = (function () {
         // o.sort(function(a, b){return a.value-b.value});
     };
     CardComponent.prototype.updateInterested = function (id) {
+        this._productService.addInterestedCandidate(id).subscribe(function (data) {
+            console.log(data);
+        });
     };
     return CardComponent;
 }());
@@ -2442,6 +2445,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ProductServiceService = (function () {
     function ProductServiceService(_http) {
         this._http = _http;
+        this.authToken = '';
     }
     ProductServiceService.prototype.loadClosedProduct = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
@@ -2468,10 +2472,16 @@ var ProductServiceService = (function () {
             .map(function (res) { return res.json(); });
     };
     ProductServiceService.prototype.addInterestedCandidate = function (id) {
+        // console.log("d");
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        this.loadToken();
+        headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this._http.get('http://localhost:3000/products/updateInterested/' + id, { headers: headers })
+        return this._http.put('http://localhost:3000/products/updateInterested/' + id, { headers: headers })
             .map(function (res) { return res.json(); });
+    };
+    ProductServiceService.prototype.loadToken = function () {
+        this.authToken = localStorage.getItem('id_token');
     };
     return ProductServiceService;
 }());

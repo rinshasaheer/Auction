@@ -110,6 +110,8 @@ export class CardComponent implements OnInit {
   }
 
   updateInterested(id){
-        
+    this._productService.addInterestedCandidate(id).subscribe(data=>{ 
+      console.log(data);
+    });
   }
 }
