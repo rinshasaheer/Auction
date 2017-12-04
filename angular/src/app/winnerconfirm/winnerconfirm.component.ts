@@ -22,13 +22,13 @@ export class WinnerconfirmComponent implements OnInit {
     addr4 : '',
     };
 
-  constructor(private userService:UserService,private productService:ProductService, private route: ActivatedRoute, private router: Router ) { }
+  constructor(private userService:UserService, private productService:ProductService, private route: ActivatedRoute, private router: Router ) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       // console.log(params.id);
       this.productService.getProduct(params.id).subscribe(data => {
-        console.log(data);
+        // console.log(data);
         //check here that the user is proper
       });
    });
@@ -44,7 +44,8 @@ export class WinnerconfirmComponent implements OnInit {
   }
 
   onWinnerConfirm(){
-    console.log("hello");
-  }
+    this.userService.saveAddress(this.newproduct).subscribe(data => {
+  });
 
+}
 }

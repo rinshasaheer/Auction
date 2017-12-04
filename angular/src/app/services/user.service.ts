@@ -12,6 +12,7 @@ export class UserService {
   private _verifyUrl = "/user/verify/";
   private _genTokenUrl = "/user/genToken/";
   private _authUrl = "/user/authenticate";
+  private _saveAddUrl = "/user/authenticate";
   url = "http://localhost:3000/";
   constructor(private http:Http) { }
 
@@ -71,6 +72,13 @@ export class UserService {
     this.authToken = null;
     this.user = null;
     localStorage.clear();
+  }
+
+  saveAddress(user){
+    let headers = new Headers({ 'Content-Type' : 'application/json'});
+    let options = new RequestOptions({ headers : headers});
+    return this.http.post(this._regUrl, JSON.stringify(user),options)
+    .map((response : Response) => response.json());
   }
 
 }

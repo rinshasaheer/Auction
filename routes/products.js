@@ -62,29 +62,29 @@ router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),functio
 
     console.log(req.body);
 
-    if (req.headers && req.headers.authorization) {
-        var authorization = req.headers.authorization.substring(4),
-            decoded;
-            try {
-                decoded = jwt.verify(authorization, config.secret);
-                console.log(decoded);
-                Product.findOneAndUpdate({"_id" : req.body.pid},
-                {
-                    $push:{"bidders": {user_id: decoded._id, amount:req.body.amount }}
-                },
-                { new : true },(err, user)=>{
-                    if(err){
-                        res.json({success: false, msg : "Failed, went somthing wrong "});
-                    }else{
-                        res.json({success: true, msg : "bid completed successfully"});
-                    }
-                });
-            } catch (e) {
-                return res.status(401).send('unauthorized');
-            }
-    }else{
-        return res.status(401).send('Invalid User');
-    }
+    // if (req.headers && req.headers.authorization) {
+    //     var authorization = req.headers.authorization.substring(4),
+    //         decoded;
+    //         try {
+    //             decoded = jwt.verify(authorization, config.secret);
+    //             console.log(decoded);
+    //             Product.findOneAndUpdate({"_id" : req.body.pid},
+    //             {
+    //                 $push:{"bidders": {user_id: decoded._id, amount:req.body.amount }}
+    //             },
+    //             { new : true },(err, user)=>{
+    //                 if(err){
+    //                     res.json({success: false, msg : "Failed, went somthing wrong "});
+    //                 }else{
+    //                     res.json({success: true, msg : "bid completed successfully"});
+    //                 }
+    //             });
+    //         } catch (e) {
+    //             return res.status(401).send('unauthorized');
+    //         }
+    // }else{
+    //     return res.status(401).send('Invalid User');
+    // }
 
 });
 

@@ -22,7 +22,7 @@
                 <label >Phone Number :</label> 
                   <input type="text" class="form-control" minlength="10" maxlength="10" pattern="^\d{9}|^\d{3}-\d{3}-\d{3}|^\d{3}\s\d{3}\s\d{3}" required [(ngModel)]="newproduct.phone" name="phone" #phone="ngModel">
                   <div *ngIf="f.submitted && phone.invalid">
-                    <div *ngIf="phone.errors.minlength || phone.errors.maxlength" class="help-block">! Phone Number should be 10 digits</div>
+                    <div *ngIf="phone.errors.minlength || phone.errors.maxlength" class="help-block">! Phone Number should be 6 digits</div>
                     <div *ngIf="phone.errors.required" class="help-block">! Required</div>
                     <div *ngIf="phone.errors.pattern" class="help-block">! Valid Phone Number is required</div>
                   </div> 
