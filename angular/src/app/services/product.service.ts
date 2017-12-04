@@ -71,6 +71,7 @@ export class ProductService {
       return this.http.get(this.url + 'products/upcoming_products',{headers:headers})
       .map(res =>res.json());
   }
+
   bidProduct(data){
     let headers = new Headers();
     this.loadToken();

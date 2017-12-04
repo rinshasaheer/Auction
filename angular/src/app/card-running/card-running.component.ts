@@ -33,6 +33,9 @@ export class CardRunningComponent implements OnInit {
       }
        this.productService.bidProduct(data).subscribe(data=>{ 
          console.log(data);
+         if(){
+           
+         }
        });
     }else{
       this.btnDisbled = false;

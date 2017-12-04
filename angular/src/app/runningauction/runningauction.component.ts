@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
+import { UserService} from '../services/user.service';
 import { Router} from '@angular/router';
 
 @Component({
@@ -8,18 +9,21 @@ import { Router} from '@angular/router';
   styleUrls: ['./runningauction.component.css']
 })
 export class RunningauctionComponent implements OnInit {
-
+  users : object;
   products: object;
   winnerId : object;
   involvedUsers : any = [];
 
   constructor(
-    private productService: ProductService
+    private productService: ProductService,
+    private userService:UserService
   ) { }
 
   ngOnInit() {
+    this.userService.getAllUsersById().subscribe(data=>{
+        this.users = data;
+    });
     this.productService.getAllrunningProduct().subscribe(data=>{
-      
        data.forEach((item, index) => {
          var lastBidprice = item.bid_amount;
          var lastBiduser = '';
@@ -28,7 +32,7 @@ export class RunningauctionComponent implements OnInit {
          item.bidders.forEach((user, i) => {
            if(user.amount >= lastBidprice){
               lastBidprice = user.amount;
-              lastBiduser = item.user_details[i].name;
+              lastBiduser = this.users[user.user_id].name;
               lastBidTime = user.date_time;
            }
          });
@@ -36,7 +40,6 @@ export class RunningauctionComponent implements OnInit {
          data[index].lastBiduser = lastBiduser;
          data[index].lastBidTime = lastBidTime;
        });
-       console.log(data);
        this.products = data;
      });
   }

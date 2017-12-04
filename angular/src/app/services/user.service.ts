@@ -73,4 +73,11 @@ export class UserService {
     localStorage.clear();
   }
 
+  getAllUsersById(){
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.get(this.url + 'user/users_id_as_index',{headers:headers})
+    .map(res =>res.json());
+  }
+
 }

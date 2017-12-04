@@ -2277,6 +2277,7 @@ module.exports = "<div class=\"container\" id=\"c-auction\">\n    <h4 class=\"pa
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RunningauctionComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2288,13 +2289,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var RunningauctionComponent = (function () {
-    function RunningauctionComponent(productService) {
+    function RunningauctionComponent(productService, userService) {
         this.productService = productService;
+        this.userService = userService;
         this.involvedUsers = [];
     }
     RunningauctionComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.userService.getAllUsersById().subscribe(function (data) {
+            _this.users = data;
+        });
         this.productService.getAllrunningProduct().subscribe(function (data) {
             data.forEach(function (item, index) {
                 var lastBidprice = item.bid_amount;
@@ -2303,7 +2309,7 @@ var RunningauctionComponent = (function () {
                 item.bidders.forEach(function (user, i) {
                     if (user.amount >= lastBidprice) {
                         lastBidprice = user.amount;
-                        lastBiduser = item.user_details[i].name;
+                        lastBiduser = _this.users[user.user_id].name;
                         lastBidTime = user.date_time;
                     }
                 });
@@ -2311,7 +2317,6 @@ var RunningauctionComponent = (function () {
                 data[index].lastBiduser = lastBiduser;
                 data[index].lastBidTime = lastBidTime;
             });
-            console.log(data);
             _this.products = data;
         });
     };
@@ -2323,10 +2328,10 @@ RunningauctionComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/runningauction/runningauction.component.html"),
         styles: [__webpack_require__("../../../../../src/app/runningauction/runningauction.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _b || Object])
 ], RunningauctionComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=runningauction.component.js.map
 
 /***/ }),
@@ -2509,6 +2514,12 @@ var UserService = (function () {
         this.authToken = null;
         this.user = null;
         localStorage.clear();
+    };
+    UserService.prototype.getAllUsersById = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get(this.url + 'user/users_id_as_index', { headers: headers })
+            .map(function (res) { return res.json(); });
     };
     return UserService;
 }());
