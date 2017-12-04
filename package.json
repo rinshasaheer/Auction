@@ -9,6 +9,7 @@
   "author": "mrjys",
   "license": "ISC",
   "dependencies": {
+    "angular-material-data-table": "^0.10.10",
     "bcrypt": "^1.0.3",
     "bcrypt-nodejs": "0.0.3",
     "bcryptjs": "^2.4.3",

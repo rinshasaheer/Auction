@@ -11,7 +11,7 @@ export class ProductService {
     private _postUrl = '/products/addnew';
     private _putUrl = '/products/update/';
     private _getUrl ='/products/products';
-    private _deleteUrl ='/products/updatedel';
+    private _deleteUrl ='/products/updatedel/';
     authToken = '';
   
     url = "http://localhost:3000/";

@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { FileUploader } from 'ng2-file-upload';
 import { ProductService } from './../services/product.service';
 import { UserService } from './../services/user.service';
+// import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
+import { CanActivate } from '@angular/router';
 import { pro } from '../pro';
 import { Router } from "@angular/router";
+// import { FormGroup } from '@angular/forms';
 
 // import { ProductService } from '../services/product.service';
 // import { Poll } from '../poll';
@@ -22,6 +26,7 @@ import { Router } from "@angular/router";
 
 })
 export class ProductComponent implements OnInit {
+  form: FormGroup;
 
 
 
@@ -42,7 +47,8 @@ export class ProductComponent implements OnInit {
   constructor(private _prductService : ProductService,private _userService : UserService, private router: Router ) { }
 
   ngOnInit() {
- 
+
+
   }
   addProduct(){
     this._prductService.addProduct(this.newproduct).subscribe(data => {
@@ -54,8 +60,9 @@ export class ProductComponent implements OnInit {
 
 
        alert("Add Product Successfully");
+       this.router.navigate(['/manage-product'])
        window.location.reload();
-    //  this.router.navigate(['/registration'])
+    //  
         
     
       }else {
@@ -67,6 +74,14 @@ export class ProductComponent implements OnInit {
    
   }
 
+  _keyPress(event: any) {
+    const pattern = /[0-9]/;
+    let inputChar = String.fromCharCode(event.charCode);
 
+    if (!pattern.test(inputChar)) {
+      // invalid character, prevent input
+      event.preventDefault();
+    }
+}
   
 }
