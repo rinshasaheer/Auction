@@ -48,7 +48,7 @@ import { CardRunningComponent } from './card-running/card-running.component';
 import { WinnerconfirmComponent } from './winnerconfirm/winnerconfirm.component'
 
 import { RegistrationComponent } from './registration/registration.component';
-// import { ImageUploadModule } from "angular2-image-upload";
+import { ImageUploadModule } from "angular2-image-upload";
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 //  import { DataTablesModule } from 'angular-datatables';
 import * as $ from 'jquery';
@@ -105,7 +105,6 @@ const appRoutes: Routes = [
     ManageProductComponent,
     ProductDetailComponent,
     LoginComponent,
-    RegistrationComponent,
     NavigationComponent,
     HomeComponent,
     CardComponent,
@@ -149,9 +148,6 @@ const appRoutes: Routes = [
     NKDatetimeModule,
     //  DataTablesModule
     // Ng2DatetimePickerModule
-    
-  ],
-  imports: [
     BrowserModule,
     // DataTablesModule,
     FormsModule,
