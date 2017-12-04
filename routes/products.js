@@ -4,8 +4,9 @@ const router = express.Router();
 const config = require('../config/database');
 const Product = require("../model/product");
 const User = require("../model/user");
-
+const passport = require("passport");
 const pro = require('../model/product');
+const jwt = require("jsonwebtoken");
 
 
 //     prodObj = {
@@ -31,7 +32,7 @@ const pro = require('../model/product');
 
 
 
-    router.post('/addnew',function(req,res){
+router.post('/addnew',function(req,res){
     console.log("Insert a Product");
     var newPro = new pro();
     newPro.name = req.body.name;
@@ -54,7 +55,38 @@ const pro = require('../model/product');
 });
 
 
-var async = require('async');
+//var async = require('async');
+
+
+router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),function(req,res){
+
+    console.log(req.body);
+
+    if (req.headers && req.headers.authorization) {
+        var authorization = req.headers.authorization.substring(4),
+            decoded;
+            try {
+                decoded = jwt.verify(authorization, config.secret);
+                console.log(decoded);
+                Product.findOneAndUpdate({"_id" : req.body.pid},
+                {
+                    $push:{"bidders": {user_id: decoded._id, amount:req.body.amount }}
+                },
+                { new : true },(err, user)=>{
+                    if(err){
+                        res.json({success: false, msg : "Failed, went somthing wrong "});
+                    }else{
+                        res.json({success: true, msg : "bid completed successfully"});
+                    }
+                });
+            } catch (e) {
+                return res.status(401).send('unauthorized');
+            }
+    }else{
+        return res.status(401).send('Invalid User');
+    }
+
+});
 
 router.get('/closed_products',(req,res)=>{
 
@@ -135,12 +167,13 @@ router.get('/products',(req,res,next)=>{
     
 });
 
-router.get('/closed_products',(req,res,next)=>{
-    Product.getAllCloasedProduct((err,poll)=>{
-        if(err) throw err;
-        return res.json(poll);
-    });
-});
+
+// router.get('/closed_products',(req,res,next)=>{
+//     Product.getAllCloasedProduct((err,poll)=>{
+//         if(err) throw err;
+//         return res.json(poll);
+//     });
+// });
 
 router.get('/upcoming_products',(req,res,next)=>{
     Product.getAllUpcomingProduct((err,product)=>{
@@ -229,7 +262,7 @@ router.put('/updatedel/:id',function(req,res){
 
 
 router.get('/completedproduct',(req,res,next)=>{
-    Product.getAllClosedProduct((err,products)=>{
+    Product.getFinishedAuctionProduct((err,products)=>{
         if(err) throw err;
         // console.log(products[0].start_date);
         return res.json(products);
@@ -252,5 +285,19 @@ router.get('/highBid/:id',(req,res,next)=>{
     })
 });
 
+router.get('/myauctionproduct/:id',(req,res,next)=>{
+    // console.log("s");
+    Product.getMyAuctionProduct(req.params.id,(err,products)=>{
+        if(err) throw err;
+        return res.json(products);
+    })
+});
 
+router.put('/updateInterested/:id',(req,res,next)=>{
+    // console.log("s");
+    Product.updateInterested(req.params.id,(err,products)=>{
+        if(err) throw err;
+        return res.json(products);
+    })
+});
 module.exports = router;

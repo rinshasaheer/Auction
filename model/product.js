@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const config = require("../config/database");
 
+var Schema = mongoose.Schema;
 const ProductsSchema = mongoose.Schema({
         name: {
             type : String,
@@ -46,7 +47,7 @@ const ProductsSchema = mongoose.Schema({
             } 
         }],
         bidders: [{
-            user_id: String ,
+            user_id: Schema.ObjectId ,
             amount: Number,
             date_time : { 
                 type : Date, 
@@ -73,8 +74,8 @@ const ProductsSchema = mongoose.Schema({
        
 });
 
+const Product = module.exports = mongoose.model('Product', ProductsSchema,'products');
 
-const Product = module.exports = mongoose.model('Product', ProductsSchema);
 
 module.exports.addProduct = function(product,callback){
     console.log(product);
@@ -82,9 +83,9 @@ module.exports.addProduct = function(product,callback){
     newProduct.save(callback);
 }
 
-module.exports.getAllProduct = function(callback){
-    Product.find({},callback);
-}
+// module.exports.getAllProduct = function(callback){
+//     Product.find({},callback);
+// }
 
 module.exports.getAllCloasedProduct = function(callback){
     Product.find({"end_date" : {"$lt" : Date()}},callback);
@@ -108,8 +109,9 @@ module.exports.deleteProduct = function(id,callback){
 // module.exports.getProductById = function(id,callback){
 //     Product.findOne({_id: id},callback);
 
-module.exports.getProductById = function(callback){
-    Product.find({"status" : true},callback);
+module.exports.getAllProduct = function(callback){
+    Product.find({status : true},callback);
+    // Product.find({status: "true"},callback);
 }
 module.exports.getProductById = function(id,callback){
     Product.findOne({_id: id},callback);
@@ -155,7 +157,7 @@ module.exports.getFinishedAuctionProduct = function(callback){
         
     // ];
     // Product.aggregate(pipeline,callback);
-    Product.find({"end_date" : {"$gt" : new Date()}},callback);
+    Product.find({"end_date" : {"$lt" : new Date()}},callback);
     // Product.find({is_bid_completed: true},callback);
     // Product.find({}, {$pull:{"bidders.bid_status":  "rejected"}},callback);
     // Product.aggregate({ $group: { _id: null, "bidders.bid_status": { $max: '$balance' }}},
@@ -167,6 +169,31 @@ module.exports.getFinishedAuctionProduct = function(callback){
     //     })
 
 }
+module.exports.getHighestBid = function(id, callback){
+    Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
+}
+
+module.exports.getMyAuctionProduct = function(id, callback){
+    console.log("fhg");
+//     Product.aggregate([
+//    {
+//     $project: {
+//         bidders: {
+//           $filter: {
+//              input: "$bidders",
+//              as: "bidders",
+//              cond: { 'userid':id }
+//           }
+//        }
+//     }
+//  }
+// ], callback)
+    // Product.find({"bidders.userid" : id}, {bidders: {$elemMatch: {userid: id}}}, callback);
+    Product.find({
+        "bidders.userid" : id
+        }, {bidders:{$slice: 1}}, callback);
+}
+
 module.exports.getHighestBid = function(id, callback){
     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
 

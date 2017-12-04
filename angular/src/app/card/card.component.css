@@ -285,3 +285,11 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     margin: 25px auto;
     min-height: 123px;
 }
+
+.crd-btn-container{
+    text-align: center
+}
+.crd-btn{
+    width: 100%;
+    margin-bottom: 10px;
+}
