@@ -1,5 +1,16 @@
 <app-navigation></app-navigation>
 <div class="container" id="c-auction">
     <h4 class="page-head mrgn-nav-top">Running Auctions</h4>
-    <app-card-running></app-card-running>
+    <div *ngIf="products?.length > 0; else noProduct">
+        <div  *ngFor="let product of products">
+          <app-card-running [product]="product"></app-card-running>
+      </div>
+    </div>
+    <ng-template #noProduct>
+        <div class="no-item">
+            <h4>Sorrry! No items to display!</h4>
+        </div>
+      </ng-template>
   </div>
+
+    

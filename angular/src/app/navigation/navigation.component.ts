@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { CanActivate, Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-navigation',
@@ -10,14 +11,20 @@ import { Router } from '@angular/router';
 export class NavigationComponent implements OnInit {
 
   brand_logo: String = "brand.png";
+<<<<<<< HEAD
   clicked: any = "";
   constructor(private router: Router) { }
   page: any;
+=======
+  constructor(private userService : UserService, private router: Router) { }
+
+>>>>>>> 80e4e6629249816d599d321923b29db7339bc871
   ngOnInit() {
     // console.log(this.page);
     
   }
 
+<<<<<<< HEAD
   // changeClass(event){
   //   var target = event.currentTarget;
     
@@ -30,4 +37,12 @@ export class NavigationComponent implements OnInit {
 //   refresh(): void {
 //     window.location.reload();
 // }
+=======
+  logout(){
+    this.userService.logout();
+    this.router.navigate(['/login']);
+    return false;
+  }
+
+>>>>>>> 80e4e6629249816d599d321923b29db7339bc871
 }

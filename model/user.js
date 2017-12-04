@@ -28,7 +28,7 @@ const UserSchema = mongoose.Schema({
     test_id:String
 });
 
-const User = module.exports = mongoose.model('User', UserSchema);
+const User = module.exports = mongoose.model('User', UserSchema,'users');
 
 module.exports.addUser = function(newUser,callback){
     // console.log(newUser);
@@ -57,6 +57,7 @@ module.exports.deleteUser = function(id,callback){
     User.remove(query,callback).lean();
 }
 module.exports.comparePassword = function(candPass,hash,callback){
+    //console.log(candPass, hash);
     bcrypt.compare(candPass,hash, (err, isMatch)=>{
         if(err) throw err;
         callback(null,isMatch);

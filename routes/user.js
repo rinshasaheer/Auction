@@ -6,7 +6,19 @@ const jwt = require("jsonwebtoken");
 const config = require('../config/database');
 const User = require("../model/user");
 'use strict';
+
+// router.post('/addnew',(req,res,next)=>{
 const nodemailer = require('nodemailer');
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: "mean.symptots@gmail.com", // generated ethereal user
+        pass: "Symptots@2017"  // generated ethereal password
+    }
+});
+
+
+
 
 router.post('/register',(req,res)=>{
     // console.log(req.body);
@@ -27,13 +39,6 @@ router.post('/register',(req,res)=>{
             nodemailer.createTestAccount((err, account) => {
                 
                     // create reusable transporter object using the default SMTP transport
-                    let transporter = nodemailer.createTransport({
-                        service: 'gmail',
-                        auth: {
-                            user: "mean.symptots@gmail.com", // generated ethereal user
-                            pass: "Symptots@2017"  // generated ethereal password
-                        }
-                    });
                 
                     // setup email data with unicode symbols
                     let mailOptions = {
@@ -80,6 +85,7 @@ router.post('/authenticate',(req,res,next)=>{
         if(!user){
             return res.json({success:false, msg: 'User Not found'});
         }
+        console.log(user);
         User.comparePassword(password, user.password,(err, isMatch)=>{
             if(err) throw err;
             if(isMatch){
@@ -115,8 +121,9 @@ router.post('/authenticate',(req,res,next)=>{
 });
 
 router.put('/verify/:id', function(req, res){
+    // console.log(req.params.id);
     User.findOneAndUpdate({verification_code : req.params.id }, 
-        { $set: { verified: "true" } }, 
+        { $set: { verified: true } }, 
         { new: true }, 
         function(err, doc) {
             if(doc==null){
@@ -150,4 +157,105 @@ router.put('/genToken/:id', function(req, res){
     }).lean();
     });
 
+
+
+
+router.get('/getemail',function(req,res){
+    console.log("user get");
+    User.getUsers((err,user)=>{
+      
+        if(err){
+            console.log("Error " + err);
+        }else{
+     
+
+
+            nodemailer.createTestAccount((err, account) => {
+                
+                    // create reusable transporter object using the default SMTP transport
+                   
+                
+                    // setup email data with unicode symbols
+                    let mailOptions = {
+                        from: 'mean.symptots@gmail.com', // sender address
+                        to: user.email,// list of receivers
+                        subject: 'New Product Added for Auction', // Subject line
+                        text: '', // plain text body
+                        html: '<b><h3>Hi,</h3><br/>We add a new Product for bid.. Plese login in to your account <br/> Thank You!</b>' // html body
+                    };
+                
+                    // send mail with defined transport object
+                    transporter.sendMail(mailOptions, (error, info) => {
+                        console.log('mail');
+                        if (error) {
+                            console.log('error');
+                             return console.log(error);
+                        }
+                        // console.log('Message sent: %s', info.messageId);
+                        
+                        // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+                
+                        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
+                        // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+                    });
+                });
+                
+                return res.json(user);
+        
+        
+           
+        }
+    });
+});
+
+
+
+
+
+
+
+
+// router.get('/getemail',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
+//     console.log("here");
+//     User.getUsers((err,user)=>{
+//         if(err) throw err;
+       
+//         nodemailer.createTestAccount((err, account) => {
+            
+//                 // create reusable transporter object using the default SMTP transport
+               
+            
+//                 // setup email data with unicode symbols
+//                 let mailOptions = {
+//                     from: 'mean.symptots@gmail.com', // sender address
+//                     to: user.email, // list of receivers
+//                     subject: 'New Product Added for Auction', // Subject line
+//                     text: '', // plain text body
+//                     html: '<b><h3>Hi,</h3><br/>we added a new Product for bid.. Plese login in to your account <br/> Thank You!</b>' // html body
+//                 };
+            
+//                 // send mail with defined transport object
+//                 transporter.sendMail(mailOptions, (error, info) => {
+//                     console.log('mail');
+//                     if (error) {
+//                         console.log('error');
+//                          return console.log(error);
+//                     }
+//                     // console.log('Message sent: %s', info.messageId);
+                    
+//                     // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+            
+//                     // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
+//                     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+//                 });
+//             });
+            
+//             return res.json(user);
+//     })
+    
+// });
+
+
 module.exports = router;
+
+
