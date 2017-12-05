@@ -14,6 +14,7 @@ import { CanActivate } from '@angular/router';
 export class ProductDetailComponent implements OnInit {
   pro: any;
   form: FormGroup;
+  // date1: Date = Date.now;
   // tableview: boolean = false;
   private updateProEvent = new EventEmitter();
   private deleteProEvent = new EventEmitter();

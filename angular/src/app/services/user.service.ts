@@ -12,6 +12,7 @@ export class UserService {
   private _verifyUrl = "/user/verify/";
   private _genTokenUrl = "/user/genToken/";
   private _authUrl = "/user/authenticate";
+  // private _getUrl = "/user/getemail";
   url = "http://localhost:3000/";
   constructor(private http:Http) { }
 
@@ -35,7 +36,8 @@ export class UserService {
 // console.log("hi");
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.get(this.url + 'user/getemail',{headers:headers})
+    // console.log("ff");
+    return this.http.get(this.url + 'user/getemail')
     .map(res =>res.json());
      
 }

@@ -161,16 +161,20 @@ router.put('/genToken/:id', function(req, res){
 
 
 router.get('/getemail',function(req,res){
-    console.log("user get");
-    User.getUsers((err,user)=>{
+    // console.log("user get");
+    User.getUsers1((err,user)=>{
+        user.forEach(function(i) {
+            // console.log(i.email);
+        
       
-        if(err){
+        // this.user.email.forEach((i) => {
+        //     console.log(i);
+        //   });
+       if(err){
             console.log("Error " + err);
         }else{
      
-
-
-            nodemailer.createTestAccount((err, account) => {
+     nodemailer.createTestAccount((err, account) => {
                 
                     // create reusable transporter object using the default SMTP transport
                    
@@ -178,7 +182,7 @@ router.get('/getemail',function(req,res){
                     // setup email data with unicode symbols
                     let mailOptions = {
                         from: 'mean.symptots@gmail.com', // sender address
-                        to: user.email,// list of receivers
+                        to: i.email, // list of receivers
                         subject: 'New Product Added for Auction', // Subject line
                         text: '', // plain text body
                         html: '<b><h3>Hi,</h3><br/>We add a new Product for bid.. Plese login in to your account <br/> Thank You!</b>' // html body
@@ -186,7 +190,7 @@ router.get('/getemail',function(req,res){
                 
                     // send mail with defined transport object
                     transporter.sendMail(mailOptions, (error, info) => {
-                        console.log('mail');
+                        // console.log('mail');
                         if (error) {
                             console.log('error');
                              return console.log(error);
@@ -200,11 +204,13 @@ router.get('/getemail',function(req,res){
                     });
                 });
                 
-                return res.json(user);
+               
         
+        } 
+    });
+        return res.json(user);
+    
         
-           
-        }
     });
 });
 

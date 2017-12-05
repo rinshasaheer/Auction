@@ -48,6 +48,9 @@ module.exports.getUserById = function(id,callback){
 module.exports.getUsers = function(callback){
     User.find({role:'user'},callback);
 }
+module.exports.getUsers1 = function(callback){
+    User.find({},callback);
+}
 module.exports.getUserByUsername = function(email,callback){
     const query = { email: email}
     User.findOne(query,callback).lean();
