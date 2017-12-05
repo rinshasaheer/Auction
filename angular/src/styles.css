@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+
+.prev-img {
+    /* background-color: #dd3; */
+    border-radius: 5px;
+    margin-left:5px;
+    /* width: 500px; */
+}
+
+.prev-img .img-ul-image {
+    /* width: 1000px; */
+}
+
+.prev-img .img-ul-upload {
+    background-color: #000 !important;
+}
+
+.prev-img .img-ul-clear {
+    background-color:white !important;
+    color:black !important;
+}
+
+.prev-img .img-ul-drag-box-msg {
+    color:black !important;
+}
+
+.prev-img .img-ul-container {
+    /* background-color: none !important; */
+}
+.img-ul-image{
+  width: 150px !important;
+  height : 150px !important;}
+
+.page-head{
+    text-align: center;
+    font-size: 27px;
+    color: #ABAAAA;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.mrgn-nav-top{
+    margin-top: 180px;
+}
+.auction-section{
+    margin-top: 178px;
+}
+.no-item{
+    min-height: 400px
+
+}
+.no-item h4{
+    text-align: center;
+    font-size: 25px;
+    color: rgb(99, 99, 99);
+    padding-top: 180px;
+
+}
+

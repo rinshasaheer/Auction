@@ -1,0 +1,38 @@
+<!-- <ul>
+    <li (click) ="onSelect(pro)" *ngFor="let pro of pros"><a>{{pro.name}}</a></li>
+</ul> -->
+<div *ngIf="tableview" class="col-md-9">
+
+
+  <label class="search" >Search Product: </label>
+  <input type="text" [(ngModel)]="term" />
+
+<br>
+
+<table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Bid Amount</th>
+      <th>Minimum Bid Rate</th>
+      <th>Start date</th>
+      <th>End Date</th>
+      <th>Description</th>
+  
+      <th>Action</th>
+    </tr>
+    
+    <tr  *ngFor="let pro of pros | filter:term ">
+
+    <td>{{pro.name}}</td>
+    <td>{{pro.bid_amount}}</td>
+    <td>{{pro.min_bid_rate}}</td>
+    <td>{{pro.start_date}}</td>
+    <td>{{pro.start_date}}</td>
+    <td>{{pro.desc}}</td>
+  
+    <!-- <td>{{pro.status}}</td> -->
+    <td (click) ="onSelect(pro)" ><input type="submit" value="Action" class="btn btn-primary" ><br>
+
+    </tr>
+  </table>
+</div>

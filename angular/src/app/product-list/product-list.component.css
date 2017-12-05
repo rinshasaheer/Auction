@@ -1,0 +1,33 @@
+/* table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left:50px;
+}*/
+
+
+/*
+.btn{
+    background-color:grey;
+    border: 1px solid;
+    color:white;
+} */
+th{
+    background-color: navy;
+    color:white;
+}
+td{
+width:100px;
+}
+
+.table-striped{
+    margin-left:180px !important;
+
+}
+tr:nth-child(even) {
+    background-color: white;
+}
+.search{
+    margin-left:180px;
+    color:navy;
+}

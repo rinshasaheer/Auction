@@ -1,0 +1,129 @@
+<!-- <div *ngIf="!itemStatus" class="col-md-8 col-xs-12 col-sm-6 col-lg-8"><h4>Sorry! No Items to display.</h4></div> -->
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+  <div class="tg-ad tg-verifiedad">
+      <figure>
+          <span *ngIf="myCloseStatus" class="tg-themetag tg-featuretag">Closed</span>
+          <a href="javascript:void(0);"><img src="assets/uploads/{{item.image||'default.png'}}" alt="image description"></a>
+          <!-- <span class="tg-photocount">See 18 Photos</span> -->
+      </figure>
+      
+      <div class="tg-adcontent">
+          <!-- <ul class="tg-productcagegories">
+              <li><a href="javascript:void(0);">Mobiles</a></li>
+          </ul> -->
+          
+          <div class="tg-adtitle">
+              <h3><a href="javascript:void(0);">{{item?.name | capitalize}}</a></h3>
+          </div>
+          <div class="clearfix"></div>
+          <div class="tg-desc" >
+                  <h4>Description: </h4><p class="card-pro-desc">
+                      {{item?.desc | capitalize}}
+                      <!-- <read-more [text]="item?.desc | capitalize" [maxLength]="100"></read-more> -->
+                    </p>
+          </div>
+          
+          <!-- <time datetime="2017-06-06">Last Updated: 4 hours ago</time> -->
+          
+          <!-- <address>44-46 abc Road, Manchester</address> -->
+          <!-- <div class="tg-phonelike">
+              <a class="tg-btnphone" href="javascript:void(0);">
+                  <i class="icon-phone-handset"></i>
+                  <span data-toggle="tooltip" data-placement="top" title="Show Phone No." data-last="0800 - 1234 - 562 - 6"><em>Show Phone No.</em></span>
+              </a>
+              <span class="tg-like tg-liked"><i class="fa fa-heart"></i></span>
+          </div> -->
+      </div>
+      <div *ngIf="startDate" class="col-md-6">
+          <h4>Start Date<br/> {{startDate | date: 'dd/MM/yyyy'}}</h4>
+      </div>
+      <div *ngIf="startDate" class="col-md-6">
+            <h4>End Date<br/> {{eTime | date: 'dd/MM/yyyy'}}</h4>
+        </div>
+        <div class="col-md-8 col-md-offset-2 crd-btn-container" *ngIf="startDate"><button  class="btn btn-success crd-btn" (click)="updateInterested(item._id)">Interested</button></div>
+        
+      <div class="row">
+        <div class="btn-primary tg-adprice" *ngIf="startDate else divclosed">Basic Price: ${{item?.bid_amount}}</div>
+        <ng-template #divclosed>
+                <div class="btn-primary tg-adprice" *ngIf="myauction else divmy">Last Bid Price: ${{highest}}</div>                
+        </ng-template>
+        <ng-template #divmy>
+                <div class="btn-primary tg-adprice">Sold Price: ${{highest}}</div>                
+        </ng-template>
+      </div>
+      
+  </div>
+</div>
+<!--   
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="tg-ad tg-verifiedad">
+          <figure>
+              <span class="tg-themetag tg-featuretag">featured</span>
+              <a href="javascript:void(0);"><img src="http://exprostudio.com/html/classified/images/ads/img-01.jpg" alt="image description"></a> -->
+              <!-- <span class="tg-photocount">See 18 Photos</span> -->
+          <!-- </figure>
+          <div class="tg-adcontent"> -->
+              <!-- <ul class="tg-productcagegories">
+                  <li><a href="javascript:void(0);">Mobiles</a></li>
+              </ul> -->
+              
+              <!-- <div class="tg-adtitle">
+                  <h3><a href="javascript:void(0);">iPhone X for sale</a></h3>
+              </div>
+              <div class="clearfix"></div>
+              <div class="tg-desc">
+                  <h4>Description</h4>
+                      <p class="card-pro-desc">Consectetur adipicing elit sed eiusmod temporie incidint ut labore et dolore magna enim ad minim veniam, quis nostrud.</p>
+              </div>
+              <div class="clearfix"></div>
+              <div class="tg-days">
+                      <h4>Days Left: 4Days</h4>
+              </div> -->
+              <!-- <time datetime="2017-06-06">Last Updated: 4 hours ago</time> -->
+              
+              <!-- <address>44-46 abc Road, Manchester</address> -->
+              <!-- <div class="tg-phonelike">
+                  <a class="tg-btnphone" href="javascript:void(0);">
+                      <i class="icon-phone-handset"></i>
+                      <span data-toggle="tooltip" data-placement="top" title="Show Phone No." data-last="0800 - 1234 - 562 - 6"><em>Show Phone No.</em></span>
+                  </a>
+                  <span class="tg-like tg-liked"><i class="fa fa-heart"></i></span>
+              </div> -->
+          <!-- </div>
+          <button class="btn btn-primary tg-adprice"> Basic Price: $200</button>
+      </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="tg-ad tg-verifiedad">
+              <figure>
+                  <span class="tg-themetag tg-featuretag">featured</span>
+                  <a href="javascript:void(0);"><img src="http://exprostudio.com/html/classified/images/ads/img-01.jpg" alt="image description"></a> -->
+                  <!-- <span class="tg-photocount">See 18 Photos</span> -->
+              <!-- </figure>
+              <div class="tg-adcontent"> -->
+                  <!-- <ul class="tg-productcagegories">
+                      <li><a href="javascript:void(0);">Mobiles</a></li>
+                  </ul> -->
+                  
+                  <!-- <div class="tg-adtitle">
+                      <h3><a href="javascript:void(0);">iPhone X for sale</a></h3>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="tg-desc">
+                          <p class="card-pro-desc">Consectetur adipicing elit sed eiusmod temporie incidint ut labore et dolore magna enim ad minim veniam, quis nostrud.</p>
+                  </div>
+                   -->
+                  <!-- <time datetime="2017-06-06">Last Updated: 4 hours ago</time> -->
+                  
+                  <!-- <address>44-46 abc Road, Manchester</address> -->
+                  <!-- <div class="tg-phonelike">
+                      <a class="tg-btnphone" href="javascript:void(0);">
+                          <i class="icon-phone-handset"></i>
+                          <span data-toggle="tooltip" data-placement="top" title="Show Phone No." data-last="0800 - 1234 - 562 - 6"><em>Show Phone No.</em></span>
+                      </a>
+                      <span class="tg-like tg-liked"><i class="fa fa-heart"></i></span>
+                  </div> -->
+              <!-- </div>
+              <button class="btn btn-primary tg-adprice"> Final Price: $200</button>
+          </div>
+      </div> -->

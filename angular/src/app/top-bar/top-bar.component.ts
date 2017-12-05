@@ -18,8 +18,8 @@ export class TopBarComponent implements OnInit {
   }
 
   logout(){
-    //this.userService.logout();
-  //  this.router.navigate(['/login']);
-    //return false;
+  this.userService.logout();
+  this.router.navigate(['/login']);
+  return false;
   }
 }
