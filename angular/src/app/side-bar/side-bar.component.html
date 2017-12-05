@@ -1,69 +1,55 @@
-<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-    <a class="nav-link" routerLink="/">
-      <i class="fa fa-fw fa-dashboard"></i>
-      <span class="nav-link-text">Dashboard</span>
-    </a>
-  </li>
- 
-  
-  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-      <i class="fa fa-users"></i>
-      <span class="nav-link-text">Users Management</span>
-    </a>
-    <ul class="sidenav-second-level collapse" id="collapseComponents">
-      <li>
-        <a routerLink="/AllUsers">All Users</a>
-      </li>
-      <li>
-        <a routerLink="/DisabledUsers">Disabled Users</a>
-      </li>
-      <li>
-        <a routerLink="/DeletedUser">Deleted Users</a>
-      </li>
-    </ul>
-  </li>
-  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
-    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
-      <i class="fa fa-product-hunt"></i>
-      <span class="nav-link-text">Product Management</span>
-    </a>
-    <ul class="sidenav-second-level collapse" id="collapseExamplePages">
-      <li>
-        <a routerLink="/allusers">Add Product</a>
-      </li>
-      <li>
-        <a routerLink="/allusers">Manage Product</a>
-      </li>
-      
-      
-    </ul>
-  </li>
-  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
-    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
-      <i class="fa fa-snowflake-o"></i>
-      <span class="nav-link-text">Auction</span>
-    </a>
-    <ul class="sidenav-second-level collapse" id="collapseMulti">
-      <li>
-        <a href="#">Running Auction</a>
-      </li>
-      <li>
-        <a href="#">Upcoming Auction</a>
-      </li>
-      <li>
-        <a href="#">Closed Auction</a>
-      </li>
-     
-    </ul>
-  </li>
- 
-</ul>
-<!--<ul class="navbar-nav sidenav-toggler">
-  <li class="nav-item">
-    <a class="nav-link text-center" id="sidenavToggler">
-      <i class="fa fa-fw fa-angle-left"></i>
-    </a>
-  </li>
-</ul>-->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    
+    <top-bar></top-bar>
+    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav side-nav">
+            <li>
+                <a routerLink="/dashboard"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+            </li>
+           
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="demo" class="collapse">
+                    <li>
+                        <a routerLink="/all-users">All Users</a>
+                    </li>
+                    <li>
+                        <a routerLink="/disabled-users">Disabled Users</a>
+                    </li>
+                    <li>
+                        <a routerLink="/deleted-users">Deleted Users</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-arrows-v"></i> Product <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="demo1" class="collapse">
+                    <li>
+                        <a routerLink="/product">Add Product</a>
+                    </li>
+                    <li>
+                        <a routerLink="/manage-product">Manage Product</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#demo3"><i class="fa fa-fw fa-arrows-v"></i> Auction <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="demo3" class="collapse">
+                    <li>
+                        <a routerLink="/running-auction">Running Auction</a>
+                    </li>
+                    <li>
+                        <a routerLink="/upcoming-auction"> Upcoming Auction</a>
+                    </li>
+                    <li>
+                        <a routerLink="/closed-auction">closed Product</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+</nav>

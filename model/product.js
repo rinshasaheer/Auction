@@ -75,10 +75,26 @@ module.exports.addProduct = function(product,callback){
     newProduct.save(callback);
 }
 
+<<<<<<< HEAD
 module.exports.getAllProduct = function(callback){
     Product.find({},callback);
 // module.exports.getAllProduct = function(callback){
 //     Product.find({},callback);
+=======
+
+module.exports.getAllProduct = function(callback){
+    Product.find({},callback);
+}
+//module.exports.getAllCloasedProduct = function(callback){
+  //  Product.find({"end_date" : {"$lt" : Date()}},callback);
+
+// module.exports.getAllProduct = function(callback){
+//     Product.find({},callback);
+// }
+
+module.exports.getAllCloasedProduct = function(callback){
+    Product.find({"end_date" : {"$lt" : Date()}},callback);
+>>>>>>> 114f43adfb460d849f06499ca1ff7fb9f4aa5982
 }
 
 // module.exports.getAllCloasedProduct = function(callback){
@@ -91,11 +107,17 @@ module.exports.getAllClosedProduct = function(callback){
 }
 module.exports.getAllUpcomingProduct = function(callback){
     Product.find({"start_date" : {"$gt" : Date()}},callback);
+
 }
 
 module.exports.deleteProduct = function(id,callback){
     const query = {_id: id}
     Product.remove(query,callback);
+}
+
+
+module.exports.getProductById = function(id,callback){
+    Product.findOne({_id: id},callback);
 }
 
 
@@ -194,10 +216,17 @@ module.exports.getMyAuctionProduct = function(id, callback){
         }, {bidders:{$slice: 1}}, callback);
 }
 
+<<<<<<< HEAD
 // module.exports.updateInterested = function(id, callback){
 //     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
 // }
+=======
+>>>>>>> 114f43adfb460d849f06499ca1ff7fb9f4aa5982
 module.exports.getHighestBid = function(id, callback){
     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 114f43adfb460d849f06499ca1ff7fb9f4aa5982

@@ -1,9 +1,11 @@
+/*!
+ * Start Bootstrap - SB Admin (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
 
-.bg-dark
-{   
-    background: #343a40;
-    padding:2em 0;  
-}
+/* Global Styles */
+
 body {
     margin-top: 100px;
     background-color: #222;

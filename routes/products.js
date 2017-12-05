@@ -137,26 +137,26 @@ router.get('/runnig_products',(req,res)=>{
      })
 });
  
-router.post('/addnew',(req,res,next)=>{
+// router.post('/addnew',(req,res,next)=>{
 
 
-    prodObj = {
-        name:  req.body.name,
-        image: req.body.image,
-        desc: req.body.desc,
-        bid_amount: req.body.amount,
-        min_bid_rate: req.body.min_bid_rate,
-        start_date : req.body.start_date,
-        end_date : req.body.end_date,
-    };
-    Product.addProduct(prodObj,(err, user)=>{
-        if(err){
-            res.json({success: false, msg : "Failed, went somthing wrong "});
-        }else{
-            res.json({success: true, msg : "Poll Added Seccessfully, Redirecting..."});
-        }
-    });
-});
+//     prodObj = {
+//         name:  req.body.name,
+//         image: req.body.image,
+//         desc: req.body.desc,
+//         bid_amount: req.body.amount,
+//         min_bid_rate: req.body.min_bid_rate,
+//         start_date : req.body.start_date,
+//         end_date : req.body.end_date,
+//     };
+//     Product.addProduct(prodObj,(err, user)=>{
+//         if(err){
+//             res.json({success: false, msg : "Failed, went somthing wrong "});
+//         }else{
+//             res.json({success: true, msg : "Poll Added Seccessfully, Redirecting..."});
+//         }
+//     });
+// });
 
 
 router.get('/products',(req,res,next)=>{
@@ -333,5 +333,11 @@ router.get('/mynotifications/:id',(req,res,next)=>{
     
     })
 
+router.put('/updateInterested/:id',(req,res,next)=>{
+    // console.log("s");
+    Product.updateInterested(req.params.id,(err,products)=>{
+        if(err) throw err;
+        return res.json(products);
+    })
 });
 module.exports = router;
