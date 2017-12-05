@@ -58,7 +58,7 @@ router.post('/addnew',function(req,res){
 //var async = require('async');
 
 
-router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),function(req,res){
+router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),function(req,res,next){
 
     console.log(req.body);
 
@@ -80,7 +80,7 @@ router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),functio
                     }
                 });
             } catch (e) {
-                return res.status(401).send('unauthorized');
+                return res.status(401).send('unauthorized 123');
             }
     }else{
         return res.status(401).send('Invalid User');
@@ -293,39 +293,45 @@ router.get('/myauctionproduct/:id',(req,res,next)=>{
     })
 });
 
-<<<<<<< HEAD
 router.put('/updateInterested/:id',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
     console.log("uInter");
-    // if (req.headers && req.headers.authorization) {
-    //     var authorization = req.headers.authorization.substring(4),
-    //         decoded;
-    //         try {
-    //             decoded = jwt.verify(authorization, config.secret);
-    //             console.log(decoded);
-    //             Product.findOneAndUpdate({"_id" : req.params.id},
-    //             {
-    //                 $push:{"intrested_ids": {user_id: decoded._id}}
-    //             },
-    //             { new : true },(err, user)=>{
-    //                 if(err){
-    //                     res.json({success: false, msg : "Failed, went somthing wrong "});
-    //                 }else{
-    //                     res.json({success: true, msg : "bid completed successfully"});
-    //                 }
-    //             });
-    //         } catch (e) {
-    //             return res.status(401).send('unauthorized');
-    //         }
-    // }else{
-    //     return res.status(401).send('Invalid User');
-    // }
-=======
-router.put('/updateInterested/:id',(req,res,next)=>{
-    // console.log("s");
-    Product.updateInterested(req.params.id,(err,products)=>{
-        if(err) throw err;
-        return res.json(products);
+    if (req.headers && req.headers.authorization) {
+        var authorization = req.headers.authorization.substring(4),
+            decoded;
+            try {
+                decoded = jwt.verify(authorization, config.secret);
+                console.log(decoded);
+                Product.findOneAndUpdate({"_id" : req.params.id},
+                {
+                    $push:{"intrested_ids": {user_id: decoded._id}}
+                },
+                { new : true },(err, user)=>{
+                    if(err){
+                        res.json({success: false, msg : "Failed, went somthing wrong "});
+                    }else{
+                        res.json({success: true, msg : "bid completed successfully"});
+                    }
+                });
+            } catch (e) {
+                return res.status(401).send('unauthorized');
+            }
+    }else{
+        return res.status(401).send('Invalid User');
+    }
+// router.put('/updateInterested/:id',(req,res,next)=>{
+//     // console.log("s");
+//     Product.updateInterested(req.params.id,(err,products)=>{
+//         if(err) throw err;
+//         return res.json(products);
+//     })
+});
+
+router.get('/mynotifications/:id',(req,res,next)=>{
+    Product.getMyNotification(req.params.id, (err,user)=>{
+    if(err) throw err;
+    return res.json(user);
+    
     })
->>>>>>> f2e72978cb9886f78be4974f6bf6a44f8ce26987
+
 });
 module.exports = router;

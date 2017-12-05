@@ -1,7 +1,6 @@
 webpackJsonp(["polyfills"],{
 
 /***/ "../../../../../src/polyfills.ts":
-<<<<<<< HEAD
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5115,11 +5114,6 @@ Zone.__load_patch('PromiseRejectionEvent', function (global, Zone, api) {
 })));
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("../../../../webpack/buildin/global.js")))
-=======
-/***/ (function(module, exports) {
-
-
->>>>>>> f2e72978cb9886f78be4974f6bf6a44f8ce26987
 
 /***/ }),
 
