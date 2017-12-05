@@ -4,18 +4,33 @@ import 'reflect-metadata';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import { ProductComponent } from './product/product.component';
+import {UserService} from './services/user.service';
 import { HttpModule } from '@angular/http';
+
+
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
+import { FooterComponent } from './footer/footer.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { AllUsersComponent } from './all-users/all-users.component';
+import { HeaderTitleComponent } from './header-title/header-title.component';
+import { DisabledUsersComponent } from './disabled-users/disabled-users.component';
+import { DeletedUsersComponent } from './deleted-users/deleted-users.component';
+
+
+
+import { ProductComponent } from './product/product.component';
+
 // import { DataTablesModule } from 'angular-datatables';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { AppComponent } from './app.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { FooterComponent } from './footer/footer.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { AllUsersComponent } from './all-users/all-users.component';
-import { DisabledUsersComponent } from './disabled-users/disabled-users.component';
-import { DeletedUsersComponent } from './deleted-users/deleted-users.component';
+
+
+
+
+
+
+
 import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
@@ -28,7 +43,7 @@ import { UpcomingauctionsComponent } from './upcomingauctions/upcomingauctions.c
 import { ProductService } from './services/product.service';
 
 import {AuthGuard} from './guards/auth.guard' ;
-import { UserService } from './services/user.service';
+
 
 import { EqualValidator } from './equal-validator.directive';
 import { LoginComponent } from './login/login.component';
@@ -70,21 +85,19 @@ const appRoutes: Routes = [
   {path:'login', component:LoginComponent},  
   {path:'socialmedia/:id', component:SocialmediaComponent},
 
-  {path:'Dashboard', component: DashboardComponent},
-  {path:'AllUsers', component: AllUsersComponent},
-  {path:'DeletedUser', component: DeletedUsersComponent},
+  {path:'dashboard', component: DashboardComponent},
+  {path:'all-users', component: AllUsersComponent},
+  {path:'disabled-users', component: DisabledUsersComponent},
+  {path:'deleted-users', component: DeletedUsersComponent},
 
   {path:'upcomingauction', component: UpcomingauctionsComponent},
   {path:'finishedauction', component: FinishedauctionComponent},
   {path:'runningauction', component: RunningauctionComponent},
 
-  {path:'DisabledUsers', component: DisabledUsersComponent},
+  
   {path:'', redirectTo:'/registration', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
-  {path:'dashboard', component: DashboardComponent},
-  {path:'all-users', component: AllUsersComponent},
-  {path:'deleted-users', component: DeletedUsersComponent},
-  {path:'disabled-users', component: DisabledUsersComponent},
+  
   {path:'home', component:HomeComponent},
   {path:'myauctions', component:MyauctionsComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
@@ -116,6 +129,7 @@ const appRoutes: Routes = [
     DashboardComponent,
     SideBarComponent,
     TopBarComponent,
+    HeaderTitleComponent,
     FooterComponent,
     AllUsersComponent,
     DisabledUsersComponent,
