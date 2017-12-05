@@ -58,7 +58,7 @@ router.post('/addnew',function(req,res){
 //var async = require('async');
 
 
-router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),function(req,res){
+router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),function(req,res,next){
 
     console.log(req.body);
 
@@ -76,11 +76,11 @@ router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),functio
                     if(err){
                         res.json({success: false, msg : "Failed, went somthing wrong "});
                     }else{
-                        res.json({success: true, msg : "bid completed successfully"});
+                        res.json({success: true, msg : "Your bid Submitted successfully"});
                     }
                 });
             } catch (e) {
-                return res.status(401).send('unauthorized');
+                return res.status(401).send('unauthorized 123');
             }
     }else{
         return res.status(401).send('Invalid User');
@@ -137,26 +137,26 @@ router.get('/runnig_products',(req,res)=>{
      })
 });
  
-router.post('/addnew',(req,res,next)=>{
+// router.post('/addnew',(req,res,next)=>{
 
 
-    prodObj = {
-        name:  req.body.name,
-        image: req.body.image,
-        desc: req.body.desc,
-        bid_amount: req.body.amount,
-        min_bid_rate: req.body.min_bid_rate,
-        start_date : req.body.start_date,
-        end_date : req.body.end_date,
-    };
-    Product.addProduct(prodObj,(err, user)=>{
-        if(err){
-            res.json({success: false, msg : "Failed, went somthing wrong "});
-        }else{
-            res.json({success: true, msg : "Poll Added Seccessfully, Redirecting..."});
-        }
-    });
-});
+//     prodObj = {
+//         name:  req.body.name,
+//         image: req.body.image,
+//         desc: req.body.desc,
+//         bid_amount: req.body.amount,
+//         min_bid_rate: req.body.min_bid_rate,
+//         start_date : req.body.start_date,
+//         end_date : req.body.end_date,
+//     };
+//     Product.addProduct(prodObj,(err, user)=>{
+//         if(err){
+//             res.json({success: false, msg : "Failed, went somthing wrong "});
+//         }else{
+//             res.json({success: true, msg : "Poll Added Seccessfully, Redirecting..."});
+//         }
+//     });
+// });
 
 
 router.get('/products',(req,res,next)=>{
@@ -167,13 +167,6 @@ router.get('/products',(req,res,next)=>{
     
 });
 
-
-// router.get('/closed_products',(req,res,next)=>{
-//     Product.getAllCloasedProduct((err,poll)=>{
-//         if(err) throw err;
-//         return res.json(poll);
-//     });
-// });
 
 router.get('/upcoming_products',(req,res,next)=>{
     Product.getAllUpcomingProduct((err,product)=>{
@@ -326,35 +319,38 @@ router.put('/statusconfirm/:id',(req,res,next)=>{
 
 router.put('/updateInterested/:id',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
     console.log("uInter");
-    // if (req.headers && req.headers.authorization) {
-    //     var authorization = req.headers.authorization.substring(4),
-    //         decoded;
-    //         try {
-    //             decoded = jwt.verify(authorization, config.secret);
-    //             console.log(decoded);
-    //             Product.findOneAndUpdate({"_id" : req.params.id},
-    //             {
-    //                 $push:{"intrested_ids": {user_id: decoded._id}}
-    //             },
-    //             { new : true },(err, user)=>{
-    //                 if(err){
-    //                     res.json({success: false, msg : "Failed, went somthing wrong "});
-    //                 }else{
-    //                     res.json({success: true, msg : "bid completed successfully"});
-    //                 }
-    //             });
-    //         } catch (e) {
-    //             return res.status(401).send('unauthorized');
-    //         }
-    // }else{
-    //     return res.status(401).send('Invalid User');
-    // }
-// router.put('/updateInterested/:id',(req,res,next)=>{
-//     // console.log("s");
-//     Product.updateInterested(req.params.id,(err,products)=>{
-//         if(err) throw err;
-//         return res.json(products);
-//     })
+    if (req.headers && req.headers.authorization) {
+        var authorization = req.headers.authorization.substring(4),
+            decoded;
+            try {
+                decoded = jwt.verify(authorization, config.secret);
+                console.log(decoded);
+                Product.findOneAndUpdate({"_id" : req.params.id},
+                {
+                    $push:{"intrested_ids": {user_id: decoded._id}}
+                },
+                { new : true },(err, user)=>{
+                    if(err){
+                        res.json({success: false, msg : "Failed, went somthing wrong "});
+                    }else{
+                        res.json({success: true, msg : "bid completed successfully"});
+                    }
+                });
+            } catch (e) {
+                return res.status(401).send('unauthorized');
+            }
+    }else{
+        return res.status(401).send('Invalid User');
+    }
+
 });
+
+router.get('/mynotifications/:id',(req,res,next)=>{
+    Product.getMyNotification(req.params.id, (err,user)=>{
+    if(err) throw err;
+    return res.json(user);
+    
+    })
+});    
 
 module.exports = router;

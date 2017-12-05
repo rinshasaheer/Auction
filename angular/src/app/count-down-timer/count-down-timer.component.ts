@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, OnDestroy } from '@angular/core';
+import { Component, ElementRef, OnInit, OnDestroy,EventEmitter } from '@angular/core';
 import { Observable, Subscription } from 'rxjs/Rx';
 
 @Component({
@@ -8,7 +8,8 @@ import { Observable, Subscription } from 'rxjs/Rx';
     {{message}}
   </div>
 `,
-inputs : ["inputDate"]
+inputs : ["inputDate"],
+outputs : ['onTimeOver']
 })
 export class CountDownTimerComponent implements OnInit, OnDestroy {
 
@@ -19,6 +20,7 @@ export class CountDownTimerComponent implements OnInit, OnDestroy {
     private subscription: Subscription;
     private message: string;
     private inputDate: string;
+    public onTimeOver = new EventEmitter();
 
     constructor(elm: ElementRef) {
         this.futureString = elm.nativeElement.getAttribute('inputDate');
@@ -33,12 +35,18 @@ export class CountDownTimerComponent implements OnInit, OnDestroy {
         minutes = Math.floor(t / 60) % 60;
         t -= minutes * 60;
         seconds = t % 60;
-        return [
-            // days + 'd',
-            hours + ':',
-            this.lpad(minutes) + ':',
-            this.lpad(seconds)
-        ].join('');
+        if(hours < 0){
+            this.subscription.unsubscribe();
+            this.onTimeOver.emit();
+            return "0:00:00";
+        }else{
+            return [
+                // days + 'd',
+                hours + ':',
+                this.lpad(minutes) + ':',
+                this.lpad(seconds)
+            ].join('');
+        }
     }
 
     lpad(num): string {

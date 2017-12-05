@@ -55,17 +55,46 @@ module.exports.addUser = function(newUser,callback){
 module.exports.getUserById = function(id,callback){
     User.findById(id,callback);
 }
+//all users
 module.exports.getUsers = function(callback){
-    User.find({role:'user'},callback);
+    User.find({role:'user',verified:'true'},callback);
+   
+}
+//all disabled users
+module.exports.getDisabledUsers = function(callback){
+    User.find({role:'user',block_status:'true',delete_status:'false'},callback);
+   
+}
+//all deleted users
+module.exports.getDeletedUsers = function(callback){
+    User.find({role:'user',delete_status:'true'},callback);
+   
+}
+//delete
+module.exports.deleteUser = function(id,callback){
+    User.findByIdAndUpdate(id,{delete_status:'true'},callback);
+}
+//block
+module.exports.blockUser = function(id,callback){
+    User.findByIdAndUpdate(id,{block_status:'true'},callback);
+}
+//unblock
+module.exports.unblockUser = function(id,callback){
+    User.findByIdAndUpdate(id,{block_status:'false'},callback);
+}
+
+
+
+module.exports.getUsers1 = function(callback){
+    User.find({},callback);
 }
 module.exports.getUserByUsername = function(email,callback){
     const query = { email: email}
     User.findOne(query,callback).lean();
 }
-module.exports.deleteUser = function(id,callback){
-    const query = {_id: id}
-    User.remove(query,callback).lean();
-}
+
+//module.exports.comparePassword = function(candPass,hash,callback){
+
 module.exports.comparePassword = function(candPass,hash,callback){
     // console.log(candPass, hash);
     //console.log(candPass, hash);

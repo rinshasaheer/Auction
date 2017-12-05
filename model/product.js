@@ -88,12 +88,14 @@ module.exports.getAllClosedProduct = function(callback){
 }
 module.exports.getAllUpcomingProduct = function(callback){
     Product.find({"start_date" : {"$gt" : Date()}},callback);
+
 }
 
 module.exports.deleteProduct = function(id,callback){
     const query = {_id: id}
     Product.remove(query,callback);
 }
+
 
 // module.exports.getProductById = function(id,callback){
 //     Product.findOne({_id: id},callback);
@@ -110,6 +112,13 @@ module.exports.getUpcomingAuctionProduct = function(callback){
     // console.log("q");
     Product.find({"start_date" : {"$gt" : new Date()}},callback);
 }
+
+module.exports.getMyNotification = function(id,callback){
+    // console.log("q");
+    Product.find({"bidders.user_id":id},callback);
+}
+
+
 
 module.exports.getFinishedAuctionProduct = function(callback){
     // pipeline : any;
@@ -186,8 +195,10 @@ module.exports.getMyAuctionProduct = function(id, callback){
 // module.exports.updateInterested = function(id, callback){
 //     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
 // }
+
 module.exports.getHighestBid = function(id, callback){
     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
 
 }
 // }    
+

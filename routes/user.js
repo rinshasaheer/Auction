@@ -80,15 +80,84 @@ router.post('/register',(req,res)=>{
 });
 });
 
-
-router.get('/users',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
+//all users
+router.get('/users',(req,res,next)=>{
     User.getUsers((err,user)=>{
+      //  console.log(user);
+       if(err) throw err;
+       return res.json(user);
+    })    
+});
+
+//all disabled users
+router.get('/disabledusers',(req,res,next)=>{
+    User.getDisabledUsers((err,user)=>{
         if(err) throw err;
         return res.json(user);
        
-    })
-    
+    })    
 });
+
+//all deleted users
+router.get('/deletedusers',(req,res,next)=>{
+    User.getDeletedUsers((err,user)=>{
+        if(err) throw err;
+        return res.json(user);
+        })
+  });
+
+//delete user
+router.delete('/delete/:id',(req,res,next)=>{
+    User.deleteUser(req.params.id,(err,user)=>{
+        if(err) throw err;
+        if(!user){
+            return res.json({success:false, msg: 'Faild to delete user'});
+        }else{
+            return res.json({success:true, msg: 'deleted successfully'});
+        }
+    })
+});
+
+
+//disable user
+router.delete('/disable/:id',(req,res,next)=>{
+    User.blockUser(req.params.id,(err,user)=>{
+        if(err) throw err;
+        if(!user){
+            return res.json({success:false, msg: 'Faild to disabled user'});
+        }else{
+            return res.json({success:true, msg: 'disabled successfully'});
+        }
+    })
+});
+
+//unblock
+router.delete('/unblock/:id',(req,res,next)=>{
+    User.unblockUser(req.params.id,(err,user)=>{
+        if(err) throw err;
+        if(!user){
+            return res.json({success:false, msg: 'Faild to unblocked user'});
+        }else{
+            return res.json({success:true, msg: 'unblocked successfully'});
+        }
+    })
+});
+
+
+
+//router.post('/authenticate',(req,res,next)=>{
+ //   const email = req.body.email;
+ //   const password = req.body.password;
+  //  User.getUserByUsername(email, (err,user)=>{
+
+//router.get('/users',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
+   // User.getUsers((err,user)=>{
+    //    if(err) throw err;
+    //    return res.json(user);
+       
+   // })
+    
+//});
 
 router.post('/authenticate',(req,res,next)=>{
     const email = req.body.email;
@@ -173,18 +242,23 @@ router.put('/genToken/:id', function(req, res){
 
 
 
+    
 
 router.get('/getemail',function(req,res){
-    console.log("user get");
-    User.getUsers((err,user)=>{
+    // console.log("user get");
+    User.getUsers1((err,user)=>{
+        user.forEach(function(i) {
+            // console.log(i.email);
+        
       
-        if(err){
+        // this.user.email.forEach((i) => {
+        //     console.log(i);
+        //   });
+       if(err){
             console.log("Error " + err);
         }else{
      
-
-
-            nodemailer.createTestAccount((err, account) => {
+     nodemailer.createTestAccount((err, account) => {
                 
                     // create reusable transporter object using the default SMTP transport
                    
@@ -192,7 +266,7 @@ router.get('/getemail',function(req,res){
                     // setup email data with unicode symbols
                     let mailOptions = {
                         from: 'mean.symptots@gmail.com', // sender address
-                        to: user.email,// list of receivers
+                        to: i.email, // list of receivers
                         subject: 'New Product Added for Auction', // Subject line
                         text: '', // plain text body
                         html: '<b><h3>Hi,</h3><br/>We add a new Product for bid.. Please login in to your account <br/> Thank You!</b>' // html body
@@ -200,7 +274,7 @@ router.get('/getemail',function(req,res){
                 
                     // send mail with defined transport object
                     transporter.sendMail(mailOptions, (error, info) => {
-                        console.log('mail');
+                        // console.log('mail');
                         if (error) {
                             console.log('error');
                              return console.log(error);
@@ -214,13 +288,54 @@ router.get('/getemail',function(req,res){
                     });
                 });
                 
-                return res.json(user);
+               
         
+        } 
+    });
+        return res.json(user);
+    
         
-           
-        }
     });
 });
+
+
+router.get('/users_id_as_index',(req,res,next)=>{
+    User.getUsers((err,user)=>{
+        if(err) throw err;
+        var users = {};
+        user.forEach((usr, i) => {
+            tmp = {};
+            tmp._id = usr._id;
+            tmp.name = usr.name;
+            tmp.email = usr.email;
+            tmp.date_tym = usr.date_tym;
+            users[usr._id] = tmp;
+        });
+        return res.json(users);
+       
+    })
+    
+});
+router.get('/get_loggedin_user',(req,res,next)=>{
+    if (req.headers && req.headers.authorization) {
+        var authorization = req.headers.authorization.substring(4),
+            decoded;
+            try {
+                decoded = jwt.verify(authorization, config.secret);
+                console.log(decoded);
+                res.json(decoded);
+            } catch (e) {
+                return res.status(401).send('unauthorized');
+            }
+    }else{
+        return res.status(401).send('Invalid User');
+    }
+    
+});
+
+
+
+
 
 
 // router.get('/getemail',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
