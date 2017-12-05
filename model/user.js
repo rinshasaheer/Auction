@@ -25,7 +25,16 @@ const UserSchema = mongoose.Schema({
     },
     date_tym : { type: Date, default: Date.now },
     role : { type: String, default: 'user' },
-    test_id:String
+    address : [{
+        pid : String,
+        name : String,
+        phone : String,
+        pin : String,
+        addr1 : String,
+        addr2 : String,
+        addr3 : String,
+        addr4 : String,
+    }]
 });
 
 const User = module.exports = mongoose.model('User', UserSchema,'users');
@@ -36,6 +45,7 @@ module.exports.addUser = function(newUser,callback){
         bcrypt.hash(newUser.password,salt,(err, hash) =>{
             if(err) throw err;
             newUser.password = hash;
+            
             newUser.save(callback);
         })
     })
@@ -64,3 +74,4 @@ module.exports.comparePassword = function(candPass,hash,callback){
         callback(null,isMatch);
     })
 }
+

@@ -13,6 +13,7 @@ export class ProductService {
     private _getUrl ='/products/products';
     private _deleteUrl ='/products/updatedel';
     private _getOneUrl ='/products/product/';
+    private _conStatusUrl ='/products/statusconfirm/';
     authToken = '';
   
     url = "http://localhost:3000/";
@@ -85,12 +86,22 @@ export class ProductService {
   getProduct(id){
     let headers = new Headers({ 'Content-Type' : 'application/json'});
     let options = new RequestOptions({ headers : headers});
-    console.log(this._getOneUrl+id);
+    // console.log(this._getOneUrl+id);
     return this.http.get(this._getOneUrl + id,options)
       .map((response : Response) => response.json());
   }
 
   loadToken(){
     this.authToken = localStorage.getItem('id_token');
+  }
+
+  updateStatusConfirm(pid){
+    let headers = new Headers();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    let options = new RequestOptions({ headers : headers});
+    return this.http.put(this._conStatusUrl+pid,{},{ headers : headers})
+    .map((response : Response) => response.json());
   }
 }

@@ -29,40 +29,55 @@ router.post('/register',(req,res)=>{
         role: (req.body.role) ? req.body.role: 'user' ,
 
     });
-    User.addUser(newUser,(err, user)=>{
-       
-        if(err){
+
+    User.find({ name: req.body.name }, function (err, doc){
+        if(doc.length!=0){
             res.json({success: false, msg : "Failed"});
-        }else{
-            nodemailer.createTestAccount((err, account) => {
-                
-                    // create reusable transporter object using the default SMTP transport
-                
-                    // setup email data with unicode symbols
-                    let mailOptions = {
-                        from: 'mean.symptots@gmail.com', // sender address
-                        to: req.body.email, // list of receivers
-                        subject: 'Please log in to your account', // Subject line
-                        text: '', // plain text body
-                        html: '<b><h3>Hi Rinsha,</h3><br/>We’re excited to get you started using Auction! You’re on your way to being fully set up, but first, you must finish your account verification by clicking the below link:<br/>Username: '+req.body.email+'<br/>Password: '+req.body.password+'<br/>Verification Link:</a> http://192.168.1.9:3000/email-verification/'+req.body.verification_code+'</a><br/> Thank You!</b>' // html body
-                    };
-                
-                    // send mail with defined transport object
-                    transporter.sendMail(mailOptions, (error, info) => {
-                        if (error) {
-                            // return console.log(error);
-                        }
-                        // console.log('Message sent: %s', info.messageId);
-                        
-                        // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-                
-                        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
-                        // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-                    });
-                });
-            res.json({success: true, msg : "User registered, Redirecting..."});
         }
+        else{
+            User.find( { $and: [ { email: req.body.email}, {google: {$exists: false }}, {facebook : {$exists: false }} ] } , function (err, doc){
+                if(doc.length!=0){
+                    res.json({success: false, msg : "Failed"});
+                }
+                else{
+                    User.addUser(newUser,(err, user)=>{
+       
+                        if(err){
+                            res.json({success: false, msg : "Failed"});
+                        }else{
+                            nodemailer.createTestAccount((err, account) => {
+                                
+                                    // create reusable transporter object using the default SMTP transport
+                                
+                                    // setup email data with unicode symbols
+                                    let mailOptions = {
+                                        from: 'mean.symptots@gmail.com', // sender address
+                                        to: req.body.email, // list of receivers
+                                        subject: 'Please log in to your account', // Subject line
+                                        text: '', // plain text body
+                                        html: '<b><h3>Hi Rinsha,</h3><br/>We’re excited to get you started using Auction! You’re on your way to being fully set up, but first, you must finish your account verification by clicking the below link:<br/>Username: '+req.body.email+'<br/>Password: '+req.body.password+'<br/>Verification Link:</a> http://192.168.1.9:3000/email-verification/'+req.body.verification_code+'</a><br/> Thank You!</b>' // html body
+                                    };
+                                
+                                    // send mail with defined transport object
+                                    transporter.sendMail(mailOptions, (error, info) => {
+                            if (error) {
+                                // return console.log(error);
+                            }
+                            // console.log('Message sent: %s', info.messageId);
+                            
+                            // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+                    
+                            // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
+                            // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+                        });
+                    });
+                res.json({success: true, msg : "User registered, Redirecting..."});
+            }
     });
+}
+});
+}
+});
 });
 
 
@@ -208,12 +223,6 @@ router.get('/getemail',function(req,res){
 });
 
 
-
-
-
-
-
-
 // router.get('/getemail',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
 //     console.log("here");
 //     User.getUsers((err,user)=>{
@@ -254,25 +263,32 @@ router.get('/getemail',function(req,res){
     
 // });
 
-router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),function(req,res){
-    
-        console.log(req.body);
+router.put('/saveAddress',passport.authenticate('jwt',{session:false}),function(req,res){
     
         if (req.headers && req.headers.authorization) {
             var authorization = req.headers.authorization.substring(4),
                 decoded;
                 try {
                     decoded = jwt.verify(authorization, config.secret);
-                    console.log(decoded);
-                    Product.findOneAndUpdate({"_id" : req.body.pid},
+                    // console.log(decoded);
+                    User.findOneAndUpdate({"_id" : decoded._id},
                     {
-                        $push:{"bidders": {user_id: decoded._id, amount:req.body.amount }}
+                        $push:{"address": {pid: req.body.pid,
+                             name:req.body.name,
+                             phone:req.body.phone,
+                             pin:req.body.pin,
+                             addr1:req.body.addr1,
+                             addr2:req.body.addr2,
+                             addr3:req.body.addr3,
+                             addr4:req.body.addr4,
+                             }}
                     },
-                    { new : true },(err, user)=>{
+                    { new : true },
+                    (err, user)=>{
                         if(err){
                             res.json({success: false, msg : "Failed, went somthing wrong "});
                         }else{
-                            res.json({success: true, msg : "bid completed successfully"});
+                            res.json({success: true, msg : "Address saved successfully"});
                         }
                     });
                 } catch (e) {

@@ -49,7 +49,7 @@
      
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !addr2.valid }" >
                 <label > Colony / Street / Locality:  </label>
-                <input type="text"  name="addr2" #addr2="ngModel" [(ngModel)]="newproduct.add2" class="form-control" required  />
+                <input type="text"  name="addr2" #addr2="ngModel" [(ngModel)]="newproduct.addr2" class="form-control" required  />
                 <div *ngIf="f.submitted && !addr2.valid" class="help-block">! Required</div>
         </div>
      
