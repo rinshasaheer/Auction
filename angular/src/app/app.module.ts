@@ -58,6 +58,7 @@ import { ManageProductComponent } from './manage-product/manage-product.componen
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductPipe } from './product.pipe';
 // import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+
 const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
@@ -91,6 +92,7 @@ const appRoutes: Routes = [
   {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
   {path:'running-auction', component:RunningAuctionBackComponent},
   {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
+
 ]
 
 @NgModule({
@@ -103,7 +105,6 @@ const appRoutes: Routes = [
     ManageProductComponent,
     ProductDetailComponent,
     LoginComponent,
-    RegistrationComponent,
     NavigationComponent,
     HomeComponent,
     CardComponent,
@@ -143,6 +144,19 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     // DataTablesModule,
     ImageUploadModule,
+    // NKDatetimeModule,
+    NKDatetimeModule,
+    //  DataTablesModule
+    // Ng2DatetimePickerModule
+    BrowserModule,
+    // DataTablesModule,
+    FormsModule,
+    ReactiveFormsModule,
+    Ng2PageScrollModule,
+    HttpModule,
+    RouterModule.forRoot(appRoutes),
+    // DataTablesModule,
+    // ImageUploadModule,
     // NKDatetimeModule,
     NKDatetimeModule,
     //  DataTablesModule

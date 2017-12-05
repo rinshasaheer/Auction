@@ -296,7 +296,6 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_46__manage_product_manage_product_component__["a" /* ManageProductComponent */],
             __WEBPACK_IMPORTED_MODULE_47__product_detail_product_detail_component__["a" /* ProductDetailComponent */],
             __WEBPACK_IMPORTED_MODULE_27__login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_41__registration_registration_component__["a" /* RegistrationComponent */],
             __WEBPACK_IMPORTED_MODULE_17__navigation_navigation_component__["a" /* NavigationComponent */],
             __WEBPACK_IMPORTED_MODULE_18__home_home_component__["a" /* HomeComponent */],
             __WEBPACK_IMPORTED_MODULE_19__card_card_component__["a" /* CardComponent */],
@@ -335,6 +334,19 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_5__angular_router__["f" /* RouterModule */].forRoot(appRoutes),
             // DataTablesModule,
             __WEBPACK_IMPORTED_MODULE_42_angular2_image_upload__["a" /* ImageUploadModule */],
+            // NKDatetimeModule,
+            __WEBPACK_IMPORTED_MODULE_43_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
+            //  DataTablesModule
+            // Ng2DatetimePickerModule
+            __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
+            // DataTablesModule,
+            __WEBPACK_IMPORTED_MODULE_8__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_8__angular_forms__["d" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_21_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_http__["HttpModule"],
+            __WEBPACK_IMPORTED_MODULE_5__angular_router__["f" /* RouterModule */].forRoot(appRoutes),
+            // DataTablesModule,
+            // ImageUploadModule,
             // NKDatetimeModule,
             __WEBPACK_IMPORTED_MODULE_43_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
         ],
@@ -605,6 +617,9 @@ var CardComponent = (function () {
         // o.sort(function(a, b){return a.value-b.value});
     };
     CardComponent.prototype.updateInterested = function (id) {
+        this._productService.addInterestedCandidate(id).subscribe(function (data) {
+            console.log(data);
+        });
     };
     return CardComponent;
 }());
@@ -2431,6 +2446,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ProductServiceService = (function () {
     function ProductServiceService(_http) {
         this._http = _http;
+        this.authToken = '';
     }
     ProductServiceService.prototype.loadClosedProduct = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
@@ -2457,10 +2473,16 @@ var ProductServiceService = (function () {
             .map(function (res) { return res.json(); });
     };
     ProductServiceService.prototype.addInterestedCandidate = function (id) {
+        // console.log("d");
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        this.loadToken();
+        headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this._http.get('http://localhost:3000/products/updateInterested/' + id, { headers: headers })
+        return this._http.put('http://localhost:3000/products/updateInterested/' + id, { headers: headers })
             .map(function (res) { return res.json(); });
+    };
+    ProductServiceService.prototype.loadToken = function () {
+        this.authToken = localStorage.getItem('id_token');
     };
     return ProductServiceService;
 }());
@@ -2501,7 +2523,8 @@ var ProductService = (function () {
         this._postUrl = '/products/addnew';
         this._putUrl = '/products/update/';
         this._getUrl = '/products/products';
-        this._deleteUrl = '/products/updatedel/';
+        this._deleteUrl = '/products/updatedel';
+        this._getOneUrl = '/products/product/';
         this.authToken = '';
         this.url = "http://localhost:3000/";
     }
@@ -2556,6 +2579,13 @@ var ProductService = (function () {
         headers.append('Content-Type', 'application/json');
         return this.http.put(this.url + 'products/bid_a_product', data, { headers: headers })
             .map(function (res) { return res.json(); });
+    };
+    ProductService.prototype.getProduct = function (id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({ headers: headers });
+        console.log(this._getOneUrl + id);
+        return this.http.get(this._getOneUrl + id, options)
+            .map(function (response) { return response.json(); });
     };
     ProductService.prototype.loadToken = function () {
         this.authToken = localStorage.getItem('id_token');
@@ -3029,7 +3059,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".cont{\r\n margin-top: 170px;\r\n}", ""]);
 
 // exports
 
@@ -3042,7 +3072,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/winnerconfirm/winnerconfirm.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navigation></app-navigation>\r\n"
+module.exports = "<app-navigation></app-navigation>\r\n<div class=\"container cont\">\r\n    <div *ngIf=\"!isConfirm\">\r\n    <h3>Do you wish to continue ..?</h3>\r\n    <button type=\"button\" (click)=\"confirmed()\" class=\"btn btn-default\">Confirm</button> \r\n    <button type=\"button\" (click)=\"rejected()\" class=\"btn btn-default\">Reject</button> \r\n</div>\r\n<br>\r\n <div class=\"col-md-9 shadow\" *ngIf=\"isConfirm\">\r\n        <h3>Add a delivery address</h3>\r\n    <br>\r\n    <form #f='ngForm' class=\"well\"  role=\"form\" (ngSubmit)=\"f.form.valid && onWinnerConfirm();\" novalidate >\r\n        \r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !name.valid }\" >\r\n            <label > Name :</label>\r\n            <input type=\"text\"  name=\"name\" #name=\"ngModel\" [(ngModel)]=\"newproduct.name\" class=\"form-control\" required  />\r\n            <div *ngIf=\"f.submitted && !name.valid\" class=\"help-block\">! Required</div>\r\n        </div>\r\n\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !phone.valid }\"> \r\n                <!-- <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\"> -->\r\n                <label >Phone Number :</label> \r\n                  <input type=\"text\" class=\"form-control\" minlength=\"10\" maxlength=\"10\" pattern=\"^\\d{9}|^\\d{3}-\\d{3}-\\d{3}|^\\d{3}\\s\\d{3}\\s\\d{3}\" required [(ngModel)]=\"newproduct.phone\" name=\"phone\" #phone=\"ngModel\">\r\n                  <div *ngIf=\"f.submitted && phone.invalid\">\r\n                    <div *ngIf=\"phone.errors.minlength || phone.errors.maxlength\" class=\"help-block\">! Phone Number should be 10 digits</div>\r\n                    <div *ngIf=\"phone.errors.required\" class=\"help-block\">! Required</div>\r\n                    <div *ngIf=\"phone.errors.pattern\" class=\"help-block\">! Valid Phone Number is required</div>\r\n                  </div> \r\n                <!-- </div> -->\r\n        </div> \r\n\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !pin.valid }\"> \r\n                <!-- <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\"> -->\r\n                <label >Pincode :</label> \r\n                  <input type=\"text\" class=\"form-control\" minlength=\"6\" maxlength=\"6\" pattern=\"^[1-9][0-9]{5}$\" required [(ngModel)]=\"newproduct.pin\" name=\"pin\" #pin=\"ngModel\">\r\n                  <div *ngIf=\"f.submitted && pin.invalid\">\r\n                    <div *ngIf=\"pin.errors.minlength || pin.errors.maxlength\" class=\"help-block\">! Pincode should be 10 digits</div>\r\n                    <div *ngIf=\"pin.errors.required\" class=\"help-block\">! Required</div>\r\n                    <div *ngIf=\"pin.errors.pattern\" class=\"help-block\">! Valid Pincode is required</div>\r\n                  </div> \r\n                <!-- </div> -->\r\n        </div> \r\n\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr1.valid }\" >\r\n                <label > Flat / House No. / Floor / Building: </label>\r\n                <input type=\"text\"  name=\"addr1\" #addr1=\"ngModel\" [(ngModel)]=\"newproduct.addr1\" class=\"form-control\" required  />\r\n                <div *ngIf=\"f.submitted && !addr1.valid\" class=\"help-block\">! Required</div>\r\n        </div>\r\n     \r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr2.valid }\" >\r\n                <label > Colony / Street / Locality:  </label>\r\n                <input type=\"text\"  name=\"addr2\" #addr2=\"ngModel\" [(ngModel)]=\"newproduct.add2\" class=\"form-control\" required  />\r\n                <div *ngIf=\"f.submitted && !addr2.valid\" class=\"help-block\">! Required</div>\r\n        </div>\r\n     \r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr3.valid }\" >\r\n                <label > Town/City:  </label>\r\n                <input type=\"text\"  name=\"addr3\" #addr3=\"ngModel\" [(ngModel)]=\"newproduct.addr3\" class=\"form-control\" required  />\r\n                <div *ngIf=\"f.submitted && !addr3.valid\" class=\"help-block\">! Required</div>\r\n        </div>\r\n     \r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr4.valid }\" >\r\n                <label > State :  </label>\r\n                <input type=\"text\"  name=\"addr4\" #addr4=\"ngModel\" [(ngModel)]=\"newproduct.addr4\" class=\"form-control\" required  />\r\n                <div *ngIf=\"f.submitted && !addr4.valid\" class=\"help-block\">! Required</div>\r\n        </div>\r\n\r\n        <button type=\"submit\" class=\"btn btn-primary\">Deliver to this address</button> \r\n \r\n       \r\n    </form>\r\n\r\n  </div>\r\n  </div>"
 
 /***/ }),
 
@@ -3054,6 +3084,7 @@ module.exports = "<app-navigation></app-navigation>\r\n"
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3066,16 +3097,43 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var WinnerconfirmComponent = (function () {
-    function WinnerconfirmComponent(userService, route, router) {
+    function WinnerconfirmComponent(userService, productService, route, router) {
         this.userService = userService;
+        this.productService = productService;
         this.route = route;
         this.router = router;
+        this.isConfirm = false;
+        this.newproduct = {
+            name: '',
+            pin: '',
+            phone: '',
+            addr1: '',
+            addr2: '',
+            addr3: '',
+            addr4: '',
+        };
     }
     WinnerconfirmComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.sub = this.route.params.subscribe(function (params) {
-            console.log(params.id);
+            // console.log(params.id);
+            _this.productService.getProduct(params.id).subscribe(function (data) {
+                console.log(data);
+                //check here that the user is proper
+            });
         });
+    };
+    WinnerconfirmComponent.prototype.confirmed = function () {
+        this.isConfirm = true;
+        //update status
+    };
+    WinnerconfirmComponent.prototype.rejected = function () {
+        //update status n send mail to second person
+    };
+    WinnerconfirmComponent.prototype.onWinnerConfirm = function () {
+        console.log("hello");
     };
     return WinnerconfirmComponent;
 }());
@@ -3085,10 +3143,10 @@ WinnerconfirmComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.html"),
         styles: [__webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_product_service__["a" /* ProductService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */]) === "function" && _d || Object])
 ], WinnerconfirmComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=winnerconfirm.component.js.map
 
 /***/ }),
