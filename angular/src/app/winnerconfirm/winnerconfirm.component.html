@@ -1,1 +1,74 @@
 <app-navigation></app-navigation>
+<div class="container cont">
+    <div *ngIf="!isConfirm">
+    <h3>Do you wish to continue ..?</h3>
+    <button type="button" (click)="confirmed()" class="btn btn-default">Confirm</button> 
+    <button type="button" (click)="rejected()" class="btn btn-default">Reject</button> 
+</div>
+<br>
+ <div class="col-md-9 shadow" *ngIf="isConfirm">
+        <h3>Add a delivery address</h3>
+    <br>
+    <form #f='ngForm' class="well"  role="form" (ngSubmit)="f.form.valid && onWinnerConfirm();" novalidate >
+        
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !name.valid }" >
+            <label > Name :</label>
+            <input type="text"  name="name" #name="ngModel" [(ngModel)]="newproduct.name" class="form-control" required  />
+            <div *ngIf="f.submitted && !name.valid" class="help-block">! Required</div>
+        </div>
+
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !phone.valid }"> 
+                <!-- <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2"> -->
+                <label >Phone Number :</label> 
+                  <input type="text" class="form-control" minlength="10" maxlength="10" pattern="^\d{9}|^\d{3}-\d{3}-\d{3}|^\d{3}\s\d{3}\s\d{3}" required [(ngModel)]="newproduct.phone" name="phone" #phone="ngModel">
+                  <div *ngIf="f.submitted && phone.invalid">
+                    <div *ngIf="phone.errors.minlength || phone.errors.maxlength" class="help-block">! Phone Number should be 10 digits</div>
+                    <div *ngIf="phone.errors.required" class="help-block">! Required</div>
+                    <div *ngIf="phone.errors.pattern" class="help-block">! Valid Phone Number is required</div>
+                  </div> 
+                <!-- </div> -->
+        </div> 
+
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !pin.valid }"> 
+                <!-- <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2"> -->
+                <label >Pincode :</label> 
+                  <input type="text" class="form-control" minlength="6" maxlength="6" pattern="^[1-9][0-9]{5}$" required [(ngModel)]="newproduct.pin" name="pin" #pin="ngModel">
+                  <div *ngIf="f.submitted && pin.invalid">
+                    <div *ngIf="pin.errors.minlength || pin.errors.maxlength" class="help-block">! Pincode should be 10 digits</div>
+                    <div *ngIf="pin.errors.required" class="help-block">! Required</div>
+                    <div *ngIf="pin.errors.pattern" class="help-block">! Valid Pincode is required</div>
+                  </div> 
+                <!-- </div> -->
+        </div> 
+
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !addr1.valid }" >
+                <label > Flat / House No. / Floor / Building: </label>
+                <input type="text"  name="addr1" #addr1="ngModel" [(ngModel)]="newproduct.addr1" class="form-control" required  />
+                <div *ngIf="f.submitted && !addr1.valid" class="help-block">! Required</div>
+        </div>
+     
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !addr2.valid }" >
+                <label > Colony / Street / Locality:  </label>
+                <input type="text"  name="addr2" #addr2="ngModel" [(ngModel)]="newproduct.add2" class="form-control" required  />
+                <div *ngIf="f.submitted && !addr2.valid" class="help-block">! Required</div>
+        </div>
+     
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !addr3.valid }" >
+                <label > Town/City:  </label>
+                <input type="text"  name="addr3" #addr3="ngModel" [(ngModel)]="newproduct.addr3" class="form-control" required  />
+                <div *ngIf="f.submitted && !addr3.valid" class="help-block">! Required</div>
+        </div>
+     
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !addr4.valid }" >
+                <label > State :  </label>
+                <input type="text"  name="addr4" #addr4="ngModel" [(ngModel)]="newproduct.addr4" class="form-control" required  />
+                <div *ngIf="f.submitted && !addr4.valid" class="help-block">! Required</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Deliver to this address</button> 
+ 
+       
+    </form>
+
+  </div>
+  </div>

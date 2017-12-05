@@ -9,6 +9,7 @@ import { Router} from '@angular/router';
   styleUrls: ['./runningauction.component.css']
 })
 export class RunningauctionComponent implements OnInit {
+  user : any;
   users : object;
   products: object;
   winnerId : object;
@@ -20,6 +21,10 @@ export class RunningauctionComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(data=>{
+        this.user = data;
+        console.log(this.user._id);
+    });
     this.userService.getAllUsersById().subscribe(data=>{
         this.users = data;
     });
@@ -28,17 +33,21 @@ export class RunningauctionComponent implements OnInit {
          var lastBidprice = item.bid_amount;
          var lastBiduser = '';
          var lastBidTime = '';
+         var lastBiduserId = '';
  
          item.bidders.forEach((user, i) => {
            if(user.amount >= lastBidprice){
               lastBidprice = user.amount;
               lastBiduser = this.users[user.user_id].name;
+              lastBiduserId = this.users[user.user_id]._id;
               lastBidTime = user.date_time;
            }
          });
          data[index].lastBidprice = lastBidprice;
          data[index].lastBiduser = lastBiduser;
          data[index].lastBidTime = lastBidTime;
+         data[index].lastBiduserId = lastBiduserId;
+         data[index].mybid = (lastBiduserId == this.user._id) ? true:false ;
        });
        this.products = data;
      });

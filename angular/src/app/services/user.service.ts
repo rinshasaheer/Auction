@@ -80,4 +80,17 @@ export class UserService {
     .map(res =>res.json());
   }
 
+  loadToken(){
+    this.authToken = localStorage.getItem('id_token');
+  }
+
+  getLoggedUSerDetails(){
+    let headers = new Headers();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    return this.http.get(this.url + 'user/get_loggedin_user',{headers:headers})
+    .map(res =>res.json());
+  }
+
 }

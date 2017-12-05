@@ -57,6 +57,7 @@ module.exports.deleteUser = function(id,callback){
     User.remove(query,callback).lean();
 }
 module.exports.comparePassword = function(candPass,hash,callback){
+    // console.log(candPass, hash);
     //console.log(candPass, hash);
     bcrypt.compare(candPass,hash, (err, isMatch)=>{
         if(err) throw err;

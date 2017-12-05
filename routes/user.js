@@ -18,8 +18,6 @@ let transporter = nodemailer.createTransport({
 });
 
 
-
-
 router.post('/register',(req,res)=>{
     // console.log(req.body);
     let newUser = new User({
@@ -80,12 +78,13 @@ router.get('/users',passport.authenticate('jwt',{session:false}),(req,res,next)=
 router.post('/authenticate',(req,res,next)=>{
     const email = req.body.email;
     const password = req.body.password;
-    User.findOne({email:email}, (err,user)=>{
+    // User.findOne({email:email}, (err,user)=>{
+    User.findOne({ $and: [ { email: email},{ google: null}, {facebook : null} ] }, (err,user)=>{
         if(err) throw err;
         if(!user){
             return res.json({success:false, msg: 'User Not found'});
         }
-        console.log(user);
+        // console.log(user);
         User.comparePassword(password, user.password,(err, isMatch)=>{
             if(err) throw err;
             if(isMatch){
@@ -181,7 +180,7 @@ router.get('/getemail',function(req,res){
                         to: user.email,// list of receivers
                         subject: 'New Product Added for Auction', // Subject line
                         text: '', // plain text body
-                        html: '<b><h3>Hi,</h3><br/>We add a new Product for bid.. Plese login in to your account <br/> Thank You!</b>' // html body
+                        html: '<b><h3>Hi,</h3><br/>We add a new Product for bid.. Please login in to your account <br/> Thank You!</b>' // html body
                     };
                 
                     // send mail with defined transport object
@@ -224,6 +223,22 @@ router.get('/users_id_as_index',(req,res,next)=>{
         return res.json(users);
        
     })
+    
+});
+router.get('/get_loggedin_user',(req,res,next)=>{
+    if (req.headers && req.headers.authorization) {
+        var authorization = req.headers.authorization.substring(4),
+            decoded;
+            try {
+                decoded = jwt.verify(authorization, config.secret);
+                console.log(decoded);
+                res.json(decoded);
+            } catch (e) {
+                return res.status(401).send('unauthorized');
+            }
+    }else{
+        return res.status(401).send('Invalid User');
+    }
     
 });
 
