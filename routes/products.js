@@ -357,7 +357,7 @@ router.put('/statusconfirm/:id',(req,res,next)=>{
                         });
                         //  console.log(id1,high_amount,user_id1);
                          Product.findOneAndUpdate({"bidders._id" : id1},
-                            { $set: {  "is_bid_completed" : true, "bidders.$.bid_status" : "confirmed","user_notification.status" : false}},
+                            { $set: {  "is_bid_completed" : true, "bidders.$.bid_status" : "confirmed","user_notification.status" : false }},
                             { new: true }, 
                             function(err, doc) {
                                 if(err) throw err;

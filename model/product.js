@@ -71,6 +71,17 @@ const ProductsSchema = mongoose.Schema({
                 default : true,
             }
         },
+        admin_notification : {
+            user_id : Schema.ObjectId ,
+            status : {
+                type : Boolean,
+                default : true,
+            },
+            is_viewed : {
+                type : Boolean,
+                default :falsetrue,
+            },
+        },
 });
 
 const Product = module.exports = mongoose.model('Product', ProductsSchema);
