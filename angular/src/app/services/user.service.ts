@@ -154,4 +154,12 @@ unblockUser(id){
     .map(res =>res.json());
   }
 
+  sendMailtoWinner(user_id,pid){
+    let user = {"_id" : user_id, "pid" : pid};
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.put(this.url + 'user/sendmailtowinner/'+user_id,JSON.stringify(user),{headers:headers})
+    .map(res =>res.json());
+  }
+
 }

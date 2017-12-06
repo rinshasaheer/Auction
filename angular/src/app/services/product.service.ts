@@ -14,6 +14,7 @@ export class ProductService {
     private _deleteUrl ='/products/updatedel';
     private _getOneUrl ='/products/product/';
     private _conStatusUrl ='/products/statusconfirm/';
+    private _rejStatusUrl ='/products/statusreject/';
     authToken = '';
   
     url = "http://localhost:3000/";
@@ -103,6 +104,16 @@ export class ProductService {
     headers.append('Content-Type', 'application/json');
     let options = new RequestOptions({ headers : headers});
     return this.http.put(this._conStatusUrl+pid,{},{ headers : headers})
+    .map((response : Response) => response.json());
+  }
+
+  updateStatusReject(pid){
+    let headers = new Headers();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    let options = new RequestOptions({ headers : headers});
+    return this.http.put(this._rejStatusUrl+pid,{},{ headers : headers})
     .map((response : Response) => response.json());
   }
 }

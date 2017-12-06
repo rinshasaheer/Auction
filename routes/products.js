@@ -7,6 +7,17 @@ const User = require("../model/user");
 const passport = require("passport");
 const pro = require('../model/product');
 const jwt = require("jsonwebtoken");
+'use strict';
+
+// router.post('/addnew',(req,res,next)=>{
+const nodemailer = require('nodemailer');
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: "mean.symptots@gmail.com", // generated ethereal user
+        pass: "Symptots@2017"  // generated ethereal password
+    }
+});
 
 
 //     prodObj = {
@@ -286,37 +297,6 @@ router.get('/myauctionproduct/:id',(req,res,next)=>{
     })
 });
 
-router.put('/statusconfirm/:id',(req,res,next)=>{
-    if (req.headers && req.headers.authorization) {
-        var authorization = req.headers.authorization.substring(4),
-            decoded;
-            //try {
-                decoded = jwt.verify(authorization, config.secret);
-                // console.log(decoded);
-                Product.findOneAndUpdate( { "_id": req.params.id, 'bidders.user_id' : decoded._id},
-                // Product.findOne( { "_id": req.params.id, "bidders.user_id": decoded._id} ,
-                    { $set: {  "is_bid_completed" : true
-                    // , 'bidders.$.bid_status' : "confirmed"}},
-                                , bidders : {bid_status: "confirmed"} } }, 
-                { new: true }, 
-                function(err, doc) {
-                    console.log(doc);
-                    if(doc==null){
-                        return res.json({success:false, msg: 'Error'});
-                    }
-                    else{
-                        return res.json({success:true, msg: 'Confirmed'});
-                    }
-                
-                });
-            // }catch (e) {
-            //     return res.status(401).send('unauthorized123');
-            // }
-        }else{
-            return res.status(401).send('Invalid User');
-        }
-});
-
 router.put('/updateInterested/:id',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
     console.log("uInter");
     if (req.headers && req.headers.authorization) {
@@ -352,5 +332,93 @@ router.get('/mynotifications/:id',(req,res,next)=>{
     
     })
 });    
+
+router.put('/statusconfirm/:id',(req,res,next)=>{
+    if (req.headers && req.headers.authorization) {
+        var authorization = req.headers.authorization.substring(4),
+            decoded;
+            //try {
+                decoded = jwt.verify(authorization, config.secret);
+                Product.findById(req.params.id, (err, data) => {
+                    if(err) throw err;
+                    else{
+                        // console.log(data);
+                        var temp, high_amount = 0;
+                        data.bidders.forEach(function(item) {
+                            if(item.bid_status != "confirmed" && item.bid_status != "rejected"){
+                                         temp = item.amount;
+                                        //  console.log(temp);
+                                         if(high_amount <= temp ){
+                                           high_amount = temp;
+                                           user_id1 = item.user_id;
+                                           id1= item._id;
+                                         }
+                                   } 
+                        });
+                        //  console.log(id1,high_amount,user_id1);
+                         Product.findOneAndUpdate({"bidders._id" : id1},
+                            { $set: {  "is_bid_completed" : true, "bidders.$.bid_status" : "confirmed"}},
+                            { new: true }, 
+                            function(err, doc) {
+                                if(err) throw err;
+                                // console.log(doc);
+                                if(doc==null){
+                                    return res.json({success:false, msg: 'Error'});
+                                }
+                                else{
+                                    return res.json({success:true, msg: 'Confirmed'});
+                                }
+                         });
+                    }
+                })
+    }else{
+        return res.status(401).send('Invalid User');
+    }
+});
+
+router.put('/statusreject/:id',(req,res,next)=>{
+    if (req.headers && req.headers.authorization) {
+        var authorization = req.headers.authorization.substring(4),
+            decoded;
+            //try {
+                decoded = jwt.verify(authorization, config.secret);
+                Product.findById(req.params.id, (err, data) => {
+                    if(err) throw err;
+                    else{
+                        // console.log(data);
+                        var temp, high_amount = 0;
+                        id1 = '';
+                        data.bidders.forEach(function(item) {
+                            if(item.bid_status != "confirmed" && item.bid_status != "rejected"){
+                                         temp = item.amount;
+                                        //  console.log(temp);
+                                         if(high_amount <= temp ){
+                                           high_amount = temp;
+                                           user_id1 = item.user_id;
+                                           id1= item._id;
+                                         }
+                                   } 
+                        });
+                         console.log(id1);
+                         Product.findOneAndUpdate({"bidders._id" : id1},
+                            { $set: {"bidders.$.bid_status" : "rejected"}},
+                            { new: true }, 
+                            function(err, doc) {
+                                if(err) throw err;
+                                // console.log(doc);
+                                if(doc==null){
+                                    return res.json({success:false, msg: 'Error'});
+                                }
+                                else{
+                                    return res.json(doc);
+
+                                }
+                         });
+                    }
+                })
+    }else{
+        return res.status(401).send('Invalid User');
+    }
+});
 
 module.exports = router;

@@ -55,7 +55,7 @@ router.post('/register',(req,res)=>{
                                         to: req.body.email, // list of receivers
                                         subject: 'Please log in to your account', // Subject line
                                         text: '', // plain text body
-                                        html: '<b><h3>Hi Rinsha,</h3><br/>We’re excited to get you started using Auction! You’re on your way to being fully set up, but first, you must finish your account verification by clicking the below link:<br/>Username: '+req.body.email+'<br/>Password: '+req.body.password+'<br/>Verification Link:</a> http://192.168.1.9:3000/email-verification/'+req.body.verification_code+'</a><br/> Thank You!</b>' // html body
+                                        html: '<b><h3>Hi '+req.body.name+' ,</h3><br/>We’re excited to get you started using Auction! You’re on your way to being fully set up, but first, you must finish your account verification by clicking the below link:<br/>Username: '+req.body.email+'<br/>Password: '+req.body.password+'<br/>Verification Link:</a> http://192.168.1.9:3000/email-verification/'+req.body.verification_code+'</a><br/> Thank You!</b>' // html body
                                     };
                                 
                                     // send mail with defined transport object
@@ -414,6 +414,31 @@ router.put('/saveAddress',passport.authenticate('jwt',{session:false}),function(
         }
     
     });
+
+router.put('/sendmailtowinner/:id',(req,res,next)=>{
+    console.log(req);
+    User.findOne({"_id":req.params.id}, (err,user)=>{
+    if(err) throw err;
+    else{
+        nodemailer.createTestAccount((err, account) => {
+            let mailOptions = {
+                from: 'mean.symptots@gmail.com', // sender address
+                to: user.email,
+                subject: 'Congratulations! You have won an auction', // Subject line
+                text: '', // plain text body
+                html: '<b><h3>Hi,</h3><br/>You have won an auction. Please click the below link to confirm your product. <br/></a> http://192.168.1.9:3000/email-verification/'+req.body.pid+'</a><br/> Thank You!</b>' // html body
+            };
+            transporter.sendMail(mailOptions, (error, info) => {
+                if (error) {
+                    // console.log('error');
+                     return console.log(error);
+                }
+               
+            });
+        });
+    }
+    });
+});    
 
 module.exports = router;
 
