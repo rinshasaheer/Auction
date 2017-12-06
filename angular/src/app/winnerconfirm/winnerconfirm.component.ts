@@ -81,6 +81,9 @@ export class WinnerconfirmComponent implements OnInit {
     //  console.log(this.user_id1);
      this.userService.sendMailtoWinner(this.user_id1, this.newproduct.pid).subscribe(data2 =>{
      });
+     this.productService.updateNotif(this.user_id1, this.newproduct.pid).subscribe(data5 =>{
+     });
+
      alert("Success...");
      this.router.navigate(['/home']);
     });

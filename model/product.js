@@ -64,7 +64,13 @@ const ProductsSchema = mongoose.Schema({
             type: Boolean,
             default: false
         },
-       test_id:String
+        user_notification : {
+            user_id : Schema.ObjectId ,
+            status : {
+                type : Boolean,
+                default : true,
+            }
+        },
 });
 
 const Product = module.exports = mongoose.model('Product', ProductsSchema);

@@ -4,7 +4,6 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ProductServiceService {
-
   authToken = '';
   authUser : any;
   constructor(private _http: Http) { }
@@ -67,4 +66,5 @@ export class ProductServiceService {
     this.authUser = JSON.parse(localStorage.getItem('user'));
     return this.authUser.id;
   }
+
 }

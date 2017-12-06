@@ -357,7 +357,7 @@ router.put('/statusconfirm/:id',(req,res,next)=>{
                         });
                         //  console.log(id1,high_amount,user_id1);
                          Product.findOneAndUpdate({"bidders._id" : id1},
-                            { $set: {  "is_bid_completed" : true, "bidders.$.bid_status" : "confirmed"}},
+                            { $set: {  "is_bid_completed" : true, "bidders.$.bid_status" : "confirmed","user_notification.status" : false}},
                             { new: true }, 
                             function(err, doc) {
                                 if(err) throw err;
@@ -401,7 +401,7 @@ router.put('/statusreject/:id',(req,res,next)=>{
                         });
                          console.log(id1);
                          Product.findOneAndUpdate({"bidders._id" : id1},
-                            { $set: {"bidders.$.bid_status" : "rejected"}},
+                            { $set: {"bidders.$.bid_status" : "rejected", "user_notification.status" : false}},
                             { new: true }, 
                             function(err, doc) {
                                 if(err) throw err;
@@ -414,11 +414,32 @@ router.put('/statusreject/:id',(req,res,next)=>{
 
                                 }
                          });
+
                     }
                 })
     }else{
         return res.status(401).send('Invalid User');
     }
 });
+
+router.get('/getnotification/:id',(req,res,next)=>{
+    Product.findOne({"user_notification.user_id" : req.params.id , "user_notification.status" : true}, (err,product)=>{
+    if(err) throw err;
+    return res.json(product);
+    })
+}); 
+
+router.put('/updatenotification/:id',(req,res,next)=>{
+    // Product.findOne({"user_notification.user_id" : id , "user_notification.status" : true}, (err,product)=>{
+    Product.findByIdAndUpdate(req.params.id, 
+        {
+        $set:{"user_notification.user_id": req.body.user_id}
+        },
+    { new : true },
+        (err, product)=>{
+        if(err) throw err;
+        return res.json(product);
+        })
+}); 
 
 module.exports = router;
