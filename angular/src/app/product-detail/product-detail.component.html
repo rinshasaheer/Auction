@@ -105,6 +105,12 @@
               <br>
               <textarea rows="4" cols="70" name="desc" [(ngModel)]="pro.desc" ></textarea>
           </div>
+
+          <div class="form-group">
+            <label for="single">Select Image</label>
+            <input type="file" class="" name="single" ng2FileSelect [uploader]="uploader"  />                                  
+         </div>
+         
           <button type= "button" class="btn btn-primary"   (click)="updateProduct()">Update</button>
           <!-- <input type="button" class="btn btn-primary" (click)="updateProduct()" class="updatepro" value="Udate"  > -->
           <!-- <input type="button" (click)="deleteProduct()" class="updatepro" value="Delete"  > -->
