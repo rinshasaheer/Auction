@@ -73,14 +73,19 @@
             
             <!-- <label class="btn btn-success colorbtn"> Browse</label> -->
             
-            <input type="file" name ="myfile" ng-disabled="uploading" style="display: none">
+            <!-- <input type="file" name ="myfile" ng-disabled="uploading" style="display: none"> -->
 
             <div class="form-group" >
                 <label > Description</label>
                 <br>
                 <textarea rows="4" cols="70" name="desc" [(ngModel)]="newproduct.desc" ></textarea>
             </div>
-           
+            <div class="form-group">
+                <label for="single">Select Image</label>
+                <input type="file" class="" name="single" ng2FileSelect [uploader]="uploader"  />                                  
+             </div>
+              
+                
             <!-- <input type="submit" class="btn btn-info blakbtn" value="Submit"  > -->
             <button type= "submit" class="btn btn-primary">Submit</button>
            
@@ -97,6 +102,6 @@
            
 </div>
 
-<footer></footer> 
+<!-- <footer></footer>  -->
   
 </body>

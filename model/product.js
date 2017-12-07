@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const config = require("../config/database");
 var Schema = mongoose.Schema;
 
+
+
 const ProductsSchema = mongoose.Schema({
         name: {
             type : String,
@@ -64,10 +66,33 @@ const ProductsSchema = mongoose.Schema({
             type: Boolean,
             default: false
         },
-       test_id:String
+        user_notification : {
+            user_id : Schema.ObjectId ,
+            status : {
+                type : Boolean,
+                default : true,
+            }
+        },
+        admin_notification : {
+            user_id : Schema.ObjectId ,
+            status : {
+                type : Boolean,
+                default : true,
+            },
+            is_viewed : {
+                type : Boolean,
+                default :false,
+            },
+        },
 });
 
 const Product = module.exports = mongoose.model('Product', ProductsSchema, 'products');
+
+
+module.exports.uploadImage = function(req,callback){
+   
+}
+
 
 module.exports.addProduct = function(product,callback){
     console.log(product);
@@ -138,4 +163,5 @@ module.exports.getHighestBid = function(id, callback){
     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
 
 }
+// }    
 

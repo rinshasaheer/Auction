@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Http, Response,Headers,RequestOptions } from '@angular/http';
+import { Component, OnInit } from '@angular/core';
+
+import { Http, Headers, Response, Request, RequestMethod, URLSearchParams, RequestOptions } from "@angular/http";
+import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ProductServiceService {
-
   authToken = '';
   authUser : any;
   constructor(private _http: Http) { }
@@ -67,4 +69,6 @@ export class ProductServiceService {
     this.authUser = JSON.parse(localStorage.getItem('user'));
     return this.authUser.id;
   }
+  
+
 }

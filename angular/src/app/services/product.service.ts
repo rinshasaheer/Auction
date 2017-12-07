@@ -13,6 +13,10 @@ export class ProductService {
     private _getUrl ='/products/products';
     private _deleteUrl ='/products/updatedel';
     private _getOneUrl ='/products/product/';
+    private _conStatusUrl ='/products/statusconfirm/';
+    private _rejStatusUrl ='/products/statusreject/';
+    private _getNotifUrl ='/products/getnotification/';
+    private _updateNotifUrl ='/products/updatenotification/';
     authToken = '';
   
     url = "http://localhost:3000/";
@@ -86,12 +90,48 @@ export class ProductService {
   getProduct(id){
     let headers = new Headers({ 'Content-Type' : 'application/json'});
     let options = new RequestOptions({ headers : headers});
-    console.log(this._getOneUrl+id);
+    // console.log(this._getOneUrl+id);
     return this.http.get(this._getOneUrl + id,options)
       .map((response : Response) => response.json());
   }
 
   loadToken(){
     this.authToken = localStorage.getItem('id_token');
+  }
+  
+
+  updateStatusConfirm(pid){
+    let headers = new Headers();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    let options = new RequestOptions({ headers : headers});
+    return this.http.put(this._conStatusUrl+pid,{},{ headers : headers})
+    .map((response : Response) => response.json());
+  }
+
+  updateStatusReject(pid){
+    let headers = new Headers();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    let options = new RequestOptions({ headers : headers});
+    return this.http.put(this._rejStatusUrl+pid,{},{ headers : headers})
+    .map((response : Response) => response.json());
+  }
+
+  getNotif(user_id){
+    let headers = new Headers({ 'Content-Type' : 'application/json'});
+    let options = new RequestOptions({ headers : headers});
+    return this.http.get(this._getNotifUrl + user_id,options)
+      .map((response : Response) => response.json());
+  }
+
+  updateNotif(user_id, pid){
+    let product = {"_id" : pid, "user_id" : user_id};
+    let headers = new Headers({ 'Content-Type' : 'application/json'});
+    let options = new RequestOptions({ headers : headers});
+    return this.http.put(this._updateNotifUrl + pid,JSON.stringify(product),options)
+      .map((response : Response) => response.json());
   }
 }
