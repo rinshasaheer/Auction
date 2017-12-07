@@ -464,6 +464,9 @@ router.put('/statusreject/:id',(req,res,next)=>{
                                     return res.json({success:false, msg: 'Error'});
                                 }
                                 else{
+                                    io.sockets.emit("userbidreject", {
+                                        prod_id : req.params.id
+                                    });
                                     return res.json(doc);
 
                                 }
