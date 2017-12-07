@@ -72,6 +72,7 @@ import { FilterPipe } from './filter.pipe';
 import { ManageProductComponent } from './manage-product/manage-product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductPipe } from './product.pipe';
+import { AdminviewedComponent } from './adminviewed/adminviewed.component';
 // import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 
 const appRoutes: Routes = [
@@ -84,6 +85,7 @@ const appRoutes: Routes = [
   {path:'email-verification/:id', component:EmailVerificationComponent},
   {path:'login', component:LoginComponent},  
   {path:'socialmedia/:id', component:SocialmediaComponent},
+  {path:'adminviewed/:id', component:AdminviewedComponent},
 
   {path:'dashboard', component: DashboardComponent},
   {path:'all-users', component: AllUsersComponent},
@@ -145,7 +147,8 @@ const appRoutes: Routes = [
     RunningauctionComponent,
     CardRunningComponent,
     WinnerconfirmComponent,
-    ProductPipe
+    ProductPipe,
+    AdminviewedComponent
   ],
   imports: [
     BrowserModule,

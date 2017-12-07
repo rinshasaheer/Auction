@@ -17,17 +17,26 @@ export class NavigationComponent implements OnInit {
   notifications: any;  
   highest: Number;
   details : any;
+  countNumber : any;
+  info :Array<any>;
   count : Boolean = true;
   constructor(private userService : UserService, private router: Router, private _productService: ProductServiceService, private productService: ProductService) { }
 
   ngOnInit() {
+    this.info = [];
+    this.countNumber = 0;
     this.userService.getLoggedUSerDetails().subscribe(data3 => {
       this.productService.getNotif(data3._id).subscribe(data4 => {
-        this.details = data4;
-        if(data4==null){
-          this.count = false;
-        }
-      })
+          // console.log(data4);
+        data4.forEach(element => {
+          this.countNumber++;
+          this.info.push(element);
+          if(this.info==null){
+            this.count = false;
+          }
+        });
+        });
+        
     });
   }
 

@@ -39,6 +39,7 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "jsonwebtoken": "^8.1.0",
+    "ng2-datepicker": "^2.1.6",
     "ng2-datepicker-bootstrap": "^1.0.0",
     "ng2-datetime": "^1.4.0",
     "ng2-datetime-picker": "^0.15.1",

@@ -73,14 +73,14 @@ const ProductsSchema = mongoose.Schema({
         },
         admin_notification : {
             user_id : Schema.ObjectId ,
-            status : {
-                type : Boolean,
-                default : true,
-            },
             is_viewed : {
                 type : Boolean,
-                default :falsetrue,
+                default :false,
             },
+        },
+        status : {
+            type : Boolean,
+            default: true
         },
 });
 
@@ -90,12 +90,6 @@ module.exports.addProduct = function(product,callback){
     console.log(product);
     var newProduct = new Product(product);
     newProduct.save(callback);
-}
-
-module.exports.getAllProduct = function(callback){
-    Product.find({},callback);
-// module.exports.getAllProduct = function(callback){
-//     Product.find({},callback);
 }
 
 module.exports.getAllClosedProduct = function(callback){
