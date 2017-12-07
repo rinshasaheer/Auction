@@ -185,7 +185,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     width: 100%;
     float: left;
     padding: 14px 0 14px;
-    background-color: #2882f7;
+    /* background-color: #2882f7; */
     color: #fff;
     border: none;
 }
@@ -287,4 +287,13 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 .lead{
     margin-bottom: 0px !important;
+}
+
+
+.show{
+    opacity: 1 !important;
+}
+.step{
+opacity: 0;
+transition: .25s ease-in-out all;
 }

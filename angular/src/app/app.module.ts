@@ -63,7 +63,6 @@ import { CardRunningComponent } from './card-running/card-running.component';
 import { WinnerconfirmComponent } from './winnerconfirm/winnerconfirm.component'
 
 import { RegistrationComponent } from './registration/registration.component';
-import { ImageUploadModule } from "angular2-image-upload";
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 //  import { DataTablesModule } from 'angular-datatables';
 import * as $ from 'jquery';
@@ -72,7 +71,12 @@ import { FilterPipe } from './filter.pipe';
 import { ManageProductComponent } from './manage-product/manage-product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductPipe } from './product.pipe';
+import { NgDatepickerModule } from 'ng2-datepicker';
+import { UploadComponent } from './upload/upload.component';
 // import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+
+import { ImageUploadModule } from "angular2-image-upload";//file upload
+import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
 
 const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
@@ -105,6 +109,8 @@ const appRoutes: Routes = [
   {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
   {path:'running-auction', component:RunningAuctionBackComponent},
   {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
+
+  {path:'upload', component:UploadComponent}//file upload
 
 ]
 
@@ -145,7 +151,9 @@ const appRoutes: Routes = [
     RunningauctionComponent,
     CardRunningComponent,
     WinnerconfirmComponent,
-    ProductPipe
+    ProductPipe,
+    UploadComponent,
+    FileSelectDirective
   ],
   imports: [
     BrowserModule,
@@ -155,9 +163,7 @@ const appRoutes: Routes = [
     Ng2PageScrollModule,
     HttpModule,
     // ImageUploadModule,
-    RouterModule.forRoot(appRoutes),
     // DataTablesModule,
-    ImageUploadModule,
     // NKDatetimeModule,
     NKDatetimeModule,
     //  DataTablesModule
@@ -169,13 +175,14 @@ const appRoutes: Routes = [
     Ng2PageScrollModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
+    NgDatepickerModule
     // DataTablesModule,
     // ImageUploadModule,
     // NKDatetimeModule,
-    NKDatetimeModule,
+    // NKDatetimeModule,
     //  DataTablesModule
     // Ng2DatetimePickerModule
-    
+    //ImageUploadModule.forRoot(), //file upload
   ],
   
   providers: [ProductServiceService,

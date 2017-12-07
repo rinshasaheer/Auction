@@ -3,7 +3,7 @@
     <h4 class="page-head mrgn-nav-top">Running Auctions</h4>
     <div *ngIf="products?.length > 0; else noProduct">
         <div  *ngFor="let product of products">
-          <app-card-running [product]="product"></app-card-running>
+          <app-card-running [product]="product" [users]="users" [user]="user"></app-card-running>
       </div>
     </div>
     <ng-template #noProduct>

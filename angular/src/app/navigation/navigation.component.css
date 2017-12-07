@@ -248,6 +248,64 @@ default .navbar-toggle:hover {
 .navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar{
     background-color: #084da7;
 }
+.notify{
+    width: 20px;
+    height: 20px;
+    background-color: #2882f7;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 50%;
+    position: relative;
+}
+.notify-count{
+    position: absolute;
+    top: -5px;
+    right: -7px;
+    background: #DE2413;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    font-size: 10px;
+    color: #ffffff;
+}
+.notify-cont{
+    padding: 0 20px;
+}
+.noftify-pro-img{
+    width: 50px;
+    height: 50px;
+    margin-top: 8px;
+    border-radius: 50%;
+}
+.ovrflow-h{
+    overflow: hidden;
+}
+.noftify-pro-h4{
+    font-size: 14px;
+}
+#notify-menu{
+    min-width: 250px;
+    background: #E7E9EC;
+    border: none;
+}
+#notify-menu li{
+    border-bottom: 1px solid #ccc;
+}
+
+#notify-head-a{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#notify-menu h4, #notify-menu p{
+    color: #2882f7;
+}
+#won-head{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+#nitify-li{
+    list-style: none;
+}
 @media only screen and (max-width: 500px) {
     .navbar-brand {
         width:78%;

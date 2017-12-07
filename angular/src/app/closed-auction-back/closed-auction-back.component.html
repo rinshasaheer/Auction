@@ -1,3 +1,23 @@
+<body>
+    
+        <div id="wrapper">
+    
+            <!-- Navigation -->
+<side-bar></side-bar>
+    
+            <div id="page-wrapper">
+    
+                <div class="container-fluid">
+    
+                    <!-- Page Heading -->
+                   <header-title [title]="'Closed Auction'"></header-title>
+                    <!-- /.row -->
+    
+                </div>
+
+                <!-- <input type="text" class="form-control"> -->
+                <!-- <ng-datepicker [(ngModel)]="date" /> -->
+
 <div class="container" style="padding-top:20px;">
   
     <div *ngIf="products?.length > 0" id="products" class="row list-group">
@@ -49,7 +69,7 @@
                     <div class="row margn" >
                       
                       <div class="col-xs-12 col-md-12 text-center">
-                         <a href="#" (click)="updateInvolved(product)" data-target="#myModal" data-toggle="modal" > Users Involved - {{product.bidders.length}}</a>
+                         <a href="#" (click)="updateInvolved(product)" data-target="#myModal" data-toggle="modal" > Users Involved - {{product.user_details.length}}</a>
                          
                       </div>
                       <div id="myModal" class="modal fade" role="dialog">
@@ -59,7 +79,7 @@
                             <div class="modal-content">
                               <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">User Involved - {{involvedUsers.length}}</h4>
+                                <h4 class="modal-title">User Involved - {{involvedUsers.user_details.length}}</h4>
                               </div>
                               <div class="modal-body">
                                   <table class="table">
@@ -73,16 +93,16 @@
                                   
                                   </tr>
                                 </thead>
-                                <tbody *ngIf="involvedUsers.length ==0">
+                                <tbody *ngIf="involvedUsers.bidders.length ==0">
                                     <tr >
                                           <td colspan="5" class="text-center">No User Involved</td>
                                     </tr>
                                 </tbody>
-                                <tbody *ngIf="involvedUsers.length > 0" >
+                                <tbody *ngIf="involvedUsers.bidders.length > 0" >
                               
-                                    <tr  *ngFor="let usr of involvedUsers;let i = index" >
+                                    <tr  *ngFor="let usr of involvedUsers.bidders;let i = index" >
                                           <td >{{i+1}}</td>
-                                          <td >{{product.user_details[i].name}}</td>
+                                          <td >{{users[usr.user_id].name}}</td>
                                           <td >{{usr.amount | number:'1.2-2'}}</td>
                                           <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>
                                           <td >{{usr.bid_status}}</td>
@@ -110,20 +130,33 @@
                                       <br> <strong> {{product.lastBiduser}}</strong>
                                       <br>
                                       {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}
-                            
+                                   </div> 
                               </div>
                               <div *ngIf="!product.is_bid_completed">
-                              <a class="alert-success" href="#">Assign - Winner</a>
+                              <div class="alert alert-success text-center ">
+                                Last Bidder
+                                <br> <strong> {{product.lastBiduser}}</strong>
+                                <br>
+                                {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}
+                             </div> 
                               </div>
                           </div>
                             <div *ngIf="product.bidders.length == 0" class="alert alert-danger text-center ">
-                            <a class="alert-danger" href="#">Re-submit</a>
+                                <div>
+                                <div class="alert alert-dangertext-center ">
+                                No bidder Found
+                                <br> <strong><a class="alert-danger" href="#">Re-submit</a></strong>
+                                <br>
+                                Bid closed : {{product.end_date | date: 'dd-MM-yyyy h:mm a'}}
+                            </div>
+                            </div>
                           </div>
                        
                     </div>
                 </div>
             </div>
         </div>
+        
   
     </div>
     </div>
@@ -132,6 +165,17 @@
         <h3 class="text-center"> No Product Found</h3>
     </div>
     </div>
+
+
+</div>
+<!-- /#page-wrapper -->
+
+           
+</div>
+
+<footer></footer> 
+  
+</body>
      
     
        

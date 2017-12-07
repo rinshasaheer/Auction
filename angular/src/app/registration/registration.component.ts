@@ -35,14 +35,14 @@ export class RegistrationComponent implements OnInit {
   onRegisterSubmit(){
     console.log(this.newUser);
     this.userService.registerUser(this.newUser).subscribe(data => {
-      if(data){
+      if(data.success==true){
        alert("Account created successfully, Please verify your Email address");
        this.routes.navigate(['/login']);
         console.log("successfull created user");
       
       } else {
         alert("Error");
-        console.log("error created user")
+        console.log("Error created user");
       }
     });
   }

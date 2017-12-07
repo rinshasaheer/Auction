@@ -9,13 +9,54 @@
                         <p class="title1">Free phone: <strong>800-2345-6789</strong></p>
                         <p class="title2">Hours:  8am-8pm PST M-Th;   6am-3pm PST Fri</p>
                     </div> -->
-                    <div class="col-lg-4 col-md-4 pull-right">
+                    
+
+                    <div class="pull-right">
                         <li class="dropdown" >
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           
                           <li><a [routerLink]="['/myauctions']">My Bids</a></li>
                           <li><a (click)="logout()" href="#">Log Out</a></li>
+                          
+                        </ul>
+                      </li>
+                        <!-- <a href="#" class="btn-default btn1">Sign In</a> -->
+                    </div>
+
+                    <div class="pull-right notify-cont">
+
+                        <li *ngIf="count" class="dropdown notify" >
+                          <div class="notify-count">1</div>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu" id="notify-menu">
+                          
+                          <li>
+                            <a [routerLink]="['/winnerconfirm/'+details?._id]" class="ovrflow-h" id="notify-head-a">
+                             <div class="col-md-12">
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <h4 id="won-head">You Won a Bid!</h4>
+                                  </div>
+                                    <div class="col-md-3">
+                                      <div class="row">
+                                          <img  class="noftify-pro-img" src="../../assets/uploads/pro.jpg" alt="pro"></div>
+                                      </div>
+                                      
+                                    <div class="col-md-9">
+                                          <h4 class="noftify-pro-h4">{{details?.name}}</h4>
+                                          <!-- <p>Amount: $1000</p> -->
+                                      
+                                    </div>
+                                </div>
+                                  
+                              </div>
+                              
+                              
+                            </a>
+                          </li>
+                    
+                          <!-- <li><a (click)="logout()" href="#">Log Out</a></li> -->
                           
                         </ul>
                       </li>

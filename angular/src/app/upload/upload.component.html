@@ -1,0 +1,13 @@
+<div class="container">
+  
+  <div class="form-group">
+    <label for="single">single</label>
+    <input type="file" class="form-control" name="single" ng2FileSelect [uploader]="uploader" />                                  
+ </div>
+  
+    <!-- <input type="submit" value="submit" (click)="onUpload()"> -->
+    <button type="button" class="btn btn-success btn-s"
+    (click)="up()" [disabled]="!uploader.getNotUploadedItems().length">
+      Upload all
+ </button><br />
+</div>

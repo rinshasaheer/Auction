@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
+import { UserService} from '../services/user.service';
 import { Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-runningauction',
@@ -8,35 +10,54 @@ import { Router} from '@angular/router';
   styleUrls: ['./runningauction.component.css']
 })
 export class RunningauctionComponent implements OnInit {
-
+  user : any;
+  users : object;
   products: object;
   winnerId : object;
   involvedUsers : any = [];
-
+  private socket: any; 
   constructor(
-    private productService: ProductService
-  ) { }
+    private productService: ProductService,
+    private userService:UserService
+  ) {
+    
+   }
 
   ngOnInit() {
+
+     
+
+    this.userService.getLoggedUSerDetails().subscribe(data=>{
+        this.user = data;
+        //console.log(this.user._id);
+    });
+    this.userService.getAllUsersById().subscribe(data=>{
+        this.users = data;
+        console.log(this.users);
+    });
     this.productService.getAllrunningProduct().subscribe(data=>{
-      
-       data.forEach((item, index) => {
-         var lastBidprice = item.bid_amount;
-         var lastBiduser = '';
-         var lastBidTime = '';
+      console.log(data);
+      //  data.forEach((item, index) => {
+      //    var lastBidprice = item.bid_amount;
+      //    var lastBiduser = '';
+      //    var lastBidTime = '';
+      //    var lastBiduserId = '';
  
-         item.bidders.forEach((user, i) => {
-           if(user.amount >= lastBidprice){
-              lastBidprice = user.amount;
-              lastBiduser = item.user_details[i].name;
-              lastBidTime = user.date_time;
-           }
-         });
-         data[index].lastBidprice = lastBidprice;
-         data[index].lastBiduser = lastBiduser;
-         data[index].lastBidTime = lastBidTime;
-       });
-       console.log(data);
+      //    item.bidders.forEach((bidder, i) => {
+      //      console.log(bidder);
+      //      if(bidder.amount >= lastBidprice){
+      //         lastBidprice = bidder.amount;
+      //         lastBiduser = this.users[bidder.user_id].name;
+      //         lastBiduserId = this.users[bidder.user_id]._id;
+      //         lastBidTime = bidder.date_time;
+      //      }
+      //    });
+      //    data[index].lastBidprice = lastBidprice;
+      //    data[index].lastBiduser = lastBiduser;
+      //    data[index].lastBidTime = lastBidTime;
+      //    data[index].lastBiduserId = lastBiduserId;
+      //    data[index].mybid = (lastBiduserId == this.user._id) ? true:false ;
+      //  });
        this.products = data;
      });
   }
