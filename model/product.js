@@ -81,7 +81,7 @@ const ProductsSchema = mongoose.Schema({
             },
             is_viewed : {
                 type : Boolean,
-                default :falsetrue,
+                default :false,
             },
         },
 });
@@ -230,16 +230,10 @@ module.exports.getMyAuctionProduct = function(id, callback){
 // module.exports.updateInterested = function(id, callback){
 //     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
 // }
-<<<<<<< HEAD
-=======
 
->>>>>>> 866e048fa068b5b83917965682c64e8f1cef3e20
 module.exports.getHighestBid = function(id, callback){
     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
 
 }
-<<<<<<< HEAD
-=======
 // }    
->>>>>>> 866e048fa068b5b83917965682c64e8f1cef3e20
 
