@@ -12,6 +12,7 @@ export class UserService {
   private _verifyUrl = "/user/verify/";
   private _genTokenUrl = "/user/genToken/";
   private _authUrl = "/user/authenticate";
+  private _saveAddUrl = "/user/saveAddress";
   // private _getUrl = "/user/getemail";
   url = "http://localhost:3000/";
   constructor(private http:Http) { }
@@ -122,6 +123,43 @@ unblockUser(id){
     this.authToken = null;
     this.user = null;
     localStorage.clear();
+  }
+
+  saveAddress(user){
+    let headers = new Headers();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    let options = new RequestOptions({ headers : headers});
+    return this.http.put(this._saveAddUrl, JSON.stringify(user),{ headers : headers})
+    .map((response : Response) => response.json());
+  }
+  getAllUsersById(){
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.get(this.url + 'user/users_id_as_index',{headers:headers})
+    .map(res =>res.json());
+  }
+
+  loadToken(){
+    this.authToken = localStorage.getItem('id_token');
+  }
+
+  getLoggedUSerDetails(){
+    let headers = new Headers();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    return this.http.get(this.url + 'user/get_loggedin_user',{headers:headers})
+    .map(res =>res.json());
+  }
+
+  sendMailtoWinner(user_id,pid){
+    let user = {"_id" : user_id, "pid" : pid};
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.put(this.url + 'user/sendmailtowinner/'+user_id,JSON.stringify(user),{headers:headers})
+    .map(res =>res.json());
   }
 
 }

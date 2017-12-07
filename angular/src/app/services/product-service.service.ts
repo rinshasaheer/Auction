@@ -7,7 +7,6 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ProductServiceService {
-
   authToken = '';
   authUser : any;
   constructor(private _http: Http) { }
@@ -41,15 +40,7 @@ export class ProductServiceService {
   }
 
   addInterestedCandidate(id){
-    // console.log("d");
-    // let headers = new Headers();
-    // this.loadToken();
-    // headers.append('Authorization', this.authToken);
-    // headers.append('Content-Type', 'application/json');
-    // return this._http.put('http://localhost:3000/products/updateInterested/'+id, {headers: headers})
-    //   .map(res => res.json());
-// console.log(id);
-      //let headers = new Headers();
+
       this.loadToken();
     //  headers.append('Authorization', this.authToken);
       let headers = new Headers({ 'Content-Type' : 'application/json', 'Authorization' : this.authToken});
@@ -79,4 +70,5 @@ export class ProductServiceService {
     return this.authUser.id;
   }
   
+
 }

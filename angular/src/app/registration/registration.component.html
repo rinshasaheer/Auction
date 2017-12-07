@@ -51,7 +51,7 @@
      
       <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
         <input type="password" class="form-control" id="confirmPassword" required validateEqual="password" placeholder="Confirm Password" required validateEqual="password" reverse="false" [(ngModel)]="User.confirmPassword" name="confirmPassword" #confirmPassword="ngModel"> 
-        <div *ngIf="!confirmPassword.valid || (!confirmPassword.pristine && f.submitted)" class="help-block">! Password not Match</div>   
+        <div *ngIf="!confirmPassword.valid && (f.submitted)" class="help-block">! Password not Match</div>   
         
         </div>
     </div> 
