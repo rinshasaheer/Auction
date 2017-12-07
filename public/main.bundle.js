@@ -157,6 +157,8 @@ module.exports = "\r\n<router-outlet></router-outlet>"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ng2_file_upload__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -164,9 +166,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
+
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app';
+        this.uploader = new __WEBPACK_IMPORTED_MODULE_1_ng2_file_upload__["FileUploader"]({ url: 'http://localhost:3001/upload' });
     }
     return AppComponent;
 }());
@@ -233,13 +237,16 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__card_running_card_running_component__ = __webpack_require__("../../../../../src/app/card-running/card-running.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__winnerconfirm_winnerconfirm_component__ = __webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43_angular2_image_upload__ = __webpack_require__("../../../../angular2-image-upload/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44_ng2_datetime_ng2_datetime__ = __webpack_require__("../../../../ng2-datetime/ng2-datetime.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__product_list_product_list_component__ = __webpack_require__("../../../../../src/app/product-list/product-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__filter_pipe__ = __webpack_require__("../../../../../src/app/filter.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__manage_product_manage_product_component__ = __webpack_require__("../../../../../src/app/manage-product/manage-product.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__product_detail_product_detail_component__ = __webpack_require__("../../../../../src/app/product-detail/product-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__product_pipe__ = __webpack_require__("../../../../../src/app/product.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43_ng2_datetime_ng2_datetime__ = __webpack_require__("../../../../ng2-datetime/ng2-datetime.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__product_list_product_list_component__ = __webpack_require__("../../../../../src/app/product-list/product-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__filter_pipe__ = __webpack_require__("../../../../../src/app/filter.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__manage_product_manage_product_component__ = __webpack_require__("../../../../../src/app/manage-product/manage-product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__product_detail_product_detail_component__ = __webpack_require__("../../../../../src/app/product-detail/product-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__product_pipe__ = __webpack_require__("../../../../../src/app/product.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__upload_upload_component__ = __webpack_require__("../../../../../src/app/upload/upload.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50_angular2_image_upload__ = __webpack_require__("../../../../angular2-image-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_51_ng2_file_upload__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -299,11 +306,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 // import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+ //file upload
+
 var appRoutes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__["a" /* RegistrationComponent */] },
     { path: 'product', component: __WEBPACK_IMPORTED_MODULE_16__product_product_component__["a" /* ProductComponent */] },
-    { path: 'manage-product', component: __WEBPACK_IMPORTED_MODULE_47__manage_product_manage_product_component__["a" /* ManageProductComponent */] },
+    { path: 'manage-product', component: __WEBPACK_IMPORTED_MODULE_46__manage_product_manage_product_component__["a" /* ManageProductComponent */] },
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__["a" /* RegistrationComponent */] },
     { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_29__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
@@ -325,6 +334,7 @@ var appRoutes = [
     { path: 'upcoming-auction', component: __WEBPACK_IMPORTED_MODULE_31__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */] },
     { path: 'running-auction', component: __WEBPACK_IMPORTED_MODULE_32__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */] },
     { path: 'winnerconfirm/:id', component: __WEBPACK_IMPORTED_MODULE_41__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */] },
+    { path: 'upload', component: __WEBPACK_IMPORTED_MODULE_49__upload_upload_component__["a" /* UploadComponent */] } //file upload
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -337,10 +347,10 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_18__app_component__["a" /* AppComponent */],
             __WEBPACK_IMPORTED_MODULE_16__product_product_component__["a" /* ProductComponent */],
             __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__["a" /* RegistrationComponent */],
-            __WEBPACK_IMPORTED_MODULE_45__product_list_product_list_component__["a" /* ProductListComponent */],
-            __WEBPACK_IMPORTED_MODULE_46__filter_pipe__["a" /* FilterPipe */],
-            __WEBPACK_IMPORTED_MODULE_47__manage_product_manage_product_component__["a" /* ManageProductComponent */],
-            __WEBPACK_IMPORTED_MODULE_48__product_detail_product_detail_component__["a" /* ProductDetailComponent */],
+            __WEBPACK_IMPORTED_MODULE_44__product_list_product_list_component__["a" /* ProductListComponent */],
+            __WEBPACK_IMPORTED_MODULE_45__filter_pipe__["a" /* FilterPipe */],
+            __WEBPACK_IMPORTED_MODULE_46__manage_product_manage_product_component__["a" /* ManageProductComponent */],
+            __WEBPACK_IMPORTED_MODULE_47__product_detail_product_detail_component__["a" /* ProductDetailComponent */],
             __WEBPACK_IMPORTED_MODULE_28__login_login_component__["a" /* LoginComponent */],
             __WEBPACK_IMPORTED_MODULE_19__navigation_navigation_component__["a" /* NavigationComponent */],
             __WEBPACK_IMPORTED_MODULE_20__home_home_component__["a" /* HomeComponent */],
@@ -368,7 +378,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_39__runningauction_runningauction_component__["a" /* RunningauctionComponent */],
             __WEBPACK_IMPORTED_MODULE_40__card_running_card_running_component__["a" /* CardRunningComponent */],
             __WEBPACK_IMPORTED_MODULE_41__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */],
-            __WEBPACK_IMPORTED_MODULE_49__product_pipe__["a" /* ProductPipe */]
+            __WEBPACK_IMPORTED_MODULE_48__product_pipe__["a" /* ProductPipe */],
+            __WEBPACK_IMPORTED_MODULE_49__upload_upload_component__["a" /* UploadComponent */],
+            __WEBPACK_IMPORTED_MODULE_51_ng2_file_upload__["FileSelectDirective"]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
@@ -378,11 +390,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_23_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
             __WEBPACK_IMPORTED_MODULE_7__angular_http__["HttpModule"],
             // ImageUploadModule,
-            __WEBPACK_IMPORTED_MODULE_5__angular_router__["f" /* RouterModule */].forRoot(appRoutes),
             // DataTablesModule,
-            __WEBPACK_IMPORTED_MODULE_43_angular2_image_upload__["a" /* ImageUploadModule */],
             // NKDatetimeModule,
-            __WEBPACK_IMPORTED_MODULE_44_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
+            __WEBPACK_IMPORTED_MODULE_43_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
             //  DataTablesModule
             // Ng2DatetimePickerModule
             __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
@@ -395,7 +405,10 @@ AppModule = __decorate([
             // DataTablesModule,
             // ImageUploadModule,
             // NKDatetimeModule,
-            __WEBPACK_IMPORTED_MODULE_44_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
+            __WEBPACK_IMPORTED_MODULE_43_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
+            //  DataTablesModule
+            // Ng2DatetimePickerModule
+            __WEBPACK_IMPORTED_MODULE_50_angular2_image_upload__["a" /* ImageUploadModule */].forRoot(),
         ],
         providers: [__WEBPACK_IMPORTED_MODULE_36__services_product_service_service__["a" /* ProductServiceService */],
             __WEBPACK_IMPORTED_MODULE_6__services_user_service__["a" /* UserService */],
@@ -1918,7 +1931,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product-detail/product-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n    <div class=\"col-md-9 shadow\">\r\n      <h3 class=\"hdng\" >Edit  a Product</h3>\r\n      <br>\r\n      <form class=\"well\">\r\n          <!-- <div class=\"form-group\" >\r\n              <label > Name *</label>\r\n              <input type=\"text\"  name=\"name\"  [(ngModel)]=\"pro.name\" class=\"form-control\" required  />\r\n          </div> -->\r\n\r\n          <div class=\"form-group\" >\r\n                <label > Name *</label>\r\n                <input id=\"name\" name=\"name\" class=\"form-control\"\r\n                required \r\n                [(ngModel)]=\"pro.name\" #name=\"ngModel\" >\r\n         \r\n         <div *ngIf=\"name.invalid && (name.dirty || name.touched)\"\r\n              class=\"alert alert-danger\">\r\n         \r\n           <div *ngIf=\"name.errors.required\">\r\n             Name is required.\r\n           </div>\r\n        \r\n         \r\n         </div>\r\n             \r\n            </div>\r\n\r\n          <div class=\"form-group\" >\r\n              <label > Bid Amount *</label>\r\n              <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n              required \r\n              [(ngModel)]=\"pro.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\" >\r\n       \r\n            <div *ngIf=\"bid_amount.invalid && (bid_amount.dirty || bid_amount.touched)\"\r\n            class=\"alert alert-danger\">\r\n       \r\n         <div *ngIf=\"bid_amount.errors.required\">\r\n          Amount is Required\r\n         </div>\r\n      \r\n       \r\n       </div>\r\n           \r\n          </div>\r\n       \r\n\r\n          <div class=\"form-group\" >\r\n                <label > Minimum Bid rate *</label>\r\n                <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                required \r\n                [(ngModel)]=\"pro.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\" >\r\n         \r\n              <div *ngIf=\"min_bid_rate.invalid && (min_bid_rate.dirty || min_bid_rate.touched)\"\r\n              class=\"alert alert-danger\">\r\n         \r\n           <div *ngIf=\"min_bid_rate.errors.required\">\r\n            Minimum Bid rate is Required\r\n           </div>\r\n        \r\n         \r\n         </div>\r\n             \r\n            </div>\r\n\r\n           <div class=\"form-group\" >\r\n                  <label > Bid Start time </label>\r\n                  <datetime name=\"start_date\" [(ngModel)]=\"date1\"  ></datetime>\r\n              </div>\r\n              <div class=\"form-group\" >\r\n                      <label> Bid End time </label>\r\n                      <datetime name = \"end_date\"  [(ngModel)]=\"pro.end_date\"></datetime>\r\n                  </div>\r\n\r\n          \r\n\r\n           <!-- <image-upload name=\"image\"  [(ngModel)]=\"newproduct.image\"\r\n          [style]=\"'customStyle'\" \r\n          [class]=\"'prev-img'\" \r\n          [max]=\"100\"\r\n          \r\n          [headers]=\"{Authorization: 'MyToken'}\"\r\n          [buttonCaption]=\"'Select Images!'\"\r\n          [dropBoxMessage]=\"'Drop Product images here!'\"\r\n          [extensions]=\"['jpg','png','gif']\"\r\n       \r\n          (removed)=\"onRemoved($event)\"\r\n          (uploadFinished)=\"onUploadFinished($event)\"\r\n          (uploadStateChanged)=\"onUploadStateChanged($event)\"></image-upload>  -->\r\n          <!-- <div>\r\n              <label > Image</label>\r\n              <input type=\"file\"  name=\"pollqtn\"   required />\r\n          </div> -->\r\n         \r\n         \r\n          <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n          <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n          \r\n          <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n          \r\n        \r\n\r\n          <div class=\"form-group\" >\r\n              <label > Description</label>\r\n              <br>\r\n              <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"pro.desc\" ></textarea>\r\n          </div>\r\n          <button type= \"button\" class=\"btn btn-primary\"   (click)=\"updateProduct()\">Update</button>\r\n          <!-- <input type=\"button\" class=\"btn btn-primary\" (click)=\"updateProduct()\" class=\"updatepro\" value=\"Udate\"  > -->\r\n          <!-- <input type=\"button\" (click)=\"deleteProduct()\" class=\"updatepro\" value=\"Delete\"  > -->\r\n          <button type= \"button\" class=\"btn btn-primary\"  (click)=\"clickMethod('name')\">Delete</button>\r\n          \r\n         \r\n      </form>\r\n\r\n    </div>\r\n   "
+module.exports = "\r\n    <div class=\"col-md-9 shadow\">\r\n      <h3 class=\"hdng\" >Edit  a Product</h3>\r\n      <br>\r\n      <form class=\"well\">\r\n          <!-- <div class=\"form-group\" >\r\n              <label > Name *</label>\r\n              <input type=\"text\"  name=\"name\"  [(ngModel)]=\"pro.name\" class=\"form-control\" required  />\r\n          </div> -->\r\n\r\n          <div class=\"form-group\" >\r\n                <label > Name *</label>\r\n                <input id=\"name\" name=\"name\" class=\"form-control\"\r\n                required \r\n                [(ngModel)]=\"pro.name\" #name=\"ngModel\" >\r\n         \r\n         <div *ngIf=\"name.invalid && (name.dirty || name.touched)\"\r\n              class=\"alert alert-danger\">\r\n         \r\n           <div *ngIf=\"name.errors.required\">\r\n             Name is required.\r\n           </div>\r\n        \r\n         \r\n         </div>\r\n             \r\n            </div>\r\n\r\n          <div class=\"form-group\" >\r\n              <label > Bid Amount *</label>\r\n              <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n              required \r\n              [(ngModel)]=\"pro.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\" >\r\n       \r\n            <div *ngIf=\"bid_amount.invalid && (bid_amount.dirty || bid_amount.touched)\"\r\n            class=\"alert alert-danger\">\r\n       \r\n         <div *ngIf=\"bid_amount.errors.required\">\r\n          Amount is Required\r\n         </div>\r\n      \r\n       \r\n       </div>\r\n           \r\n          </div>\r\n       \r\n\r\n          <div class=\"form-group\" >\r\n                <label > Minimum Bid rate *</label>\r\n                <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                required \r\n                [(ngModel)]=\"pro.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\" >\r\n         \r\n              <div *ngIf=\"min_bid_rate.invalid && (min_bid_rate.dirty || min_bid_rate.touched)\"\r\n              class=\"alert alert-danger\">\r\n         \r\n           <div *ngIf=\"min_bid_rate.errors.required\">\r\n            Minimum Bid rate is Required\r\n           </div>\r\n        \r\n         \r\n         </div>\r\n             \r\n            </div>\r\n\r\n           <div class=\"form-group\" >\r\n                  <label > Bid Start time </label>\r\n                  <datetime name=\"start_date\" [(ngModel)]=\"date1\"  ></datetime>\r\n              </div>\r\n              <div class=\"form-group\" >\r\n                      <label> Bid End time </label>\r\n                      <datetime name = \"end_date\"  [(ngModel)]=\"pro.end_date\"></datetime>\r\n                  </div>\r\n\r\n          \r\n\r\n           <!-- <image-upload name=\"image\"  [(ngModel)]=\"newproduct.image\"\r\n          [style]=\"'customStyle'\" \r\n          [class]=\"'prev-img'\" \r\n          [max]=\"100\"\r\n          \r\n          [headers]=\"{Authorization: 'MyToken'}\"\r\n          [buttonCaption]=\"'Select Images!'\"\r\n          [dropBoxMessage]=\"'Drop Product images here!'\"\r\n          [extensions]=\"['jpg','png','gif']\"\r\n       \r\n          (removed)=\"onRemoved($event)\"\r\n          (uploadFinished)=\"onUploadFinished($event)\"\r\n          (uploadStateChanged)=\"onUploadStateChanged($event)\"></image-upload>  -->\r\n          <!-- <div>\r\n              <label > Image</label>\r\n              <input type=\"file\"  name=\"pollqtn\"   required />\r\n          </div> -->\r\n         \r\n         \r\n          <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n          <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n          \r\n          <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n          \r\n        \r\n\r\n          <div class=\"form-group\" >\r\n              <label > Description</label>\r\n              <br>\r\n              <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"pro.desc\" ></textarea>\r\n          </div>\r\n\r\n          <div class=\"form-group\">\r\n            <label for=\"single\">Select Image</label>\r\n            <input type=\"file\" class=\"\" name=\"single\" ng2FileSelect [uploader]=\"uploader\"  />                                  \r\n         </div>\r\n         \r\n          <button type= \"button\" class=\"btn btn-primary\"   (click)=\"updateProduct()\">Update</button>\r\n          <!-- <input type=\"button\" class=\"btn btn-primary\" (click)=\"updateProduct()\" class=\"updatepro\" value=\"Udate\"  > -->\r\n          <!-- <input type=\"button\" (click)=\"deleteProduct()\" class=\"updatepro\" value=\"Delete\"  > -->\r\n          <button type= \"button\" class=\"btn btn-primary\"  (click)=\"clickMethod('name')\">Delete</button>\r\n          \r\n         \r\n      </form>\r\n\r\n    </div>\r\n   "
 
 /***/ }),
 
@@ -2119,7 +2132,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product/product.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body>\r\n    \r\n        <div id=\"wrapper\">\r\n    \r\n            <!-- Navigation -->\r\n<side-bar></side-bar>\r\n    \r\n            <div id=\"page-wrapper\">\r\n    \r\n                <div class=\"container-fluid\">\r\n    \r\n                    <!-- Page Heading -->\r\n                   <header-title [title]=\"'Add Product'\"></header-title>\r\n                    <!-- /.row -->\r\n    \r\n                </div>\r\n                <!-- /.container-fluid -->\r\n\r\n<div class=\"wrapper\">\r\n        <div class=\"col-md-9 addpro\">\r\n                <!--<h3 class=\"headng\" >Add a Product</h3>-->\r\n                <br>\r\n  \r\n  <!-- <form class=\"well\" role=\"form\"   #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct()\" novalidate> -->\r\n        <form class=\"well\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct();\" novalidate>\r\n      <!-- <form #form='ngForm' (ngSubmit)=\"addProduct()\" class=\"well\" > -->\r\n            <div class=\"form-group\" >\r\n                <label > Name *</label>\r\n                <input id=\"name\" name=\"name\" class=\"form-control\"\r\n                required  autofocus\r\n                [(ngModel)]=\"newproduct.name\" #name=\"ngModel\" >\r\n                <div *ngIf=\"f.submitted && !name.valid \"  class=\"alert alert-danger\"> ! Name is required</div>\r\n             \r\n            </div>\r\n        \r\n            <div class=\"form-group\" >\r\n                    <label >  Bid Amount *</label>\r\n                    <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n                    required  \r\n                    [(ngModel)]=\"newproduct.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                    <div *ngIf=\"f.submitted && !bid_amount.valid\"  class=\"alert alert-danger\"> ! Amount is required</div>\r\n           \r\n                </div>\r\n\r\n                <div class=\"form-group\" >\r\n                        <label >  Minimum Bid Rate *</label>\r\n                        <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                        required  \r\n                        [(ngModel)]=\"newproduct.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                        <div *ngIf=\"f.submitted && !min_bid_rate.valid\"  class=\"alert alert-danger\"> ! Minimum Bid rate is required</div>\r\n               \r\n                    </div>\r\n        \r\n             <div class=\"form-group\" >\r\n                    <label > Bid Start time </label>\r\n                    <datetime name=\"start_date\" [(ngModel)]=\"newproduct.start_date\" ></datetime>\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                        <label > Bid End time </label>\r\n                        <datetime name = \"end_date\"  [(ngModel)]=\"newproduct.end_date\"></datetime>\r\n                    </div>\r\n\r\n            \r\n                    <!-- <image-upload></image-upload> -->\r\n            <!-- <div>\r\n                <label > Image</label>\r\n                <input type=\"file\"  name=\"pollqtn\"   required />\r\n            </div> -->\r\n           \r\n           \r\n            <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n            <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n            \r\n            <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n            \r\n            <input type=\"file\" name =\"myfile\" ng-disabled=\"uploading\" style=\"display: none\">\r\n\r\n            <div class=\"form-group\" >\r\n                <label > Description</label>\r\n                <br>\r\n                <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"newproduct.desc\" ></textarea>\r\n            </div>\r\n           \r\n            <!-- <input type=\"submit\" class=\"btn btn-info blakbtn\" value=\"Submit\"  > -->\r\n            <button type= \"submit\" class=\"btn btn-primary\">Submit</button>\r\n           \r\n        </form>\r\n  \r\n      </div>\r\n     \r\n    </div>\r\n\r\n   \r\n</div>\r\n<!-- /#page-wrapper -->\r\n\r\n           \r\n</div>\r\n\r\n<footer></footer> \r\n  \r\n</body>"
+module.exports = "<body>\r\n    \r\n        <div id=\"wrapper\">\r\n    \r\n            <!-- Navigation -->\r\n<side-bar></side-bar>\r\n    \r\n            <div id=\"page-wrapper\">\r\n    \r\n                <div class=\"container-fluid\">\r\n    \r\n                    <!-- Page Heading -->\r\n                   <header-title [title]=\"'Add Product'\"></header-title>\r\n                    <!-- /.row -->\r\n    \r\n                </div>\r\n                <!-- /.container-fluid -->\r\n\r\n<div class=\"wrapper\">\r\n        <div class=\"col-md-9 addpro\">\r\n                <!--<h3 class=\"headng\" >Add a Product</h3>-->\r\n                <br>\r\n  \r\n  <!-- <form class=\"well\" role=\"form\"   #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct()\" novalidate> -->\r\n        <form class=\"well\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct();\" novalidate>\r\n      <!-- <form #form='ngForm' (ngSubmit)=\"addProduct()\" class=\"well\" > -->\r\n            <div class=\"form-group\" >\r\n                <label > Name *</label>\r\n                <input id=\"name\" name=\"name\" class=\"form-control\"\r\n                required  autofocus\r\n                [(ngModel)]=\"newproduct.name\" #name=\"ngModel\" >\r\n                <div *ngIf=\"f.submitted && !name.valid \"  class=\"alert alert-danger\"> ! Name is required</div>\r\n             \r\n            </div>\r\n        \r\n            <div class=\"form-group\" >\r\n                    <label >  Bid Amount *</label>\r\n                    <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n                    required  \r\n                    [(ngModel)]=\"newproduct.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                    <div *ngIf=\"f.submitted && !bid_amount.valid\"  class=\"alert alert-danger\"> ! Amount is required</div>\r\n           \r\n                </div>\r\n\r\n                <div class=\"form-group\" >\r\n                        <label >  Minimum Bid Rate *</label>\r\n                        <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                        required  \r\n                        [(ngModel)]=\"newproduct.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                        <div *ngIf=\"f.submitted && !min_bid_rate.valid\"  class=\"alert alert-danger\"> ! Minimum Bid rate is required</div>\r\n               \r\n                    </div>\r\n        \r\n             <div class=\"form-group\" >\r\n                    <label > Bid Start time </label>\r\n                    <datetime name=\"start_date\" [(ngModel)]=\"newproduct.start_date\" ></datetime>\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                        <label > Bid End time </label>\r\n                        <datetime name = \"end_date\"  [(ngModel)]=\"newproduct.end_date\"></datetime>\r\n                    </div>\r\n\r\n            \r\n                    <!-- <image-upload></image-upload> -->\r\n            <!-- <div>\r\n                <label > Image</label>\r\n                <input type=\"file\"  name=\"pollqtn\"   required />\r\n            </div> -->\r\n           \r\n           \r\n            <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n            <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n            \r\n            <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n            \r\n            <!-- <input type=\"file\" name =\"myfile\" ng-disabled=\"uploading\" style=\"display: none\"> -->\r\n\r\n            <div class=\"form-group\" >\r\n                <label > Description</label>\r\n                <br>\r\n                <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"newproduct.desc\" ></textarea>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"single\">Select Image</label>\r\n                <input type=\"file\" class=\"\" name=\"single\" ng2FileSelect [uploader]=\"uploader\"  />                                  \r\n             </div>\r\n              \r\n                \r\n            <!-- <input type=\"submit\" class=\"btn btn-info blakbtn\" value=\"Submit\"  > -->\r\n            <button type= \"submit\" class=\"btn btn-primary\">Submit</button>\r\n           \r\n        </form>\r\n  \r\n      </div>\r\n     \r\n    </div>\r\n\r\n   \r\n</div>\r\n<!-- /#page-wrapper -->\r\n\r\n           \r\n</div>\r\n\r\n<!-- <footer></footer>  -->\r\n  \r\n</body>"
 
 /***/ }),
 
@@ -2132,6 +2145,9 @@ module.exports = "<body>\r\n    \r\n        <div id=\"wrapper\">\r\n    \r\n    
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_file_upload__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2142,6 +2158,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+// import { FileUploader } from 'ng2-file-upload';
+
 
 
 
@@ -2150,11 +2168,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 // import { Poll } from '../poll';
 // import { FormsModule, FormControl, FormGroup, Validators }   from '@angular/forms';
 // import { answer } from './../answer';
+ // File Upload
 var ProductComponent = (function () {
     function ProductComponent(_prductService, _userService, router) {
         this._prductService = _prductService;
         this._userService = _userService;
         this.router = router;
+        this.uploader = new __WEBPACK_IMPORTED_MODULE_5_ng2_file_upload__["FileUploader"]({ url: 'http://localhost:3000/products/upload' });
         this.newproduct = {
             name: '',
             desc: '',
@@ -2162,12 +2182,20 @@ var ProductComponent = (function () {
             min_bid_rate: '',
             start_date: '',
             end_date: '',
+            image: ''
         };
     }
     ProductComponent.prototype.ngOnInit = function () {
     };
     ProductComponent.prototype.addProduct = function () {
         var _this = this;
+        this.uploader.uploadAll();
+        this.uploader.onCompleteItem = function (item, response, status, headers) {
+            // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
+            response = JSON.parse(response);
+            _this.newproduct.image = response.filename;
+            console.log(_this.newproduct.image);
+        };
         this._prductService.addProduct(this.newproduct).subscribe(function (data) {
             if (data) {
                 _this._userService.sendmail().subscribe(function (data1) {
@@ -3251,6 +3279,75 @@ UpcomingauctionsComponent = __decorate([
 
 var _a;
 //# sourceMappingURL=upcomingauctions.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/upload/upload.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/upload/upload.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  \n  <div class=\"form-group\">\n    <label for=\"single\">single</label>\n    <input type=\"file\" class=\"form-control\" name=\"single\" ng2FileSelect [uploader]=\"uploader\" />                                  \n </div>\n  \n    <!-- <input type=\"submit\" value=\"submit\" (click)=\"onUpload()\"> -->\n    <button type=\"button\" class=\"btn btn-success btn-s\"\n    (click)=\"up()\" [disabled]=\"!uploader.getNotUploadedItems().length\">\n      Upload all\n </button><br />\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/upload/upload.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UploadComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ng2_file_upload__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+// const URL = 'https://evening-anchorage-3159.herokuapp.com/api/';
+var UploadComponent = (function () {
+    function UploadComponent() {
+        this.uploader = new __WEBPACK_IMPORTED_MODULE_1_ng2_file_upload__["FileUploader"]({ url: 'http://localhost:3000/products/upload' });
+    }
+    UploadComponent.prototype.ngOnInit = function () {
+    };
+    UploadComponent.prototype.up = function () {
+        this.uploader.uploadAll();
+    };
+    return UploadComponent;
+}());
+UploadComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-upload',
+        template: __webpack_require__("../../../../../src/app/upload/upload.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/upload/upload.component.css")],
+    }),
+    __metadata("design:paramtypes", [])
+], UploadComponent);
+
+//# sourceMappingURL=upload.component.js.map
 
 /***/ }),
 

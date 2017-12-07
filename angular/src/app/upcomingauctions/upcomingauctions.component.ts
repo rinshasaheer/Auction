@@ -11,6 +11,7 @@ export class UpcomingauctionsComponent implements OnInit {
 
   products: Array<product>;    
   existStatus: boolean = false;
+
   constructor(private _productService: ProductServiceService) { }
 
   ngOnInit() {

@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const config = require("../config/database");
 var Schema = mongoose.Schema;
 
+
+
 const ProductsSchema = mongoose.Schema({
         name: {
             type : String,
@@ -69,18 +71,19 @@ const ProductsSchema = mongoose.Schema({
 
 const Product = module.exports = mongoose.model('Product', ProductsSchema);
 
+
+module.exports.uploadImage = function(req,callback){
+   
+}
+
+
 module.exports.addProduct = function(product,callback){
     console.log(product);
     var newProduct = new Product(product);
     newProduct.save(callback);
 }
 
-<<<<<<< HEAD
-module.exports.getAllProduct = function(callback){
-    Product.find({},callback);
-// module.exports.getAllProduct = function(callback){
-//     Product.find({},callback);
-=======
+
 
 module.exports.getAllProduct = function(callback){
     Product.find({},callback);
@@ -94,7 +97,6 @@ module.exports.getAllProduct = function(callback){
 
 module.exports.getAllCloasedProduct = function(callback){
     Product.find({"end_date" : {"$lt" : Date()}},callback);
->>>>>>> 114f43adfb460d849f06499ca1ff7fb9f4aa5982
 }
 
 // module.exports.getAllCloasedProduct = function(callback){
@@ -216,17 +218,11 @@ module.exports.getMyAuctionProduct = function(id, callback){
         }, {bidders:{$slice: 1}}, callback);
 }
 
-<<<<<<< HEAD
 // module.exports.updateInterested = function(id, callback){
 //     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
 // }
-=======
->>>>>>> 114f43adfb460d849f06499ca1ff7fb9f4aa5982
 module.exports.getHighestBid = function(id, callback){
     Product.find({"_id": id, "bidders.bid_status":  { "$ne": "rejected"}},callback);
 
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 114f43adfb460d849f06499ca1ff7fb9f4aa5982

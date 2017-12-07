@@ -7,30 +7,61 @@ const User = require("../model/user");
 const passport = require("passport");
 const pro = require('../model/product');
 const jwt = require("jsonwebtoken");
+const mongoose = require('mongoose');
+//Added for Image Upload
+var multer = require('multer');
+var fileName = "";
+var storage = multer.diskStorage({ //multers disk storage settings
+    
+            destination: function (req, file, cb) {
+    
+                cb(null, './angular/src/assets/uploads/');
+    
+            },
+    
+            filename: function (req, file, cb) {
+    
+                var datetimestamp = Date.now();
+    
+                cb(null, file.fieldname + '-' + datetimestamp + '.' + file.originalname.split('.')[file.originalname.split('.').length -1]);
+                fileName = file.fieldname + '-' + datetimestamp + '.' + file.originalname.split('.')[file.originalname.split('.').length -1];
+            }
+    
+        });
+    
+    
+    
+        var upload = multer({ //multer settings
+    
+                        storage: storage
+    
+                    }).single('file');
+    
+router.post('/upload', function(req,res){
 
+    upload(req,res,function(err){
+        console.log(req.body);
+                    // console.log(req.file);
+        
+                    if(err){
+        
+                         res.json({error_code:1,err_desc:err});
+        
+                         return;
+        
+                    }
+        
+                     res.json({error_code:0,err_desc:null, filename:fileName});
+        
+                });
+        
+            });
+            
 
-//     prodObj = {
-//         name:  req.body.name,
-//        // image: req.body.image,
-//         desc: req.body.desc,
-//         bid_amount: req.body.bid_amount,
-//         min_bid_rate: req.body.min_bid_rate,
-//         //start_date : req.body.start_date,
-//         // end_date : req.body.end_date,
-//     };
-//     // console.log(req.body);
-//     Product.addProduct(prodObj,(err, user)=>{
-//          console.log(user);
-//         if(err){
-//             res.json({success: false, msg : "Failed, went somthing wrong "});
-//         }else{
-//             res.json({success: true, msg : "Poll Added Seccessfully, Redirecting..."});
-//         }
-//     });
-// });
-
-
-
+        
+        
+        
+     
 
 router.post('/addnew',function(req,res){
     console.log("Insert a Product");
@@ -41,6 +72,7 @@ router.post('/addnew',function(req,res){
     newPro.min_bid_rate = req.body.min_bid_rate;
     newPro.start_date = req.body.start_date;
     newPro.end_date = req.body.end_date;
+    newPro.image = fileName;
     // newPoll.answers = req.body.answers;
     newPro.save(function(err,insertedPro){
         if(err){
@@ -137,31 +169,32 @@ router.get('/runnig_products',(req,res)=>{
      })
 });
  
-// router.post('/addnew',(req,res,next)=>{
+router.post('/addnew',(req,res,next)=>{
 
 
-//     prodObj = {
-//         name:  req.body.name,
-//         image: req.body.image,
-//         desc: req.body.desc,
-//         bid_amount: req.body.amount,
-//         min_bid_rate: req.body.min_bid_rate,
-//         start_date : req.body.start_date,
-//         end_date : req.body.end_date,
-//     };
-//     Product.addProduct(prodObj,(err, user)=>{
-//         if(err){
-//             res.json({success: false, msg : "Failed, went somthing wrong "});
-//         }else{
-//             res.json({success: true, msg : "Poll Added Seccessfully, Redirecting..."});
-//         }
-//     });
-// });
+    prodObj = {
+        name:  req.body.name,
+        image: req.body.image,
+        desc: req.body.desc,
+        bid_amount: req.body.amount,
+        min_bid_rate: req.body.min_bid_rate,
+        start_date : req.body.start_date,
+        end_date : req.body.end_date,
+    };
+    Product.addProduct(prodObj,(err, user)=>{
+        if(err){
+            res.json({success: false, msg : "Failed, went somthing wrong "});
+        }else{
+            res.json({success: true, msg : "Poll Added Seccessfully, Redirecting..."});
+        }
+    });
+});
 
 
 router.get('/products',(req,res,next)=>{
     Product.getAllProduct((err,poll)=>{
         if(err) throw err;
+        // console.log(res);
         return res.json(poll);
     })
     
@@ -326,18 +359,12 @@ router.put('/updateInterested/:id',passport.authenticate('jwt',{session:false}),
 //     })
 });
 
-router.get('/mynotifications/:id',(req,res,next)=>{
+router.get('/mynotifications/:id',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
     Product.getMyNotification(req.params.id, (err,user)=>{
     if(err) throw err;
     return res.json(user);
     
     })
 
-router.put('/updateInterested/:id',(req,res,next)=>{
-    // console.log("s");
-    Product.updateInterested(req.params.id,(err,products)=>{
-        if(err) throw err;
-        return res.json(products);
-    })
 });
 module.exports = router;

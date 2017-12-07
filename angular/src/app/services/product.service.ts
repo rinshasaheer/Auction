@@ -93,4 +93,5 @@ export class ProductService {
   loadToken(){
     this.authToken = localStorage.getItem('id_token');
   }
+  
 }

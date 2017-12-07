@@ -28,9 +28,20 @@ const port = 3000;
 
 app.use(cors());
 
-
+// app.use(function(req, res, next) { //allow cross origin requests
+    
+//             res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
+    
+//             res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+    
+//             res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    
+//             res.header("Access-Control-Allow-Credentials", true);
+    
+//             next();
+    
+//         });
 app.use(bodyParser.json());
-
 app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: true, cookie: { secure: true } }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -53,13 +64,19 @@ app.get('/auth/google/callback', passport.authenticate('google'),
     return res.redirect("/socialmedia/" + req.user._id);
         });
 
+
+
+
+    
+
+
+
 app.use('*',(req, res)=>{
     res.sendFile(path.join(__dirname,'public/index.html'));
 });
 app.get('/', (req,res)=>{
     res.send("Invalid end point");
 });
-
 
 app.listen(port,() => {
     console.log("Server Started On Port " + port);
