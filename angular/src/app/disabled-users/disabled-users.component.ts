@@ -22,13 +22,13 @@ export class DisabledUsersComponent implements OnInit {
   unblockUser(id){
     this.userService.unblockUser(id).subscribe(data=>{
       console.log(data);
-      // if(data.success){
+      if(data.success){
        
-      //   this.router.navigate(['/all-users']);
-      // }else{
+        this.router.navigate(['/all-users']);
+      }else{
        
-      //   this.router.navigate(['/disabled-users']);
-      // }
+        this.router.navigate(['/disabled-users']);
+      }
     });
 
   }

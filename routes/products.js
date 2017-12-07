@@ -53,8 +53,16 @@ router.post('/addnew',function(req,res){
     })
 
 });
-
-
+//PRODUCT INFO CLOSE
+router.get('/inform-closedproduct/:id',(req,res,next)=>{
+    console.log('yes');
+    console.log(req.params.id);
+});
+//PRODUCT INFO START
+router.get('/inform-startproduct/:id',(req,res,next)=>{
+    console.log('no');
+    console.log(req.params.id);
+});
 //var async = require('async');
 
 
