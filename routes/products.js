@@ -7,31 +7,13 @@ const User = require("../model/user");
 const passport = require("passport");
 const pro = require('../model/product');
 const jwt = require("jsonwebtoken");
+//const io = require("socket.io").listen(3001);
 
-
-//     prodObj = {
-//         name:  req.body.name,
-//        // image: req.body.image,
-//         desc: req.body.desc,
-//         bid_amount: req.body.bid_amount,
-//         min_bid_rate: req.body.min_bid_rate,
-//         //start_date : req.body.start_date,
-//         // end_date : req.body.end_date,
-//     };
-//     // console.log(req.body);
-//     Product.addProduct(prodObj,(err, user)=>{
-//          console.log(user);
-//         if(err){
-//             res.json({success: false, msg : "Failed, went somthing wrong "});
-//         }else{
-//             res.json({success: true, msg : "Poll Added Seccessfully, Redirecting..."});
-//         }
-//     });
-// });
-
-
-
-
+// function to add new product
+// author : 
+// Date : 
+// Last Modified : 
+var returnRouter = function(io) {
 router.post('/addnew',function(req,res){
     console.log("Insert a Product");
     var newPro = new pro();
@@ -55,38 +37,57 @@ router.post('/addnew',function(req,res){
 });
 
 
-//var async = require('async');
-
+// function bid a product from front end
+// author : Yasir Poongadan
+// Date : 4-12-2017
+// Last Modified : 4-12-2017
 
 router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),function(req,res,next){
 
     console.log(req.body);
 
     if (req.headers && req.headers.authorization) {
-        var authorization = req.headers.authorization.substring(4),
-            decoded;
-            try {
-                decoded = jwt.verify(authorization, config.secret);
-                console.log(decoded);
-                Product.findOneAndUpdate({"_id" : req.body.pid},
-                {
-                    $push:{"bidders": {user_id: decoded._id, amount:req.body.amount }}
-                },
-                { new : true },(err, user)=>{
+
+        var authorization = req.headers.authorization.substring(4), decoded;
+        try {
+            decoded = jwt.verify(authorization, config.secret);
+            console.log(decoded);
+            Product.findOneAndUpdate(
+                {"_id" : req.body.pid},
+                { $push:{"bidders": {user_id: decoded._id, amount:req.body.amount }} },
+                { new : true },
+                (err, user)=>{
                     if(err){
                         res.json({success: false, msg : "Failed, went somthing wrong "});
                     }else{
+                        // write code to emit socket    
+                        // io.sockets.on('connection', function (socket) {
+                        //     console.log('New User Connected');
+                        //     // socket.on('newBid', function (data) {
+                        //     //   console.log(data);
+                        //     // });
+                        // });
+                        io.sockets.emit("newbid", {
+                            prod_id : req.body.pid
+                        });
                         res.json({success: true, msg : "Your bid Submitted successfully"});
                     }
-                });
-            } catch (e) {
-                return res.status(401).send('unauthorized 123');
-            }
+            });
+
+        } catch (e) {
+            return res.status(401).send('unauthorized 123');
+        }
     }else{
         return res.status(401).send('Invalid User');
     }
 
 });
+
+
+// function bid a product from front end
+// author : Yasir Poongadan
+// Date : 4-12-2017
+// Last Modified : 4-12-2017
 
 router.get('/closed_products',(req,res)=>{
 
@@ -137,56 +138,22 @@ router.get('/runnig_products',(req,res)=>{
      })
 });
  
-// router.post('/addnew',(req,res,next)=>{
-
-
-//     prodObj = {
-//         name:  req.body.name,
-//         image: req.body.image,
-//         desc: req.body.desc,
-//         bid_amount: req.body.amount,
-//         min_bid_rate: req.body.min_bid_rate,
-//         start_date : req.body.start_date,
-//         end_date : req.body.end_date,
-//     };
-//     Product.addProduct(prodObj,(err, user)=>{
-//         if(err){
-//             res.json({success: false, msg : "Failed, went somthing wrong "});
-//         }else{
-//             res.json({success: true, msg : "Poll Added Seccessfully, Redirecting..."});
-//         }
-//     });
-// });
-
 
 router.get('/products',(req,res,next)=>{
     Product.getAllProduct((err,poll)=>{
         if(err) throw err;
+      
         return res.json(poll);
     })
     
 });
 
 
-router.get('/upcoming_products',(req,res,next)=>{
-    Product.getAllUpcomingProduct((err,product)=>{
-        if(err) throw err;
-        return res.json(product);
-
-    })
-    
-});
-
-// router.get('/closed_products',(req,res,next)=>{
-//     Product.getAllClosedProduct((err,products)=>{
+// router.get('/upcoming_products',(req,res,next)=>{
+//     Product.getAllUpcomingProduct((err,product)=>{
 //         if(err) throw err;
+//         return res.json(product);
 
-//         products.forEach(function(product) {
-//             product.bidders.forEach(function(bidder) {
-//                 adTimes.push(friend.adTime);
-//             });
-//         });
-//         return res.json(products);
 //     })
     
 // });
@@ -206,6 +173,7 @@ router.delete('/delete/:id',(req,res,next)=>{
 router.get('/product/:id',(req,res,next)=>{
     Product.getProductById(req.params.id, (err,product)=>{
         if(err) throw err;
+        console.log(product);
         return res.json(product);
     })
 });
@@ -334,4 +302,8 @@ router.put('/updateInterested/:id',(req,res,next)=>{
         return res.json(products);
     })
 });
-module.exports = router;
+//module.exports = router;
+return router;
+}
+
+module.exports = returnRouter;

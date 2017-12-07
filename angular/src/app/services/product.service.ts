@@ -70,7 +70,7 @@ export class ProductService {
   getAllUpcomingProduct(){
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');
-      return this.http.get(this.url + 'products/upcoming_products',{headers:headers})
+      return this.http.get(this.url + 'products/upcomingproduct',{headers:headers})
       .map(res =>res.json());
   }
 
