@@ -236,10 +236,9 @@ router.get('/runnig_products',(req,res)=>{
  
 
 router.get('/products',(req,res,next)=>{
-    Product.getAllProduct((err,poll)=>{
+    Product.getAllProduct((err,product)=>{
         if(err) throw err;
-      
-        return res.json(poll);
+        return res.json(product);
     })
     
 });
@@ -410,7 +409,7 @@ router.put('/statusconfirm/:id',(req,res,next)=>{
                         });
                         //  console.log(id1,high_amount,user_id1);
                          Product.findOneAndUpdate({"bidders._id" : id1},
-                            { $set: {  "is_bid_completed" : true, "bidders.$.bid_status" : "confirmed","user_notification.status" : false }},
+                            { $set: {  "is_bid_completed" : true, "bidders.$.bid_status" : "confirmed","user_notification.status" : false, "admin_notification.user_id" : user_id1 }},
                             { new: true }, 
                             function(err, doc) {
                                 if(err) throw err;
@@ -480,7 +479,7 @@ router.put('/statusreject/:id',(req,res,next)=>{
 });
 
 router.get('/getnotification/:id',(req,res,next)=>{
-    Product.findOne({"user_notification.user_id" : req.params.id , "user_notification.status" : true}, (err,product)=>{
+    Product.find({"user_notification.user_id" : req.params.id , "user_notification.status" : true}, (err,product)=>{
     if(err) throw err;
     return res.json(product);
     })
@@ -490,7 +489,7 @@ router.put('/updatenotification/:id',(req,res,next)=>{
     // Product.findOne({"user_notification.user_id" : id , "user_notification.status" : true}, (err,product)=>{
     Product.findByIdAndUpdate(req.params.id, 
         {
-        $set:{"user_notification.user_id": req.body.user_id}
+        $set:{"user_notification.user_id": req.body.user_id, "user_notification.status": true}
         },
     { new : true },
         (err, product)=>{
@@ -499,6 +498,23 @@ router.put('/updatenotification/:id',(req,res,next)=>{
         })
 }); 
 
+router.put('/adminViewed/:id', function(req, res){
+    // console.log(req.params.id);
+    Product.findByIdAndUpdate(req.params.id, 
+        { $set: { "admin_notification.is_viewed": true } }, 
+        { new: true }, 
+        function(err, doc) {
+            if(doc==null){
+                return res.json({success:false, msg: 'Admin viewed success'});
+            }
+            else{
+                return res.json({success:true, msg: 'Admin viewed error'});
+            }
+        
+        });
+    });
+
+module.exports = router;
 //module.exports = router;
 return router;
 }
