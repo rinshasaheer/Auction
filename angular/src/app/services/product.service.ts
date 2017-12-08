@@ -17,6 +17,7 @@ export class ProductService {
     private _rejStatusUrl ='/products/statusreject/';
     private _getNotifUrl ='/products/getnotification/';
     private _updateNotifUrl ='/products/updatenotification/';
+    private _adminViewedUrl ='/products/adminViewed/';
     authToken = '';
   
     url = "http://localhost:3000/";
@@ -127,11 +128,20 @@ export class ProductService {
       .map((response : Response) => response.json());
   }
 
+
   updateNotif(user_id, pid){
     let product = {"_id" : pid, "user_id" : user_id};
     let headers = new Headers({ 'Content-Type' : 'application/json'});
     let options = new RequestOptions({ headers : headers});
     return this.http.put(this._updateNotifUrl + pid,JSON.stringify(product),options)
       .map((response : Response) => response.json());
+  }
+
+  adminViewed(pid){
+    let headers = new Headers({ 'Content-Type' : 'application/json'});
+    let options = new RequestOptions({ headers : headers});
+    // console.log(this._adminViewedUrl+pid);
+   return this.http.put(this._adminViewedUrl + pid,options)
+   .map((response : Response) => response.json());
   }
 }

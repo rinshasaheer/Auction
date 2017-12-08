@@ -22,10 +22,20 @@ export class CardComponent implements OnInit {
   myCloseStatus: boolean = false;
   upcoming: boolean = false;
   interestMatch = false;
+  isTimeOver = false;
   constructor( private _productService: ProductServiceService) { 
   }
 
   ngOnInit() {
+    this.cardAction();
+  }
+
+  timeOver(){
+    //alert('time over');
+    this.isTimeOver = true;
+  }
+
+  cardAction(){
     if(this.item){
       let tmp;
       if(this.myauction){
@@ -65,8 +75,6 @@ export class CardComponent implements OnInit {
       }
     }
   }
-
-
   updateInterested(id){
     this._productService.addInterestedCandidate(id).subscribe(data=>{ 
       console.log(data);

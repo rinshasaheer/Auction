@@ -32,7 +32,8 @@ export class ProductServiceService {
       .map(res => res.json());
   }
 
-  loadMyAuctionProduct(id){
+  loadMyAuctionProduct(){
+    let id = this.loadUserId();
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this._http.get('http://localhost:3000/products/myauctionproduct/'+id,  {headers: headers})
@@ -70,5 +71,10 @@ export class ProductServiceService {
     return this.authUser.id;
   }
   
-
+  ProductById(id){
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this._http.get('http://localhost:3000/products/product/'+id,  {headers: headers})
+      .map(res => res.json());
+  }
 }

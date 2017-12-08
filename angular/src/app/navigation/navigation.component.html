@@ -27,27 +27,30 @@
                     <div class="pull-right notify-cont">
 
                         <li *ngIf="count" class="dropdown notify" >
-                          <div class="notify-count">1</div>
+                          <div class="notify-count">{{countNumber}}</div>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu" id="notify-menu">
                           
-                          <li>
-                            <a [routerLink]="['/winnerconfirm/'+details?._id]" class="ovrflow-h" id="notify-head-a">
+                          <li *ngFor="let item of info">
+                            <a [routerLink]="['/winnerconfirm/'+item?._id]" class="ovrflow-h" id="notify-head-a">
                              <div class="col-md-12">
                                 <div class="row">
                                   <div class="col-md-12">
                                     <h4 id="won-head">You Won a Bid!</h4>
                                   </div>
+                                 
                                     <div class="col-md-3">
                                       <div class="row">
-                                          <img  class="noftify-pro-img" src="../../assets/uploads/pro.jpg" alt="pro"></div>
+                                          <img  class="noftify-pro-img" src="../../assets/uploads/{{item?.image||'default.png'}}" alt="pro">
+                                        </div>
                                       </div>
                                       
                                     <div class="col-md-9">
-                                          <h4 class="noftify-pro-h4">{{details?.name}}</h4>
+                                          <h4 class="noftify-pro-h4">{{item?.name}}</h4>
                                           <!-- <p>Amount: $1000</p> -->
                                       
-                                    </div>
+                                 
+                                  </div>
                                 </div>
                                   
                               </div>

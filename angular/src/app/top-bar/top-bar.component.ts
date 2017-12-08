@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../services/user.service';
+import {ProductService} from '../services/product.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -9,13 +10,32 @@ import {Router} from '@angular/router';
 })
 export class TopBarComponent implements OnInit {
 
+  count : any;
+  info :Array<any>;
+  user_id : any;
+  
   constructor(
     private userService: UserService,
+    private productService: ProductService,
     private router: Router
   ) { }
 
   ngOnInit() {
-  }
+    let details= [];
+    this.info = [];
+    this.count = 0;
+    this.productService.getProducts().subscribe(data3 => {   
+      data3.forEach(element => {
+        // console.log(element);
+        if(element.admin_notification.user_id && element.admin_notification.is_viewed == false ){
+          this.info.push(element);
+          this.count++;
+          console.log(this.info);
+        }
+      });
+  });
+}
+
 
   logout(){
   this.userService.logout();

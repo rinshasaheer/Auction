@@ -87,6 +87,7 @@ export class RunningAuctionBackComponent implements OnInit {
       data[index].lastBiduserId = lastBiduserId;
     });
     this.products = data;
+    console.log(this.products);
   });
   }
   updateInvolved(product){

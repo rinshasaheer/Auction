@@ -1,5 +1,5 @@
 <!-- <div *ngIf="!itemStatus" class="col-md-8 col-xs-12 col-sm-6 col-lg-8"><h4>Sorry! No Items to display.</h4></div> -->
-<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+<div [hidden]="isTimeOver" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
   <div class="tg-ad tg-verifiedad">
       <figure>
           <span *ngIf="myCloseStatus" class="tg-themetag tg-featuretag">Closed</span>
@@ -34,12 +34,15 @@
               <span class="tg-like tg-liked"><i class="fa fa-heart"></i></span>
           </div> -->
       </div>
-      <div *ngIf="startDate" class="col-md-6">
+      <div *ngIf="startDate" class="col-md-6 dte">
           <h4>Start Date<br/> {{startDate | date: 'dd/MM/yyyy'}}</h4>
       </div>
-      <div *ngIf="startDate" class="col-md-6">
+      <div *ngIf="startDate" class="col-md-6 dte">
             <h4>End Date<br/> {{eTime | date: 'dd/MM/yyyy'}}</h4>
         </div>
+        <p class="lead" *ngIf="startDate">
+            <app-count-down-timer (onTimeOver)="timeOver()"  [inputDate]="startDate"></app-count-down-timer>
+        </p>
         <div class="col-md-8 col-md-offset-2 crd-btn-container" *ngIf="(startDate && !interestMatch) else divinterested"><button  class="btn btn-success crd-btn" (click)="updateInterested(item._id)">Interested</button></div>
         
         <ng-template #divinterested>

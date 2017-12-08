@@ -73,6 +73,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductPipe } from './product.pipe';
 //import { NgDatepickerModule } from 'ng2-datepicker';
 import { NgDatepickerComponent } from './ng-datepicker/ng-datepicker.component';
+import { AdminviewedComponent } from './adminviewed/adminviewed.component';
+import { NgDatepickerModule } from 'ng2-datepicker';
 import { UploadComponent } from './upload/upload.component';
 // import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 
@@ -93,6 +95,7 @@ const appRoutes: Routes = [
   {path:'email-verification/:id', component:EmailVerificationComponent},
   {path:'login', component:LoginComponent},  
   {path:'socialmedia/:id', component:SocialmediaComponent},
+  {path:'adminviewed/:id', component:AdminviewedComponent},
 
   {path:'dashboard', component: DashboardComponent},
   {path:'all-users', component: AllUsersComponent},
@@ -157,6 +160,7 @@ const appRoutes: Routes = [
     CardRunningComponent,
     WinnerconfirmComponent,
     ProductPipe,
+    AdminviewedComponent,
     UploadComponent,
     FileSelectDirective,
     NgDatepickerComponent,
