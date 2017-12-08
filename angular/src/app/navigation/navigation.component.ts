@@ -31,6 +31,7 @@ export class NavigationComponent implements OnInit {
         data4.forEach(element => {
           this.countNumber++;
           this.info.push(element);
+          console.log(this.info);
           if(this.info==null){
             this.count = false;
           }
