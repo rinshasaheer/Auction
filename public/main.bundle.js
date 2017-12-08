@@ -3061,6 +3061,23 @@ var RunningAuctionBackComponent = (function () {
         this.socket.on('startbid', function (data) {
             // console.log(data);
             _this.productService.getProduct(data.prod_id).subscribe(function (data) {
+                var lastBidprice = data.bid_amount;
+                var lastBiduser = '';
+                var lastBidTime = '';
+                var lastBiduserId = '';
+                data.bidders.forEach(function (bidder, i) {
+                    //console.log(bidder);
+                    if (bidder.amount >= lastBidprice) {
+                        lastBidprice = bidder.amount;
+                        lastBiduser = _this.users[bidder.user_id].name;
+                        lastBiduserId = _this.users[bidder.user_id]._id;
+                        lastBidTime = bidder.date_time;
+                    }
+                });
+                data.lastBidprice = lastBidprice;
+                data.lastBiduser = lastBiduser;
+                data.lastBidTime = lastBidTime;
+                data.lastBiduserId = lastBiduserId;
                 _this.products.push(data);
                 //this.getlastbidder();
             });
