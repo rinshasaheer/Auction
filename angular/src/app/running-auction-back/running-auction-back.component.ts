@@ -25,7 +25,7 @@ export class RunningAuctionBackComponent implements OnInit {
   ngOnInit() {
     this.userService.getAllUsersById().subscribe(data=>{
       this.users = data;
-      console.log(this.users);
+      // console.log(this.users);
   });
   this.socket.on('newbid', (data) => {
     this.getAllproduct();
@@ -63,7 +63,7 @@ export class RunningAuctionBackComponent implements OnInit {
   }
   updateInvolved(product){
     this.involvedUsers = product;
-    console.log(this.involvedUsers);
+    // console.log(this.involvedUsers);
   }
   timeOver(){
     this.getAllproduct(); 

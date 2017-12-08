@@ -154,8 +154,11 @@ module.exports.getMyAuctionProduct = function(id, callback){
 //  }
 // ], callback)
     // Product.find({"bidders.userid" : id}, {bidders: {$elemMatch: {userid: id}}}, callback);
-    Product.find({
-        "bidders.user_id" : id
-        }, {bidders:{$slice: 1}}, callback);
+    // Product.find({
+    //     "bidders.user_id" : id,
+    //     }, {bidders:{$slice: 1}}, callback);
+        Product.find({
+            "bidders.user_id" : id,
+            }, callback);
 }
 

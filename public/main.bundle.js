@@ -2015,6 +2015,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var MyauctionsComponent = (function () {
     function MyauctionsComponent(_productService) {
         this._productService = _productService;
+        this.products = [];
         this.existStatus = false;
         this.socket = __WEBPACK_IMPORTED_MODULE_2_socket_io_client__('http://192.168.1.99:3000');
     }
@@ -2022,7 +2023,8 @@ var MyauctionsComponent = (function () {
         var _this = this;
         this.loadAuctions();
         this.socket.on('newbid', function (data) {
-            console.log(data);
+            // console.log(data);
+            // console.log('mycll');
             _this.products.forEach(function (item, index, object) {
                 if (item._id == data) {
                     object.splice(index, 1);
@@ -2033,14 +2035,45 @@ var MyauctionsComponent = (function () {
     };
     MyauctionsComponent.prototype.loadAuctions = function () {
         var _this = this;
+        this.loadUserId();
         this._productService.loadMyAuctionProduct()
             .subscribe(function (resProducts) {
-            _this.products = resProducts;
+            // this.products = resProducts;
+            console.log('fetch all my product');
             console.log(resProducts);
-            if (resProducts.length > 0) {
+            var temp = [];
+            resProducts.forEach(function (item, index) {
+                var lastBidprice = item.bid_amount;
+                //var lastBiduser = '';
+                var lastBidTime = '';
+                var lastBiduserId = '';
+                item.bidders.forEach(function (bidder, i) {
+                    //console.log(bidder);
+                    if (bidder.amount >= lastBidprice && bidder.bid_status != "rejected") {
+                        lastBidprice = bidder.amount;
+                        // lastBiduser = this.users[bidder.user_id].name;
+                        lastBiduserId = bidder.user_id;
+                        lastBidTime = bidder.date_time;
+                    }
+                });
+                resProducts[index].lastBidprice = lastBidprice;
+                //  resProducts[index].lastBiduser = lastBiduser;
+                resProducts[index].lastBidTime = lastBidTime;
+                resProducts[index].lastBiduserId = lastBiduserId;
+                if (_this.authUser.id == lastBiduserId) {
+                    temp.push(resProducts[index]);
+                }
+            });
+            //  console.log(temp);
+            _this.products = temp;
+            if (_this.products.length > 0) {
                 _this.existStatus = true;
             }
         });
+    };
+    MyauctionsComponent.prototype.loadUserId = function () {
+        this.authUser = JSON.parse(localStorage.getItem('user'));
+        return this.authUser.id;
     };
     return MyauctionsComponent;
 }());
@@ -2706,7 +2739,7 @@ var RunningAuctionBackComponent = (function () {
         var _this = this;
         this.userService.getAllUsersById().subscribe(function (data) {
             _this.users = data;
-            console.log(_this.users);
+            // console.log(this.users);
         });
         this.socket.on('newbid', function (data) {
             _this.getAllproduct();
@@ -2742,7 +2775,7 @@ var RunningAuctionBackComponent = (function () {
     };
     RunningAuctionBackComponent.prototype.updateInvolved = function (product) {
         this.involvedUsers = product;
-        console.log(this.involvedUsers);
+        // console.log(this.involvedUsers);
     };
     RunningAuctionBackComponent.prototype.timeOver = function () {
         this.getAllproduct();
