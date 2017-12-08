@@ -16,7 +16,16 @@ a {
 .checkbox {
   color:black;
 }
-
+.center {
+  max-width: 478px;
+  width: 100%;
+  padding: 30px;
+  margin: 0 auto;
+  float: none;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 26px 27px 59px #eaeaea;
+}
 
 textarea,
 input[type="text"],
