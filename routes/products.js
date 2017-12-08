@@ -133,7 +133,7 @@ router.get('/inform-closedproduct/:id',(req,res,next)=>{
 });
 //PRODUCT INFO START
 router.get('/inform-startproduct/:id',(req,res,next)=>{
-    // console.log('no');
+     console.log('new start');
     // console.log(req.params.id);
     io.sockets.emit("startbid", {
         prod_id : req.params.id
