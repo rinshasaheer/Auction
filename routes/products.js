@@ -106,7 +106,17 @@ router.post('/addnew',function(req,res){
         if(err){
             console.log("Error " + err);
         }else{
-         
+            if(newPro.start_date < new Date()){
+                console.log("startbid");
+                        io.sockets.emit("startbid", {
+                        prod_id : insertedPro._id
+                        });
+            }else   {
+                console.log("upcomingbid");
+                        io.sockets.emit("upcomingnewbid", {
+                        prod_id : insertedPro._id
+                        });
+                    }
 
             res.json(insertedPro);
         }
@@ -320,7 +330,7 @@ router.put('/updatedel/:id',function(req,res){
 router.get('/completedproduct',(req,res,next)=>{
     Product.getFinishedAuctionProduct((err,products)=>{
         if(err) throw err;
-        // console.log(products[0].start_date);
+        // console.log(Date().toString());
         return res.json(products);
     })
 });
@@ -342,9 +352,10 @@ router.get('/highBid/:id',(req,res,next)=>{
 });
 
 router.get('/myauctionproduct/:id',(req,res,next)=>{
-    // console.log("s");
+    console.log(req.params.id);
     Product.getMyAuctionProduct(req.params.id,(err,products)=>{
         if(err) throw err;
+        console.log(products);
         return res.json(products);
     })
 });
