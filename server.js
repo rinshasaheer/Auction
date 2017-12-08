@@ -1,8 +1,16 @@
 const express = require("express");
-const path = require("path");
+const app = express();
+const port = 3000;
 
+const http = require("http");
+const socketIo = require("socket.io");
+
+const server = http.Server(app);
+const io = socketIo(server);
+
+const path = require("path");
 const users = require("./routes/user");
-const products = require("./routes/products");
+const products = require("./routes/products")(io);
 
 const bodyParser = require("body-parser");
 const passport = require('passport');
@@ -10,7 +18,7 @@ var session = require('express-session');
 const cors = require('cors');
 const mongoose = require("mongoose");
 const config = require("./config/database");
-const http = require("http");
+
 
 mongoose.connect(config.database);
 mongoose.Promise = global.Promise;
@@ -21,10 +29,7 @@ mongoose.connection.on('error',(err)=>{
     console.log("database Error" + err);
 });
 
-const app = express();
 
-
-const port = 3000;
 
 app.use(cors());
 
@@ -78,7 +83,8 @@ app.get('/', (req,res)=>{
     res.send("Invalid end point");
 });
 
-app.listen(port,() => {
+
+server.listen(port,() => {
     console.log("Server Started On Port " + port);
 
 });

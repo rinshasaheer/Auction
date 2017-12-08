@@ -300,6 +300,7 @@ router.get('/getemail',function(req,res){
 
 
 router.get('/users_id_as_index',(req,res,next)=>{
+ //   console.log('testing');
     User.getUsers((err,user)=>{
         if(err) throw err;
         var users = {};
@@ -322,7 +323,7 @@ router.get('/get_loggedin_user',(req,res,next)=>{
             decoded;
             try {
                 decoded = jwt.verify(authorization, config.secret);
-                console.log(decoded);
+             //   console.log(decoded);
                 res.json(decoded);
             } catch (e) {
                 return res.status(401).send('unauthorized');

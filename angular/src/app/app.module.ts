@@ -71,6 +71,7 @@ import { FilterPipe } from './filter.pipe';
 import { ManageProductComponent } from './manage-product/manage-product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductPipe } from './product.pipe';
+import { NgDatepickerModule } from 'ng2-datepicker';
 import { UploadComponent } from './upload/upload.component';
 // import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 
@@ -174,13 +175,14 @@ const appRoutes: Routes = [
     Ng2PageScrollModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
+    NgDatepickerModule
     // DataTablesModule,
     // ImageUploadModule,
     // NKDatetimeModule,
-    NKDatetimeModule,
+    // NKDatetimeModule,
     //  DataTablesModule
     // Ng2DatetimePickerModule
-    ImageUploadModule.forRoot(), //file upload
+    //ImageUploadModule.forRoot(), //file upload
   ],
   
   providers: [ProductServiceService,

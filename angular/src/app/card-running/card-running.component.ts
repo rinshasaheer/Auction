@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
+import * as socketIo from 'socket.io-client';
 
 @Component({
   selector: 'app-card-running',
   templateUrl: './card-running.component.html',
   styleUrls: ['./card-running.component.css'],
-  inputs: ['product'],
+  inputs: ['product','users','user'],
 })
 export class CardRunningComponent implements OnInit {
+    user:any;
+    users:any;
    product:any;
    btnLabel = 'Bid Now';
    btnClass = 'btn-primary';
@@ -18,18 +21,62 @@ export class CardRunningComponent implements OnInit {
    msg = '';
    btnDisbled:boolean = false;
    isTimeOver = false;
+   private socket: any; 
   constructor(
     private productService: ProductService
-  ) { }
+  ) {
+    this.socket  = socketIo('http://localhost:3000');
+   }
 
   ngOnInit() {
+
+    this.socket.on('newbid', (data) => {
+      console.log(data);
+      if(this.product._id == data.prod_id){
+        this.productService.getProduct(data.prod_id).subscribe(data=>{
+          this.product = data;
+          this.getlastbidder();
+        });
+      }
+    })   
      console.log(this.product);
-     if(this.product.mybid){
+     this.getlastbidder();
+        
+      
+     
+  }
+
+  getlastbidder(){
+    var lastBidprice = this.product.bid_amount;
+    var lastBiduser = '';
+    var lastBidTime = '';
+    var lastBiduserId = '';
+
+    this.product.bidders.forEach((bidder, i) => {
+      console.log(bidder);
+      if(bidder.amount >= lastBidprice){
+         lastBidprice = bidder.amount;
+         lastBiduser = this.users[bidder.user_id].name;
+         lastBiduserId = this.users[bidder.user_id]._id;
+         lastBidTime = bidder.date_time;
+      }
+    });
+    this.product.lastBidprice = lastBidprice;
+    this.product.lastBiduser = lastBiduser;
+    this.product.lastBidTime = lastBidTime;
+    this.product.lastBiduserId = lastBiduserId;
+    this.product.mybid = (lastBiduserId == this.user._id) ? true:false ;
+    if(this.product.mybid){
       this.btnDisbled = true;
       this.formatedAmount = this.product.lastBidprice
       this.btnLabel = 'Your Bid On Progress';
       this.btnClass = 'btn-success';
       console.log(this.formatedAmount);
+     }else{
+      this.btnDisbled = false;
+      this.formatedAmount = '';
+      this.btnLabel = 'Bid Now';
+      this.btnClass = 'btn-primary';
      }
   }
 
