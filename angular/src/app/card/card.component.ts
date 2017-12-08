@@ -26,6 +26,11 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.cardAction();
+  }
+
+
+  cardAction(){
     if(this.item){
       let tmp;
       if(this.myauction){
@@ -65,8 +70,6 @@ export class CardComponent implements OnInit {
       }
     }
   }
-
-
   updateInterested(id){
     this._productService.addInterestedCandidate(id).subscribe(data=>{ 
       console.log(data);

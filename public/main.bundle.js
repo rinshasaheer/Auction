@@ -780,6 +780,9 @@ var CardComponent = (function () {
         this.interestMatch = false;
     }
     CardComponent.prototype.ngOnInit = function () {
+        this.cardAction();
+    };
+    CardComponent.prototype.cardAction = function () {
         if (this.item) {
             var tmp = void 0;
             if (this.myauction) {
@@ -2898,6 +2901,12 @@ var ProductServiceService = (function () {
     ProductServiceService.prototype.loadUserId = function () {
         this.authUser = JSON.parse(localStorage.getItem('user'));
         return this.authUser.id;
+    };
+    ProductServiceService.prototype.ProductById = function (id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this._http.get('http://localhost:3000/products/product/' + id, { headers: headers })
+            .map(function (res) { return res.json(); });
     };
     return ProductServiceService;
 }());
