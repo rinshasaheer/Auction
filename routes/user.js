@@ -323,7 +323,7 @@ router.get('/get_loggedin_user',(req,res,next)=>{
             decoded;
             try {
                 decoded = jwt.verify(authorization, config.secret);
-             //   console.log(decoded);
+               console.log(decoded);
                 res.json(decoded);
             } catch (e) {
                 return res.status(401).send('unauthorized');
