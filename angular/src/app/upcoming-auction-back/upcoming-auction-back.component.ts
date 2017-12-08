@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { Router} from '@angular/router';
+import { DatepickerOptions } from 'ng2-datepicker';
+import * as enLocale from 'date-fns/locale/en';
+import * as socketIo from 'socket.io-client';
 
 @Component({
   selector: 'app-upcoming-auction-back',
@@ -9,19 +12,41 @@ import { Router} from '@angular/router';
 })
 export class UpcomingAuctionBackComponent implements OnInit {
   products: object;
+  startDate:Date;
+  endDate:Date;
+  private socket: any; 
+  options:DatepickerOptions = {
+    
+        minYear: 1970,
+        maxYear: 2030,
+        displayFormat: 'DD-MM-YYYY',
+        barTitleFormat: 'MMMM YYYY',
+        firstCalendarDay: 0, // 0 - Sunday, 1 - Monday
+        locale: enLocale
+      };
   constructor(
     private productService: ProductService
-  ) { }
+  ) {
+
+    this.socket  = socketIo('http://localhost:3000');
+   }
 
   ngOnInit() {
+    this.startDate = new Date();
+    this.endDate = new Date();
+    this.getAllproduct(); 
+    this.socket.on('upcomingnewbid', (data) => {
+      this.getAllproduct(); 
+    }) 
+  }
+
+  getAllproduct(){
     this.productService.getAllUpcomingProduct().subscribe(data=>{
       console.log(data);
       this.products = data;
-      // if(data.bidders.length >0){
-      //    // data.bidders[data.bidders.length-1]
-          
-      // }
     });
+  }  
+  timeOver(){
+    this.getAllproduct(); 
   }
-
 }

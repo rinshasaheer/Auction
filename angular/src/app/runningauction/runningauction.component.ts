@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { UserService} from '../services/user.service';
 import { Router} from '@angular/router';
+import * as socketIo from 'socket.io-client';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { Router} from '@angular/router';
 export class RunningauctionComponent implements OnInit {
   user : any;
   users : object;
-  products: object;
+  products: any;
   winnerId : object;
   involvedUsers : any = [];
   private socket: any; 
@@ -20,12 +21,19 @@ export class RunningauctionComponent implements OnInit {
     private productService: ProductService,
     private userService:UserService
   ) {
-    
+    this.socket  = socketIo('http://localhost:3000');
    }
 
   ngOnInit() {
 
-     
+    this.socket.on('startbid', (data) => {
+     // console.log(data);
+        this.productService.getProduct(data.prod_id).subscribe(data=>{
+          this.products.push(data);
+          //this.getlastbidder();
+        });
+      
+    })
 
     this.userService.getLoggedUSerDetails().subscribe(data=>{
         this.user = data;

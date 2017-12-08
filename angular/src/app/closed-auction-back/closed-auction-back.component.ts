@@ -3,16 +3,11 @@ import { ProductService } from '../services/product.service';
 import { Router} from '@angular/router';
 import { UserService} from '../services/user.service';
 import { DatepickerOptions } from 'ng2-datepicker';
-import * as frLocale from 'date-fns/locale/fr';
+import * as enLocale from 'date-fns/locale/en';
+import * as socketIo from 'socket.io-client';
 
-// options: DatepickerOptions = {
-//   minYear: 1970,
-//   maxYear: 2030,
-//   displayFormat: 'MMM D[,] YYYY',
-//   barTitleFormat: 'MMMM YYYY',
-//   firstCalendarDay: 0, // 0 - Sunday, 1 - Monday
-//   locale: frLocale
-// };
+
+
 @Component({
   selector: 'app-closed-auction-back',
   templateUrl: './closed-auction-back.component.html',
@@ -22,20 +17,48 @@ export class ClosedAuctionBackComponent implements OnInit {
   products: object;
   winnerId : object;
   users:object;
+  startDate:Date;
+  endDate:Date;
+  private socket: any; 
   involvedUsers : any = [];
+  //options:DatepickerOptions;
+  options:DatepickerOptions = {
+
+    minYear: 1970,
+    maxYear: 2030,
+    displayFormat: 'DD-MM-YYYY',
+    barTitleFormat: 'MMMM YYYY',
+    firstCalendarDay: 0, // 0 - Sunday, 1 - Monday
+    locale: enLocale
+  };
   constructor(
      private productService: ProductService,
      private userService:UserService
-  ){ }
+  ){ 
+
+    this.socket  = socketIo('http://localhost:3000');
+  }
 
 
   ngOnInit() {
-
+   this.startDate = new Date();
+   this.endDate = new Date();
     this.userService.getAllUsersById().subscribe(data=>{
       this.users = data;
       console.log(this.users);
     });
 
+    this.socket.on('startbid', (data) => {
+        this.getAllproduct();
+    })
+    this.socket.on('userbidreject', (data) => {
+      this.getAllproduct();
+    }) 
+    this.getAllproduct();
+    
+  }
+
+  getAllproduct(){
     this.productService.getAllClosedProduct().subscribe(data=>{
       this.involvedUsers.bidders = [];
       this.involvedUsers.user_details = [];

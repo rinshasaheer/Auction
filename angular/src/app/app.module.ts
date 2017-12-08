@@ -71,12 +71,17 @@ import { FilterPipe } from './filter.pipe';
 import { ManageProductComponent } from './manage-product/manage-product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductPipe } from './product.pipe';
-import { NgDatepickerModule } from 'ng2-datepicker';
+//import { NgDatepickerModule } from 'ng2-datepicker';
+import { NgDatepickerComponent } from './ng-datepicker/ng-datepicker.component';
 import { UploadComponent } from './upload/upload.component';
 // import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 
 import { ImageUploadModule } from "angular2-image-upload";//file upload
 import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
+
+import { CommonModule } from '@angular/common';
+import { NgSlimScrollModule } from 'ngx-slimscroll';
+import { DateSearchPipe } from './date-search.pipe';
 
 const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
@@ -153,10 +158,13 @@ const appRoutes: Routes = [
     WinnerconfirmComponent,
     ProductPipe,
     UploadComponent,
-    FileSelectDirective
+    FileSelectDirective,
+    NgDatepickerComponent,
+    DateSearchPipe
   ],
   imports: [
     BrowserModule,
+    
     // DataTablesModule,
     FormsModule,
     ReactiveFormsModule,
@@ -168,14 +176,15 @@ const appRoutes: Routes = [
     NKDatetimeModule,
     //  DataTablesModule
     // Ng2DatetimePickerModule
-    BrowserModule,
+    //BrowserModule,
     // DataTablesModule,
     FormsModule,
     ReactiveFormsModule,
     Ng2PageScrollModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    NgDatepickerModule
+    NgSlimScrollModule
+  //  NgDatepickerModule
     // DataTablesModule,
     // ImageUploadModule,
     // NKDatetimeModule,
@@ -191,6 +200,8 @@ const appRoutes: Routes = [
     ProductService
   ],
  
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  //exports: [ NgDatepickerComponent, CommonModule, FormsModule, NgSlimScrollModule ]
+  
 })
 export class AppModule { }
