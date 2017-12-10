@@ -83,9 +83,9 @@ module.exports.addProduct = function(product,callback){
     newProduct.save(callback);
 }
 
-module.exports.getAllProduct = function(callback){
-    Product.find({},callback);
-}
+// module.exports.getAllProduct = function(callback){
+//     Product.find({},callback);
+// }
 
 module.exports.getAllCloasedProduct = function(callback){
     Product.find({"end_date" : {"$lt" : Date()}},callback);
@@ -104,13 +104,17 @@ module.exports.deleteProduct = function(id,callback){
     const query = {_id: id}
     Product.remove(query,callback);
 }
-
+module.exports.updateProduct = function(id,callback){
+    const query = {_id: id}
+    Product.findByIdAndUpdate(query,callback);
+}
 
 // module.exports.getProductById = function(id,callback){
 //     Product.findOne({_id: id},callback);
 
-module.exports.getProductById = function(callback){
-    Product.find({"status" : true},callback);
+module.exports.getAllProduct = function(callback){
+    Product.find({status : true},callback);
+    // Product.find({status: "true"},callback);
 }
 module.exports.getProductById = function(id,callback){
     Product.findOne({_id: id},callback);

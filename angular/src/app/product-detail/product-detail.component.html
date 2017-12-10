@@ -1,70 +1,91 @@
 
-    <div class="col-md-9 shadow">
-      <h3>Edit  a Product</h3>
-      <br>
-      <form class="well" >
-          <div class="form-group" >
-              <label > Name *</label>
-              <input type="text"  name="name"  [(ngModel)]="pro.name" class="form-control" required  />
-          </div>
-          <div class="form-group" >
-              <label > Bid Amount *</label>
-              <input type="text"  name="bid_amount" [(ngModel)]="pro.bid_amount"  class="form-control" required  />
-          </div>
-       
+<br>
+<div class="wrapper">
+        <div class="col-md-9 shadow">
+                <h3 class="headng" >Edit a Product</h3>
+                <br>
+  
+  <!-- <form class="well" role="form"   #f="ngForm" (ngSubmit)="f.form.valid && addProduct()" novalidate> -->
+        <form class="well" role="form"  #f="ngForm" (ngSubmit)="f.form.valid && updateProduct(arr1);" novalidate>
+      <!-- <form #form='ngForm' (ngSubmit)="addProduct()" class="well" > -->
+            <div class="form-group" >
+                <label > Name *</label>
+                <input id="name" name="name" class="form-control"
+                required  autofocus
+                [(ngModel)]="arr1.name" #name="ngModel" (keypress)=_keyPress1($event)>
+                <div *ngIf="f.submitted && !name.valid "  class="alert alert-danger"> ! Name is required</div>
+             
+            </div>
+            <td><img src="assets/uploads/{{arr1.image || 'default.png'}}" alt="" class="image"></td>
+            <div class="form-group">
+                <label for="single">Select Image</label>
+                <input type="file" class="" name="single" ng2FileSelect [uploader]="uploader"  />                                  
+             </div>
 
-          <div class="form-group" >
-              <label > Minimum Bid Rate</label>
-              <input type="text"  name="min_bid_rate" [(ngModel)]="pro.min_bid_rate" class="form-control" />
-          </div>
-
-           <div class="form-group" >
-                  <label > Bid Start time *</label>
-                  <datetime name="start_date" [(ngModel)]="pro.start_date"></datetime>
-              </div>
-              <div class="form-group" >
-                      <label > Bid End time *</label>
-                      <datetime name = "end_date"  [(ngModel)]="pro.end_date"></datetime>
-                  </div>
-
-          
-
-           <!-- <image-upload name="image"  [(ngModel)]="newproduct.image"
-          [style]="'customStyle'" 
-          [class]="'prev-img'" 
-          [max]="100"
-          
-          [headers]="{Authorization: 'MyToken'}"
-          [buttonCaption]="'Select Images!'"
-          [dropBoxMessage]="'Drop Product images here!'"
-          [extensions]="['jpg','png','gif']"
-       
-          (removed)="onRemoved($event)"
-          (uploadFinished)="onUploadFinished($event)"
-          (uploadStateChanged)="onUploadStateChanged($event)"></image-upload>  -->
-          <!-- <div>
-              <label > Image</label>
-              <input type="file"  name="pollqtn"   required />
-          </div> -->
-         
-         
-          <!-- <img class="mythumbnail" ng-src="{{ thumbnail.dataUrl || default }}"> -->
-          <!-- <img ng-src= "{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}"> -->
-          
-          <!-- <label class="btn btn-success colorbtn"> Browse</label> -->
-          
         
+            <div class="form-group" >
+                    <label >  Bid Amount *</label>
+                    <input id="bid_amount" name="bid_amount" class="form-control"
+                    required  
+                    [(ngModel)]="arr1.bid_amount" #bid_amount="ngModel" (keypress)="_keyPress($event)">
+                    <div *ngIf="f.submitted && !bid_amount.valid"  class="alert alert-danger"> ! Amount is required</div>
+           
+                </div>
 
-          <div class="form-group" >
-              <label > Description</label>
-              <br>
-              <textarea rows="4" cols="70" name="desc" [(ngModel)]="pro.desc" ></textarea>
-          </div>
-         
-          <input type="submit" (click)="updateProduct()" class="btn btn-info blakbtn" value="Udate"  >
-          <input type="submit" (click)="deleteProduct()" class="btn btn-info blakbtn" value="Delete"  >
-         
-      </form>
+                <div class="form-group" >
+                        <label >  Minimum Bid Rate *</label>
+                        <input id="min_bid_rate" name="min_bid_rate" class="form-control"
+                        required  
+                        [(ngModel)]="arr1.min_bid_rate" #min_bid_rate="ngModel" (keypress)="_keyPress($event)">
+                        <div *ngIf="f.submitted && !min_bid_rate.valid"  class="alert alert-danger"> ! Minimum Bid rate is required</div>
+               
+                    </div>
+        
+             <div class="form-group" >
+                    <label > Bid Start time *</label>
+                    <datetime id="start_date" name="start_date"  [(ngModel)]="start_date" [(ngModel)]="arr1.start_date" [hasClearButton]="true"  [datepicker]= "datepickerOpts"></datetime>
+                </div>
+                    <div *ngIf="start">
+                    <div class="alert alert-danger"> ! Start time is required</div>
+                </div>
+                <div class="form-group" >
+                        <label > Bid End time *</label>
+                        <datetime name = "end_date"  [(ngModel)]="end_date" [(ngModel)]="arr1.end_date" [datepicker]= "datepickerOpts" [hasClearButton]="true"></datetime>
+                        <div *ngIf="end">
+                        <div  class="alert alert-danger"> ! End time is required</div>
+                    </div>
+                    </div>
 
+            
+                    <!-- <image-upload></image-upload> -->
+            <!-- <div>
+                <label > Image</label>
+                <input type="file"  name="pollqtn"   required />
+            </div> -->
+           
+           
+            <!-- <img class="mythumbnail" ng-src="{{ thumbnail.dataUrl || default }}"> -->
+            <!-- <img ng-src= "{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}"> -->
+            
+            <!-- <label class="btn btn-success colorbtn"> Browse</label> -->
+            
+            <input type="file" name ="myfile" ng-disabled="uploading" style="display: none">
+
+            <div class="form-group" >
+                <label > Description</label>
+                <br>
+                <textarea rows="4" cols="70" name="desc" [(ngModel)]="arr1.desc" ></textarea>
+            </div>
+           
+            <!-- <input type="submit" class="btn btn-info blakbtn" value="Submit"  > -->
+            <button type= "submit" class="btn btn-primary">Update</button>
+            <!-- <input type="submit" class="btn btn-primary"  value="Update"  > -->
+            <!-- <input type="button" class="btn btn-primary" (click)="clickMethod(arr1)"  value="Delete"  > -->
+           
+        </form>
+  
+      </div>
+     
     </div>
+
    

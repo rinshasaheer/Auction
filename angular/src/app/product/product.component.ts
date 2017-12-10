@@ -1,10 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { FileUploader } from 'ng2-file-upload';
 import { ProductService } from './../services/product.service';
 import { UserService } from './../services/user.service';
+// import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
+import { CanActivate } from '@angular/router';
 import { pro } from '../pro';
 import { Router } from "@angular/router";
+// import { FileUploader } from 'ng2-file-upload';
+// import { FormGroup } from '@angular/forms';
 
 // import { ProductService } from '../services/product.service';
 // import { Poll } from '../poll';
@@ -22,8 +27,9 @@ import { Router } from "@angular/router";
 
 })
 export class ProductComponent implements OnInit {
+  form: FormGroup;
 
-
+  public uploader:FileUploader = new FileUploader({url:'http://localhost:3000/products/upload'});
 
  
   polls: Array<pro>;
@@ -34,6 +40,7 @@ export class ProductComponent implements OnInit {
     min_bid_rate :'',
      start_date :'',
      end_date :'',
+     image :''
     // date_time :''
 
   };
@@ -42,20 +49,29 @@ export class ProductComponent implements OnInit {
   constructor(private _prductService : ProductService,private _userService : UserService, private router: Router ) { }
 
   ngOnInit() {
- 
+
+
   }
   addProduct(){
+    this.uploader.uploadAll();
+    this.uploader.onCompleteItem = (item:any, response:any, status:any, headers:any) => {
+      // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
+      // response = JSON.parse(response);
+      this.newproduct.image = response.filename;
+      console.log(this.newproduct.image);
+  };
     this._prductService.addProduct(this.newproduct).subscribe(data => {
     if(data){
-
+      console.log(data);
             this._userService.sendmail().subscribe(data1 => {
          
         });
 
 
        alert("Add Product Successfully");
+       this.router.navigate(['/product-list'])
        window.location.reload();
-    //  this.router.navigate(['/registration'])
+    //  
         
     
       }else {
@@ -66,6 +82,43 @@ export class ProductComponent implements OnInit {
 
    
   }
+
+  _keyPress(event: any) {
+    const pattern = /[0-9]/;
+    let inputChar = String.fromCharCode(event.charCode);
+
+    if (!pattern.test(inputChar)) {
+      // invalid character, prevent input
+      event.preventDefault();
+    }
+}
+
+_keyPress1(event: any) {
+  const pattern = /[a-z,A-Z, ]/;
+  let inputChar = String.fromCharCode(event.charCode);
+
+  if (!pattern.test(inputChar)) {
+    // invalid character, prevent input
+    event.preventDefault();
+  }
+}
+datepickerOpts = {
+  startDate: new Date(Date.now()),
+  
+  autoclose: true,
+  todayBtn: 'linked',
+  todayHighlight: true,
+  assumeNearbyYear: true,
+  format: 'd MM yyyy',
+  
+}
+
+// getProducts1(){
+//   this._prductService.getProducts().subscribe(data2 => {
+//   console.log(data2)
+//     });
+
+// }
 
 
   

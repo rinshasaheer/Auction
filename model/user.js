@@ -46,8 +46,9 @@ module.exports.getUserById = function(id,callback){
     User.findById(id,callback);
 }
 module.exports.getUsers = function(callback){
-    User.find({role:'user'},callback);
+    User.find({role:'user', "delete_status": { "$ne": "true"}, "block_status": { "$ne": "true"}, "verified" : { "$ne": "false"}},callback);
 }
+
 module.exports.getUserByUsername = function(email,callback){
     const query = { email: email}
     User.findOne(query,callback).lean();
