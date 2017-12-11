@@ -88,6 +88,7 @@ import { DateSearchPipe } from './date-search.pipe';
 const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
+  {path:'product-detail/:id', component:ProductDetailComponent},
    {path:'product', component:ProductComponent},
   {path:'manage-product', component:ManageProductComponent},
   {path:'', redirectTo:'/login', pathMatch:'full'},

@@ -52,29 +52,30 @@ export class RunningAuctionBackComponent implements OnInit {
   
   this.socket.on('startbid', (data) => {
     // console.log(data);
-       this.productService.getProduct(data.prod_id).subscribe(data=>{
+      //  this.productService.getProduct(data.prod_id).subscribe(data=>{
 
-        var lastBidprice = data.bid_amount;
-        var lastBiduser = '';
-        var lastBidTime = '';
-        var lastBiduserId = '';
+      //   var lastBidprice = data.bid_amount;
+      //   var lastBiduser = '';
+      //   var lastBidTime = '';
+      //   var lastBiduserId = '';
   
-        data.bidders.forEach((bidder, i) => {
-          //console.log(bidder);
-          if(bidder.amount >= lastBidprice){
-             lastBidprice = bidder.amount;
-             lastBiduser = this.users[bidder.user_id].name;
-             lastBiduserId = this.users[bidder.user_id]._id;
-             lastBidTime = bidder.date_time;
-          }
-        });
-        data.lastBidprice = lastBidprice;
-        data.lastBiduser = lastBiduser;
-        data.lastBidTime = lastBidTime;
-        data.lastBiduserId = lastBiduserId;
-         this.products.push(data);
-         //this.getlastbidder();
-       });
+      //   data.bidders.forEach((bidder, i) => {
+      //     //console.log(bidder);
+      //     if(bidder.amount >= lastBidprice){
+      //        lastBidprice = bidder.amount;
+      //        lastBiduser = this.users[bidder.user_id].name;
+      //        lastBiduserId = this.users[bidder.user_id]._id;
+      //        lastBidTime = bidder.date_time;
+      //     }
+      //   });
+      //   data.lastBidprice = lastBidprice;
+      //   data.lastBiduser = lastBiduser;
+      //   data.lastBidTime = lastBidTime;
+      //   data.lastBiduserId = lastBiduserId;
+      //    this.products.push(data);
+      //    //this.getlastbidder();
+      //  });
+       this.getAllproduct(); 
      
    })
   

@@ -14,6 +14,7 @@ export class RunningauctionComponent implements OnInit {
   user : any;
   users : object;
   products: any;
+  product_ids: Array<String> = [];
   winnerId : object;
   involvedUsers : any = [];
   private socket: any; 
@@ -25,13 +26,14 @@ export class RunningauctionComponent implements OnInit {
    }
 
   ngOnInit() {
-
     this.socket.on('startbid', (data) => {
      // console.log(data);
+      if(!this.product_ids.includes(data.prod_id)){
         this.productService.getProduct(data.prod_id).subscribe(data=>{
           this.products.push(data);
-          //this.getlastbidder();
+          this.product_ids.push(data._id);
         });
+      }
       
     })
 
@@ -41,11 +43,13 @@ export class RunningauctionComponent implements OnInit {
     });
     this.userService.getAllUsersById().subscribe(data=>{
         this.users = data;
-        console.log(this.users);
+      //  console.log(this.users);
     });
     this.productService.getAllrunningProduct().subscribe(data=>{
       console.log(data);
-      //  data.forEach((item, index) => {
+        data.forEach((item, index) => {
+          this.product_ids.push(item._id);
+        });
       //    var lastBidprice = item.bid_amount;
       //    var lastBiduser = '';
       //    var lastBidTime = '';
