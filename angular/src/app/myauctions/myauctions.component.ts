@@ -27,10 +27,7 @@ export class MyauctionsComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getLoggedUSerDetails().subscribe(info =>{
-      if(info.status!=true){
-        this.router.navigate(['/login']);
-      }
-      else if(info.role == "admin"){
+      if(info.role !="user"){
         this.router.navigate(['/login']);
       }
     });
@@ -52,6 +49,13 @@ export class MyauctionsComponent implements OnInit {
     
       this.loadAuctions();
     })
+    // this.socket.on('userbidreject', (data) => {
+    //   console.log(data);
+    
+    //   if(data.u_id == this.loadUserId())
+    //   this.loadAuctions();
+    // })
+    
   }
 
   loadAuctions(){

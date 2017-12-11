@@ -92,6 +92,7 @@ import { DateSearchPipe } from './date-search.pipe';
 const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
+  {path:'product-detail/:id', component:ProductDetailComponent},
    {path:'product', component:ProductComponent},
   {path:'product-list', component:ProductListComponent},
   {path:'product-detail/:id', component:ProductDetailComponent},
@@ -114,7 +115,7 @@ const appRoutes: Routes = [
   
   {path:'', redirectTo:'/registration', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
-  
+  {path:'product-list', component:ProductListComponent},
   {path:'home', component:HomeComponent},
   {path:'myauctions', component:MyauctionsComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},

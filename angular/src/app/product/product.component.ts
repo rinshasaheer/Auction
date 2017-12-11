@@ -62,6 +62,11 @@ export class ProductComponent implements OnInit {
     //     this.router.navigate(['/login']);
     //   }
     // });
+    this._userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="admin"){
+        this.router.navigate(['/login']);
+      }
+    });
 
   }
   imageOr(){

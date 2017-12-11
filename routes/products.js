@@ -113,15 +113,15 @@ var returnRouter = function(io) {
                 })
             
             });
-//PRODUCT INFO CLOSE
+//PRODUCT INFO CLOSE info 3001 updateapp
 router.get('/inform-closedproduct/:id',(req,res,next)=>{
     // console.log('yes');
-    // console.log(req.params.id);
+    console.log(req.params.id);
     io.sockets.emit("closebid", {
         prod_id : req.params.id
     });
 });
-//PRODUCT INFO START
+//PRODUCT INFO START info 3001 updateapp
 router.get('/inform-startproduct/:id',(req,res,next)=>{
      console.log('new start');
     // console.log(req.params.id);
@@ -129,6 +129,16 @@ router.get('/inform-startproduct/:id',(req,res,next)=>{
         prod_id : req.params.id
     });
 });
+
+//notification info 3001 updateapp
+router.get('/inform-notifi-user/:id',(req,res,next)=>{
+    // console.log('yes');
+//    console.log("noti"+req.params.id);
+    io.sockets.emit("notification", {
+        user_id : req.params.id
+    });
+});
+
 //var async = require('async');
 
 
@@ -528,6 +538,9 @@ router.put('/statusreject/:id',(req,res,next)=>{
                                 else{
                                     io.sockets.emit("userbidreject", {
                                         prod_id : req.params.id
+                                    });
+                                    io.sockets.emit("notification", {
+                                        user_id : id1
                                     });
                                     return res.json(doc);
 

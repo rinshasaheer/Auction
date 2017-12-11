@@ -17,12 +17,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getLoggedUSerDetails().subscribe(info =>{
-      if(info.status!=true){
+      if(info.role !="user"){
         this.router.navigate(['/login']);
       }
-      else if(info.role == "admin"){
-        this.router.navigate(['/login']);
-      }
+     
     });
   }
 

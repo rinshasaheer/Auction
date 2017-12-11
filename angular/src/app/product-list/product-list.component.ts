@@ -46,6 +46,11 @@ export class ProductListComponent implements OnInit {
   //  });
   // this.prodata = data1;
       });
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="admin"){
+        this.router.navigate(['/login']);
+      }
+    });
 
 
 

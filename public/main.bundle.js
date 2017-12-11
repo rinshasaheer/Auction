@@ -74,10 +74,7 @@ var AdminviewedComponent = (function () {
     AdminviewedComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -165,10 +162,7 @@ var AllUsersComponent = (function () {
     AllUsersComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -645,10 +639,7 @@ var CardRunningComponent = (function () {
     CardRunningComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -835,10 +826,7 @@ var CardComponent = (function () {
     CardComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -929,7 +917,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/closed-auction-back/closed-auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n \r\n <body>\r\n  \r\n            <div id=\"wrapper\">\r\n        \r\n                <!-- Navigation -->\r\n    <side-bar></side-bar>\r\n        \r\n                <div id=\"page-wrapper\">\r\n        \r\n                    <div class=\"container-fluid\">\r\n        \r\n                        <!-- Page Heading -->\r\n                       <header-title [title]=\"'Closed Auction'\"></header-title>\r\n                        <!-- /.row -->\r\n        \r\n                    </div>\r\n    \r\n                \r\n    \r\n\r\n\r\n\r\n        <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n                <div class=\"container\" style=\"padding-top:20px;\">\r\n                        <div class=\"col-md-9 col-xs-9 brdr\">\r\n                            <div class=\"row\">\r\n                                    <div class=\"col-md-6 col-xs-6\">\r\n                                        <div class=\"row\">\r\n                                            <div class=\"col-md-4 col-xs-4\">\r\n                                                <select [(ngModel)]=\"start\" class=\"form-control\">\r\n                                                    <option  value=\"start_date\">Start</option>\r\n                                                    <option value=\"end_date\">End</option>\r\n                                                </select>\r\n                                            </div>\r\n                                            <div class=\"col-md-8 col-xs-8\">\r\n                                                <label>From</label>\r\n                                                <ng-datepicker [(ngModel)]=\"startDate\" [options]=\"options\" ></ng-datepicker>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class=\"col-md-6 col-xs-6\">\r\n                                            <div class=\"row\">\r\n                                                    <div class=\"col-md-4 col-xs-4\">\r\n                                                        <select [(ngModel)]=\"end\" class=\"form-control\">\r\n                                                            <option  value=\"start_date\">Start</option>\r\n                                                            <option  value=\"end_date\">End</option>\r\n                                                        </select>\r\n                                                    </div>\r\n                                                    <div class=\"col-md-8 col-xs-8\">\r\n                                                        <label>Upto</label>\r\n                                                        <ng-datepicker [(ngModel)]=\"endDate\" [options]=\"options\" ></ng-datepicker>\r\n                                                    </div>\r\n                                                </div>\r\n                                        \r\n                                    </div>\r\n                                    \r\n                            </div>   \r\n                        </div>\r\n                        <!-- <div class=\"col-md-1 col-xs-2\">\r\n                            <div class=\"row\">\r\n                                <input type=\"button\" value=\"search\" class=\"btn btn-primary btn2\">\r\n                            </div>\r\n                        </div> -->\r\n                        <br>\r\n                        <br>\r\n                        <br>\r\n                        <div class=\"clearfix\"></div>\r\n                        \r\n            <div  *ngFor=\"let product of  (products | dateSearch:startDate:endDate:start:end)\" class=\"item  col-xs-4 col-lg-4\">\r\n                <div class=\"thumbnail\">\r\n                    \r\n                    <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                    <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n               \r\n                    <div class=\"caption\">\r\n                        <h4 class=\"group inner list-group-item-heading text-center\">\r\n                            {{product.name}}</h4>\r\n                            <hr>\r\n                            <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                            <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                          </p>\r\n                        <hr>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Start Price\r\n                                <p class=\"lead\">{{product.bid_amount | number:'1.2-2'}}</p>\r\n                            </div>\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Last Bid Price\r\n                                \r\n                                <p *ngIf=\"product.bidders.length > 0\" class=\"lead\">{{product.lastBidprice | number:'1.2-2'}}</p>\r\n                                <p *ngIf=\"product.bidders.length == 0 \" class=\"alert-danger lead\">No bid</p>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Started On<br>\r\n                                <b>\r\n                                  {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                                  <br>\r\n                                  {{product.start_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                             <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Ended On<br>\r\n                                <b>\r\n                                    {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                    <br>\r\n                                    {{product.end_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                        </div>\r\n                        <hr>\r\n                        <div class=\"row margn\" >\r\n                          \r\n                          <div class=\"col-xs-12 col-md-12 text-center\">\r\n                             <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.user_details.length}}</a>\r\n                             \r\n                          </div>\r\n                          <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                              <div class=\"modal-dialog\">\r\n                            \r\n                                <!-- Modal content-->\r\n                                <div class=\"modal-content\">\r\n                                  <div class=\"modal-header\">\r\n                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                    <h4 class=\"modal-title\">User Involved - {{involvedUsers.user_details.length}}</h4>\r\n                                  </div>\r\n                                  <div class=\"modal-body\">\r\n                                      <table class=\"table\">\r\n                                          <thead class=\"thead-inverse\">\r\n                                      <tr>\r\n                                        <th>Slno</th>\r\n                                        <th>Name</th>\r\n                                        <th>Bid Amount</th>\r\n                                        <th>Time</th>\r\n                                        <th>Status</th>\r\n                                      \r\n                                      </tr>\r\n                                    </thead>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length ==0\">\r\n                                        <tr >\r\n                                              <td colspan=\"5\" class=\"text-center\">No User Involved</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length > 0\" >\r\n                                  \r\n                                        <tr  *ngFor=\"let usr of involvedUsers.bidders;let i = index\" >\r\n                                              <td >{{i+1}}</td>\r\n                                              <td >{{users[usr.user_id].name}}</td>\r\n                                              <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                              <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                              <td >{{usr.bid_status}}</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    </table>\r\n                                  \r\n                                  </div>\r\n                                  <div class=\"modal-footer\">\r\n                                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                                  </div>\r\n                                </div>\r\n                            \r\n                              </div>\r\n                            </div>\r\n                      </div>\r\n                      \r\n                        <div class=\"row\">\r\n                            \r\n                            <div class=\"col-xs-12 col-md-12\">\r\n                                <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center \">\r\n                                  <div *ngIf=\"product.is_bid_completed\">\r\n                                      <div class=\"alert alert-success text-center \">\r\n                                          Winner! \r\n                                          <br> <strong> {{product.lastBiduser}}</strong>\r\n                                          <br>\r\n                                          {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                       </div> \r\n                                  </div>\r\n                                  <div *ngIf=\"!product.is_bid_completed\">\r\n                                  <div class=\"alert alert-success text-center \">\r\n                                    Last Bidder\r\n                                    <br> <strong> {{product.lastBiduser}}</strong>\r\n                                    <br>\r\n                                    {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                 </div> \r\n                                  </div>\r\n                              </div>\r\n                                <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                                    <div>\r\n                                    <div class=\"alert alert-dangertext-center \">\r\n                                    No bidder Found\r\n                                    <br> <strong><a class=\"alert-danger\" href=\"#\">Re-submit</a></strong>\r\n                                    <br>\r\n                                    Bid closed : {{product.end_date | date: 'dd-MM-yyyy h:mm a'}}\r\n                                </div>\r\n                                </div>\r\n                              </div>\r\n                           \r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n           \r\n      \r\n        </div>\r\n        </div>\r\n      \r\n        <div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n            <h3 class=\"text-center\"> No Product Found</h3>\r\n        </div>\r\n        </div>\r\n        \r\n    \r\n    </div>\r\n    <!-- /#page-wrapper -->\r\n    \r\n               \r\n    </div>\r\n    \r\n    <footer></footer> \r\n      \r\n    </body>\r\n     \r\n    \r\n       "
+module.exports = "\r\n \r\n <body>\r\n  \r\n            <div id=\"wrapper\">\r\n        \r\n                <!-- Navigation -->\r\n    <side-bar></side-bar>\r\n        \r\n                <div id=\"page-wrapper\">\r\n        \r\n                    <div class=\"container-fluid\">\r\n        \r\n                        <!-- Page Heading -->\r\n                       <header-title [title]=\"'Closed Auction'\"></header-title>\r\n                        <!-- /.row -->\r\n        \r\n                    </div>\r\n    \r\n                \r\n    \r\n\r\n\r\n\r\n        <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n                <div class=\"container\" style=\"padding-top:20px;\">\r\n                        <div class=\"col-md-9 col-xs-9 brdr\">\r\n                            <div class=\"row\">\r\n                                    <div class=\"col-md-6 col-xs-6\">\r\n                                        <div class=\"row\">\r\n                                            <div class=\"col-md-4 col-xs-4\">\r\n                                                <select [(ngModel)]=\"start\" class=\"form-control\">\r\n                                                    <option  value=\"start_date\">Start</option>\r\n                                                    <option value=\"end_date\">End</option>\r\n                                                </select>\r\n                                            </div>\r\n                                            <div class=\"col-md-8 col-xs-8\">\r\n                                                <label>From</label>\r\n                                                <ng-datepicker [(ngModel)]=\"startDate\" [options]=\"options\" ></ng-datepicker>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class=\"col-md-6 col-xs-6\">\r\n                                            <div class=\"row\">\r\n                                                    <div class=\"col-md-4 col-xs-4\">\r\n                                                        <select [(ngModel)]=\"end\" class=\"form-control\">\r\n                                                            <option  value=\"start_date\">Start</option>\r\n                                                            <option  value=\"end_date\">End</option>\r\n                                                        </select>\r\n                                                    </div>\r\n                                                    <div class=\"col-md-8 col-xs-8\">\r\n                                                        <label>Upto</label>\r\n                                                        <ng-datepicker [(ngModel)]=\"endDate\" [options]=\"options\" ></ng-datepicker>\r\n                                                    </div>\r\n                                                </div>\r\n                                        \r\n                                    </div>\r\n                                    \r\n                            </div>   \r\n                        </div>\r\n                        <!-- <div class=\"col-md-1 col-xs-2\">\r\n                            <div class=\"row\">\r\n                                <input type=\"button\" value=\"search\" class=\"btn btn-primary btn2\">\r\n                            </div>\r\n                        </div> -->\r\n                        <br>\r\n                        <br>\r\n                        <br>\r\n                        <div class=\"clearfix\"></div>\r\n\r\n            <div  *ngFor=\"let product of  (products | dateSearch:startDate:endDate:start:end)\" class=\"item  col-xs-4 col-lg-4\">\r\n                <div class=\"thumbnail\">\r\n                    \r\n                    <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                    <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n               \r\n                    <div class=\"caption\">\r\n                        <h4 class=\"group inner list-group-item-heading text-center\">\r\n                            {{product.name}}</h4>\r\n                            <hr>\r\n                            <p class=\"group inner list-group-item-text\" style=\"min-height: 60px;\">\r\n                            <read-more [text]=\"product.desc\" [maxLength]=\"80\"></read-more>\r\n                          </p>\r\n                        <hr>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Start Price\r\n                                <p class=\"lead\">{{product.bid_amount | number:'1.2-2'}}</p>\r\n                            </div>\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Last Bid Price\r\n                                \r\n                                <p *ngIf=\"product.bidders.length > 0\" class=\"lead\">{{product.lastBidprice | number:'1.2-2'}}</p>\r\n                                <p *ngIf=\"product.bidders.length == 0 \" class=\"alert-danger lead\">No bid</p>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Started On<br>\r\n                                <b>\r\n                                  {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                                  <br>\r\n                                  {{product.start_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                             <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Ended On<br>\r\n                                <b>\r\n                                    {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                    <br>\r\n                                    {{product.end_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                        </div>\r\n                        <hr>\r\n                        <div class=\"row margn\" >\r\n                          \r\n                          <div class=\"col-xs-12 col-md-12 text-center\">\r\n                             <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.user_details.length}}</a>\r\n                             \r\n                          </div>\r\n                          <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                              <div class=\"modal-dialog\">\r\n                            \r\n                                <!-- Modal content-->\r\n                                <div class=\"modal-content\">\r\n                                  <div class=\"modal-header\">\r\n                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                    <h4 class=\"modal-title\">User Involved - {{involvedUsers.user_details.length}}</h4>\r\n                                  </div>\r\n                                  <div class=\"modal-body\">\r\n                                      <table class=\"table\">\r\n                                          <thead class=\"thead-inverse\">\r\n                                      <tr>\r\n                                        <th>Slno</th>\r\n                                        <th>Name</th>\r\n                                        <th>Bid Amount</th>\r\n                                        <th>Time</th>\r\n                                        <th>Status</th>\r\n                                      \r\n                                      </tr>\r\n                                    </thead>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length ==0\">\r\n                                        <tr >\r\n                                              <td colspan=\"5\" class=\"text-center\">No User Involved</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length > 0\" >\r\n                                  \r\n                                        <tr  *ngFor=\"let usr of involvedUsers.bidders;let i = index\" >\r\n                                              <td >{{i+1}}</td>\r\n                                              <td >{{users[usr.user_id].name}}</td>\r\n                                              <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                              <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                              <td >{{usr.bid_status}}</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    </table>\r\n                                  \r\n                                  </div>\r\n                                  <div class=\"modal-footer\">\r\n                                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                                  </div>\r\n                                </div>\r\n                            \r\n                              </div>\r\n                            </div>\r\n                      </div>\r\n                      \r\n                        <div class=\"row\">\r\n                            \r\n                            <div class=\"col-xs-12 col-md-12\">\r\n                                <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center \">\r\n                                  <div *ngIf=\"product.is_bid_completed\">\r\n                                      <div class=\"alert alert-success text-center \">\r\n                                          Winner! \r\n                                          <br> <strong> {{product.lastBiduser}}</strong>\r\n                                          <br>\r\n                                          {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                       </div> \r\n                                  </div>\r\n                                  <div *ngIf=\"!product.is_bid_completed\">\r\n                                  <div class=\"alert alert-success text-center \">\r\n                                    Last Bidder\r\n                                    <br> <strong> {{product.lastBiduser}}</strong>\r\n                                    <br>\r\n                                    {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                 </div> \r\n                                  </div>\r\n                              </div>\r\n                                <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                                    <div>\r\n                                    <div class=\"alert alert-dangertext-center \">\r\n                                    No bidder Found\r\n                                    <br> <strong><a [routerLink]=\"['/product-detail/'+product._id]\" class=\"alert-danger\" >Re-submit</a></strong>\r\n                                    <br>\r\n                                    Bid closed : {{product.end_date | date: 'dd-MM-yyyy h:mm a'}}\r\n                                </div>\r\n                                </div>\r\n                              </div>\r\n                           \r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n           \r\n      \r\n        </div>\r\n        </div>\r\n      \r\n        <div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n            <h3 class=\"text-center\"> No Product Found</h3>\r\n        </div>\r\n        </div>\r\n        \r\n    \r\n    </div>\r\n    <!-- /#page-wrapper -->\r\n    \r\n               \r\n    </div>\r\n    \r\n    <footer></footer> \r\n      \r\n    </body>\r\n     \r\n    \r\n       "
 
 /***/ }),
 
@@ -981,10 +969,7 @@ var ClosedAuctionBackComponent = (function () {
     ClosedAuctionBackComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -1180,10 +1165,7 @@ var DashboardComponent = (function () {
     DashboardComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -1301,10 +1283,7 @@ var DeletedUsersComponent = (function () {
     DeletedUsersComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -1382,10 +1361,7 @@ var DisabledUsersComponent = (function () {
     DisabledUsersComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -1684,10 +1660,7 @@ var FinishedauctionComponent = (function () {
     FinishedauctionComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -1950,10 +1923,7 @@ var HomeComponent = (function () {
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -1995,7 +1965,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body style=\"background-color : #f3f3f3;padding:  5% 0 17% 0;\">\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"main\">\r\n\r\n      <h3>Please Log In, or <a [routerLink]=\"['/registration']\">Sign Up</a></h3>\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n          <a href=\"/auth/facebook\" target=\"_blank\" class=\"btn btn-lg btn-primary btn-block\">Facebook</a>\r\n        </div>\r\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n          <a href=\"/auth/google\" target=\"_blank\" class=\"btn btn-lg btn-info btn-block\">Google</a>\r\n        </div>\r\n      </div>\r\n      <div class=\"login-or\">\r\n        <hr class=\"hr-or\">\r\n        <span class=\"span-or\">or</span>\r\n      </div>\r\n\r\n      <form role=\"form\" #f=\"ngForm\" (ngSubmit)=\"f.form.valid && login()\" novalidate>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\r\n          <label for=\"inputUsernameEmail\">Username or email</label>\r\n          <input type=\"text\" class=\"form-control\" id=\"inputUsernameEmail\" required [(ngModel)]=\"newLogin.email\" name=\"email\" #email=\"ngModel\">\r\n          <div *ngIf=\"f.submitted && !email.valid\" class=\"help-block\">Username is required</div>\r\n        </div>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\r\n          <label for=\"inputPassword\">Password</label>\r\n          <input type=\"password\" class=\"form-control\" id=\"inputPassword\" required [(ngModel)]=\"newLogin.password\" name=\"password\" #password=\"ngModel\">\r\n          <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\r\n        </div>\r\n        <button type=\"submit\" class=\"btn btn btn-primary\">\r\n          Log In\r\n        </button>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && status }\">\r\n            <div *ngIf=\"status\" class=\"help-block\">!{{msg}}</div>\r\n       </div> \r\n      </form>\r\n      \r\n    </div>\r\n    \r\n  </div>\r\n</div>\r\n</body>\r\n"
+module.exports = "<body style=\"background-color : #f3f3f3;padding:  5% 0 17% 0;\">\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"main\">\r\n\r\n      <h3>Please Log In, or <a [routerLink]=\"['/registration']\">Sign Up</a></h3>\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n          <a href=\"/auth/facebook\" target=\"_blank\" class=\"btn btn-lg btn-primary btn-block\">Facebook</a>\r\n        </div>\r\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n          <a href=\"/auth/google\" class=\"btn btn-lg btn-info btn-block\">Google</a>\r\n        </div>\r\n      </div>\r\n      <div class=\"login-or\">\r\n        <hr class=\"hr-or\">\r\n        <span class=\"span-or\">or</span>\r\n      </div>\r\n\r\n      <form role=\"form\" #f=\"ngForm\" (ngSubmit)=\"f.form.valid && login()\" novalidate>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\r\n          <label for=\"inputUsernameEmail\">Username or email</label>\r\n          <input type=\"text\" class=\"form-control\" id=\"inputUsernameEmail\" required [(ngModel)]=\"newLogin.email\" name=\"email\" #email=\"ngModel\">\r\n          <div *ngIf=\"f.submitted && !email.valid\" class=\"help-block\">Username is required</div>\r\n        </div>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\r\n          <label for=\"inputPassword\">Password</label>\r\n          <input type=\"password\" class=\"form-control\" id=\"inputPassword\" required [(ngModel)]=\"newLogin.password\" name=\"password\" #password=\"ngModel\">\r\n          <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\r\n        </div>\r\n        <button type=\"submit\" class=\"btn btn btn-primary\">\r\n          Log In\r\n        </button>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && status }\">\r\n            <div *ngIf=\"status\" class=\"help-block\">!{{msg}}</div>\r\n       </div> \r\n      </form>\r\n      \r\n    </div>\r\n    \r\n  </div>\r\n</div>\r\n</body>\r\n"
 
 /***/ }),
 
@@ -2034,26 +2004,28 @@ var LoginComponent = (function () {
     LoginComponent.prototype.login = function () {
         var _this = this;
         this.userService.authenticateUser(this.newLogin).subscribe(function (data) {
+            console.log('after auth');
+            console.log(data);
             if (data.success == false) {
                 _this.status = true;
             }
             if (data.success) {
                 _this.userService.storeUserData(data.token, data.user);
-                // if(data.user.role=="user"){
-                //   this.routes.navigate(['/home']);
-                // }
-                // if(data.user.role=="admin"){
-                //   this.routes.navigate(['/dashboard']);
-                // }
-                _this.userService.getLoggedUSerDetails().subscribe(function (info) {
-                    // console.log(info.role);
-                    if (info.role == "user") {
-                        _this.routes.navigate(['/home']);
-                    }
-                    if (info.role == "admin") {
-                        _this.routes.navigate(['/home']);
-                    }
-                });
+                if (data.user.role == "user") {
+                    _this.routes.navigate(['/home']);
+                }
+                if (data.user.role == "admin") {
+                    _this.routes.navigate(['/dashboard']);
+                }
+                // this.userService.getLoggedUSerDetails().subscribe(info =>{
+                //   console.log(info.role);
+                //   if(info.role == "user"){
+                //     this.routes.navigate(['/home']);
+                //   }
+                //   if(info.role == "admin"){
+                //     this.routes.navigate(['/home']);
+                //   }
+                // })
             }
             else {
                 // console.log(data.msg);
@@ -2135,10 +2107,7 @@ var ManageProductComponent = (function () {
     ManageProductComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -2205,7 +2174,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/myauctions/myauctions.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navigation></app-navigation>\r\n<div class=\"container\">\r\n        <div id=\"m-auction\" class=\"auction-section\">\r\n            <h4 class=\"page-head\">My Auctions</h4>\r\n             <!-- <div *ngIf=\"existStatus; else noProduct\"> -->\r\n                <div *ngFor=\"let item of products\">\r\n                    <!-- {{item}} -->\r\n                    <app-card [item]=\"item\" [myauction]=true></app-card>\r\n                </div>\r\n            <!--</div>\r\n           \r\n            <ng-template #noProduct>\r\n                <div class=\"no-item\">\r\n                    <h4>Sorrry! No items to display!</h4>\r\n                </div>\r\n            </ng-template>  -->\r\n          \r\n      </div>"
+module.exports = "<app-navigation></app-navigation>\r\n<div class=\"container\">\r\n        <div *ngIf=\"existStatus else noProduct\" id=\"m-auction\" class=\"auction-section\">\r\n            <h4 class=\"page-head\">My Auctions</h4>\r\n             <!-- <div *ngIf=\"existStatus; else noProduct\"> -->\r\n                <div *ngFor=\"let item of products\">\r\n                    <!-- {{item}} -->\r\n                    <app-card [item]=\"item\" [myauction]=true></app-card>\r\n                </div>\r\n            <!--</div> -->\r\n           \r\n            <ng-template #noProduct>\r\n                <div class=\"no-item\">\r\n                    <h4>Sorrry! No items to display!</h4>\r\n                </div>\r\n            </ng-template>  \r\n          \r\n      </div>"
 
 /***/ }),
 
@@ -2246,10 +2215,7 @@ var MyauctionsComponent = (function () {
     MyauctionsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -2268,6 +2234,11 @@ var MyauctionsComponent = (function () {
             console.log(data);
             _this.loadAuctions();
         });
+        // this.socket.on('userbidreject', (data) => {
+        //   console.log(data);
+        //   if(data.u_id == this.loadUserId())
+        //   this.loadAuctions();
+        // })
     };
     MyauctionsComponent.prototype.loadAuctions = function () {
         var _this = this;
@@ -2362,6 +2333,8 @@ module.exports = "<header>\r\n  \r\n  <div class=\"fluid-container\">\r\n    <na
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_product_service_service__ = __webpack_require__("../../../../../src/app/services/product-service.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_socket_io_client__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2376,6 +2349,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var NavigationComponent = (function () {
     function NavigationComponent(userService, router, _productService, productService) {
         this.userService = userService;
@@ -2384,17 +2358,32 @@ var NavigationComponent = (function () {
         this.productService = productService;
         this.brand_logo = "brand.png";
         this.count = true;
+        this.socket = __WEBPACK_IMPORTED_MODULE_5_socket_io_client__('http://localhost:3000');
     }
     NavigationComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
-            else if (info.role == "admin") {
-                _this.router.navigate(['/login']);
+            else {
+                _this.userInfo = info;
             }
         });
+        this.getNotification();
+        this.socket.on('notification', function (data) {
+            if (_this.userInfo._id == data.user_id) {
+                _this.getNotification();
+            }
+        });
+    };
+    NavigationComponent.prototype.logout = function () {
+        this.userService.logout();
+        this.router.navigate(['/login']);
+        return false;
+    };
+    NavigationComponent.prototype.getNotification = function () {
+        var _this = this;
         this.info = [];
         this.countNumber = 0;
         this.userService.getLoggedUSerDetails().subscribe(function (data3) {
@@ -2410,11 +2399,6 @@ var NavigationComponent = (function () {
                 });
             });
         });
-    };
-    NavigationComponent.prototype.logout = function () {
-        this.userService.logout();
-        this.router.navigate(['/login']);
-        return false;
     };
     return NavigationComponent;
 }());
@@ -3423,10 +3407,7 @@ var RunningAuctionBackComponent = (function () {
     RunningAuctionBackComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -3444,27 +3425,28 @@ var RunningAuctionBackComponent = (function () {
         });
         this.socket.on('startbid', function (data) {
             // console.log(data);
-            _this.productService.getProduct(data.prod_id).subscribe(function (data) {
-                var lastBidprice = data.bid_amount;
-                var lastBiduser = '';
-                var lastBidTime = '';
-                var lastBiduserId = '';
-                data.bidders.forEach(function (bidder, i) {
-                    //console.log(bidder);
-                    if (bidder.amount >= lastBidprice) {
-                        lastBidprice = bidder.amount;
-                        lastBiduser = _this.users[bidder.user_id].name;
-                        lastBiduserId = _this.users[bidder.user_id]._id;
-                        lastBidTime = bidder.date_time;
-                    }
-                });
-                data.lastBidprice = lastBidprice;
-                data.lastBiduser = lastBiduser;
-                data.lastBidTime = lastBidTime;
-                data.lastBiduserId = lastBiduserId;
-                _this.products.push(data);
-                //this.getlastbidder();
-            });
+            //  this.productService.getProduct(data.prod_id).subscribe(data=>{
+            //   var lastBidprice = data.bid_amount;
+            //   var lastBiduser = '';
+            //   var lastBidTime = '';
+            //   var lastBiduserId = '';
+            //   data.bidders.forEach((bidder, i) => {
+            //     //console.log(bidder);
+            //     if(bidder.amount >= lastBidprice){
+            //        lastBidprice = bidder.amount;
+            //        lastBiduser = this.users[bidder.user_id].name;
+            //        lastBiduserId = this.users[bidder.user_id]._id;
+            //        lastBidTime = bidder.date_time;
+            //     }
+            //   });
+            //   data.lastBidprice = lastBidprice;
+            //   data.lastBiduser = lastBiduser;
+            //   data.lastBidTime = lastBidTime;
+            //   data.lastBiduserId = lastBiduserId;
+            //    this.products.push(data);
+            //    //this.getlastbidder();
+            //  });
+            _this.getAllproduct();
         });
         this.getAllproduct();
     };
@@ -3574,25 +3556,25 @@ var RunningauctionComponent = (function () {
         this.productService = productService;
         this.userService = userService;
         this.router = router;
+        this.product_ids = [];
         this.involvedUsers = [];
         this.socket = __WEBPACK_IMPORTED_MODULE_4_socket_io_client__('http://localhost:3000');
     }
     RunningauctionComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
         this.socket.on('startbid', function (data) {
             // console.log(data);
-            _this.productService.getProduct(data.prod_id).subscribe(function (data) {
-                _this.products.push(data);
-                //this.getlastbidder();
-            });
+            if (!_this.product_ids.includes(data.prod_id)) {
+                _this.productService.getProduct(data.prod_id).subscribe(function (data) {
+                    _this.products.push(data);
+                    _this.product_ids.push(data._id);
+                });
+            }
         });
         this.userService.getLoggedUSerDetails().subscribe(function (data) {
             _this.user = data;
@@ -3600,11 +3582,13 @@ var RunningauctionComponent = (function () {
         });
         this.userService.getAllUsersById().subscribe(function (data) {
             _this.users = data;
-            console.log(_this.users);
+            //  console.log(this.users);
         });
         this.productService.getAllrunningProduct().subscribe(function (data) {
             console.log(data);
-            //  data.forEach((item, index) => {
+            data.forEach(function (item, index) {
+                _this.product_ids.push(item._id);
+            });
             //    var lastBidprice = item.bid_amount;
             //    var lastBiduser = '';
             //    var lastBidTime = '';
@@ -4117,9 +4101,7 @@ var SideBarComponent = (function () {
     SideBarComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            // console.log(info.role);
-            if (info.role == "user") {
-                // alert("Unauthorized Access ..!")
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -4196,6 +4178,7 @@ var SocialmediaComponent = (function () {
         this.sub = this.route.params.subscribe(function (params) {
             // this.verif_id = +params['id']; // (+) converts string 'id' to a number
             _this.userService.generateToken(params.id).subscribe(function (data) {
+                console.log(data);
                 if (data.success) {
                     _this.userService.storeUserData(data.token, data.user);
                     if (data.user.role == "user") {
@@ -4280,9 +4263,7 @@ var TopBarComponent = (function () {
     TopBarComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            // console.log(info.role);
-            if (info.role == "user") {
-                // alert("Unauthorized Access ..!")
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -4392,10 +4373,7 @@ var UpcomingAuctionBackComponent = (function () {
     UpcomingAuctionBackComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -4493,10 +4471,7 @@ var UpcomingauctionsComponent = (function () {
     UpcomingauctionsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -4676,10 +4651,7 @@ var WinnerconfirmComponent = (function () {
     WinnerconfirmComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });

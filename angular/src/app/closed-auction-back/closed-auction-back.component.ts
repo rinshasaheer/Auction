@@ -43,10 +43,7 @@ export class ClosedAuctionBackComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getLoggedUSerDetails().subscribe(info =>{
-      if(info.status!=true){
-        this.router.navigate(['/login']);
-      }
-      else if(info.role == "user"){
+      if(info.role !="admin"){
         this.router.navigate(['/login']);
       }
     });

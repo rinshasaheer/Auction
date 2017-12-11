@@ -43,6 +43,12 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit() {
 
 
+    // this.userService.getLoggedUSerDetails().subscribe(info =>{
+    //   if(info.role !="admin"){
+    //     this.router.navigate(['/login']);
+    //   }
+    // });
+  
     this.sub = this.route.params.subscribe(params => {
      // console.log('abcd' + params.id);
       this._prductService.getAProduct(params.id).subscribe(data => {
