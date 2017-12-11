@@ -42,6 +42,13 @@ export class MyauctionsComponent implements OnInit {
     
       this.loadAuctions();
     })
+    // this.socket.on('userbidreject', (data) => {
+    //   console.log(data);
+    
+    //   if(data.u_id == this.loadUserId())
+    //   this.loadAuctions();
+    // })
+    
   }
 
   loadAuctions(){
