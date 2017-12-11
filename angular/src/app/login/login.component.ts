@@ -23,27 +23,29 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.userService.authenticateUser(this.newLogin).subscribe(data => {
+      console.log('after auth');
+      console.log(data);
       if(data.success==false){
         this.status= true;
       }
       if(data.success){
         this.userService.storeUserData(data.token, data.user);
-        // if(data.user.role=="user"){
+        if(data.user.role=="user"){
           
-        //   this.routes.navigate(['/home']);
-        // }
-        // if(data.user.role=="admin"){
-        //   this.routes.navigate(['/dashboard']);
-        // }
-        this.userService.getLoggedUSerDetails().subscribe(info =>{
-          // console.log(info.role);
-          if(info.role == "user"){
-            this.routes.navigate(['/home']);
-          }
-          if(info.role == "admin"){
-            this.routes.navigate(['/home']);
-          }
-        })
+          this.routes.navigate(['/home']);
+        }
+        if(data.user.role=="admin"){
+          this.routes.navigate(['/dashboard']);
+        }
+        // this.userService.getLoggedUSerDetails().subscribe(info =>{
+        //   console.log(info.role);
+        //   if(info.role == "user"){
+        //     this.routes.navigate(['/home']);
+        //   }
+        //   if(info.role == "admin"){
+        //     this.routes.navigate(['/home']);
+        //   }
+        // })
       } else {
         // console.log(data.msg);
         this.msg = data.msg;

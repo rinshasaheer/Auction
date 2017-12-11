@@ -38,10 +38,7 @@ export class RunningAuctionBackComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getLoggedUSerDetails().subscribe(info =>{
-      if(info.status!=true){
-        this.router.navigate(['/login']);
-      }
-      else if(info.role == "user"){
+      if(info.role !="admin"){
         this.router.navigate(['/login']);
       }
     });
@@ -53,7 +50,7 @@ export class RunningAuctionBackComponent implements OnInit {
   });
   this.socket.on('userbidreject', (data) => {
     this.getAllproduct();
-  }) 
+  }); 
 
   this.socket.on('newbid', (data) => {
     this.getAllproduct();

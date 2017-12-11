@@ -109,7 +109,7 @@ const appRoutes: Routes = [
   
   {path:'', redirectTo:'/registration', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
-  
+  {path:'product-list', component:ProductListComponent},
   {path:'home', component:HomeComponent},
   {path:'myauctions', component:MyauctionsComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},

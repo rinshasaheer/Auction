@@ -13,9 +13,7 @@ export class SideBarComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getLoggedUSerDetails().subscribe(info =>{
-      // console.log(info.role);
-      if(info.role == "user"){
-        // alert("Unauthorized Access ..!")
+      if(info.role !="admin"){
         this.router.navigate(['/login']);
       }
     })

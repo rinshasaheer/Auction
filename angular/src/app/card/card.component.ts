@@ -31,10 +31,7 @@ export class CardComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getLoggedUSerDetails().subscribe(info =>{
-      if(info.status!=true){
-        this.router.navigate(['/login']);
-      }
-      else if(info.role == "admin"){
+      if(info.role !="user"){
         this.router.navigate(['/login']);
       }
     });

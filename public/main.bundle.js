@@ -74,10 +74,7 @@ var AdminviewedComponent = (function () {
     AdminviewedComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -165,10 +162,7 @@ var AllUsersComponent = (function () {
     AllUsersComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -437,6 +431,7 @@ var appRoutes = [
     { path: 'runningauction', component: __WEBPACK_IMPORTED_MODULE_39__runningauction_runningauction_component__["a" /* RunningauctionComponent */] },
     { path: '', redirectTo: '/registration', pathMatch: 'full' },
     { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__["a" /* RegistrationComponent */] },
+    { path: 'product-list', component: __WEBPACK_IMPORTED_MODULE_44__product_list_product_list_component__["a" /* ProductListComponent */] },
     { path: 'home', component: __WEBPACK_IMPORTED_MODULE_20__home_home_component__["a" /* HomeComponent */] },
     { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_37__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
     { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_29__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
@@ -639,10 +634,7 @@ var CardRunningComponent = (function () {
     CardRunningComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -829,10 +821,7 @@ var CardComponent = (function () {
     CardComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -975,10 +964,7 @@ var ClosedAuctionBackComponent = (function () {
     ClosedAuctionBackComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -1174,10 +1160,7 @@ var DashboardComponent = (function () {
     DashboardComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -1295,10 +1278,7 @@ var DeletedUsersComponent = (function () {
     DeletedUsersComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -1376,10 +1356,7 @@ var DisabledUsersComponent = (function () {
     DisabledUsersComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -1678,10 +1655,7 @@ var FinishedauctionComponent = (function () {
     FinishedauctionComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -1944,10 +1918,7 @@ var HomeComponent = (function () {
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -1989,7 +1960,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body style=\"background-color : #f3f3f3;padding:  5% 0 17% 0;\">\n<div class=\"container\">\n  <div class=\"row\">\n\n    <div class=\"main\">\n\n      <h3>Please Log In, or <a [routerLink]=\"['/registration']\">Sign Up</a></h3>\n      <div class=\"row\">\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\n          <a href=\"/auth/facebook\" target=\"_blank\" class=\"btn btn-lg btn-primary btn-block\">Facebook</a>\n        </div>\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\n          <a href=\"/auth/google\" target=\"_blank\" class=\"btn btn-lg btn-info btn-block\">Google</a>\n        </div>\n      </div>\n      <div class=\"login-or\">\n        <hr class=\"hr-or\">\n        <span class=\"span-or\">or</span>\n      </div>\n\n      <form role=\"form\" #f=\"ngForm\" (ngSubmit)=\"f.form.valid && login()\" novalidate>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\n          <label for=\"inputUsernameEmail\">Username or email</label>\n          <input type=\"text\" class=\"form-control\" id=\"inputUsernameEmail\" required [(ngModel)]=\"newLogin.email\" name=\"email\" #email=\"ngModel\">\n          <div *ngIf=\"f.submitted && !email.valid\" class=\"help-block\">Username is required</div>\n        </div>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\n          <label for=\"inputPassword\">Password</label>\n          <input type=\"password\" class=\"form-control\" id=\"inputPassword\" required [(ngModel)]=\"newLogin.password\" name=\"password\" #password=\"ngModel\">\n          <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\n        </div>\n        <button type=\"submit\" class=\"btn btn btn-primary\">\n          Log In\n        </button>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && status }\">\n            <div *ngIf=\"status\" class=\"help-block\">!{{msg}}</div>\n       </div> \n      </form>\n      \n    </div>\n    \n  </div>\n</div>\n</body>\n"
+module.exports = "<body style=\"background-color : #f3f3f3;padding:  5% 0 17% 0;\">\n<div class=\"container\">\n  <div class=\"row\">\n\n    <div class=\"main\">\n\n      <h3>Please Log In, or <a [routerLink]=\"['/registration']\">Sign Up</a></h3>\n      <div class=\"row\">\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\n          <a href=\"/auth/facebook\" target=\"_blank\" class=\"btn btn-lg btn-primary btn-block\">Facebook</a>\n        </div>\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\n          <a href=\"/auth/google\" class=\"btn btn-lg btn-info btn-block\">Google</a>\n        </div>\n      </div>\n      <div class=\"login-or\">\n        <hr class=\"hr-or\">\n        <span class=\"span-or\">or</span>\n      </div>\n\n      <form role=\"form\" #f=\"ngForm\" (ngSubmit)=\"f.form.valid && login()\" novalidate>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\n          <label for=\"inputUsernameEmail\">Username or email</label>\n          <input type=\"text\" class=\"form-control\" id=\"inputUsernameEmail\" required [(ngModel)]=\"newLogin.email\" name=\"email\" #email=\"ngModel\">\n          <div *ngIf=\"f.submitted && !email.valid\" class=\"help-block\">Username is required</div>\n        </div>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\n          <label for=\"inputPassword\">Password</label>\n          <input type=\"password\" class=\"form-control\" id=\"inputPassword\" required [(ngModel)]=\"newLogin.password\" name=\"password\" #password=\"ngModel\">\n          <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\n        </div>\n        <button type=\"submit\" class=\"btn btn btn-primary\">\n          Log In\n        </button>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && status }\">\n            <div *ngIf=\"status\" class=\"help-block\">!{{msg}}</div>\n       </div> \n      </form>\n      \n    </div>\n    \n  </div>\n</div>\n</body>\n"
 
 /***/ }),
 
@@ -2028,26 +1999,28 @@ var LoginComponent = (function () {
     LoginComponent.prototype.login = function () {
         var _this = this;
         this.userService.authenticateUser(this.newLogin).subscribe(function (data) {
+            console.log('after auth');
+            console.log(data);
             if (data.success == false) {
                 _this.status = true;
             }
             if (data.success) {
                 _this.userService.storeUserData(data.token, data.user);
-                // if(data.user.role=="user"){
-                //   this.routes.navigate(['/home']);
-                // }
-                // if(data.user.role=="admin"){
-                //   this.routes.navigate(['/dashboard']);
-                // }
-                _this.userService.getLoggedUSerDetails().subscribe(function (info) {
-                    // console.log(info.role);
-                    if (info.role == "user") {
-                        _this.routes.navigate(['/home']);
-                    }
-                    if (info.role == "admin") {
-                        _this.routes.navigate(['/home']);
-                    }
-                });
+                if (data.user.role == "user") {
+                    _this.routes.navigate(['/home']);
+                }
+                if (data.user.role == "admin") {
+                    _this.routes.navigate(['/dashboard']);
+                }
+                // this.userService.getLoggedUSerDetails().subscribe(info =>{
+                //   console.log(info.role);
+                //   if(info.role == "user"){
+                //     this.routes.navigate(['/home']);
+                //   }
+                //   if(info.role == "admin"){
+                //     this.routes.navigate(['/home']);
+                //   }
+                // })
             }
             else {
                 // console.log(data.msg);
@@ -2129,10 +2102,7 @@ var ManageProductComponent = (function () {
     ManageProductComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -2240,10 +2210,7 @@ var MyauctionsComponent = (function () {
     MyauctionsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -2382,10 +2349,7 @@ var NavigationComponent = (function () {
     NavigationComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -2743,10 +2707,7 @@ var ProductDetailComponent = (function () {
     ProductDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -2848,10 +2809,7 @@ var ProductListComponent = (function () {
     ProductListComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -2996,10 +2954,7 @@ var ProductComponent = (function () {
     ProductComponent.prototype.ngOnInit = function () {
         var _this = this;
         this._userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -3291,10 +3246,7 @@ var RunningAuctionBackComponent = (function () {
     RunningAuctionBackComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -3448,10 +3400,7 @@ var RunningauctionComponent = (function () {
     RunningauctionComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -3977,9 +3926,7 @@ var SideBarComponent = (function () {
     SideBarComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            // console.log(info.role);
-            if (info.role == "user") {
-                // alert("Unauthorized Access ..!")
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -4056,6 +4003,7 @@ var SocialmediaComponent = (function () {
         this.sub = this.route.params.subscribe(function (params) {
             // this.verif_id = +params['id']; // (+) converts string 'id' to a number
             _this.userService.generateToken(params.id).subscribe(function (data) {
+                console.log(data);
                 if (data.success) {
                     _this.userService.storeUserData(data.token, data.user);
                     if (data.user.role == "user") {
@@ -4140,9 +4088,7 @@ var TopBarComponent = (function () {
     TopBarComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            // console.log(info.role);
-            if (info.role == "user") {
-                // alert("Unauthorized Access ..!")
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -4252,10 +4198,7 @@ var UpcomingAuctionBackComponent = (function () {
     UpcomingAuctionBackComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
+            if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -4353,10 +4296,7 @@ var UpcomingauctionsComponent = (function () {
     UpcomingauctionsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
@@ -4536,10 +4476,7 @@ var WinnerconfirmComponent = (function () {
     WinnerconfirmComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "admin") {
+            if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
         });
