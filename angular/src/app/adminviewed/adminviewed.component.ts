@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CanActivate,ActivatedRoute, Router } from '@angular/router';
+import {UserService} from '../services/user.service';
 import { ProductService} from '../services/product.service';
 
 @Component({
@@ -10,9 +11,17 @@ import { ProductService} from '../services/product.service';
 export class AdminviewedComponent implements OnInit {
   
   private sub: any;
-  constructor(private productService: ProductService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private userService: UserService,private productService: ProductService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.status!=true){
+        this.router.navigate(['/login']);
+      }
+      else if(info.role == "user"){
+        this.router.navigate(['/login']);
+      }
+    });
     this.sub = this.route.params.subscribe(params => {
       this.productService.adminViewed(params.id).subscribe(data => {
         if(data.success){

@@ -30,12 +30,21 @@ export class RunningAuctionBackComponent implements OnInit {
       };
   constructor(
     private productService: ProductService,
-    private userService:UserService
+    private userService:UserService,
+    private router: Router
   ) {
     this.socket  = socketIo('http://localhost:3000');
    }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.status!=true){
+        this.router.navigate(['/login']);
+      }
+      else if(info.role == "user"){
+        this.router.navigate(['/login']);
+      }
+    });
     this.startDate = new Date();
     this.endDate = new Date();
     this.userService.getAllUsersById().subscribe(data=>{

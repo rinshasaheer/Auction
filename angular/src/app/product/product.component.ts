@@ -53,7 +53,14 @@ export class ProductComponent implements OnInit {
   constructor(private _prductService : ProductService,private _userService : UserService, private router: Router ) { }
 
   ngOnInit() {
-
+    this._userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.status!=true){
+        this.router.navigate(['/login']);
+      }
+      else if(info.role == "user"){
+        this.router.navigate(['/login']);
+      }
+    });
 
   }
   addProduct(){

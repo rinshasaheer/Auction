@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ProductService } from './../services/product.service';
  import { pro } from '../pro';
  import { Router } from "@angular/router";
+ import {UserService} from '../services/user.service';
 
 @Component({
   selector: 'app-manage-product',
@@ -17,10 +18,17 @@ export class ManageProductComponent implements OnInit {
  pros: Array<pro>;
  selectedPro : pro;
 
-  constructor(private _productService : ProductService ,private router: Router) { }
+  constructor(private _productService : ProductService ,private router: Router, private userService: UserService,) { }
 
   ngOnInit() {
-    
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.status!=true){
+        this.router.navigate(['/login']);
+      }
+      else if(info.role == "user"){
+        this.router.navigate(['/login']);
+      }
+    });
     this._productService.getProducts()
     .subscribe(resProData => this.pros = resProData);
   }

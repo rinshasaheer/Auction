@@ -50,7 +50,7 @@
               </button>
               <ul class="dropdown-menu" role="menu">
   
-                <li *ngIf="user1.delete_status=='false'"><a href="#"  (click)="deleteUser(user1._id)">Delete</a></li>
+                <li *ngIf="user1.delete_status=='false'"><a (click)="deleteUser(user1._id)">Delete</a></li>
                 <li *ngIf="user1.delete_status=='true'"><a >Deleted</a></li>
                 <li *ngIf="user1.block_status=='false' && user1.delete_status=='false'"><a  (click)="blockUser(user1._id)">Block</a></li>
                 <li *ngIf="user1.block_status=='true' && user1.delete_status=='false'"><a  (click)="unblockUser(user1._id)">Unblock</a></li>

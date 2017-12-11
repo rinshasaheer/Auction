@@ -2,6 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { product } from './../schema/product';
 import { CapitalizePipe } from './../capitalize.pipe';
 import { ProductServiceService } from './../services/product-service.service';
+import {UserService} from '../services/user.service';
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -23,10 +26,18 @@ export class CardComponent implements OnInit {
   upcoming: boolean = false;
   interestMatch = false;
   isTimeOver = false;
-  constructor( private _productService: ProductServiceService) { 
+  constructor( private _productService: ProductServiceService, private userService: UserService, private router: Router) { 
   }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.status!=true){
+        this.router.navigate(['/login']);
+      }
+      else if(info.role == "admin"){
+        this.router.navigate(['/login']);
+      }
+    });
     this.cardAction();
   }
 

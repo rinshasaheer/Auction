@@ -4,6 +4,7 @@ import { Router} from '@angular/router';
 import { DatepickerOptions } from 'ng2-datepicker';
 import * as enLocale from 'date-fns/locale/en';
 import * as socketIo from 'socket.io-client';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-upcoming-auction-back',
@@ -25,13 +26,23 @@ export class UpcomingAuctionBackComponent implements OnInit {
         locale: enLocale
       };
   constructor(
-    private productService: ProductService
+    private productService: ProductService,
+    private userService: UserService,
+    private router: Router
   ) {
 
     this.socket  = socketIo('http://localhost:3000');
    }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.status!=true){
+        this.router.navigate(['/login']);
+      }
+      else if(info.role == "user"){
+        this.router.navigate(['/login']);
+      }
+    });
     this.startDate = new Date();
     this.endDate = new Date();
     this.getAllproduct(); 

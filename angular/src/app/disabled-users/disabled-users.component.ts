@@ -14,6 +14,14 @@ export class DisabledUsersComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.status!=true){
+        this.router.navigate(['/login']);
+      }
+      else if(info.role == "user"){
+        this.router.navigate(['/login']);
+      }
+    });
     this.userService.getDisabledUsers().subscribe(data=>{
       this.users = data;
      console.log(data);

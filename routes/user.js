@@ -326,10 +326,12 @@ router.get('/get_loggedin_user',(req,res,next)=>{
                console.log(decoded);
                 res.json(decoded);
             } catch (e) {
-                return res.status(401).send('unauthorized');
+                // return res.status(401).send('unauthorized');
+                return res.json({success:false, msg: 'Invalid User'});
             }
     }else{
-        return res.status(401).send('Invalid User');
+        // return res.status(401).send('Invalid User');
+        return res.json({success:false, msg: 'Invalid User'});
     }
     
 });
