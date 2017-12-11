@@ -32,7 +32,7 @@ export class TopBarComponent implements OnInit {
     this.productService.getProducts().subscribe(data3 => {   
       data3.forEach(element => {
         // console.log(element);
-        if(element.admin_notification.user_id && element.admin_notification.is_viewed == false ){
+        if(element.admin_notification.user_id && element.admin_notification.is_viewed == false){
           this.info.push(element);
           this.count++;
           console.log(this.info);
