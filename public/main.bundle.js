@@ -2103,6 +2103,10 @@ var MyauctionsComponent = (function () {
             });
             _this.loadAuctions();
         });
+        this.socket.on('closebid', function (data) {
+            console.log(data);
+            _this.loadAuctions();
+        });
     };
     MyauctionsComponent.prototype.loadAuctions = function () {
         var _this = this;

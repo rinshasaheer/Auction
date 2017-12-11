@@ -157,7 +157,7 @@ router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),functio
         var authorization = req.headers.authorization.substring(4), decoded;
         try {
             decoded = jwt.verify(authorization, config.secret);
-            console.log(decoded);
+            // console.log(decoded);
             Product.findOneAndUpdate(
                 {"_id" : req.body.pid},
                 { $push:{"bidders": {user_id: decoded._id, amount:req.body.amount }} },
@@ -278,7 +278,7 @@ router.delete('/delete/:id',(req,res,next)=>{
 router.get('/product/:id',(req,res,next)=>{
     Product.getProductById(req.params.id, (err,product)=>{
         if(err) throw err;
-        console.log(product);
+        // console.log(product);
         return res.json(product);
     })
 });
@@ -346,7 +346,7 @@ router.get('/upcomingproduct',(req,res,next)=>{
 router.get('/highBid/:id',(req,res,next)=>{
     Product.getHighestBid(req.params.id,(err,products)=>{
         if(err) throw err;
-        console.log(products);
+        // console.log(products);
         return res.json(products);
     })
 });
@@ -355,13 +355,13 @@ router.get('/myauctionproduct/:id',(req,res,next)=>{
     console.log(req.params.id);
     Product.getMyAuctionProduct(req.params.id,(err,products)=>{
         if(err) throw err;
-        console.log(products);
+        // console.log(products);
         return res.json(products);
     })
 });
 
 router.put('/updateInterested/:id',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
-    console.log("uInter");
+    // console.log("uInter");
     if (req.headers && req.headers.authorization) {
         var authorization = req.headers.authorization.substring(4),
             decoded;

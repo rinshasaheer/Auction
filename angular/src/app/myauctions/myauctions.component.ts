@@ -32,7 +32,14 @@ export class MyauctionsComponent implements OnInit {
         if(item._id == data){
           object.splice(index, 1);
         }
-      })
+      });
+      
+      
+      this.loadAuctions();
+    })
+    this.socket.on('closebid', (data) => {
+      console.log(data);
+    
       this.loadAuctions();
     })
   }
