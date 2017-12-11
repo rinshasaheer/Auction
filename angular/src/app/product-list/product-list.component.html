@@ -1,6 +1,8 @@
 <!-- <ul>
     <li (click) ="onSelect(pro)" *ngFor="let pro of pros"><a>{{pro.name}}</a></li>
 </ul> -->
+
+
 <div class="col-md-9">
 <br>
 
@@ -27,7 +29,7 @@
   
     <td>{{pro.name}}</td>
     <!-- <td><img src="assets/uploads/{{product.image||'default.png'}}" alt="" class="image"></td> -->
-    <td><img src="assets/uploads/{{pro.image || 'default.png'}}" alt="" class="image"></td>
+    <td><img src="assets/uploads/{{pro.image}}" alt="" class="image"></td>
     <td>{{pro.bid_amount}}</td>
     <td>{{pro.min_bid_rate}}</td>
     <td>{{pro.start_date}}</td>
@@ -36,7 +38,7 @@
   
   
     <td> <a [routerLink]="['/product-detail/'+pro._id]"  ><input type="submit" value="Action" class="btn btn-primary" > </a></td>
-   
+    <!-- <td> <a [routerLink]="['/product-list/'+pro._id]"  ><input type="submit" value="delete" class="btn btn-primary" > </a></td> -->
 
     </tr>
   </table>

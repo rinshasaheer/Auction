@@ -3,8 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { pro } from '../pro';
 import { ProductService } from './../services/product.service';
 import { FileUploader } from 'ng2-file-upload'; // File Upload
-
-
+import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 import { CanActivate, ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'product-detail',
@@ -42,7 +41,7 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit() {
 
-
+   
     this.sub = this.route.params.subscribe(params => {
      // console.log('abcd' + params.id);
       this._prductService.getAProduct(params.id).subscribe(data => {
@@ -52,6 +51,7 @@ export class ProductDetailComponent implements OnInit {
         // startdate: Date = new Date(this.arr1.start_date.toString())
         this.start_date = new Date(this.arr1.start_date.toString());
         this.end_date = new Date(this.arr1.end_date.toString());
+        // window.location.reload();
         // this.dateinfo= data;
       });
 

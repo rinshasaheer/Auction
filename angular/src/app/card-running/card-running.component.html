@@ -1,4 +1,4 @@
-<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+<div [hidden]="isTimeOver" class="col-xs-6 col-sm-6 col-md-4 col-lg-4" >
     <div class="tg-ad tg-verifiedad">
         <figure>
             <a href="javascript:void(0);"><img src="assets/uploads/{{product.image||'default.png'}}" alt="{{product.name}}"></a>
@@ -23,7 +23,7 @@
             <div class="col-xs-12 col-md-4 col-md-offset-1">
                Ends In
                 <p class="lead">
-                    <app-count-down-timer [inputDate]="product.end_date"></app-count-down-timer>
+                    <app-count-down-timer (onTimeOver)="timeOver()"  [inputDate]="product.end_date"></app-count-down-timer>
                 </p>
             </div>
         </div>
@@ -31,9 +31,9 @@
 
             <div class="col-xs-12 col-md-12 margn form-group " [ngClass]="{'has-error': isError}">
                     <div *ngIf="isError" class="text-danger text-left">
-                           {{errMsg}}
+                           {{msg}}
                       </div>
-                <input [disabled]="btnDisbled" [(ngModel)]="amount" (keyup)="validateAmount()"  class="form-control " type="text" placeholder="Minimum bid amount {{(product.lastBidprice  * 1 ) + product.min_bid_rate | number:'1.2-2'}}">
+                <input [disabled]="btnDisbled" value="{{formatedAmount}}" [(ngModel)]="amount" (keyup)="validateAmount()"  class="form-control " type="text" placeholder="Minimum bid amount {{(product.lastBidprice  * 1 ) + product.min_bid_rate | number:'1.2-2'}}">
                 
             </div>
            
@@ -41,6 +41,9 @@
             
   
         </div>
-        <button (click)="bidbtnClicked()" class="btn btn-primary tg-adprice"> Bid Now</button>
+        <div *ngIf="isSuccess" class="text-success text-left">
+            {{msg}}
+       </div>
+        <button [disabled]="btnDisbled" (click)="bidbtnClicked()" class="btn {{btnClass}} tg-adprice"> {{btnLabel}}</button>
     </div>
 </div>

@@ -18,8 +18,6 @@ let transporter = nodemailer.createTransport({
 });
 
 
-
-
 router.post('/register',(req,res)=>{
     // console.log(req.body);
     let newUser = new User({
@@ -31,56 +29,141 @@ router.post('/register',(req,res)=>{
         role: (req.body.role) ? req.body.role: 'user' ,
 
     });
-    User.addUser(newUser,(err, user)=>{
-       
-        if(err){
+
+    User.find({ name: req.body.name }, function (err, doc){
+        if(doc.length!=0){
             res.json({success: false, msg : "Failed"});
-        }else{
-            nodemailer.createTestAccount((err, account) => {
-                
-                    // create reusable transporter object using the default SMTP transport
-                
-                    // setup email data with unicode symbols
-                    let mailOptions = {
-                        from: 'mean.symptots@gmail.com', // sender address
-                        to: req.body.email, // list of receivers
-                        subject: 'Please log in to your account', // Subject line
-                        text: '', // plain text body
-                        html: '<b><h3>Hi Rinsha,</h3><br/>We’re excited to get you started using Auction! You’re on your way to being fully set up, but first, you must finish your account verification by clicking the below link:<br/>Username: '+req.body.email+'<br/>Password: '+req.body.password+'<br/>Verification Link:</a> http://192.168.1.9:3000/email-verification/'+req.body.verification_code+'</a><br/> Thank You!</b>' // html body
-                    };
-                
-                    // send mail with defined transport object
-                    transporter.sendMail(mailOptions, (error, info) => {
-                        if (error) {
-                            // return console.log(error);
-                        }
-                        // console.log('Message sent: %s', info.messageId);
-                        
-                        // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-                
-                        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
-                        // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-                    });
-                });
-            res.json({success: true, msg : "User registered, Redirecting..."});
         }
+        else{
+            User.find( { $and: [ { email: req.body.email}, {google: {$exists: false }}, {facebook : {$exists: false }} ] } , function (err, doc){
+                if(doc.length!=0){
+                    res.json({success: false, msg : "Failed"});
+                }
+                else{
+                    User.addUser(newUser,(err, user)=>{
+       
+                        if(err){
+                            res.json({success: false, msg : "Failed"});
+                        }else{
+                            nodemailer.createTestAccount((err, account) => {
+                                
+                                    // create reusable transporter object using the default SMTP transport
+                                
+                                    // setup email data with unicode symbols
+                                    let mailOptions = {
+                                        from: 'mean.symptots@gmail.com', // sender address
+                                        to: req.body.email, // list of receivers
+                                        subject: 'Please log in to your account', // Subject line
+                                        text: '', // plain text body
+                                        html: '<b><h3>Hi '+req.body.name+' ,</h3><br/>We’re excited to get you started using Auction! You’re on your way to being fully set up, but first, you must finish your account verification by clicking the below link:<br/>Username: '+req.body.email+'<br/>Password: '+req.body.password+'<br/>Verification Link:</a> http://192.168.1.9:3000/email-verification/'+req.body.verification_code+'</a><br/> Thank You!</b>' // html body
+                                    };
+                                
+                                    // send mail with defined transport object
+                                    transporter.sendMail(mailOptions, (error, info) => {
+                            if (error) {
+                                // return console.log(error);
+                            }
+                            // console.log('Message sent: %s', info.messageId);
+                            
+                            // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+                    
+                            // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
+                            // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+                        });
+                    });
+                res.json({success: true, msg : "User registered, Redirecting..."});
+            }
     });
+}
+});
+}
+});
 });
 
-
-router.get('/users',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
+//all users
+router.get('/users',(req,res,next)=>{
     User.getUsers((err,user)=>{
+      //  console.log(user);
+       if(err) throw err;
+       return res.json(user);
+    })    
+});
+
+//all disabled users
+router.get('/disabledusers',(req,res,next)=>{
+    User.getDisabledUsers((err,user)=>{
         if(err) throw err;
         return res.json(user);
        
-    })
-    
+    })    
 });
+
+//all deleted users
+router.get('/deletedusers',(req,res,next)=>{
+    User.getDeletedUsers((err,user)=>{
+        if(err) throw err;
+        return res.json(user);
+        })
+  });
+
+//delete user
+router.delete('/delete/:id',(req,res,next)=>{
+    User.deleteUser(req.params.id,(err,user)=>{
+        if(err) throw err;
+        if(!user){
+            return res.json({success:false, msg: 'Faild to delete user'});
+        }else{
+            return res.json({success:true, msg: 'deleted successfully'});
+        }
+    })
+});
+
+
+//disable user
+router.delete('/disable/:id',(req,res,next)=>{
+    User.blockUser(req.params.id,(err,user)=>{
+        if(err) throw err;
+        if(!user){
+            return res.json({success:false, msg: 'Faild to disabled user'});
+        }else{
+            return res.json({success:true, msg: 'disabled successfully'});
+        }
+    })
+});
+
+//unblock
+router.delete('/unblock/:id',(req,res,next)=>{
+    User.unblockUser(req.params.id,(err,user)=>{
+        if(err) throw err;
+        if(!user){
+            return res.json({success:false, msg: 'Faild to unblocked user'});
+        }else{
+            return res.json({success:true, msg: 'unblocked successfully'});
+        }
+    })
+});
+
+
+
+//router.post('/authenticate',(req,res,next)=>{
+ //   const email = req.body.email;
+ //   const password = req.body.password;
+  //  User.getUserByUsername(email, (err,user)=>{
+
+//router.get('/users',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
+   // User.getUsers((err,user)=>{
+    //    if(err) throw err;
+    //    return res.json(user);
+       
+   // })
+    
+//});
 
 router.post('/authenticate',(req,res,next)=>{
     const email = req.body.email;
     const password = req.body.password;
-    User.findOne({email:email}, (err,user)=>{
+    // User.findOne({email:email}, (err,user)=>{
+    User.findOne({ $and: [ { email: email},{ google: null}, {facebook : null} ] }, (err,user)=>{
         if(err) throw err;
         if(!user){
             return res.json({success:false, msg: 'User Not found'});
@@ -159,6 +242,7 @@ router.put('/genToken/:id', function(req, res){
 
 
 
+    
 
     router.get('/getemail',function(req,res){
         // console.log("user get");
@@ -208,13 +292,47 @@ router.put('/genToken/:id', function(req, res){
             
             } 
         });
-            return res.json(user);
+            // return res.json(user);
         
             
         });
     });
     
 
+router.get('/users_id_as_index',(req,res,next)=>{
+ //   console.log('testing');
+    User.getUsers((err,user)=>{
+        if(err) throw err;
+        var users = {};
+        user.forEach((usr, i) => {
+            tmp = {};
+            tmp._id = usr._id;
+            tmp.name = usr.name;
+            tmp.email = usr.email;
+            tmp.date_tym = usr.date_tym;
+            users[usr._id] = tmp;
+        });
+        return res.json(users);
+       
+    })
+    
+});
+router.get('/get_loggedin_user',(req,res,next)=>{
+    if (req.headers && req.headers.authorization) {
+        var authorization = req.headers.authorization.substring(4),
+            decoded;
+            try {
+                decoded = jwt.verify(authorization, config.secret);
+               console.log(decoded);
+                res.json(decoded);
+            } catch (e) {
+                return res.status(401).send('unauthorized');
+            }
+    }else{
+        return res.status(401).send('Invalid User');
+    }
+    
+});
 
 
 
@@ -261,6 +379,67 @@ router.put('/genToken/:id', function(req, res){
     
 // });
 
+router.put('/saveAddress',passport.authenticate('jwt',{session:false}),function(req,res){
+    
+        if (req.headers && req.headers.authorization) {
+            var authorization = req.headers.authorization.substring(4),
+                decoded;
+                try {
+                    decoded = jwt.verify(authorization, config.secret);
+                    // console.log(decoded);
+                    User.findOneAndUpdate({"_id" : decoded._id},
+                    {
+                        $push:{"address": {pid: req.body.pid,
+                             name:req.body.name,
+                             phone:req.body.phone,
+                             pin:req.body.pin,
+                             addr1:req.body.addr1,
+                             addr2:req.body.addr2,
+                             addr3:req.body.addr3,
+                             addr4:req.body.addr4,
+                             }}
+                    },
+                    { new : true },
+                    (err, user)=>{
+                        if(err){
+                            res.json({success: false, msg : "Failed, went somthing wrong "});
+                        }else{
+                            res.json({success: true, msg : "Address saved successfully"});
+                        }
+                    });
+                } catch (e) {
+                    return res.status(401).send('unauthorized');
+                }
+        }else{
+            return res.status(401).send('Invalid User');
+        }
+    
+    });
+
+router.put('/sendmailtowinner/:id',(req,res,next)=>{
+    console.log(req);
+    User.findOne({"_id":req.params.id}, (err,user)=>{
+    if(err) throw err;
+    else{
+        nodemailer.createTestAccount((err, account) => {
+            let mailOptions = {
+                from: 'mean.symptots@gmail.com', // sender address
+                to: user.email,
+                subject: 'Congratulations! You have won an auction', // Subject line
+                text: '', // plain text body
+                html: '<b><h3>Congratulations,</h3><br/>Yours was the winning bid on Auction. You got a great deal! I am looking forward to a pleasant transaction and positive feedback for both of us. <br/>You can confirm or reject your item on link: </a> http://192.168.1.9:3000/email-verification/'+req.body.pid+'</a><br/>I am delighted to be dealing with you and know you will enjoy your purchase. I’d also like to invite you to check out my other items available on Auction.<br/> Thank You!</b>' // html body
+            };
+            transporter.sendMail(mailOptions, (error, info) => {
+                if (error) {
+                    // console.log('error');
+                     return console.log(error);
+                }
+               
+            });
+        });
+    }
+    });
+});    
 
 module.exports = router;
 

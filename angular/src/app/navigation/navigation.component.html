@@ -9,13 +9,57 @@
                         <p class="title1">Free phone: <strong>800-2345-6789</strong></p>
                         <p class="title2">Hours:  8am-8pm PST M-Th;   6am-3pm PST Fri</p>
                     </div> -->
-                    <div class="col-lg-4 col-md-4 pull-right">
+                    
+
+                    <div class="pull-right">
                         <li class="dropdown" >
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           
                           <li><a [routerLink]="['/myauctions']">My Bids</a></li>
                           <li><a (click)="logout()" href="#">Log Out</a></li>
+                          
+                        </ul>
+                      </li>
+                        <!-- <a href="#" class="btn-default btn1">Sign In</a> -->
+                    </div>
+
+                    <div class="pull-right notify-cont">
+
+                        <li *ngIf="count" class="dropdown notify" >
+                          <div class="notify-count">{{countNumber}}</div>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu" id="notify-menu">
+                          
+                          <li *ngFor="let item of info">
+                            <a [routerLink]="['/winnerconfirm/'+item?._id]" class="ovrflow-h" id="notify-head-a">
+                             <div class="col-md-12">
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <h4 id="won-head">You Won a Bid!</h4>
+                                  </div>
+                                 
+                                    <div class="col-md-3">
+                                      <div class="row">
+                                          <img  class="noftify-pro-img" src="../../assets/uploads/{{item?.image||'default.png'}}" alt="pro">
+                                        </div>
+                                      </div>
+                                      
+                                    <div class="col-md-9">
+                                          <h4 class="noftify-pro-h4">{{item?.name}}</h4>
+                                          <!-- <p>Amount: $1000</p> -->
+                                      
+                                 
+                                  </div>
+                                </div>
+                                  
+                              </div>
+                              
+                              
+                            </a>
+                          </li>
+                    
+                          <!-- <li><a (click)="logout()" href="#">Log Out</a></li> -->
                           
                         </ul>
                       </li>
@@ -42,7 +86,7 @@
             
            
             <ul class="nav navbar-nav navbar-right">
-                <li class="active" ><a [routerLink]="['/home']" >Home <span class="sr-only">(current)</span></a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a  [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a></li>
                 <!-- <li class="dropdown" >
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manage <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -53,16 +97,20 @@
                     
                   </ul>
                 </li> -->
-              <li ><a pageScroll href="#c-auction">Running Auctions</a></li>
-              <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/registration']">Registration</a></li> -->
-              <li ><a pageScroll [pageScrollOffset]="180" href="#f-auction">Closed Auctions</a></li>
-              <!-- <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/register']">Register</a></li> -->
-              <li ><a  pageScroll [pageScrollOffset]="180" href="#u-auction">Upcoming Auctions</a></li>
+                
+                    <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/runningauction']" >Running Auctions</a></li>
+                    <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/registration']">Registration</a></li> -->
+                    <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/finishedauction']" >Closed Auctions</a></li>
+                    <!-- <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/register']">Register</a></li> -->
+                    <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/upcomingauction']" >Upcoming Auctions</a></li>
+                
+                
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </div>
     </nav>
   
+    
 </div>
 </header>

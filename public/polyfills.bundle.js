@@ -640,7 +640,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /***/ "../../../../core-js/modules/_core.js":
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.5.1' };
+var core = module.exports = { version: '2.5.2' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -5117,7 +5117,7 @@ Zone.__load_patch('PromiseRejectionEvent', function (global, Zone, api) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("../../../../../src/polyfills.ts");
@@ -5125,5 +5125,5 @@ module.exports = __webpack_require__("../../../../../src/polyfills.ts");
 
 /***/ })
 
-},[1]);
+},[2]);
 //# sourceMappingURL=polyfills.bundle.js.map

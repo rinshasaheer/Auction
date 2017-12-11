@@ -1,10 +1,11 @@
+<app-navigation></app-navigation>
 <div class="container">
   <div id="f-auction" class="auction-section">
       <h4 class="page-head">Closed Auctions</h4>
       <div *ngIf="existStatus; else noProduct">
         <div  *ngFor="let item of products">
           <!-- {{item}} -->
-          <app-card [item]="item"></app-card>
+          <app-card [item]="item" [closed]=true></app-card>
         </div>
       </div>
       <ng-template #noProduct>

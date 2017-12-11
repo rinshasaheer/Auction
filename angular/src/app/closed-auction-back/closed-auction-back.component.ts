@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { Router} from '@angular/router';
+import { UserService} from '../services/user.service';
+import { DatepickerOptions } from 'ng2-datepicker';
+import * as enLocale from 'date-fns/locale/en';
+import * as socketIo from 'socket.io-client';
+
+
 
 @Component({
   selector: 'app-closed-auction-back',
@@ -10,25 +16,62 @@ import { Router} from '@angular/router';
 export class ClosedAuctionBackComponent implements OnInit {
   products: object;
   winnerId : object;
+  users:object;
+  startDate:Date;
+  endDate:Date;
+  private socket: any; 
   involvedUsers : any = [];
+  //options:DatepickerOptions;
+  options:DatepickerOptions = {
+
+    minYear: 1970,
+    maxYear: 2030,
+    displayFormat: 'DD-MM-YYYY',
+    barTitleFormat: 'MMMM YYYY',
+    firstCalendarDay: 0, // 0 - Sunday, 1 - Monday
+    locale: enLocale
+  };
   constructor(
-     private productService: ProductService
-  ){ }
+     private productService: ProductService,
+     private userService:UserService
+  ){ 
+
+    this.socket  = socketIo('http://localhost:3000');
+  }
 
 
   ngOnInit() {
+   this.startDate = new Date();
+   this.endDate = new Date();
+    this.userService.getAllUsersById().subscribe(data=>{
+      this.users = data;
+      console.log(this.users);
+    });
+
+    this.socket.on('startbid', (data) => {
+        this.getAllproduct();
+    })
+    this.socket.on('userbidreject', (data) => {
+      this.getAllproduct();
+    }) 
+    this.getAllproduct();
+    
+  }
+
+  getAllproduct(){
     this.productService.getAllClosedProduct().subscribe(data=>{
-     
+      this.involvedUsers.bidders = [];
+      this.involvedUsers.user_details = [];
       data.forEach((item, index) => {
         var lastBidprice = item.bid_amount;
         var lastBiduser = '';
         var lastBidTime = '';
 
-        item.bidders.forEach((user, i) => {
-          if(user.amount >= lastBidprice && user.bid_status != "rejected"){
-             lastBidprice = user.amount;
-             lastBiduser = item.user_details[i].name;
-             lastBidTime = user.date_time;
+        item.bidders.forEach((bidder, i) => {
+          if(bidder.amount >= lastBidprice && bidder.bid_status != "rejected"){
+             lastBidprice = bidder.amount;
+             lastBiduser = this.users[bidder.user_id].name;
+             lastBidTime = bidder.date_time;
           }
         });
         data[index].lastBidprice = lastBidprice;
@@ -41,7 +84,7 @@ export class ClosedAuctionBackComponent implements OnInit {
   }
 
   updateInvolved(product){
-    this.involvedUsers = product.bidders
+    this.involvedUsers = product;
     console.log(this.involvedUsers);
   }
 

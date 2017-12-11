@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { FileUploader } from 'ng2-file-upload';
+// import { FileUploader } from 'ng2-file-upload';
 import { ProductService } from './../services/product.service';
 import { UserService } from './../services/user.service';
 // import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -9,12 +9,17 @@ import { CanActivate } from '@angular/router';
 import { pro } from '../pro';
 import { Router } from "@angular/router";
 // import { FileUploader } from 'ng2-file-upload';
+import 'rxjs/add/operator/map';
+
 // import { FormGroup } from '@angular/forms';
 
 // import { ProductService } from '../services/product.service';
 // import { Poll } from '../poll';
 // import { FormsModule, FormControl, FormGroup, Validators }   from '@angular/forms';
 // import { answer } from './../answer';
+
+
+import { FileUploader } from 'ng2-file-upload'; // File Upload
 
 
 
@@ -28,8 +33,9 @@ import { Router } from "@angular/router";
 })
 export class ProductComponent implements OnInit {
   form: FormGroup;
-
   public uploader:FileUploader = new FileUploader({url:'http://localhost:3000/products/upload'});
+  
+
 
  
   polls: Array<pro>;
@@ -40,8 +46,7 @@ export class ProductComponent implements OnInit {
     min_bid_rate :'',
      start_date :'',
      end_date :'',
-     image :''
-    // date_time :''
+    image :''
 
   };
 
@@ -58,11 +63,12 @@ export class ProductComponent implements OnInit {
       // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
       // response = JSON.parse(response);
       this.newproduct.image = response.filename;
-      console.log(this.newproduct.image);
+      // console.log(this.newproduct.image);
   };
     this._prductService.addProduct(this.newproduct).subscribe(data => {
     if(data){
-      console.log(data);
+      
+      
             this._userService.sendmail().subscribe(data1 => {
          
         });
@@ -70,7 +76,7 @@ export class ProductComponent implements OnInit {
 
        alert("Add Product Successfully");
        this.router.navigate(['/product-list'])
-       window.location.reload();
+      //  window.location.reload();
     //  
         
     
@@ -93,15 +99,15 @@ export class ProductComponent implements OnInit {
     }
 }
 
-_keyPress1(event: any) {
-  const pattern = /[a-z,A-Z, ]/;
-  let inputChar = String.fromCharCode(event.charCode);
+// _keyPress1(event: any) {
+//   const pattern = /[a-z,A-Z,1-9  ]/;
+//   let inputChar = String.fromCharCode(event.charCode);
 
-  if (!pattern.test(inputChar)) {
-    // invalid character, prevent input
-    event.preventDefault();
-  }
-}
+//   if (!pattern.test(inputChar)) {
+//     // invalid character, prevent input
+//     event.preventDefault();
+//   }
+// }
 datepickerOpts = {
   startDate: new Date(Date.now()),
   
@@ -121,5 +127,7 @@ datepickerOpts = {
 // }
 
 
-  
+   
 }
+  
+
