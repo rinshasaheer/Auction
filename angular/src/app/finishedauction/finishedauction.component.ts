@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { product } from './../schema/product';
 import { ProductServiceService } from './../services/product-service.service';
+import {UserService} from '../services/user.service';
+import {Router} from '@angular/router';
 import * as socketIo from 'socket.io-client';
 
 @Component({
@@ -15,13 +17,20 @@ export class FinishedauctionComponent implements OnInit {
   existStatus: boolean = false;
   private socket: any; 
   
-  constructor(private _productService: ProductServiceService) { 
+  constructor(private _productService: ProductServiceService, private userService: UserService, private router: Router) { 
     this.socket = socketIo('http://192.168.1.99:3000')
     
   }
 
   ngOnInit() {
-    
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.status!=true){
+        this.router.navigate(['/login']);
+      }
+      else if(info.role == "admin"){
+        this.router.navigate(['/login']);
+      }
+    });
     // console.log(this.products);
     this.loadAuction();
     // console.log(Date())

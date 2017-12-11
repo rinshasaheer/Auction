@@ -3,6 +3,7 @@ import { ProductService } from './../services/product.service';
 import { FilterPipe } from '../filter.pipe';
 import { pro } from '../pro';
 import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 @Component({
   selector: 'product-list',
   templateUrl: './product-list.component.html',
@@ -23,20 +24,18 @@ export class ProductListComponent implements OnInit {
   end_date : Date
   // private deleteProEvent = new EventEmitter();
   public SelectPro = new EventEmitter();
-  constructor(private _prductService : ProductService, private router: Router) { }
+  constructor(private _prductService : ProductService, private router: Router, private userService: UserService) { }
 
   ngOnInit() {
     // this.arr1=[];
-  this._prductService.getProducts().subscribe(data1 => {
-    this.arr1 = data1;
- 
-    // console.log(data1);
-  //  data1.forEach(function(item) {
-  //   this.arr1.push(item);
-  //   console.log(this.arr1);
-  //  });
-  // this.prodata = data1;
-      });
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.status!=true){
+        this.router.navigate(['/login']);
+      }
+      else if(info.role == "user"){
+        this.router.navigate(['/login']);
+      }
+    });
 
 
 

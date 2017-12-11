@@ -19,13 +19,21 @@ export class RunningauctionComponent implements OnInit {
   private socket: any; 
   constructor(
     private productService: ProductService,
-    private userService:UserService
+    private userService:UserService,
+    private router: Router
   ) {
     this.socket  = socketIo('http://localhost:3000');
    }
 
   ngOnInit() {
-
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.status!=true){
+        this.router.navigate(['/login']);
+      }
+      else if(info.role == "admin"){
+        this.router.navigate(['/login']);
+      }
+    });
     this.socket.on('startbid', (data) => {
      // console.log(data);
         this.productService.getProduct(data.prod_id).subscribe(data=>{

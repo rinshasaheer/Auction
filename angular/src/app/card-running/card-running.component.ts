@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
+import {UserService} from '../services/user.service';
+import {Router} from '@angular/router';
 import * as socketIo from 'socket.io-client';
 
 @Component({
@@ -23,13 +25,20 @@ export class CardRunningComponent implements OnInit {
    isTimeOver = false;
    private socket: any; 
   constructor(
-    private productService: ProductService
+    private productService: ProductService, private userService: UserService, private router: Router
   ) {
     this.socket  = socketIo('http://localhost:3000');
    }
 
   ngOnInit() {
-
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.status!=true){
+        this.router.navigate(['/login']);
+      }
+      else if(info.role == "admin"){
+        this.router.navigate(['/login']);
+      }
+    });
     this.socket.on('newbid', (data) => {
       console.log(data);
       if(this.product._id == data.prod_id){

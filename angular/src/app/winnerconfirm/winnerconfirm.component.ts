@@ -31,6 +31,14 @@ export class WinnerconfirmComponent implements OnInit {
   constructor(private userService:UserService, private productService:ProductService, private route: ActivatedRoute, private router: Router ) { }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.status!=true){
+        this.router.navigate(['/login']);
+      }
+      else if(info.role == "admin"){
+        this.router.navigate(['/login']);
+      }
+    });
     let temp : number = 0;
     this.sub = this.route.params.subscribe(params => {
       this.newproduct.pid = params.id;

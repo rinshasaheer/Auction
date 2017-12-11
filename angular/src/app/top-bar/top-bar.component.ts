@@ -21,6 +21,13 @@ export class TopBarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      // console.log(info.role);
+      if(info.role == "user"){
+        // alert("Unauthorized Access ..!")
+        this.router.navigate(['/login']);
+      }
+    });
     let details= [];
     this.info = [];
     this.count = 0;

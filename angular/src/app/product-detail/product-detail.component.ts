@@ -5,6 +5,7 @@ import { ProductService } from './../services/product.service';
 import { FileUploader } from 'ng2-file-upload'; // File Upload
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 import { CanActivate, ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 @Component({
   selector: 'product-detail',
   templateUrl: './product-detail.component.html',
@@ -37,11 +38,19 @@ export class ProductDetailComponent implements OnInit {
   // tableview: boolean = false;
   private updateProEvent = new EventEmitter();
   private deleteProEvent = new EventEmitter();
-  constructor(private _prductService : ProductService, private route: ActivatedRoute,private router: Router) { }
+  constructor(private _prductService : ProductService, private route: ActivatedRoute,private router: Router,private userService: UserService) { }
 
   ngOnInit() {
 
-   
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.status!=true){
+        this.router.navigate(['/login']);
+      }
+      else if(info.role == "user"){
+        this.router.navigate(['/login']);
+      }
+    });
+  
     this.sub = this.route.params.subscribe(params => {
      // console.log('abcd' + params.id);
       this._prductService.getAProduct(params.id).subscribe(data => {

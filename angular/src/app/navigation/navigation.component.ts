@@ -23,6 +23,14 @@ export class NavigationComponent implements OnInit {
   constructor(private userService : UserService, private router: Router, private _productService: ProductServiceService, private productService: ProductService) { }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.status!=true){
+        this.router.navigate(['/login']);
+      }
+      else if(info.role == "admin"){
+        this.router.navigate(['/login']);
+      }
+    });
     this.info = [];
     this.countNumber = 0;
     this.userService.getLoggedUSerDetails().subscribe(data3 => {
