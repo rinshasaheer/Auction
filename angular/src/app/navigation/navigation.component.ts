@@ -3,7 +3,7 @@ import { CanActivate, Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { ProductServiceService } from './../services/product-service.service';
 import { ProductService } from './../services/product.service';
-
+import * as socketIo from 'socket.io-client';
 
 @Component({
   selector: 'app-navigation',
@@ -20,14 +20,36 @@ export class NavigationComponent implements OnInit {
   countNumber : any;
   info :Array<any>;
   count : Boolean = true;
-  constructor(private userService : UserService, private router: Router, private _productService: ProductServiceService, private productService: ProductService) { }
+  userInfo : any;
+  private socket: any;
+
+  constructor(private userService : UserService, private router: Router, private _productService: ProductServiceService, private productService: ProductService) {
+    this.socket = socketIo('http://localhost:3000');
+   }
 
   ngOnInit() {
     this.userService.getLoggedUSerDetails().subscribe(info =>{
       if(info.role !="user"){
         this.router.navigate(['/login']);
+      }else{
+        this.userInfo = info;
       }
     });
+    this.getNotification();
+    this.socket.on('notification', (data) => {
+      if(this.userInfo._id == data.user_id){
+        this.getNotification();
+      }
+     });
+  }
+
+  logout(){
+    this.userService.logout();
+    this.router.navigate(['/login']);
+    return false;
+  }
+
+  getNotification(){
     this.info = [];
     this.countNumber = 0;
     this.userService.getLoggedUSerDetails().subscribe(data3 => {
@@ -44,12 +66,6 @@ export class NavigationComponent implements OnInit {
         });
         
     });
-  }
-
-  logout(){
-    this.userService.logout();
-    this.router.navigate(['/login']);
-    return false;
   }
 
 }
