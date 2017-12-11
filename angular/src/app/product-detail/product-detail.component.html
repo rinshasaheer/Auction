@@ -35,7 +35,7 @@
             <td><img src="assets/uploads/{{arr1.image || 'default.png'}}" alt="" class="image"></td>
             <div class="form-group">
                 <label for="single">Select Image</label>
-                <input type="file" class="" name="single" ng2FileSelect [uploader]="uploader"  />                                  
+                <input type="file" class="" name="single" ng2FileSelect [uploader]="uploader" (change)="imageOr();"  />                                  
              </div>
             <div class="form-group" >
                     <label >  Bid Amount *</label>

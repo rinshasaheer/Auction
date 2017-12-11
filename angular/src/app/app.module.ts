@@ -22,7 +22,7 @@ import { DeletedUsersComponent } from './deleted-users/deleted-users.component';
 
 
 import { ProductComponent } from './product/product.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+// import { ProductDetailComponent } from './product-detail/product-detail.component';
 // import { DataTablesModule } from 'angular-datatables';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { AppComponent } from './app.component';
@@ -72,6 +72,7 @@ import * as $ from 'jquery';
 import { ProductListComponent } from './product-list/product-list.component';
 import { FilterPipe } from './filter.pipe';
 import { ManageProductComponent } from './manage-product/manage-product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 // import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductPipe } from './product.pipe';
 //import { NgDatepickerModule } from 'ng2-datepicker';

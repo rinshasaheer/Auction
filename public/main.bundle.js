@@ -314,37 +314,37 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__ = __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__ = __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__product_product_component__ = __webpack_require__("../../../../../src/app/product/product.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__product_detail_product_detail_component__ = __webpack_require__("../../../../../src/app/product-detail/product-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__finishedauction_finishedauction_component__ = __webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__upcomingauctions_upcomingauctions_component__ = __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__equal_validator_directive__ = __webpack_require__("../../../../../src/app/equal-validator.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__email_verification_email_verification_component__ = __webpack_require__("../../../../../src/app/email-verification/email-verification.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__closed_auction_back_closed_auction_back_component__ = __webpack_require__("../../../../../src/app/closed-auction-back/closed-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__upcoming_auction_back_upcoming_auction_back_component__ = __webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__running_auction_back_running_auction_back_component__ = __webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__socialmedia_socialmedia_component__ = __webpack_require__("../../../../../src/app/socialmedia/socialmedia.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__read_more_read_more_component__ = __webpack_require__("../../../../../src/app/read-more/read-more.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__count_down_timer_count_down_timer_component__ = __webpack_require__("../../../../../src/app/count-down-timer/count-down-timer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__services_product_service_service__ = __webpack_require__("../../../../../src/app/services/product-service.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__myauctions_myauctions_component__ = __webpack_require__("../../../../../src/app/myauctions/myauctions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__capitalize_pipe__ = __webpack_require__("../../../../../src/app/capitalize.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__runningauction_runningauction_component__ = __webpack_require__("../../../../../src/app/runningauction/runningauction.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__card_running_card_running_component__ = __webpack_require__("../../../../../src/app/card-running/card-running.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__winnerconfirm_winnerconfirm_component__ = __webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44_ng2_datetime_ng2_datetime__ = __webpack_require__("../../../../ng2-datetime/ng2-datetime.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__product_list_product_list_component__ = __webpack_require__("../../../../../src/app/product-list/product-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__filter_pipe__ = __webpack_require__("../../../../../src/app/filter.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__manage_product_manage_product_component__ = __webpack_require__("../../../../../src/app/manage-product/manage-product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__finishedauction_finishedauction_component__ = __webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__upcomingauctions_upcomingauctions_component__ = __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__equal_validator_directive__ = __webpack_require__("../../../../../src/app/equal-validator.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__email_verification_email_verification_component__ = __webpack_require__("../../../../../src/app/email-verification/email-verification.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__closed_auction_back_closed_auction_back_component__ = __webpack_require__("../../../../../src/app/closed-auction-back/closed-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__upcoming_auction_back_upcoming_auction_back_component__ = __webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__running_auction_back_running_auction_back_component__ = __webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__socialmedia_socialmedia_component__ = __webpack_require__("../../../../../src/app/socialmedia/socialmedia.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__read_more_read_more_component__ = __webpack_require__("../../../../../src/app/read-more/read-more.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__count_down_timer_count_down_timer_component__ = __webpack_require__("../../../../../src/app/count-down-timer/count-down-timer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__services_product_service_service__ = __webpack_require__("../../../../../src/app/services/product-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__myauctions_myauctions_component__ = __webpack_require__("../../../../../src/app/myauctions/myauctions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__capitalize_pipe__ = __webpack_require__("../../../../../src/app/capitalize.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__runningauction_runningauction_component__ = __webpack_require__("../../../../../src/app/runningauction/runningauction.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__card_running_card_running_component__ = __webpack_require__("../../../../../src/app/card-running/card-running.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__winnerconfirm_winnerconfirm_component__ = __webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43_ng2_datetime_ng2_datetime__ = __webpack_require__("../../../../ng2-datetime/ng2-datetime.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__product_list_product_list_component__ = __webpack_require__("../../../../../src/app/product-list/product-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__filter_pipe__ = __webpack_require__("../../../../../src/app/filter.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__manage_product_manage_product_component__ = __webpack_require__("../../../../../src/app/manage-product/manage-product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__product_detail_product_detail_component__ = __webpack_require__("../../../../../src/app/product-detail/product-detail.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__product_pipe__ = __webpack_require__("../../../../../src/app/product.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__ng_datepicker_ng_datepicker_component__ = __webpack_require__("../../../../../src/app/ng-datepicker/ng-datepicker.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__adminviewed_adminviewed_component__ = __webpack_require__("../../../../../src/app/adminviewed/adminviewed.component.ts");
@@ -378,7 +378,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
+// import { ProductDetailComponent } from './product-detail/product-detail.component';
 // import { DataTablesModule } from 'angular-datatables';
 
 
@@ -413,6 +413,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 // import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 //import { NgDatepickerModule } from 'ng2-datepicker';
@@ -426,32 +427,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var appRoutes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_43__registration_registration_component__["a" /* RegistrationComponent */] },
+    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__["a" /* RegistrationComponent */] },
     { path: 'product', component: __WEBPACK_IMPORTED_MODULE_16__product_product_component__["a" /* ProductComponent */] },
-    { path: 'product-list', component: __WEBPACK_IMPORTED_MODULE_45__product_list_product_list_component__["a" /* ProductListComponent */] },
-    { path: 'product-detail/:id', component: __WEBPACK_IMPORTED_MODULE_17__product_detail_product_detail_component__["a" /* ProductDetailComponent */] },
+    { path: 'product-list', component: __WEBPACK_IMPORTED_MODULE_44__product_list_product_list_component__["a" /* ProductListComponent */] },
+    { path: 'product-detail/:id', component: __WEBPACK_IMPORTED_MODULE_47__product_detail_product_detail_component__["a" /* ProductDetailComponent */] },
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_43__registration_registration_component__["a" /* RegistrationComponent */] },
-    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_30__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_29__login_login_component__["a" /* LoginComponent */] },
-    { path: 'socialmedia/:id', component: __WEBPACK_IMPORTED_MODULE_34__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */] },
+    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__["a" /* RegistrationComponent */] },
+    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_29__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_28__login_login_component__["a" /* LoginComponent */] },
+    { path: 'socialmedia/:id', component: __WEBPACK_IMPORTED_MODULE_33__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */] },
     { path: 'adminviewed/:id', component: __WEBPACK_IMPORTED_MODULE_50__adminviewed_adminviewed_component__["a" /* AdminviewedComponent */] },
     { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_8__dashboard_dashboard_component__["a" /* DashboardComponent */] },
     { path: 'all-users', component: __WEBPACK_IMPORTED_MODULE_12__all_users_all_users_component__["a" /* AllUsersComponent */] },
     { path: 'disabled-users', component: __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */] },
     { path: 'deleted-users', component: __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */] },
-    { path: 'upcomingauction', component: __WEBPACK_IMPORTED_MODULE_25__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */] },
-    { path: 'finishedauction', component: __WEBPACK_IMPORTED_MODULE_23__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */] },
-    { path: 'runningauction', component: __WEBPACK_IMPORTED_MODULE_40__runningauction_runningauction_component__["a" /* RunningauctionComponent */] },
+    { path: 'upcomingauction', component: __WEBPACK_IMPORTED_MODULE_24__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */] },
+    { path: 'finishedauction', component: __WEBPACK_IMPORTED_MODULE_22__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */] },
+    { path: 'runningauction', component: __WEBPACK_IMPORTED_MODULE_39__runningauction_runningauction_component__["a" /* RunningauctionComponent */] },
     { path: '', redirectTo: '/registration', pathMatch: 'full' },
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_43__registration_registration_component__["a" /* RegistrationComponent */] },
-    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_21__home_home_component__["a" /* HomeComponent */] },
-    { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_38__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
-    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_30__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
-    { path: 'closed-auction', component: __WEBPACK_IMPORTED_MODULE_31__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */] },
-    { path: 'upcoming-auction', component: __WEBPACK_IMPORTED_MODULE_32__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */] },
-    { path: 'running-auction', component: __WEBPACK_IMPORTED_MODULE_33__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */] },
-    { path: 'winnerconfirm/:id', component: __WEBPACK_IMPORTED_MODULE_42__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */] },
+    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__["a" /* RegistrationComponent */] },
+    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_20__home_home_component__["a" /* HomeComponent */] },
+    { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_37__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
+    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_29__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
+    { path: 'closed-auction', component: __WEBPACK_IMPORTED_MODULE_30__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */] },
+    { path: 'upcoming-auction', component: __WEBPACK_IMPORTED_MODULE_31__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */] },
+    { path: 'running-auction', component: __WEBPACK_IMPORTED_MODULE_32__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */] },
+    { path: 'winnerconfirm/:id', component: __WEBPACK_IMPORTED_MODULE_41__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */] },
     { path: 'upload', component: __WEBPACK_IMPORTED_MODULE_51__upload_upload_component__["a" /* UploadComponent */] } //file upload
 ];
 var AppModule = (function () {
@@ -462,22 +463,22 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_19__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__app_component__["a" /* AppComponent */],
             __WEBPACK_IMPORTED_MODULE_16__product_product_component__["a" /* ProductComponent */],
-            __WEBPACK_IMPORTED_MODULE_43__registration_registration_component__["a" /* RegistrationComponent */],
-            __WEBPACK_IMPORTED_MODULE_45__product_list_product_list_component__["a" /* ProductListComponent */],
-            __WEBPACK_IMPORTED_MODULE_46__filter_pipe__["a" /* FilterPipe */],
-            __WEBPACK_IMPORTED_MODULE_47__manage_product_manage_product_component__["a" /* ManageProductComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__product_detail_product_detail_component__["a" /* ProductDetailComponent */],
-            __WEBPACK_IMPORTED_MODULE_29__login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__navigation_navigation_component__["a" /* NavigationComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__card_card_component__["a" /* CardComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */],
-            __WEBPACK_IMPORTED_MODULE_25__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */],
-            __WEBPACK_IMPORTED_MODULE_38__myauctions_myauctions_component__["a" /* MyauctionsComponent */],
-            __WEBPACK_IMPORTED_MODULE_28__equal_validator_directive__["a" /* EqualValidator */],
-            __WEBPACK_IMPORTED_MODULE_39__capitalize_pipe__["a" /* CapitalizePipe */],
+            __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__["a" /* RegistrationComponent */],
+            __WEBPACK_IMPORTED_MODULE_44__product_list_product_list_component__["a" /* ProductListComponent */],
+            __WEBPACK_IMPORTED_MODULE_45__filter_pipe__["a" /* FilterPipe */],
+            __WEBPACK_IMPORTED_MODULE_46__manage_product_manage_product_component__["a" /* ManageProductComponent */],
+            __WEBPACK_IMPORTED_MODULE_47__product_detail_product_detail_component__["a" /* ProductDetailComponent */],
+            __WEBPACK_IMPORTED_MODULE_28__login_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__navigation_navigation_component__["a" /* NavigationComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__home_home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__card_card_component__["a" /* CardComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */],
+            __WEBPACK_IMPORTED_MODULE_37__myauctions_myauctions_component__["a" /* MyauctionsComponent */],
+            __WEBPACK_IMPORTED_MODULE_27__equal_validator_directive__["a" /* EqualValidator */],
+            __WEBPACK_IMPORTED_MODULE_38__capitalize_pipe__["a" /* CapitalizePipe */],
             __WEBPACK_IMPORTED_MODULE_8__dashboard_dashboard_component__["a" /* DashboardComponent */],
             __WEBPACK_IMPORTED_MODULE_11__side_bar_side_bar_component__["a" /* SideBarComponent */],
             __WEBPACK_IMPORTED_MODULE_9__top_bar_top_bar_component__["a" /* TopBarComponent */],
@@ -486,17 +487,17 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_12__all_users_all_users_component__["a" /* AllUsersComponent */],
             __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */],
             __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */],
-            __WEBPACK_IMPORTED_MODULE_30__email_verification_email_verification_component__["a" /* EmailVerificationComponent */],
-            __WEBPACK_IMPORTED_MODULE_31__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */],
-            __WEBPACK_IMPORTED_MODULE_32__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */],
-            __WEBPACK_IMPORTED_MODULE_33__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */],
-            __WEBPACK_IMPORTED_MODULE_34__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */],
+            __WEBPACK_IMPORTED_MODULE_29__email_verification_email_verification_component__["a" /* EmailVerificationComponent */],
+            __WEBPACK_IMPORTED_MODULE_30__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */],
+            __WEBPACK_IMPORTED_MODULE_31__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */],
+            __WEBPACK_IMPORTED_MODULE_32__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */],
+            __WEBPACK_IMPORTED_MODULE_33__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */],
             __WEBPACK_IMPORTED_MODULE_53_ng2_file_upload__["FileSelectDirective"],
-            __WEBPACK_IMPORTED_MODULE_35__read_more_read_more_component__["a" /* ReadMoreComponent */],
-            __WEBPACK_IMPORTED_MODULE_36__count_down_timer_count_down_timer_component__["a" /* CountDownTimerComponent */],
-            __WEBPACK_IMPORTED_MODULE_40__runningauction_runningauction_component__["a" /* RunningauctionComponent */],
-            __WEBPACK_IMPORTED_MODULE_41__card_running_card_running_component__["a" /* CardRunningComponent */],
-            __WEBPACK_IMPORTED_MODULE_42__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */],
+            __WEBPACK_IMPORTED_MODULE_34__read_more_read_more_component__["a" /* ReadMoreComponent */],
+            __WEBPACK_IMPORTED_MODULE_35__count_down_timer_count_down_timer_component__["a" /* CountDownTimerComponent */],
+            __WEBPACK_IMPORTED_MODULE_39__runningauction_runningauction_component__["a" /* RunningauctionComponent */],
+            __WEBPACK_IMPORTED_MODULE_40__card_running_card_running_component__["a" /* CardRunningComponent */],
+            __WEBPACK_IMPORTED_MODULE_41__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */],
             __WEBPACK_IMPORTED_MODULE_48__product_pipe__["a" /* ProductPipe */],
             __WEBPACK_IMPORTED_MODULE_50__adminviewed_adminviewed_component__["a" /* AdminviewedComponent */],
             __WEBPACK_IMPORTED_MODULE_51__upload_upload_component__["a" /* UploadComponent */],
@@ -507,21 +508,21 @@ AppModule = __decorate([
         imports: [
             __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
             // DataTablesModule,
-            __WEBPACK_IMPORTED_MODULE_18__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_18__angular_forms__["d" /* ReactiveFormsModule */],
-            __WEBPACK_IMPORTED_MODULE_24_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
+            __WEBPACK_IMPORTED_MODULE_17__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_17__angular_forms__["d" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_23_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
             __WEBPACK_IMPORTED_MODULE_7__angular_http__["HttpModule"],
             // ImageUploadModule,
             // DataTablesModule,
             // NKDatetimeModule,
-            __WEBPACK_IMPORTED_MODULE_44_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
+            __WEBPACK_IMPORTED_MODULE_43_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
             //  DataTablesModule
             // Ng2DatetimePickerModule
             //BrowserModule,
             // DataTablesModule,
-            __WEBPACK_IMPORTED_MODULE_18__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_18__angular_forms__["d" /* ReactiveFormsModule */],
-            __WEBPACK_IMPORTED_MODULE_24_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
+            __WEBPACK_IMPORTED_MODULE_17__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_17__angular_forms__["d" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_23_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
             __WEBPACK_IMPORTED_MODULE_7__angular_http__["HttpModule"],
             // ImageUploadModule,
             __WEBPACK_IMPORTED_MODULE_5__angular_router__["f" /* RouterModule */].forRoot(appRoutes),
@@ -530,12 +531,12 @@ AppModule = __decorate([
             // DataTablesModule,
             __WEBPACK_IMPORTED_MODULE_52_angular2_image_upload__["a" /* ImageUploadModule */],
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_37__services_product_service_service__["a" /* ProductServiceService */],
+        providers: [__WEBPACK_IMPORTED_MODULE_36__services_product_service_service__["a" /* ProductServiceService */],
             __WEBPACK_IMPORTED_MODULE_6__services_user_service__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_27__guards_auth_guard__["a" /* AuthGuard */],
-            __WEBPACK_IMPORTED_MODULE_26__services_product_service__["a" /* ProductService */]
+            __WEBPACK_IMPORTED_MODULE_26__guards_auth_guard__["a" /* AuthGuard */],
+            __WEBPACK_IMPORTED_MODULE_25__services_product_service__["a" /* ProductService */]
         ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_19__app_component__["a" /* AppComponent */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_18__app_component__["a" /* AppComponent */]],
     })
 ], AppModule);
 
@@ -2712,7 +2713,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product-detail/product-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation -->\r\n<side-bar></side-bar>\r\n    \r\n            <div id=\"page-wrapper\">\r\n    \r\n                <div class=\"container-fluid\">\r\n    \r\n                    <!-- Page Heading -->\r\n                   <header-title [title]=\"'Manage Products'\"></header-title>\r\n                    <!-- /.row -->\r\n    \r\n                </div>\r\n                <!-- /.container-fluid -->\r\n              \r\n          \r\n<div class=\"wrapper\">\r\n        <div class=\"col-md-9 shadow\">\r\n                <!-- <h3 class=\"headng\" >Edit a Product</h3>\r\n                <br> -->\r\n  \r\n  <!-- <form class=\"well\" role=\"form\"   #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct()\" novalidate> -->\r\n        <form class=\"well\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && updateProduct(arr1);\" novalidate>\r\n      <!-- <form #form='ngForm' (ngSubmit)=\"addProduct()\" class=\"well\" > -->\r\n            <div class=\"form-group\" >\r\n                <label > Name *</label>\r\n                <input id=\"name\" name=\"name\" class=\"form-control\"\r\n                required  autofocus\r\n                [(ngModel)]=\"arr1.name\" #name=\"ngModel\" (keypress)=_keyPress1($event)>\r\n                <div *ngIf=\"f.submitted && !name.valid \"  class=\"alert alert-danger\"> ! Name is required</div>\r\n             \r\n            </div>\r\n        \r\n            <td><img src=\"assets/uploads/{{arr1.image || 'default.png'}}\" alt=\"\" class=\"image\"></td>\r\n            <div class=\"form-group\">\r\n                <label for=\"single\">Select Image</label>\r\n                <input type=\"file\" class=\"\" name=\"single\" ng2FileSelect [uploader]=\"uploader\"  />                                  \r\n             </div>\r\n            <div class=\"form-group\" >\r\n                    <label >  Bid Amount *</label>\r\n                    <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n                    required  \r\n                    [(ngModel)]=\"arr1.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                    <div *ngIf=\"f.submitted && !bid_amount.valid\"  class=\"alert alert-danger\"> ! Amount is required</div>\r\n           \r\n                </div>\r\n\r\n                <div class=\"form-group\" >\r\n                        <label >  Minimum Bid Rate *</label>\r\n                        <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                        required  \r\n                        [(ngModel)]=\"arr1.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                        <div *ngIf=\"f.submitted && !min_bid_rate.valid\"  class=\"alert alert-danger\"> ! Minimum Bid rate is required</div>\r\n               \r\n                    </div>\r\n        \r\n             <div class=\"form-group\" >\r\n                    <label > Bid Start time *</label>\r\n                    <datetime id=\"start_date\" name=\"start_date\"  [(ngModel)]=\"start_date\" [(ngModel)]=\"arr1.start_date\" [hasClearButton]=\"true\"  [datepicker]= \"datepickerOpts\"></datetime>\r\n                </div>\r\n                    <div *ngIf=\"start\">\r\n                    <div class=\"alert alert-danger\"> ! Start time is required</div>\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                        <label > Bid End time *</label>\r\n                        <datetime name = \"end_date\"  [(ngModel)]=\"end_date\" [(ngModel)]=\"arr1.end_date\" [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\"></datetime>\r\n                        <div *ngIf=\"end\">\r\n                        <div  class=\"alert alert-danger\"> ! End time is required</div>\r\n                    </div>\r\n                    </div>\r\n\r\n            \r\n                    <!-- <image-upload></image-upload> -->\r\n            <!-- <div>\r\n                <label > Image</label>\r\n                <input type=\"file\"  name=\"pollqtn\"   required />\r\n            </div> -->\r\n           \r\n\r\n           \r\n            <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n            <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n            \r\n            <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n            \r\n            <input type=\"file\" name =\"myfile\" ng-disabled=\"uploading\" style=\"display: none\">\r\n\r\n            <div class=\"form-group\" >\r\n                <label > Description</label>\r\n                <br>\r\n                <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"arr1.desc\" ></textarea>\r\n            </div>\r\n           \r\n            <!-- <input type=\"submit\" class=\"btn btn-info blakbtn\" value=\"Submit\"  > -->\r\n            <button type= \"submit\" class=\"btn btn-primary\">Update</button>\r\n            <!-- <input type=\"submit\" class=\"btn btn-primary\"  value=\"Update\"  > -->\r\n            <input type=\"button\" class=\"btn btn-primary\" (click)=\"clickMethod(arr1)\"  value=\"Delete\"  >\r\n           \r\n        </form>\r\n  \r\n      </div>\r\n     \r\n    </div>\r\n\r\n   \r\n     \r\n</div>\r\n<!-- /#page-wrapper -->\r\n\r\n           \r\n</div>\r\n\r\n<footer></footer> \r\n  "
+module.exports = "<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation -->\r\n<side-bar></side-bar>\r\n    \r\n            <div id=\"page-wrapper\">\r\n    \r\n                <div class=\"container-fluid\">\r\n    \r\n                    <!-- Page Heading -->\r\n                   <header-title [title]=\"'Manage Products'\"></header-title>\r\n                    <!-- /.row -->\r\n    \r\n                </div>\r\n                <!-- /.container-fluid -->\r\n              \r\n          \r\n<div class=\"wrapper\">\r\n        <div class=\"col-md-9 shadow\">\r\n                <!-- <h3 class=\"headng\" >Edit a Product</h3>\r\n                <br> -->\r\n  \r\n  <!-- <form class=\"well\" role=\"form\"   #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct()\" novalidate> -->\r\n        <form class=\"well\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && updateProduct(arr1);\" novalidate>\r\n      <!-- <form #form='ngForm' (ngSubmit)=\"addProduct()\" class=\"well\" > -->\r\n            <div class=\"form-group\" >\r\n                <label > Name *</label>\r\n                <input id=\"name\" name=\"name\" class=\"form-control\"\r\n                required  autofocus\r\n                [(ngModel)]=\"arr1.name\" #name=\"ngModel\" (keypress)=_keyPress1($event)>\r\n                <div *ngIf=\"f.submitted && !name.valid \"  class=\"alert alert-danger\"> ! Name is required</div>\r\n             \r\n            </div>\r\n        \r\n            <td><img src=\"assets/uploads/{{arr1.image || 'default.png'}}\" alt=\"\" class=\"image\"></td>\r\n            <div class=\"form-group\">\r\n                <label for=\"single\">Select Image</label>\r\n                <input type=\"file\" class=\"\" name=\"single\" ng2FileSelect [uploader]=\"uploader\" (change)=\"imageOr();\"  />                                  \r\n             </div>\r\n            <div class=\"form-group\" >\r\n                    <label >  Bid Amount *</label>\r\n                    <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n                    required  \r\n                    [(ngModel)]=\"arr1.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                    <div *ngIf=\"f.submitted && !bid_amount.valid\"  class=\"alert alert-danger\"> ! Amount is required</div>\r\n           \r\n                </div>\r\n\r\n                <div class=\"form-group\" >\r\n                        <label >  Minimum Bid Rate *</label>\r\n                        <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                        required  \r\n                        [(ngModel)]=\"arr1.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                        <div *ngIf=\"f.submitted && !min_bid_rate.valid\"  class=\"alert alert-danger\"> ! Minimum Bid rate is required</div>\r\n               \r\n                    </div>\r\n        \r\n             <div class=\"form-group\" >\r\n                    <label > Bid Start time *</label>\r\n                    <datetime id=\"start_date\" name=\"start_date\"  [(ngModel)]=\"start_date\" [(ngModel)]=\"arr1.start_date\" [hasClearButton]=\"true\"  [datepicker]= \"datepickerOpts\"></datetime>\r\n                </div>\r\n                    <div *ngIf=\"start\">\r\n                    <div class=\"alert alert-danger\"> ! Start time is required</div>\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                        <label > Bid End time *</label>\r\n                        <datetime name = \"end_date\"  [(ngModel)]=\"end_date\" [(ngModel)]=\"arr1.end_date\" [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\"></datetime>\r\n                        <div *ngIf=\"end\">\r\n                        <div  class=\"alert alert-danger\"> ! End time is required</div>\r\n                    </div>\r\n                    </div>\r\n\r\n            \r\n                    <!-- <image-upload></image-upload> -->\r\n            <!-- <div>\r\n                <label > Image</label>\r\n                <input type=\"file\"  name=\"pollqtn\"   required />\r\n            </div> -->\r\n           \r\n\r\n           \r\n            <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n            <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n            \r\n            <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n            \r\n            <input type=\"file\" name =\"myfile\" ng-disabled=\"uploading\" style=\"display: none\">\r\n\r\n            <div class=\"form-group\" >\r\n                <label > Description</label>\r\n                <br>\r\n                <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"arr1.desc\" ></textarea>\r\n            </div>\r\n           \r\n            <!-- <input type=\"submit\" class=\"btn btn-info blakbtn\" value=\"Submit\"  > -->\r\n            <button type= \"submit\" class=\"btn btn-primary\">Update</button>\r\n            <!-- <input type=\"submit\" class=\"btn btn-primary\"  value=\"Update\"  > -->\r\n            <input type=\"button\" class=\"btn btn-primary\" (click)=\"clickMethod(arr1)\"  value=\"Delete\"  >\r\n           \r\n        </form>\r\n  \r\n      </div>\r\n     \r\n    </div>\r\n\r\n   \r\n     \r\n</div>\r\n<!-- /#page-wrapper -->\r\n\r\n           \r\n</div>\r\n\r\n<footer></footer> \r\n  "
 
 /***/ }),
 
@@ -2726,7 +2727,6 @@ module.exports = "<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation --
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2740,13 +2740,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
  // File Upload
 
-
 var ProductDetailComponent = (function () {
-    function ProductDetailComponent(_prductService, route, router, userService) {
+    function ProductDetailComponent(_prductService, route, router) {
         this._prductService = _prductService;
         this.route = route;
         this.router = router;
-        this.userService = userService;
         this.uploader = new __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__["FileUploader"]({ url: 'http://localhost:3000/products/upload' });
         this.arr1 = {
             name: String,
@@ -2770,14 +2768,6 @@ var ProductDetailComponent = (function () {
     }
     ProductDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
-                _this.router.navigate(['/login']);
-            }
-        });
         this.sub = this.route.params.subscribe(function (params) {
             // console.log('abcd' + params.id);
             _this._prductService.getAProduct(params.id).subscribe(function (data) {
@@ -2787,7 +2777,6 @@ var ProductDetailComponent = (function () {
                 // startdate: Date = new Date(this.arr1.start_date.toString())
                 _this.start_date = new Date(_this.arr1.start_date.toString());
                 _this.end_date = new Date(_this.arr1.end_date.toString());
-                // window.location.reload();
                 // this.dateinfo= data;
             });
         });
@@ -2859,10 +2848,10 @@ ProductDetailComponent = __decorate([
         inputs: ['pro'],
         outputs: ['updateProEvent', 'deleteProEvent']
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]) === "function" && _c || Object])
 ], ProductDetailComponent);
 
-var _a, _b, _c, _d;
+var _a, _b, _c;
 //# sourceMappingURL=product-detail.component.js.map
 
 /***/ }),
@@ -2875,7 +2864,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".tab{\r\n    \r\n         margin-left: 140px;\r\n       \r\n    }\r\n    \r\n    .bg-dark\r\n    {   \r\n        background: #343a40;\r\n        padding:2em 0;  \r\n    }\r\n    body {\r\n        margin-top: 100px;\r\n        background-color: #222;\r\n    }\r\n    \r\n    @media(min-width:768px) {\r\n        body {\r\n            margin-top: 50px;\r\n        }\r\n    }\r\n    \r\n    #wrapper {\r\n        padding-left: 0;\r\n    }\r\n    \r\n    #page-wrapper {\r\n        width: 100%;\r\n        padding: 0;\r\n        background-color: #fff;\r\n    }\r\n    \r\n    .huge {\r\n        font-size: 50px;\r\n        line-height: normal;\r\n    }\r\n    \r\n    @media(min-width:768px) {\r\n        #wrapper {\r\n            padding-left: 225px;\r\n        }\r\n    \r\n        #page-wrapper {\r\n            padding: 10px;\r\n        }\r\n    }\r\n    \r\n    /* Top Navigation */\r\n    \r\n    .top-nav {\r\n        padding: 0 15px;\r\n    }\r\n    \r\n    .top-nav>li {\r\n        display: inline-block;\r\n        float: left;\r\n    }\r\n    \r\n    .top-nav>li>a {\r\n        padding-top: 15px;\r\n        padding-bottom: 15px;\r\n        line-height: 20px;\r\n        color: #999;\r\n    }\r\n    \r\n    .top-nav>li>a:hover,\r\n    .top-nav>li>a:focus,\r\n    .top-nav>.open>a,\r\n    .top-nav>.open>a:hover,\r\n    .top-nav>.open>a:focus {\r\n        color: #fff;\r\n        background-color: #000;\r\n    }\r\n    \r\n    .top-nav>.open>.dropdown-menu {\r\n        float: left;\r\n        position: absolute;\r\n        margin-top: 0;\r\n        border: 1px solid rgba(0,0,0,.15);\r\n        border-top-left-radius: 0;\r\n        border-top-right-radius: 0;\r\n        background-color: #fff;\r\n        box-shadow: 0 6px 12px rgba(0,0,0,.175);\r\n    }\r\n    \r\n    .top-nav>.open>.dropdown-menu>li>a {\r\n        white-space: normal;\r\n    }\r\n    \r\n    ul.message-dropdown {\r\n        padding: 0;\r\n        max-height: 250px;\r\n        overflow-x: hidden;\r\n        overflow-y: auto;\r\n    }\r\n    \r\n    li.message-preview {\r\n        width: 275px;\r\n        border-bottom: 1px solid rgba(0,0,0,.15);\r\n    }\r\n    \r\n    li.message-preview>a {\r\n        padding-top: 15px;\r\n        padding-bottom: 15px;\r\n    }\r\n    \r\n    li.message-footer {\r\n        margin: 5px 0;\r\n    }\r\n    \r\n    ul.alert-dropdown {\r\n        width: 200px;\r\n    }\r\n    \r\n    /* Side Navigation */\r\n    \r\n    @media(min-width:768px) {\r\n        .side-nav {\r\n            position: fixed;\r\n            top: 51px;\r\n            left: 225px;\r\n            width: 225px;\r\n            margin-left: -225px;\r\n            border: none;\r\n            border-radius: 0;\r\n            overflow-y: auto;\r\n            background-color: #222;\r\n            bottom: 0;\r\n            overflow-x: hidden;\r\n            padding-bottom: 40px;\r\n        }\r\n    \r\n        .side-nav>li>a {\r\n            width: 225px;\r\n        }\r\n    \r\n        .side-nav li a:hover,\r\n        .side-nav li a:focus {\r\n            outline: none;\r\n            background-color: #000 !important;\r\n        }\r\n    }\r\n    \r\n    .side-nav>li>ul {\r\n        padding: 0;\r\n    }\r\n    \r\n    .side-nav>li>ul>li>a {\r\n        display: block;\r\n        padding: 10px 15px 10px 38px;\r\n        text-decoration: none;\r\n        color: #999;\r\n    }\r\n    \r\n    .side-nav>li>ul>li>a:hover {\r\n        color: #fff;\r\n    }\r\n    \r\n    /* Flot Chart Containers */\r\n    \r\n    .flot-chart {\r\n        display: block;\r\n        height: 400px;\r\n    }\r\n    \r\n    .flot-chart-content {\r\n        width: 100%;\r\n        height: 100%;\r\n    }\r\n    \r\n    /* Custom Colored Panels */\r\n    \r\n    .huge {\r\n        font-size: 40px;\r\n    }\r\n    \r\n    .panel-green {\r\n        border-color: #5cb85c;\r\n    }\r\n    \r\n    .panel-green > .panel-heading {\r\n        border-color: #5cb85c;\r\n        color: #fff;\r\n        background-color: #5cb85c;\r\n    }\r\n    \r\n    .panel-green > a {\r\n        color: #5cb85c;\r\n    }\r\n    \r\n    .panel-green > a:hover {\r\n        color: #3d8b3d;\r\n    }\r\n    \r\n    .panel-red {\r\n        border-color: #d9534f;\r\n    }\r\n    \r\n    .panel-red > .panel-heading {\r\n        border-color: #d9534f;\r\n        color: #fff;\r\n        background-color: #d9534f;\r\n    }\r\n    \r\n    .panel-red > a {\r\n        color: #d9534f;\r\n    }\r\n    \r\n    .panel-red > a:hover {\r\n        color: #b52b27;\r\n    }\r\n    \r\n    .panel-yellow {\r\n        border-color: #f0ad4e;\r\n    }\r\n    \r\n    .panel-yellow > .panel-heading {\r\n        border-color: #f0ad4e;\r\n        color: #fff;\r\n        background-color: #f0ad4e;\r\n    }\r\n    \r\n    .panel-yellow > a {\r\n        color: #f0ad4e;\r\n    }\r\n    \r\n    .panel-yellow > a:hover {\r\n        color: #df8a13;\r\n    }\r\n     ", ""]);
+exports.push([module.i, ".tab{\r\n    \r\n         margin-left: 140px;\r\n       \r\n    }\r\n    \r\n    .bg-dark\r\n    {   \r\n        background: #343a40;\r\n        padding:2em 0;  \r\n    }\r\n    body {\r\n        margin-top: 100px;\r\n        background-color: #222;\r\n    }\r\n    \r\n    @media(min-width:768px) {\r\n        body {\r\n            margin-top: 50px;\r\n        }\r\n    }\r\n    \r\n    #wrapper {\r\n        padding-left: 0;\r\n    }\r\n    \r\n    #page-wrapper {\r\n        width: 100%;\r\n        padding: 0;\r\n        background-color: #fff;\r\n    }\r\n    \r\n    .huge {\r\n        font-size: 50px;\r\n        line-height: normal;\r\n    }\r\n    \r\n    @media(min-width:768px) {\r\n        #wrapper {\r\n            padding-left: 225px;\r\n        }\r\n    \r\n        #page-wrapper {\r\n            padding: 10px;\r\n        }\r\n    }\r\n    \r\n    /* Top Navigation */\r\n    \r\n    .top-nav {\r\n        padding: 0 15px;\r\n    }\r\n    \r\n    .top-nav>li {\r\n        display: inline-block;\r\n        float: left;\r\n    }\r\n    \r\n    .top-nav>li>a {\r\n        padding-top: 15px;\r\n        padding-bottom: 15px;\r\n        line-height: 20px;\r\n        color: #999;\r\n    }\r\n    \r\n    .top-nav>li>a:hover,\r\n    .top-nav>li>a:focus,\r\n    .top-nav>.open>a,\r\n    .top-nav>.open>a:hover,\r\n    .top-nav>.open>a:focus {\r\n        color: #fff;\r\n        background-color: #000;\r\n    }\r\n    \r\n    .top-nav>.open>.dropdown-menu {\r\n        float: left;\r\n        position: absolute;\r\n        margin-top: 0;\r\n        border: 1px solid rgba(0,0,0,.15);\r\n        border-top-left-radius: 0;\r\n        border-top-right-radius: 0;\r\n        background-color: #fff;\r\n        box-shadow: 0 6px 12px rgba(0,0,0,.175);\r\n    }\r\n    \r\n    .top-nav>.open>.dropdown-menu>li>a {\r\n        white-space: normal;\r\n    }\r\n    \r\n    ul.message-dropdown {\r\n        padding: 0;\r\n        max-height: 250px;\r\n        overflow-x: hidden;\r\n        overflow-y: auto;\r\n    }\r\n    \r\n    li.message-preview {\r\n        width: 275px;\r\n        border-bottom: 1px solid rgba(0,0,0,.15);\r\n    }\r\n    \r\n    li.message-preview>a {\r\n        padding-top: 15px;\r\n        padding-bottom: 15px;\r\n    }\r\n    \r\n    li.message-footer {\r\n        margin: 5px 0;\r\n    }\r\n    \r\n    ul.alert-dropdown {\r\n        width: 200px;\r\n    }\r\n    \r\n    /* Side Navigation */\r\n    \r\n    @media(min-width:768px) {\r\n        .side-nav {\r\n            position: fixed;\r\n            top: 51px;\r\n            left: 225px;\r\n            width: 225px;\r\n            margin-left: -225px;\r\n            border: none;\r\n            border-radius: 0;\r\n            overflow-y: auto;\r\n            background-color: #222;\r\n            bottom: 0;\r\n            overflow-x: hidden;\r\n            padding-bottom: 40px;\r\n        }\r\n    \r\n        .side-nav>li>a {\r\n            width: 225px;\r\n        }\r\n    \r\n        .side-nav li a:hover,\r\n        .side-nav li a:focus {\r\n            outline: none;\r\n            background-color: #000 !important;\r\n        }\r\n    }\r\n    \r\n    .side-nav>li>ul {\r\n        padding: 0;\r\n    }\r\n    \r\n    .side-nav>li>ul>li>a {\r\n        display: block;\r\n        padding: 10px 15px 10px 38px;\r\n        text-decoration: none;\r\n        color: #999;\r\n    }\r\n    \r\n    .side-nav>li>ul>li>a:hover {\r\n        color: #fff;\r\n    }\r\n    \r\n    /* Flot Chart Containers */\r\n    \r\n    .flot-chart {\r\n        display: block;\r\n        height: 400px;\r\n    }\r\n    \r\n    .flot-chart-content {\r\n        width: 100%;\r\n        height: 100%;\r\n    }\r\n    \r\n    /* Custom Colored Panels */\r\n    \r\n    .huge {\r\n        font-size: 40px;\r\n    }\r\n    \r\n    .panel-green {\r\n        border-color: #5cb85c;\r\n    }\r\n    \r\n    .panel-green > .panel-heading {\r\n        border-color: #5cb85c;\r\n        color: #fff;\r\n        background-color: #5cb85c;\r\n    }\r\n    \r\n    .panel-green > a {\r\n        color: #5cb85c;\r\n    }\r\n    \r\n    .panel-green > a:hover {\r\n        color: #3d8b3d;\r\n    }\r\n    \r\n    .panel-red {\r\n        border-color: #d9534f;\r\n    }\r\n    \r\n    .panel-red > .panel-heading {\r\n        border-color: #d9534f;\r\n        color: #fff;\r\n        background-color: #d9534f;\r\n    }\r\n    \r\n    .panel-red > a {\r\n        color: #d9534f;\r\n    }\r\n    \r\n    .panel-red > a:hover {\r\n        color: #b52b27;\r\n    }\r\n    \r\n    .panel-yellow {\r\n        border-color: #f0ad4e;\r\n    }\r\n    \r\n    .panel-yellow > .panel-heading {\r\n        border-color: #f0ad4e;\r\n        color: #fff;\r\n        background-color: #f0ad4e;\r\n    }\r\n    \r\n    .panel-yellow > a {\r\n        color: #f0ad4e;\r\n    }\r\n    \r\n    .panel-yellow > a:hover {\r\n        color: #df8a13;\r\n    }\r\n     .image{\r\n         width:150px;\r\n     }", ""]);
 
 // exports
 
@@ -2888,7 +2877,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product-list/product-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <ul>\r\n    <li (click) =\"onSelect(pro)\" *ngFor=\"let pro of pros\"><a>{{pro.name}}</a></li>\r\n</ul> -->\r\n\r\n<div id=\"wrapper\">\r\n  \r\n          <!-- Navigation -->\r\n<side-bar></side-bar>\r\n  \r\n          <div id=\"page-wrapper\">\r\n  \r\n              <div class=\"container-fluid\">\r\n  \r\n                  <!-- Page Heading -->\r\n                 <header-title [title]=\"'List Products'\"></header-title>\r\n                  <!-- /.row -->\r\n  \r\n              </div>\r\n<div class=\"col-md-9 tab\" >\r\n<br>\r\n\r\n  <label class=\"search\" >Search Product: </label>\r\n  <input type=\"text\" [(ngModel)]=\"term\" />\r\n\r\n<br>\r\n<br>\r\n\r\n<table class=\"table table-striped\">\r\n    <tr>\r\n      <th>Name</th>\r\n      <th>Image</th>\r\n      <th>Bid Amount</th>\r\n      <th>Minimum Bid Rate</th>\r\n      <th>Start date</th>\r\n      <th>End Date</th>\r\n      <th>Description</th>\r\n  \r\n      <th>Action</th>\r\n    </tr>\r\n    \r\n    <tr  *ngFor=\"let pro of arr1 | filter:term \">\r\n  \r\n    <td>{{pro.name}}</td>\r\n    <!-- <td><img src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"\" class=\"image\"></td> -->\r\n    <td><img src=\"assets/uploads/{{pro.image}}\" alt=\"\" class=\"image\"></td>\r\n    <td>{{pro.bid_amount}}</td>\r\n    <td>{{pro.min_bid_rate}}</td>\r\n    <td>{{pro.start_date}}</td>\r\n    <td>{{pro.end_date}}</td>\r\n    <td>{{pro.desc}}</td>\r\n  \r\n  \r\n    <td> <a [routerLink]=\"['/product-detail/'+pro._id]\"  ><input type=\"submit\" value=\"Action\" class=\"btn btn-primary\" > </a></td>\r\n    <!-- <td> <a [routerLink]=\"['/product-list/'+pro._id]\"  ><input type=\"submit\" value=\"delete\" class=\"btn btn-primary\" > </a></td> -->\r\n\r\n    </tr>\r\n  </table>\r\n</div>\r\n   \r\n</div>\r\n<!-- /#page-wrapper -->\r\n\r\n           \r\n</div>\r\n\r\n<footer></footer> "
+module.exports = "<!-- <ul>\r\n    <li (click) =\"onSelect(pro)\" *ngFor=\"let pro of pros\"><a>{{pro.name}}</a></li>\r\n</ul> -->\r\n\r\n<div id=\"wrapper\">\r\n  \r\n          <!-- Navigation -->\r\n<side-bar></side-bar>\r\n  \r\n          <div id=\"page-wrapper\">\r\n  \r\n              <div class=\"container-fluid\">\r\n  \r\n                  <!-- Page Heading -->\r\n                 <header-title [title]=\"'List Products'\"></header-title>\r\n                  <!-- /.row -->\r\n  \r\n              </div>\r\n<div class=\"col-md-9 tab\" >\r\n<br>\r\n\r\n  <label class=\"search\" >Search Product: </label>\r\n  <input type=\"text\" [(ngModel)]=\"term\" />\r\n\r\n<br>\r\n<br>\r\n\r\n<table class=\"table table-striped\">\r\n    <tr>\r\n      <th>Name</th>\r\n      <th>Image</th>\r\n      <th>Bid Amount</th>\r\n      <th>Minimum Bid Rate</th>\r\n      <th>Start date</th>\r\n      <th>End Date</th>\r\n      <th>Description</th>\r\n  \r\n      <th>Action</th>\r\n    </tr>\r\n    \r\n    <tr  *ngFor=\"let pro of arr1 | filter:term \">\r\n  \r\n    <td>{{pro.name}}</td>\r\n    <!-- <td><img src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"\" class=\"image\"></td> -->\r\n    <td><img src=\"assets/uploads/{{pro.image || 'defualt1.jpg'}}\" alt=\"\" class=\"image\"></td>\r\n    <td>{{pro.bid_amount}}</td>\r\n    <td>{{pro.min_bid_rate}}</td>\r\n    <td>{{pro.start_date}}</td>\r\n    <td>{{pro.end_date}}</td>\r\n    <td>{{pro.desc}}</td>\r\n  \r\n  \r\n    <td> <a href=\"/product-detail/{{pro._id}}\"  ><input type=\"submit\" value=\"Action\" class=\"btn btn-primary\" > </a></td>\r\n    <!-- <td> <a [routerLink]=\"['/product-detail/'+pro._id]\"  ><input type=\"submit\" value=\"Action\" class=\"btn btn-primary\" > </a></td> -->\r\n    <!-- <td> <a [routerLink]=\"['/product-list/'+pro._id]\"  ><input type=\"submit\" value=\"delete\" class=\"btn btn-primary\" > </a></td> -->\r\n\r\n    </tr>\r\n  </table>\r\n</div>\r\n   \r\n</div>\r\n<!-- /#page-wrapper -->\r\n\r\n           \r\n</div>\r\n\r\n<footer></footer> "
 
 /***/ }),
 
@@ -2933,14 +2922,23 @@ var ProductListComponent = (function () {
     }
     ProductListComponent.prototype.ngOnInit = function () {
         var _this = this;
+        // this.userService.getLoggedUSerDetails().subscribe(info =>{
+        //   if(info.status!=true){
+        //     this.router.navigate(['/login']);
+        //   }
+        //   else if(info.role == "user"){
+        //     this.router.navigate(['/login']);
+        //   }
+        // });
         // this.arr1=[];
-        this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
-                _this.router.navigate(['/login']);
-            }
+        this._prductService.getProducts().subscribe(function (data1) {
+            _this.arr1 = data1;
+            console.log(data1);
+            //  data1.forEach(function(item) {
+            //   this.arr1.push(item);
+            //   console.log(this.arr1);
+            //  });
+            // this.prodata = data1;
         });
     };
     ProductListComponent.prototype.onSelect = function () {
@@ -3028,7 +3026,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product/product.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation -->\r\n<side-bar></side-bar>\r\n    \r\n            <div id=\"page-wrapper\">\r\n    \r\n                <div class=\"container-fluid\">\r\n    \r\n                    <!-- Page Heading -->\r\n                   <header-title [title]=\"'Add Product'\"></header-title>\r\n                    <!-- /.row -->\r\n    \r\n                </div>\r\n\r\n<div class=\"wrapper\">\r\n        <div class=\"col-md-9 addpro\">\r\n                <!--<h3 class=\"headng\" >Add a Product</h3>-->\r\n               \r\n  <!-- <form class=\"well\" role=\"form\"   #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct()\" novalidate> -->\r\n        <form class=\"well\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct();\" novalidate>\r\n      <!-- <form #form='ngForm' (ngSubmit)=\"addProduct()\" class=\"well\" > -->\r\n            <div class=\"form-group\" >\r\n                <label > Name *</label>\r\n                <input id=\"name\" name=\"name\" class=\"form-control\"\r\n                required  autofocus\r\n                [(ngModel)]=\"newproduct.name\" #name=\"ngModel\" >\r\n                <div *ngIf=\"f.submitted && !name.valid \"  class=\"alert alert-danger\"> ! Name is required</div>\r\n             \r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"single\">Select Image</label>\r\n                <input type=\"file\" class=\"\" name=\"single\" ng2FileSelect [uploader]=\"uploader\"  />                                  \r\n             </div>\r\n              \r\n\r\n            <div class=\"form-group\" >\r\n                    <label >  Bid Amount *</label>\r\n                    <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n                    required  \r\n                    [(ngModel)]=\"newproduct.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                    <div *ngIf=\"f.submitted && !bid_amount.valid\"  class=\"alert alert-danger\"> ! Amount is required</div>\r\n           \r\n                </div>\r\n\r\n                <div class=\"form-group\" >\r\n                        <label >  Minimum Bid Rate *</label>\r\n                        <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                        required  \r\n                        [(ngModel)]=\"newproduct.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                        <div *ngIf=\"f.submitted && !min_bid_rate.valid\"  class=\"alert alert-danger\"> ! Minimum Bid rate is required</div>\r\n               \r\n                    </div>\r\n        \r\n             <div class=\"form-group\" >\r\n                    <label > Bid Start time *</label>\r\n                    <datetime name=\"start_date\" required  [(ngModel)]=\"newproduct.start_date\"  [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\" ></datetime>\r\n                    <div *ngIf=\"f.submitted && !newproduct.start_date\"  class=\"alert alert-danger\"> !Start time is required</div>\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                        <label > Bid End time *</label>\r\n                        <datetime name = \"end_date\"  required [(ngModel)]=\"newproduct.end_date\" [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\"></datetime>\r\n                        <div *ngIf=\"f.submitted && !newproduct.end_date\"  class=\"alert alert-danger\"> !End time is required</div>\r\n                    </div>\r\n\r\n            \r\n                    <!-- <image-upload></image-upload> -->\r\n            <!-- <div>\r\n                <label > Image</label>\r\n                <input type=\"file\"  name=\"pollqtn\"   required />\r\n            </div> -->\r\n           \r\n           \r\n            <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n            <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n            \r\n            <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n            \r\n            <!-- <input type=\"file\" name =\"myfile\" ng-disabled=\"uploading\" style=\"display: none\"> -->\r\n\r\n            <div class=\"form-group\" >\r\n                <label > Description</label>\r\n                <br>\r\n                <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"newproduct.desc\" ></textarea>\r\n            </div>\r\n           \r\n                \r\n            <!-- <input type=\"submit\" class=\"btn btn-info blakbtn\" value=\"Submit\"  > -->\r\n            <button type= \"submit\" class=\"btn btn-primary\">Submit</button>\r\n           \r\n        </form>\r\n  \r\n      \r\n   \r\n    </div>\r\n    <!-- /#page-wrapper -->\r\n   \r\n               \r\n</div>\r\n\r\n<footer></footer> \r\n      "
+module.exports = "<br>\r\n<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation -->\r\n<side-bar></side-bar>\r\n    \r\n            <div id=\"page-wrapper\">\r\n    \r\n                <div class=\"container-fluid\">\r\n    \r\n                    <!-- Page Heading -->\r\n                   <header-title [title]=\"'Add Product'\"></header-title>\r\n                    <!-- /.row -->\r\n    \r\n                </div>\r\n\r\n<div class=\"wrapper\">\r\n        <div class=\"col-md-9 addpro\">\r\n                <!--<h3 class=\"headng\" >Add a Product</h3>-->\r\n               \r\n  <!-- <form class=\"well\" role=\"form\"   #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct()\" novalidate> -->\r\n        <form class=\"well\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct();\" novalidate>\r\n      <!-- <form #form='ngForm' (ngSubmit)=\"addProduct()\" class=\"well\" > -->\r\n            <div class=\"form-group\" >\r\n                <label > Name *</label>\r\n                <input id=\"name\" name=\"name\" class=\"form-control\"\r\n                required  autofocus\r\n                [(ngModel)]=\"newproduct.name\" #name=\"ngModel\" >\r\n                <div *ngIf=\"f.submitted && !name.valid \"  class=\"alert alert-danger\"> ! Name is required</div>\r\n             \r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"single\">Select Image</label>\r\n                <input type=\"file\" class=\"\" name=\"single\" ng2FileSelect [uploader]=\"uploader\" (change)=\"imageOr();\"/>                                  \r\n             </div>\r\n              \r\n\r\n            <div class=\"form-group\" >\r\n                    <label >  Bid Amount *</label>\r\n                    <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n                    required  \r\n                    [(ngModel)]=\"newproduct.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                    <div *ngIf=\"f.submitted && !bid_amount.valid\"  class=\"alert alert-danger\"> ! Amount is required</div>\r\n           \r\n                </div>\r\n\r\n                <div class=\"form-group\" >\r\n                        <label >  Minimum Bid Rate *</label>\r\n                        <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                        required  \r\n                        [(ngModel)]=\"newproduct.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                        <div *ngIf=\"f.submitted && !min_bid_rate.valid\"  class=\"alert alert-danger\"> ! Minimum Bid rate is required</div>\r\n               \r\n                    </div>\r\n        \r\n             <div class=\"form-group\" >\r\n                    <label > Bid Start time *</label>\r\n                    <datetime name=\"start_date\" required  [(ngModel)]=\"newproduct.start_date\"  [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\" ></datetime>\r\n                    <div *ngIf=\"f.submitted && !newproduct.start_date\"  class=\"alert alert-danger\"> !Start time is required</div>\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                        <label > Bid End time *</label>\r\n                        <datetime name = \"end_date\"  required [(ngModel)]=\"newproduct.end_date\" [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\"></datetime>\r\n                        <div *ngIf=\"f.submitted && !newproduct.end_date\"  class=\"alert alert-danger\"> !End time is required</div>\r\n                    </div>\r\n\r\n            \r\n                    <!-- <image-upload></image-upload> -->\r\n            <!-- <div>\r\n                <label > Image</label>\r\n                <input type=\"file\"  name=\"pollqtn\"   required />\r\n            </div> -->\r\n           \r\n           \r\n            <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n            <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n            \r\n            <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n            \r\n            <!-- <input type=\"file\" name =\"myfile\" ng-disabled=\"uploading\" style=\"display: none\"> -->\r\n\r\n            <div class=\"form-group\" >\r\n                <label > Description</label>\r\n                <br>\r\n                <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"newproduct.desc\" ></textarea>\r\n            </div>\r\n           \r\n                \r\n            <!-- <input type=\"submit\" class=\"btn btn-info blakbtn\" value=\"Submit\"  > -->\r\n            <button type= \"submit\" class=\"btn btn-primary\">Submit</button>\r\n           \r\n        </form>\r\n  \r\n      \r\n   \r\n    </div>\r\n    <!-- /#page-wrapper -->\r\n   \r\n               \r\n</div>\r\n\r\n<footer></footer> \r\n      "
 
 /***/ }),
 
@@ -3072,6 +3070,7 @@ var ProductComponent = (function () {
         this._userService = _userService;
         this.router = router;
         this.uploader = new __WEBPACK_IMPORTED_MODULE_5_ng2_file_upload__["FileUploader"]({ url: 'http://localhost:3000/products/upload' });
+        this.imageselect = false;
         this.newproduct = {
             name: '',
             desc: '',
@@ -3099,39 +3098,67 @@ var ProductComponent = (function () {
         };
     }
     ProductComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this._userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.status != true) {
-                _this.router.navigate(['/login']);
-            }
-            else if (info.role == "user") {
-                _this.router.navigate(['/login']);
-            }
-        });
+        // this._userService.getLoggedUSerDetails().subscribe(info =>{
+        //   if(info.status!=true){
+        //     this.router.navigate(['/login']);
+        //   }
+        //   else if(info.role == "user"){
+        //     this.router.navigate(['/login']);
+        //   }
+        // });
+    };
+    ProductComponent.prototype.imageOr = function () {
+        this.imageselect = true;
     };
     ProductComponent.prototype.addProduct = function () {
         var _this = this;
-        this.uploader.uploadAll();
-        this.uploader.onCompleteItem = function (item, response, status, headers) {
-            // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
-            // response = JSON.parse(response);
-            _this.newproduct.image = response.filename;
-            // console.log(this.newproduct.image);
-        };
-        this._prductService.addProduct(this.newproduct).subscribe(function (data) {
-            if (data) {
-                _this._userService.sendmail().subscribe(function (data1) {
+        console.log("image selected or not");
+        console.log(this.imageselect);
+        if (this.imageselect == true) {
+            this.uploader.uploadAll();
+            this.uploader.onCompleteItem = function (item, response, status, headers) {
+                response = JSON.parse(response);
+                _this.newproduct.image = response.filename;
+                console.log("before saving");
+                console.log(_this.newproduct);
+                _this._prductService.addProduct(_this.newproduct).subscribe(function (data) {
+                    if (data) {
+                        // console.log(this.newproduct);
+                        console.log(_this.newproduct.image);
+                        _this._userService.sendmail().subscribe(function (data1) {
+                        });
+                        alert("Add Product Successfully");
+                        _this.router.navigate(['/product-list']);
+                        //  window.location.reload();
+                        //  
+                    }
+                    else {
+                        alert("Error");
+                        console.log("error");
+                    }
                 });
-                alert("Add Product Successfully");
-                _this.router.navigate(['/product-list']);
-                //  window.location.reload();
-                //  
-            }
-            else {
-                alert("Error");
-                console.log("error");
-            }
-        });
+                // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
+            };
+        }
+        else if (this.imageselect == false) {
+            console.log("before saving");
+            this._prductService.addProduct(this.newproduct).subscribe(function (data) {
+                if (data) {
+                    // console.log(this.newproduct);
+                    console.log(_this.newproduct.image);
+                    _this._userService.sendmail().subscribe(function (data1) {
+                    });
+                    alert("Add Product Successfully");
+                    _this.router.navigate(['/product-list']);
+                    //  window.location.reload();
+                    //  
+                }
+                else {
+                    alert("Error");
+                    console.log("error");
+                }
+            });
+        }
     };
     ProductComponent.prototype._keyPress = function (event) {
         var pattern = /[0-9]/;
