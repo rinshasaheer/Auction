@@ -89,6 +89,19 @@ const ProductsSchema = mongoose.Schema({
 const Product = module.exports = mongoose.model('Product', ProductsSchema, 'products');
 
 
+module.exports.addProduct = function(product,callback){
+    console.log(product);
+    var newProduct = new Product(product);
+    newProduct.save(callback);
+}
+
+// module.exports.getAllProduct = function(callback){
+//     Product.find({},callback);
+// }
+
+module.exports.getAllCloasedProduct = function(callback){
+    Product.find({"end_date" : {"$lt" : Date()}},callback);
+}
 module.exports.getAllClosedProduct = function(callback){
     // console.log(new Date);
     // Product.find({"end_date" : {"$lt" : new Date()}},callback);
@@ -108,7 +121,13 @@ module.exports.deleteProduct = function(id,callback){
     const query = {_id: id}
     Product.remove(query,callback);
 }
+module.exports.updateProduct = function(id,callback){
+    const query = {_id: id}
+    Product.findByIdAndUpdate(query,callback);
+}
 
+// module.exports.getProductById = function(id,callback){
+//     Product.findOne({_id: id},callback);
 
 module.exports.getAllProduct = function(callback){
     Product.find({status : true},callback);
@@ -154,8 +173,11 @@ module.exports.getMyAuctionProduct = function(id, callback){
 //  }
 // ], callback)
     // Product.find({"bidders.userid" : id}, {bidders: {$elemMatch: {userid: id}}}, callback);
-    Product.find({
-        "bidders.user_id" : id
-        }, {bidders:{$slice: 1}}, callback);
+    // Product.find({
+    //     "bidders.user_id" : id,
+    //     }, {bidders:{$slice: 1}}, callback);
+        Product.find({
+            "bidders.user_id" : id,
+            }, callback);
 }
 

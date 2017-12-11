@@ -244,60 +244,60 @@ router.put('/genToken/:id', function(req, res){
 
     
 
-router.get('/getemail',function(req,res){
-    // console.log("user get");
-    User.getUsers1((err,user)=>{
-        user.forEach(function(i) {
-            // console.log(i.email);
-        
-      
-        // this.user.email.forEach((i) => {
-        //     console.log(i);
-        //   });
-       if(err){
-            console.log("Error " + err);
-        }else{
-     
-     nodemailer.createTestAccount((err, account) => {
-                
-                    // create reusable transporter object using the default SMTP transport
-                   
-                
-                    // setup email data with unicode symbols
-                    let mailOptions = {
-                        from: 'mean.symptots@gmail.com', // sender address
-                        to: i.email, // list of receivers
-                        subject: 'New Product Added for Auction', // Subject line
-                        text: '', // plain text body
-                        html: '<b><h3>Hi,</h3><br/>We add a new Product for bid.. Please login in to your account <br/> Thank You!</b>' // html body
-                    };
-                
-                    // send mail with defined transport object
-                    transporter.sendMail(mailOptions, (error, info) => {
-                        // console.log('mail');
-                        if (error) {
-                            console.log('error');
-                             return console.log(error);
-                        }
-                        // console.log('Message sent: %s', info.messageId);
-                        
-                        // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-                
-                        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
-                        // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+    router.get('/getemail',function(req,res){
+        // console.log("user get");
+        User.getUsers((err,user)=>{
+            user.forEach(function(i) {
+                //  console.log(i.email);
+            
+          
+            // this.user.email.forEach((i) => {
+            //     console.log(i);
+            //   });
+           if(err){
+                console.log("Error " + err);
+            }else{
+         
+         nodemailer.createTestAccount((err, account) => {
+                    
+                        // create reusable transporter object using the default SMTP transport
+                       
+                    
+                        // setup email data with unicode symbols
+                        let mailOptions = {
+                            from: 'mean.symptots@gmail.com', // sender address
+                            to: i.email, // list of receivers
+                            subject: 'New Product Added for Auction', // Subject line
+                            text: '', // plain text body
+                            html: '<b><h3>Hi,</h3><br/>We add a new Product for bid.. Please login in to your account <br/> Thank You!</b>' // html body
+                        };
+                    
+                        // send mail with defined transport object
+                        transporter.sendMail(mailOptions, (error, info) => {
+                            // console.log('mail');
+                            if (error) {
+                                console.log('error');
+                                 return console.log(error);
+                            }
+                            // console.log('Message sent: %s', info.messageId);
+                            
+                            // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+                    
+                            // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
+                            // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+                        });
                     });
-                });
-                
-               
+                    
+                   
+            
+            } 
+        });
+            // return res.json(user);
         
-        } 
+            
+        });
     });
-        return res.json(user);
     
-        
-    });
-});
-
 
 router.get('/users_id_as_index',(req,res,next)=>{
  //   console.log('testing');
@@ -326,10 +326,12 @@ router.get('/get_loggedin_user',(req,res,next)=>{
                console.log(decoded);
                 res.json(decoded);
             } catch (e) {
-                return res.status(401).send('unauthorized');
+                // return res.status(401).send('unauthorized');
+                return res.json({success:false, msg: 'Invalid User'});
             }
     }else{
-        return res.status(401).send('Invalid User');
+        // return res.status(401).send('Invalid User');
+        return res.json({success:false, msg: 'Invalid User'});
     }
     
 });

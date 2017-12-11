@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { product } from './../schema/product';
 import { ProductServiceService } from './../services/product-service.service';
 import * as socketIo from 'socket.io-client';
-
+import {UserService} from '../services/user.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-upcomingauctions',
@@ -15,12 +16,17 @@ export class UpcomingauctionsComponent implements OnInit {
   existStatus: boolean = false;
   private socket: any; 
   
-  constructor(private _productService: ProductServiceService) { 
+  constructor(private _productService: ProductServiceService, private userService: UserService, private router: Router) { 
         this.socket = socketIo('http://192.168.1.99:3000')
 
   }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="user"){
+        this.router.navigate(['/login']);
+      }
+    });
     this.loadAuction();
     this.socket.on('upcomingnewbid', (data) => {
       console.log(data);

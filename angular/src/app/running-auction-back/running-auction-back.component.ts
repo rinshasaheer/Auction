@@ -30,21 +30,27 @@ export class RunningAuctionBackComponent implements OnInit {
       };
   constructor(
     private productService: ProductService,
-    private userService:UserService
+    private userService:UserService,
+    private router: Router
   ) {
     this.socket  = socketIo('http://localhost:3000');
    }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="admin"){
+        this.router.navigate(['/login']);
+      }
+    });
     this.startDate = new Date();
     this.endDate = new Date();
     this.userService.getAllUsersById().subscribe(data=>{
       this.users = data;
-      console.log(this.users);
+      // console.log(this.users);
   });
   this.socket.on('userbidreject', (data) => {
     this.getAllproduct();
-  }) 
+  }); 
 
   this.socket.on('newbid', (data) => {
     this.getAllproduct();
@@ -112,7 +118,7 @@ export class RunningAuctionBackComponent implements OnInit {
   }
   updateInvolved(product){
     this.involvedUsers = product;
-    console.log(this.involvedUsers);
+    // console.log(this.involvedUsers);
   }
   timeOver(){
     this.getAllproduct(); 

@@ -8,6 +8,7 @@ import { UserService } from './../services/user.service';
 import { CanActivate } from '@angular/router';
 import { pro } from '../pro';
 import { Router } from "@angular/router";
+// import { FileUploader } from 'ng2-file-upload';
 import 'rxjs/add/operator/map';
 
 // import { FormGroup } from '@angular/forms';
@@ -53,16 +54,20 @@ export class ProductComponent implements OnInit {
   constructor(private _prductService : ProductService,private _userService : UserService, private router: Router ) { }
 
   ngOnInit() {
-
+    this._userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="admin"){
+        this.router.navigate(['/login']);
+      }
+    });
 
   }
   addProduct(){
     this.uploader.uploadAll();
     this.uploader.onCompleteItem = (item:any, response:any, status:any, headers:any) => {
       // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
-      response = JSON.parse(response);
+      // response = JSON.parse(response);
       this.newproduct.image = response.filename;
-      console.log(this.newproduct.image);
+      // console.log(this.newproduct.image);
   };
     this._prductService.addProduct(this.newproduct).subscribe(data => {
     if(data){
@@ -74,8 +79,8 @@ export class ProductComponent implements OnInit {
 
 
        alert("Add Product Successfully");
-       this.router.navigate(['/manage-product'])
-       window.location.reload();
+       this.router.navigate(['/product-list'])
+      //  window.location.reload();
     //  
         
     
@@ -97,5 +102,36 @@ export class ProductComponent implements OnInit {
       event.preventDefault();
     }
 }
+
+// _keyPress1(event: any) {
+//   const pattern = /[a-z,A-Z,1-9  ]/;
+//   let inputChar = String.fromCharCode(event.charCode);
+
+//   if (!pattern.test(inputChar)) {
+//     // invalid character, prevent input
+//     event.preventDefault();
+//   }
+// }
+datepickerOpts = {
+  startDate: new Date(Date.now()),
+  
+  autoclose: true,
+  todayBtn: 'linked',
+  todayHighlight: true,
+  assumeNearbyYear: true,
+  format: 'd MM yyyy',
   
 }
+
+// getProducts1(){
+//   this._prductService.getProducts().subscribe(data2 => {
+//   console.log(data2)
+//     });
+
+// }
+
+
+   
+}
+  
+

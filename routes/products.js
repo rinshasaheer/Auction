@@ -91,39 +91,29 @@ var returnRouter = function(io) {
         
      
 
-router.post('/addnew',function(req,res){
-    console.log("Insert a Product");
-    var newPro = new pro();
-    newPro.name = req.body.name;
-    newPro.desc = req.body.desc;
-    newPro.bid_amount = req.body.bid_amount;
-    newPro.min_bid_rate = req.body.min_bid_rate;
-    newPro.start_date = req.body.start_date;
-    newPro.end_date = req.body.end_date;
-    newPro.image = fileName;
-    // newPoll.answers = req.body.answers;
-    newPro.save(function(err,insertedPro){
-        if(err){
-            console.log("Error " + err);
-        }else{
-            if(newPro.start_date < new Date()){
-                console.log("startbid");
-                        io.sockets.emit("startbid", {
-                        prod_id : insertedPro._id
-                        });
-            }else   {
-                console.log("upcomingbid");
-                        io.sockets.emit("upcomingnewbid", {
-                        prod_id : insertedPro._id
-                        });
+            router.post('/addnew',function(req,res){
+                console.log("Insert a Product");
+                var newPro = new pro();
+                newPro.name = req.body.name;
+                newPro.desc = req.body.desc;
+                newPro.bid_amount = req.body.bid_amount;
+                newPro.min_bid_rate = req.body.min_bid_rate;
+                newPro.start_date = req.body.start_date;
+                newPro.end_date = req.body.end_date;
+                newPro.image = fileName;
+                // newPoll.answers = req.body.answers;
+                newPro.save(function(err,insertedPro){
+                    if(err){
+                        console.log("Error " + err);
+                    }else{
+                        
+            
+                        res.json(insertedPro);
                     }
-
-            res.json(insertedPro);
-        }
-    })
-
-});
-//PRODUCT INFO CLOSE
+                })
+            
+            });
+//PRODUCT INFO CLOSE info 3001 updateapp
 router.get('/inform-closedproduct/:id',(req,res,next)=>{
     // console.log('yes');
     // console.log(req.params.id);
@@ -131,7 +121,7 @@ router.get('/inform-closedproduct/:id',(req,res,next)=>{
         prod_id : req.params.id
     });
 });
-//PRODUCT INFO START
+//PRODUCT INFO START info 3001 updateapp
 router.get('/inform-startproduct/:id',(req,res,next)=>{
      console.log('new start');
     // console.log(req.params.id);
@@ -139,6 +129,16 @@ router.get('/inform-startproduct/:id',(req,res,next)=>{
         prod_id : req.params.id
     });
 });
+
+//notification info 3001 updateapp
+router.get('/inform-notifi-user/:id',(req,res,next)=>{
+    // console.log('yes');
+//    console.log("noti"+req.params.id);
+    io.sockets.emit("notification", {
+        user_id : req.params.id
+    });
+});
+
 //var async = require('async');
 
 
@@ -157,7 +157,7 @@ router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),functio
         var authorization = req.headers.authorization.substring(4), decoded;
         try {
             decoded = jwt.verify(authorization, config.secret);
-            console.log(decoded);
+            // console.log(decoded);
             Product.findOneAndUpdate(
                 {"_id" : req.body.pid},
                 { $push:{"bidders": {user_id: decoded._id, amount:req.body.amount }} },
@@ -244,7 +244,48 @@ router.get('/runnig_products',(req,res)=>{
      })
 });
  
+// router.post('/addnew',(req,res,next)=>{
 
+
+//     prodObj = {
+//         name:  req.body.name,
+//         image: req.body.image,
+//         desc: req.body.desc,
+//         bid_amount: req.body.amount,
+//         min_bid_rate: req.body.min_bid_rate,
+//         start_date : req.body.start_date,
+//         end_date : req.body.end_date,
+//     };
+//     Product.addProduct(prodObj,(err, user)=>{
+//         if(err){
+//             res.json({success: false, msg : "Failed, went somthing wrong "});
+//         }else{
+//             res.json({success: true, msg : "Poll Added Seccessfully, Redirecting..."});
+//         }
+//     });
+// });
+
+
+router.get('/products',(req,res,next)=>{
+    Product.getAllProduct((err,poll)=>{
+        if(err) throw err;
+        return res.json(poll);
+    })
+    
+});
+
+
+// router.get('/closed_products',(req,res,next)=>{
+//     Product.getAllCloasedProduct((err,poll)=>{
+//         if(err) throw err;
+//         return res.json(poll);
+//     });
+// });
+
+router.get('/upcoming_products',(req,res,next)=>{
+    Product.getAllUpcomingProduct((err,product)=>{
+    });
+});
 router.get('/products',(req,res,next)=>{
     Product.getAllProduct((err,product)=>{
         if(err) throw err;
@@ -278,37 +319,58 @@ router.delete('/delete/:id',(req,res,next)=>{
 router.get('/product/:id',(req,res,next)=>{
     Product.getProductById(req.params.id, (err,product)=>{
         if(err) throw err;
-        console.log(product);
+        // console.log(product);
         return res.json(product);
     })
 });
 
 
-router.put('/update/:id',function(req,res){
-//    console.log(req);
-   pro.findByIdAndUpdate(req.params.id,
-    {
-        $set : {name: req.body.name, desc : req.body.desc, bid_amount : req.body.bid_amount, min_bid_rate : req.body.min_bid_rate, start_date : req.body.start_date, end_date : req.body.end_date  }
-    },
-    {
-    new :true
-    },
-    function(err, updatedPro){
-        if(err){
-            res.send("error updating product");
-        }else{
-            res.json(updatedPro);
-        }
-    }
+// router.put('/update/:id',function(req,res){
+// //    console.log(req);
+// Product.findByIdAndUpdate(req.params.id,
+//     {
+//         $set : {name: req.body.name, desc : req.body.desc, bid_amount : req.body.bid_amount, min_bid_rate : req.body.min_bid_rate, start_date : req.body.start_date, end_date : req.body.end_date  }
+//     },
+//     {
+//     new :true
+//     },
+//     function(err, updatedPro){
+//         if(err){
+//             res.send("error updating product");
+//         }else{
+//             res.json(updatedPro);
+//         }
+//     }
 
-   )
-});
+//    )
+// });
+router.put('/updateProduct/:id',function(req,res){
+    // console.log(req.body);
+    Product.findByIdAndUpdate(req.params.id,
+        {
+            $set : {name: req.body.name, desc : req.body.desc, bid_amount : req.body.bid_amount, min_bid_rate : req.body.min_bid_rate, start_date : req.body.start_date, end_date : req.body.end_date, image: req.body.fileName }
+        },
+        {
+        new :true
+        },
+        function(err, updatedPro){
+            if(err){
+                res.send("error Updating product");
+            }else{
+                res.json(updatedPro);
+                // console.log(updatedPro);
+            }
+        }
+    
+       )
+    });
+
 
 
 
 router.put('/updatedel/:id',function(req,res){
     //    console.log(req);
-       pro.findByIdAndUpdate(req.params.id,
+    Product.findByIdAndUpdate(req.params.id,
         {
             $set : {status : false  }
         },
@@ -346,7 +408,7 @@ router.get('/upcomingproduct',(req,res,next)=>{
 router.get('/highBid/:id',(req,res,next)=>{
     Product.getHighestBid(req.params.id,(err,products)=>{
         if(err) throw err;
-        console.log(products);
+        // console.log(products);
         return res.json(products);
     })
 });
@@ -355,13 +417,13 @@ router.get('/myauctionproduct/:id',(req,res,next)=>{
     console.log(req.params.id);
     Product.getMyAuctionProduct(req.params.id,(err,products)=>{
         if(err) throw err;
-        console.log(products);
+        // console.log(products);
         return res.json(products);
     })
 });
 
 router.put('/updateInterested/:id',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
-    console.log("uInter");
+    // console.log("uInter");
     if (req.headers && req.headers.authorization) {
         var authorization = req.headers.authorization.substring(4),
             decoded;
@@ -477,6 +539,9 @@ router.put('/statusreject/:id',(req,res,next)=>{
                                     io.sockets.emit("userbidreject", {
                                         prod_id : req.params.id
                                     });
+                                    io.sockets.emit("notification", {
+                                        user_id : id1
+                                    });
                                     return res.json(doc);
 
                                 }
@@ -524,6 +589,8 @@ router.put('/adminViewed/:id', function(req, res){
         
         });
     });
+
+
 
 module.exports = router;
 //module.exports = router;
