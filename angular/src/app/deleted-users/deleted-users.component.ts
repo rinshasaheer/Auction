@@ -15,6 +15,11 @@ export class DeletedUsersComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="admin"){
+        this.router.navigate(['/login']);
+      }
+    });
     this.userService.getDeletedUsers().subscribe(data=>{
       this.users = data;
      console.log(data);

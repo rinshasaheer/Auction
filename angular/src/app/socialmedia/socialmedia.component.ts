@@ -17,6 +17,7 @@ export class SocialmediaComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       // this.verif_id = +params['id']; // (+) converts string 'id' to a number
       this.userService.generateToken(params.id).subscribe(data => {
+        console.log(data);
         if(data.success){
           this.userService.storeUserData(data.token, data.user);
           if(data.user.role=="user"){

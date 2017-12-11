@@ -4,6 +4,8 @@ import { ProductServiceService } from './../services/product-service.service';
 import * as socketIo from 'socket.io-client';
 import { forEach } from '@angular/router/src/utils/collection';
 import { element } from 'protractor';
+import {UserService} from '../services/user.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-myauctions',
@@ -18,12 +20,17 @@ export class MyauctionsComponent implements OnInit {
   authUser: any;
   // productsx: object;
   users:object;
-  constructor(private _productService: ProductServiceService) { 
+  constructor(private _productService: ProductServiceService, private userService: UserService, private router: Router) { 
     this.socket = socketIo('http://192.168.1.99:3000')
     
   }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="user"){
+        this.router.navigate(['/login']);
+      }
+    });
     this.loadAuctions();
     this.socket.on('newbid', (data) => {
       // console.log(data);

@@ -7,45 +7,45 @@
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
-            <li>
+            <li *ngIf="userService.loggedIn()">
                 <a routerLink="/dashboard"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>
            
-            <li>
+            <li *ngIf="userService.loggedIn()">
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo" class="collapse">
-                    <li>
+                    <li *ngIf="userService.loggedIn()">
                         <a routerLink="/all-users">All Users</a>
                     </li>
-                    <li>
+                    <li *ngIf="userService.loggedIn()">
                         <a routerLink="/disabled-users">Disabled Users</a>
                     </li>
-                    <li>
+                    <li *ngIf="userService.loggedIn()">
                         <a routerLink="/deleted-users">Deleted Users</a>
                     </li>
                 </ul>
             </li>
-            <li>
+            <li *ngIf="userService.loggedIn()">
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-arrows-v"></i> Product <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo1" class="collapse">
-                    <li>
+                    <li *ngIf="userService.loggedIn()">
                         <a routerLink="/product">Add Product</a>
                     </li>
-                    <li>
-                        <a routerLink="/manage-product">Manage Product</a>
+                    <li *ngIf="userService.loggedIn()">
+                        <a routerLink="/product-list">Manage Product</a>
                     </li>
                 </ul>
             </li>
-            <li>
+            <li *ngIf="userService.loggedIn()">
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo3"><i class="fa fa-fw fa-arrows-v"></i> Auction <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo3" class="collapse">
-                    <li>
+                    <li *ngIf="userService.loggedIn()">
                         <a routerLink="/running-auction">Running Auction</a>
                     </li>
-                    <li>
+                    <li *ngIf="userService.loggedIn()">
                         <a routerLink="/upcoming-auction"> Upcoming Auction</a>
                     </li>
-                    <li>
+                    <li *ngIf="userService.loggedIn()">
                         <a routerLink="/closed-auction">closed Product</a>
                     </li>
                 </ul>
