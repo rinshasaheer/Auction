@@ -17,6 +17,6 @@ export class SideBarComponent implements OnInit {
         this.router.navigate(['/login']);
       }
     })
+  
   }
-
 }

@@ -6,6 +6,8 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {UserService} from './services/user.service';
 import { HttpModule } from '@angular/http';
+// import { DataTablesModule } from 'angular-datatables';
+
 
 
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -20,15 +22,10 @@ import { DeletedUsersComponent } from './deleted-users/deleted-users.component';
 
 
 import { ProductComponent } from './product/product.component';
-
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 // import { DataTablesModule } from 'angular-datatables';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { AppComponent } from './app.component';
-
-
-
-
-
 
 
 import { NavigationComponent } from './navigation/navigation.component';
@@ -37,6 +34,10 @@ import { CardComponent } from './card/card.component';
 import { FinishedauctionComponent } from './finishedauction/finishedauction.component';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import { UpcomingauctionsComponent } from './upcomingauctions/upcomingauctions.component';
+// import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
+import { FileUploader } from 'ng2-file-upload';
+
+// import { ImageUploadModule } from "angular2-image-upload";
 // import { ImageUploadModule } from "angular2-image-upload";
 
 
@@ -63,13 +64,15 @@ import { CardRunningComponent } from './card-running/card-running.component';
 import { WinnerconfirmComponent } from './winnerconfirm/winnerconfirm.component'
 
 import { RegistrationComponent } from './registration/registration.component';
+
+// import { ImageUploadModule } from "angular2-image-upload";
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 //  import { DataTablesModule } from 'angular-datatables';
 import * as $ from 'jquery';
 import { ProductListComponent } from './product-list/product-list.component';
 import { FilterPipe } from './filter.pipe';
 import { ManageProductComponent } from './manage-product/manage-product.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+// import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductPipe } from './product.pipe';
 //import { NgDatepickerModule } from 'ng2-datepicker';
 import { NgDatepickerComponent } from './ng-datepicker/ng-datepicker.component';
@@ -89,7 +92,8 @@ const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
    {path:'product', component:ProductComponent},
-  {path:'manage-product', component:ManageProductComponent},
+  {path:'product-list', component:ProductListComponent},
+  {path:'product-detail/:id', component:ProductDetailComponent},
   {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
@@ -153,6 +157,7 @@ const appRoutes: Routes = [
     UpcomingAuctionBackComponent,
     RunningAuctionBackComponent,
     SocialmediaComponent,
+    FileSelectDirective,
 
     ReadMoreComponent,
     CountDownTimerComponent,
@@ -186,11 +191,12 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     Ng2PageScrollModule,
     HttpModule,
+    // ImageUploadModule,
     RouterModule.forRoot(appRoutes),
-    NgSlimScrollModule
+    NgSlimScrollModule,
   //  NgDatepickerModule
     // DataTablesModule,
-    // ImageUploadModule,
+    ImageUploadModule,
     // NKDatetimeModule,
     // NKDatetimeModule,
     //  DataTablesModule
