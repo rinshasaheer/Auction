@@ -12,6 +12,10 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class WinnerconfirmComponent implements OnInit {
   private sub: any;
   isConfirm : boolean = false;
+  errorAlertAuth : Boolean = false;
+  successAlert : Boolean = false;
+  confirmAlert : Boolean = false;
+  wrongAlert : Boolean = false;
   newproduct = {
     name : '',
     pin : '',
@@ -42,8 +46,10 @@ export class WinnerconfirmComponent implements OnInit {
       this.productService.getProduct(params.id).subscribe(data => {
         for(let i=0; i<= data.bidders.length-1; i++){
           if(data.bidders[i].bid_status == "confirmed"){
-            alert("Unauthorized access ...!");
-            this.router.navigate(['/home']);
+            this.errorAlertAuth = true;
+            setTimeout(() => {  
+              this.router.navigate(['/home']);
+            }, 1000);  
           }} 
           // To get the highest bid amt and bidder
           for(let i=0; i<= data.bidders.length-1; i++){
@@ -58,8 +64,10 @@ export class WinnerconfirmComponent implements OnInit {
       });
       this.userService.getLoggedUSerDetails().subscribe(data3 => {
         if(data3._id != this.user_id){
-          alert("Unauthorized access ...!");
-          this.router.navigate(['/home']);
+          this.errorAlertAuth = true;
+          setTimeout(() => {  
+            this.router.navigate(['/home']);
+          }, 1000);  
         }
       });
    });
@@ -84,13 +92,16 @@ export class WinnerconfirmComponent implements OnInit {
        } 
      }
     //  console.log(this.user_id1);
+    if(this.user_id1!=null || this.user_id1!=''){
      this.userService.sendMailtoWinner(this.user_id1, this.newproduct.pid).subscribe(data2 =>{
      });
      this.productService.updateNotif(this.user_id1, this.newproduct.pid).subscribe(data5 =>{
      });
-
-     alert("Success...");
-     this.router.navigate(['/home']);
+    }
+     this.successAlert = true;
+     setTimeout(() => {  
+       this.router.navigate(['/home']);
+     }, 1000);  
     });
   }
 
@@ -99,11 +110,15 @@ export class WinnerconfirmComponent implements OnInit {
       if(data.success==true){
         this.productService.updateStatusConfirm(this.newproduct.pid).subscribe(data1 => {
           if(data1.success==true){
-          alert("Confirmed...");
-          this.router.navigate(['/home']);
+            this.confirmAlert = true;
+            setTimeout(() => {  
+              this.router.navigate(['/home']);
+            }, 2000);  
           }else{
-            alert("Something went wrong...!");
-            this.router.navigate(['/home']);
+            this.wrongAlert = true;
+            setTimeout(() => {  
+              this.router.navigate(['/home']);
+            }, 1000);  
           }
     });
     }    

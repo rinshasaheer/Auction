@@ -1,10 +1,42 @@
 <app-navigation></app-navigation>
 <div class="container cont">
+     <div *ngIf="errorAlertAuth" class="alert alert-danger">
+        <strong>Unauthorized access ...!</strong>
+     </div>
+     <div *ngIf="successAlert" class="alert alert-success">
+        <strong>Success</strong>
+     </div>
+     <div *ngIf="confirmAlert" class="alert alert-success">
+        <strong>Confirmed...</strong>
+     </div>
+     <div *ngIf="wrongAlert" class="alert alert-danger">
+        <strong>Something went wrong...!</strong>
+     </div>
     <div *ngIf="!isConfirm">
     <h3>Do you wish to continue ..?</h3>
     <button type="button" (click)="confirmed()" class="btn btn-default">Confirm</button> 
-    <button type="button" (click)="rejected()" class="btn btn-default">Reject</button> 
+    <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-default">Reject</button> 
 </div>
+<div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+              
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <!-- <div class="modal-header"> -->
+                      <!-- <h4 class="modal-title">Are you sure to delete?</h4> -->
+                    <!-- </div> -->
+                    <div class="modal-body">
+                        <h4 class="modal-title">Are you sure?</h4>
+                    
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" (click)="rejected()"  class="btn btn-default" data-dismiss="modal">Yes</button>
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
 <br>
  <div class="col-md-9 shadow" *ngIf="isConfirm">
         <h3>Add a delivery address</h3>

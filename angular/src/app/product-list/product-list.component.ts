@@ -24,16 +24,43 @@ export class ProductListComponent implements OnInit {
   end_date : Date
   // private deleteProEvent = new EventEmitter();
   public SelectPro = new EventEmitter();
-  constructor(private _prductService : ProductService, private router: Router, private userService: UserService) { }
+  constructor(private _prductService : ProductService, private router: Router, private userService : UserService ) { }
 
   ngOnInit() {
+    // this.userService.getLoggedUSerDetails().subscribe(info =>{
+    //   if(info.status!=true){
+    //     this.router.navigate(['/login']);
+    //   }
+    //   else if(info.role == "user"){
+    //     this.router.navigate(['/login']);
+    //   }
+    // });
     // this.arr1=[];
+  this._prductService.getProducts().subscribe(data1 => {
+    this.arr1 = data1;
+ 
+    console.log(data1);
+  //  data1.forEach(function(item) {
+  //   this.arr1.push(item);
+  //   console.log(this.arr1);
+  //  });
+  // this.prodata = data1;
+      });
     this.userService.getLoggedUSerDetails().subscribe(info =>{
       if(info.role !="admin"){
         this.router.navigate(['/login']);
       }
     });
-
+    this._prductService.getProducts().subscribe(data1 => {
+      this.arr1 = data1;
+   
+      console.log(data1);
+    //  data1.forEach(function(item) {
+    //   this.arr1.push(item);
+    //   console.log(this.arr1);
+    //  });
+    // this.prodata = data1;
+        });
 
 
   }
@@ -48,10 +75,6 @@ onSelect(){
 
 }
 
-deletePro(prod : pro){
-  this.SelectPro.emit(prod);
-  this.tableview = false;
-}
 datepickerOpts1 = {
   startDate: new Date(Date.now()),
   
@@ -63,5 +86,16 @@ datepickerOpts1 = {
   
 }
 
-
+deleteProduct(pid){
+  console.log(pid);
+    this._prductService.deleteProduct(pid).subscribe(data1 => {
+            if(data1){
+              // console.log(data1);
+             alert("Delete Product Successfully");
+             location.reload();
+             this.router.navigate(['/product-list'])
+            }
+      
+          });
+}
 }

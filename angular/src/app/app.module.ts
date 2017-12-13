@@ -10,6 +10,7 @@ import { HttpModule } from '@angular/http';
 
 
 
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -22,7 +23,7 @@ import { DeletedUsersComponent } from './deleted-users/deleted-users.component';
 
 
 import { ProductComponent } from './product/product.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+// import { ProductDetailComponent } from './product-detail/product-detail.component';
 // import { DataTablesModule } from 'angular-datatables';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { AppComponent } from './app.component';
@@ -72,6 +73,7 @@ import * as $ from 'jquery';
 import { ProductListComponent } from './product-list/product-list.component';
 import { FilterPipe } from './filter.pipe';
 import { ManageProductComponent } from './manage-product/manage-product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 // import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductPipe } from './product.pipe';
 //import { NgDatepickerModule } from 'ng2-datepicker';
@@ -134,7 +136,6 @@ const appRoutes: Routes = [
   {path:'product-detail/:id', component:ProductDetailComponent},
    {path:'product', component:ProductComponent},
   {path:'product-list', component:ProductListComponent},
-
   {path:'email-verification/:id', component:EmailVerificationComponent},
   {path:'login', component:LoginComponent},  
   {path:'socialmedia/:id', component:SocialmediaComponent},
@@ -148,7 +149,6 @@ const appRoutes: Routes = [
   {path:'upcomingauction', component: UpcomingauctionsComponent},
   {path:'finishedauction', component: FinishedauctionComponent},
   {path:'runningauction', component: RunningauctionComponent},
-
   {path:'home', component:HomeComponent},
   {path:'myauctions', component:MyauctionsComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
@@ -156,6 +156,7 @@ const appRoutes: Routes = [
   {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
   {path:'running-auction', component:RunningAuctionBackComponent},
   {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
+  { path: '**', component: LoginComponent },
 
   {path:'upload', component:UploadComponent},//file upload
   {path:'material', component:MaterialComponent}//file upload
@@ -250,7 +251,6 @@ export class DemoMaterialModule {}
   ],
   imports: [
     BrowserModule,
-    
     // DataTablesModule,
     FormsModule,
     ReactiveFormsModule,

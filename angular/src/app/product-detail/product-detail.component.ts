@@ -3,7 +3,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { pro } from '../pro';
 import { ProductService } from './../services/product.service';
 import { FileUploader } from 'ng2-file-upload'; // File Upload
-import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+
+
 import { CanActivate, ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 
@@ -51,11 +52,12 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit() {
 
-    this.userService.getLoggedUSerDetails().subscribe(info =>{
-      if(info.role !="admin"){
-        this.router.navigate(['/login']);
-      }
-    });
+
+    // this.userService.getLoggedUSerDetails().subscribe(info =>{
+    //   if(info.role !="admin"){
+    //     this.router.navigate(['/login']);
+    //   }
+    // });
   
     this.sub = this.route.params.subscribe(params => {
      // console.log('abcd' + params.id);
@@ -66,7 +68,6 @@ export class ProductDetailComponent implements OnInit {
         // startdate: Date = new Date(this.arr1.start_date.toString())
         this.start_date = new Date(this.arr1.start_date.toString());
         this.end_date = new Date(this.arr1.end_date.toString());
-        // window.location.reload();
         // this.dateinfo= data;
       });
 
@@ -107,22 +108,22 @@ export class ProductDetailComponent implements OnInit {
   //  deleteProduct(arr1){
   
   //  }
-   clickMethod(arr1) {
-    if(confirm("Are you sure to delete the product?")) {
+  //  clickMethod(arr1) {
+  //   if(confirm("Are you sure to delete the product?")) {
 
-      this._prductService.deleteProduct(arr1).subscribe(data1 => {
-        if(data1){
-          // console.log(data1);
-         alert("Delete Product Successfully");
-         this.router.navigate(['/product-list'])
-        }
+  //     this._prductService.deleteProduct(arr1).subscribe(data1 => {
+  //       if(data1){
+  //         // console.log(data1);
+  //        alert("Delete Product Successfully");
+  //        this.router.navigate(['/product-list'])
+  //       }
   
-      });
+  //     });
 
 
-      // this.deleteProEvent.emit(this.pro);
-    }
-  }
+  //     // this.deleteProEvent.emit(this.pro);
+  //   }
+  // }
   _keyPress(event: any) {
     const pattern = /[0-9]/;
     let inputChar = String.fromCharCode(event.charCode);
