@@ -98,22 +98,22 @@ export class ProductDetailComponent implements OnInit {
   //  deleteProduct(arr1){
   
   //  }
-   clickMethod(arr1) {
-    if(confirm("Are you sure to delete the product?")) {
+  //  clickMethod(arr1) {
+  //   if(confirm("Are you sure to delete the product?")) {
 
-      this._prductService.deleteProduct(arr1).subscribe(data1 => {
-        if(data1){
-          // console.log(data1);
-         alert("Delete Product Successfully");
-         this.router.navigate(['/product-list'])
-        }
+  //     this._prductService.deleteProduct(arr1).subscribe(data1 => {
+  //       if(data1){
+  //         // console.log(data1);
+  //        alert("Delete Product Successfully");
+  //        this.router.navigate(['/product-list'])
+  //       }
   
-      });
+  //     });
 
 
-      // this.deleteProEvent.emit(this.pro);
-    }
-  }
+  //     // this.deleteProEvent.emit(this.pro);
+  //   }
+  // }
   _keyPress(event: any) {
     const pattern = /[0-9]/;
     let inputChar = String.fromCharCode(event.charCode);

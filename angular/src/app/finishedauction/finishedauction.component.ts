@@ -18,7 +18,7 @@ export class FinishedauctionComponent implements OnInit {
   private socket: any; 
   
   constructor(private _productService: ProductServiceService, private userService: UserService, private router: Router) { 
-    this.socket = socketIo('http://192.168.1.99:3000')
+    this.socket = socketIo('http://localhost:3000');
     
   }
 

@@ -10,6 +10,7 @@ import { HttpModule } from '@angular/http';
 
 
 
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -94,8 +95,6 @@ const appRoutes: Routes = [
    {path:'product', component:ProductComponent},
   {path:'product-list', component:ProductListComponent},
   {path:'product-detail/:id', component:ProductDetailComponent},
-  {path:'', redirectTo:'/login', pathMatch:'full'},
-  {path:'registration', component:RegistrationComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
   {path:'login', component:LoginComponent},  
   {path:'socialmedia/:id', component:SocialmediaComponent},
@@ -109,11 +108,6 @@ const appRoutes: Routes = [
   {path:'upcomingauction', component: UpcomingauctionsComponent},
   {path:'finishedauction', component: FinishedauctionComponent},
   {path:'runningauction', component: RunningauctionComponent},
-
-  
-  {path:'', redirectTo:'/registration', pathMatch:'full'},
-  {path:'registration', component:RegistrationComponent},
-  {path:'product-list', component:ProductListComponent},
   {path:'home', component:HomeComponent},
   {path:'myauctions', component:MyauctionsComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
@@ -121,6 +115,7 @@ const appRoutes: Routes = [
   {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
   {path:'running-auction', component:RunningAuctionBackComponent},
   {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
+  { path: '**', component: LoginComponent },
 
   {path:'upload', component:UploadComponent}//file upload
 
@@ -173,7 +168,6 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    
     // DataTablesModule,
     FormsModule,
     ReactiveFormsModule,
