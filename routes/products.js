@@ -58,6 +58,33 @@ var storage = multer.diskStorage({ //multers disk storage settings
     
                     }).single('file');
 
+var storage1 = multer.diskStorage({ //multers disk storage settings
+    
+            destination: function (req, file, cb) {
+    
+                cb(null, './angular/src/assets/uploads/');
+    
+            },
+    
+            filename:  function (req, file, cb) {
+                
+                           // var datetimestamp = Date.now();
+                
+                            cb(null, fileName);
+                          //  fileName = file.fieldname + '-' + datetimestamp + '.' + file.originalname.split('.')[file.originalname.split('.').length -1];
+                        }
+                
+    
+        });
+    
+    
+    
+        var upload1 = multer({ //multer settings
+    
+                        storage: storage1
+    
+                    }).single('file');
+
 
 var returnRouter = function(io) { 
 
@@ -65,10 +92,8 @@ var returnRouter = function(io) {
     router.post('/upload', function(req,res){
         'use strict';
 
-
-
-    upload(req,res,function(err){
-        console.log(req.body);
+        upload(req,res,function(err){
+            console.log(req.body);
                     // console.log(req.file);
         
                     if(err){
@@ -81,9 +106,17 @@ var returnRouter = function(io) {
                         console.log(fileName);
                      res.json({error_code:0,err_desc:null, filename:fileName});
                     
-                });
+        });
+
+        upload1(req,res,function(err){
+            console.log(req.body);
+            if(err){
+
+                    return;
+            }
+        });
         
-            });
+    });
             
 
         
