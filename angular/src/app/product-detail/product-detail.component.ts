@@ -6,6 +6,7 @@ import { FileUploader } from 'ng2-file-upload'; // File Upload
 
 
 import { CanActivate, ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 @Component({
   selector: 'product-detail',
   templateUrl: './product-detail.component.html',
@@ -36,20 +37,21 @@ export class ProductDetailComponent implements OnInit {
   end  : Boolean = false;
   imageSelected : Boolean = false;
   greater :Boolean =false;
+  showUpdate :Boolean = false;
 
   // tableview: boolean = false;
   private updateProEvent = new EventEmitter();
   private deleteProEvent = new EventEmitter();
-  constructor(private _prductService : ProductService, private route: ActivatedRoute,private router: Router) { }
+  constructor(private _prductService : ProductService, private route: ActivatedRoute,private router: Router, private userService :UserService ) { }
 
   ngOnInit() {
 
 
-    // this.userService.getLoggedUSerDetails().subscribe(info =>{
-    //   if(info.role !="admin"){
-    //     this.router.navigate(['/login']);
-    //   }
-    // });
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="admin"){
+        this.router.navigate(['/login']);
+      }
+    });
   
     this.sub = this.route.params.subscribe(params => {
      // console.log('abcd' + params.id);
@@ -78,28 +80,29 @@ export class ProductDetailComponent implements OnInit {
         response = JSON.parse(response);
         this.arr1.image = response.filename;
         console.log(this.arr1.image);
+        if(arr1.start_date == undefined){
+          this.start = true;
+        //  alert("Bid Start time is required");
+    
+       }
+      if(arr1.end_date == undefined){
+         this.end = true;
+        // alert("Bid End time is required");
+    
+      }
+
+      if(arr1.start_date > arr1.end_date){
+        this.greater =true;
+      }
 
         this._prductService.updateProduct(arr1).subscribe(data1 => {
           
-         if(arr1.start_date == undefined){
-            this.start = true;
-          //  alert("Bid Start time is required");
-      
-         }
-        if(arr1.end_date == undefined){
-           this.end = true;
-          // alert("Bid End time is required");
-      
-        }
-
-        if(data1.start_date > data1.end_date){
-          this.greater =true;
-        }
-            else if(data1.start_date <= data1.end_date)
-            {
-              alert("Update Product Successfully");
-              this.router.navigate(['/product-list']);
-            }
+     this.showUpdate = true;
+              setTimeout(() => {  
+                this.router.navigate(['/product-list']);
+              }, 2000);
+              // this.router.navigate(['/product-list'])
+           
           
           });
 
@@ -117,9 +120,7 @@ export class ProductDetailComponent implements OnInit {
       console.log(this.arr1.image);
   };
     // console.log(arr1);
-    this._prductService.updateProduct(arr1).subscribe(data1 => {
-    
-   if(arr1.start_date == undefined){
+    if(arr1.start_date == undefined){
       this.start = true;
     //  alert("Bid Start time is required");
 
@@ -129,16 +130,21 @@ export class ProductDetailComponent implements OnInit {
     // alert("Bid End time is required");
 
   }
-  if(data1.start_date > data1.end_date){
+
+  if(arr1.start_date > arr1.end_date){
     this.greater =true;
   }
-      else if(data1.start_date <= data1.end_date)
-      {
-        alert("Update Product Successfully");
-        this.router.navigate(['/product-list']);
-      }
-    
-    });
+
+    this._prductService.updateProduct(arr1).subscribe(data1 => {
+      
+ this.showUpdate = true;
+          setTimeout(() => {  
+            this.router.navigate(['/product-list']);
+          }, 2000);
+          
+       
+      
+      });
    }
   }
   //  deleteProduct(arr1){

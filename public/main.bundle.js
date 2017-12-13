@@ -564,9 +564,11 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_60_ngx_slimscroll__ = __webpack_require__("../../../../ngx-slimscroll/dist/ngx-slimscroll.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__date_search_pipe__ = __webpack_require__("../../../../../src/app/date-search.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__ = __webpack_require__("../../../../../src/app/auction-back/auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__material_material_component__ = __webpack_require__("../../../../../src/app/material/material.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__myauctiontable_myauctiontable_component__ = __webpack_require__("../../../../../src/app/myauctiontable/myauctiontable.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__search_pipe__ = __webpack_require__("../../../../../src/app/search.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker__ = __webpack_require__("../../../../ng2-daterangepicker/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__material_material_component__ = __webpack_require__("../../../../../src/app/material/material.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__myauctiontable_myauctiontable_component__ = __webpack_require__("../../../../../src/app/myauctiontable/myauctiontable.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__search_pipe__ = __webpack_require__("../../../../../src/app/search.pipe.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -595,18 +597,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-// import { ProductDetailComponent } from './product-detail/product-detail.component';
-// import { DataTablesModule } from 'angular-datatables';
-
-
-
-
-
-
-
-
-// import { ImageUploadModule } from "angular2-image-upload";
-// import { ImageUploadModule } from "angular2-image-upload";
 
 
 
@@ -625,21 +615,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-// import { ImageUploadModule } from "angular2-image-upload";
 
 
 
 
 
-// import { ProductDetailComponent } from './product-detail/product-detail.component';
 
-//import { NgDatepickerModule } from 'ng2-datepicker';
+
+
+
+
+
+
+
+
 
 
 //import { NgDatepickerModule } from 'ng2-datepicker';
 
-// import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
  //file upload
+
 
 
 
@@ -670,14 +665,11 @@ var appRoutes = [
     { path: 'home', component: __WEBPACK_IMPORTED_MODULE_24__home_home_component__["a" /* HomeComponent */] },
     { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_41__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
     { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_33__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
-    // {path:'closed-auction', component:ClosedAuctionBackComponent},
-    // {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
-    // {path:'running-auction', component:RunningAuctionBackComponent},
     { path: 'auctions', component: __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__["a" /* AuctionBackComponent */] },
     { path: 'winnerconfirm/:id', component: __WEBPACK_IMPORTED_MODULE_45__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */] },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_32__login_login_component__["a" /* LoginComponent */] },
     { path: 'upload', component: __WEBPACK_IMPORTED_MODULE_55__upload_upload_component__["a" /* UploadComponent */] },
-    { path: 'material', component: __WEBPACK_IMPORTED_MODULE_63__material_material_component__["a" /* MaterialComponent */] } //file upload
+    { path: 'material', component: __WEBPACK_IMPORTED_MODULE_64__material_material_component__["a" /* MaterialComponent */] } //file upload
 ];
 var DemoMaterialModule = (function () {
     function DemoMaterialModule() {
@@ -773,46 +765,35 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_53__ng_datepicker_ng_datepicker_component__["a" /* NgDatepickerComponent */],
                 __WEBPACK_IMPORTED_MODULE_61__date_search_pipe__["a" /* DateSearchPipe */],
                 __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__["a" /* AuctionBackComponent */],
-                //DaterangePickerModule
-                __WEBPACK_IMPORTED_MODULE_64__myauctiontable_myauctiontable_component__["a" /* MyauctiontableComponent */],
-                __WEBPACK_IMPORTED_MODULE_65__search_pipe__["a" /* SearchPipe */],
-                __WEBPACK_IMPORTED_MODULE_63__material_material_component__["a" /* MaterialComponent */]
+                __WEBPACK_IMPORTED_MODULE_65__myauctiontable_myauctiontable_component__["a" /* MyauctiontableComponent */],
+                __WEBPACK_IMPORTED_MODULE_66__search_pipe__["a" /* SearchPipe */],
+                __WEBPACK_IMPORTED_MODULE_64__material_material_component__["a" /* MaterialComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
-                // DataTablesModule,
                 __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_27_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
-                // ImageUploadModule,
-                // DataTablesModule,
-                // NKDatetimeModule,
                 __WEBPACK_IMPORTED_MODULE_47_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
-                //  DataTablesModule
-                // Ng2DatetimePickerModule
-                //BrowserModule,
-                // DataTablesModule,
                 __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_27_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
-                // ImageUploadModule,
                 __WEBPACK_IMPORTED_MODULE_7__angular_router__["f" /* RouterModule */].forRoot(appRoutes),
                 __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 DemoMaterialModule,
                 // NgDatepickerModule
                 __WEBPACK_IMPORTED_MODULE_60_ngx_slimscroll__["a" /* NgSlimScrollModule */],
-                //  NgDatepickerModule
-                // DataTablesModule,
                 __WEBPACK_IMPORTED_MODULE_56_angular2_image_upload__["a" /* ImageUploadModule */],
+                __WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker__["Daterangepicker"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
                 __WEBPACK_IMPORTED_MODULE_10__angular_material__["o" /* MatNativeDateModule */],
                 __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
-                DemoMaterialModule,
+                DemoMaterialModule
                 // FlashMessagesModule.forRoot(),
                 // NKDatetimeModule,
                 // NKDatetimeModule,
@@ -820,10 +801,10 @@ var AppModule = (function () {
                 // Ng2DatetimePickerModule
                 //ImageUploadModule.forRoot(), //file upload
                 // Daterangepicker,
-                __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                DemoMaterialModule,
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["o" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
+                // BrowserAnimationsModule,
+                // DemoMaterialModule,
+                // MatNativeDateModule,
+                // ReactiveFormsModule,
             ],
             providers: [__WEBPACK_IMPORTED_MODULE_40__services_product_service_service__["a" /* ProductServiceService */],
                 __WEBPACK_IMPORTED_MODULE_8__services_user_service__["a" /* UserService */],
@@ -862,7 +843,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/auction-back/auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n \r\n <body>\r\n    \r\n              <div id=\"wrapper\">\r\n          \r\n                  <!-- Navigation -->\r\n      <side-bar></side-bar>\r\n          \r\n                  <div id=\"page-wrapper\">\r\n                      <div class=\"container-fluid\">\r\n                              \r\n                                          <!-- Page Heading -->\r\n                                         <header-title [title]=\"'AUCTIONS'\"></header-title>\r\n                                    \r\n                                          <!-- /.row -->\r\n                          \r\n                                      </div>\r\n                      <div class=\"col-md-2\">\r\n                            <nav class=\"nav-sidebar\">\r\n                                <ul class=\"nav tabs\">\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Running'}\"><a (click)=\"updateView('Running')\" href=\"#tab1\" data-toggle=\"tab\">Running Auction</a></li>\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Upcoming'}\"><a (click)=\"updateView('Upcoming')\" href=\"#tab2\" data-toggle=\"tab\">Upcoming auction</a></li>\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Closed'}\"><a (click)=\"updateView('Closed')\" href=\"#tab3\" data-toggle=\"tab\">Closed auction</a></li>                               \r\n                                </ul>\r\n                              </nav>\r\n                      </div>\r\n                      <div class=\"col-md-10\">\r\n                          <ol class=\"breadcrumb\">\r\n                              <li>\r\n                                  <i class=\"fa fa-dashboard\"></i>  <a href=\"dashboard\">dashboard</a>\r\n                              </li>\r\n                              <li class=\"active\">\r\n                                  <i class=\"fa fa-file\"></i> {{title}}\r\n                              </li>\r\n                          </ol>\r\n\r\n                          <div *ngIf=\"viewComp == 'Running'\">\r\n                            <app-running-auction-back [startFrom]=\"startFrom\" [startUpto]=\"startUpto\"  [endFrom]=\"endFrom\"  [endUpto]=\"endUpto\"  ></app-running-auction-back>\r\n                          </div>\r\n                          <div *ngIf=\"viewComp == 'Upcoming'\">\r\n                            <app-upcoming-auction-back></app-upcoming-auction-back>\r\n                          </div>\r\n                          <div *ngIf=\"viewComp == 'Closed'\">\r\n                            <app-closed-auction-back></app-closed-auction-back>\r\n                          </div>\r\n                      </div>\r\n                      \r\n\r\n                    </div>\r\n                    <!-- /#page-wrapper -->\r\n                    \r\n                               \r\n                    </div>\r\n                    \r\n                    <footer></footer> \r\n                      \r\n                    </body>\r\n                                         "
+module.exports = "\r\n \r\n <body>\r\n    \r\n              <div id=\"wrapper\">\r\n          \r\n                  <!-- Navigation -->\r\n      <side-bar></side-bar>\r\n          \r\n                  <div id=\"page-wrapper\">\r\n                      <div class=\"container-fluid\">\r\n                              \r\n                                          <!-- Page Heading -->\r\n                                         <header-title [title]=\"'AUCTIONS'\"></header-title>\r\n                                    \r\n                                          <!-- /.row -->\r\n                          \r\n                                      </div>\r\n                      <div class=\"col-md-2\">\r\n                            <nav class=\"nav-sidebar\">\r\n                                <ul class=\"nav tabs\">\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Running'}\"><a (click)=\"updateView('Running')\" data-toggle=\"tab\">Running Auction</a></li>\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Upcoming'}\"><a (click)=\"updateView('Upcoming')\" data-toggle=\"tab\">Upcoming auction</a></li>\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Closed'}\"><a (click)=\"updateView('Closed')\" data-toggle=\"tab\">Closed auction</a></li>                               \r\n                                </ul>\r\n                              </nav>\r\n                      </div>\r\n                      <div class=\"col-md-10\">\r\n                          <ol class=\"breadcrumb\">\r\n                              <li>\r\n                                  <i class=\"fa fa-dashboard\"></i>  <a href=\"dashboard\">dashboard</a>\r\n                              </li>\r\n                              <li class=\"active\">\r\n                                  <i class=\"fa fa-file\"></i> {{title}}\r\n                              </li>\r\n                          </ol>\r\n\r\n                          <div *ngIf=\"viewComp == 'Running'\">\r\n                            <app-running-auction-back [startFrom]=\"startFrom\" [startUpto]=\"startUpto\"  [endFrom]=\"endFrom\"  [endUpto]=\"endUpto\"  ></app-running-auction-back>\r\n                          </div>\r\n                          <div *ngIf=\"viewComp == 'Upcoming'\">\r\n                            <app-upcoming-auction-back></app-upcoming-auction-back>\r\n                          </div>\r\n                          <div *ngIf=\"viewComp == 'Closed'\">\r\n                            <app-closed-auction-back></app-closed-auction-back>\r\n                          </div>\r\n                      </div>\r\n                      \r\n\r\n                    </div>\r\n                    <!-- /#page-wrapper -->\r\n                    \r\n                               \r\n                    </div>\r\n                    \r\n                    <footer></footer> \r\n                      \r\n                    </body>\r\n                                         "
 
 /***/ }),
 
@@ -3537,7 +3518,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product-detail/product-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation -->\r\n<side-bar></side-bar>\r\n    \r\n            <div id=\"page-wrapper\">\r\n    \r\n                <div class=\"container-fluid\">\r\n    \r\n                    <!-- Page Heading -->\r\n                   <header-title [title]=\"'Manage Products'\"></header-title>\r\n                    <!-- /.row -->\r\n    \r\n                </div>\r\n                <!-- /.container-fluid -->\r\n              \r\n          \r\n<div class=\"wrapper\">\r\n        <div class=\"col-md-9 shadow\">\r\n                <!-- <h3 class=\"headng\" >Edit a Product</h3>\r\n                <br> -->\r\n  \r\n  <!-- <form class=\"well\" role=\"form\"   #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct()\" novalidate> -->\r\n        <form class=\"well\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && updateProduct(arr1);\" novalidate>\r\n      <!-- <form #form='ngForm' (ngSubmit)=\"addProduct()\" class=\"well\" > -->\r\n            <div class=\"form-group\" >\r\n                <label > Name *</label>\r\n                <input id=\"name\" name=\"name\" class=\"form-control\"\r\n                required  autofocus\r\n                [(ngModel)]=\"arr1.name\" #name=\"ngModel\" (keypress)=_keyPress1($event)>\r\n                <div *ngIf=\"f.submitted && !name.valid \"  class=\"alert alert-danger\"> ! Name is required</div>\r\n             \r\n            </div>\r\n        \r\n            <td><img src=\"assets/uploads/{{arr1.image || 'defualt.png'}}\" alt=\"\" class=\"image\"></td>\r\n            <div class=\"form-group\">\r\n                <label for=\"single\">Select Image</label>\r\n                <input type=\"file\" class=\"\" name=\"single\" ng2FileSelect [uploader]=\"uploader\" (change)=\"imageOr();\"  />                                  \r\n             </div>\r\n            <div class=\"form-group\" >\r\n                    <label >  Bid Amount *</label>\r\n                    <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n                    required  \r\n                    [(ngModel)]=\"arr1.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                    <div *ngIf=\"f.submitted && !bid_amount.valid\"  class=\"alert alert-danger\"> ! Amount is required</div>\r\n           \r\n                </div>\r\n\r\n                <div class=\"form-group\" >\r\n                        <label >  Minimum Bid Rate *</label>\r\n                        <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                        required  \r\n                        [(ngModel)]=\"arr1.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                        <div *ngIf=\"f.submitted && !min_bid_rate.valid\"  class=\"alert alert-danger\"> ! Minimum Bid rate is required</div>\r\n               \r\n                    </div>\r\n        \r\n             <div class=\"form-group\" >\r\n                    <label > Bid Start time *</label>\r\n                    <datetime id=\"start_date\" name=\"start_date\"  [(ngModel)]=\"start_date\" [(ngModel)]=\"arr1.start_date\" [hasClearButton]=\"true\"  [datepicker]= \"datepickerOpts\"></datetime>\r\n                </div>\r\n                    <div *ngIf=\"start\">\r\n                    <div class=\"alert alert-danger\"> ! Start time is required</div>\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                        <label > Bid End time *</label>\r\n                        <datetime name = \"end_date\"  [(ngModel)]=\"end_date\" [(ngModel)]=\"arr1.end_date\" [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\"></datetime>\r\n                        <div *ngIf=\"end\">\r\n                        <div  class=\"alert alert-danger\"> ! End time is required</div>\r\n                    </div>\r\n                    <div *ngIf=\"greater\">\r\n                        <div class=\"alert alert-danger\"> !End time must be after the Start time</div>\r\n                    </div>\r\n                    </div>\r\n\r\n            \r\n                    <!-- <image-upload></image-upload> -->\r\n            <!-- <div>\r\n                <label > Image</label>\r\n                <input type=\"file\"  name=\"pollqtn\"   required />\r\n            </div> -->\r\n           \r\n\r\n           \r\n            <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n            <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n            \r\n            <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n            \r\n            <input type=\"file\" name =\"myfile\" ng-disabled=\"uploading\" style=\"display: none\">\r\n\r\n            <div class=\"form-group\" >\r\n                <label > Description</label>\r\n                <br>\r\n                <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"arr1.desc\" ></textarea>\r\n            </div>\r\n           \r\n            <!-- <input type=\"submit\" class=\"btn btn-info blakbtn\" value=\"Submit\"  > -->\r\n            <button type= \"submit\" class=\"btn btn-primary\">Update</button>\r\n            <!-- <input type=\"submit\" class=\"btn btn-primary\"  value=\"Update\"  > -->\r\n            <!-- <input type=\"button\" class=\"btn btn-primary\" (click)=\"clickMethod(arr1)\"  value=\"Delete\"  > -->\r\n           \r\n        </form>\r\n  \r\n      </div>\r\n     \r\n    </div>\r\n\r\n   \r\n     \r\n</div>\r\n<!-- /#page-wrapper -->\r\n\r\n           \r\n</div>\r\n\r\n<footer></footer> \r\n  "
+module.exports = "<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation -->\r\n<side-bar></side-bar>\r\n    \r\n            <div id=\"page-wrapper\">\r\n    \r\n                <div class=\"container-fluid\">\r\n    \r\n                    <!-- Page Heading -->\r\n                   <header-title [title]=\"'Manage Products'\"></header-title>\r\n                    <!-- /.row -->\r\n    \r\n                </div>\r\n                <!-- /.container-fluid -->\r\n              \r\n          \r\n<div class=\"wrapper\">\r\n        <div class=\"col-md-9 shadow\">\r\n                <!-- <h3 class=\"headng\" >Edit a Product</h3>\r\n                <br> -->\r\n  \r\n  <!-- <form class=\"well\" role=\"form\"   #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct()\" novalidate> -->\r\n        <form class=\"well\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && updateProduct(arr1);\" novalidate>\r\n                <div *ngIf=\"showUpdate\" class=\"alert alert-success\">\r\n                        <strong>Update Product Successfully</strong>\r\n                      </div>\r\n      <!-- <form #form='ngForm' (ngSubmit)=\"addProduct()\" class=\"well\" > -->\r\n            <div class=\"form-group\" >\r\n                <label > Name *</label>\r\n                <input id=\"name\" name=\"name\" class=\"form-control\"\r\n                required  autofocus\r\n                [(ngModel)]=\"arr1.name\" #name=\"ngModel\" (keypress)=_keyPress1($event)>\r\n                <div *ngIf=\"f.submitted && !name.valid \"  class=\"alert alert-danger\"> ! Name is required</div>\r\n             \r\n            </div>\r\n        \r\n            <td><img src=\"assets/uploads/{{arr1.image || 'defualt.png'}}\" alt=\"\" class=\"image\"></td>\r\n            <div class=\"form-group\">\r\n                <label for=\"single\">Select Image</label>\r\n                <input type=\"file\" class=\"\" name=\"single\" ng2FileSelect [uploader]=\"uploader\" (change)=\"imageOr();\"  />                                  \r\n             </div>\r\n            <div class=\"form-group\" >\r\n                    <label >  Bid Amount *</label>\r\n                    <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n                    required  \r\n                    [(ngModel)]=\"arr1.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                    <div *ngIf=\"f.submitted && !bid_amount.valid\"  class=\"alert alert-danger\"> ! Amount is required</div>\r\n           \r\n                </div>\r\n\r\n                <div class=\"form-group\" >\r\n                        <label >  Minimum Bid Rate *</label>\r\n                        <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                        required  \r\n                        [(ngModel)]=\"arr1.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                        <div *ngIf=\"f.submitted && !min_bid_rate.valid\"  class=\"alert alert-danger\"> ! Minimum Bid rate is required</div>\r\n               \r\n                    </div>\r\n        \r\n             <div class=\"form-group\" >\r\n                    <label > Bid Start time *</label>\r\n                    <datetime id=\"start_date\" name=\"start_date\"  [(ngModel)]=\"start_date\" [(ngModel)]=\"arr1.start_date\" [hasClearButton]=\"true\"  [datepicker]= \"datepickerOpts\"></datetime>\r\n                </div>\r\n                    <div *ngIf=\"start\">\r\n                    <div class=\"alert alert-danger\"> ! Start time is required</div>\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                        <label > Bid End time *</label>\r\n                        <datetime name = \"end_date\"  [(ngModel)]=\"end_date\" [(ngModel)]=\"arr1.end_date\" [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\"></datetime>\r\n                        <div *ngIf=\"end\">\r\n                        <div  class=\"alert alert-danger\"> ! End time is required</div>\r\n                    </div>\r\n                    <div *ngIf=\"greater\">\r\n                        <div class=\"alert alert-danger\"> !End time must be after the Start time</div>\r\n                    </div>\r\n                    </div>\r\n\r\n            \r\n                    <!-- <image-upload></image-upload> -->\r\n            <!-- <div>\r\n                <label > Image</label>\r\n                <input type=\"file\"  name=\"pollqtn\"   required />\r\n            </div> -->\r\n           \r\n\r\n           \r\n            <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n            <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n            \r\n            <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n            \r\n            <input type=\"file\" name =\"myfile\" ng-disabled=\"uploading\" style=\"display: none\">\r\n\r\n            <div class=\"form-group\" >\r\n                <label > Description</label>\r\n                <br>\r\n                <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"arr1.desc\" ></textarea>\r\n            </div>\r\n           \r\n            <!-- <input type=\"submit\" class=\"btn btn-info blakbtn\" value=\"Submit\"  > -->\r\n            <button type= \"submit\" class=\"btn btn-primary\">Update</button>\r\n            <!-- <input type=\"submit\" class=\"btn btn-primary\"  value=\"Update\"  > -->\r\n            <!-- <input type=\"button\" class=\"btn btn-primary\" (click)=\"clickMethod(arr1)\"  value=\"Delete\"  > -->\r\n           \r\n        </form>\r\n  \r\n      </div>\r\n     \r\n    </div>\r\n\r\n   \r\n     \r\n</div>\r\n<!-- /#page-wrapper -->\r\n\r\n           \r\n</div>\r\n\r\n<footer></footer> \r\n  "
 
 /***/ }),
 
@@ -3551,6 +3532,7 @@ module.exports = "<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation --
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3564,11 +3546,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
  // File Upload
 
+
 var ProductDetailComponent = (function () {
-    function ProductDetailComponent(_prductService, route, router) {
+    function ProductDetailComponent(_prductService, route, router, userService) {
         this._prductService = _prductService;
         this.route = route;
         this.router = router;
+        this.userService = userService;
         this.uploader = new __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__["FileUploader"]({ url: 'http://localhost:3000/products/upload' });
         this.arr1 = {
             name: String,
@@ -3580,6 +3564,7 @@ var ProductDetailComponent = (function () {
         this.end = false;
         this.imageSelected = false;
         this.greater = false;
+        this.showUpdate = false;
         // tableview: boolean = false;
         this.updateProEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.deleteProEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
@@ -3601,12 +3586,12 @@ var ProductDetailComponent = (function () {
         };
     }
     ProductDetailComponent.prototype.ngOnInit = function () {
-        // this.userService.getLoggedUSerDetails().subscribe(info =>{
-        //   if(info.role !="admin"){
-        //     this.router.navigate(['/login']);
-        //   }
-        // });
         var _this = this;
+        this.userService.getLoggedUSerDetails().subscribe(function (info) {
+            if (info.role != "admin") {
+                _this.router.navigate(['/login']);
+            }
+        });
         this.sub = this.route.params.subscribe(function (params) {
             // console.log('abcd' + params.id);
             _this._prductService.getAProduct(params.id).subscribe(function (data) {
@@ -3632,22 +3617,23 @@ var ProductDetailComponent = (function () {
                 response = JSON.parse(response);
                 _this.arr1.image = response.filename;
                 console.log(_this.arr1.image);
+                if (arr1.start_date == undefined) {
+                    _this.start = true;
+                    //  alert("Bid Start time is required");
+                }
+                if (arr1.end_date == undefined) {
+                    _this.end = true;
+                    // alert("Bid End time is required");
+                }
+                if (arr1.start_date > arr1.end_date) {
+                    _this.greater = true;
+                }
                 _this._prductService.updateProduct(arr1).subscribe(function (data1) {
-                    if (arr1.start_date == undefined) {
-                        _this.start = true;
-                        //  alert("Bid Start time is required");
-                    }
-                    if (arr1.end_date == undefined) {
-                        _this.end = true;
-                        // alert("Bid End time is required");
-                    }
-                    if (data1.start_date > data1.end_date) {
-                        _this.greater = true;
-                    }
-                    else if (data1.start_date <= data1.end_date) {
-                        alert("Update Product Successfully");
+                    _this.showUpdate = true;
+                    setTimeout(function () {
                         _this.router.navigate(['/product-list']);
-                    }
+                    }, 2000);
+                    // this.router.navigate(['/product-list'])
                 });
             };
         }
@@ -3660,22 +3646,22 @@ var ProductDetailComponent = (function () {
                 console.log(_this.arr1.image);
             };
             // console.log(arr1);
+            if (arr1.start_date == undefined) {
+                this.start = true;
+                //  alert("Bid Start time is required");
+            }
+            if (arr1.end_date == undefined) {
+                this.end = true;
+                // alert("Bid End time is required");
+            }
+            if (arr1.start_date > arr1.end_date) {
+                this.greater = true;
+            }
             this._prductService.updateProduct(arr1).subscribe(function (data1) {
-                if (arr1.start_date == undefined) {
-                    _this.start = true;
-                    //  alert("Bid Start time is required");
-                }
-                if (arr1.end_date == undefined) {
-                    _this.end = true;
-                    // alert("Bid End time is required");
-                }
-                if (data1.start_date > data1.end_date) {
-                    _this.greater = true;
-                }
-                else if (data1.start_date <= data1.end_date) {
-                    alert("Update Product Successfully");
+                _this.showUpdate = true;
+                setTimeout(function () {
                     _this.router.navigate(['/product-list']);
-                }
+                }, 2000);
             });
         }
     };
@@ -3719,7 +3705,7 @@ var ProductDetailComponent = (function () {
             inputs: ['pro'],
             outputs: ['updateProEvent', 'deleteProEvent']
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */], __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]])
     ], ProductDetailComponent);
     return ProductDetailComponent;
 }());
@@ -3831,15 +3817,12 @@ var ProductListComponent = (function () {
         };
     }
     ProductListComponent.prototype.ngOnInit = function () {
-        // this.userService.getLoggedUSerDetails().subscribe(info =>{
-        //   if(info.status!=true){
-        //     this.router.navigate(['/login']);
-        //   }
-        //   else if(info.role == "user"){
-        //     this.router.navigate(['/login']);
-        //   }
-        // });
         var _this = this;
+        this._userService.getLoggedUSerDetails().subscribe(function (info) {
+            if (info.role != "admin") {
+                _this.router.navigate(['/login']);
+            }
+        });
         // this.arr1=[];
         this._prductService.getProducts().subscribe(function (data1) {
             _this.arr1 = data1;
@@ -3874,72 +3857,64 @@ var ProductListComponent = (function () {
     };
     ProductListComponent.prototype.addProduct = function () {
         var _this = this;
-        if (this.imageselect == true) {
-            this.uploader.uploadAll();
-            this.uploader.onCompleteItem = function (item, response, status, headers) {
-                response = JSON.parse(response);
-                _this.newproduct.image = response.filename;
-                _this._prductService.addProduct(_this.newproduct).subscribe(function (data) {
-                    if (data) {
-                        if (data.start_date > data.end_date) {
-                            _this.greater = true;
-                            // alert('error! Start date is greater than end date');
-                            // this._userService.sendmail().subscribe(data1 => { });
-                        }
-                        else if (data.start_date <= data.end_date) {
-                            _this._userService.sendmail().subscribe(function (data1) {
-                            });
-                            // this._flashMessagesService.show('Product Added Successfully!', { cssClass: 'alert-success', timeout: 1000 });
-                            // this.hideModal = true;
-                            //  alert("Add Product Successfully");
+        // console.log("here");
+        if (this.newproduct.start_date > this.newproduct.end_date) {
+            this.greater = true;
+        }
+        else {
+            this.greater = false;
+            if (this.imageselect == true) {
+                this.uploader.uploadAll();
+                this.uploader.onCompleteItem = function (item, response, status, headers) {
+                    response = JSON.parse(response);
+                    _this.newproduct.image = response.filename;
+                    _this._prductService.addProduct(_this.newproduct).subscribe(function (data1) {
+                        if (data1) {
                             _this.showSuccess = true;
                             setTimeout(function () {
                                 _this.showSuccess = false;
-                                window.location.reload();
                                 // console.log("Error created user");
                             }, 1000);
-                            //  s
-                        }
-                    }
-                    else {
-                        alert("Error");
-                        console.log("error");
-                    }
-                });
-                // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
-            };
-        }
-        else if (this.imageselect == false) {
-            this._prductService.addProduct(this.newproduct).subscribe(function (data) {
-                if (data) {
-                    if (data.start_date > data.end_date) {
-                        _this.greater = true;
-                        // alert('error! Start date is greater than end date');
-                        _this._userService.sendmail().subscribe(function (data1) { });
-                    }
-                    else if (data.start_date <= data.end_date) {
-                        // this._flashMessagesService.show('Product Added Successfully!', { cssClass: 'alert-success', timeout: 1000 });
-                        // this.hideModal = true;
-                        _this.showSuccess = true;
-                        setTimeout(function () {
-                            _this.showSuccess = false;
                             window.location.reload();
-                            // console.log("Error created user");
-                        }, 1000);
-                        //  alert("Add Product Successfully");
-                        //  this.router.navigate(['/product-list']);
-                        //  window.location.reload();
-                        //  this.router.navigate(['/product-list']);
-                        //  this.hideModal =true;
-                        //  jQuery("#myModal").modal("hide");
-                        //  
-                    }
+                        }
+                        else {
+                            alert("Error");
+                            console.log("error");
+                        }
+                    });
+                    console.log(_this.greater);
+                };
+            }
+            else if (this.imageselect == false) {
+                if (this.newproduct.start_date > this.newproduct.end_date) {
+                    this.greater = true;
+                    // this._userService.sendmail().subscribe(data => { });
                 }
-                else {
-                    alert("Error");
-                    console.log("error");
+                else if (this.newproduct.start_date <= this.newproduct.end_date) {
+                    this.greater = false;
+                    this._prductService.addProduct(this.newproduct).subscribe(function (data) {
+                        if (data) {
+                            _this.showSuccess = true;
+                            setTimeout(function () {
+                                _this.showSuccess = false;
+                                // console.log("Error created user");
+                            }, 1000);
+                            window.location.reload();
+                        }
+                        else {
+                            alert("Error");
+                            console.log("error");
+                        }
+                    });
+                    //  alert("Add Product Successfully");
+                    //  this.router.navigate(['/product-list']);
+                    //  window.location.reload();
+                    //  this.router.navigate(['/product-list']);
+                    //  this.hideModal =true;
+                    //  jQuery("#myModal").modal("hide");
+                    //  
                 }
-            });
+            }
         }
     };
     ProductListComponent.prototype._keyPress = function (event) {
@@ -4038,7 +4013,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product/product.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"example-header\">\r\n    <mat-form-field>\r\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n    </mat-form-field>\r\n  </div>\r\n  \r\n  <div class=\"example-container mat-elevation-z8\">\r\n  \r\n    <mat-table [dataSource]=\"dataSource\" matSort>\r\n  \r\n  \r\n  \r\n      <!-- Progress Column -->\r\n      <ng-container matColumnDef=\"action\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> \r\n          <a href =\"/product-detail/{{row.id}}\" class=\"btn btn-primary btn-xs\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Edit\"><i class=\"fa fa-pencil\"></i></a>\r\n          <a href=\"#\" class=\"btn btn-primary btn-xs\" data-target=\"#myModal1\" data-toggle=\"modal\" ><i class=\"fa fa-trash-o\"></i></a>\r\n          <div id=\"myModal1\" class=\"modal fade\" role=\"dialog\">\r\n            <div class=\"modal-dialog\">\r\n          \r\n              <!-- Modal content-->\r\n              <div class=\"modal-content\">\r\n                <!-- <div class=\"modal-header\"> -->\r\n                  <!-- <h4 class=\"modal-title\">Are you sure to delete?</h4> -->\r\n                <!-- </div> -->\r\n                <div class=\"modal-body\">\r\n                    <h4 class=\"modal-title\">Are you sure to delete?</h4>\r\n                \r\n                </div>\r\n                <div class=\"modal-footer\">\r\n                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                  <button type=\"button\" (click)=\"deleteProduct(row.id)\" class=\"btn btn-default\" data-dismiss=\"modal\">Delete</button>\r\n                </div>\r\n              </div>\r\n          \r\n            </div>\r\n          </div>\r\n          \r\n        </mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"description\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.desc}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"enddate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> End Date </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.end_date | date: 'dd-MM-yyyy h:mm a'}}</mat-cell>\r\n        \r\n      </ng-container>\r\n      <ng-container matColumnDef=\"startdate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Start Date </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.start_date | date: 'dd-MM-yyyy h:mm a'}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"rate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Minimum Bid rate </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.min_bid_rate}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"amount\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Bid Amount </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.bid_amount}}</mat-cell>\r\n      </ng-container>\r\n      \r\n      <ng-container matColumnDef=\"image\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Image </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"><img class=\"proimg\" src=\"assets/uploads/{{row.image}}\" alt=\"\" ></mat-cell>\r\n      </ng-container>\r\n  \r\n      <!-- Name Column -->\r\n      <ng-container matColumnDef=\"name\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.name}} </mat-cell>\r\n      </ng-container>\r\n  \r\n  \r\n  \r\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\r\n      </mat-row>\r\n    </mat-table>\r\n  \r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n  </div>\r\n  \r\n  "
+module.exports = "\r\n  <div *ngIf=\"DeleteSuccess\" class=\"alert alert-success\">\r\n    <strong>Deleted Successfully</strong>\r\n  </div>\r\n<div class=\"example-header\">\r\n    <mat-form-field>\r\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n    </mat-form-field>\r\n  </div>\r\n\r\n  <div class=\"example-container mat-elevation-z8\">\r\n  \r\n    <mat-table [dataSource]=\"dataSource\" matSort>\r\n  \r\n  \r\n  \r\n      <!-- Progress Column -->\r\n      <ng-container matColumnDef=\"action\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> \r\n          <a href =\"/product-detail/{{row.id}}\" class=\"btn btn-primary btn-xs\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Edit\"><i class=\"fa fa-pencil\"></i></a>\r\n          <a href=\"#\" class=\"btn btn-primary btn-xs\" data-target=\"#myModal1\" (click)=\"product_det(row.id)\"  data-toggle=\"modal\" ><i class=\"fa fa-trash-o\"></i></a>\r\n          <div id=\"myModal1\" class=\"modal fade\" role=\"dialog\">\r\n            <div class=\"modal-dialog\">\r\n          \r\n              <!-- Modal content-->\r\n              <div class=\"modal-content\">\r\n                <!-- <div class=\"modal-header\"> -->\r\n                  <!-- <h4 class=\"modal-title\">Are you sure to delete?</h4> -->\r\n                <!-- </div> -->\r\n                <div class=\"modal-body\">\r\n                    <h4 class=\"modal-title\">Are you sure to delete?</h4>\r\n                \r\n                </div>\r\n              \r\n                <div class=\"modal-footer\">\r\n                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                  <button type=\"button\" (click)=\"deleteProduct(pid)\" class=\"btn btn-default\" data-dismiss=\"modal\">Delete</button>\r\n                </div>\r\n              </div>\r\n          \r\n            </div>\r\n          </div>\r\n          \r\n        </mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"description\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.desc}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"enddate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> End Date </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.end_date | date: 'dd-MM-yyyy h:mm a'}}</mat-cell>\r\n        \r\n      </ng-container>\r\n      <ng-container matColumnDef=\"startdate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Start Date </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.start_date | date: 'dd-MM-yyyy h:mm a'}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"rate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Minimum Bid rate </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.min_bid_rate}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"amount\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Bid Amount </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.bid_amount}}</mat-cell>\r\n      </ng-container>\r\n      \r\n      <ng-container matColumnDef=\"image\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Image </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"><img class=\"proimg\" src=\"assets/uploads/{{row.image}}\" alt=\"\" ></mat-cell>\r\n      </ng-container>\r\n  \r\n      <!-- Name Column -->\r\n      <ng-container matColumnDef=\"name\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.name}} </mat-cell>\r\n      </ng-container>\r\n  \r\n  \r\n  \r\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\r\n      </mat-row>\r\n    </mat-table>\r\n  \r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n  </div>\r\n  \r\n  "
 
 /***/ }),
 
@@ -4073,14 +4048,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 // import { FileUploader } from 'ng2-file-upload';
 
 var ProductComponent = (function () {
-    function ProductComponent(productservice, router) {
+    function ProductComponent(productservice, router, _userService) {
         // Create 100 users
         this.productservice = productservice;
         this.router = router;
+        this._userService = _userService;
+        this.DeleteSuccess = false;
         this.displayedColumns = ['name', 'image', 'amount', 'rate', 'startdate', 'enddate', 'description', 'action'];
     }
     ProductComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this._userService.getLoggedUSerDetails().subscribe(function (info) {
+            if (info.role != "admin") {
+                _this.router.navigate(['/login']);
+            }
+        });
         var users = [];
         this.productservice.getProducts().subscribe(function (data) {
             data.forEach(function (item, index) {
@@ -4111,11 +4093,19 @@ var ProductComponent = (function () {
         this.productservice.deleteProduct(pid).subscribe(function (data1) {
             if (data1) {
                 // console.log(data1);
-                alert("Delete Product Successfully");
-                location.reload();
-                _this.router.navigate(['/product-list']);
+                setTimeout(function () {
+                    _this.DeleteSuccess = true;
+                    window.location.reload();
+                    // console.log("Error created user");
+                }, 1000);
+                //  alert("Delete Product Successfully");
+                // window.location.reload();
+                //  this.router.navigate(['/product-list'])
             }
         });
+    };
+    ProductComponent.prototype.product_det = function (id) {
+        this.pid = id;
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3__angular_material__["p" /* MatPaginator */]),
@@ -4133,7 +4123,7 @@ var ProductComponent = (function () {
             providers: [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]]
             // providers: [ProductService]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_4__angular_router__["e" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_4__angular_router__["e" /* Router */], __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]])
     ], ProductComponent);
     return ProductComponent;
 }());
@@ -5899,6 +5889,259 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
 
+
+/***/ }),
+
+/***/ "../../../../moment/locale recursive ^\\.\\/.*$":
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "../../../../moment/locale/af.js",
+	"./af.js": "../../../../moment/locale/af.js",
+	"./ar": "../../../../moment/locale/ar.js",
+	"./ar-dz": "../../../../moment/locale/ar-dz.js",
+	"./ar-dz.js": "../../../../moment/locale/ar-dz.js",
+	"./ar-kw": "../../../../moment/locale/ar-kw.js",
+	"./ar-kw.js": "../../../../moment/locale/ar-kw.js",
+	"./ar-ly": "../../../../moment/locale/ar-ly.js",
+	"./ar-ly.js": "../../../../moment/locale/ar-ly.js",
+	"./ar-ma": "../../../../moment/locale/ar-ma.js",
+	"./ar-ma.js": "../../../../moment/locale/ar-ma.js",
+	"./ar-sa": "../../../../moment/locale/ar-sa.js",
+	"./ar-sa.js": "../../../../moment/locale/ar-sa.js",
+	"./ar-tn": "../../../../moment/locale/ar-tn.js",
+	"./ar-tn.js": "../../../../moment/locale/ar-tn.js",
+	"./ar.js": "../../../../moment/locale/ar.js",
+	"./az": "../../../../moment/locale/az.js",
+	"./az.js": "../../../../moment/locale/az.js",
+	"./be": "../../../../moment/locale/be.js",
+	"./be.js": "../../../../moment/locale/be.js",
+	"./bg": "../../../../moment/locale/bg.js",
+	"./bg.js": "../../../../moment/locale/bg.js",
+	"./bn": "../../../../moment/locale/bn.js",
+	"./bn.js": "../../../../moment/locale/bn.js",
+	"./bo": "../../../../moment/locale/bo.js",
+	"./bo.js": "../../../../moment/locale/bo.js",
+	"./br": "../../../../moment/locale/br.js",
+	"./br.js": "../../../../moment/locale/br.js",
+	"./bs": "../../../../moment/locale/bs.js",
+	"./bs.js": "../../../../moment/locale/bs.js",
+	"./ca": "../../../../moment/locale/ca.js",
+	"./ca.js": "../../../../moment/locale/ca.js",
+	"./cs": "../../../../moment/locale/cs.js",
+	"./cs.js": "../../../../moment/locale/cs.js",
+	"./cv": "../../../../moment/locale/cv.js",
+	"./cv.js": "../../../../moment/locale/cv.js",
+	"./cy": "../../../../moment/locale/cy.js",
+	"./cy.js": "../../../../moment/locale/cy.js",
+	"./da": "../../../../moment/locale/da.js",
+	"./da.js": "../../../../moment/locale/da.js",
+	"./de": "../../../../moment/locale/de.js",
+	"./de-at": "../../../../moment/locale/de-at.js",
+	"./de-at.js": "../../../../moment/locale/de-at.js",
+	"./de-ch": "../../../../moment/locale/de-ch.js",
+	"./de-ch.js": "../../../../moment/locale/de-ch.js",
+	"./de.js": "../../../../moment/locale/de.js",
+	"./dv": "../../../../moment/locale/dv.js",
+	"./dv.js": "../../../../moment/locale/dv.js",
+	"./el": "../../../../moment/locale/el.js",
+	"./el.js": "../../../../moment/locale/el.js",
+	"./en-au": "../../../../moment/locale/en-au.js",
+	"./en-au.js": "../../../../moment/locale/en-au.js",
+	"./en-ca": "../../../../moment/locale/en-ca.js",
+	"./en-ca.js": "../../../../moment/locale/en-ca.js",
+	"./en-gb": "../../../../moment/locale/en-gb.js",
+	"./en-gb.js": "../../../../moment/locale/en-gb.js",
+	"./en-ie": "../../../../moment/locale/en-ie.js",
+	"./en-ie.js": "../../../../moment/locale/en-ie.js",
+	"./en-nz": "../../../../moment/locale/en-nz.js",
+	"./en-nz.js": "../../../../moment/locale/en-nz.js",
+	"./eo": "../../../../moment/locale/eo.js",
+	"./eo.js": "../../../../moment/locale/eo.js",
+	"./es": "../../../../moment/locale/es.js",
+	"./es-do": "../../../../moment/locale/es-do.js",
+	"./es-do.js": "../../../../moment/locale/es-do.js",
+	"./es.js": "../../../../moment/locale/es.js",
+	"./et": "../../../../moment/locale/et.js",
+	"./et.js": "../../../../moment/locale/et.js",
+	"./eu": "../../../../moment/locale/eu.js",
+	"./eu.js": "../../../../moment/locale/eu.js",
+	"./fa": "../../../../moment/locale/fa.js",
+	"./fa.js": "../../../../moment/locale/fa.js",
+	"./fi": "../../../../moment/locale/fi.js",
+	"./fi.js": "../../../../moment/locale/fi.js",
+	"./fo": "../../../../moment/locale/fo.js",
+	"./fo.js": "../../../../moment/locale/fo.js",
+	"./fr": "../../../../moment/locale/fr.js",
+	"./fr-ca": "../../../../moment/locale/fr-ca.js",
+	"./fr-ca.js": "../../../../moment/locale/fr-ca.js",
+	"./fr-ch": "../../../../moment/locale/fr-ch.js",
+	"./fr-ch.js": "../../../../moment/locale/fr-ch.js",
+	"./fr.js": "../../../../moment/locale/fr.js",
+	"./fy": "../../../../moment/locale/fy.js",
+	"./fy.js": "../../../../moment/locale/fy.js",
+	"./gd": "../../../../moment/locale/gd.js",
+	"./gd.js": "../../../../moment/locale/gd.js",
+	"./gl": "../../../../moment/locale/gl.js",
+	"./gl.js": "../../../../moment/locale/gl.js",
+	"./gom-latn": "../../../../moment/locale/gom-latn.js",
+	"./gom-latn.js": "../../../../moment/locale/gom-latn.js",
+	"./he": "../../../../moment/locale/he.js",
+	"./he.js": "../../../../moment/locale/he.js",
+	"./hi": "../../../../moment/locale/hi.js",
+	"./hi.js": "../../../../moment/locale/hi.js",
+	"./hr": "../../../../moment/locale/hr.js",
+	"./hr.js": "../../../../moment/locale/hr.js",
+	"./hu": "../../../../moment/locale/hu.js",
+	"./hu.js": "../../../../moment/locale/hu.js",
+	"./hy-am": "../../../../moment/locale/hy-am.js",
+	"./hy-am.js": "../../../../moment/locale/hy-am.js",
+	"./id": "../../../../moment/locale/id.js",
+	"./id.js": "../../../../moment/locale/id.js",
+	"./is": "../../../../moment/locale/is.js",
+	"./is.js": "../../../../moment/locale/is.js",
+	"./it": "../../../../moment/locale/it.js",
+	"./it.js": "../../../../moment/locale/it.js",
+	"./ja": "../../../../moment/locale/ja.js",
+	"./ja.js": "../../../../moment/locale/ja.js",
+	"./jv": "../../../../moment/locale/jv.js",
+	"./jv.js": "../../../../moment/locale/jv.js",
+	"./ka": "../../../../moment/locale/ka.js",
+	"./ka.js": "../../../../moment/locale/ka.js",
+	"./kk": "../../../../moment/locale/kk.js",
+	"./kk.js": "../../../../moment/locale/kk.js",
+	"./km": "../../../../moment/locale/km.js",
+	"./km.js": "../../../../moment/locale/km.js",
+	"./kn": "../../../../moment/locale/kn.js",
+	"./kn.js": "../../../../moment/locale/kn.js",
+	"./ko": "../../../../moment/locale/ko.js",
+	"./ko.js": "../../../../moment/locale/ko.js",
+	"./ky": "../../../../moment/locale/ky.js",
+	"./ky.js": "../../../../moment/locale/ky.js",
+	"./lb": "../../../../moment/locale/lb.js",
+	"./lb.js": "../../../../moment/locale/lb.js",
+	"./lo": "../../../../moment/locale/lo.js",
+	"./lo.js": "../../../../moment/locale/lo.js",
+	"./lt": "../../../../moment/locale/lt.js",
+	"./lt.js": "../../../../moment/locale/lt.js",
+	"./lv": "../../../../moment/locale/lv.js",
+	"./lv.js": "../../../../moment/locale/lv.js",
+	"./me": "../../../../moment/locale/me.js",
+	"./me.js": "../../../../moment/locale/me.js",
+	"./mi": "../../../../moment/locale/mi.js",
+	"./mi.js": "../../../../moment/locale/mi.js",
+	"./mk": "../../../../moment/locale/mk.js",
+	"./mk.js": "../../../../moment/locale/mk.js",
+	"./ml": "../../../../moment/locale/ml.js",
+	"./ml.js": "../../../../moment/locale/ml.js",
+	"./mr": "../../../../moment/locale/mr.js",
+	"./mr.js": "../../../../moment/locale/mr.js",
+	"./ms": "../../../../moment/locale/ms.js",
+	"./ms-my": "../../../../moment/locale/ms-my.js",
+	"./ms-my.js": "../../../../moment/locale/ms-my.js",
+	"./ms.js": "../../../../moment/locale/ms.js",
+	"./my": "../../../../moment/locale/my.js",
+	"./my.js": "../../../../moment/locale/my.js",
+	"./nb": "../../../../moment/locale/nb.js",
+	"./nb.js": "../../../../moment/locale/nb.js",
+	"./ne": "../../../../moment/locale/ne.js",
+	"./ne.js": "../../../../moment/locale/ne.js",
+	"./nl": "../../../../moment/locale/nl.js",
+	"./nl-be": "../../../../moment/locale/nl-be.js",
+	"./nl-be.js": "../../../../moment/locale/nl-be.js",
+	"./nl.js": "../../../../moment/locale/nl.js",
+	"./nn": "../../../../moment/locale/nn.js",
+	"./nn.js": "../../../../moment/locale/nn.js",
+	"./pa-in": "../../../../moment/locale/pa-in.js",
+	"./pa-in.js": "../../../../moment/locale/pa-in.js",
+	"./pl": "../../../../moment/locale/pl.js",
+	"./pl.js": "../../../../moment/locale/pl.js",
+	"./pt": "../../../../moment/locale/pt.js",
+	"./pt-br": "../../../../moment/locale/pt-br.js",
+	"./pt-br.js": "../../../../moment/locale/pt-br.js",
+	"./pt.js": "../../../../moment/locale/pt.js",
+	"./ro": "../../../../moment/locale/ro.js",
+	"./ro.js": "../../../../moment/locale/ro.js",
+	"./ru": "../../../../moment/locale/ru.js",
+	"./ru.js": "../../../../moment/locale/ru.js",
+	"./sd": "../../../../moment/locale/sd.js",
+	"./sd.js": "../../../../moment/locale/sd.js",
+	"./se": "../../../../moment/locale/se.js",
+	"./se.js": "../../../../moment/locale/se.js",
+	"./si": "../../../../moment/locale/si.js",
+	"./si.js": "../../../../moment/locale/si.js",
+	"./sk": "../../../../moment/locale/sk.js",
+	"./sk.js": "../../../../moment/locale/sk.js",
+	"./sl": "../../../../moment/locale/sl.js",
+	"./sl.js": "../../../../moment/locale/sl.js",
+	"./sq": "../../../../moment/locale/sq.js",
+	"./sq.js": "../../../../moment/locale/sq.js",
+	"./sr": "../../../../moment/locale/sr.js",
+	"./sr-cyrl": "../../../../moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "../../../../moment/locale/sr-cyrl.js",
+	"./sr.js": "../../../../moment/locale/sr.js",
+	"./ss": "../../../../moment/locale/ss.js",
+	"./ss.js": "../../../../moment/locale/ss.js",
+	"./sv": "../../../../moment/locale/sv.js",
+	"./sv.js": "../../../../moment/locale/sv.js",
+	"./sw": "../../../../moment/locale/sw.js",
+	"./sw.js": "../../../../moment/locale/sw.js",
+	"./ta": "../../../../moment/locale/ta.js",
+	"./ta.js": "../../../../moment/locale/ta.js",
+	"./te": "../../../../moment/locale/te.js",
+	"./te.js": "../../../../moment/locale/te.js",
+	"./tet": "../../../../moment/locale/tet.js",
+	"./tet.js": "../../../../moment/locale/tet.js",
+	"./th": "../../../../moment/locale/th.js",
+	"./th.js": "../../../../moment/locale/th.js",
+	"./tl-ph": "../../../../moment/locale/tl-ph.js",
+	"./tl-ph.js": "../../../../moment/locale/tl-ph.js",
+	"./tlh": "../../../../moment/locale/tlh.js",
+	"./tlh.js": "../../../../moment/locale/tlh.js",
+	"./tr": "../../../../moment/locale/tr.js",
+	"./tr.js": "../../../../moment/locale/tr.js",
+	"./tzl": "../../../../moment/locale/tzl.js",
+	"./tzl.js": "../../../../moment/locale/tzl.js",
+	"./tzm": "../../../../moment/locale/tzm.js",
+	"./tzm-latn": "../../../../moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "../../../../moment/locale/tzm-latn.js",
+	"./tzm.js": "../../../../moment/locale/tzm.js",
+	"./uk": "../../../../moment/locale/uk.js",
+	"./uk.js": "../../../../moment/locale/uk.js",
+	"./ur": "../../../../moment/locale/ur.js",
+	"./ur.js": "../../../../moment/locale/ur.js",
+	"./uz": "../../../../moment/locale/uz.js",
+	"./uz-latn": "../../../../moment/locale/uz-latn.js",
+	"./uz-latn.js": "../../../../moment/locale/uz-latn.js",
+	"./uz.js": "../../../../moment/locale/uz.js",
+	"./vi": "../../../../moment/locale/vi.js",
+	"./vi.js": "../../../../moment/locale/vi.js",
+	"./x-pseudo": "../../../../moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "../../../../moment/locale/x-pseudo.js",
+	"./yo": "../../../../moment/locale/yo.js",
+	"./yo.js": "../../../../moment/locale/yo.js",
+	"./zh-cn": "../../../../moment/locale/zh-cn.js",
+	"./zh-cn.js": "../../../../moment/locale/zh-cn.js",
+	"./zh-hk": "../../../../moment/locale/zh-hk.js",
+	"./zh-hk.js": "../../../../moment/locale/zh-hk.js",
+	"./zh-tw": "../../../../moment/locale/zh-tw.js",
+	"./zh-tw.js": "../../../../moment/locale/zh-tw.js"
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "../../../../moment/locale recursive ^\\.\\/.*$";
 
 /***/ }),
 
