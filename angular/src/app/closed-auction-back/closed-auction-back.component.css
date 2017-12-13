@@ -242,4 +242,12 @@ hr {
 }
 .lead {
     margin-bottom: 10px;
-}    
+}   
+
+.brdr label{
+    float: left;
+padding-right: 10px;
+padding-top: 6px;
+} 
+.btn2{border-radius:0px;    padding: 11px 20px; }
+.brdr{border:1px solid #ccc;padding:5px 20px; } 

@@ -8,6 +8,9 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {UserService} from './services/user.service';
 import { HttpModule } from '@angular/http';
+// import { DataTablesModule } from 'angular-datatables';
+
+
 
 
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -22,15 +25,10 @@ import { DeletedUsersComponent } from './deleted-users/deleted-users.component';
 
 
 import { ProductComponent } from './product/product.component';
-
+// import { ProductDetailComponent } from './product-detail/product-detail.component';
 // import { DataTablesModule } from 'angular-datatables';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { AppComponent } from './app.component';
-
-
-
-
-
 
 
 import { NavigationComponent } from './navigation/navigation.component';
@@ -39,6 +37,10 @@ import { CardComponent } from './card/card.component';
 import { FinishedauctionComponent } from './finishedauction/finishedauction.component';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import { UpcomingauctionsComponent } from './upcomingauctions/upcomingauctions.component';
+// import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
+import { FileUploader } from 'ng2-file-upload';
+
+// import { ImageUploadModule } from "angular2-image-upload";
 // import { ImageUploadModule } from "angular2-image-upload";
 
 
@@ -65,6 +67,8 @@ import { CardRunningComponent } from './card-running/card-running.component';
 import { WinnerconfirmComponent } from './winnerconfirm/winnerconfirm.component'
 
 import { RegistrationComponent } from './registration/registration.component';
+
+// import { ImageUploadModule } from "angular2-image-upload";
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 //  import { DataTablesModule } from 'angular-datatables';
 import * as $ from 'jquery';
@@ -72,7 +76,10 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { FilterPipe } from './filter.pipe';
 import { ManageProductComponent } from './manage-product/manage-product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+// import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductPipe } from './product.pipe';
+//import { NgDatepickerModule } from 'ng2-datepicker';
+import { NgDatepickerComponent } from './ng-datepicker/ng-datepicker.component';
 import { AdminviewedComponent } from './adminviewed/adminviewed.component';
 //import { NgDatepickerModule } from 'ng2-datepicker';
 import { UploadComponent } from './upload/upload.component';
@@ -116,13 +123,59 @@ import {
   MatStepperModule,
 } from '@angular/material';
 
+import { CommonModule } from '@angular/common';
+import { NgSlimScrollModule } from 'ngx-slimscroll';
+import { DateSearchPipe } from './date-search.pipe';
+import { AuctionBackComponent } from './auction-back/auction-back.component';
+//import { DaterangePickerModule } from 'ng2-daterange-picker';
+import { Daterangepicker } from 'ng2-daterangepicker';
+import { Config } from './../../config/config';
+import { MyauctiontableComponent } from './myauctiontable/myauctiontable.component';
+import { SearchPipe } from './search.pipe';
+
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatStepperModule,
+} from '@angular/material';
+import {CdkTableModule} from '@angular/cdk/table';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MaterialComponent } from './material/material.component';//angularmaterial
+
 const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
+  {path:'product-detail/:id', component:ProductDetailComponent},
    {path:'product', component:ProductComponent},
-  {path:'manage-product', component:ManageProductComponent},
-  {path:'', redirectTo:'/login', pathMatch:'full'},
-  {path:'registration', component:RegistrationComponent},
+  {path:'product-list', component:ProductListComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
   {path:'login', component:LoginComponent},  
   {path:'socialmedia/:id', component:SocialmediaComponent},
@@ -136,23 +189,20 @@ const appRoutes: Routes = [
   {path:'upcomingauction', component: UpcomingauctionsComponent},
   {path:'finishedauction', component: FinishedauctionComponent},
   {path:'runningauction', component: RunningauctionComponent},
-
-  
-  {path:'', redirectTo:'/registration', pathMatch:'full'},
-  {path:'registration', component:RegistrationComponent},
-  
   {path:'home', component:HomeComponent},
   {path:'myauctions', component:MyauctionsComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
-  {path:'closed-auction', component:ClosedAuctionBackComponent},
-  {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
-  {path:'running-auction', component:RunningAuctionBackComponent},
+
+  // {path:'closed-auction', component:ClosedAuctionBackComponent},
+  // {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
+  // {path:'running-auction', component:RunningAuctionBackComponent},
+  {path:'auctions', component:AuctionBackComponent},
+
   {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
-  {path:'users-sub', component:UsersSubComponent},
-  {path:'active-users', component:ActiveUsersComponent},
+  { path: '**', component: LoginComponent },
 
-  {path:'upload', component:UploadComponent}//file upload
-
+  {path:'upload', component:UploadComponent},//file upload
+  {path:'material', component:MaterialComponent}//file upload
 ]
 import {CdkTableModule} from '@angular/cdk/table';
 
@@ -224,6 +274,7 @@ export class DemoMaterialModule {}
     UpcomingAuctionBackComponent,
     RunningAuctionBackComponent,
     SocialmediaComponent,
+    FileSelectDirective,
 
     ReadMoreComponent,
     CountDownTimerComponent,
@@ -236,6 +287,13 @@ export class DemoMaterialModule {}
     FileSelectDirective,
     UsersSubComponent,
     ActiveUsersComponent
+    NgDatepickerComponent,
+    DateSearchPipe,
+    AuctionBackComponent,
+    //DaterangePickerModule
+    MyauctiontableComponent,
+    SearchPipe,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
@@ -250,33 +308,45 @@ export class DemoMaterialModule {}
     NKDatetimeModule,
     //  DataTablesModule
     // Ng2DatetimePickerModule
-    BrowserModule,
+    //BrowserModule,
     // DataTablesModule,
     FormsModule,
     ReactiveFormsModule,
     Ng2PageScrollModule,
     HttpModule,
+    // ImageUploadModule,
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     DemoMaterialModule
     
    // NgDatepickerModule
+    NgSlimScrollModule,
+  //  NgDatepickerModule
     // DataTablesModule,
-    // ImageUploadModule,
+    ImageUploadModule,
     // NKDatetimeModule,
     // NKDatetimeModule,
     //  DataTablesModule
     // Ng2DatetimePickerModule
     //ImageUploadModule.forRoot(), //file upload
+    Daterangepicker,
+    BrowserAnimationsModule,
+    DemoMaterialModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+     //angular material
   ],
   
   providers: [ProductServiceService,
     UserService,
     AuthGuard,
-    ProductService
+    ProductService,
+    Config
   ],
  
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  //exports: [ NgDatepickerComponent, CommonModule, FormsModule, NgSlimScrollModule ]
+  
 })
 export class AppModule { }
 platformBrowserDynamic().bootstrapModule(AppModule);

@@ -4,6 +4,7 @@ import { PasswordValidation } from './password-validation';
 // import { EqualTextValidator } from "angular2-text-equality-validator"; 
 import { UserService} from '../services/user.service';
 import { CanActivate, Router } from '@angular/router';
+// import { FlashMessagesService } from 'angular2-flash-messages';
 
 @Component({
   selector: 'registration',
@@ -13,6 +14,8 @@ import { CanActivate, Router } from '@angular/router';
 })
 
 export class RegistrationComponent implements OnInit {
+  showSuccess : Boolean = false;
+  showDanger : Boolean = false;
   timestamp = new Date().getTime().toString();
   newUser = {
     name : '',
@@ -27,7 +30,9 @@ export class RegistrationComponent implements OnInit {
       confirmPassword : ''
     }
 
-  constructor(private userService:UserService, private routes: Router) { }
+  constructor(private userService:UserService, private routes: Router,
+    //  private _flashMessagesService: FlashMessagesService
+    ) { }
 
   ngOnInit() {
   }
@@ -36,13 +41,20 @@ export class RegistrationComponent implements OnInit {
     console.log(this.newUser);
     this.userService.registerUser(this.newUser).subscribe(data => {
       if(data.success==true){
-       alert("Account created successfully, Please verify your Email address");
-       this.routes.navigate(['/login']);
-        console.log("successfull created user");
+        // this._flashMessagesService.show('Account created successfully, Please verify your Email address', { cssClass: 'alert-success', timeout: 4000 });
+        this.showSuccess = true;
+        setTimeout(() => {  
+          this.routes.navigate(['/login']);
+          console.log("successfull created user");
+        }, 3000);
       
       } else {
-        alert("Error");
-        console.log("Error created user");
+        // this._flashMessagesService.show('The email address you specified is already in use. Please login to continue', { cssClass: 'alert-danger', timeout: 4000 });
+        this.showDanger = true;
+        setTimeout(() => {  
+          this.showDanger = false;
+          console.log("Error created user");
+        }, 4000);
       }
     });
   }

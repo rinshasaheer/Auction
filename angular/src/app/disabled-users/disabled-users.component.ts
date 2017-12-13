@@ -11,6 +11,7 @@ export class DisabledUsersComponent implements OnInit {
   displayedColumns = [ 'name', 'phone','email','action'];
   dataSource: MatTableDataSource<any>;
 
+<<<<<<< HEAD
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
@@ -22,6 +23,14 @@ export class DisabledUsersComponent implements OnInit {
   }
   refresh(){
     const users = [];
+=======
+  ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="admin"){
+        this.router.navigate(['/login']);
+      }
+    });
+>>>>>>> 29d2cca660004d444d1d556ab4b5640c97ea3b04
     this.userService.getDisabledUsers().subscribe(data=>{
         // data.forEach((item, index) => {
         //   users.push({

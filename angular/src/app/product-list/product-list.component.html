@@ -1,17 +1,31 @@
-<!-- <ul>
-    <li (click) ="onSelect(pro)" *ngFor="let pro of pros"><a>{{pro.name}}</a></li>
-</ul> -->
-<div *ngIf="tableview" class="col-md-9">
 
+
+<div id="wrapper">
+  
+<side-bar></side-bar>
+  
+          <div id="page-wrapper">
+  
+              <div class="container-fluid">
+  
+            
+                 <header-title [title]="'List Products'"></header-title>
+             
+  
+              </div>
+<div class="col-md-9 tab" >
+<br>
 
   <label class="search" >Search Product: </label>
   <input type="text" [(ngModel)]="term" />
 
 <br>
+<br>
 
 <table class="table table-striped">
     <tr>
       <th>Name</th>
+      <th>Image</th>
       <th>Bid Amount</th>
       <th>Minimum Bid Rate</th>
       <th>Start date</th>
@@ -21,18 +35,52 @@
       <th>Action</th>
     </tr>
     
-    <tr  *ngFor="let pro of pros | filter:term ">
-
+    <tr  *ngFor="let pro of arr1 | filter:term ">
+  
     <td>{{pro.name}}</td>
+    <!-- <td><img src="assets/uploads/{{product.image||'default.png'}}" alt="" class="image"></td> -->
+    <td><img src="assets/uploads/{{pro.image || 'defualt1.jpg'}}" alt="" class="image"></td>
     <td>{{pro.bid_amount}}</td>
     <td>{{pro.min_bid_rate}}</td>
     <td>{{pro.start_date}}</td>
-    <td>{{pro.start_date}}</td>
+    <td>{{pro.end_date}}</td>
     <td>{{pro.desc}}</td>
   
-    <!-- <td>{{pro.status}}</td> -->
-    <td (click) ="onSelect(pro)" ><input type="submit" value="Action" class="btn btn-primary" ><br>
+  
+    <td> 
+      <a [routerLink]="['/product-detail/'+pro._id]" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="auto" title="Edit"><i class="fa fa-pencil"></i></a>
+      <!-- <a (click)="deleteProduct(pro._id)" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="auto" title="Delete"><i class="fa fa-trash-o"></i></a> -->
+      <a href="#" class="btn btn-primary btn-xs" data-target="#myModal" data-toggle="modal" ><i class="fa fa-trash-o"></i></a>
+    </td>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            <!-- <div class="modal-header"> -->
+              <!-- <h4 class="modal-title">Are you sure to delete?</h4> -->
+            <!-- </div> -->
+            <div class="modal-body">
+                <h4 class="modal-title">Are you sure to delete?</h4>
+            
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" (click)="deleteProduct(pro._id)" class="btn btn-default" data-dismiss="modal">Save</button>
+            </div>
+          </div>
+      
+        </div>
+      </div>
 
     </tr>
   </table>
 </div>
+   
+</div>
+
+           
+</div>
+
+
+<footer></footer> 

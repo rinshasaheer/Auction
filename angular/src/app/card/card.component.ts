@@ -2,6 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { product } from './../schema/product';
 import { CapitalizePipe } from './../capitalize.pipe';
 import { ProductServiceService } from './../services/product-service.service';
+import {UserService} from '../services/user.service';
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -22,10 +25,25 @@ export class CardComponent implements OnInit {
   myCloseStatus: boolean = false;
   upcoming: boolean = false;
   interestMatch = false;
-  constructor( private _productService: ProductServiceService) { 
+  isTimeOver = false;
+  constructor( private _productService: ProductServiceService, private userService: UserService, private router: Router) { 
   }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="user"){
+        this.router.navigate(['/login']);
+      }
+    });
+    this.cardAction();
+  }
+
+  timeOver(){
+    //alert('time over');
+    this.isTimeOver = true;
+  }
+
+  cardAction(){
     if(this.item){
       let tmp;
       if(this.myauction){
@@ -64,9 +82,8 @@ export class CardComponent implements OnInit {
         }
       }
     }
+
   }
-
-
   updateInterested(id){
     this._productService.addInterestedCandidate(id).subscribe(data=>{ 
       console.log(data);

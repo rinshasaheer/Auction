@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { UserService} from '../services/user.service';
 import { Router} from '@angular/router';
+import * as socketIo from 'socket.io-client';
+import { Config } from './../../../config/config';
 
 
 @Component({
@@ -12,32 +14,51 @@ import { Router} from '@angular/router';
 export class RunningauctionComponent implements OnInit {
   user : any;
   users : object;
-  products: object;
+  products: any;
+  product_ids: Array<String> = [];
   winnerId : object;
   involvedUsers : any = [];
   private socket: any; 
   constructor(
     private productService: ProductService,
-    private userService:UserService
-  ) {
+    private userService:UserService,
+    private router: Router,
+    private config: Config
     
+  ) {
+    this.socket  = socketIo(config.socketURL);
    }
 
   ngOnInit() {
-
-     
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="user"){
+        this.router.navigate(['/login']);
+      }
+    });
+    this.socket.on('startbid', (data) => {
+     // console.log(data);
+      if(!this.product_ids.includes(data.prod_id)){
+        this.productService.getProduct(data.prod_id).subscribe(data=>{
+          this.products.push(data);
+          this.product_ids.push(data._id);
+        });
+      }
+      
+    })
 
     this.userService.getLoggedUSerDetails().subscribe(data=>{
         this.user = data;
-        //console.log(this.user._id);
+        console.log(this.user);
     });
     this.userService.getAllUsersById().subscribe(data=>{
         this.users = data;
-        console.log(this.users);
+       console.log(this.users);
     });
     this.productService.getAllrunningProduct().subscribe(data=>{
       console.log(data);
-      //  data.forEach((item, index) => {
+        data.forEach((item, index) => {
+          this.product_ids.push(item._id);
+        });
       //    var lastBidprice = item.bid_amount;
       //    var lastBiduser = '';
       //    var lastBidTime = '';

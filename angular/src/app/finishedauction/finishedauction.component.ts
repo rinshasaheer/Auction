@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { product } from './../schema/product';
 import { ProductServiceService } from './../services/product-service.service';
+import {UserService} from '../services/user.service';
+import {Router} from '@angular/router';
+import * as socketIo from 'socket.io-client';
+import { Config } from './../../../config/config';
 
 @Component({
   selector: 'app-finishedauction',
@@ -12,9 +16,34 @@ export class FinishedauctionComponent implements OnInit {
 
   products: Array<product>;
   existStatus: boolean = false;
-  constructor(private _productService: ProductServiceService) { }
+  private socket: any; 
+  
+  constructor(private _productService: ProductServiceService, 
+    private userService: UserService, 
+    private router: Router,
+    private config: Config) { 
+    this.socket = socketIo(config.socketURL);
+    
+  }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="user"){
+        this.router.navigate(['/login']);
+      }
+    });
+    // console.log(this.products);
+    this.loadAuction();
+    // console.log(Date())
+    this.socket.on('closebid', (data) => {
+      console.log(data);
+      this.loadAuction();
+     })  
+  }
+
+
+
+  loadAuction(){
     this._productService.loadClosedProduct()
     .subscribe(resProducts => {
       this.products = resProducts;
@@ -24,7 +53,5 @@ export class FinishedauctionComponent implements OnInit {
       }
       console.log(this.existStatus);
     });
-    // console.log(this.products);
   }
-
 }

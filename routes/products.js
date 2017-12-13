@@ -72,15 +72,15 @@ var returnRouter = function(io) {
                     // console.log(req.file);
         
                     if(err){
-        
+                        console.log("h");
                          res.json({error_code:1,err_desc:err});
         
                          return;
         
                     }
-        
+                        console.log(fileName);
                      res.json({error_code:0,err_desc:null, filename:fileName});
-        
+                    
                 });
         
             });
@@ -139,14 +139,24 @@ router.get('/inform-closedproduct/:id',(req,res,next)=>{
         prod_id : req.params.id
     });
 });
-//PRODUCT INFO START BID info 3001  updateapp
+//PRODUCT INFO START info 3001 updateapp
 router.get('/inform-startproduct/:id',(req,res,next)=>{
-    // console.log('no');
-     console.log(req.params.id);
+     console.log('new start');
+    // console.log(req.params.id);
     io.sockets.emit("startbid", {
         prod_id : req.params.id
     });
 });
+
+//notification info 3001 updateapp
+router.get('/inform-notifi-user/:id',(req,res,next)=>{
+    // console.log('yes');
+//    console.log("noti"+req.params.id);
+    io.sockets.emit("notification", {
+        user_id : req.params.id
+    });
+});
+
 //var async = require('async');
 
 
@@ -158,22 +168,51 @@ router.get('/inform-startproduct/:id',(req,res,next)=>{
 
 router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),function(req,res,next){
 
-    console.log(req.body);
+    //console.log(req.body);
 
     if (req.headers && req.headers.authorization) {
 
         var authorization = req.headers.authorization.substring(4), decoded;
         try {
             decoded = jwt.verify(authorization, config.secret);
-            console.log(decoded);
+            // console.log(decoded);
+            let lastwinner = {};
+            Product.getProductById(req.body.pid,(err, product)=>{
+                if(product.bidders.length != 0){
+                    User.getUserById(product.bidders[product.bidders.length-1].user_id,(err, user)=>{
+                        console.log(user);
+                        lastwinner = user;
+                    });
+                    //lastwinnerId = product.bidders[product.bidders.length-1].user_id;
+                }
+            });
             Product.findOneAndUpdate(
-                {"_id" : req.body.pid},
+                {"_id" : req.body.pid,},
                 { $push:{"bidders": {user_id: decoded._id, amount:req.body.amount }} },
                 { new : true },
                 (err, user)=>{
                     if(err){
                         res.json({success: false, msg : "Failed, went somthing wrong "});
                     }else{
+
+                        if(lastwinnerEmail != ''){
+                            nodemailer.createTestAccount((err, account) => {
+                                let mailOptions = {
+                                    from: 'mean.symptots@gmail.com', // sender address
+                                    to: lastwinner.email,
+                                    subject: 'Alert! Come up with a new bid. Somebody has overtaken you.', // Subject line
+                                    text: '', // plain text body
+                                    html: '<b><h3>Dear ' + lastwinner.name + ',</h3><br/>We have now evaluated that some other bidder have overtaken you. We would be happy to inform that, new submissions from you are welcome until the bid time is closed.  Come up on and got a chance to win. </b>' // html body
+                                };
+                                transporter.sendMail(mailOptions, (error, info) => {
+                                    if (error) {
+                                        // console.log('error');
+                                        return console.log(error);
+                                    }
+                                
+                                });
+                            });
+                        }
                         // write code to emit socket    
                         // io.sockets.on('connection', function (socket) {
                         //     console.log('New User Connected');
@@ -252,7 +291,48 @@ router.get('/runnig_products',(req,res)=>{
      })
 });
  
+// router.post('/addnew',(req,res,next)=>{
 
+
+//     prodObj = {
+//         name:  req.body.name,
+//         image: req.body.image,
+//         desc: req.body.desc,
+//         bid_amount: req.body.amount,
+//         min_bid_rate: req.body.min_bid_rate,
+//         start_date : req.body.start_date,
+//         end_date : req.body.end_date,
+//     };
+//     Product.addProduct(prodObj,(err, user)=>{
+//         if(err){
+//             res.json({success: false, msg : "Failed, went somthing wrong "});
+//         }else{
+//             res.json({success: true, msg : "Poll Added Seccessfully, Redirecting..."});
+//         }
+//     });
+// });
+
+
+router.get('/products',(req,res,next)=>{
+    Product.getAllProduct((err,poll)=>{
+        if(err) throw err;
+        return res.json(poll);
+    })
+    
+});
+
+
+// router.get('/closed_products',(req,res,next)=>{
+//     Product.getAllCloasedProduct((err,poll)=>{
+//         if(err) throw err;
+//         return res.json(poll);
+//     });
+// });
+
+router.get('/upcoming_products',(req,res,next)=>{
+    Product.getAllUpcomingProduct((err,product)=>{
+    });
+});
 router.get('/products',(req,res,next)=>{
     Product.getAllProduct((err,product)=>{
         if(err) throw err;
@@ -286,37 +366,58 @@ router.delete('/delete/:id',(req,res,next)=>{
 router.get('/product/:id',(req,res,next)=>{
     Product.getProductById(req.params.id, (err,product)=>{
         if(err) throw err;
-        console.log(product);
+        // console.log(product);
         return res.json(product);
     })
 });
 
 
-router.put('/update/:id',function(req,res){
-//    console.log(req);
-   pro.findByIdAndUpdate(req.params.id,
-    {
-        $set : {name: req.body.name, desc : req.body.desc, bid_amount : req.body.bid_amount, min_bid_rate : req.body.min_bid_rate, start_date : req.body.start_date, end_date : req.body.end_date  }
-    },
-    {
-    new :true
-    },
-    function(err, updatedPro){
-        if(err){
-            res.send("error updating product");
-        }else{
-            res.json(updatedPro);
-        }
-    }
+// router.put('/update/:id',function(req,res){
+// //    console.log(req);
+// Product.findByIdAndUpdate(req.params.id,
+//     {
+//         $set : {name: req.body.name, desc : req.body.desc, bid_amount : req.body.bid_amount, min_bid_rate : req.body.min_bid_rate, start_date : req.body.start_date, end_date : req.body.end_date  }
+//     },
+//     {
+//     new :true
+//     },
+//     function(err, updatedPro){
+//         if(err){
+//             res.send("error updating product");
+//         }else{
+//             res.json(updatedPro);
+//         }
+//     }
 
-   )
-});
+//    )
+// });
+router.put('/updateProduct/:id',function(req,res){
+    // console.log(req.body);
+    Product.findByIdAndUpdate(req.params.id,
+        {
+            $set : {name: req.body.name, desc : req.body.desc, bid_amount : req.body.bid_amount, min_bid_rate : req.body.min_bid_rate, start_date : req.body.start_date, end_date : req.body.end_date, image:req.body.image }
+        },
+        {
+        new :true
+        },
+        function(err, updatedPro){
+            if(err){
+                res.send("error Updating product");
+            }else{
+                res.json(updatedPro);
+                // console.log(updatedPro);
+            }
+        }
+    
+       )
+    });
+
 
 
 
 router.put('/updatedel/:id',function(req,res){
     //    console.log(req);
-       pro.findByIdAndUpdate(req.params.id,
+    Product.findByIdAndUpdate(req.params.id,
         {
             $set : {status : false  }
         },
@@ -338,7 +439,7 @@ router.put('/updatedel/:id',function(req,res){
 router.get('/completedproduct',(req,res,next)=>{
     Product.getFinishedAuctionProduct((err,products)=>{
         if(err) throw err;
-        // console.log(products[0].start_date);
+        // console.log(Date().toString());
         return res.json(products);
     })
 });
@@ -354,21 +455,22 @@ router.get('/upcomingproduct',(req,res,next)=>{
 router.get('/highBid/:id',(req,res,next)=>{
     Product.getHighestBid(req.params.id,(err,products)=>{
         if(err) throw err;
-        console.log(products);
+        // console.log(products);
         return res.json(products);
     })
 });
 
 router.get('/myauctionproduct/:id',(req,res,next)=>{
-    // console.log("s");
+    console.log(req.params.id);
     Product.getMyAuctionProduct(req.params.id,(err,products)=>{
         if(err) throw err;
+        // console.log(products);
         return res.json(products);
     })
 });
 
 router.put('/updateInterested/:id',passport.authenticate('jwt',{session:false}),(req,res,next)=>{
-    console.log("uInter");
+    // console.log("uInter");
     if (req.headers && req.headers.authorization) {
         var authorization = req.headers.authorization.substring(4),
             decoded;
@@ -484,6 +586,9 @@ router.put('/statusreject/:id',(req,res,next)=>{
                                     io.sockets.emit("userbidreject", {
                                         prod_id : req.params.id
                                     });
+                                    // io.sockets.emit("notification", {
+                                    //     user_id : id1
+                                    // });
                                     return res.json(doc);
 
                                 }
@@ -531,6 +636,8 @@ router.put('/adminViewed/:id', function(req, res){
         
         });
     });
+
+
 
 module.exports = router;
 //module.exports = router;

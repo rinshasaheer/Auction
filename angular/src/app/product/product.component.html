@@ -1,6 +1,5 @@
-<body>
-    
-        <div id="wrapper">
+<br>
+<div id="wrapper">
     
             <!-- Navigation -->
 <side-bar></side-bar>
@@ -14,13 +13,11 @@
                     <!-- /.row -->
     
                 </div>
-                <!-- /.container-fluid -->
 
 <div class="wrapper">
         <div class="col-md-9 addpro">
                 <!--<h3 class="headng" >Add a Product</h3>-->
-                <br>
-  
+               
   <!-- <form class="well" role="form"   #f="ngForm" (ngSubmit)="f.form.valid && addProduct()" novalidate> -->
         <form class="well" role="form"  #f="ngForm" (ngSubmit)="f.form.valid && addProduct();" novalidate>
       <!-- <form #form='ngForm' (ngSubmit)="addProduct()" class="well" > -->
@@ -32,7 +29,12 @@
                 <div *ngIf="f.submitted && !name.valid "  class="alert alert-danger"> ! Name is required</div>
              
             </div>
-        
+            <div class="form-group">
+                <label for="single">Select Image</label>
+                <input type="file" class="" name="single" ng2FileSelect [uploader]="uploader" (change)="imageOr();"/>                                  
+             </div>
+              
+
             <div class="form-group" >
                     <label >  Bid Amount *</label>
                     <input id="bid_amount" name="bid_amount" class="form-control"
@@ -52,12 +54,14 @@
                     </div>
         
              <div class="form-group" >
-                    <label > Bid Start time </label>
-                    <datetime name="start_date" [(ngModel)]="newproduct.start_date" ></datetime>
+                    <label > Bid Start time *</label>
+                    <datetime name="start_date" required  [(ngModel)]="newproduct.start_date"  [datepicker]= "datepickerOpts" [hasClearButton]="true" ></datetime>
+                    <div *ngIf="f.submitted && !newproduct.start_date"  class="alert alert-danger"> !Start time is required</div>
                 </div>
                 <div class="form-group" >
-                        <label > Bid End time </label>
-                        <datetime name = "end_date"  [(ngModel)]="newproduct.end_date"></datetime>
+                        <label > Bid End time *</label>
+                        <datetime name = "end_date"  required [(ngModel)]="newproduct.end_date" [datepicker]= "datepickerOpts" [hasClearButton]="true"></datetime>
+                        <div *ngIf="f.submitted && !newproduct.end_date"  class="alert alert-danger"> !End time is required</div>
                     </div>
 
             
@@ -80,28 +84,20 @@
                 <br>
                 <textarea rows="4" cols="70" name="desc" [(ngModel)]="newproduct.desc" ></textarea>
             </div>
-            <div class="form-group">
-                <label for="single">Select Image</label>
-                <input type="file" class="" name="single" ng2FileSelect [uploader]="uploader"  />                                  
-             </div>
-              
+           
                 
             <!-- <input type="submit" class="btn btn-info blakbtn" value="Submit"  > -->
             <button type= "submit" class="btn btn-primary">Submit</button>
            
         </form>
   
-      </div>
-     
-    </div>
-
+      
    
+    </div>
+    <!-- /#page-wrapper -->
+   
+               
 </div>
-<!-- /#page-wrapper -->
 
-           
-</div>
-
-<!-- <footer></footer>  -->
-  
-</body>
+<footer></footer> 
+      

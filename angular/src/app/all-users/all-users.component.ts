@@ -57,7 +57,7 @@ ngOnInit() {
 
   deleteUser(id){  
     this.userService.deleteUser(id).subscribe(data=>{
-      console.log(data);
+      // console.log(data);
       if(data.success){
         this.refresh();
        // this.refresh();
@@ -72,7 +72,7 @@ ngOnInit() {
 
   blockUser(id){  
     this.userService.blockUser(id).subscribe(data=>{
-      console.log(data);
+      // console.log(data);
       if(data.success){
         this.refresh();
        // this.refresh();
@@ -86,7 +86,7 @@ ngOnInit() {
   }
   unblockUser(id){
     this.userService.unblockUser(id).subscribe(data=>{
-      console.log(data);
+      // console.log(data);
       if(data.success){
         this.refresh();
        // this.refresh();
