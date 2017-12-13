@@ -18,6 +18,7 @@ import 'rxjs/add/operator/map';
 // import { FormsModule, FormControl, FormGroup, Validators }   from '@angular/forms';
 // import { answer } from './../answer';
 
+import { Config } from './../../../config/config';
 
 import { FileUploader } from 'ng2-file-upload'; // File Upload
 

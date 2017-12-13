@@ -85,7 +85,7 @@ router.get('/users',(req,res,next)=>{
     User.getUsers((err,user)=>{
       //  console.log(user);
        if(err) throw err;
-       return res.json(user);
+    //    return res.json(user);
     })    
 });
 
@@ -97,6 +97,15 @@ router.get('/disabledusers',(req,res,next)=>{
        
     })    
 });
+//all active users
+router.get('/activeusers',(req,res,next)=>{
+    User.getActiveUsers((err,user)=>{
+        if(err) throw err;
+        return res.json(user);
+       
+    })    
+});
+
 
 //all deleted users
 router.get('/deletedusers',(req,res,next)=>{
@@ -300,17 +309,18 @@ router.put('/genToken/:id', function(req, res){
     
 
 router.get('/users_id_as_index',(req,res,next)=>{
- //   console.log('testing');
-    User.getUsers((err,user)=>{
+   console.log('testing');
+    User.getAllUsers((err,user)=>{
         if(err) throw err;
         var users = {};
+        console.log(user);
         user.forEach((usr, i) => {
             tmp = {};
             tmp._id = usr._id;
             tmp.name = usr.name;
             tmp.email = usr.email;
             tmp.date_tym = usr.date_tym;
-            users[usr._id] = tmp;
+            users[usr._id] = usr;
         });
         return res.json(users);
        
@@ -323,7 +333,7 @@ router.get('/get_loggedin_user',(req,res,next)=>{
             decoded;
             try {
                 decoded = jwt.verify(authorization, config.secret);
-               console.log(decoded);
+            //    console.log(decoded);
                 res.json(decoded);
             } catch (e) {
                 // return res.status(401).send('unauthorized');

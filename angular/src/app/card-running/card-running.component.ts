@@ -3,6 +3,7 @@ import { ProductService } from '../services/product.service';
 import {UserService} from '../services/user.service';
 import {Router} from '@angular/router';
 import * as socketIo from 'socket.io-client';
+import {Config} from './../../../config/config' 
 
 @Component({
   selector: 'app-card-running',
@@ -11,8 +12,8 @@ import * as socketIo from 'socket.io-client';
   inputs: ['product','users','user'],
 })
 export class CardRunningComponent implements OnInit {
-    user:any;
-    users:any;
+   user:any;
+   users:any;
    product:any;
    btnLabel = 'Bid Now';
    btnClass = 'btn-primary';
@@ -25,9 +26,12 @@ export class CardRunningComponent implements OnInit {
    isTimeOver = false;
    private socket: any; 
   constructor(
-    private productService: ProductService, private userService: UserService, private router: Router
+    private productService: ProductService, 
+    private userService: UserService, 
+    private router: Router,
+    private config: Config
   ) {
-    this.socket  = socketIo('http://localhost:3000');
+    this.socket  = socketIo(config.socketURL);
    }
 
   ngOnInit() {
@@ -59,7 +63,7 @@ export class CardRunningComponent implements OnInit {
     var lastBiduserId = '';
 
     this.product.bidders.forEach((bidder, i) => {
-      console.log(bidder);
+     // console.log(bidder);
       if(bidder.amount >= lastBidprice){
          lastBidprice = bidder.amount;
          lastBiduser = this.users[bidder.user_id].name;

@@ -120,16 +120,26 @@ passport.deserializeUser(function(id, done) {
     function(req, token, refreshToken, profile, done) {
         // console.log(profile);
         process.nextTick(function() {
-            if(!req.user){
+            // if(!req.user){
                         // try to find the user based on their google id
-                        User.findOne({ 'google.id' : profile.id }, function(err, user) {
+                        User.findOne({ 'email' : profile.emails[0].value }, function(err, user) {
                             if (err)
                                 return done(err);
             
                             if (user) {
             
                                 // if a user is found, log them in
+                                user.google.id    = profile.id;
+                                user.google.token = token;
+                                user.google.name  = profile.displayName;
+                                user.google.email = profile.emails[0].value;
+                                user.verified = "true";
+                                user.save(function(err) {
+                                if (err)
+                                    throw err;
                                 return done(null, user);
+                                });
+                                // return done(null, user);
                             } else {
                                 // if the user isnt in our database, create a new user
                                 var newUser          = new User();
@@ -150,24 +160,6 @@ passport.deserializeUser(function(id, done) {
                                 });
                             }
                         });
-                    }else {
-                        // user already exists and is logged in, we have to link accounts
-                        var user            = req.user; // pull the user out of the session
-            
-                        user.google.id    = profile.id;
-                        user.google.token = token;
-                        user.google.name  = profile.displayName;
-                        user.google.email = profile.emails[0].value;
-                        user.name = profile.displayName;
-                        user.email = profile.emails[0].value;
-                        user.verified = "true";
-                        user.save(function(err) {
-                            if (err)
-                                throw err;
-                            return done(null, user);
-                        });
-            
-                    }
                     });
             
     }

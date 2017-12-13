@@ -3,6 +3,7 @@ import { ProductService } from '../services/product.service';
 import { UserService} from '../services/user.service';
 import { Router} from '@angular/router';
 import * as socketIo from 'socket.io-client';
+import { Config } from './../../../config/config';
 
 
 @Component({
@@ -21,9 +22,11 @@ export class RunningauctionComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private userService:UserService,
-    private router: Router
+    private router: Router,
+    private config: Config
+    
   ) {
-    this.socket  = socketIo('http://localhost:3000');
+    this.socket  = socketIo(config.socketURL);
    }
 
   ngOnInit() {
@@ -45,11 +48,11 @@ export class RunningauctionComponent implements OnInit {
 
     this.userService.getLoggedUSerDetails().subscribe(data=>{
         this.user = data;
-        //console.log(this.user._id);
+        console.log(this.user);
     });
     this.userService.getAllUsersById().subscribe(data=>{
         this.users = data;
-      //  console.log(this.users);
+       console.log(this.users);
     });
     this.productService.getAllrunningProduct().subscribe(data=>{
       console.log(data);

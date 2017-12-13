@@ -2,13 +2,14 @@ import 'core-js/es7/reflect';
 import 'zone.js';
 import 'reflect-metadata';
 import { BrowserModule } from '@angular/platform-browser';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {UserService} from './services/user.service';
 import { HttpModule } from '@angular/http';
 // import { DataTablesModule } from 'angular-datatables';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -43,6 +44,7 @@ import {
   MatStepperModule,
 } from '@angular/material';
 import {CdkTableModule} from '@angular/cdk/table';
+
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -113,16 +115,23 @@ import { ProductPipe } from './product.pipe';
 //import { NgDatepickerModule } from 'ng2-datepicker';
 import { NgDatepickerComponent } from './ng-datepicker/ng-datepicker.component';
 import { AdminviewedComponent } from './adminviewed/adminviewed.component';
-import { NgDatepickerModule } from 'ng2-datepicker';
+//import { NgDatepickerModule } from 'ng2-datepicker';
 import { UploadComponent } from './upload/upload.component';
 // import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 
 import { ImageUploadModule } from "angular2-image-upload";//file upload
 import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
+import { UsersSubComponent } from './users-sub/users-sub.component';
+import { ActiveUsersComponent } from './active-users/active-users.component';
+
 
 import { CommonModule } from '@angular/common';
 import { NgSlimScrollModule } from 'ngx-slimscroll';
 import { DateSearchPipe } from './date-search.pipe';
+import { AuctionBackComponent } from './auction-back/auction-back.component';
+import { MaterialComponent } from './material/material.component';
+import { MyauctiontableComponent } from './myauctiontable/myauctiontable.component';
+import { SearchPipe } from './search.pipe';
 // import { FlashMessagesModule } from 'angular2-flash-messages';
 
 
@@ -132,9 +141,6 @@ const appRoutes: Routes = [
   {path:'product-detail/:id', component:ProductDetailComponent},
    {path:'product', component:ProductComponent},
   {path:'product-list', component:ProductListComponent},
-  {path:'product-detail/:id', component:ProductDetailComponent},
-  {path:'', redirectTo:'/login', pathMatch:'full'},
-  {path:'registration', component:RegistrationComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
   {path:'login', component:LoginComponent},  
   {path:'socialmedia/:id', component:SocialmediaComponent},
@@ -148,21 +154,20 @@ const appRoutes: Routes = [
   {path:'upcomingauction', component: UpcomingauctionsComponent},
   {path:'finishedauction', component: FinishedauctionComponent},
   {path:'runningauction', component: RunningauctionComponent},
-
-  
-  {path:'', redirectTo:'/registration', pathMatch:'full'},
-  {path:'registration', component:RegistrationComponent},
-  {path:'product-list', component:ProductListComponent},
   {path:'home', component:HomeComponent},
   {path:'myauctions', component:MyauctionsComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
-  {path:'closed-auction', component:ClosedAuctionBackComponent},
-  {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
-  {path:'running-auction', component:RunningAuctionBackComponent},
+
+  // {path:'closed-auction', component:ClosedAuctionBackComponent},
+  // {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
+  // {path:'running-auction', component:RunningAuctionBackComponent},
+  {path:'auctions', component:AuctionBackComponent},
+
   {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
+  { path: '**', component: LoginComponent },
 
-  {path:'upload', component:UploadComponent}//file upload
-
+  {path:'upload', component:UploadComponent},//file upload
+  {path:'material', component:MaterialComponent}//file upload
 ]
 @NgModule({
   exports: [
@@ -201,6 +206,7 @@ const appRoutes: Routes = [
   ]
 })
 export class DemoMaterialModule {}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -243,12 +249,18 @@ export class DemoMaterialModule {}
     AdminviewedComponent,
     UploadComponent,
     FileSelectDirective,
+    UsersSubComponent,
+    ActiveUsersComponent,
     NgDatepickerComponent,
-    DateSearchPipe
+    DateSearchPipe,
+    AuctionBackComponent,
+    //DaterangePickerModule
+    MyauctiontableComponent,
+    SearchPipe,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
-    
     // DataTablesModule,
     FormsModule,
     ReactiveFormsModule,
@@ -268,6 +280,10 @@ export class DemoMaterialModule {}
     HttpModule,
     // ImageUploadModule,
     RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule,
+    DemoMaterialModule,
+    
+   // NgDatepickerModule
     NgSlimScrollModule,
   //  NgDatepickerModule
     // DataTablesModule,
@@ -278,7 +294,7 @@ export class DemoMaterialModule {}
     HttpModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    DemoMaterialModule
+    DemoMaterialModule,
     // FlashMessagesModule.forRoot(),
     
     // NKDatetimeModule,
@@ -286,12 +302,19 @@ export class DemoMaterialModule {}
     //  DataTablesModule
     // Ng2DatetimePickerModule
     //ImageUploadModule.forRoot(), //file upload
+    // Daterangepicker,
+    BrowserAnimationsModule,
+    DemoMaterialModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+     //angular material
   ],
   
   providers: [ProductServiceService,
     UserService,
     AuthGuard,
-    ProductService
+    ProductService,
+    // Config
   ],
  
   bootstrap: [AppComponent],
@@ -299,3 +322,4 @@ export class DemoMaterialModule {}
   
 })
 export class AppModule { }
+platformBrowserDynamic().bootstrapModule(AppModule);

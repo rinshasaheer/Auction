@@ -11,6 +11,7 @@ export class product{
     date_time : any;
     intrested_ids: [{
         user_id:  string;
+        
         date_time : any; 
     }];
     bidders: [{

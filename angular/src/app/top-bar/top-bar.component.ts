@@ -29,16 +29,16 @@ export class TopBarComponent implements OnInit {
     let details= [];
     this.info = [];
     this.count = 0;
-    this.productService.getProducts().subscribe(data3 => {   
-      data3.forEach(element => {
-        // console.log(element);
-        if(element.admin_notification.user_id && element.admin_notification.is_viewed == false ){
-          this.info.push(element);
-          this.count++;
-          console.log(this.info);
-        }
-      });
-  });
+  //   this.productService.getProducts().subscribe(data3 => {   
+  //     data3.forEach(element => {
+  //       // console.log(element);
+  //       if(element.admin_notification.user_id && element.admin_notification.is_viewed == false){
+  //         this.info.push(element);
+  //         this.count++;
+  //         console.log(this.info);
+  //       }
+  //     });
+  // });
 }
 
 

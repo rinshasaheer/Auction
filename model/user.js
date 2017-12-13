@@ -3,8 +3,8 @@ const bcrypt = require("bcryptjs");
 const config = require("../config/database");
 
 const UserSchema = mongoose.Schema({
-    name : {type : String, require : true, unique : true},
-    email : String,
+    name : {type : String, require : true},
+    email :{type : String, require : true, unique : true},
     phone : String,
     password : String,
     block_status : { type: String, default: false },
@@ -58,12 +58,21 @@ module.exports.getUserById = function(id,callback){
 //all users
 module.exports.getUsers = function(callback){
     User.find({role:'user', "delete_status": { "$ne": "true"}, "block_status": { "$ne": "true"}, "verified" : { "$ne": "false"}},callback);
-    User.find({role:'user',verified:'true'},callback);
+}
+module.exports.getAllUsers = function(callback){
+    User.find({role:'user'},callback);
+    //User.find({role:'user',verified:'true'},callback);
+    // User.find({role:'user',verified:'true'},callback);
    
 }
 //all disabled users
 module.exports.getDisabledUsers = function(callback){
     User.find({role:'user',block_status:'true',delete_status:'false'},callback);
+   
+}
+//all active users
+module.exports.getActiveUsers = function(callback){
+    User.find({role:'user',block_status:'false',delete_status:'false'},callback);
    
 }
 //all deleted users

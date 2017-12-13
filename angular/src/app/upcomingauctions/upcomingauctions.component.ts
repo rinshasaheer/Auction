@@ -4,6 +4,7 @@ import { ProductServiceService } from './../services/product-service.service';
 import * as socketIo from 'socket.io-client';
 import {UserService} from '../services/user.service';
 import {Router} from '@angular/router';
+import { Config } from './../../../config/config'
 
 @Component({
   selector: 'app-upcomingauctions',
@@ -16,8 +17,11 @@ export class UpcomingauctionsComponent implements OnInit {
   existStatus: boolean = false;
   private socket: any; 
   
-  constructor(private _productService: ProductServiceService, private userService: UserService, private router: Router) { 
-        this.socket = socketIo('http://192.168.1.99:3000')
+  constructor(private _productService: ProductServiceService, 
+    private userService: UserService, 
+    private router: Router,
+    private config: Config) { 
+        this.socket = socketIo(config.socketURL);
 
   }
 
