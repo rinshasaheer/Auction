@@ -72,15 +72,15 @@ var returnRouter = function(io) {
                     // console.log(req.file);
         
                     if(err){
-        
+                        console.log("h");
                          res.json({error_code:1,err_desc:err});
         
                          return;
         
                     }
-        
+                        console.log(fileName);
                      res.json({error_code:0,err_desc:null, filename:fileName});
-        
+                    
                 });
         
             });
@@ -100,7 +100,7 @@ var returnRouter = function(io) {
                 newPro.min_bid_rate = req.body.min_bid_rate;
                 newPro.start_date = req.body.start_date;
                 newPro.end_date = req.body.end_date;
-                newPro.image = fileName;
+                newPro.image = req.body.image;
                 // newPoll.answers = req.body.answers;
                 newPro.save(function(err,insertedPro){
                     if(err){
@@ -116,7 +116,7 @@ var returnRouter = function(io) {
 //PRODUCT INFO CLOSE info 3001 updateapp
 router.get('/inform-closedproduct/:id',(req,res,next)=>{
     // console.log('yes');
-    // console.log(req.params.id);
+    console.log(req.params.id);
     io.sockets.emit("closebid", {
         prod_id : req.params.id
     });
@@ -348,7 +348,7 @@ router.put('/updateProduct/:id',function(req,res){
     // console.log(req.body);
     Product.findByIdAndUpdate(req.params.id,
         {
-            $set : {name: req.body.name, desc : req.body.desc, bid_amount : req.body.bid_amount, min_bid_rate : req.body.min_bid_rate, start_date : req.body.start_date, end_date : req.body.end_date, image: req.body.fileName }
+            $set : {name: req.body.name, desc : req.body.desc, bid_amount : req.body.bid_amount, min_bid_rate : req.body.min_bid_rate, start_date : req.body.start_date, end_date : req.body.end_date, image:req.body.image }
         },
         {
         new :true

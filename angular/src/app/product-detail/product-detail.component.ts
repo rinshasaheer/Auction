@@ -3,9 +3,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { pro } from '../pro';
 import { ProductService } from './../services/product.service';
 import { FileUploader } from 'ng2-file-upload'; // File Upload
-import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+
+
 import { CanActivate, ActivatedRoute, Router } from '@angular/router';
-import { UserService } from '../services/user.service';
 @Component({
   selector: 'product-detail',
   templateUrl: './product-detail.component.html',
@@ -38,15 +38,16 @@ export class ProductDetailComponent implements OnInit {
   // tableview: boolean = false;
   private updateProEvent = new EventEmitter();
   private deleteProEvent = new EventEmitter();
-  constructor(private _prductService : ProductService, private route: ActivatedRoute,private router: Router,private userService: UserService) { }
+  constructor(private _prductService : ProductService, private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit() {
 
-    this.userService.getLoggedUSerDetails().subscribe(info =>{
-      if(info.role !="admin"){
-        this.router.navigate(['/login']);
-      }
-    });
+
+    // this.userService.getLoggedUSerDetails().subscribe(info =>{
+    //   if(info.role !="admin"){
+    //     this.router.navigate(['/login']);
+    //   }
+    // });
   
     this.sub = this.route.params.subscribe(params => {
      // console.log('abcd' + params.id);
@@ -57,7 +58,6 @@ export class ProductDetailComponent implements OnInit {
         // startdate: Date = new Date(this.arr1.start_date.toString())
         this.start_date = new Date(this.arr1.start_date.toString());
         this.end_date = new Date(this.arr1.end_date.toString());
-        // window.location.reload();
         // this.dateinfo= data;
       });
 
