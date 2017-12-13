@@ -6,10 +6,6 @@ import { FileUploader } from 'ng2-file-upload'; // File Upload
 
 
 import { CanActivate, ActivatedRoute, Router } from '@angular/router';
-import { UserService } from '../services/user.service';
-
-import { Config } from './../../../config/config';
-
 @Component({
   selector: 'product-detail',
   templateUrl: './product-detail.component.html',
@@ -21,7 +17,7 @@ import { Config } from './../../../config/config';
   
 })
 export class ProductDetailComponent implements OnInit {
-  public uploader:FileUploader = new FileUploader({url:this.config.fileUploadURL});
+  public uploader:FileUploader = new FileUploader({url:'http://localhost:3000/products/upload'});
   arr1= {
     name: String,
     start_date: Date,
@@ -44,13 +40,7 @@ export class ProductDetailComponent implements OnInit {
   // tableview: boolean = false;
   private updateProEvent = new EventEmitter();
   private deleteProEvent = new EventEmitter();
-
-  constructor(private _prductService : ProductService, 
-    private route: ActivatedRoute,
-    private router: Router,
-    private userService: UserService,
-    private config: Config
-  ) { }
+  constructor(private _prductService : ProductService, private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit() {
 
@@ -154,22 +144,22 @@ export class ProductDetailComponent implements OnInit {
   //  deleteProduct(arr1){
   
   //  }
-  //  clickMethod(arr1) {
-  //   if(confirm("Are you sure to delete the product?")) {
+   clickMethod(arr1) {
+    if(confirm("Are you sure to delete the product?")) {
 
-  //     this._prductService.deleteProduct(arr1).subscribe(data1 => {
-  //       if(data1){
-  //         // console.log(data1);
-  //        alert("Delete Product Successfully");
-  //        this.router.navigate(['/product-list'])
-  //       }
+      this._prductService.deleteProduct(arr1).subscribe(data1 => {
+        if(data1){
+          // console.log(data1);
+         alert("Delete Product Successfully");
+         this.router.navigate(['/product-list'])
+        }
   
-  //     });
+      });
 
 
-  //     // this.deleteProEvent.emit(this.pro);
-  //   }
-  // }
+      // this.deleteProEvent.emit(this.pro);
+    }
+  }
   _keyPress(event: any) {
     const pattern = /[0-9]/;
     let inputChar = String.fromCharCode(event.charCode);
