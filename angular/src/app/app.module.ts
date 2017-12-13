@@ -7,8 +7,42 @@ import {RouterModule, Routes} from '@angular/router';
 import {UserService} from './services/user.service';
 import { HttpModule } from '@angular/http';
 // import { DataTablesModule } from 'angular-datatables';
-
-
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatStepperModule,
+} from '@angular/material';
+import {CdkTableModule} from '@angular/cdk/table';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -67,6 +101,7 @@ import { RegistrationComponent } from './registration/registration.component';
 
 // import { ImageUploadModule } from "angular2-image-upload";
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+
 //  import { DataTablesModule } from 'angular-datatables';
 import * as $ from 'jquery';
 import { ProductListComponent } from './product-list/product-list.component';
@@ -88,6 +123,8 @@ import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
 import { CommonModule } from '@angular/common';
 import { NgSlimScrollModule } from 'ngx-slimscroll';
 import { DateSearchPipe } from './date-search.pipe';
+// import { FlashMessagesModule } from 'angular2-flash-messages';
+
 
 const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
@@ -127,7 +164,43 @@ const appRoutes: Routes = [
   {path:'upload', component:UploadComponent}//file upload
 
 ]
-
+@NgModule({
+  exports: [
+    CdkTableModule,
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+  ]
+})
+export class DemoMaterialModule {}
 @NgModule({
   declarations: [
     AppComponent,
@@ -199,6 +272,15 @@ const appRoutes: Routes = [
   //  NgDatepickerModule
     // DataTablesModule,
     ImageUploadModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    DemoMaterialModule
+    // FlashMessagesModule.forRoot(),
+    
     // NKDatetimeModule,
     // NKDatetimeModule,
     //  DataTablesModule

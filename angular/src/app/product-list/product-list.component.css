@@ -231,3 +231,17 @@
      .image{
          width:150px;
      }
+     .example-button-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .addnew{
+          width:150px;
+      }
+      .search1{
+          float:right;
+      }
+      .search{
+        float:right;
+    }

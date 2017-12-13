@@ -21,11 +21,11 @@ export class TopBarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.userService.getLoggedUSerDetails().subscribe(info =>{
-      if(info.role !="admin"){
-        this.router.navigate(['/login']);
-      }
-    });
+    // this.userService.getLoggedUSerDetails().subscribe(info =>{
+    //   if(info.role !="admin"){
+    //     this.router.navigate(['/login']);
+    //   }
+    // });
     let details= [];
     this.info = [];
     this.count = 0;

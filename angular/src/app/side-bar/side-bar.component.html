@@ -26,14 +26,14 @@
                 </ul>
             </li>
             <li *ngIf="userService.loggedIn()">
-                <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-arrows-v"></i> Product <i class="fa fa-fw fa-caret-down"></i></a>
+                <a  routerLink="/product-list" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-arrows-v"></i> Manage Product</a> 
                 <ul id="demo1" class="collapse">
-                    <li *ngIf="userService.loggedIn()">
-                        <a routerLink="/product">Add Product</a>
-                    </li>
-                    <li *ngIf="userService.loggedIn()">
+                    <!-- <li *ngIf="userService.loggedIn()">
+                        <a href="/product">Add Product</a>
+                    </li> -->
+                    <!-- <li *ngIf="userService.loggedIn()">
                         <a routerLink="/product-list">Manage Product</a>
-                    </li>
+                    </li> -->
                 </ul>
             </li>
             <li *ngIf="userService.loggedIn()">

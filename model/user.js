@@ -86,9 +86,9 @@ module.exports.unblockUser = function(id,callback){
 
 
 
-module.exports.getUsers1 = function(callback){
-    User.find({},callback);
-}
+// module.exports.getUsers1 = function(callback){
+//     User.find({},callback);
+// }
 
 module.exports.getUserByUsername = function(email,callback){
     const query = { email: email}

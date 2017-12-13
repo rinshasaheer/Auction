@@ -32,7 +32,7 @@
              
             </div>
         
-            <td><img src="assets/uploads/{{arr1.image || 'default.png'}}" alt="" class="image"></td>
+            <td><img src="assets/uploads/{{arr1.image || 'defualt.png'}}" alt="" class="image"></td>
             <div class="form-group">
                 <label for="single">Select Image</label>
                 <input type="file" class="" name="single" ng2FileSelect [uploader]="uploader" (change)="imageOr();"  />                                  
@@ -68,6 +68,9 @@
                         <div *ngIf="end">
                         <div  class="alert alert-danger"> ! End time is required</div>
                     </div>
+                    <div *ngIf="greater">
+                        <div class="alert alert-danger"> !End time must be after the Start time</div>
+                    </div>
                     </div>
 
             
@@ -95,7 +98,7 @@
             <!-- <input type="submit" class="btn btn-info blakbtn" value="Submit"  > -->
             <button type= "submit" class="btn btn-primary">Update</button>
             <!-- <input type="submit" class="btn btn-primary"  value="Update"  > -->
-            <input type="button" class="btn btn-primary" (click)="clickMethod(arr1)"  value="Delete"  >
+         
            
         </form>
   

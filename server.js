@@ -29,7 +29,7 @@ mongoose.connection.on('error',(err)=>{
     console.log("database Error" + err);
 });
 
-
+[mfIsServerPagination]="true"
 
 app.use(cors());
 

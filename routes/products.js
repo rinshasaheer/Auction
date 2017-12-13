@@ -36,7 +36,7 @@ var storage = multer.diskStorage({ //multers disk storage settings
     
             destination: function (req, file, cb) {
     
-                cb(null, './angular/src/assets/uploads/');
+                cb(null, './public/assets/uploads/');
     
             },
     
