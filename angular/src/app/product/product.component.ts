@@ -34,7 +34,7 @@ import { FileUploader } from 'ng2-file-upload'; // File Upload
 export class ProductComponent implements OnInit {
   form: FormGroup;
   public uploader:FileUploader = new FileUploader({url:'http://localhost:3000/products/upload'});
-  
+  imageselect : Boolean =false;
 
 
  
@@ -54,6 +54,14 @@ export class ProductComponent implements OnInit {
   constructor(private _prductService : ProductService,private _userService : UserService, private router: Router ) { }
 
   ngOnInit() {
+    // this._userService.getLoggedUSerDetails().subscribe(info =>{
+    //   if(info.status!=true){
+    //     this.router.navigate(['/login']);
+    //   }
+    //   else if(info.role == "user"){
+    //     this.router.navigate(['/login']);
+    //   }
+    // });
     this._userService.getLoggedUSerDetails().subscribe(info =>{
       if(info.role !="admin"){
         this.router.navigate(['/login']);
@@ -61,35 +69,72 @@ export class ProductComponent implements OnInit {
     });
 
   }
+  imageOr(){
+    this.imageselect = true;
+  }
   addProduct(){
+console.log("image selected or not");
+console.log(this.imageselect );
+
+  if(this.imageselect ==true){
+
     this.uploader.uploadAll();
     this.uploader.onCompleteItem = (item:any, response:any, status:any, headers:any) => {
-      // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
-      // response = JSON.parse(response);
+      response = JSON.parse(response);
       this.newproduct.image = response.filename;
-      // console.log(this.newproduct.image);
-  };
-    this._prductService.addProduct(this.newproduct).subscribe(data => {
-    if(data){
-      
-      
-            this._userService.sendmail().subscribe(data1 => {
-         
-        });
-
-
-       alert("Add Product Successfully");
-       this.router.navigate(['/product-list'])
-      //  window.location.reload();
-    //  
-        
+      console.log("before saving");
+      console.log(this.newproduct);
+      this._prductService.addProduct(this.newproduct).subscribe(data => {
+        if(data){
+          // console.log(this.newproduct);
+          console.log(this.newproduct.image);
+          
+                this._userService.sendmail().subscribe(data1 => {
+             
+            });
     
-      }else {
-        alert("Error");
-        console.log("error")
-      }
-    });
-
+    
+           alert("Add Product Successfully");
+           this.router.navigate(['/product-list']);
+          //  window.location.reload();
+        //  
+            
+        
+          }else {
+            alert("Error");
+            console.log("error")
+          }
+        });
+      // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
+     
+    
+  };
+ 
+  }
+  else if(this.imageselect ==false){
+    console.log("before saving");
+    this._prductService.addProduct(this.newproduct).subscribe(data => {
+      if(data){
+        // console.log(this.newproduct);
+        console.log(this.newproduct.image);
+        
+              this._userService.sendmail().subscribe(data1 => {
+           
+          });
+  
+  
+         alert("Add Product Successfully");
+         this.router.navigate(['/product-list']);
+        //  window.location.reload();
+      //  
+          
+      
+        }else {
+          alert("Error");
+          console.log("error")
+        }
+      });
+  }
    
   }
 

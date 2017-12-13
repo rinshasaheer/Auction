@@ -58,8 +58,9 @@ module.exports.getUserById = function(id,callback){
 //all users
 module.exports.getUsers = function(callback){
     User.find({role:'user', "delete_status": { "$ne": "true"}, "block_status": { "$ne": "true"}, "verified" : { "$ne": "false"}},callback);
-    User.find({role:'user',verified:'true'},callback);
-   
+}
+module.exports.getAllUsers = function(callback){
+    User.find({role:'user'},callback);
 }
 //all disabled users
 module.exports.getDisabledUsers = function(callback){

@@ -22,7 +22,7 @@ import { DeletedUsersComponent } from './deleted-users/deleted-users.component';
 
 
 import { ProductComponent } from './product/product.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+// import { ProductDetailComponent } from './product-detail/product-detail.component';
 // import { DataTablesModule } from 'angular-datatables';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { AppComponent } from './app.component';
@@ -72,6 +72,7 @@ import * as $ from 'jquery';
 import { ProductListComponent } from './product-list/product-list.component';
 import { FilterPipe } from './filter.pipe';
 import { ManageProductComponent } from './manage-product/manage-product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 // import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductPipe } from './product.pipe';
 //import { NgDatepickerModule } from 'ng2-datepicker';
@@ -87,6 +88,9 @@ import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
 import { CommonModule } from '@angular/common';
 import { NgSlimScrollModule } from 'ngx-slimscroll';
 import { DateSearchPipe } from './date-search.pipe';
+import { AuctionBackComponent } from './auction-back/auction-back.component';
+//import { DaterangePickerModule } from 'ng2-daterange-picker';
+import { Daterangepicker } from 'ng2-daterangepicker';
 
 const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
@@ -118,9 +122,12 @@ const appRoutes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'myauctions', component:MyauctionsComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
-  {path:'closed-auction', component:ClosedAuctionBackComponent},
-  {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
-  {path:'running-auction', component:RunningAuctionBackComponent},
+
+  // {path:'closed-auction', component:ClosedAuctionBackComponent},
+  // {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
+  // {path:'running-auction', component:RunningAuctionBackComponent},
+  {path:'auctions', component:AuctionBackComponent},
+
   {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
 
   {path:'upload', component:UploadComponent}//file upload
@@ -170,7 +177,9 @@ const appRoutes: Routes = [
     UploadComponent,
     FileSelectDirective,
     NgDatepickerComponent,
-    DateSearchPipe
+    DateSearchPipe,
+    AuctionBackComponent,
+    //DaterangePickerModule
   ],
   imports: [
     BrowserModule,
@@ -203,6 +212,7 @@ const appRoutes: Routes = [
     //  DataTablesModule
     // Ng2DatetimePickerModule
     //ImageUploadModule.forRoot(), //file upload
+    Daterangepicker
   ],
   
   providers: [ProductServiceService,

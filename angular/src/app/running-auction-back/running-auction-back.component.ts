@@ -3,13 +3,13 @@ import { ProductService } from '../services/product.service';
 import { Router} from '@angular/router';
 import { UserService} from '../services/user.service';
 import * as socketIo from 'socket.io-client';
-import { DatepickerOptions } from 'ng2-datepicker';
-import * as enLocale from 'date-fns/locale/en';
+import { DaterangePickerComponent } from 'ng2-daterangepicker';
 
 @Component({
   selector: 'app-running-auction-back',
   templateUrl: './running-auction-back.component.html',
-  styleUrls: ['./running-auction-back.component.css']
+  styleUrls: ['./running-auction-back.component.css'],
+  inputs : ["startFrom","startUpto","endFrom","endUpto"],
 })
 export class RunningAuctionBackComponent implements OnInit {
   products: any;
@@ -17,17 +17,25 @@ export class RunningAuctionBackComponent implements OnInit {
   winnerId : object;
   involvedUsers : any = [];
   private socket: any; 
-  startDate:Date;
-  endDate:Date;
-  options:DatepickerOptions = {
-    
-        minYear: 1970,
-        maxYear: 2030,
-        displayFormat: 'DD-MM-YYYY',
-        barTitleFormat: 'MMMM YYYY',
-        firstCalendarDay: 0, // 0 - Sunday, 1 - Monday
-        locale: enLocale
-      };
+  startFrom :any = '';
+  startUpto  :any = '';
+  endFrom :any = '';
+  endUpto :any = '';
+  public options: any = {
+      locale: { format: 'DD-MM-YYYY' },
+      alwaysShowCalendars: false,
+      
+  };
+  public optionsEnd: any = {
+      locale: { format: 'DD-MM-YYYY' },
+      alwaysShowCalendars: false,
+      // startDate: '24-12-2017',
+      // endDate: '28-12-2017',
+     // disableUntil: {year: this.currentYear, month: this.currentMonth, day: this.currentDate}
+     // start: new Date('12/24/2017')
+      
+  };
+
   constructor(
     private productService: ProductService,
     private userService:UserService,
@@ -37,58 +45,39 @@ export class RunningAuctionBackComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.userService.getLoggedUSerDetails().subscribe(info =>{
-      if(info.role !="admin"){
-        this.router.navigate(['/login']);
-      }
-    });
-    this.startDate = new Date();
-    this.endDate = new Date();
-    this.userService.getAllUsersById().subscribe(data=>{
-      this.users = data;
-      // console.log(this.users);
-  });
-  this.socket.on('userbidreject', (data) => {
-    this.getAllproduct();
-  }); 
+  //  this.picker.datePicker.setStartDate('2017-03-27');
+    // this.userService.getLoggedUSerDetails().subscribe(info =>{
+    //   if(info.role !="admin"){
+    //     this.router.navigate(['/login']);
+    //   }
+    // });
+    // this.startDate = new Date();
+    // this.endDate = new Date();
+      this.userService.getAllUsersById().subscribe(data=>{
+          this.users = data;
+          console.log(this.users);
+      });
 
-  this.socket.on('newbid', (data) => {
-    this.getAllproduct();
-  }) 
-  
-  this.socket.on('startbid', (data) => {
-    // console.log(data);
-      //  this.productService.getProduct(data.prod_id).subscribe(data=>{
 
-      //   var lastBidprice = data.bid_amount;
-      //   var lastBiduser = '';
-      //   var lastBidTime = '';
-      //   var lastBiduserId = '';
-  
-      //   data.bidders.forEach((bidder, i) => {
-      //     //console.log(bidder);
-      //     if(bidder.amount >= lastBidprice){
-      //        lastBidprice = bidder.amount;
-      //        lastBiduser = this.users[bidder.user_id].name;
-      //        lastBiduserId = this.users[bidder.user_id]._id;
-      //        lastBidTime = bidder.date_time;
-      //     }
-      //   });
-      //   data.lastBidprice = lastBidprice;
-      //   data.lastBiduser = lastBiduser;
-      //   data.lastBidTime = lastBidTime;
-      //   data.lastBiduserId = lastBiduserId;
-      //    this.products.push(data);
-      //    //this.getlastbidder();
-      //  });
-       this.getAllproduct(); 
-     
-   })
-  
-  this.getAllproduct(); 
-  }
+      
+      this.socket.on('userbidreject', (data) => {
+        this.getAllproduct();
+      }); 
 
-  getAllproduct(){
+      this.socket.on('newbid', (data) => {
+        this.getAllproduct();
+      }) 
+      
+      this.socket.on('startbid', (data) => {
+      
+          this.getAllproduct(); 
+        
+      })
+      
+      this.getAllproduct(); 
+}
+
+getAllproduct(){
     this.productService.getAllrunningProduct().subscribe(data=>{
       this.involvedUsers.bidders = [];
       this.involvedUsers.user_details = [];
@@ -123,4 +112,15 @@ export class RunningAuctionBackComponent implements OnInit {
   timeOver(){
     this.getAllproduct(); 
   }
+
+  public selectedStartDate(value: any, datepicker?: any) {
+    this.startFrom =  value.start;
+    this.startUpto =  value.end;
+}
+  public selectedEndDate(value: any, datepicker?: any) {
+    this.endFrom =  value.start;
+    this.endUpto =  value.end;
+}
+
+
 }

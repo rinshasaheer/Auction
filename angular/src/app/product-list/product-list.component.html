@@ -42,7 +42,7 @@
   
     <td>{{pro.name}}</td>
     <!-- <td><img src="assets/uploads/{{product.image||'default.png'}}" alt="" class="image"></td> -->
-    <td><img src="assets/uploads/{{pro.image}}" alt="" class="image"></td>
+    <td><img src="assets/uploads/{{pro.image || 'defualt1.jpg'}}" alt="" class="image"></td>
     <td>{{pro.bid_amount}}</td>
     <td>{{pro.min_bid_rate}}</td>
     <td>{{pro.start_date}}</td>
@@ -50,7 +50,8 @@
     <td>{{pro.desc}}</td>
   
   
-    <td> <a [routerLink]="['/product-detail/'+pro._id]"  ><input type="submit" value="Action" class="btn btn-primary" > </a></td>
+    <td> <a href="/product-detail/{{pro._id}}"  ><input type="submit" value="Action" class="btn btn-primary" > </a></td>
+    <!-- <td> <a [routerLink]="['/product-detail/'+pro._id]"  ><input type="submit" value="Action" class="btn btn-primary" > </a></td> -->
     <!-- <td> <a [routerLink]="['/product-list/'+pro._id]"  ><input type="submit" value="delete" class="btn btn-primary" > </a></td> -->
 
     </tr>
