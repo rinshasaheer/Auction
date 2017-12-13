@@ -10,6 +10,7 @@ import { HttpModule } from '@angular/http';
 
 
 
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -91,6 +92,46 @@ import { DateSearchPipe } from './date-search.pipe';
 import { AuctionBackComponent } from './auction-back/auction-back.component';
 //import { DaterangePickerModule } from 'ng2-daterange-picker';
 import { Daterangepicker } from 'ng2-daterangepicker';
+import { Config } from './../../config/config';
+import { MyauctiontableComponent } from './myauctiontable/myauctiontable.component';
+import { SearchPipe } from './search.pipe';
+
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatStepperModule,
+} from '@angular/material';
+import {CdkTableModule} from '@angular/cdk/table';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MaterialComponent } from './material/material.component';//angularmaterial
 
 const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
@@ -98,9 +139,6 @@ const appRoutes: Routes = [
   {path:'product-detail/:id', component:ProductDetailComponent},
    {path:'product', component:ProductComponent},
   {path:'product-list', component:ProductListComponent},
-  {path:'product-detail/:id', component:ProductDetailComponent},
-  {path:'', redirectTo:'/login', pathMatch:'full'},
-  {path:'registration', component:RegistrationComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
   {path:'login', component:LoginComponent},  
   {path:'socialmedia/:id', component:SocialmediaComponent},
@@ -114,11 +152,6 @@ const appRoutes: Routes = [
   {path:'upcomingauction', component: UpcomingauctionsComponent},
   {path:'finishedauction', component: FinishedauctionComponent},
   {path:'runningauction', component: RunningauctionComponent},
-
-  
-  {path:'', redirectTo:'/registration', pathMatch:'full'},
-  {path:'registration', component:RegistrationComponent},
-  {path:'product-list', component:ProductListComponent},
   {path:'home', component:HomeComponent},
   {path:'myauctions', component:MyauctionsComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
@@ -129,12 +162,52 @@ const appRoutes: Routes = [
   {path:'auctions', component:AuctionBackComponent},
 
   {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
+  { path: '**', component: LoginComponent },
 
-  {path:'upload', component:UploadComponent}//file upload
-
+  {path:'upload', component:UploadComponent},//file upload
+  {path:'material', component:MaterialComponent}//file upload
 ]
 
 @NgModule({
+  exports: [
+    CdkTableModule,
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+  ]
+})
+export class DemoMaterialModule {}
+
+@NgModule({
+  
   declarations: [
     AppComponent,
     ProductComponent,
@@ -180,10 +253,12 @@ const appRoutes: Routes = [
     DateSearchPipe,
     AuctionBackComponent,
     //DaterangePickerModule
+    MyauctiontableComponent,
+    SearchPipe,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
-    
     // DataTablesModule,
     FormsModule,
     ReactiveFormsModule,
@@ -212,13 +287,19 @@ const appRoutes: Routes = [
     //  DataTablesModule
     // Ng2DatetimePickerModule
     //ImageUploadModule.forRoot(), //file upload
-    Daterangepicker
+    Daterangepicker,
+    BrowserAnimationsModule,
+    DemoMaterialModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+     //angular material
   ],
   
   providers: [ProductServiceService,
     UserService,
     AuthGuard,
-    ProductService
+    ProductService,
+    Config
   ],
  
   bootstrap: [AppComponent],

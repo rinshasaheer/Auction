@@ -3,8 +3,8 @@ const bcrypt = require("bcryptjs");
 const config = require("../config/database");
 
 const UserSchema = mongoose.Schema({
-    name : {type : String, require : true, unique : true},
-    email : String,
+    name : {type : String, require : true},
+    email :{type : String, require : true, unique : true},
     phone : String,
     password : String,
     block_status : { type: String, default: false },
@@ -61,6 +61,9 @@ module.exports.getUsers = function(callback){
 }
 module.exports.getAllUsers = function(callback){
     User.find({role:'user'},callback);
+    //User.find({role:'user',verified:'true'},callback);
+    // User.find({role:'user',verified:'true'},callback);
+   
 }
 //all disabled users
 module.exports.getDisabledUsers = function(callback){

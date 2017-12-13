@@ -18,6 +18,7 @@ import 'rxjs/add/operator/map';
 // import { FormsModule, FormControl, FormGroup, Validators }   from '@angular/forms';
 // import { answer } from './../answer';
 
+import { Config } from './../../../config/config';
 
 import { FileUploader } from 'ng2-file-upload'; // File Upload
 
@@ -33,7 +34,8 @@ import { FileUploader } from 'ng2-file-upload'; // File Upload
 })
 export class ProductComponent implements OnInit {
   form: FormGroup;
-  public uploader:FileUploader = new FileUploader({url:'http://localhost:3000/products/upload'});
+  public uploader:FileUploader = new FileUploader({url:this.config.fileUploadURL});
+  
   imageselect : Boolean =false;
 
 
@@ -51,7 +53,14 @@ export class ProductComponent implements OnInit {
   };
 
 
-  constructor(private _prductService : ProductService,private _userService : UserService, private router: Router ) { }
+  constructor(private _prductService : ProductService,
+    private _userService : UserService, 
+    private router: Router,
+    private config: Config
+  ) { 
+      
+
+     }
 
   ngOnInit() {
     // this._userService.getLoggedUSerDetails().subscribe(info =>{

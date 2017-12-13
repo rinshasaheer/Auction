@@ -51,7 +51,16 @@ export class ProductListComponent implements OnInit {
         this.router.navigate(['/login']);
       }
     });
-
+    this._prductService.getProducts().subscribe(data1 => {
+      this.arr1 = data1;
+   
+      console.log(data1);
+    //  data1.forEach(function(item) {
+    //   this.arr1.push(item);
+    //   console.log(this.arr1);
+    //  });
+    // this.prodata = data1;
+        });
 
 
   }
@@ -66,10 +75,6 @@ onSelect(){
 
 }
 
-deletePro(prod : pro){
-  this.SelectPro.emit(prod);
-  this.tableview = false;
-}
 datepickerOpts1 = {
   startDate: new Date(Date.now()),
   
@@ -81,5 +86,16 @@ datepickerOpts1 = {
   
 }
 
-
+deleteProduct(pid){
+  console.log(pid);
+    this._prductService.deleteProduct(pid).subscribe(data1 => {
+            if(data1){
+              // console.log(data1);
+             alert("Delete Product Successfully");
+             location.reload();
+             this.router.navigate(['/product-list'])
+            }
+      
+          });
+}
 }

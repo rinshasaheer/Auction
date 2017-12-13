@@ -4,6 +4,8 @@ import { UserService } from '../services/user.service';
 import { ProductServiceService } from './../services/product-service.service';
 import { ProductService } from './../services/product.service';
 import * as socketIo from 'socket.io-client';
+import { Config } from './../../../config/config';
+import { CapitalizePipe } from './../capitalize.pipe';
 
 @Component({
   selector: 'app-navigation',
@@ -22,9 +24,14 @@ export class NavigationComponent implements OnInit {
   count : Boolean = true;
   userInfo : any;
   private socket: any;
+  loading = true;
 
-  constructor(private userService : UserService, private router: Router, private _productService: ProductServiceService, private productService: ProductService) {
-    this.socket = socketIo('http://localhost:3000');
+  constructor(private userService : UserService, 
+    private router: Router, 
+    private _productService: ProductServiceService, 
+    private productService: ProductService,
+    private config: Config) {
+    this.socket = socketIo(config.socketURL);
    }
 
   ngOnInit() {
@@ -32,7 +39,9 @@ export class NavigationComponent implements OnInit {
       if(info.role !="user"){
         this.router.navigate(['/login']);
       }else{
+        // console.log(info);
         this.userInfo = info;
+        this.loading = false;
       }
     });
     this.getNotification();

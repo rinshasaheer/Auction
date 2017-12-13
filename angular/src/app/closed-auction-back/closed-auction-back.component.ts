@@ -7,6 +7,7 @@ import { UserService} from '../services/user.service';
 import * as socketIo from 'socket.io-client';
 import { DaterangePickerComponent } from 'ng2-daterangepicker';
 
+import { Config } from './../../../config/config';
 
 
 @Component({
@@ -44,10 +45,11 @@ export class ClosedAuctionBackComponent implements OnInit {
   constructor(
      private productService: ProductService,
      private userService:UserService,
-     private router: Router
-  ){ 
+     private router: Router,
+     private config: Config) { 
+      
 
-    this.socket  = socketIo('http://localhost:3000');
+    this.socket  = socketIo(config.socketURL);
   }
 
 

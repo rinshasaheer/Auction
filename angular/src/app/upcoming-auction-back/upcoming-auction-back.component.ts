@@ -6,6 +6,7 @@ import { Router} from '@angular/router';
 import * as socketIo from 'socket.io-client';
 import { UserService } from '../services/user.service';
 import { DaterangePickerComponent } from 'ng2-daterangepicker';
+import { Config } from './../../../config/config';
 
 @Component({
   selector: 'app-upcoming-auction-back',
@@ -38,10 +39,11 @@ export class UpcomingAuctionBackComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private config: Config
   ) {
 
-    this.socket  = socketIo('http://localhost:3000');
+    this.socket  = socketIo(config.socketURL);
    }
 
   ngOnInit() {

@@ -1,0 +1,51 @@
+<div class="example-header" *ngIf="stat">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div>
+  
+  <div class="example-container mat-elevation-z8">
+  
+    <mat-table [dataSource]="dataSource" matSort>
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Product </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.name | capitalize}} </mat-cell>
+      </ng-container>
+  
+      <!-- Progress Column -->
+      <ng-container matColumnDef="mybid">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Your Bids </mat-header-cell>
+        <mat-cell *matCellDef="let row"> 
+          
+          <!-- {{row.status}} -->
+          <p *ngFor="let bid of row.mybid">{{bid.amount | number:'1.2-2'}} : {{bid.date_time | date: 'dd-MM-yyyy h:mm a'}}</p>
+        </mat-cell>
+      </ng-container>
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="topbid">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Top Bid </mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.topbid | number:'1.2-2'}} </mat-cell>
+        </ng-container>
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="status">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
+          <mat-cell *matCellDef="let row"> <p [ngStyle]="{ 'color': row.bgClr }">{{row.bidstatus}}</p> </mat-cell>
+        </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </div>
+  
+  
+  <!-- Copyright 2017 Google Inc. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at http://angular.io/license -->
+  
+  
