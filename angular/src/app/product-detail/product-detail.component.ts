@@ -6,6 +6,9 @@ import { FileUploader } from 'ng2-file-upload'; // File Upload
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 import { CanActivate, ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../services/user.service';
+
+import { Config } from './../../../config/config';
+
 @Component({
   selector: 'product-detail',
   templateUrl: './product-detail.component.html',
@@ -17,7 +20,7 @@ import { UserService } from '../services/user.service';
   
 })
 export class ProductDetailComponent implements OnInit {
-  public uploader:FileUploader = new FileUploader({url:'http://localhost:3000/products/upload'});
+  public uploader:FileUploader = new FileUploader({url:this.config.fileUploadURL});
   arr1= {
     name: String,
     start_date: Date,
@@ -38,7 +41,13 @@ export class ProductDetailComponent implements OnInit {
   // tableview: boolean = false;
   private updateProEvent = new EventEmitter();
   private deleteProEvent = new EventEmitter();
-  constructor(private _prductService : ProductService, private route: ActivatedRoute,private router: Router,private userService: UserService) { }
+
+  constructor(private _prductService : ProductService, 
+    private route: ActivatedRoute,
+    private router: Router,
+    private userService: UserService,
+    private config: Config
+  ) { }
 
   ngOnInit() {
 

@@ -1,5 +1,20 @@
 webpackJsonp(["main"],{
 
+/***/ "../../../../../config/config.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Config; });
+var Config = (function () {
+    function Config() {
+    }
+    return Config;
+}());
+
+//# sourceMappingURL=config.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/$$_gendir lazy recursive":
 /***/ (function(module, exports) {
 
@@ -287,6 +302,7 @@ AppComponent = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export DemoMaterialModule */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es7_reflect__ = __webpack_require__("../../../../core-js/es7/reflect.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es7_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_core_js_es7_reflect__);
@@ -348,6 +364,13 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_53_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_53_ng2_file_upload__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54_ngx_slimscroll__ = __webpack_require__("../../../../ngx-slimscroll/dist/ngx-slimscroll.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__date_search_pipe__ = __webpack_require__("../../../../../src/app/date-search.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__config_config__ = __webpack_require__("../../../../../config/config.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__myauctiontable_myauctiontable_component__ = __webpack_require__("../../../../../src/app/myauctiontable/myauctiontable.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__search_pipe__ = __webpack_require__("../../../../../src/app/search.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__angular_cdk_table__ = __webpack_require__("../../../cdk/esm5/table.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__material_material_component__ = __webpack_require__("../../../../../src/app/material/material.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -418,19 +441,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+
+
+ //angularmaterial
 var appRoutes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-<<<<<<< HEAD
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__["a" /* RegistrationComponent */] },
-    { path: 'product-detail/:id', component: __WEBPACK_IMPORTED_MODULE_47__product_detail_product_detail_component__["a" /* ProductDetailComponent */] },
-=======
     { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_43__registration_registration_component__["a" /* RegistrationComponent */] },
->>>>>>> 6b521a4a1375603d837470038541db737314ea06
+    { path: 'product-detail/:id', component: __WEBPACK_IMPORTED_MODULE_17__product_detail_product_detail_component__["a" /* ProductDetailComponent */] },
     { path: 'product', component: __WEBPACK_IMPORTED_MODULE_16__product_product_component__["a" /* ProductComponent */] },
     { path: 'product-list', component: __WEBPACK_IMPORTED_MODULE_45__product_list_product_list_component__["a" /* ProductListComponent */] },
-    { path: 'product-detail/:id', component: __WEBPACK_IMPORTED_MODULE_17__product_detail_product_detail_component__["a" /* ProductDetailComponent */] },
-    { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_43__registration_registration_component__["a" /* RegistrationComponent */] },
     { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_30__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_29__login_login_component__["a" /* LoginComponent */] },
     { path: 'socialmedia/:id', component: __WEBPACK_IMPORTED_MODULE_34__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */] },
@@ -442,9 +465,6 @@ var appRoutes = [
     { path: 'upcomingauction', component: __WEBPACK_IMPORTED_MODULE_25__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */] },
     { path: 'finishedauction', component: __WEBPACK_IMPORTED_MODULE_23__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */] },
     { path: 'runningauction', component: __WEBPACK_IMPORTED_MODULE_40__runningauction_runningauction_component__["a" /* RunningauctionComponent */] },
-    { path: '', redirectTo: '/registration', pathMatch: 'full' },
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_43__registration_registration_component__["a" /* RegistrationComponent */] },
-    { path: 'product-list', component: __WEBPACK_IMPORTED_MODULE_45__product_list_product_list_component__["a" /* ProductListComponent */] },
     { path: 'home', component: __WEBPACK_IMPORTED_MODULE_21__home_home_component__["a" /* HomeComponent */] },
     { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_38__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
     { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_30__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
@@ -452,8 +472,53 @@ var appRoutes = [
     { path: 'upcoming-auction', component: __WEBPACK_IMPORTED_MODULE_32__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */] },
     { path: 'running-auction', component: __WEBPACK_IMPORTED_MODULE_33__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */] },
     { path: 'winnerconfirm/:id', component: __WEBPACK_IMPORTED_MODULE_42__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */] },
-    { path: 'upload', component: __WEBPACK_IMPORTED_MODULE_51__upload_upload_component__["a" /* UploadComponent */] } //file upload
+    { path: 'upload', component: __WEBPACK_IMPORTED_MODULE_51__upload_upload_component__["a" /* UploadComponent */] },
+    { path: 'material', component: __WEBPACK_IMPORTED_MODULE_62__material_material_component__["a" /* MaterialComponent */] } //file upload
 ];
+var DemoMaterialModule = (function () {
+    function DemoMaterialModule() {
+    }
+    return DemoMaterialModule;
+}());
+DemoMaterialModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["NgModule"])({
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_60__angular_cdk_table__["m" /* CdkTableModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["a" /* MatAutocompleteModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["b" /* MatButtonModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["c" /* MatButtonToggleModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["d" /* MatCardModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["e" /* MatCheckboxModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["f" /* MatChipsModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["C" /* MatStepperModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["g" /* MatDatepickerModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["h" /* MatDialogModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["i" /* MatExpansionModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["j" /* MatGridListModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["k" /* MatIconModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["l" /* MatInputModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["m" /* MatListModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["n" /* MatMenuModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["o" /* MatNativeDateModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["q" /* MatPaginatorModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["r" /* MatProgressBarModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["s" /* MatProgressSpinnerModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["t" /* MatRadioModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["u" /* MatRippleModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["v" /* MatSelectModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["w" /* MatSidenavModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["y" /* MatSliderModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["x" /* MatSlideToggleModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["z" /* MatSnackBarModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["B" /* MatSortModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["E" /* MatTableModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["F" /* MatTabsModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["G" /* MatToolbarModule */],
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["H" /* MatTooltipModule */],
+        ]
+    })
+], DemoMaterialModule);
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -502,13 +567,16 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_51__upload_upload_component__["a" /* UploadComponent */],
             __WEBPACK_IMPORTED_MODULE_53_ng2_file_upload__["FileSelectDirective"],
             __WEBPACK_IMPORTED_MODULE_49__ng_datepicker_ng_datepicker_component__["a" /* NgDatepickerComponent */],
-            __WEBPACK_IMPORTED_MODULE_55__date_search_pipe__["a" /* DateSearchPipe */]
+            __WEBPACK_IMPORTED_MODULE_55__date_search_pipe__["a" /* DateSearchPipe */],
+            __WEBPACK_IMPORTED_MODULE_57__myauctiontable_myauctiontable_component__["a" /* MyauctiontableComponent */],
+            __WEBPACK_IMPORTED_MODULE_58__search_pipe__["a" /* SearchPipe */],
+            __WEBPACK_IMPORTED_MODULE_62__material_material_component__["a" /* MaterialComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
             // DataTablesModule,
-            __WEBPACK_IMPORTED_MODULE_18__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_18__angular_forms__["d" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_18__angular_forms__["c" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_18__angular_forms__["h" /* ReactiveFormsModule */],
             __WEBPACK_IMPORTED_MODULE_24_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
             __WEBPACK_IMPORTED_MODULE_7__angular_http__["HttpModule"],
             // ImageUploadModule,
@@ -519,8 +587,8 @@ AppModule = __decorate([
             // Ng2DatetimePickerModule
             //BrowserModule,
             // DataTablesModule,
-            __WEBPACK_IMPORTED_MODULE_18__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_18__angular_forms__["d" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_18__angular_forms__["c" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_18__angular_forms__["h" /* ReactiveFormsModule */],
             __WEBPACK_IMPORTED_MODULE_24_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
             __WEBPACK_IMPORTED_MODULE_7__angular_http__["HttpModule"],
             // ImageUploadModule,
@@ -529,11 +597,21 @@ AppModule = __decorate([
             //  NgDatepickerModule
             // DataTablesModule,
             __WEBPACK_IMPORTED_MODULE_52_angular2_image_upload__["a" /* ImageUploadModule */],
+            // NKDatetimeModule,
+            // NKDatetimeModule,
+            //  DataTablesModule
+            // Ng2DatetimePickerModule
+            //ImageUploadModule.forRoot(), //file upload
+            __WEBPACK_IMPORTED_MODULE_61__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+            DemoMaterialModule,
+            __WEBPACK_IMPORTED_MODULE_59__angular_material__["o" /* MatNativeDateModule */],
+            __WEBPACK_IMPORTED_MODULE_18__angular_forms__["h" /* ReactiveFormsModule */],
         ],
         providers: [__WEBPACK_IMPORTED_MODULE_37__services_product_service_service__["a" /* ProductServiceService */],
             __WEBPACK_IMPORTED_MODULE_6__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_27__guards_auth_guard__["a" /* AuthGuard */],
-            __WEBPACK_IMPORTED_MODULE_26__services_product_service__["a" /* ProductService */]
+            __WEBPACK_IMPORTED_MODULE_26__services_product_service__["a" /* ProductService */],
+            __WEBPACK_IMPORTED_MODULE_56__config_config__["a" /* Config */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_19__app_component__["a" /* AppComponent */]],
     })
@@ -613,6 +691,7 @@ module.exports = "<div [hidden]=\"isTimeOver\" class=\"col-xs-6 col-sm-6 col-md-
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_socket_io_client__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -627,11 +706,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var CardRunningComponent = (function () {
-    function CardRunningComponent(productService, userService, router) {
+    function CardRunningComponent(productService, userService, router, config) {
         this.productService = productService;
         this.userService = userService;
         this.router = router;
+        this.config = config;
         this.btnLabel = 'Bid Now';
         this.btnClass = 'btn-primary';
         this.isError = false;
@@ -639,7 +720,7 @@ var CardRunningComponent = (function () {
         this.msg = '';
         this.btnDisbled = false;
         this.isTimeOver = false;
-        this.socket = __WEBPACK_IMPORTED_MODULE_4_socket_io_client__('http://localhost:3000');
+        this.socket = __WEBPACK_IMPORTED_MODULE_4_socket_io_client__(config.socketURL);
     }
     CardRunningComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -763,10 +844,10 @@ CardRunningComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/card-running/card-running.component.css")],
         inputs: ['product', 'users', 'user'],
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]) === "function" && _d || Object])
 ], CardRunningComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=card-running.component.js.map
 
 /***/ }),
@@ -792,7 +873,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/card/card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div *ngIf=\"!itemStatus\" class=\"col-md-8 col-xs-12 col-sm-6 col-lg-8\"><h4>Sorry! No Items to display.</h4></div> -->\r\n<div [hidden]=\"isTimeOver\" class=\"col-xs-12 col-sm-6 col-md-4 col-lg-4\">\r\n  <div class=\"tg-ad tg-verifiedad\">\r\n      <figure>\r\n          <span *ngIf=\"myCloseStatus\" class=\"tg-themetag tg-featuretag\">Closed</span>\r\n          <a href=\"javascript:void(0);\"><img src=\"assets/uploads/{{item.image||'default.png'}}\" alt=\"image description\"></a>\r\n          <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\r\n      </figure>\r\n      \r\n      <div class=\"tg-adcontent\">\r\n          <!-- <ul class=\"tg-productcagegories\">\r\n              <li><a href=\"javascript:void(0);\">Mobiles</a></li>\r\n          </ul> -->\r\n          \r\n          <div class=\"tg-adtitle\">\r\n              <h3><a href=\"javascript:void(0);\">{{item?.name | capitalize}}</a></h3>\r\n          </div>\r\n          <div class=\"clearfix\"></div>\r\n          <div class=\"tg-desc\" >\r\n                  <h4>Description: </h4><p class=\"card-pro-desc\">\r\n                      <!-- {{item?.desc | capitalize}} -->\r\n                      <read-more [text]=\"item?.desc | capitalize\" [maxLength]=\"100\"></read-more>\r\n                    </p>\r\n          </div>\r\n          \r\n          <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\r\n          \r\n          <!-- <address>44-46 abc Road, Manchester</address> -->\r\n          <!-- <div class=\"tg-phonelike\">\r\n              <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\r\n                  <i class=\"icon-phone-handset\"></i>\r\n                  <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\r\n              </a>\r\n              <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\r\n          </div> -->\r\n      </div>\r\n      <div *ngIf=\"startDate\" class=\"col-md-6 dte\">\r\n          <h4>Start Date<br/> {{startDate | date: 'dd/MM/yyyy'}}</h4>\r\n      </div>\r\n      <div *ngIf=\"startDate\" class=\"col-md-6 dte\">\r\n            <h4>End Date<br/> {{eTime | date: 'dd/MM/yyyy'}}</h4>\r\n        </div>\r\n        <p class=\"lead\" *ngIf=\"startDate\">\r\n            <app-count-down-timer (onTimeOver)=\"timeOver()\"  [inputDate]=\"startDate\"></app-count-down-timer>\r\n        </p>\r\n        <div class=\"col-md-8 col-md-offset-2 crd-btn-container\" *ngIf=\"(startDate && !interestMatch) else divinterested\"><button  class=\"btn btn-success crd-btn\" (click)=\"updateInterested(item._id)\">Interested</button></div>\r\n        \r\n        <ng-template #divinterested>\r\n                <div class=\"col-md-8 col-md-offset-2 crd-btn-container\" *ngIf=\"startDate\"><div  class=\"no-btn\" >Added to Interest</div></div>\r\n                \r\n        </ng-template>\r\n      <div class=\"row\">\r\n        <div class=\"btn-primary tg-adprice\" *ngIf=\"startDate else divclosed\">Basic Price: ${{item?.bid_amount}}</div>\r\n        <ng-template #divclosed>\r\n                <div class=\"btn-primary tg-adprice\" *ngIf=\"myauction else divmy\">Last Bid Price: ${{highest}}</div>                \r\n        </ng-template>\r\n        <ng-template #divmy>\r\n                <div class=\"btn-primary tg-adprice\">Final Price: ${{highest}}</div>                \r\n        </ng-template>\r\n      </div>\r\n      \r\n  </div>\r\n</div>\r\n<!--   \r\n<div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3\">\r\n      <div class=\"tg-ad tg-verifiedad\">\r\n          <figure>\r\n              <span class=\"tg-themetag tg-featuretag\">featured</span>\r\n              <a href=\"javascript:void(0);\"><img src=\"http://exprostudio.com/html/classified/images/ads/img-01.jpg\" alt=\"image description\"></a> -->\r\n              <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\r\n          <!-- </figure>\r\n          <div class=\"tg-adcontent\"> -->\r\n              <!-- <ul class=\"tg-productcagegories\">\r\n                  <li><a href=\"javascript:void(0);\">Mobiles</a></li>\r\n              </ul> -->\r\n              \r\n              <!-- <div class=\"tg-adtitle\">\r\n                  <h3><a href=\"javascript:void(0);\">iPhone X for sale</a></h3>\r\n              </div>\r\n              <div class=\"clearfix\"></div>\r\n              <div class=\"tg-desc\">\r\n                  <h4>Description</h4>\r\n                      <p class=\"card-pro-desc\">Consectetur adipicing elit sed eiusmod temporie incidint ut labore et dolore magna enim ad minim veniam, quis nostrud.</p>\r\n              </div>\r\n              <div class=\"clearfix\"></div>\r\n              <div class=\"tg-days\">\r\n                      <h4>Days Left: 4Days</h4>\r\n              </div> -->\r\n              <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\r\n              \r\n              <!-- <address>44-46 abc Road, Manchester</address> -->\r\n              <!-- <div class=\"tg-phonelike\">\r\n                  <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\r\n                      <i class=\"icon-phone-handset\"></i>\r\n                      <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\r\n                  </a>\r\n                  <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\r\n              </div> -->\r\n          <!-- </div>\r\n          <button class=\"btn btn-primary tg-adprice\"> Basic Price: $200</button>\r\n      </div>\r\n  </div>\r\n  <div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3\">\r\n          <div class=\"tg-ad tg-verifiedad\">\r\n              <figure>\r\n                  <span class=\"tg-themetag tg-featuretag\">featured</span>\r\n                  <a href=\"javascript:void(0);\"><img src=\"http://exprostudio.com/html/classified/images/ads/img-01.jpg\" alt=\"image description\"></a> -->\r\n                  <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\r\n              <!-- </figure>\r\n              <div class=\"tg-adcontent\"> -->\r\n                  <!-- <ul class=\"tg-productcagegories\">\r\n                      <li><a href=\"javascript:void(0);\">Mobiles</a></li>\r\n                  </ul> -->\r\n                  \r\n                  <!-- <div class=\"tg-adtitle\">\r\n                      <h3><a href=\"javascript:void(0);\">iPhone X for sale</a></h3>\r\n                  </div>\r\n                  <div class=\"clearfix\"></div>\r\n                  <div class=\"tg-desc\">\r\n                          <p class=\"card-pro-desc\">Consectetur adipicing elit sed eiusmod temporie incidint ut labore et dolore magna enim ad minim veniam, quis nostrud.</p>\r\n                  </div>\r\n                   -->\r\n                  <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\r\n                  \r\n                  <!-- <address>44-46 abc Road, Manchester</address> -->\r\n                  <!-- <div class=\"tg-phonelike\">\r\n                      <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\r\n                          <i class=\"icon-phone-handset\"></i>\r\n                          <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\r\n                      </a>\r\n                      <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\r\n                  </div> -->\r\n              <!-- </div>\r\n              <button class=\"btn btn-primary tg-adprice\"> Final Price: $200</button>\r\n          </div>\r\n      </div> -->"
+module.exports = "<!-- <div *ngIf=\"!itemStatus\" class=\"col-md-8 col-xs-12 col-sm-6 col-lg-8\"><h4>Sorry! No Items to display.</h4></div> -->\n<div [hidden]=\"isTimeOver\" class=\"col-xs-12 col-sm-6 col-md-4 col-lg-4\">\n  <div class=\"tg-ad tg-verifiedad\">\n      <figure>\n          <span *ngIf=\"myCloseStatus\" class=\"tg-themetag tg-featuretag\">Closed</span>\n          <a href=\"javascript:void(0);\"><img src=\"assets/uploads/{{item.image||'default.png'}}\" alt=\"image description\"></a>\n          <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\n      </figure>\n      \n      <div class=\"tg-adcontent\">\n          <!-- <ul class=\"tg-productcagegories\">\n              <li><a href=\"javascript:void(0);\">Mobiles</a></li>\n          </ul> -->\n          \n          <div class=\"tg-adtitle\">\n              <h3><a href=\"javascript:void(0);\">{{item?.name | capitalize}}</a></h3>\n          </div>\n          <div class=\"clearfix\"></div>\n          <div class=\"tg-desc\" >\n                  <h4>Description: </h4><p class=\"card-pro-desc\">\n                      <!-- {{item?.desc | capitalize}} -->\n                      <read-more [text]=\"item?.desc | capitalize\" [maxLength]=\"100\"></read-more>\n                    </p>\n          </div>\n          \n          <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\n          \n          <!-- <address>44-46 abc Road, Manchester</address> -->\n          <!-- <div class=\"tg-phonelike\">\n              <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\n                  <i class=\"icon-phone-handset\"></i>\n                  <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\n              </a>\n              <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\n          </div> -->\n      </div>\n      <div *ngIf=\"startDate\" class=\"col-md-6 dte\">\n          <h4>Start Date<br/> {{startDate | date: 'dd/MM/yyyy'}}</h4>\n      </div>\n      <div *ngIf=\"startDate\" class=\"col-md-6 dte\">\n            <h4>End Date<br/> {{eTime | date: 'dd/MM/yyyy'}}</h4>\n        </div>\n        <p class=\"lead\" *ngIf=\"startDate\">\n            <app-count-down-timer (onTimeOver)=\"timeOver()\"  [inputDate]=\"startDate\"></app-count-down-timer>\n        </p>\n        <div class=\"col-md-8 col-md-offset-2 crd-btn-container\" *ngIf=\"(startDate && !interestMatch) else divinterested\"><button  class=\"btn btn-success crd-btn\" (click)=\"updateInterested(item._id)\">Interested</button></div>\n        \n        <ng-template #divinterested>\n                <div class=\"col-md-8 col-md-offset-2 crd-btn-container\" *ngIf=\"startDate\"><div  class=\"no-btn\" >Added to Interest</div></div>\n                \n        </ng-template>\n      <div class=\"row\">\n        <div class=\"btn-primary tg-adprice\" *ngIf=\"startDate else divclosed\">Basic Price: ${{item?.bid_amount}}</div>\n        <ng-template #divclosed>\n                <div class=\"btn-primary tg-adprice\" *ngIf=\"myauction else divmy\">Last Bid Price: ${{highest}}</div>                \n        </ng-template>\n        <ng-template #divmy>\n                <div class=\"btn-primary tg-adprice\">Final Price: ${{highest}}</div>                \n        </ng-template>\n      </div>\n      \n  </div>\n</div>\n<!--   \n<div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3\">\n      <div class=\"tg-ad tg-verifiedad\">\n          <figure>\n              <span class=\"tg-themetag tg-featuretag\">featured</span>\n              <a href=\"javascript:void(0);\"><img src=\"http://exprostudio.com/html/classified/images/ads/img-01.jpg\" alt=\"image description\"></a> -->\n              <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\n          <!-- </figure>\n          <div class=\"tg-adcontent\"> -->\n              <!-- <ul class=\"tg-productcagegories\">\n                  <li><a href=\"javascript:void(0);\">Mobiles</a></li>\n              </ul> -->\n              \n              <!-- <div class=\"tg-adtitle\">\n                  <h3><a href=\"javascript:void(0);\">iPhone X for sale</a></h3>\n              </div>\n              <div class=\"clearfix\"></div>\n              <div class=\"tg-desc\">\n                  <h4>Description</h4>\n                      <p class=\"card-pro-desc\">Consectetur adipicing elit sed eiusmod temporie incidint ut labore et dolore magna enim ad minim veniam, quis nostrud.</p>\n              </div>\n              <div class=\"clearfix\"></div>\n              <div class=\"tg-days\">\n                      <h4>Days Left: 4Days</h4>\n              </div> -->\n              <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\n              \n              <!-- <address>44-46 abc Road, Manchester</address> -->\n              <!-- <div class=\"tg-phonelike\">\n                  <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\n                      <i class=\"icon-phone-handset\"></i>\n                      <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\n                  </a>\n                  <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\n              </div> -->\n          <!-- </div>\n          <button class=\"btn btn-primary tg-adprice\"> Basic Price: $200</button>\n      </div>\n  </div>\n  <div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3\">\n          <div class=\"tg-ad tg-verifiedad\">\n              <figure>\n                  <span class=\"tg-themetag tg-featuretag\">featured</span>\n                  <a href=\"javascript:void(0);\"><img src=\"http://exprostudio.com/html/classified/images/ads/img-01.jpg\" alt=\"image description\"></a> -->\n                  <!-- <span class=\"tg-photocount\">See 18 Photos</span> -->\n              <!-- </figure>\n              <div class=\"tg-adcontent\"> -->\n                  <!-- <ul class=\"tg-productcagegories\">\n                      <li><a href=\"javascript:void(0);\">Mobiles</a></li>\n                  </ul> -->\n                  \n                  <!-- <div class=\"tg-adtitle\">\n                      <h3><a href=\"javascript:void(0);\">iPhone X for sale</a></h3>\n                  </div>\n                  <div class=\"clearfix\"></div>\n                  <div class=\"tg-desc\">\n                          <p class=\"card-pro-desc\">Consectetur adipicing elit sed eiusmod temporie incidint ut labore et dolore magna enim ad minim veniam, quis nostrud.</p>\n                  </div>\n                   -->\n                  <!-- <time datetime=\"2017-06-06\">Last Updated: 4 hours ago</time> -->\n                  \n                  <!-- <address>44-46 abc Road, Manchester</address> -->\n                  <!-- <div class=\"tg-phonelike\">\n                      <a class=\"tg-btnphone\" href=\"javascript:void(0);\">\n                          <i class=\"icon-phone-handset\"></i>\n                          <span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Show Phone No.\" data-last=\"0800 - 1234 - 562 - 6\"><em>Show Phone No.</em></span>\n                      </a>\n                      <span class=\"tg-like tg-liked\"><i class=\"fa fa-heart\"></i></span>\n                  </div> -->\n              <!-- </div>\n              <button class=\"btn btn-primary tg-adprice\"> Final Price: $200</button>\n          </div>\n      </div> -->"
 
 /***/ }),
 
@@ -922,11 +1003,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/closed-auction-back/closed-auction-back.component.html":
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "\n \n <body>\n  \n            <div id=\"wrapper\">\n        \n                <!-- Navigation -->\n    <side-bar></side-bar>\n        \n                <div id=\"page-wrapper\">\n        \n                    <div class=\"container-fluid\">\n        \n                        <!-- Page Heading -->\n                       <header-title [title]=\"'Closed Auction'\"></header-title>\n                        <!-- /.row -->\n        \n                    </div>\n    \n                \n    \n\n\n\n        <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\n\n                <div class=\"container\" style=\"padding-top:20px;\">\n                        <div class=\"col-md-9 col-xs-9 brdr\">\n                            <div class=\"row\">\n                                    <div class=\"col-md-6 col-xs-6\">\n                                        <div class=\"row\">\n                                            <div class=\"col-md-4 col-xs-4\">\n                                                <select [(ngModel)]=\"start\" class=\"form-control\">\n                                                    <option  value=\"start_date\">Start</option>\n                                                    <option value=\"end_date\">End</option>\n                                                </select>\n                                            </div>\n                                            <div class=\"col-md-8 col-xs-8\">\n                                                <label>From</label>\n                                                <ng-datepicker [(ngModel)]=\"startDate\" [options]=\"options\" ></ng-datepicker>\n                                            </div>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-6 col-xs-6\">\n                                            <div class=\"row\">\n                                                    <div class=\"col-md-4 col-xs-4\">\n                                                        <select [(ngModel)]=\"end\" class=\"form-control\">\n                                                            <option  value=\"start_date\">Start</option>\n                                                            <option  value=\"end_date\">End</option>\n                                                        </select>\n                                                    </div>\n                                                    <div class=\"col-md-8 col-xs-8\">\n                                                        <label>Upto</label>\n                                                        <ng-datepicker [(ngModel)]=\"endDate\" [options]=\"options\" ></ng-datepicker>\n                                                    </div>\n                                                </div>\n                                        \n                                    </div>\n                                    \n                            </div>   \n                        </div>\n                        <!-- <div class=\"col-md-1 col-xs-2\">\n                            <div class=\"row\">\n                                <input type=\"button\" value=\"search\" class=\"btn btn-primary btn2\">\n                            </div>\n                        </div> -->\n                        <br>\n                        <br>\n                        <br>\n                        <div class=\"clearfix\"></div>\n\n            <div  *ngFor=\"let product of  (products | dateSearch:startDate:endDate:start:end)\" class=\"item  col-xs-4 col-lg-4\">\n                <div class=\"thumbnail\">\n                    \n                    <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\n                    <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\n               \n                    <div class=\"caption\">\n                        <h4 class=\"group inner list-group-item-heading text-center\">\n                            {{product.name}}</h4>\n                            <hr>\n                            <p class=\"group inner list-group-item-text\" style=\"min-height: 60px;\">\n                            <read-more [text]=\"product.desc\" [maxLength]=\"80\"></read-more>\n                          </p>\n                        <hr>\n                        <div class=\"row text-center\">\n                            <div class=\"col-xs-12 col-md-6\">\n                                Bid Start Price\n                                <p class=\"lead\">{{product.bid_amount | number:'1.2-2'}}</p>\n                            </div>\n                            <div class=\"col-xs-12 col-md-6\">\n                                Last Bid Price\n                                \n                                <p *ngIf=\"product.bidders.length > 0\" class=\"lead\">{{product.lastBidprice | number:'1.2-2'}}</p>\n                                <p *ngIf=\"product.bidders.length == 0 \" class=\"alert-danger lead\">No bid</p>\n                            </div>\n                        </div>\n                        <div class=\"row text-center\">\n                            <div class=\"col-xs-12 col-md-6\">\n                                Bid Started On<br>\n                                <b>\n                                  {{product.start_date | date: 'dd-MM-yyyy'}}\n                                  <br>\n                                  {{product.start_date | date : 'mediumTime'}}\n                                </b>\n                            </div>\n                             <div class=\"col-xs-12 col-md-6\">\n                                Bid Ended On<br>\n                                <b>\n                                    {{product.end_date | date: 'dd-MM-yyyy'}}\n                                    <br>\n                                    {{product.end_date | date : 'mediumTime'}}\n                                </b>\n                            </div>\n                        </div>\n                        <hr>\n                        <div class=\"row margn\" >\n                          \n                          <div class=\"col-xs-12 col-md-12 text-center\">\n                             <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.user_details.length}}</a>\n                             \n                          </div>\n                          <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\n                              <div class=\"modal-dialog\">\n                            \n                                <!-- Modal content-->\n                                <div class=\"modal-content\">\n                                  <div class=\"modal-header\">\n                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n                                    <h4 class=\"modal-title\">User Involved - {{involvedUsers.user_details.length}}</h4>\n                                  </div>\n                                  <div class=\"modal-body\">\n                                      <table class=\"table\">\n                                          <thead class=\"thead-inverse\">\n                                      <tr>\n                                        <th>Slno</th>\n                                        <th>Name</th>\n                                        <th>Bid Amount</th>\n                                        <th>Time</th>\n                                        <th>Status</th>\n                                      \n                                      </tr>\n                                    </thead>\n                                    <tbody *ngIf=\"involvedUsers.bidders.length ==0\">\n                                        <tr >\n                                              <td colspan=\"5\" class=\"text-center\">No User Involved</td>\n                                        </tr>\n                                    </tbody>\n                                    <tbody *ngIf=\"involvedUsers.bidders.length > 0\" >\n                                  \n                                        <tr  *ngFor=\"let usr of involvedUsers.bidders;let i = index\" >\n                                              <td >{{i+1}}</td>\n                                              <td >{{users[usr.user_id].name}}</td>\n                                              <td >{{usr.amount | number:'1.2-2'}}</td>\n                                              <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\n                                              <td >{{usr.bid_status}}</td>\n                                        </tr>\n                                    </tbody>\n                                    </table>\n                                  \n                                  </div>\n                                  <div class=\"modal-footer\">\n                                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n                                  </div>\n                                </div>\n                            \n                              </div>\n                            </div>\n                      </div>\n                      \n                        <div class=\"row\">\n                            \n                            <div class=\"col-xs-12 col-md-12\">\n                                <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center \">\n                                  <div *ngIf=\"product.is_bid_completed\">\n                                      <div class=\"alert alert-success text-center \">\n                                          Winner! \n                                          <br> <strong> {{product.lastBiduser}}</strong>\n                                          <br>\n                                          {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\n                                       </div> \n                                  </div>\n                                  <div *ngIf=\"!product.is_bid_completed\">\n                                  <div class=\"alert alert-success text-center \">\n                                    Last Bidder\n                                    <br> <strong> {{product.lastBiduser}}</strong>\n                                    <br>\n                                    {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\n                                 </div> \n                                  </div>\n                              </div>\n                                <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\n                                    <div>\n                                    <div class=\"alert alert-dangertext-center \">\n                                    No bidder Found\n                                    <br> <strong><a [routerLink]=\"['/product-detail/'+product._id]\" class=\"alert-danger\" >Re-submit</a></strong>\n                                    <br>\n                                    Bid closed : {{product.end_date | date: 'dd-MM-yyyy h:mm a'}}\n                                </div>\n                                </div>\n                              </div>\n                           \n                        </div>\n                    </div>\n                </div>\n            </div>\n           \n      \n        </div>\n        </div>\n      \n        <div *ngIf=\"products?.length == 0\" class=\"row list-group\">\n            <h3 class=\"text-center\"> No Product Found</h3>\n        </div>\n        </div>\n        \n    \n    </div>\n    <!-- /#page-wrapper -->\n    \n               \n    </div>\n    \n    <footer></footer> \n      \n    </body>\n     \n    \n       "
-=======
-module.exports = "\r\n \r\n <body>\r\n  \r\n            <div id=\"wrapper\">\r\n        \r\n                <!-- Navigation -->\r\n    <side-bar></side-bar>\r\n        \r\n                <div id=\"page-wrapper\">\r\n        \r\n                    <div class=\"container-fluid\">\r\n        \r\n                        <!-- Page Heading -->\r\n                       <header-title [title]=\"'Closed Auction'\"></header-title>\r\n                        <!-- /.row -->\r\n        \r\n                    </div>\r\n    \r\n                \r\n    \r\n\r\n\r\n\r\n        <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n                <div class=\"container\" style=\"padding-top:20px;\">\r\n                        <div class=\"col-md-9 col-xs-9 brdr\">\r\n                            <div class=\"row\">\r\n                                    <div class=\"col-md-6 col-xs-6\">\r\n                                        <div class=\"row\">\r\n                                            <div class=\"col-md-4 col-xs-4\">\r\n                                                <select [(ngModel)]=\"start\" class=\"form-control\">\r\n                                                    <option  value=\"start_date\">Start</option>\r\n                                                    <option value=\"end_date\">End</option>\r\n                                                </select>\r\n                                            </div>\r\n                                            <div class=\"col-md-8 col-xs-8\">\r\n                                                <label>From</label>\r\n                                                <ng-datepicker [(ngModel)]=\"startDate\" [options]=\"options\" ></ng-datepicker>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class=\"col-md-6 col-xs-6\">\r\n                                            <div class=\"row\">\r\n                                                    <div class=\"col-md-4 col-xs-4\">\r\n                                                        <select [(ngModel)]=\"end\" class=\"form-control\">\r\n                                                            <option  value=\"start_date\">Start</option>\r\n                                                            <option  value=\"end_date\">End</option>\r\n                                                        </select>\r\n                                                    </div>\r\n                                                    <div class=\"col-md-8 col-xs-8\">\r\n                                                        <label>Upto</label>\r\n                                                        <ng-datepicker [(ngModel)]=\"endDate\" [options]=\"options\" ></ng-datepicker>\r\n                                                    </div>\r\n                                                </div>\r\n                                        \r\n                                    </div>\r\n                                    \r\n                            </div>   \r\n                        </div>\r\n                        <!-- <div class=\"col-md-1 col-xs-2\">\r\n                            <div class=\"row\">\r\n                                <input type=\"button\" value=\"search\" class=\"btn btn-primary btn2\">\r\n                            </div>\r\n                        </div> -->\r\n                        <br>\r\n                        <br>\r\n                        <br>\r\n                        <div class=\"clearfix\"></div>\r\n                        \r\n            <div  *ngFor=\"let product of  (products | dateSearch:startDate:endDate:start:end)\" class=\"item  col-xs-4 col-lg-4\">\r\n                <div class=\"thumbnail\">\r\n                    \r\n                    <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                    <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n               \r\n                    <div class=\"caption\">\r\n                        <h4 class=\"group inner list-group-item-heading text-center\">\r\n                            {{product.name}}</h4>\r\n                            <hr>\r\n                            <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                            <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                          </p>\r\n                        <hr>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Start Price\r\n                                <p class=\"lead\">{{product.bid_amount | number:'1.2-2'}}</p>\r\n                            </div>\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Last Bid Price\r\n                                \r\n                                <p *ngIf=\"product.bidders.length > 0\" class=\"lead\">{{product.lastBidprice | number:'1.2-2'}}</p>\r\n                                <p *ngIf=\"product.bidders.length == 0 \" class=\"alert-danger lead\">No bid</p>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Started On<br>\r\n                                <b>\r\n                                  {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                                  <br>\r\n                                  {{product.start_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                             <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Ended On<br>\r\n                                <b>\r\n                                    {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                    <br>\r\n                                    {{product.end_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                        </div>\r\n                        <hr>\r\n                        <div class=\"row margn\" >\r\n                          \r\n                          <div class=\"col-xs-12 col-md-12 text-center\">\r\n                             <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.user_details.length}}</a>\r\n                             \r\n                          </div>\r\n                          <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                              <div class=\"modal-dialog\">\r\n                            \r\n                                <!-- Modal content-->\r\n                                <div class=\"modal-content\">\r\n                                  <div class=\"modal-header\">\r\n                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                    <h4 class=\"modal-title\">User Involved - {{involvedUsers.user_details.length}}</h4>\r\n                                  </div>\r\n                                  <div class=\"modal-body\">\r\n                                      <table class=\"table\">\r\n                                          <thead class=\"thead-inverse\">\r\n                                      <tr>\r\n                                        <th>Slno</th>\r\n                                        <th>Name</th>\r\n                                        <th>Bid Amount</th>\r\n                                        <th>Time</th>\r\n                                        <th>Status</th>\r\n                                      \r\n                                      </tr>\r\n                                    </thead>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length ==0\">\r\n                                        <tr >\r\n                                              <td colspan=\"5\" class=\"text-center\">No User Involved</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length > 0\" >\r\n                                  \r\n                                        <tr  *ngFor=\"let usr of involvedUsers.bidders;let i = index\" >\r\n                                              <td >{{i+1}}</td>\r\n                                              <td >{{users[usr.user_id].name}}</td>\r\n                                              <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                              <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                              <td >{{usr.bid_status}}</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    </table>\r\n                                  \r\n                                  </div>\r\n                                  <div class=\"modal-footer\">\r\n                                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                                  </div>\r\n                                </div>\r\n                            \r\n                              </div>\r\n                            </div>\r\n                      </div>\r\n                      \r\n                        <div class=\"row\">\r\n                            \r\n                            <div class=\"col-xs-12 col-md-12\">\r\n                                <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center \">\r\n                                  <div *ngIf=\"product.is_bid_completed\">\r\n                                      <div class=\"alert alert-success text-center \">\r\n                                          Winner! \r\n                                          <br> <strong> {{product.lastBiduser}}</strong>\r\n                                          <br>\r\n                                          {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                       </div> \r\n                                  </div>\r\n                                  <div *ngIf=\"!product.is_bid_completed\">\r\n                                  <div class=\"alert alert-success text-center \">\r\n                                    Last Bidder\r\n                                    <br> <strong> {{product.lastBiduser}}</strong>\r\n                                    <br>\r\n                                    {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                 </div> \r\n                                  </div>\r\n                              </div>\r\n                                <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                                    <div>\r\n                                    <div class=\"alert alert-dangertext-center \">\r\n                                    No bidder Found\r\n                                    <br> <strong><a class=\"alert-danger\" href=\"#\">Re-submit</a></strong>\r\n                                    <br>\r\n                                    Bid closed : {{product.end_date | date: 'dd-MM-yyyy h:mm a'}}\r\n                                </div>\r\n                                </div>\r\n                              </div>\r\n                           \r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n           \r\n      \r\n        </div>\r\n        </div>\r\n      \r\n        <div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n            <h3 class=\"text-center\"> No Product Found</h3>\r\n        </div>\r\n        </div>\r\n        \r\n    \r\n    </div>\r\n    <!-- /#page-wrapper -->\r\n    \r\n               \r\n    </div>\r\n    \r\n    <footer></footer> \r\n      \r\n    </body>\r\n     \r\n    \r\n       "
->>>>>>> 6b521a4a1375603d837470038541db737314ea06
+module.exports = "\r\n \r\n <body>\r\n  \r\n            <div id=\"wrapper\">\r\n        \r\n                <!-- Navigation -->\r\n    <side-bar></side-bar>\r\n        \r\n                <div id=\"page-wrapper\">\r\n        \r\n                    <div class=\"container-fluid\">\r\n        \r\n                        <!-- Page Heading -->\r\n                       <header-title [title]=\"'Closed Auction'\"></header-title>\r\n                        <!-- /.row -->\r\n        \r\n                    </div>\r\n    \r\n                \r\n    \r\n\r\n\r\n\r\n        <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n                <div class=\"container\" style=\"padding-top:20px;\">\r\n                        <div class=\"col-md-9 col-xs-9 brdr\">\r\n                            <div class=\"row\">\r\n                                    <div class=\"col-md-6 col-xs-6\">\r\n                                        <div class=\"row\">\r\n                                            <div class=\"col-md-4 col-xs-4\">\r\n                                                <select [(ngModel)]=\"start\" class=\"form-control\">\r\n                                                    <option  value=\"start_date\">Start</option>\r\n                                                    <option value=\"end_date\">End</option>\r\n                                                </select>\r\n                                            </div>\r\n                                            <div class=\"col-md-8 col-xs-8\">\r\n                                                <label>From</label>\r\n                                                <ng-datepicker [(ngModel)]=\"startDate\" [options]=\"options\" ></ng-datepicker>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class=\"col-md-6 col-xs-6\">\r\n                                            <div class=\"row\">\r\n                                                    <div class=\"col-md-4 col-xs-4\">\r\n                                                        <select [(ngModel)]=\"end\" class=\"form-control\">\r\n                                                            <option  value=\"start_date\">Start</option>\r\n                                                            <option  value=\"end_date\">End</option>\r\n                                                        </select>\r\n                                                    </div>\r\n                                                    <div class=\"col-md-8 col-xs-8\">\r\n                                                        <label>Upto</label>\r\n                                                        <ng-datepicker [(ngModel)]=\"endDate\" [options]=\"options\" ></ng-datepicker>\r\n                                                    </div>\r\n                                                </div>\r\n                                        \r\n                                    </div>\r\n                                    \r\n                            </div>   \r\n                        </div>\r\n                        <!-- <div class=\"col-md-1 col-xs-2\">\r\n                            <div class=\"row\">\r\n                                <input type=\"button\" value=\"search\" class=\"btn btn-primary btn2\">\r\n                            </div>\r\n                        </div> -->\r\n                        <br>\r\n                        <br>\r\n                        <br>\r\n                        <div class=\"clearfix\"></div>\r\n\r\n            <div  *ngFor=\"let product of  (products | dateSearch:startDate:endDate:start:end)\" class=\"item  col-xs-4 col-lg-4\">\r\n                <div class=\"thumbnail\">\r\n                    \r\n                    <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                    <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n               \r\n                    <div class=\"caption\">\r\n                        <h4 class=\"group inner list-group-item-heading text-center\">\r\n                            {{product.name}}</h4>\r\n                            <hr>\r\n                            <p class=\"group inner list-group-item-text\" style=\"min-height: 60px;\">\r\n                            <read-more [text]=\"product.desc\" [maxLength]=\"80\"></read-more>\r\n                          </p>\r\n                        <hr>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Start Price\r\n                                <p class=\"lead\">{{product.bid_amount | number:'1.2-2'}}</p>\r\n                            </div>\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Last Bid Price\r\n                                \r\n                                <p *ngIf=\"product.bidders.length > 0\" class=\"lead\">{{product.lastBidprice | number:'1.2-2'}}</p>\r\n                                <p *ngIf=\"product.bidders.length == 0 \" class=\"alert-danger lead\">No bid</p>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Started On<br>\r\n                                <b>\r\n                                  {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                                  <br>\r\n                                  {{product.start_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                             <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Ended On<br>\r\n                                <b>\r\n                                    {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                    <br>\r\n                                    {{product.end_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                        </div>\r\n                        <hr>\r\n                        <div class=\"row margn\" >\r\n                          \r\n                          <div class=\"col-xs-12 col-md-12 text-center\">\r\n                             <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.user_details.length}}</a>\r\n                             \r\n                          </div>\r\n                          <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                              <div class=\"modal-dialog\">\r\n                            \r\n                                <!-- Modal content-->\r\n                                <div class=\"modal-content\">\r\n                                  <div class=\"modal-header\">\r\n                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                    <h4 class=\"modal-title\">User Involved - {{involvedUsers.user_details.length}}</h4>\r\n                                  </div>\r\n                                  <div class=\"modal-body\">\r\n                                      <table class=\"table\">\r\n                                          <thead class=\"thead-inverse\">\r\n                                      <tr>\r\n                                        <th>Slno</th>\r\n                                        <th>Name</th>\r\n                                        <th>Bid Amount</th>\r\n                                        <th>Time</th>\r\n                                        <th>Status</th>\r\n                                      \r\n                                      </tr>\r\n                                    </thead>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length ==0\">\r\n                                        <tr >\r\n                                              <td colspan=\"5\" class=\"text-center\">No User Involved</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length > 0\" >\r\n                                  \r\n                                        <tr  *ngFor=\"let usr of involvedUsers.bidders;let i = index\" >\r\n                                              <td >{{i+1}}</td>\r\n                                              <td >{{users[usr.user_id].name}}</td>\r\n                                              <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                              <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                              <td >{{usr.bid_status}}</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    </table>\r\n                                  \r\n                                  </div>\r\n                                  <div class=\"modal-footer\">\r\n                                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                                  </div>\r\n                                </div>\r\n                            \r\n                              </div>\r\n                            </div>\r\n                      </div>\r\n                      \r\n                        <div class=\"row\">\r\n                            \r\n                            <div class=\"col-xs-12 col-md-12\">\r\n                                <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center \">\r\n                                  <div *ngIf=\"product.is_bid_completed\">\r\n                                      <div class=\"alert alert-success text-center \">\r\n                                          Winner! \r\n                                          <br> <strong> {{product.lastBiduser}}</strong>\r\n                                          <br>\r\n                                          {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                       </div> \r\n                                  </div>\r\n                                  <div *ngIf=\"!product.is_bid_completed\">\r\n                                  <div class=\"alert alert-success text-center \">\r\n                                    Last Bidder\r\n                                    <br> <strong> {{product.lastBiduser}}</strong>\r\n                                    <br>\r\n                                    {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                 </div> \r\n                                  </div>\r\n                              </div>\r\n                                <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                                    <div>\r\n                                    <div class=\"alert alert-dangertext-center \">\r\n                                    No bidder Found\r\n                                    <br> <strong><a [routerLink]=\"['/product-detail/'+product._id]\" class=\"alert-danger\" >Re-submit</a></strong>\r\n                                    <br>\r\n                                    Bid closed : {{product.end_date | date: 'dd-MM-yyyy h:mm a'}}\r\n                                </div>\r\n                                </div>\r\n                              </div>\r\n                           \r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n           \r\n      \r\n        </div>\r\n        </div>\r\n      \r\n        <div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n            <h3 class=\"text-center\"> No Product Found</h3>\r\n        </div>\r\n        </div>\r\n        \r\n    \r\n    </div>\r\n    <!-- /#page-wrapper -->\r\n    \r\n               \r\n    </div>\r\n    \r\n    <footer></footer> \r\n      \r\n    </body>\r\n     \r\n    \r\n       "
 
 /***/ }),
 
@@ -943,6 +1020,7 @@ module.exports = "\r\n \r\n <body>\r\n  \r\n            <div id=\"wrapper\">\r\n
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_date_fns_locale_en___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_date_fns_locale_en__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_socket_io_client__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config_config__ = __webpack_require__("../../../../../config/config.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -958,11 +1036,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ClosedAuctionBackComponent = (function () {
-    function ClosedAuctionBackComponent(productService, userService, router) {
+    function ClosedAuctionBackComponent(productService, userService, router, config) {
         this.productService = productService;
         this.userService = userService;
         this.router = router;
+        this.config = config;
         this.involvedUsers = [];
         //options:DatepickerOptions;
         this.options = {
@@ -973,7 +1053,7 @@ var ClosedAuctionBackComponent = (function () {
             firstCalendarDay: 0,
             locale: __WEBPACK_IMPORTED_MODULE_4_date_fns_locale_en__
         };
-        this.socket = __WEBPACK_IMPORTED_MODULE_5_socket_io_client__('http://localhost:3000');
+        this.socket = __WEBPACK_IMPORTED_MODULE_5_socket_io_client__(config.socketURL);
     }
     ClosedAuctionBackComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1032,10 +1112,10 @@ ClosedAuctionBackComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/closed-auction-back/closed-auction-back.component.html"),
         styles: [__webpack_require__("../../../../../src/app/closed-auction-back/closed-auction-back.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */]) === "function" && _d || Object])
 ], ClosedAuctionBackComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=closed-auction-back.component.js.map
 
 /***/ }),
@@ -1559,7 +1639,7 @@ EqualValidator = EqualValidator_1 = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
         selector: '[validateEqual][formControlName],[validateEqual][formControl],[validateEqual][ngModel]',
         providers: [
-            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* NG_VALIDATORS */], useExisting: Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["forwardRef"])(function () { return EqualValidator_1; }), multi: true }
+            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* NG_VALIDATORS */], useExisting: Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["forwardRef"])(function () { return EqualValidator_1; }), multi: true }
         ]
     }),
     __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Attribute"])('validateEqual')),
@@ -1629,7 +1709,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/finishedauction/finishedauction.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navigation></app-navigation>\r\n<div class=\"container\">\r\n  <div id=\"f-auction\" class=\"auction-section\">\r\n      <h4 class=\"page-head\">Closed Auctions</h4>\r\n      <div *ngIf=\"existStatus; else noProduct\">\r\n        <div  *ngFor=\"let item of products\">\r\n          <!-- {{item}} -->\r\n          <app-card [item]=\"item\" [closed]=true></app-card>\r\n        </div>\r\n      </div>\r\n      <ng-template #noProduct>\r\n        <div class=\"no-item\">\r\n            <h4>Sorrry! No items to display!</h4>\r\n        </div>\r\n      </ng-template>\r\n      \r\n      \r\n  </div>\r\n    \r\n</div>\r\n"
+module.exports = "<app-navigation></app-navigation>\n<div class=\"container\">\n  <div id=\"f-auction\" class=\"auction-section\">\n      <h4 class=\"page-head\">Closed Auctions</h4>\n      <div *ngIf=\"existStatus; else noProduct\">\n        <div  *ngFor=\"let item of products\">\n          <!-- {{item}} -->\n          <app-card [item]=\"item\" [closed]=true></app-card>\n        </div>\n      </div>\n      <ng-template #noProduct>\n        <div class=\"no-item\">\n            <h4>Sorrry! No items to display!</h4>\n        </div>\n      </ng-template>\n      \n      \n  </div>\n    \n</div>\n"
 
 /***/ }),
 
@@ -1644,6 +1724,7 @@ module.exports = "<app-navigation></app-navigation>\r\n<div class=\"container\">
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_socket_io_client__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1658,13 +1739,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var FinishedauctionComponent = (function () {
-    function FinishedauctionComponent(_productService, userService, router) {
+    function FinishedauctionComponent(_productService, userService, router, config) {
         this._productService = _productService;
         this.userService = userService;
         this.router = router;
+        this.config = config;
         this.existStatus = false;
-        this.socket = __WEBPACK_IMPORTED_MODULE_4_socket_io_client__('http://192.168.1.99:3000');
+        this.socket = __WEBPACK_IMPORTED_MODULE_4_socket_io_client__(config.socketURL);
     }
     FinishedauctionComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1702,10 +1785,10 @@ FinishedauctionComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.css")],
         inputs: ['products']
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__["a" /* ProductServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__["a" /* ProductServiceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__["a" /* ProductServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__["a" /* ProductServiceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]) === "function" && _d || Object])
 ], FinishedauctionComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=finishedauction.component.js.map
 
 /***/ }),
@@ -1974,7 +2057,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body style=\"background-color : #f3f3f3;padding:  5% 0 17% 0;\">\n<div class=\"container\">\n  <div class=\"row\">\n\n    <div class=\"main\">\n\n      <h3>Please Log In, or <a [routerLink]=\"['/registration']\">Sign Up</a></h3>\n      <div class=\"row\">\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\n          <a href=\"/auth/facebook\" target=\"_blank\" class=\"btn btn-lg btn-primary btn-block\">Facebook</a>\n        </div>\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\n          <a href=\"/auth/google\" class=\"btn btn-lg btn-info btn-block\">Google</a>\n        </div>\n      </div>\n      <div class=\"login-or\">\n        <hr class=\"hr-or\">\n        <span class=\"span-or\">or</span>\n      </div>\n\n      <form role=\"form\" #f=\"ngForm\" (ngSubmit)=\"f.form.valid && login()\" novalidate>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\n          <label for=\"inputUsernameEmail\">Username or email</label>\n          <input type=\"text\" class=\"form-control\" id=\"inputUsernameEmail\" required [(ngModel)]=\"newLogin.email\" name=\"email\" #email=\"ngModel\">\n          <div *ngIf=\"f.submitted && !email.valid\" class=\"help-block\">Username is required</div>\n        </div>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\n          <label for=\"inputPassword\">Password</label>\n          <input type=\"password\" class=\"form-control\" id=\"inputPassword\" required [(ngModel)]=\"newLogin.password\" name=\"password\" #password=\"ngModel\">\n          <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\n        </div>\n        <button type=\"submit\" class=\"btn btn btn-primary\">\n          Log In\n        </button>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && status }\">\n            <div *ngIf=\"status\" class=\"help-block\">!{{msg}}</div>\n       </div> \n      </form>\n      \n    </div>\n    \n  </div>\n</div>\n</body>\n"
+module.exports = "<body style=\"background-color : #f3f3f3;padding:  5% 0 17% 0;\">\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"main\">\r\n\r\n      <h3>Please Log In, or <a [routerLink]=\"['/registration']\">Sign Up</a></h3>\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n          <a href=\"/auth/facebook\" target=\"_blank\" class=\"btn btn-lg btn-primary btn-block\">Facebook</a>\r\n        </div>\r\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n          <a href=\"/auth/google\" class=\"btn btn-lg btn-info btn-block\">Google</a>\r\n        </div>\r\n      </div>\r\n      <div class=\"login-or\">\r\n        <hr class=\"hr-or\">\r\n        <span class=\"span-or\">or</span>\r\n      </div>\r\n\r\n      <form role=\"form\" #f=\"ngForm\" (ngSubmit)=\"f.form.valid && login()\" novalidate>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\r\n          <label for=\"inputUsernameEmail\">Username or email</label>\r\n          <input type=\"text\" class=\"form-control\" id=\"inputUsernameEmail\" required [(ngModel)]=\"newLogin.email\" name=\"email\" #email=\"ngModel\">\r\n          <div *ngIf=\"f.submitted && !email.valid\" class=\"help-block\">Username is required</div>\r\n        </div>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\r\n          <label for=\"inputPassword\">Password</label>\r\n          <input type=\"password\" class=\"form-control\" id=\"inputPassword\" required [(ngModel)]=\"newLogin.password\" name=\"password\" #password=\"ngModel\">\r\n          <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\r\n        </div>\r\n        <button type=\"submit\" class=\"btn btn btn-primary\">\r\n          Log In\r\n        </button>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && status }\">\r\n            <div *ngIf=\"status\" class=\"help-block\">!{{msg}}</div>\r\n       </div> \r\n      </form>\r\n      \r\n    </div>\r\n    \r\n  </div>\r\n</div>\r\n</body>\r\n"
 
 /***/ }),
 
@@ -2162,7 +2245,7 @@ var _a, _b, _c;
 
 /***/ }),
 
-/***/ "../../../../../src/app/myauctions/myauctions.component.css":
+/***/ "../../../../../src/app/material/material.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -2170,7 +2253,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#m-auction{\r\n    margin-top: 180px;\r\n}", ""]);
+exports.push([module.i, ".example-container {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  min-width: 300px;\r\n}\r\n\r\n.example-header {\r\n  min-height: 64px;\r\n  padding: 8px 24px 0;\r\n}\r\n\r\n.mat-form-field {\r\n  font-size: 14px;\r\n  width: 100%;\r\n}\r\n\r\n.mat-table {\r\n  overflow: auto;\r\n  max-height: 500px;\r\n}\r\n.table-striped > tbody > tr:nth-of-type(2n+1) {\r\n  background-color: #fff;\r\n}\r\n\r\n.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {\r\n  border: none\r\n}", ""]);
 
 // exports
 
@@ -2180,24 +2263,24 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/myauctions/myauctions.component.html":
+/***/ "../../../../../src/app/material/material.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navigation></app-navigation>\r\n<div class=\"container\">\r\n        <div id=\"m-auction\" class=\"auction-section\">\r\n            <h4 class=\"page-head\">My Auctions</h4>\r\n             <!-- <div *ngIf=\"existStatus; else noProduct\"> -->\r\n                <div *ngFor=\"let item of products\">\r\n                    <!-- {{item}} -->\r\n                    <app-card [item]=\"item\" [myauction]=true></app-card>\r\n                </div>\r\n            <!--</div>\r\n           \r\n            <ng-template #noProduct>\r\n                <div class=\"no-item\">\r\n                    <h4>Sorrry! No items to display!</h4>\r\n                </div>\r\n            </ng-template>  -->\r\n          \r\n      </div>"
+module.exports = "<div class=\"example-header\" *ngIf=\"stat\">\n    <mat-form-field>\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n    </mat-form-field>\n  </div>\n  \n  <div class=\"example-container mat-elevation-z8\">\n  \n    <mat-table [dataSource]=\"dataSource\" matSort>\n  \n      <!-- ID Column -->\n      <ng-container matColumnDef=\"name\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Product </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.name | capitalize}} </mat-cell>\n      </ng-container>\n  \n      <!-- Progress Column -->\n      <ng-container matColumnDef=\"mybid\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Your Bids </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> \n          \n          <!-- {{row.status}} -->\n          <p *ngFor=\"let bid of row.mybid\">{{bid.amount | number:'1.2-2'}} : {{bid.date_time | date: 'dd-MM-yyyy h:mm a'}}</p>\n        </mat-cell>\n      </ng-container>\n  \n      <!-- ID Column -->\n      <ng-container matColumnDef=\"topbid\">\n          <mat-header-cell *matHeaderCellDef mat-sort-header> Top Bid </mat-header-cell>\n          <mat-cell *matCellDef=\"let row\"> {{row.topbid | number:'1.2-2'}} </mat-cell>\n        </ng-container>\n\n      <!-- ID Column -->\n      <ng-container matColumnDef=\"status\">\n          <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>\n          <mat-cell *matCellDef=\"let row\"> <p [ngStyle]=\"{ 'color': row.bgClr }\">{{row.bidstatus}}</p> </mat-cell>\n        </ng-container>\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n      </mat-row>\n    </mat-table>\n  \n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n  </div>\n  \n  \n  <!-- Copyright 2017 Google Inc. All Rights Reserved.\n      Use of this source code is governed by an MIT-style license that\n      can be found in the LICENSE file at http://angular.io/license -->\n  \n  "
 
 /***/ }),
 
-/***/ "../../../../../src/app/myauctions/myauctions.component.ts":
+/***/ "../../../../../src/app/material/material.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyauctionsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MaterialComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__ = __webpack_require__("../../../../../src/app/services/product-service.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_socket_io_client__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_product_service_service__ = __webpack_require__("../../../../../src/app/services/product-service.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2212,14 +2295,215 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MyauctionsComponent = (function () {
-    function MyauctionsComponent(_productService, userService, router) {
+
+var MaterialComponent = (function () {
+    function MaterialComponent(_productService, userService, router, config) {
+        // Create 100 users
         this._productService = _productService;
         this.userService = userService;
         this.router = router;
-        this.products = [];
+        this.config = config;
         this.existStatus = false;
-        this.socket = __WEBPACK_IMPORTED_MODULE_2_socket_io_client__('http://192.168.1.99:3000');
+        this.stat = false;
+        this.displayedColumns = ['name', 'mybid', 'topbid', 'status'];
+        // for (let i = 1; i <= 100; i++) { users.push(this.createNewUser(i)); }
+        // Assign the data to the data source for the table to render
+        // this.dataSource = new MatTableDataSource(users);
+        // console.log("f");
+    }
+    MaterialComponent.prototype.ngOnInit = function () {
+        this.loadAuctions();
+        var users = [];
+        // this.product.forEach((item, index) => {
+        //   this.product.push({
+        //   name: item.name,
+        //   status: item.image
+        // });
+        // });
+    };
+    /**
+     * Set the paginator and sort after the view init since this component will
+     * be able to query its view for the initialized paginator and sort.
+     */
+    MaterialComponent.prototype.ngAfterViewInit = function () {
+        // this.dataSource.paginator = this.paginator;
+        // this.dataSource.sort = this.sort;
+    };
+    MaterialComponent.prototype.applyFilter = function (filterValue) {
+        filterValue = filterValue.trim(); // Remove whitespace
+        filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+        this.dataSource.filter = filterValue;
+    };
+    MaterialComponent.prototype.loadAuctions = function () {
+        var _this = this;
+        this.loadUserId();
+        this._productService.loadMyAuctionProduct()
+            .subscribe(function (resProducts) {
+            _this.product = resProducts;
+            //   console.log('fetch all my product');
+            // console.log(resProducts);
+            if (resProducts.length > 0) {
+                _this.existStatus = true;
+            }
+            _this.product = resProducts;
+            console.log(_this.existStatus);
+            var uId = _this._productService.loadUserId();
+            _this.product.forEach(function (item, index) {
+                var lastBidprice = item.bid_amount;
+                var lastBiduser = '';
+                var lastBidTime = '';
+                var lastBiduserId = '';
+                var bidstatus = '';
+                var bgClr = '';
+                var mybid = [];
+                item.bidders.forEach(function (bidder, i) {
+                    // console.log(bidder);
+                    if (bidder.amount >= lastBidprice && bidder.bid_status != 'rejected') {
+                        lastBidprice = bidder.amount;
+                        //  lastBiduser = this.users[bidder.user_id].name;
+                        lastBiduserId = bidder.user_id;
+                        lastBidTime = bidder.date_time;
+                    }
+                    if (bidder.user_id == uId) {
+                        mybid.push(bidder);
+                    }
+                    // if(bidder.bid_status == "rejected")
+                });
+                if (lastBiduserId == uId && item.is_bid_completed) {
+                    var bidstatus = 'Winner';
+                    var bgClr = '#00ab5d';
+                }
+                if (lastBiduserId != uId && item.is_bid_completed) {
+                    var bidstatus = 'Participated';
+                    var bgClr = '#da1515';
+                }
+                if (lastBiduserId == uId && !item.is_bid_completed) {
+                    var bidstatus = 'Participated';
+                    var bgClr = '#00ab5d';
+                }
+                if (lastBiduserId != uId && !item.is_bid_completed) {
+                    var bidstatus = 'Participated';
+                    var bgClr = '#da1515';
+                }
+                _this.product[index].bidstatus = bidstatus;
+                _this.product[index].mybid = mybid;
+                _this.product[index].bgClr = bgClr;
+                _this.product[index].mybid = mybid;
+                _this.product[index].topbid = lastBidprice;
+                _this.product[index].lastBiduser = lastBiduser;
+                _this.product[index].lastBidTime = lastBidTime;
+                _this.product[index].lastBiduserId = lastBiduserId;
+            });
+            _this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatTableDataSource */](_this.product);
+            _this.dataSource.paginator = _this.paginator;
+            _this.dataSource.sort = _this.sort;
+            // console.log(this.product);
+            _this.stat = true;
+        });
+    };
+    MaterialComponent.prototype.loadUserId = function () {
+        this.authUser = JSON.parse(localStorage.getItem('user'));
+        return this.authUser.id;
+    };
+    return MaterialComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */]),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */]) === "function" && _a || Object)
+], MaterialComponent.prototype, "paginator", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */]),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */]) === "function" && _b || Object)
+], MaterialComponent.prototype, "sort", void 0);
+MaterialComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-material',
+        template: __webpack_require__("../../../../../src/app/material/material.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/material/material.component.css")],
+    }),
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_product_service_service__["a" /* ProductServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_product_service_service__["a" /* ProductServiceService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["e" /* Router */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]) === "function" && _f || Object])
+], MaterialComponent);
+
+var _a, _b, _c, _d, _e, _f;
+/** Builds and returns a new User. */
+/** Constants used to fill up our data base. */
+// const COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+//   'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
+// const NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+//   'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
+//   'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
+// export interface UserData {
+//   name: string;
+//   status: string;
+// }
+/**  Copyright 2017 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license */ 
+//# sourceMappingURL=material.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/myauctions/myauctions.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#m-auction{\r\n    margin-top: 180px;\r\n}\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/myauctions/myauctions.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-navigation></app-navigation>\r\n<div class=\"container\">\r\n        <div  id=\"m-auction\" class=\"auction-section\">\r\n            <h4 class=\"page-head\">My Auctions</h4>\r\n             <!-- <div *ngIf=\"existStatus; else noProduct\"> -->\r\n                <!-- <div *ngFor=\"let item of products\"> -->\r\n                    <div >\r\n                    <!-- {{item}} -->\r\n                    <!-- <app-card [item]=\"item\" [myauction]=true></app-card> -->\r\n                    <!-- <app-myauctiontable [products]=\"product\"></app-myauctiontable> -->\r\n                    <app-material ></app-material>\r\n                </div>\r\n            <!--</div> -->\r\n            <div *ngIf=\"!existStatus\">\r\n                <div class=\"no-item\">\r\n                    <h4>Sorrry! No items to display!</h4>\r\n                </div>\r\n            </div>  \r\n          \r\n      </div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/myauctions/myauctions.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyauctionsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__ = __webpack_require__("../../../../../src/app/services/product-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_socket_io_client__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var MyauctionsComponent = (function () {
+    function MyauctionsComponent(_productService, userService, router, config) {
+        this._productService = _productService;
+        this.userService = userService;
+        this.router = router;
+        this.config = config;
+        this.product = [];
+        this.existStatus = false;
+        this.socket = __WEBPACK_IMPORTED_MODULE_2_socket_io_client__(config.socketURL);
     }
     MyauctionsComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -2232,7 +2516,7 @@ var MyauctionsComponent = (function () {
         this.socket.on('newbid', function (data) {
             // console.log(data);
             // console.log('mycll');
-            _this.products.forEach(function (item, index, object) {
+            _this.product.forEach(function (item, index, object) {
                 if (item._id == data) {
                     object.splice(index, 1);
                 }
@@ -2240,46 +2524,76 @@ var MyauctionsComponent = (function () {
             _this.loadAuctions();
         });
         this.socket.on('closebid', function (data) {
-            console.log(data);
+            // console.log(data);
             _this.loadAuctions();
         });
+        // this.socket.on('userbidreject', (data) => {
+        //   console.log(data);
+        //   if(data.u_id == this.loadUserId())
+        //   this.loadAuctions();
+        // })
     };
     MyauctionsComponent.prototype.loadAuctions = function () {
         var _this = this;
         this.loadUserId();
         this._productService.loadMyAuctionProduct()
             .subscribe(function (resProducts) {
-            // this.products = resProducts;
-            console.log('fetch all my product');
-            console.log(resProducts);
-            var temp = [];
-            resProducts.forEach(function (item, index) {
+            _this.product = resProducts;
+            //   console.log('fetch all my product');
+            //   console.log(resProducts);
+            if (resProducts.length > 0) {
+                _this.existStatus = true;
+            }
+            _this.product = resProducts;
+            console.log(_this.existStatus);
+            var uId = _this._productService.loadUserId();
+            _this.product.forEach(function (item, index) {
                 var lastBidprice = item.bid_amount;
-                //var lastBiduser = '';
+                var lastBiduser = '';
                 var lastBidTime = '';
                 var lastBiduserId = '';
+                var bidstatus = '';
+                var bgClr = '';
+                var mybid = [];
                 item.bidders.forEach(function (bidder, i) {
-                    //console.log(bidder);
-                    if (bidder.amount >= lastBidprice && bidder.bid_status != "rejected") {
+                    // console.log(bidder);
+                    if (bidder.amount >= lastBidprice && bidder.bid_status != 'rejected') {
                         lastBidprice = bidder.amount;
-                        // lastBiduser = this.users[bidder.user_id].name;
+                        //  lastBiduser = this.users[bidder.user_id].name;
                         lastBiduserId = bidder.user_id;
                         lastBidTime = bidder.date_time;
                     }
+                    if (bidder.user_id == uId) {
+                        mybid.push(bidder);
+                    }
+                    // if(bidder.bid_status == "rejected")
                 });
-                resProducts[index].lastBidprice = lastBidprice;
-                //  resProducts[index].lastBiduser = lastBiduser;
-                resProducts[index].lastBidTime = lastBidTime;
-                resProducts[index].lastBiduserId = lastBiduserId;
-                if (_this.authUser.id == lastBiduserId) {
-                    temp.push(resProducts[index]);
+                if (lastBiduserId == uId && item.is_bid_completed) {
+                    var bidstatus = 'Winner';
+                    var bgClr = '#00ab5d';
                 }
+                if (lastBiduserId != uId && item.is_bid_completed) {
+                    var bidstatus = 'Participated';
+                    var bgClr = '#da1515';
+                }
+                if (lastBiduserId == uId && !item.is_bid_completed) {
+                    var bidstatus = 'Participated';
+                    var bgClr = '#00ab5d';
+                }
+                if (lastBiduserId != uId && !item.is_bid_completed) {
+                    var bidstatus = 'Participated';
+                    var bgClr = '#da1515';
+                }
+                _this.product[index].bidstatus = bidstatus;
+                _this.product[index].mybid = mybid;
+                _this.product[index].bgClr = bgClr;
+                _this.product[index].mybid = mybid;
+                _this.product[index].topbid = lastBidprice;
+                _this.product[index].lastBiduser = lastBiduser;
+                _this.product[index].lastBidTime = lastBidTime;
+                _this.product[index].lastBiduserId = lastBiduserId;
             });
-            //  console.log(temp);
-            _this.products = temp;
-            if (_this.products.length > 0) {
-                _this.existStatus = true;
-            }
+            console.log(_this.product);
         });
     };
     MyauctionsComponent.prototype.loadUserId = function () {
@@ -2294,11 +2608,130 @@ MyauctionsComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/myauctions/myauctions.component.html"),
         styles: [__webpack_require__("../../../../../src/app/myauctions/myauctions.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__["a" /* ProductServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__["a" /* ProductServiceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["e" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__["a" /* ProductServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__["a" /* ProductServiceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["e" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]) === "function" && _d || Object])
 ], MyauctionsComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=myauctions.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/myauctiontable/myauctiontable.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".table-bordered {\r\n    border: 1px solid #dddddd;\r\n    border-collapse: separate;\r\n    border-left: 0;\r\n    border-radius: 4px;\r\n    }\r\n    \r\n    .table {\r\n    width: 100%;\r\n    margin-bottom: 20px;\r\n    background-color: transparent;\r\n    border-collapse: collapse;\r\n    border-spacing: 0;\r\n    display: table;\r\n    }\r\n    \r\n    .widget.widget-table .table {\r\n    margin-bottom: 0;\r\n    border: none;\r\n    }\r\n    \r\n    .widget.widget-table .widget-content {\r\n    padding: 0;\r\n    }\r\n    \r\n    .widget .widget-header + .widget-content {\r\n    border-top: none;\r\n    -webkit-border-top-left-radius: 0;\r\n    -webkit-border-top-right-radius: 0;\r\n    -moz-border-radius-topleft: 0;\r\n    -moz-border-radius-topright: 0;\r\n    border-top-left-radius: 0;\r\n    border-top-right-radius: 0;\r\n    }\r\n    \r\n    .widget .widget-content {\r\n    padding: 20px 15px 15px;\r\n    background: #FFF;\r\n    /* border: 1px solid #D5D5D5; */\r\n    /* -moz-border-radius: 5px;\r\n    -webkit-border-radius: 5px; */\r\n    /* border-radius: 5px; */\r\n    /* box-shadow: 0px 4px 10px 0px #969696; */\r\n    }\r\n    \r\n    .widget .widget-header {\r\n    position: relative;\r\n    height: 80px;\r\n    line-height: 40px;\r\n    /* background: #E9E9E9; */\r\n    /* background: -moz-linear-gradient(top, #fafafa 0%, #e9e9e9 100%);\r\n    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #e9e9e9));\r\n    background: -webkit-linear-gradient(top, #fafafa 0%, #e9e9e9 100%);\r\n    background: -o-linear-gradient(top, #fafafa 0%, #e9e9e9 100%);\r\n    background: -ms-linear-gradient(top, #fafafa 0%, #e9e9e9 100%);\r\n    background: linear-gradient(top, #fafafa 0%, #e9e9e9 100%); */\r\n    /* text-shadow: 0 1px 0 #fff;\r\n    border-radius: 5px 5px 0 0; */\r\n    /* box-shadow: 0 2px 5px rgba(0,0,0,0.1),inset 0 1px 0 white,inset 0 -1px 0 rgba(255,255,255,0.7);\r\n    border-bottom: 1px solid #bababa; */\r\n    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9');\r\n    -ms-filter: \"progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9')\"; */\r\n    /* border: 1px solid #D5D5D5; */\r\n    /* -webkit-border-top-left-radius: 4px;\r\n    -webkit-border-top-right-radius: 4px;\r\n    -moz-border-radius-topleft: 4px;\r\n    -moz-border-radius-topright: 4px;\r\n    border-top-left-radius: 4px;\r\n    border-top-right-radius: 4px; */\r\n    -webkit-background-clip: padding-box;\r\n    }\r\n    \r\n    thead {\r\n    display: table-header-group;\r\n    vertical-align: middle;\r\n    border-color: inherit;\r\n    }\r\n    \r\n    .widget .widget-header h3 {\r\n    top: 2px;\r\n    position: relative;\r\n    left: 10px;\r\n    display: inline-block;\r\n    margin-right: 3em;\r\n    font-size: 14px;\r\n    font-weight: 600;\r\n    color: #555;\r\n    line-height: 18px;\r\n    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);\r\n    }\r\n    \r\n    .widget .widget-header [class^=\"icon-\"], .widget .widget-header [class*=\" icon-\"] {\r\n    display: inline-block;\r\n    margin-left: 13px;\r\n    margin-right: -2px;\r\n    font-size: 16px;\r\n    color: #555;\r\n    vertical-align: middle;\r\n    }\r\n\r\n    .pro-img{\r\n        width: 100px;\r\n    }\r\n    .table-head{\r\n        margin: 0;\r\n    }\r\n    .search{\r\n        padding: 5px;\r\n        /* border-radius: 30px;S */\r\n        margin-bottom: 20px;\r\n        /* min-width: 258px; */\r\n        padding-left: 15px;\r\n        border: none;\r\n        border-bottom: 1px solid #ccc;\r\n        outline: none;\r\n        width: 98%;\r\n    }\r\n    td, td p{\r\n        font-weight: 700;\r\n    }", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/myauctiontable/myauctiontable.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"span7\">   \n  <div class=\"widget stacked widget-table action-table\">\n            \n          <div class=\"widget-header\">\n            <input type=\"text\" placeholder=\"Search\" [(ngModel)]=\"searchTerm\" class=\"search\">  \n          </div> <!-- /widget-header -->\n          \n          <div class=\"widget-content\">\n            \n            <table class=\"table table-striped table-bordered\">\n              <thead>\n                <tr>\n                  <th>Sl.No</th>\n                  <th>Product</th>\n                  <th>Your Bids</th>\n                  <th>Top Bid</th>\n                  <th>Status</th>\n                  <!-- <th class=\"td-actions\"></th> -->\n                </tr>\n              </thead>\n              <tbody>\n                <tr *ngFor=\"let item of products  | filter:searchTerm; let i = index;\">\n                  <td>{{i+1}}</td>\n                  <td>{{item.name | capitalize}}\n                    <br/>\n                    <img src=\"assets/uploads/{{item.image||'default.png'}}\" alt=\"product image\" class=\"pro-img\">\n                  </td>\n                  <td>\n                    <p *ngFor=\"let bid of item.mybid\">{{bid.amount | number:'1.2-2'}} : {{bid.date_time | date: 'dd-MM-yyyy h:mm a'}}</p>\n                    </td>\n                  <td>{{item.topbid | number:'1.2-2'}}</td>\n                  <td class=\"td-actions\">\n                    <p [ngStyle]=\"{ 'color': item.bgClr }\">{{item.bidstatus}}</p>\n                  </td>\n                </tr>\n                \n                 \n                \n                \n                </tbody>\n              </table>\n            \n          </div> <!-- /widget-content -->\n        \n        </div> <!-- /widget -->\n              </div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/myauctiontable/myauctiontable.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyauctiontableComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__ = __webpack_require__("../../../../../src/app/services/product-service.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var MyauctiontableComponent = (function () {
+    function MyauctiontableComponent(_productService) {
+        this._productService = _productService;
+        this.product = [];
+    }
+    MyauctiontableComponent.prototype.ngOnInit = function () {
+        // if(this.product)
+        // {
+        //   console.log("h");
+        //   let uId = this._productService.loadUserId();
+        //   this.product.forEach((item, index) => {
+        //     var lastBidprice = item.bid_amount;
+        //     var lastBiduser = '';
+        //     var lastBidTime = '';
+        //     var lastBiduserId = '';
+        //     var bidstatus = '';
+        //     var bgClr = '';
+        //     let mybid = [];
+        //     item.bidders.forEach((bidder, i) => {
+        //       console.log(bidder);
+        //       if(bidder.amount >= lastBidprice && bidder.bid_status != 'rejected'){
+        //          lastBidprice = bidder.amount;
+        //         //  lastBiduser = this.users[bidder.user_id].name;
+        //           lastBiduserId = bidder.user_id;
+        //          lastBidTime = bidder.date_time;
+        //       }
+        //       if(bidder.user_id == uId){
+        //         mybid.push(bidder);
+        //       }
+        //      // if(bidder.bid_status == "rejected")
+        //     });
+        //     if(lastBiduserId  == uId && item.is_bid_completed){
+        //       var bidstatus = 'Winner';
+        //       var bgClr = 'green';
+        //     }
+        //     if(lastBiduserId  != uId && item.is_bid_completed){
+        //       var bidstatus = 'Participated';
+        //       var bgClr = 'red';
+        //     }
+        //     if(lastBiduserId  == uId && !item.is_bid_completed){
+        //       var bidstatus = 'Participated';
+        //       var bgClr = 'green';
+        //     }
+        //     if(lastBiduserId  != uId && !item.is_bid_completed){
+        //       var bidstatus = 'Participated';
+        //       var bgClr = 'red';
+        //     }
+        //     this.product[index].bidstatus = bidstatus;
+        //     this.product[index].mybid = mybid;
+        //     this.product[index].bgClr = bgClr;
+        //     this.product[index].mybid = mybid;
+        //     this.product[index].topbid = lastBidprice;
+        //     this.product[index].lastBiduser = lastBiduser;
+        //     this.product[index].lastBidTime = lastBidTime;
+        //     this.product[index].lastBiduserId = lastBiduserId;
+        //     console.log(this.product);
+        //   });
+        // }
+    };
+    return MyauctiontableComponent;
+}());
+MyauctiontableComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-myauctiontable',
+        template: __webpack_require__("../../../../../src/app/myauctiontable/myauctiontable.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/myauctiontable/myauctiontable.component.css")],
+        inputs: ['products']
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__["a" /* ProductServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__["a" /* ProductServiceService */]) === "function" && _a || Object])
+], MyauctiontableComponent);
+
+var _a;
+//# sourceMappingURL=myauctiontable.component.js.map
 
 /***/ }),
 
@@ -2323,7 +2756,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/navigation/navigation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  \r\n  <div class=\"fluid-container\">\r\n    <nav class=\"navbar navbar-default  navbar-fixed-top\">\r\n        <div class=\"box\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                     <!-- <div class=\"col-lg-8 col-md-8\">\r\n                        <p class=\"title1\">Free phone: <strong>800-2345-6789</strong></p>\r\n                        <p class=\"title2\">Hours:  8am-8pm PST M-Th;   6am-3pm PST Fri</p>\r\n                    </div> -->\r\n                    \r\n\r\n                    <div class=\"pull-right\">\r\n                        <li class=\"dropdown\" *ngIf=\"userService.loggedIn()\">\r\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">My Account <span class=\"caret\"></span></a>\r\n                        <ul class=\"dropdown-menu\">\r\n                          \r\n                          <li *ngIf=\"userService.loggedIn()\"><a [routerLink]=\"['/myauctions']\">My Bids</a></li>\r\n                          <li *ngIf=\"userService.loggedIn()\"><a (click)=\"logout()\" href=\"#\">Log Out</a></li>\r\n                          \r\n                        </ul>\r\n                      </li>\r\n                        <!-- <a href=\"#\" class=\"btn-default btn1\">Sign In</a> -->\r\n                    </div>\r\n\r\n                    <div class=\"pull-right notify-cont\">\r\n\r\n                        <li *ngIf=\"count\" class=\"dropdown notify\" >\r\n                          <div class=\"notify-count\">{{countNumber}}</div>\r\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><i class=\"fa fa-bell\" aria-hidden=\"true\"></i></a>\r\n                        <ul class=\"dropdown-menu\" id=\"notify-menu\">\r\n                          \r\n                          <li *ngFor=\"let item of info\">\r\n                            <a [routerLink]=\"['/winnerconfirm/'+item?._id]\" class=\"ovrflow-h\" id=\"notify-head-a\">\r\n                             <div class=\"col-md-12\">\r\n                                <div class=\"row\">\r\n                                  <div class=\"col-md-12\">\r\n                                    <h4 id=\"won-head\">You Won a Bid!</h4>\r\n                                  </div>\r\n                                 \r\n                                    <div class=\"col-md-3\">\r\n                                      <div class=\"row\">\r\n                                          <img  class=\"noftify-pro-img\" src=\"../../assets/uploads/{{item?.image||'default.png'}}\" alt=\"pro\">\r\n                                        </div>\r\n                                      </div>\r\n                                      \r\n                                    <div class=\"col-md-9\">\r\n                                          <h4 class=\"noftify-pro-h4\">{{item?.name}}</h4>\r\n                                          <!-- <p>Amount: $1000</p> -->\r\n                                      \r\n                                 \r\n                                  </div>\r\n                                </div>\r\n                                  \r\n                              </div>\r\n                              \r\n                              \r\n                            </a>\r\n                          </li>\r\n                    \r\n                          <!-- <li><a (click)=\"logout()\" href=\"#\">Log Out</a></li> -->\r\n                          \r\n                        </ul>\r\n                      </li>\r\n                        <!-- <a href=\"#\" class=\"btn-default btn1\">Sign In</a> -->\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div> \r\n      <div class=\"container\">\r\n        <div class=\"container-fluid\">\r\n          <!-- Brand and toggle get grouped for better mobile display -->\r\n          <div class=\"navbar-header\">\r\n            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n              <span class=\"sr-only\">Toggle navigation</span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n            </button>\r\n            <a class=\"navbar-brand\" [routerLink]=\"['/home']\"><img src=\"../../assets/images/brand.png\" alt=\"brand\"></a>\r\n          </div>\r\n      \r\n          <!-- Collect the nav links, forms, and other content for toggling -->\r\n          <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n            \r\n           \r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n                <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a  [routerLink]=\"['/home']\">Home <span class=\"sr-only\">(current)</span></a></li>\r\n                <!-- <li class=\"dropdown\" >\r\n                  <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Manage <span class=\"caret\"></span></a>\r\n                  <ul class=\"dropdown-menu\">\r\n                    \r\n                    <li><a href=\"#\">Users</a></li>\r\n                    <li><a href=\"#\">Polls</a></li>\r\n                    <li><a href=\"#\">Asign Poll</a></li>\r\n                    \r\n                  </ul>\r\n                </li> -->\r\n                \r\n                    <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/runningauction']\" >Running Auctions</a></li>\r\n                    <!-- <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/registration']\">Registration</a></li> -->\r\n                    <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/finishedauction']\" >Closed Auctions</a></li>\r\n                    <!-- <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/register']\">Register</a></li> -->\r\n                    <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/upcomingauction']\" >Upcoming Auctions</a></li>\r\n                \r\n                \r\n            </ul>\r\n          </div><!-- /.navbar-collapse -->\r\n        </div><!-- /.container-fluid -->\r\n      </div>\r\n    </nav>\r\n  \r\n    \r\n</div>\r\n</header>"
+module.exports = "<header *ngIf=\"!loading\">\r\n  \r\n  <div class=\"fluid-container\">\r\n    <nav class=\"navbar navbar-default  navbar-fixed-top\">\r\n        <div class=\"box\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                     <!-- <div class=\"col-lg-8 col-md-8\">\r\n                        <p class=\"title1\">Free phone: <strong>800-2345-6789</strong></p>\r\n                        <p class=\"title2\">Hours:  8am-8pm PST M-Th;   6am-3pm PST Fri</p>\r\n                    </div> -->\r\n                    \r\n\r\n                    <div class=\"pull-right\">\r\n                        <li class=\"dropdown\" *ngIf=\"userService.loggedIn()\">\r\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{userInfo.name | capitalize}} <span class=\"caret\"></span></a>\r\n                        <ul class=\"dropdown-menu\">\r\n                          \r\n                          <li *ngIf=\"userService.loggedIn()\"><a [routerLink]=\"['/myauctions']\">My Bids</a></li>\r\n                          <li *ngIf=\"userService.loggedIn()\"><a (click)=\"logout()\" href=\"#\">Log Out</a></li>\r\n                          \r\n                        </ul>\r\n                      </li>\r\n                        <!-- <a href=\"#\" class=\"btn-default btn1\">Sign In</a> -->\r\n                    </div>\r\n\r\n                    <div class=\"pull-right notify-cont\">\r\n\r\n                        <li *ngIf=\"count\" class=\"dropdown notify\" >\r\n                          <div class=\"notify-count\">{{countNumber}}</div>\r\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><i class=\"fa fa-bell\" aria-hidden=\"true\"></i></a>\r\n                        <ul class=\"dropdown-menu\" id=\"notify-menu\">\r\n                          \r\n                          <li *ngFor=\"let item of info\">\r\n                            <a [routerLink]=\"['/winnerconfirm/'+item?._id]\" class=\"ovrflow-h\" id=\"notify-head-a\">\r\n                             <div class=\"col-md-12\">\r\n                                <div class=\"row\">\r\n                                  <div class=\"col-md-12\">\r\n                                    <h4 id=\"won-head\">You Won a Bid!</h4>\r\n                                  </div>\r\n                                 \r\n                                    <div class=\"col-md-3\">\r\n                                      <div class=\"row\">\r\n                                          <img  class=\"noftify-pro-img\" src=\"../../assets/uploads/{{item?.image||'default.png'}}\" alt=\"pro\">\r\n                                        </div>\r\n                                      </div>\r\n                                      \r\n                                    <div class=\"col-md-9\">\r\n                                          <h4 class=\"noftify-pro-h4\">{{item?.name}}</h4>\r\n                                          <!-- <p>Amount: $1000</p> -->\r\n                                      \r\n                                 \r\n                                  </div>\r\n                                </div>\r\n                                  \r\n                              </div>\r\n                              \r\n                              \r\n                            </a>\r\n                          </li>\r\n                    \r\n                          <!-- <li><a (click)=\"logout()\" href=\"#\">Log Out</a></li> -->\r\n                          \r\n                        </ul>\r\n                      </li>\r\n                        <!-- <a href=\"#\" class=\"btn-default btn1\">Sign In</a> -->\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div> \r\n      <div class=\"container\">\r\n        <div class=\"container-fluid\">\r\n          <!-- Brand and toggle get grouped for better mobile display -->\r\n          <div class=\"navbar-header\">\r\n            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n              <span class=\"sr-only\">Toggle navigation</span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n            </button>\r\n            <a class=\"navbar-brand\" [routerLink]=\"['/home']\"><img src=\"../../assets/images/brand.png\" alt=\"brand\"></a>\r\n          </div>\r\n      \r\n          <!-- Collect the nav links, forms, and other content for toggling -->\r\n          <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n            \r\n           \r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n                <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a  [routerLink]=\"['/home']\">Home <span class=\"sr-only\">(current)</span></a></li>\r\n                <!-- <li class=\"dropdown\" >\r\n                  <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Manage <span class=\"caret\"></span></a>\r\n                  <ul class=\"dropdown-menu\">\r\n                    \r\n                    <li><a href=\"#\">Users</a></li>\r\n                    <li><a href=\"#\">Polls</a></li>\r\n                    <li><a href=\"#\">Asign Poll</a></li>\r\n                    \r\n                  </ul>\r\n                </li> -->\r\n                \r\n                    <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/runningauction']\" >Running Auctions</a></li>\r\n                    <!-- <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/registration']\">Registration</a></li> -->\r\n                    <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/finishedauction']\" >Closed Auctions</a></li>\r\n                    <!-- <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/register']\">Register</a></li> -->\r\n                    <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/upcomingauction']\" >Upcoming Auctions</a></li>\r\n                \r\n                \r\n            </ul>\r\n          </div><!-- /.navbar-collapse -->\r\n        </div><!-- /.container-fluid -->\r\n      </div>\r\n    </nav>\r\n  \r\n    \r\n</div>\r\n</header>"
 
 /***/ }),
 
@@ -2339,6 +2772,7 @@ module.exports = "<header>\r\n  \r\n  <div class=\"fluid-container\">\r\n    <na
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_socket_io_client__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config_config__ = __webpack_require__("../../../../../config/config.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2354,15 +2788,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var NavigationComponent = (function () {
-    function NavigationComponent(userService, router, _productService, productService) {
+    function NavigationComponent(userService, router, _productService, productService, config) {
         this.userService = userService;
         this.router = router;
         this._productService = _productService;
         this.productService = productService;
+        this.config = config;
         this.brand_logo = "brand.png";
         this.count = true;
-        this.socket = __WEBPACK_IMPORTED_MODULE_5_socket_io_client__('http://localhost:3000');
+        this.loading = true;
+        this.socket = __WEBPACK_IMPORTED_MODULE_5_socket_io_client__(config.socketURL);
     }
     NavigationComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -2371,7 +2808,9 @@ var NavigationComponent = (function () {
                 _this.router.navigate(['/login']);
             }
             else {
+                // console.log(info);
                 _this.userInfo = info;
+                _this.loading = false;
             }
         });
         this.getNotification();
@@ -2412,10 +2851,10 @@ NavigationComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/navigation/navigation.component.html"),
         styles: [__webpack_require__("../../../../../src/app/navigation/navigation.component.css")],
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_product_service_service__["a" /* ProductServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_product_service_service__["a" /* ProductServiceService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_product_service__["a" /* ProductService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_product_service_service__["a" /* ProductServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_product_service_service__["a" /* ProductServiceService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_product_service__["a" /* ProductService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */]) === "function" && _e || Object])
 ], NavigationComponent);
 
-var _a, _b, _c, _d;
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=navigation.component.js.map
 
 /***/ }),
@@ -2669,7 +3108,7 @@ NgDatepickerComponent = NgDatepickerComponent_1 = __decorate([
         template: __webpack_require__("../../../../../src/app/ng-datepicker/ng-datepicker.component.html"),
         styles: [__webpack_require__("../../../../../src/app/ng-datepicker/ng-datepicker.component.sass")],
         providers: [
-            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* NG_VALUE_ACCESSOR */], useExisting: Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["forwardRef"])(function () { return NgDatepickerComponent_1; }), multi: true }
+            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* NG_VALUE_ACCESSOR */], useExisting: Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["forwardRef"])(function () { return NgDatepickerComponent_1; }), multi: true }
         ]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object])
@@ -2716,6 +3155,7 @@ module.exports = "<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation --
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2730,13 +3170,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  // File Upload
 
 
+
 var ProductDetailComponent = (function () {
-    function ProductDetailComponent(_prductService, route, router, userService) {
+    function ProductDetailComponent(_prductService, route, router, userService, config) {
         this._prductService = _prductService;
         this.route = route;
         this.router = router;
         this.userService = userService;
-        this.uploader = new __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__["FileUploader"]({ url: 'http://localhost:3000/products/upload' });
+        this.config = config;
+        this.uploader = new __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__["FileUploader"]({ url: this.config.fileUploadURL });
         this.arr1 = {
             name: String,
             start_date: Date,
@@ -2845,10 +3287,10 @@ ProductDetailComponent = __decorate([
         inputs: ['pro'],
         outputs: ['updateProEvent', 'deleteProEvent']
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]) === "function" && _e || Object])
 ], ProductDetailComponent);
 
-var _a, _b, _c, _d;
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=product-detail.component.js.map
 
 /***/ }),
@@ -3025,8 +3467,9 @@ module.exports = "<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation --
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_file_upload__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng2_file_upload__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3048,13 +3491,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 // import { Poll } from '../poll';
 // import { FormsModule, FormControl, FormGroup, Validators }   from '@angular/forms';
 // import { answer } from './../answer';
+
  // File Upload
 var ProductComponent = (function () {
-    function ProductComponent(_prductService, _userService, router) {
+    function ProductComponent(_prductService, _userService, router, config) {
         this._prductService = _prductService;
         this._userService = _userService;
         this.router = router;
-        this.uploader = new __WEBPACK_IMPORTED_MODULE_5_ng2_file_upload__["FileUploader"]({ url: 'http://localhost:3000/products/upload' });
+        this.config = config;
+        this.uploader = new __WEBPACK_IMPORTED_MODULE_6_ng2_file_upload__["FileUploader"]({ url: this.config.fileUploadURL });
         this.newproduct = {
             name: '',
             desc: '',
@@ -3131,10 +3576,10 @@ ProductComponent = __decorate([
         providers: [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]]
         // providers: [ProductService]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]) === "function" && _d || Object])
 ], ProductComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=product.component.js.map
 
 /***/ }),
@@ -3228,7 +3673,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/registration/registration.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<body style=\"background-color:#f3f3f3;padding: 8% 0 12% 0;\">\n<br>\n<div class=\"wrapper center\">\n  <br>\n  <form class=\"form-horizontal\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && onRegisterSubmit();\" novalidate>\n\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !name.valid }\">\n        <div class=\"col-md-12 col-xs-12\">\n        <!-- <label for=\"exampleInputEmail1\">Name</label> -->\n          <input type=\"text\" class=\"form-control\" placeholder=\"Name\" required [(ngModel)]=\"newUser.name\" name=\"name\" #name=\"ngModel\">\n          <div *ngIf=\"f.submitted && !name.valid\" class=\"help-block\">! Name is required</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\n      <div class=\"col-md-12 col-xs-12\">\n      <!-- <label >User Name</label> -->\n        <input type=\"text\" class=\"form-control\" placeholder=\"Email\" required [(ngModel)]=\"newUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" name=\"email\" #email=\"ngModel\">\n        <div *ngIf=\"f.submitted && email.invalid\">\n            <!-- <div *ngIf=\"!email.valid && newUser.email=='' \" class=\"help-block\">Email is required</div> -->\n          <div *ngIf=\"email.errors.pattern\" class=\"help-block\">! Email id is not valid</div>\n          <div *ngIf=\"email.errors.required\" class=\"help-block\">! Email id is required</div>\n        </div> \n      </div>\n    </div>\n\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !phone.valid }\">\n      <div class=\"col-md-12 col-xs-12\">\n      <!-- <label >Phone Number</label> --> \n        <input type=\"text\" class=\"form-control\" placeholder=\"Phone Number\" minlength=\"10\" maxlength=\"10\" pattern=\"^\\d{9}|^\\d{3}-\\d{3}-\\d{3}|^\\d{3}\\s\\d{3}\\s\\d{3}\" required [(ngModel)]=\"newUser.phone\" name=\"phone\" #phone=\"ngModel\">\n        <div *ngIf=\"f.submitted && phone.invalid\">\n          <div *ngIf=\"phone.errors.minlength || phone.errors.maxlength\" class=\"help-block\">! Phone Number should be 10 digits</div>\n          <div *ngIf=\"phone.errors.required\" class=\"help-block\">! Phone Number is required</div>\n          <div *ngIf=\"phone.errors.pattern\" class=\"help-block\">! Valid Phone Number is required</div>\n        </div> \n      </div>\n     </div> \n\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\"> \n      \n      <div class=\"col-md-12 col-xs-12\">\n        <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\" pattern=\"^(?=.*[A-Za-z])(?=.*\\d)(?=.*[$@$!%*#?&])[A-Za-z\\d$@$!%*#?&]{8,}$\" required validateEqual=\"confirmPassword\" reverse=\"true\" [(ngModel)]=\"newUser.password\" name=\"password\" #password=\"ngModel\"> \n        <div *ngIf=\"f.submitted && password.invalid\">\n            <div *ngIf=\"password.errors.required\" class=\"help-block\">! Password is required</div>\n            <div *ngIf=\"password.errors.pattern\" class=\"help-block\">! Password contain atleast 6 characters and should contain one number,one character and one special character</div>\n        </div> \n        </div>\n    </div> \n\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !confirmPassword.valid }\">\n     \n      <div class=\"col-md-12 col-xs-12\">\n        <input type=\"password\" class=\"form-control\" id=\"confirmPassword\" required validateEqual=\"password\" placeholder=\"Confirm Password\" required validateEqual=\"password\" reverse=\"false\" [(ngModel)]=\"User.confirmPassword\" name=\"confirmPassword\" #confirmPassword=\"ngModel\"> \n        <div *ngIf=\"!confirmPassword.valid && (f.submitted)\" class=\"help-block\">! Password not Match</div>   \n        \n        </div>\n    </div> \n\n\n    <div class=\"form-group\">\n      <div class=\"col-md-12 col-xs-12\">\n        <button type=\"submit\" class=\"btn btn-default\">Sign up</button>\n      </div>\n    </div>\n\n    <div class=\"form-group\">\n        <div class=\"col-md-12 col-xs-12\">\n          <div class=\"checkbox\">\n            <label>\n              By creating an account, you agree to Auction's<a href=\"#myModal\" data-toggle=\"modal\" data-target=\"#myModal\">\n            Terms and Conditions\n            </a>\n          </label>\n          </div>\n        </div>\n      </div>\n    \n    <div class=\"form-group\">\n        <div class=\"col-md-12 col-xs-12\">\n          \n            <label>Already have an account?  <a [routerLink]=\"['/login']\">\n            Sign In\n            </a>\n          </label>\n          \n        </div>\n    </div>\n\n</form>\n</div>\n\n\n<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\n    <div class=\"modal-dialog modal-md\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n          <h4 class=\"modal-title\"> \n            Terms and Conditions</h4>\n        </div>\n        <div class=\"modal-body\">\n          <h4>Conditions of Use</h4>\n          \n          <p>Welcome to Auction. Auction Services LLC and/or its affiliates (\"Auction\") provide website features and other products and services to you when you visit or bid at Auction.com, use Auction products or services, use Auction applications for mobile, or use software provided by Auction in connection with any of the foregoing (collectively, \"Auction Services\"). Auction provides the Auction Services subject to the following conditions.\n              <br>\n              <b>By using Auction Services, you agree to these conditions. Please read them carefully.</b>\n              <br>\n             When you using Auction, you also will be subject to the guidelines, terms and agreements applicable to that Auction Service (\"Service Terms\"). If these Conditions of Use are inconsistent with the Service Terms, those Service Terms will control.\n              <br>\n             <b> ELECTRONIC COMMUNICATIONS</b>\n              <br>\n              When you use Auction Services, or send e-mails, text messages, and other communications from your desktop or mobile device to us, you may be communicating with us electronically. You consent to receive communications from us electronically, such as e-mails, texts, mobile push notices, or notices and messages on this site or through the other Auction Services, such as our Message Center, and you can retain copies of these communications for your records. You agree that all agreements, notices, disclosures, and other communications that we provide to you electronically satisfy any legal requirement that such communications be in writing.\n              <br>\n              <b>COPYRIGHT</b>\n              <br>\n              All content included in or made available through any Auction Service, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software is the property of Auction or its content suppliers and protected by United States and international copyright laws. The compilation of all content included in or made available through any Auction Service is the exclusive property of Auction and protected by U.S. and international copyright laws.\n              <br>\n              <b>LICENSE AND ACCESS</b>\n              <br>\n              Subject to your compliance with these Conditions of Use and any Service Terms, and your payment of any applicable fees, Auction or its content providers grant you a limited, non-exclusive, non-transferable, non-sublicensable license to access and make personal and non-commercial use of the Auction Services. This license does not include any resale or commercial use of any Auction Service, or its contents; any collection and use of any product listings, descriptions, or prices; any derivative use of any Auction Service or its contents; any downloading, copying, or other use of account information for the benefit of any third party; or any use of data mining, robots, or similar data gathering and extraction tools. All rights not expressly granted to you in these Conditions of Use or any Service Terms are reserved and retained by Auction or its licensors, suppliers, publishers, rightsholders, or other content providers. No Auction Service, nor any part of any Auction Service, may be reproduced, duplicated, copied, sold, resold, visited, or otherwise exploited for any commercial purpose without express written consent of Auction. You may not frame or utilize framing techniques to enclose any trademark, logo, or other proprietary information (including images, text, page layout, or form) of Auction without express written consent. You may not use any meta tags or any other \"hidden text\" utilizing Auction's name or trademarks without the express written consent of Auction. You may not misuse the Auction Services. You may use the Auction Services only as permitted by law. The licenses granted by Auction terminate if you do not comply with these Conditions of Use or any Service Terms.\n              </p>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n</body>"
+module.exports = "\r\n<body style=\"background-color:#f3f3f3;padding: 8% 0 12% 0;\">\r\n<br>\r\n<div class=\"wrapper center\">\r\n  <br>\r\n  <form class=\"form-horizontal\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && onRegisterSubmit();\" novalidate>\r\n\r\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !name.valid }\">\r\n        <div class=\"col-md-12 col-xs-12\">\r\n        <!-- <label for=\"exampleInputEmail1\">Name</label> -->\r\n          <input type=\"text\" class=\"form-control\" placeholder=\"Name\" required [(ngModel)]=\"newUser.name\" name=\"name\" #name=\"ngModel\">\r\n          <div *ngIf=\"f.submitted && !name.valid\" class=\"help-block\">! Name is required</div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\r\n      <div class=\"col-md-12 col-xs-12\">\r\n      <!-- <label >User Name</label> -->\r\n        <input type=\"text\" class=\"form-control\" placeholder=\"Email\" required [(ngModel)]=\"newUser.email\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" name=\"email\" #email=\"ngModel\">\r\n        <div *ngIf=\"f.submitted && email.invalid\">\r\n            <!-- <div *ngIf=\"!email.valid && newUser.email=='' \" class=\"help-block\">Email is required</div> -->\r\n          <div *ngIf=\"email.errors.pattern\" class=\"help-block\">! Email id is not valid</div>\r\n          <div *ngIf=\"email.errors.required\" class=\"help-block\">! Email id is required</div>\r\n        </div> \r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !phone.valid }\">\r\n      <div class=\"col-md-12 col-xs-12\">\r\n      <!-- <label >Phone Number</label> --> \r\n        <input type=\"text\" class=\"form-control\" placeholder=\"Phone Number\" minlength=\"10\" maxlength=\"10\" pattern=\"^\\d{9}|^\\d{3}-\\d{3}-\\d{3}|^\\d{3}\\s\\d{3}\\s\\d{3}\" required [(ngModel)]=\"newUser.phone\" name=\"phone\" #phone=\"ngModel\">\r\n        <div *ngIf=\"f.submitted && phone.invalid\">\r\n          <div *ngIf=\"phone.errors.minlength || phone.errors.maxlength\" class=\"help-block\">! Phone Number should be 10 digits</div>\r\n          <div *ngIf=\"phone.errors.required\" class=\"help-block\">! Phone Number is required</div>\r\n          <div *ngIf=\"phone.errors.pattern\" class=\"help-block\">! Valid Phone Number is required</div>\r\n        </div> \r\n      </div>\r\n     </div> \r\n\r\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\"> \r\n      \r\n      <div class=\"col-md-12 col-xs-12\">\r\n        <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\" pattern=\"^(?=.*[A-Za-z])(?=.*\\d)(?=.*[$@$!%*#?&])[A-Za-z\\d$@$!%*#?&]{8,}$\" required validateEqual=\"confirmPassword\" reverse=\"true\" [(ngModel)]=\"newUser.password\" name=\"password\" #password=\"ngModel\"> \r\n        <div *ngIf=\"f.submitted && password.invalid\">\r\n            <div *ngIf=\"password.errors.required\" class=\"help-block\">! Password is required</div>\r\n            <div *ngIf=\"password.errors.pattern\" class=\"help-block\">! Password contain atleast 6 characters and should contain one number,one character and one special character</div>\r\n        </div> \r\n        </div>\r\n    </div> \r\n\r\n    <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !confirmPassword.valid }\">\r\n     \r\n      <div class=\"col-md-12 col-xs-12\">\r\n        <input type=\"password\" class=\"form-control\" id=\"confirmPassword\" required validateEqual=\"password\" placeholder=\"Confirm Password\" required validateEqual=\"password\" reverse=\"false\" [(ngModel)]=\"User.confirmPassword\" name=\"confirmPassword\" #confirmPassword=\"ngModel\"> \r\n        <div *ngIf=\"!confirmPassword.valid && (f.submitted)\" class=\"help-block\">! Password not Match</div>   \r\n        \r\n        </div>\r\n    </div> \r\n\r\n\r\n    <div class=\"form-group\">\r\n      <div class=\"col-md-12 col-xs-12\">\r\n        <button type=\"submit\" class=\"btn btn-default\">Sign up</button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <div class=\"col-md-12 col-xs-12\">\r\n          <div class=\"checkbox\">\r\n            <label>\r\n              By creating an account, you agree to Auction's<a href=\"#myModal\" data-toggle=\"modal\" data-target=\"#myModal\">\r\n            Terms and Conditions\r\n            </a>\r\n          </label>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    \r\n    <div class=\"form-group\">\r\n        <div class=\"col-md-12 col-xs-12\">\r\n          \r\n            <label>Already have an account?  <a [routerLink]=\"['/login']\">\r\n            Sign In\r\n            </a>\r\n          </label>\r\n          \r\n        </div>\r\n    </div>\r\n\r\n</form>\r\n</div>\r\n\r\n\r\n<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\r\n    <div class=\"modal-dialog modal-md\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n          <h4 class=\"modal-title\"> \r\n            Terms and Conditions</h4>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <h4>Conditions of Use</h4>\r\n          \r\n          <p>Welcome to Auction. Auction Services LLC and/or its affiliates (\"Auction\") provide website features and other products and services to you when you visit or bid at Auction.com, use Auction products or services, use Auction applications for mobile, or use software provided by Auction in connection with any of the foregoing (collectively, \"Auction Services\"). Auction provides the Auction Services subject to the following conditions.\r\n              <br>\r\n              <b>By using Auction Services, you agree to these conditions. Please read them carefully.</b>\r\n              <br>\r\n             When you using Auction, you also will be subject to the guidelines, terms and agreements applicable to that Auction Service (\"Service Terms\"). If these Conditions of Use are inconsistent with the Service Terms, those Service Terms will control.\r\n              <br>\r\n             <b> ELECTRONIC COMMUNICATIONS</b>\r\n              <br>\r\n              When you use Auction Services, or send e-mails, text messages, and other communications from your desktop or mobile device to us, you may be communicating with us electronically. You consent to receive communications from us electronically, such as e-mails, texts, mobile push notices, or notices and messages on this site or through the other Auction Services, such as our Message Center, and you can retain copies of these communications for your records. You agree that all agreements, notices, disclosures, and other communications that we provide to you electronically satisfy any legal requirement that such communications be in writing.\r\n              <br>\r\n              <b>COPYRIGHT</b>\r\n              <br>\r\n              All content included in or made available through any Auction Service, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software is the property of Auction or its content suppliers and protected by United States and international copyright laws. The compilation of all content included in or made available through any Auction Service is the exclusive property of Auction and protected by U.S. and international copyright laws.\r\n              <br>\r\n              <b>LICENSE AND ACCESS</b>\r\n              <br>\r\n              Subject to your compliance with these Conditions of Use and any Service Terms, and your payment of any applicable fees, Auction or its content providers grant you a limited, non-exclusive, non-transferable, non-sublicensable license to access and make personal and non-commercial use of the Auction Services. This license does not include any resale or commercial use of any Auction Service, or its contents; any collection and use of any product listings, descriptions, or prices; any derivative use of any Auction Service or its contents; any downloading, copying, or other use of account information for the benefit of any third party; or any use of data mining, robots, or similar data gathering and extraction tools. All rights not expressly granted to you in these Conditions of Use or any Service Terms are reserved and retained by Auction or its licensors, suppliers, publishers, rightsholders, or other content providers. No Auction Service, nor any part of any Auction Service, may be reproduced, duplicated, copied, sold, resold, visited, or otherwise exploited for any commercial purpose without express written consent of Auction. You may not frame or utilize framing techniques to enclose any trademark, logo, or other proprietary information (including images, text, page layout, or form) of Auction without express written consent. You may not use any meta tags or any other \"hidden text\" utilizing Auction's name or trademarks without the express written consent of Auction. You may not misuse the Auction Services. You may use the Auction Services only as permitted by law. The licenses granted by Auction terminate if you do not comply with these Conditions of Use or any Service Terms.\r\n              </p>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</body>"
 
 /***/ }),
 
@@ -3342,6 +3787,7 @@ module.exports = "<body>\r\n    \r\n        <div id=\"wrapper\">\r\n    \r\n    
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_socket_io_client__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_date_fns_locale_en__ = __webpack_require__("../../../../date-fns/locale/en/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_date_fns_locale_en___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_date_fns_locale_en__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config_config__ = __webpack_require__("../../../../../config/config.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3357,11 +3803,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var RunningAuctionBackComponent = (function () {
-    function RunningAuctionBackComponent(productService, userService, router) {
+    function RunningAuctionBackComponent(productService, userService, router, config) {
         this.productService = productService;
         this.userService = userService;
         this.router = router;
+        this.config = config;
         this.involvedUsers = [];
         this.options = {
             minYear: 1970,
@@ -3371,7 +3819,7 @@ var RunningAuctionBackComponent = (function () {
             firstCalendarDay: 0,
             locale: __WEBPACK_IMPORTED_MODULE_5_date_fns_locale_en__
         };
-        this.socket = __WEBPACK_IMPORTED_MODULE_4_socket_io_client__('http://localhost:3000');
+        this.socket = __WEBPACK_IMPORTED_MODULE_4_socket_io_client__(config.socketURL);
     }
     RunningAuctionBackComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -3462,10 +3910,10 @@ RunningAuctionBackComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.html"),
         styles: [__webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */]) === "function" && _d || Object])
 ], RunningAuctionBackComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=running-auction-back.component.js.map
 
 /***/ }),
@@ -3506,6 +3954,7 @@ module.exports = "<app-navigation></app-navigation>\r\n<div class=\"container\" 
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_socket_io_client__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3520,17 +3969,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var RunningauctionComponent = (function () {
-    function RunningauctionComponent(productService, userService, router) {
+    function RunningauctionComponent(productService, userService, router, config) {
         this.productService = productService;
         this.userService = userService;
-<<<<<<< HEAD
-        this.product_ids = [];
-=======
         this.router = router;
->>>>>>> 6b521a4a1375603d837470038541db737314ea06
+        this.config = config;
+        this.product_ids = [];
         this.involvedUsers = [];
-        this.socket = __WEBPACK_IMPORTED_MODULE_4_socket_io_client__('http://localhost:3000');
+        this.socket = __WEBPACK_IMPORTED_MODULE_4_socket_io_client__(config.socketURL);
     }
     RunningauctionComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -3591,11 +4039,48 @@ RunningauctionComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/runningauction/runningauction.component.html"),
         styles: [__webpack_require__("../../../../../src/app/runningauction/runningauction.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]) === "function" && _d || Object])
 ], RunningauctionComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=runningauction.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/search.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var SearchPipe = (function () {
+    function SearchPipe() {
+    }
+    SearchPipe.prototype.transform = function (polls, searchTerm) {
+        if (searchTerm === undefined) {
+            return polls;
+        }
+        return polls.filter(function (poll) {
+            // console.log(poll.question);
+            return poll.question.toLowerCase().includes(searchTerm.toLowerCase());
+        });
+    };
+    return SearchPipe;
+}());
+SearchPipe = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+        name: 'search'
+    })
+], SearchPipe);
+
+//# sourceMappingURL=search.pipe.js.map
 
 /***/ }),
 
@@ -4312,6 +4797,7 @@ module.exports = "<body>\r\n    \r\n        <div id=\"wrapper\">\r\n    \r\n    
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_socket_io_client__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config_config__ = __webpack_require__("../../../../../config/config.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4327,11 +4813,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var UpcomingAuctionBackComponent = (function () {
-    function UpcomingAuctionBackComponent(productService, userService, router) {
+    function UpcomingAuctionBackComponent(productService, userService, router, config) {
         this.productService = productService;
         this.userService = userService;
         this.router = router;
+        this.config = config;
         this.options = {
             minYear: 1970,
             maxYear: 2030,
@@ -4340,7 +4828,7 @@ var UpcomingAuctionBackComponent = (function () {
             firstCalendarDay: 0,
             locale: __WEBPACK_IMPORTED_MODULE_3_date_fns_locale_en__
         };
-        this.socket = __WEBPACK_IMPORTED_MODULE_4_socket_io_client__('http://localhost:3000');
+        this.socket = __WEBPACK_IMPORTED_MODULE_4_socket_io_client__(config.socketURL);
     }
     UpcomingAuctionBackComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -4374,10 +4862,10 @@ UpcomingAuctionBackComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.html"),
         styles: [__webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */]) === "function" && _d || Object])
 ], UpcomingAuctionBackComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=upcoming-auction-back.component.js.map
 
 /***/ }),
@@ -4403,7 +4891,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/upcomingauctions/upcomingauctions.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navigation></app-navigation>\r\n<div class=\"container\">\r\n    <div id=\"u-auction\" class=\"auction-section\">\r\n        <h4 class=\"page-head\">Upcoming Auctions</h4>\r\n        <div *ngIf=\"existStatus; else noProduct\">\r\n            <div *ngFor=\"let item of products\">\r\n                <!-- {{item}} -->\r\n                <app-card [item]=\"item\" [startDate]=\"item.start_date\"></app-card>\r\n            </div>\r\n        </div>\r\n       \r\n        <ng-template #noProduct>\r\n            <div class=\"no-item\">\r\n                <h4>Sorrry! No items to display!</h4>\r\n            </div>\r\n        </ng-template>\r\n      \r\n  </div>"
+module.exports = "<app-navigation></app-navigation>\n<div class=\"container\">\n    <div id=\"u-auction\" class=\"auction-section\">\n        <h4 class=\"page-head\">Upcoming Auctions</h4>\n        <div *ngIf=\"existStatus; else noProduct\">\n            <div *ngFor=\"let item of products\">\n                <!-- {{item}} -->\n                <app-card [item]=\"item\" [startDate]=\"item.start_date\"></app-card>\n            </div>\n        </div>\n       \n        <ng-template #noProduct>\n            <div class=\"no-item\">\n                <h4>Sorrry! No items to display!</h4>\n            </div>\n        </ng-template>\n      \n  </div>"
 
 /***/ }),
 
@@ -4418,6 +4906,7 @@ module.exports = "<app-navigation></app-navigation>\r\n<div class=\"container\">
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_socket_io_client__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4432,13 +4921,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var UpcomingauctionsComponent = (function () {
-    function UpcomingauctionsComponent(_productService, userService, router) {
+    function UpcomingauctionsComponent(_productService, userService, router, config) {
         this._productService = _productService;
         this.userService = userService;
         this.router = router;
+        this.config = config;
         this.existStatus = false;
-        this.socket = __WEBPACK_IMPORTED_MODULE_2_socket_io_client__('http://192.168.1.99:3000');
+        this.socket = __WEBPACK_IMPORTED_MODULE_2_socket_io_client__(config.socketURL);
     }
     UpcomingauctionsComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -4476,10 +4967,10 @@ UpcomingauctionsComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.html"),
         styles: [__webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__["a" /* ProductServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__["a" /* ProductServiceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["e" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__["a" /* ProductServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_product_service_service__["a" /* ProductServiceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["e" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["e" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]) === "function" && _d || Object])
 ], UpcomingauctionsComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=upcomingauctions.component.js.map
 
 /***/ }),
@@ -4505,7 +4996,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/upload/upload.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  \r\n  <div class=\"form-group\">\r\n    <label for=\"single\">single</label>\r\n    <input type=\"file\" class=\"form-control\" name=\"single\" ng2FileSelect [uploader]=\"uploader\" />                                  \r\n </div>\r\n  \r\n    <!-- <input type=\"submit\" value=\"submit\" (click)=\"onUpload()\"> -->\r\n    <button type=\"button\" class=\"btn btn-success btn-s\"\r\n    (click)=\"up()\" [disabled]=\"!uploader.getNotUploadedItems().length\">\r\n      Upload all\r\n </button><br />\r\n</div>"
+module.exports = "<div class=\"container\">\n  \n  <div class=\"form-group\">\n    <label for=\"single\">single</label>\n    <input type=\"file\" class=\"form-control\" name=\"single\" ng2FileSelect [uploader]=\"uploader\" />                                  \n </div>\n  \n    <!-- <input type=\"submit\" value=\"submit\" (click)=\"onUpload()\"> -->\n    <button type=\"button\" class=\"btn btn-success btn-s\"\n    (click)=\"up()\" [disabled]=\"!uploader.getNotUploadedItems().length\">\n      Upload all\n </button><br />\n</div>"
 
 /***/ }),
 
@@ -4574,7 +5065,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/winnerconfirm/winnerconfirm.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navigation></app-navigation>\n<div class=\"container cont\">\n    <div *ngIf=\"!isConfirm\">\n    <h3>Do you wish to continue ..?</h3>\n    <button type=\"button\" (click)=\"confirmed()\" class=\"btn btn-default\">Confirm</button> \n    <button type=\"button\" (click)=\"rejected()\" class=\"btn btn-default\">Reject</button> \n</div>\n<br>\n <div class=\"col-md-9 shadow\" *ngIf=\"isConfirm\">\n        <h3>Add a delivery address</h3>\n    <br>\n    <form #f='ngForm' class=\"well\"  role=\"form\" (ngSubmit)=\"f.form.valid && onWinnerConfirm();\" novalidate >\n        \n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !name.valid }\" >\n            <label > Name :</label>\n            <input type=\"text\"  name=\"name\" #name=\"ngModel\" [(ngModel)]=\"newproduct.name\" class=\"form-control\" required  />\n            <div *ngIf=\"f.submitted && !name.valid\" class=\"help-block\">! Required</div>\n        </div>\n\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !phone.valid }\"> \n                <!-- <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\"> -->\n                <label >Phone Number :</label> \n                  <input type=\"text\" class=\"form-control\" minlength=\"10\" maxlength=\"10\" pattern=\"^\\d{9}|^\\d{3}-\\d{3}-\\d{3}|^\\d{3}\\s\\d{3}\\s\\d{3}\" required [(ngModel)]=\"newproduct.phone\" name=\"phone\" #phone=\"ngModel\">\n                  <div *ngIf=\"f.submitted && phone.invalid\">\n                    <div *ngIf=\"phone.errors.minlength || phone.errors.maxlength\" class=\"help-block\">! Phone Number should be 6 digits</div>\n                    <div *ngIf=\"phone.errors.required\" class=\"help-block\">! Required</div>\n                    <div *ngIf=\"phone.errors.pattern\" class=\"help-block\">! Valid Phone Number is required</div>\n                  </div> \n                <!-- </div> -->\n        </div> \n\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !pin.valid }\"> \n                <!-- <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\"> -->\n                <label >Pincode :</label> \n                  <input type=\"text\" class=\"form-control\" minlength=\"6\" maxlength=\"6\" pattern=\"^[1-9][0-9]{5}$\" required [(ngModel)]=\"newproduct.pin\" name=\"pin\" #pin=\"ngModel\">\n                  <div *ngIf=\"f.submitted && pin.invalid\">\n                    <div *ngIf=\"pin.errors.minlength || pin.errors.maxlength\" class=\"help-block\">! Pincode should be 10 digits</div>\n                    <div *ngIf=\"pin.errors.required\" class=\"help-block\">! Required</div>\n                    <div *ngIf=\"pin.errors.pattern\" class=\"help-block\">! Valid Pincode is required</div>\n                  </div> \n                <!-- </div> -->\n        </div> \n\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr1.valid }\" >\n                <label > Flat / House No. / Floor / Building: </label>\n                <input type=\"text\"  name=\"addr1\" #addr1=\"ngModel\" [(ngModel)]=\"newproduct.addr1\" class=\"form-control\" required  />\n                <div *ngIf=\"f.submitted && !addr1.valid\" class=\"help-block\">! Required</div>\n        </div>\n     \n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr2.valid }\" >\n                <label > Colony / Street / Locality:  </label>\n                <input type=\"text\"  name=\"addr2\" #addr2=\"ngModel\" [(ngModel)]=\"newproduct.addr2\" class=\"form-control\" required  />\n                <div *ngIf=\"f.submitted && !addr2.valid\" class=\"help-block\">! Required</div>\n        </div>\n     \n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr3.valid }\" >\n                <label > Town/City:  </label>\n                <input type=\"text\"  name=\"addr3\" #addr3=\"ngModel\" [(ngModel)]=\"newproduct.addr3\" class=\"form-control\" required  />\n                <div *ngIf=\"f.submitted && !addr3.valid\" class=\"help-block\">! Required</div>\n        </div>\n     \n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr4.valid }\" >\n                <label > State :  </label>\n                <input type=\"text\"  name=\"addr4\" #addr4=\"ngModel\" [(ngModel)]=\"newproduct.addr4\" class=\"form-control\" required  />\n                <div *ngIf=\"f.submitted && !addr4.valid\" class=\"help-block\">! Required</div>\n        </div>\n\n        <button type=\"submit\" class=\"btn btn-primary\">Deliver to this address</button> \n \n       \n    </form>\n\n  </div>\n  </div>"
+module.exports = "<app-navigation></app-navigation>\r\n<div class=\"container cont\">\r\n    <div *ngIf=\"!isConfirm\">\r\n    <h3>Do you wish to continue ..?</h3>\r\n    <button type=\"button\" (click)=\"confirmed()\" class=\"btn btn-default\">Confirm</button> \r\n    <button type=\"button\" (click)=\"rejected()\" class=\"btn btn-default\">Reject</button> \r\n</div>\r\n<br>\r\n <div class=\"col-md-9 shadow\" *ngIf=\"isConfirm\">\r\n        <h3>Add a delivery address</h3>\r\n    <br>\r\n    <form #f='ngForm' class=\"well\"  role=\"form\" (ngSubmit)=\"f.form.valid && onWinnerConfirm();\" novalidate >\r\n        \r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !name.valid }\" >\r\n            <label > Name :</label>\r\n            <input type=\"text\"  name=\"name\" #name=\"ngModel\" [(ngModel)]=\"newproduct.name\" class=\"form-control\" required  />\r\n            <div *ngIf=\"f.submitted && !name.valid\" class=\"help-block\">! Required</div>\r\n        </div>\r\n\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !phone.valid }\"> \r\n                <!-- <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\"> -->\r\n                <label >Phone Number :</label> \r\n                  <input type=\"text\" class=\"form-control\" minlength=\"10\" maxlength=\"10\" pattern=\"^\\d{9}|^\\d{3}-\\d{3}-\\d{3}|^\\d{3}\\s\\d{3}\\s\\d{3}\" required [(ngModel)]=\"newproduct.phone\" name=\"phone\" #phone=\"ngModel\">\r\n                  <div *ngIf=\"f.submitted && phone.invalid\">\r\n                    <div *ngIf=\"phone.errors.minlength || phone.errors.maxlength\" class=\"help-block\">! Phone Number should be 6 digits</div>\r\n                    <div *ngIf=\"phone.errors.required\" class=\"help-block\">! Required</div>\r\n                    <div *ngIf=\"phone.errors.pattern\" class=\"help-block\">! Valid Phone Number is required</div>\r\n                  </div> \r\n                <!-- </div> -->\r\n        </div> \r\n\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !pin.valid }\"> \r\n                <!-- <div class=\"col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2\"> -->\r\n                <label >Pincode :</label> \r\n                  <input type=\"text\" class=\"form-control\" minlength=\"6\" maxlength=\"6\" pattern=\"^[1-9][0-9]{5}$\" required [(ngModel)]=\"newproduct.pin\" name=\"pin\" #pin=\"ngModel\">\r\n                  <div *ngIf=\"f.submitted && pin.invalid\">\r\n                    <div *ngIf=\"pin.errors.minlength || pin.errors.maxlength\" class=\"help-block\">! Pincode should be 10 digits</div>\r\n                    <div *ngIf=\"pin.errors.required\" class=\"help-block\">! Required</div>\r\n                    <div *ngIf=\"pin.errors.pattern\" class=\"help-block\">! Valid Pincode is required</div>\r\n                  </div> \r\n                <!-- </div> -->\r\n        </div> \r\n\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr1.valid }\" >\r\n                <label > Flat / House No. / Floor / Building: </label>\r\n                <input type=\"text\"  name=\"addr1\" #addr1=\"ngModel\" [(ngModel)]=\"newproduct.addr1\" class=\"form-control\" required  />\r\n                <div *ngIf=\"f.submitted && !addr1.valid\" class=\"help-block\">! Required</div>\r\n        </div>\r\n     \r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr2.valid }\" >\r\n                <label > Colony / Street / Locality:  </label>\r\n                <input type=\"text\"  name=\"addr2\" #addr2=\"ngModel\" [(ngModel)]=\"newproduct.addr2\" class=\"form-control\" required  />\r\n                <div *ngIf=\"f.submitted && !addr2.valid\" class=\"help-block\">! Required</div>\r\n        </div>\r\n     \r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr3.valid }\" >\r\n                <label > Town/City:  </label>\r\n                <input type=\"text\"  name=\"addr3\" #addr3=\"ngModel\" [(ngModel)]=\"newproduct.addr3\" class=\"form-control\" required  />\r\n                <div *ngIf=\"f.submitted && !addr3.valid\" class=\"help-block\">! Required</div>\r\n        </div>\r\n     \r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !addr4.valid }\" >\r\n                <label > State :  </label>\r\n                <input type=\"text\"  name=\"addr4\" #addr4=\"ngModel\" [(ngModel)]=\"newproduct.addr4\" class=\"form-control\" required  />\r\n                <div *ngIf=\"f.submitted && !addr4.valid\" class=\"help-block\">! Required</div>\r\n        </div>\r\n\r\n        <button type=\"submit\" class=\"btn btn-primary\">Deliver to this address</button> \r\n \r\n       \r\n    </form>\r\n\r\n  </div>\r\n  </div>"
 
 /***/ }),
 

@@ -1,18 +1,20 @@
 <app-navigation></app-navigation>
 <div class="container">
-        <div *ngIf="existStatus else noProduct" id="m-auction" class="auction-section">
+        <div  id="m-auction" class="auction-section">
             <h4 class="page-head">My Auctions</h4>
              <!-- <div *ngIf="existStatus; else noProduct"> -->
-                <div *ngFor="let item of products">
+                <!-- <div *ngFor="let item of products"> -->
+                    <div >
                     <!-- {{item}} -->
-                    <app-card [item]="item" [myauction]=true></app-card>
+                    <!-- <app-card [item]="item" [myauction]=true></app-card> -->
+                    <!-- <app-myauctiontable [products]="product"></app-myauctiontable> -->
+                    <app-material ></app-material>
                 </div>
             <!--</div> -->
-           
-            <ng-template #noProduct>
+            <div *ngIf="!existStatus">
                 <div class="no-item">
                     <h4>Sorrry! No items to display!</h4>
                 </div>
-            </ng-template>  
+            </div>  
           
       </div>
