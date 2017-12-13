@@ -9,7 +9,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {UserService} from './services/user.service';
 import { HttpModule } from '@angular/http';
 // import { DataTablesModule } from 'angular-datatables';
-
+import 'hammerjs';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -83,6 +83,7 @@ import { CardRunningComponent } from './card-running/card-running.component';
 import { WinnerconfirmComponent } from './winnerconfirm/winnerconfirm.component'
 import { RegistrationComponent } from './registration/registration.component';
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+
 import * as $ from 'jquery';
 import { ProductListComponent } from './product-list/product-list.component';
 import { FilterPipe } from './filter.pipe';
@@ -108,6 +109,7 @@ import { Config } from './../../config/config';
 import { MaterialComponent } from './material/material.component';
 import { MyauctiontableComponent } from './myauctiontable/myauctiontable.component';
 import { SearchPipe } from './search.pipe';
+//import { ProductDeleteComponent } from './product-delete/product-delete.component';
 // import { FlashMessagesModule } from 'angular2-flash-messages';
 
 
@@ -115,16 +117,16 @@ const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
   {path:'product-detail/:id', component:ProductDetailComponent},
-   {path:'product', component:ProductComponent},
+  //  {path:'product', component:ProductComponent},
   {path:'product-list', component:ProductListComponent},
-  {path:'email-verification/:id', component:EmailVerificationComponent},
+
   {path:'login', component:LoginComponent},  
   {path:'socialmedia/:id', component:SocialmediaComponent},
   {path:'adminviewed/:id', component:AdminviewedComponent},
   {path:'dashboard', component: DashboardComponent},
-  {path:'all-users', component: AllUsersComponent},
-  {path:'disabled-users', component: DisabledUsersComponent},
-  {path:'deleted-users', component: DeletedUsersComponent},
+  //{path:'all-users', component: AllUsersComponent},
+  // {path:'disabled-users', component: DisabledUsersComponent},
+  // {path:'deleted-users', component: DeletedUsersComponent},
   {path:'upcomingauction', component: UpcomingauctionsComponent},
   {path:'finishedauction', component: FinishedauctionComponent},
   {path:'runningauction', component: RunningauctionComponent},
@@ -133,9 +135,11 @@ const appRoutes: Routes = [
   {path:'email-verification/:id', component:EmailVerificationComponent},
   {path:'auctions', component:AuctionBackComponent},
   {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
+  
+  {path:'upload', component:UploadComponent},
+  {path:'material', component:MaterialComponent},
+  {path:'users-sub', component:UsersSubComponent},
   { path: '**', component: LoginComponent },
-  {path:'upload', component:UploadComponent},//file upload
-  {path:'material', component:MaterialComponent}//file upload
 ]
 @NgModule({
   exports: [
@@ -171,7 +175,7 @@ const appRoutes: Routes = [
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-  ]
+  ],
 })
 export class DemoMaterialModule {}
 
@@ -227,7 +231,7 @@ export class DemoMaterialModule {}
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+   FormsModule,
     ReactiveFormsModule,
     Ng2PageScrollModule,
     HttpModule,
@@ -242,6 +246,7 @@ export class DemoMaterialModule {}
     
    // NgDatepickerModule
     NgSlimScrollModule,
+  //  NgDatepickerModule
     ImageUploadModule,
     Daterangepicker,
     BrowserModule,
@@ -253,7 +258,6 @@ export class DemoMaterialModule {}
     DemoMaterialModule
     // FlashMessagesModule.forRoot(),
     
-    // NKDatetimeModule,
     // NKDatetimeModule,
     //  DataTablesModule
     // Ng2DatetimePickerModule
@@ -269,7 +273,7 @@ export class DemoMaterialModule {}
     UserService,
     AuthGuard,
     ProductService,
-    // Config
+    Config
   ],
  
   bootstrap: [AppComponent],

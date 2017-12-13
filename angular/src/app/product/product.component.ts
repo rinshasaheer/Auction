@@ -43,6 +43,7 @@ export class ProductComponent {
 
   constructor( private productservice: ProductService, private router: Router,private _userService : UserService) {
     // Create 100 users
+    
 
   }
 ngOnInit() {
@@ -105,7 +106,6 @@ ngOnInit() {
         
             });
   }
-
   product_det(id){
     this.pid = id;
   }

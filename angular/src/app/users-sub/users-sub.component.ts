@@ -11,6 +11,7 @@ export class UsersSubComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("hhh");
     this.viewComp = 'All';
     this.title = 'Allusers List';
   }

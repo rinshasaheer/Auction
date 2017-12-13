@@ -344,6 +344,7 @@ var AllUsersComponent = (function () {
             //   action:item._id
             // });
             // });
+            console.log(data);
             _this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatTableDataSource */](data);
             console.log(_this.dataSource);
             _this.dataSource.paginator = _this.paginator;
@@ -510,65 +511,68 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_cdk_table__ = __webpack_require__("../../../cdk/esm5/table.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__top_bar_top_bar_component__ = __webpack_require__("../../../../../src/app/top-bar/top-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__side_bar_side_bar_component__ = __webpack_require__("../../../../../src/app/side-bar/side-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__all_users_all_users_component__ = __webpack_require__("../../../../../src/app/all-users/all-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__header_title_header_title_component__ = __webpack_require__("../../../../../src/app/header-title/header-title.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__disabled_users_disabled_users_component__ = __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__deleted_users_deleted_users_component__ = __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__product_product_component__ = __webpack_require__("../../../../../src/app/product/product.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__finishedauction_finishedauction_component__ = __webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__upcomingauctions_upcomingauctions_component__ = __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__equal_validator_directive__ = __webpack_require__("../../../../../src/app/equal-validator.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__email_verification_email_verification_component__ = __webpack_require__("../../../../../src/app/email-verification/email-verification.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__closed_auction_back_closed_auction_back_component__ = __webpack_require__("../../../../../src/app/closed-auction-back/closed-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__upcoming_auction_back_upcoming_auction_back_component__ = __webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__running_auction_back_running_auction_back_component__ = __webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__socialmedia_socialmedia_component__ = __webpack_require__("../../../../../src/app/socialmedia/socialmedia.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__read_more_read_more_component__ = __webpack_require__("../../../../../src/app/read-more/read-more.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__count_down_timer_count_down_timer_component__ = __webpack_require__("../../../../../src/app/count-down-timer/count-down-timer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__services_product_service_service__ = __webpack_require__("../../../../../src/app/services/product-service.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__myauctions_myauctions_component__ = __webpack_require__("../../../../../src/app/myauctions/myauctions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__capitalize_pipe__ = __webpack_require__("../../../../../src/app/capitalize.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__runningauction_runningauction_component__ = __webpack_require__("../../../../../src/app/runningauction/runningauction.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__card_running_card_running_component__ = __webpack_require__("../../../../../src/app/card-running/card-running.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__winnerconfirm_winnerconfirm_component__ = __webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47_ng2_datetime_ng2_datetime__ = __webpack_require__("../../../../ng2-datetime/ng2-datetime.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__product_list_product_list_component__ = __webpack_require__("../../../../../src/app/product-list/product-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__filter_pipe__ = __webpack_require__("../../../../../src/app/filter.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__manage_product_manage_product_component__ = __webpack_require__("../../../../../src/app/manage-product/manage-product.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__product_detail_product_detail_component__ = __webpack_require__("../../../../../src/app/product-detail/product-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__product_pipe__ = __webpack_require__("../../../../../src/app/product.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__ng_datepicker_ng_datepicker_component__ = __webpack_require__("../../../../../src/app/ng-datepicker/ng-datepicker.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__adminviewed_adminviewed_component__ = __webpack_require__("../../../../../src/app/adminviewed/adminviewed.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__upload_upload_component__ = __webpack_require__("../../../../../src/app/upload/upload.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56_angular2_image_upload__ = __webpack_require__("../../../../angular2-image-upload/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_57_ng2_file_upload__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__users_sub_users_sub_component__ = __webpack_require__("../../../../../src/app/users-sub/users-sub.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__active_users_active_users_component__ = __webpack_require__("../../../../../src/app/active-users/active-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60_ngx_slimscroll__ = __webpack_require__("../../../../ngx-slimscroll/dist/ngx-slimscroll.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__date_search_pipe__ = __webpack_require__("../../../../../src/app/date-search.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__ = __webpack_require__("../../../../../src/app/auction-back/auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker__ = __webpack_require__("../../../../ng2-daterangepicker/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__material_material_component__ = __webpack_require__("../../../../../src/app/material/material.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__myauctiontable_myauctiontable_component__ = __webpack_require__("../../../../../src/app/myauctiontable/myauctiontable.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__search_pipe__ = __webpack_require__("../../../../../src/app/search.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_hammerjs__ = __webpack_require__("../../../../hammerjs/hammer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_hammerjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_cdk_table__ = __webpack_require__("../../../cdk/esm5/table.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__top_bar_top_bar_component__ = __webpack_require__("../../../../../src/app/top-bar/top-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__side_bar_side_bar_component__ = __webpack_require__("../../../../../src/app/side-bar/side-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__all_users_all_users_component__ = __webpack_require__("../../../../../src/app/all-users/all-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__header_title_header_title_component__ = __webpack_require__("../../../../../src/app/header-title/header-title.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__disabled_users_disabled_users_component__ = __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__deleted_users_deleted_users_component__ = __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__product_product_component__ = __webpack_require__("../../../../../src/app/product/product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__finishedauction_finishedauction_component__ = __webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__upcomingauctions_upcomingauctions_component__ = __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__equal_validator_directive__ = __webpack_require__("../../../../../src/app/equal-validator.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__email_verification_email_verification_component__ = __webpack_require__("../../../../../src/app/email-verification/email-verification.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__closed_auction_back_closed_auction_back_component__ = __webpack_require__("../../../../../src/app/closed-auction-back/closed-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__upcoming_auction_back_upcoming_auction_back_component__ = __webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__running_auction_back_running_auction_back_component__ = __webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__socialmedia_socialmedia_component__ = __webpack_require__("../../../../../src/app/socialmedia/socialmedia.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__read_more_read_more_component__ = __webpack_require__("../../../../../src/app/read-more/read-more.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__count_down_timer_count_down_timer_component__ = __webpack_require__("../../../../../src/app/count-down-timer/count-down-timer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__services_product_service_service__ = __webpack_require__("../../../../../src/app/services/product-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__myauctions_myauctions_component__ = __webpack_require__("../../../../../src/app/myauctions/myauctions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__capitalize_pipe__ = __webpack_require__("../../../../../src/app/capitalize.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__runningauction_runningauction_component__ = __webpack_require__("../../../../../src/app/runningauction/runningauction.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__card_running_card_running_component__ = __webpack_require__("../../../../../src/app/card-running/card-running.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__winnerconfirm_winnerconfirm_component__ = __webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48_ng2_datetime_ng2_datetime__ = __webpack_require__("../../../../ng2-datetime/ng2-datetime.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__product_list_product_list_component__ = __webpack_require__("../../../../../src/app/product-list/product-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__filter_pipe__ = __webpack_require__("../../../../../src/app/filter.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__manage_product_manage_product_component__ = __webpack_require__("../../../../../src/app/manage-product/manage-product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__product_detail_product_detail_component__ = __webpack_require__("../../../../../src/app/product-detail/product-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__product_pipe__ = __webpack_require__("../../../../../src/app/product.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__ng_datepicker_ng_datepicker_component__ = __webpack_require__("../../../../../src/app/ng-datepicker/ng-datepicker.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__adminviewed_adminviewed_component__ = __webpack_require__("../../../../../src/app/adminviewed/adminviewed.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__upload_upload_component__ = __webpack_require__("../../../../../src/app/upload/upload.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57_angular2_image_upload__ = __webpack_require__("../../../../angular2-image-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_58_ng2_file_upload__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__users_sub_users_sub_component__ = __webpack_require__("../../../../../src/app/users-sub/users-sub.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__active_users_active_users_component__ = __webpack_require__("../../../../../src/app/active-users/active-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61_ngx_slimscroll__ = __webpack_require__("../../../../ngx-slimscroll/dist/ngx-slimscroll.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__date_search_pipe__ = __webpack_require__("../../../../../src/app/date-search.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__auction_back_auction_back_component__ = __webpack_require__("../../../../../src/app/auction-back/auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64_ng2_daterangepicker__ = __webpack_require__("../../../../ng2-daterangepicker/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64_ng2_daterangepicker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_64_ng2_daterangepicker__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__config_config__ = __webpack_require__("../../../../../config/config.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__material_material_component__ = __webpack_require__("../../../../../src/app/material/material.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_67__myauctiontable_myauctiontable_component__ = __webpack_require__("../../../../../src/app/myauctiontable/myauctiontable.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_68__search_pipe__ = __webpack_require__("../../../../../src/app/search.pipe.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -631,6 +635,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 //import { NgDatepickerModule } from 'ng2-datepicker';
 
  //file upload
@@ -644,32 +649,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+//import { ProductDeleteComponent } from './product-delete/product-delete.component';
 // import { FlashMessagesModule } from 'angular2-flash-messages';
 var appRoutes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_46__registration_registration_component__["a" /* RegistrationComponent */] },
-    { path: 'product-detail/:id', component: __WEBPACK_IMPORTED_MODULE_51__product_detail_product_detail_component__["a" /* ProductDetailComponent */] },
-    { path: 'product', component: __WEBPACK_IMPORTED_MODULE_20__product_product_component__["a" /* ProductComponent */] },
-    { path: 'product-list', component: __WEBPACK_IMPORTED_MODULE_48__product_list_product_list_component__["a" /* ProductListComponent */] },
-    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_33__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_32__login_login_component__["a" /* LoginComponent */] },
-    { path: 'socialmedia/:id', component: __WEBPACK_IMPORTED_MODULE_37__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */] },
-    { path: 'adminviewed/:id', component: __WEBPACK_IMPORTED_MODULE_54__adminviewed_adminviewed_component__["a" /* AdminviewedComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */] },
-    { path: 'all-users', component: __WEBPACK_IMPORTED_MODULE_16__all_users_all_users_component__["a" /* AllUsersComponent */] },
-    { path: 'disabled-users', component: __WEBPACK_IMPORTED_MODULE_18__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */] },
-    { path: 'deleted-users', component: __WEBPACK_IMPORTED_MODULE_19__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */] },
-    { path: 'upcomingauction', component: __WEBPACK_IMPORTED_MODULE_28__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */] },
-    { path: 'finishedauction', component: __WEBPACK_IMPORTED_MODULE_26__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */] },
-    { path: 'runningauction', component: __WEBPACK_IMPORTED_MODULE_43__runningauction_runningauction_component__["a" /* RunningauctionComponent */] },
-    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_24__home_home_component__["a" /* HomeComponent */] },
-    { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_41__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
-    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_33__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
-    { path: 'auctions', component: __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__["a" /* AuctionBackComponent */] },
-    { path: 'winnerconfirm/:id', component: __WEBPACK_IMPORTED_MODULE_45__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */] },
-    { path: '**', component: __WEBPACK_IMPORTED_MODULE_32__login_login_component__["a" /* LoginComponent */] },
-    { path: 'upload', component: __WEBPACK_IMPORTED_MODULE_55__upload_upload_component__["a" /* UploadComponent */] },
-    { path: 'material', component: __WEBPACK_IMPORTED_MODULE_64__material_material_component__["a" /* MaterialComponent */] } //file upload
+    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_47__registration_registration_component__["a" /* RegistrationComponent */] },
+    { path: 'product-detail/:id', component: __WEBPACK_IMPORTED_MODULE_52__product_detail_product_detail_component__["a" /* ProductDetailComponent */] },
+    //  {path:'product', component:ProductComponent},
+    { path: 'product-list', component: __WEBPACK_IMPORTED_MODULE_49__product_list_product_list_component__["a" /* ProductListComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_33__login_login_component__["a" /* LoginComponent */] },
+    { path: 'socialmedia/:id', component: __WEBPACK_IMPORTED_MODULE_38__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */] },
+    { path: 'adminviewed/:id', component: __WEBPACK_IMPORTED_MODULE_55__adminviewed_adminviewed_component__["a" /* AdminviewedComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_13__dashboard_dashboard_component__["a" /* DashboardComponent */] },
+    //{path:'all-users', component: AllUsersComponent},
+    // {path:'disabled-users', component: DisabledUsersComponent},
+    // {path:'deleted-users', component: DeletedUsersComponent},
+    { path: 'upcomingauction', component: __WEBPACK_IMPORTED_MODULE_29__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */] },
+    { path: 'finishedauction', component: __WEBPACK_IMPORTED_MODULE_27__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */] },
+    { path: 'runningauction', component: __WEBPACK_IMPORTED_MODULE_44__runningauction_runningauction_component__["a" /* RunningauctionComponent */] },
+    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_25__home_home_component__["a" /* HomeComponent */] },
+    { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_42__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
+    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_34__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
+    { path: 'auctions', component: __WEBPACK_IMPORTED_MODULE_63__auction_back_auction_back_component__["a" /* AuctionBackComponent */] },
+    { path: 'winnerconfirm/:id', component: __WEBPACK_IMPORTED_MODULE_46__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */] },
+    { path: 'upload', component: __WEBPACK_IMPORTED_MODULE_56__upload_upload_component__["a" /* UploadComponent */] },
+    { path: 'material', component: __WEBPACK_IMPORTED_MODULE_66__material_material_component__["a" /* MaterialComponent */] },
+    { path: 'users-sub', component: __WEBPACK_IMPORTED_MODULE_59__users_sub_users_sub_component__["a" /* UsersSubComponent */] },
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_33__login_login_component__["a" /* LoginComponent */] },
 ];
 var DemoMaterialModule = (function () {
     function DemoMaterialModule() {
@@ -677,39 +684,39 @@ var DemoMaterialModule = (function () {
     DemoMaterialModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["NgModule"])({
             exports: [
-                __WEBPACK_IMPORTED_MODULE_11__angular_cdk_table__["m" /* CdkTableModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["a" /* MatAutocompleteModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["b" /* MatButtonModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["c" /* MatButtonToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["d" /* MatCardModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["e" /* MatCheckboxModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["f" /* MatChipsModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["C" /* MatStepperModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["g" /* MatDatepickerModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["h" /* MatDialogModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["i" /* MatExpansionModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["j" /* MatGridListModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["k" /* MatIconModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["l" /* MatInputModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["m" /* MatListModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["n" /* MatMenuModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["o" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["q" /* MatPaginatorModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["r" /* MatProgressBarModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["s" /* MatProgressSpinnerModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["t" /* MatRadioModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["u" /* MatRippleModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["v" /* MatSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["w" /* MatSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["y" /* MatSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["x" /* MatSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["z" /* MatSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["B" /* MatSortModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["E" /* MatTableModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["F" /* MatTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["G" /* MatToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["H" /* MatTooltipModule */],
-            ]
+                __WEBPACK_IMPORTED_MODULE_12__angular_cdk_table__["m" /* CdkTableModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["a" /* MatAutocompleteModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["b" /* MatButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["c" /* MatButtonToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["d" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["e" /* MatCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["f" /* MatChipsModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["C" /* MatStepperModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["g" /* MatDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["h" /* MatDialogModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["i" /* MatExpansionModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["j" /* MatGridListModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["k" /* MatIconModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["l" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["m" /* MatListModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["n" /* MatMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["o" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["q" /* MatPaginatorModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["r" /* MatProgressBarModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["s" /* MatProgressSpinnerModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["t" /* MatRadioModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["u" /* MatRippleModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["v" /* MatSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["w" /* MatSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["y" /* MatSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["x" /* MatSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["z" /* MatSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["B" /* MatSortModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["E" /* MatTableModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["F" /* MatTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["G" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["H" /* MatTooltipModule */],
+            ],
         })
     ], DemoMaterialModule);
     return DemoMaterialModule;
@@ -721,81 +728,81 @@ var AppModule = (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_22__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__product_product_component__["a" /* ProductComponent */],
-                __WEBPACK_IMPORTED_MODULE_46__registration_registration_component__["a" /* RegistrationComponent */],
-                __WEBPACK_IMPORTED_MODULE_48__product_list_product_list_component__["a" /* ProductListComponent */],
-                __WEBPACK_IMPORTED_MODULE_49__filter_pipe__["a" /* FilterPipe */],
-                __WEBPACK_IMPORTED_MODULE_50__manage_product_manage_product_component__["a" /* ManageProductComponent */],
-                __WEBPACK_IMPORTED_MODULE_51__product_detail_product_detail_component__["a" /* ProductDetailComponent */],
-                __WEBPACK_IMPORTED_MODULE_32__login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__navigation_navigation_component__["a" /* NavigationComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__card_card_component__["a" /* CardComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */],
-                __WEBPACK_IMPORTED_MODULE_41__myauctions_myauctions_component__["a" /* MyauctionsComponent */],
-                __WEBPACK_IMPORTED_MODULE_31__equal_validator_directive__["a" /* EqualValidator */],
-                __WEBPACK_IMPORTED_MODULE_42__capitalize_pipe__["a" /* CapitalizePipe */],
-                __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__side_bar_side_bar_component__["a" /* SideBarComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__top_bar_top_bar_component__["a" /* TopBarComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__header_title_header_title_component__["a" /* HeaderTitleComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__footer_footer_component__["a" /* FooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__all_users_all_users_component__["a" /* AllUsersComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */],
-                __WEBPACK_IMPORTED_MODULE_33__email_verification_email_verification_component__["a" /* EmailVerificationComponent */],
-                __WEBPACK_IMPORTED_MODULE_34__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */],
-                __WEBPACK_IMPORTED_MODULE_35__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */],
-                __WEBPACK_IMPORTED_MODULE_36__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */],
-                __WEBPACK_IMPORTED_MODULE_37__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */],
-                __WEBPACK_IMPORTED_MODULE_57_ng2_file_upload__["FileSelectDirective"],
-                __WEBPACK_IMPORTED_MODULE_38__read_more_read_more_component__["a" /* ReadMoreComponent */],
-                __WEBPACK_IMPORTED_MODULE_39__count_down_timer_count_down_timer_component__["a" /* CountDownTimerComponent */],
-                __WEBPACK_IMPORTED_MODULE_43__runningauction_runningauction_component__["a" /* RunningauctionComponent */],
-                __WEBPACK_IMPORTED_MODULE_44__card_running_card_running_component__["a" /* CardRunningComponent */],
-                __WEBPACK_IMPORTED_MODULE_45__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */],
-                __WEBPACK_IMPORTED_MODULE_52__product_pipe__["a" /* ProductPipe */],
-                __WEBPACK_IMPORTED_MODULE_54__adminviewed_adminviewed_component__["a" /* AdminviewedComponent */],
-                __WEBPACK_IMPORTED_MODULE_55__upload_upload_component__["a" /* UploadComponent */],
-                __WEBPACK_IMPORTED_MODULE_57_ng2_file_upload__["FileSelectDirective"],
-                __WEBPACK_IMPORTED_MODULE_58__users_sub_users_sub_component__["a" /* UsersSubComponent */],
-                __WEBPACK_IMPORTED_MODULE_59__active_users_active_users_component__["a" /* ActiveUsersComponent */],
-                __WEBPACK_IMPORTED_MODULE_53__ng_datepicker_ng_datepicker_component__["a" /* NgDatepickerComponent */],
-                __WEBPACK_IMPORTED_MODULE_61__date_search_pipe__["a" /* DateSearchPipe */],
-                __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__["a" /* AuctionBackComponent */],
-                __WEBPACK_IMPORTED_MODULE_65__myauctiontable_myauctiontable_component__["a" /* MyauctiontableComponent */],
-                __WEBPACK_IMPORTED_MODULE_66__search_pipe__["a" /* SearchPipe */],
-                __WEBPACK_IMPORTED_MODULE_64__material_material_component__["a" /* MaterialComponent */]
+                __WEBPACK_IMPORTED_MODULE_23__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__product_product_component__["a" /* ProductComponent */],
+                __WEBPACK_IMPORTED_MODULE_47__registration_registration_component__["a" /* RegistrationComponent */],
+                __WEBPACK_IMPORTED_MODULE_49__product_list_product_list_component__["a" /* ProductListComponent */],
+                __WEBPACK_IMPORTED_MODULE_50__filter_pipe__["a" /* FilterPipe */],
+                __WEBPACK_IMPORTED_MODULE_51__manage_product_manage_product_component__["a" /* ManageProductComponent */],
+                __WEBPACK_IMPORTED_MODULE_52__product_detail_product_detail_component__["a" /* ProductDetailComponent */],
+                __WEBPACK_IMPORTED_MODULE_33__login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__navigation_navigation_component__["a" /* NavigationComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__card_card_component__["a" /* CardComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */],
+                __WEBPACK_IMPORTED_MODULE_42__myauctions_myauctions_component__["a" /* MyauctionsComponent */],
+                __WEBPACK_IMPORTED_MODULE_32__equal_validator_directive__["a" /* EqualValidator */],
+                __WEBPACK_IMPORTED_MODULE_43__capitalize_pipe__["a" /* CapitalizePipe */],
+                __WEBPACK_IMPORTED_MODULE_13__dashboard_dashboard_component__["a" /* DashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__side_bar_side_bar_component__["a" /* SideBarComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__top_bar_top_bar_component__["a" /* TopBarComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__header_title_header_title_component__["a" /* HeaderTitleComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__all_users_all_users_component__["a" /* AllUsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_34__email_verification_email_verification_component__["a" /* EmailVerificationComponent */],
+                __WEBPACK_IMPORTED_MODULE_35__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */],
+                __WEBPACK_IMPORTED_MODULE_36__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */],
+                __WEBPACK_IMPORTED_MODULE_37__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */],
+                __WEBPACK_IMPORTED_MODULE_38__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */],
+                __WEBPACK_IMPORTED_MODULE_58_ng2_file_upload__["FileSelectDirective"],
+                __WEBPACK_IMPORTED_MODULE_39__read_more_read_more_component__["a" /* ReadMoreComponent */],
+                __WEBPACK_IMPORTED_MODULE_40__count_down_timer_count_down_timer_component__["a" /* CountDownTimerComponent */],
+                __WEBPACK_IMPORTED_MODULE_44__runningauction_runningauction_component__["a" /* RunningauctionComponent */],
+                __WEBPACK_IMPORTED_MODULE_45__card_running_card_running_component__["a" /* CardRunningComponent */],
+                __WEBPACK_IMPORTED_MODULE_46__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */],
+                __WEBPACK_IMPORTED_MODULE_53__product_pipe__["a" /* ProductPipe */],
+                __WEBPACK_IMPORTED_MODULE_55__adminviewed_adminviewed_component__["a" /* AdminviewedComponent */],
+                __WEBPACK_IMPORTED_MODULE_56__upload_upload_component__["a" /* UploadComponent */],
+                __WEBPACK_IMPORTED_MODULE_58_ng2_file_upload__["FileSelectDirective"],
+                __WEBPACK_IMPORTED_MODULE_59__users_sub_users_sub_component__["a" /* UsersSubComponent */],
+                __WEBPACK_IMPORTED_MODULE_60__active_users_active_users_component__["a" /* ActiveUsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_54__ng_datepicker_ng_datepicker_component__["a" /* NgDatepickerComponent */],
+                __WEBPACK_IMPORTED_MODULE_62__date_search_pipe__["a" /* DateSearchPipe */],
+                __WEBPACK_IMPORTED_MODULE_63__auction_back_auction_back_component__["a" /* AuctionBackComponent */],
+                __WEBPACK_IMPORTED_MODULE_67__myauctiontable_myauctiontable_component__["a" /* MyauctiontableComponent */],
+                __WEBPACK_IMPORTED_MODULE_68__search_pipe__["a" /* SearchPipe */],
+                __WEBPACK_IMPORTED_MODULE_66__material_material_component__["a" /* MaterialComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
-                __WEBPACK_IMPORTED_MODULE_27_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_forms__["c" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_forms__["h" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_28_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
-                __WEBPACK_IMPORTED_MODULE_47_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
-                __WEBPACK_IMPORTED_MODULE_27_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
+                __WEBPACK_IMPORTED_MODULE_48_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_forms__["c" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_forms__["h" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_28_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
                 __WEBPACK_IMPORTED_MODULE_7__angular_router__["f" /* RouterModule */].forRoot(appRoutes),
                 __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 DemoMaterialModule,
                 // NgDatepickerModule
-                __WEBPACK_IMPORTED_MODULE_60_ngx_slimscroll__["a" /* NgSlimScrollModule */],
-                __WEBPACK_IMPORTED_MODULE_56_angular2_image_upload__["a" /* ImageUploadModule */],
-                __WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker__["Daterangepicker"],
+                __WEBPACK_IMPORTED_MODULE_61_ngx_slimscroll__["a" /* NgSlimScrollModule */],
+                //  NgDatepickerModule
+                __WEBPACK_IMPORTED_MODULE_57_angular2_image_upload__["a" /* ImageUploadModule */],
+                __WEBPACK_IMPORTED_MODULE_64_ng2_daterangepicker__["Daterangepicker"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["o" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["o" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_forms__["h" /* ReactiveFormsModule */],
                 DemoMaterialModule
                 // FlashMessagesModule.forRoot(),
-                // NKDatetimeModule,
                 // NKDatetimeModule,
                 //  DataTablesModule
                 // Ng2DatetimePickerModule
@@ -806,12 +813,13 @@ var AppModule = (function () {
                 // MatNativeDateModule,
                 // ReactiveFormsModule,
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_40__services_product_service_service__["a" /* ProductServiceService */],
+            providers: [__WEBPACK_IMPORTED_MODULE_41__services_product_service_service__["a" /* ProductServiceService */],
                 __WEBPACK_IMPORTED_MODULE_8__services_user_service__["a" /* UserService */],
-                __WEBPACK_IMPORTED_MODULE_30__guards_auth_guard__["a" /* AuthGuard */],
-                __WEBPACK_IMPORTED_MODULE_29__services_product_service__["a" /* ProductService */],
+                __WEBPACK_IMPORTED_MODULE_31__guards_auth_guard__["a" /* AuthGuard */],
+                __WEBPACK_IMPORTED_MODULE_30__services_product_service__["a" /* ProductService */],
+                __WEBPACK_IMPORTED_MODULE_65__config_config__["a" /* Config */]
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_22__app_component__["a" /* AppComponent */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_23__app_component__["a" /* AppComponent */]],
         })
     ], AppModule);
     return AppModule;
@@ -953,7 +961,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/card-running/card-running.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div [hidden]=\"isTimeOver\" class=\"col-xs-6 col-sm-6 col-md-4 col-lg-4\" >\r\n    <div class=\"tg-ad tg-verifiedad\">\r\n        <figure>\r\n            <a href=\"javascript:void(0);\"><img src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\"></a>\r\n        </figure>\r\n        <div class=\"tg-adcontent\">\r\n            \r\n            <div class=\"tg-adtitle\">\r\n                <h3><a href=\"javascript:void(0);\">{{product.name}}</a></h3>\r\n            </div>\r\n            <div class=\"clearfix\"></div>\r\n            <div class=\"tg-desc\">\r\n                <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                    <read-more [text]=\"product.desc\" [maxLength]=\"80\"></read-more>\r\n                  </p>\r\n            </div>\r\n            \r\n            <div class=\"row text-center \">\r\n            <div class=\"col-xs-12 col-md-6\">\r\n                Last Bid Price\r\n                <p class=\"lead\"> {{product.lastBidprice | number:'1.2-2'}}</p>\r\n            </div>\r\n            <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n               Ends In\r\n                <p class=\"lead\">\r\n                    <app-count-down-timer (onTimeOver)=\"timeOver()\"  [inputDate]=\"product.end_date\"></app-count-down-timer>\r\n                </p>\r\n            </div>\r\n        </div>\r\n            <div class=\"row text-center \">\r\n\r\n            <div class=\"col-xs-12 col-md-12 margn form-group \" [ngClass]=\"{'has-error': isError}\">\r\n                    <div *ngIf=\"isError\" class=\"text-danger text-left\">\r\n                           {{msg}}\r\n                      </div>\r\n                <input [disabled]=\"btnDisbled\" value=\"{{formatedAmount}}\" [(ngModel)]=\"amount\" (keyup)=\"validateAmount()\"  class=\"form-control \" type=\"text\" placeholder=\"Minimum bid amount {{(product.lastBidprice  * 1 ) + product.min_bid_rate | number:'1.2-2'}}\">\r\n                \r\n            </div>\r\n           \r\n        </div>\r\n            \r\n  \r\n        </div>\r\n        <div *ngIf=\"isSuccess\" class=\"text-success text-left\">\r\n            {{msg}}\r\n       </div>\r\n        <button [disabled]=\"btnDisbled\" (click)=\"bidbtnClicked()\" class=\"btn {{btnClass}} tg-adprice\"> {{btnLabel}}</button>\r\n    </div>\r\n</div>"
+module.exports = "<div [hidden]=\"isTimeOver\" class=\"col-xs-6 col-sm-6 col-md-4 col-lg-4\" >\r\n    <div class=\"tg-ad tg-verifiedad\">\r\n        <figure>\r\n            <a href=\"javascript:void(0);\"><img src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\"></a>\r\n        </figure>\r\n        <div class=\"tg-adcontent\">\r\n            \r\n            <div class=\"tg-adtitle\">\r\n                <h3><a href=\"javascript:void(0);\">{{product.name}}</a></h3>\r\n            </div>\r\n            <div class=\"clearfix\"></div>\r\n            <div class=\"tg-desc\">\r\n                <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                    <read-more [text]=\"product.desc\" [maxLength]=\"80\"></read-more>\r\n                  </p>\r\n            </div>\r\n            \r\n            <div class=\"row text-center \">\r\n            <div class=\"col-xs-12 col-md-6\">\r\n                Last Bid Price\r\n                <p class=\"lead\"> {{product.lastBidprice | number:'1.2-2'}}</p>\r\n            </div>\r\n            <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n               Ends In\r\n                <p class=\"lead\">\r\n                    <app-count-down-timer (onTimeOver)=\"timeOver()\"  [inputDate]=\"product.end_date\"></app-count-down-timer>\r\n                </p>\r\n            </div>\r\n        </div>\r\n            <div class=\"row text-center \">\r\n\r\n            <div class=\"col-xs-12 col-md-12 margn form-group \" [ngClass]=\"{'has-error': isError}\">\r\n                    <div *ngIf=\"isError\" class=\"text-danger text-left\">\r\n                           {{msg}}\r\n                      </div>\r\n                <input [disabled]=\"btnDisbled\" value=\"{{formatedAmount}}\" [(ngModel)]=\"amount\" (keydown)=onKeydownEvent($event) (keyup)=\"validateAmount($event)\"   class=\"form-control \" type=\"text\" placeholder=\"Minimum bid amount {{(product.lastBidprice  * 1 ) + product.min_bid_rate | number:'1.2-2'}}\">\r\n                \r\n            </div>\r\n           \r\n        </div>\r\n            \r\n  \r\n        </div>\r\n        <div *ngIf=\"isSuccess\" class=\"text-success text-left\">\r\n            {{msg}}\r\n       </div>\r\n        <button [disabled]=\"btnDisbled\" (click)=\"bidbtnClicked()\" class=\"btn {{btnClass}} tg-adprice\"> {{btnLabel}}</button>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -1005,9 +1013,13 @@ var CardRunningComponent = (function () {
             if (info.role != "user") {
                 _this.router.navigate(['/login']);
             }
+            else {
+                _this.user = info;
+                _this.getlastbidder();
+            }
         });
         this.socket.on('newbid', function (data) {
-            console.log(data);
+            // console.log(data);
             if (_this.product._id == data.prod_id) {
                 _this.productService.getProduct(data.prod_id).subscribe(function (data) {
                     _this.product = data;
@@ -1015,8 +1027,7 @@ var CardRunningComponent = (function () {
                 });
             }
         });
-        console.log(this.product);
-        this.getlastbidder();
+        //  console.log(this.product);
     };
     CardRunningComponent.prototype.getlastbidder = function () {
         var _this = this;
@@ -1043,7 +1054,7 @@ var CardRunningComponent = (function () {
             this.formatedAmount = this.product.lastBidprice;
             this.btnLabel = 'Your Bid On Progress';
             this.btnClass = 'btn-success';
-            console.log(this.formatedAmount);
+            // console.log(this.formatedAmount);
         }
         else {
             this.btnDisbled = false;
@@ -1056,8 +1067,8 @@ var CardRunningComponent = (function () {
         var _this = this;
         this.btnDisbled = true;
         this.validateAmount();
-        console.log(this.product);
-        console.log(this.amount);
+        //   console.log(this.product);
+        //  console.log(this.amount);
         if (!this.isError) {
             this.formatedAmount = this.amount;
             var data = {
@@ -1065,7 +1076,7 @@ var CardRunningComponent = (function () {
                 amount: Number(this.amount),
             };
             this.productService.bidProduct(data).subscribe(function (data) {
-                console.log(data);
+                //     console.log(data);
                 _this.msg = data.msg;
                 if (data.success) {
                     _this.isSuccess = true;
@@ -1089,11 +1100,16 @@ var CardRunningComponent = (function () {
             _this.msg = '';
         }, 3000);
     };
+    CardRunningComponent.prototype.onKeydownEvent = function (event) {
+        if (event.keyCode === 13) {
+            this.bidbtnClicked();
+        }
+    };
     CardRunningComponent.prototype.validateAmount = function () {
         var _this = this;
         this.isError = false;
         if (Number(this.amount)) {
-            console.log(this.product.min_bid_rate * 1 + this.product.lastBidprice * 1);
+            // console.log( this.product.min_bid_rate * 1 + this.product.lastBidprice* 1 );
             if (Number(this.amount) < (this.product.min_bid_rate * 1 + this.product.lastBidprice * 1)) {
                 this.isError = true;
                 this.msg = "You Can Bid Only From " + (this.product.min_bid_rate * 1 + this.product.lastBidprice * 1).toFixed(2);
@@ -1281,7 +1297,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/closed-auction-back/closed-auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\r\n    \r\n\r\n\r\n\r\n        <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n                <div class=\"container\" >\r\n                        <div class=\"col-md-9 col-xs-9 brdr\">\r\n                                <div class=\"row\">\r\n                                        <div class=\"col-md-6 col-xs-6\">\r\n                                            <div class=\"row\">\r\n                                                <div class=\"col-md-4 col-xs-4\">\r\n                                                    <label>Start Date</label>\r\n                                                  </div>\r\n                                                    <div class=\"col-md-8 col-xs-8\">\r\n            \r\n                                                    <!-- <input type=\"text\" class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"options\" (selected)=\"selectedStartDate($event, daterange)\" /> -->\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                        <div class=\"col-md-6 col-xs-6\">\r\n                                                <div class=\"row\">\r\n                                                        <div class=\"col-md-4 col-xs-4\">\r\n                                                            <label>End Date</label>\r\n                                                          </div>\r\n                                                          <div class=\"col-md-8 col-xs-8\">\r\n                                                            <!-- <input type=\"text\"  class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"optionsEnd\" (selected)=\"selectedEndDate($event, daterange)\" /> -->\r\n                                                        </div>\r\n                                                    </div>\r\n                                            \r\n                                        </div>\r\n                                        \r\n                                </div>   \r\n                            </div>\r\n                            <br>\r\n                            <br>\r\n                            <br>\r\n                            <div class=\"clearfix\"></div> \r\n\r\n            <div  *ngFor=\"let product of  (products | dateSearch:startFrom:startUpto:endFrom:endUpto)\" class=\"item  col-xs-4 col-lg-4\">\r\n                <div class=\"thumbnail\">\r\n                    \r\n                    <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                    <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n               \r\n                    <div class=\"caption\">\r\n                        <h4 class=\"group inner list-group-item-heading text-center\">\r\n                            {{product.name}}</h4>\r\n                            <hr>\r\n                            <p class=\"group inner list-group-item-text\" style=\"min-height: 60px;\">\r\n                            <read-more [text]=\"product.desc\" [maxLength]=\"80\"></read-more>\r\n                          </p>\r\n                        <hr>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Start Price\r\n                                <p class=\"lead\">{{product.bid_amount | number:'1.2-2'}}</p>\r\n                            </div>\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Last Bid Price\r\n                                \r\n                                <p *ngIf=\"product.bidders.length > 0\" class=\"lead\">{{product.lastBidprice | number:'1.2-2'}}</p>\r\n                                <p *ngIf=\"product.bidders.length == 0 \" class=\"alert-danger lead\">No bid</p>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Started On<br>\r\n                                <b>\r\n                                  {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                                  <br>\r\n                                  {{product.start_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                             <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Ended On<br>\r\n                                <b>\r\n                                    {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                    <br>\r\n                                    {{product.end_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                        </div>\r\n                        <hr>\r\n                        <div class=\"row margn\" >\r\n                          \r\n                          <div class=\"col-xs-12 col-md-12 text-center\">\r\n                             <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.user_details.length}}</a>\r\n                             \r\n                          </div>\r\n                          <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                              <div class=\"modal-dialog\">\r\n                            \r\n                                <!-- Modal content-->\r\n                                <div class=\"modal-content\">\r\n                                  <div class=\"modal-header\">\r\n                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                    <h4 class=\"modal-title\">User Involved - {{involvedUsers.user_details.length}}</h4>\r\n                                  </div>\r\n                                  <div class=\"modal-body\">\r\n                                      <table class=\"table\">\r\n                                          <thead class=\"thead-inverse\">\r\n                                      <tr>\r\n                                        <th>Slno</th>\r\n                                        <th>Name</th>\r\n                                        <th>Bid Amount</th>\r\n                                        <th>Time</th>\r\n                                        <th>Status</th>\r\n                                      \r\n                                      </tr>\r\n                                    </thead>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length ==0\">\r\n                                        <tr >\r\n                                              <td colspan=\"5\" class=\"text-center\">No User Involved</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length > 0\" >\r\n                                  \r\n                                        <tr  *ngFor=\"let usr of involvedUsers.bidders;let i = index\" >\r\n                                              <td >{{i+1}}</td>\r\n                                              <td >{{users[usr.user_id].name}}</td>\r\n                                              <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                              <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                              <td >{{usr.bid_status}}</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    </table>\r\n                                  \r\n                                  </div>\r\n                                  <div class=\"modal-footer\">\r\n                                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                                  </div>\r\n                                </div>\r\n                            \r\n                              </div>\r\n                            </div>\r\n                      </div>\r\n                      \r\n                        <div class=\"row\">\r\n                            \r\n                            <div class=\"col-xs-12 col-md-12\">\r\n                                <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center \">\r\n                                  <div *ngIf=\"product.is_bid_completed\">\r\n                                      <div class=\"alert alert-success text-center \">\r\n                                          Winner! \r\n                                          <br> <strong> {{product.lastBiduser}}</strong>\r\n                                          <br>\r\n                                          {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                       </div> \r\n                                  </div>\r\n                                  <div *ngIf=\"!product.is_bid_completed\">\r\n                                  <div class=\"alert alert-success text-center \">\r\n                                    Last Bidder\r\n                                    <br> <strong> {{product.lastBiduser}}</strong>\r\n                                    <br>\r\n                                    {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                 </div> \r\n                                  </div>\r\n                              </div>\r\n                                <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                                    <div>\r\n                                    <div class=\"alert alert-dangertext-center \">\r\n                                    No bidder Found\r\n                                    <br> <strong><a [routerLink]=\"['/product-detail/'+product._id]\" class=\"alert-danger\" >Re-submit</a></strong>\r\n                                    <br>\r\n                                    Bid closed : {{product.end_date | date: 'dd-MM-yyyy h:mm a'}}\r\n                                </div>\r\n                                </div>\r\n                              </div>\r\n                           \r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n           \r\n      \r\n        </div>\r\n        </div>\r\n      \r\n        <div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n            <h3 class=\"text-center\"> No Product Found</h3>\r\n        </div>\r\n        </div>\r\n        \r\n   \r\n    \r\n       "
+module.exports = "\r\n\r\n    \r\n\r\n\r\n\r\n        <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n                <div class=\"container\" >\r\n                        <div class=\"col-md-9 col-xs-9 brdr\">\r\n                                <div class=\"row\">\r\n                                        <div class=\"col-md-6 col-xs-6\">\r\n                                            <div class=\"row\">\r\n                                                <div class=\"col-md-4 col-xs-4\">\r\n                                                    <label>Start Date</label>\r\n                                                  </div>\r\n                                                    <div class=\"col-md-8 col-xs-8\">\r\n            \r\n                                                    <input type=\"text\" class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"options\" (selected)=\"selectedStartDate($event, daterange)\" />\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                        <div class=\"col-md-6 col-xs-6\">\r\n                                                <div class=\"row\">\r\n                                                        <div class=\"col-md-4 col-xs-4\">\r\n                                                            <label>End Date</label>\r\n                                                          </div>\r\n                                                          <div class=\"col-md-8 col-xs-8\">\r\n                                                            <input type=\"text\"  class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"optionsEnd\" (selected)=\"selectedEndDate($event, daterange)\" />\r\n                                                        </div>\r\n                                                    </div>\r\n                                            \r\n                                        </div>\r\n                                        \r\n                                </div>   \r\n                            </div>\r\n                            <br>\r\n                            <br>\r\n                            <br>\r\n                            <div class=\"clearfix\"></div> \r\n\r\n            <div  *ngFor=\"let product of  (products | dateSearch:startFrom:startUpto:endFrom:endUpto)\" class=\"item  col-xs-4 col-lg-4\">\r\n                <div class=\"thumbnail\">\r\n                    \r\n                    <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                    <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n               \r\n                    <div class=\"caption\">\r\n                        <h4 class=\"group inner list-group-item-heading text-center\">\r\n                            {{product.name}}</h4>\r\n                            <hr>\r\n                            <p class=\"group inner list-group-item-text\" style=\"min-height: 60px;\">\r\n                            <read-more [text]=\"product.desc\" [maxLength]=\"80\"></read-more>\r\n                          </p>\r\n                        <hr>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Start Price\r\n                                <p class=\"lead\">{{product.bid_amount | number:'1.2-2'}}</p>\r\n                            </div>\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Last Bid Price\r\n                                \r\n                                <p *ngIf=\"product.bidders.length > 0\" class=\"lead\">{{product.lastBidprice | number:'1.2-2'}}</p>\r\n                                <p *ngIf=\"product.bidders.length == 0 \" class=\"alert-danger lead\">No bid</p>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Started On<br>\r\n                                <b>\r\n                                  {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                                  <br>\r\n                                  {{product.start_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                             <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Ended On<br>\r\n                                <b>\r\n                                    {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                    <br>\r\n                                    {{product.end_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                        </div>\r\n                        <hr>\r\n                        <div class=\"row margn\" >\r\n                          \r\n                          <div class=\"col-xs-12 col-md-12 text-center\">\r\n                             <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.user_details.length}}</a>\r\n                             \r\n                          </div>\r\n                          <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                              <div class=\"modal-dialog\">\r\n                            \r\n                                <!-- Modal content-->\r\n                                <div class=\"modal-content\">\r\n                                  <div class=\"modal-header\">\r\n                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                    <h4 class=\"modal-title\">User Involved - {{involvedUsers.user_details.length}}</h4>\r\n                                  </div>\r\n                                  <div class=\"modal-body\">\r\n                                      <table class=\"table\">\r\n                                          <thead class=\"thead-inverse\">\r\n                                      <tr>\r\n                                        <th>Slno</th>\r\n                                        <th>Name</th>\r\n                                        <th>Bid Amount</th>\r\n                                        <th>Time</th>\r\n                                        <th>Status</th>\r\n                                      \r\n                                      </tr>\r\n                                    </thead>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length ==0\">\r\n                                        <tr >\r\n                                              <td colspan=\"5\" class=\"text-center\">No User Involved</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length > 0\" >\r\n                                  \r\n                                        <tr  *ngFor=\"let usr of involvedUsers.bidders;let i = index\" >\r\n                                              <td >{{i+1}}</td>\r\n                                              <td >{{users[usr.user_id].name}}</td>\r\n                                              <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                              <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                              <td >{{usr.bid_status}}</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    </table>\r\n                                  \r\n                                  </div>\r\n                                  <div class=\"modal-footer\">\r\n                                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                                  </div>\r\n                                </div>\r\n                            \r\n                              </div>\r\n                            </div>\r\n                      </div>\r\n                      \r\n                        <div class=\"row\">\r\n                            \r\n                            <div class=\"col-xs-12 col-md-12\">\r\n                                <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center \">\r\n                                  <div *ngIf=\"product.is_bid_completed\">\r\n                                      <div class=\"alert alert-success text-center \">\r\n                                          Winner! \r\n                                          <br> <strong> {{product.lastBiduser}}</strong>\r\n                                          <br>\r\n                                          {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                       </div> \r\n                                  </div>\r\n                                  <div *ngIf=\"!product.is_bid_completed\">\r\n                                  <div class=\"alert alert-success text-center \">\r\n                                    Last Bidder\r\n                                    <br> <strong> {{product.lastBiduser}}</strong>\r\n                                    <br>\r\n                                    {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                 </div> \r\n                                  </div>\r\n                              </div>\r\n                                <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                                    <div>\r\n                                    <div class=\"alert alert-dangertext-center \">\r\n                                    No bidder Found\r\n                                    <br> <strong><a [routerLink]=\"['/product-detail/'+product._id]\" class=\"alert-danger\" >Re-submit</a></strong>\r\n                                    <br>\r\n                                    Bid closed : {{product.end_date | date: 'dd-MM-yyyy h:mm a'}}\r\n                                </div>\r\n                                </div>\r\n                              </div>\r\n                           \r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n           \r\n      \r\n        </div>\r\n        </div>\r\n      \r\n        <div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n            <h3 class=\"text-center\"> No Product Found</h3>\r\n        </div>\r\n        </div>\r\n        \r\n   \r\n    \r\n       "
 
 /***/ }),
 
@@ -1580,10 +1596,10 @@ var DateSearchPipe = (function () {
     }
     DateSearchPipe.prototype.transform = function (value, startFrom, startUpto, endFrom, endUpto) {
         // console.log(startDate);
-        console.log(startFrom);
-        console.log(startUpto);
-        console.log(endFrom);
-        console.log(endUpto);
+        // console.log(startFrom);
+        // console.log(startUpto);
+        // console.log(endFrom);
+        // console.log(endUpto);
         // console.log(new Date(startFrom));
         // return value;
         return value.filter(function (el) {
@@ -1871,7 +1887,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/email-verification/email-verification.component.html":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "<div *ngIf=\"showSuccess\" class=\"alert alert-success\">\r\n    <strong>Success, Redirecting ...</strong>\r\n  </div>\r\n<div *ngIf=\"showDanger\" class=\"alert alert-danger\">\r\n    <strong>Error on verification</strong>\r\n  </div>"
 
 /***/ }),
 
@@ -1900,6 +1916,8 @@ var EmailVerificationComponent = (function () {
         this.userService = userService;
         this.route = route;
         this.router = router;
+        this.showDanger = false;
+        this.showSuccess = false;
     }
     EmailVerificationComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1907,14 +1925,20 @@ var EmailVerificationComponent = (function () {
             _this.userService.verifyUser(params.id).subscribe(function (data) {
                 console.log(data);
                 if (data.success) {
-                    alert("Success, Redirecting ...");
-                    _this.router.navigate(['/home']);
-                    console.log("successfull verified user");
+                    //  alert("Success, Redirecting ...");
+                    _this.showSuccess = true;
+                    setTimeout(function () {
+                        _this.router.navigate(['/login']);
+                        console.log("successfull verified user");
+                    }, 3000);
                 }
                 else {
-                    alert("Error on verification");
-                    _this.router.navigate(['/login']);
-                    console.log("error verified user");
+                    // alert("Error on verification");
+                    _this.showDanger = true;
+                    setTimeout(function () {
+                        _this.router.navigate(['/login']);
+                        console.log("error verified user");
+                    }, 3000);
                 }
             });
         });
@@ -2420,7 +2444,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body style=\"background-color : #f3f3f3;padding:  5% 0 17% 0;\">\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"main\">\r\n\r\n      <h3>Please Log In, or <a [routerLink]=\"['/registration']\">Sign Up</a></h3>\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n          <a href=\"/auth/facebook\" target=\"_blank\" class=\"btn btn-lg btn-primary btn-block\">Facebook</a>\r\n        </div>\r\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n          <a href=\"/auth/google\" class=\"btn btn-lg btn-info btn-block\">Google</a>\r\n        </div>\r\n      </div>\r\n      <div class=\"login-or\">\r\n        <hr class=\"hr-or\">\r\n        <span class=\"span-or\">or</span>\r\n      </div>\r\n\r\n      <form role=\"form\" #f=\"ngForm\" (ngSubmit)=\"f.form.valid && login()\" novalidate>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\r\n          <label for=\"inputUsernameEmail\">Username or email</label>\r\n          <input type=\"text\" class=\"form-control\" id=\"inputUsernameEmail\" required [(ngModel)]=\"newLogin.email\" name=\"email\" #email=\"ngModel\">\r\n          <div *ngIf=\"f.submitted && !email.valid\" class=\"help-block\">Username is required</div>\r\n        </div>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\r\n          <label for=\"inputPassword\">Password</label>\r\n          <input type=\"password\" class=\"form-control\" id=\"inputPassword\" required [(ngModel)]=\"newLogin.password\" name=\"password\" #password=\"ngModel\">\r\n          <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\r\n        </div>\r\n        <button type=\"submit\" class=\"btn btn btn-primary\">\r\n          Log In\r\n        </button>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && status }\">\r\n            <div *ngIf=\"status\" class=\"help-block\">!{{msg}}</div>\r\n       </div> \r\n      </form>\r\n      \r\n    </div>\r\n    \r\n  </div>\r\n</div>\r\n</body>\r\n"
+module.exports = "<body style=\"background-color : #f3f3f3;padding:  5% 0 17% 0; \r\n\">\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"main\">\r\n\r\n      <h3>Please Log In, or <a [routerLink]=\"['/registration']\">Sign Up</a></h3>\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n          <a href=\"/auth/facebook\" target=\"_blank\" class=\"btn btn-lg btn-primary btn-block\">Facebook</a>\r\n        </div>\r\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n          <a href=\"/auth/google\" class=\"btn btn-lg btn-info btn-block\">Google</a>\r\n        </div>\r\n      </div>\r\n      <div class=\"login-or\">\r\n        <hr class=\"hr-or\">\r\n        <span class=\"span-or\">or</span>\r\n      </div>\r\n\r\n      <form role=\"form\" #f=\"ngForm\" (ngSubmit)=\"f.form.valid && login()\" novalidate>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\r\n          <label for=\"inputUsernameEmail\">Username or email</label>\r\n          <input type=\"text\" class=\"form-control\" id=\"inputUsernameEmail\" required [(ngModel)]=\"newLogin.email\" name=\"email\" #email=\"ngModel\">\r\n          <div *ngIf=\"f.submitted && !email.valid\" class=\"help-block\">Username is required</div>\r\n        </div>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\r\n          <label for=\"inputPassword\">Password</label>\r\n          <input type=\"password\" class=\"form-control\" id=\"inputPassword\" required [(ngModel)]=\"newLogin.password\" name=\"password\" #password=\"ngModel\">\r\n          <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\r\n        </div>\r\n        <button type=\"submit\" class=\"btn btn btn-primary\">\r\n          Log In\r\n        </button>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && status }\">\r\n            <div *ngIf=\"status\" class=\"help-block\">!{{msg}}</div>\r\n       </div> \r\n      </form>\r\n      \r\n    </div>\r\n    \r\n  </div>\r\n</div>\r\n</body>\r\n"
 
 /***/ }),
 
@@ -3185,9 +3209,9 @@ var NavigationComponent = (function () {
                 // console.log(info);
                 _this.userInfo = info;
                 _this.loading = false;
+                _this.getNotification();
             }
         });
-        this.getNotification();
         this.socket.on('notification', function (data) {
             if (_this.userInfo._id == data.user_id) {
                 _this.getNotification();
@@ -4326,7 +4350,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/running-auction-back/running-auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\r\n\r\n                 \r\n<div class=\"container\" >\r\n\r\n\r\n\r\n    <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n            <div class=\"col-md-9 col-xs-9 brdr\">\r\n                    <div class=\"row\">\r\n                            <div class=\"col-md-6 col-xs-6\">\r\n                                <div class=\"row\">\r\n                                    <div class=\"col-md-4 col-xs-4\">\r\n                                        <label>Start Date</label>\r\n                                      </div>\r\n                                        <div class=\"col-md-8 col-xs-8\">\r\n\r\n                                        <!-- <input type=\"text\" class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"options\" (selected)=\"selectedStartDate($event, daterange)\" /> -->\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"col-md-6 col-xs-6\">\r\n                                    <div class=\"row\">\r\n                                            <div class=\"col-md-4 col-xs-4\">\r\n                                                <label>End Date</label>\r\n                                              </div>\r\n                                              <div class=\"col-md-8 col-xs-8\">\r\n                                                <!-- <input type=\"text\"  class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"optionsEnd\" (selected)=\"selectedEndDate($event, daterange)\" /> -->\r\n                                            </div>\r\n                                        </div>\r\n                                \r\n                            </div>\r\n                            \r\n                    </div>   \r\n                </div>\r\n                <br>\r\n                <br>\r\n                <br>\r\n                <div class=\"clearfix\"></div> \r\n\r\n        <div *ngFor=\"let product of (products | dateSearch:startFrom:startUpto:endFrom:endUpto)\"  class=\"item  col-xs-4 col-lg-4\">\r\n            <div class=\"thumbnail\">\r\n                \r\n                <img class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n                <div class=\"caption\">\r\n                    <h4 class=\"group inner list-group-item-heading text-center\">\r\n                        {{product.name}}</h4>\r\n                        <hr>\r\n                        <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                        <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                      </p>\r\n                    <hr>\r\n                    <div class=\"row text-center\">\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                            Bid Start Price\r\n                            <p class=\"lead\"> {{product.bid_amount | number:'1.2-2'}}</p>\r\n                        </div>\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                          Ends In\r\n                            <p class=\"lead\">\r\n                              <!-- {{product.end_date | date: 'dd-mm-yyyy h:mm:ss'}} -->\r\n                              <app-count-down-timer (onTimeOver)=\"timeOver()\" [inputDate]=\"product.end_date\"></app-count-down-timer>\r\n                              <!-- <app-count-down-timer inputDate=\"product.end_date | date: 'MMMM dd, yyyy h:mm:ss'\"></app-count-down-timer> -->\r\n\r\n                             \r\n                              \r\n                              <!-- <app-count-down-timer inputDate=\"product.end_date\"></app-count-down-timer> -->\r\n                            </p>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row margn\" >\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12 text-center\">\r\n                           <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.user_details.length}}</a>\r\n                           \r\n                        </div>\r\n                        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                            <div class=\"modal-dialog\">\r\n                          \r\n                              <!-- Modal content-->\r\n                              <div class=\"modal-content\">\r\n                                <div class=\"modal-header\">\r\n                                  <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                  <h4 class=\"modal-title\">User Involved - {{involvedUsers.user_details.length}}</h4>\r\n                                </div>\r\n                                <div class=\"modal-body\">\r\n                                    <table class=\"table\">\r\n                                        <thead class=\"thead-inverse\">\r\n                                    <tr>\r\n                                      <th>Slno</th>\r\n                                      <th>Name</th>\r\n                                      <th>Bid Amount</th>\r\n                                      <th>Time</th>\r\n                                      <th>Status</th>\r\n                                    \r\n                                    </tr>\r\n                                  </thead>\r\n                                  <tbody *ngIf=\"involvedUsers.bidders.length ==0\">\r\n                                      <tr >\r\n                                            <td colspan=\"4\" class=\"text-center\">No User Involved</td>\r\n                                      </tr>\r\n                                  </tbody>\r\n                                  <tbody *ngIf=\"involvedUsers.bidders.length > 0\" >\r\n                                \r\n                                      <tr  *ngFor=\"let usr of involvedUsers.bidders;let i = index\" >\r\n                                            <td >{{i+1}}</td>\r\n                                            <td >{{users[usr.user_id].name}}</td>\r\n                                            <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                            <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                            <td >{{usr.bid_status}}</td>\r\n                                      </tr>\r\n                                  </tbody>\r\n                                  </table>\r\n                                \r\n                                </div>\r\n                                <div class=\"modal-footer\">\r\n                                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                                </div>\r\n                              </div>\r\n                          \r\n                            </div>\r\n                          </div>\r\n                    </div>\r\n                    <hr>\r\n                    <div class=\"row\">\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12\">\r\n                            <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center margn\">\r\n                                <strong>Last Bid Amount - {{product.lastBidprice | number:'1.2-2'}}</strong>\r\n                                 <br>\r\n                                 {{product.lastBiduser}} \r\n                                 <br> {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                      \r\n                        </div>\r\n                        <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                           No bidder Found\r\n                          </div>\r\n               \r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        </div>\r\n\r\n\r\n\r\n</div>\r\n<div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n        <h3 class=\"text-center\"> No Product Found</h3>\r\n    </div>\r\n    </div>\r\n"
+module.exports = "\r\n\r\n\r\n                 \r\n<div class=\"container\" >\r\n\r\n\r\n\r\n    <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n            <div class=\"col-md-9 col-xs-9 brdr\">\r\n                    <div class=\"row\">\r\n                            <div class=\"col-md-6 col-xs-6\">\r\n                                <div class=\"row\">\r\n                                    <div class=\"col-md-4 col-xs-4\">\r\n                                        <label>Start Date</label>\r\n                                      </div>\r\n                                        <div class=\"col-md-8 col-xs-8\">\r\n\r\n                                        <input type=\"text\" class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"options\" (selected)=\"selectedStartDate($event, daterange)\" />\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"col-md-6 col-xs-6\">\r\n                                    <div class=\"row\">\r\n                                            <div class=\"col-md-4 col-xs-4\">\r\n                                                <label>End Date</label>\r\n                                              </div>\r\n                                              <div class=\"col-md-8 col-xs-8\">\r\n                                                <input type=\"text\"  class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"optionsEnd\" (selected)=\"selectedEndDate($event, daterange)\" />\r\n                                            </div>\r\n                                        </div>\r\n                                \r\n                            </div>\r\n                            \r\n                    </div>   \r\n                </div>\r\n                <br>\r\n                <br>\r\n                <br>\r\n                <div class=\"clearfix\"></div> \r\n\r\n        <div *ngFor=\"let product of (products | dateSearch:startFrom:startUpto:endFrom:endUpto)\"  class=\"item  col-xs-4 col-lg-4\">\r\n            <div class=\"thumbnail\">\r\n                \r\n                <img class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n                <div class=\"caption\">\r\n                    <h4 class=\"group inner list-group-item-heading text-center\">\r\n                        {{product.name}}</h4>\r\n                        <hr>\r\n                        <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                        <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                      </p>\r\n                    <hr>\r\n                    <div class=\"row text-center\">\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                            Bid Start Price\r\n                            <p class=\"lead\"> {{product.bid_amount | number:'1.2-2'}}</p>\r\n                        </div>\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                          Ends In\r\n                            <p class=\"lead\">\r\n                              <!-- {{product.end_date | date: 'dd-mm-yyyy h:mm:ss'}} -->\r\n                              <app-count-down-timer (onTimeOver)=\"timeOver()\" [inputDate]=\"product.end_date\"></app-count-down-timer>\r\n                              <!-- <app-count-down-timer inputDate=\"product.end_date | date: 'MMMM dd, yyyy h:mm:ss'\"></app-count-down-timer> -->\r\n\r\n                             \r\n                              \r\n                              <!-- <app-count-down-timer inputDate=\"product.end_date\"></app-count-down-timer> -->\r\n                            </p>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row margn\" >\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12 text-center\">\r\n                           <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.user_details.length}}</a>\r\n                           \r\n                        </div>\r\n                        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                            <div class=\"modal-dialog\">\r\n                          \r\n                              <!-- Modal content-->\r\n                              <div class=\"modal-content\">\r\n                                <div class=\"modal-header\">\r\n                                  <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                  <h4 class=\"modal-title\">User Involved - {{involvedUsers.user_details.length}}</h4>\r\n                                </div>\r\n                                <div class=\"modal-body\">\r\n                                    <table class=\"table\">\r\n                                        <thead class=\"thead-inverse\">\r\n                                    <tr>\r\n                                      <th>Slno</th>\r\n                                      <th>Name</th>\r\n                                      <th>Bid Amount</th>\r\n                                      <th>Time</th>\r\n                                      <th>Status</th>\r\n                                    \r\n                                    </tr>\r\n                                  </thead>\r\n                                  <tbody *ngIf=\"involvedUsers.bidders.length ==0\">\r\n                                      <tr >\r\n                                            <td colspan=\"4\" class=\"text-center\">No User Involved</td>\r\n                                      </tr>\r\n                                  </tbody>\r\n                                  <tbody *ngIf=\"involvedUsers.bidders.length > 0\" >\r\n                                \r\n                                      <tr  *ngFor=\"let usr of involvedUsers.bidders;let i = index\" >\r\n                                            <td >{{i+1}}</td>\r\n                                            <td >{{users[usr.user_id].name}}</td>\r\n                                            <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                            <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                            <td >{{usr.bid_status}}</td>\r\n                                      </tr>\r\n                                  </tbody>\r\n                                  </table>\r\n                                \r\n                                </div>\r\n                                <div class=\"modal-footer\">\r\n                                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                                </div>\r\n                              </div>\r\n                          \r\n                            </div>\r\n                          </div>\r\n                    </div>\r\n                    <hr>\r\n                    <div class=\"row\">\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12\">\r\n                            <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center margn\">\r\n                                <strong>Last Bid Amount - {{product.lastBidprice | number:'1.2-2'}}</strong>\r\n                                 <br>\r\n                                 {{product.lastBiduser}} \r\n                                 <br> {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                      \r\n                        </div>\r\n                        <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                           No bidder Found\r\n                          </div>\r\n               \r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        </div>\r\n\r\n\r\n\r\n</div>\r\n<div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n        <h3 class=\"text-center\"> No Product Found</h3>\r\n    </div>\r\n    </div>\r\n"
 
 /***/ }),
 
@@ -4545,14 +4569,14 @@ var RunningauctionComponent = (function () {
         });
         this.userService.getLoggedUSerDetails().subscribe(function (data) {
             _this.user = data;
-            console.log(_this.user);
+            // console.log(this.user);
         });
         this.userService.getAllUsersById().subscribe(function (data) {
             _this.users = data;
-            console.log(_this.users);
+            // console.log(this.users);
         });
         this.productService.getAllrunningProduct().subscribe(function (data) {
-            console.log(data);
+            // console.log(data);
             data.forEach(function (item, index) {
                 _this.product_ids.push(item._id);
             });
@@ -5079,7 +5103,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/side-bar/side-bar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\r\n<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\r\n    <!-- Brand and toggle get grouped for better mobile display -->\r\n    \r\n    <top-bar></top-bar>\r\n    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\r\n        <ul class=\"nav navbar-nav side-nav\">\r\n            <li>\r\n                <a routerLink=\"/dashboard\"><i class=\"fa fa-fw fa-dashboard\"></i> Dashboard</a>\r\n            </li>\r\n           \r\n            <li>\r\n                    <a routerLink=\"/users-sub\"><i class=\"fa fa-users\"></i> Users</a>\r\n                <!-- <a href=\"javascript:;\" data-toggle=\"collapse\" data-target=\"#demo\"><i class=\"fa fa-fw fa-arrows-v\"></i> Users <i class=\"fa fa-fw fa-caret-down\"></i></a>\r\n                <ul id=\"demo\" class=\"collapse\">\r\n                    <li>\r\n                        <a routerLink=\"/all-users\">All Users</a>\r\n                    </li>\r\n                    <li>\r\n                        <a routerLink=\"/disabled-users\">Disabled Users</a>\r\n                    </li>\r\n                    <li>\r\n                        <a routerLink=\"/deleted-users\">Deleted Users</a>\r\n                    </li>\r\n                </ul> -->\r\n            </li>\r\n            <li *ngIf=\"userService.loggedIn()\">\r\n                <a  routerLink=\"/product-list\" data-toggle=\"collapse\" data-target=\"#demo1\"><i class=\"fa fa-product-hunt\"></i> Manage Product</a> \r\n                <ul id=\"demo1\" class=\"collapse\">\r\n                    <!-- <li *ngIf=\"userService.loggedIn()\">\r\n                        <a href=\"/product\">Add Product</a>\r\n                    </li> -->\r\n                    <!-- <li *ngIf=\"userService.loggedIn()\">\r\n                        <a routerLink=\"/product-list\">Manage Product</a>\r\n                    </li> -->\r\n                </ul>\r\n            </li>\r\n            <li>\r\n                <a routerLink=\"/auctions\" ><i class=\"fa fa-fw fa-arrows-v\"></i> Auctions </a>\r\n                <!-- <ul id=\"demo3\" class=\"collapse\">\r\n                    <li>\r\n                        <a routerLink=\"/running-auction\">Running Auction</a>\r\n                    </li>\r\n                    <li>\r\n                        <a routerLink=\"/upcoming-auction\"> Upcoming Auction</a>\r\n                    </li>\r\n                    <li>\r\n                        <a routerLink=\"/closed-auction\">closed Product</a>\r\n                    </li>\r\n                </ul> -->\r\n            </li>\r\n        </ul>\r\n    </div>\r\n    <!-- /.navbar-collapse -->\r\n</nav>\r\n"
+module.exports = "\r\n\r\n<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\r\n    <!-- Brand and toggle get grouped for better mobile display -->\r\n    \r\n    <top-bar></top-bar>\r\n    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\r\n        <ul class=\"nav navbar-nav side-nav\">\r\n            <li>\r\n                <a routerLink=\"/dashboard\"><i class=\"fa fa-fw fa-dashboard\"></i> Dashboard</a>\r\n            </li>\r\n           \r\n            <li>\r\n                    <a routerLink=\"/users-sub\"><i class=\"fa fa-users\"></i> Users</a>\r\n               \r\n            </li>\r\n            <li>\r\n                <a  routerLink=\"/product-list\" ><i class=\"fa fa-product-hunt\"></i> Manage Product</a> \r\n                \r\n            </li>\r\n            <li>\r\n                <a routerLink=\"/auctions\" ><i class=\"fa fa-fw fa-arrows-v\"></i> Auctions </a>\r\n               \r\n            </li>\r\n        </ul>\r\n    </div>\r\n    <!-- /.navbar-collapse -->\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -5330,7 +5354,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"container\">\r\n\r\n    \r\n      <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n            <div class=\"col-md-9 col-xs-9 brdr\">\r\n                    <div class=\"row\">\r\n                            <div class=\"col-md-6 col-xs-6\">\r\n                                <div class=\"row\">\r\n                                    <div class=\"col-md-4 col-xs-4\">\r\n                                        <label>Start Date</label>\r\n                                      </div>\r\n                                        <div class=\"col-md-8 col-xs-8\">\r\n\r\n                                        <!-- <input type=\"text\" class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"options\" (selected)=\"selectedStartDate($event, daterange)\" /> -->\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"col-md-6 col-xs-6\">\r\n                                    <div class=\"row\">\r\n                                            <div class=\"col-md-4 col-xs-4\">\r\n                                                <label>End Date</label>\r\n                                              </div>\r\n                                              <div class=\"col-md-8 col-xs-8\">\r\n                                                <!-- <input type=\"text\"  class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"optionsEnd\" (selected)=\"selectedEndDate($event, daterange)\" /> -->\r\n                                            </div>\r\n                                        </div>\r\n                                \r\n                            </div>\r\n                            \r\n                    </div>   \r\n                </div>\r\n                <br>\r\n                <br>\r\n                <br>\r\n                <div class=\"clearfix\"></div> \r\n\r\n          <div  *ngFor=\"let product of (products | dateSearch:startFrom:startUpto:endFrom:endUpto);let i = index;\" class=\"item  col-xs-4 col-lg-4\">\r\n              <div class=\"thumbnail\">\r\n                  \r\n                  <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                  <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n             \r\n                  <div class=\"caption\">\r\n                      <h4 class=\"group inner list-group-item-heading text-center\">\r\n                          {{product.name}}</h4>\r\n                          <hr>\r\n                          <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                          <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                        </p>\r\n                      <hr>\r\n            \r\n                      <div class=\"row text-center\">\r\n                          <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                              Bid Start On<br>\r\n                              <b>\r\n                                {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                                <br>\r\n                                {{product.start_date | date : 'mediumTime'}}\r\n                              </b>\r\n                          </div>\r\n                           <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                              Bid End On<br>\r\n                              <b>\r\n                                  {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                  <br>\r\n                                  {{product.end_date | date : 'mediumTime'}}\r\n                              </b>\r\n                          </div>\r\n                      </div>\r\n                      <hr>\r\n                      <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-12\">\r\n                              Starts In\r\n                                <p class=\"lead\">\r\n                                  <app-count-down-timer (onTimeOver)=\"timeOver()\" [inputDate]=\"product.start_date\"></app-count-down-timer>\r\n                                </p>\r\n                            </div>\r\n                        </div>\r\n                      <hr>\r\n                      <div class=\"row \">\r\n                          \r\n                          <div class=\"col-xs-12 col-md-12\">\r\n                              <div  class=\"alert alert-success text-center \">\r\n                                <div >\r\n                                <strong>Bid Start Price - {{product.bid_amount | number:'1.2-2'}}</strong>\r\n                                </div>\r\n                            </div>\r\n                      </div>\r\n                  </div>\r\n              </div>\r\n          </div>\r\n    \r\n      </div>\r\n    </div>\r\n      <div *ngIf=\"products?.length == 0\" id=\"products\" class=\"row list-group\">\r\n       <h3 class=\"text-center\"> No Product Found</h3>\r\n      </div>\r\n      </div>\r\n\r\n  \r\n          \r\n         "
+module.exports = "\r\n<div class=\"container\">\r\n\r\n    \r\n      <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n            <div class=\"col-md-9 col-xs-9 brdr\">\r\n                    <div class=\"row\">\r\n                            <div class=\"col-md-6 col-xs-6\">\r\n                                <div class=\"row\">\r\n                                    <div class=\"col-md-4 col-xs-4\">\r\n                                        <label>Start Date</label>\r\n                                      </div>\r\n                                        <div class=\"col-md-8 col-xs-8\">\r\n\r\n                                        <input type=\"text\" class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"options\" (selected)=\"selectedStartDate($event, daterange)\" />\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"col-md-6 col-xs-6\">\r\n                                    <div class=\"row\">\r\n                                            <div class=\"col-md-4 col-xs-4\">\r\n                                                <label>End Date</label>\r\n                                              </div>\r\n                                              <div class=\"col-md-8 col-xs-8\">\r\n                                                <input type=\"text\"  class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"optionsEnd\" (selected)=\"selectedEndDate($event, daterange)\" />\r\n                                            </div>\r\n                                        </div>\r\n                                \r\n                            </div>\r\n                            \r\n                    </div>   \r\n                </div>\r\n                <br>\r\n                <br>\r\n                <br>\r\n                <div class=\"clearfix\"></div> \r\n\r\n          <div  *ngFor=\"let product of (products | dateSearch:startFrom:startUpto:endFrom:endUpto);let i = index;\" class=\"item  col-xs-4 col-lg-4\">\r\n              <div class=\"thumbnail\">\r\n                  \r\n                  <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                  <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n             \r\n                  <div class=\"caption\">\r\n                      <h4 class=\"group inner list-group-item-heading text-center\">\r\n                          {{product.name}}</h4>\r\n                          <hr>\r\n                          <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                          <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                        </p>\r\n                      <hr>\r\n            \r\n                      <div class=\"row text-center\">\r\n                          <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                              Bid Start On<br>\r\n                              <b>\r\n                                {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                                <br>\r\n                                {{product.start_date | date : 'mediumTime'}}\r\n                              </b>\r\n                          </div>\r\n                           <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                              Bid End On<br>\r\n                              <b>\r\n                                  {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                  <br>\r\n                                  {{product.end_date | date : 'mediumTime'}}\r\n                              </b>\r\n                          </div>\r\n                      </div>\r\n                      <hr>\r\n                      <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-12\">\r\n                              Starts In\r\n                                <p class=\"lead\">\r\n                                  <app-count-down-timer (onTimeOver)=\"timeOver()\" [inputDate]=\"product.start_date\"></app-count-down-timer>\r\n                                </p>\r\n                            </div>\r\n                        </div>\r\n                      <hr>\r\n                      <div class=\"row \">\r\n                          \r\n                          <div class=\"col-xs-12 col-md-12\">\r\n                              <div  class=\"alert alert-success text-center \">\r\n                                <div >\r\n                                <strong>Bid Start Price - {{product.bid_amount | number:'1.2-2'}}</strong>\r\n                                </div>\r\n                            </div>\r\n                      </div>\r\n                  </div>\r\n              </div>\r\n          </div>\r\n    \r\n      </div>\r\n    </div>\r\n      <div *ngIf=\"products?.length == 0\" id=\"products\" class=\"row list-group\">\r\n       <h3 class=\"text-center\"> No Product Found</h3>\r\n      </div>\r\n      </div>\r\n\r\n  \r\n          \r\n         "
 
 /***/ }),
 
@@ -5654,6 +5678,7 @@ var UsersSubComponent = (function () {
     function UsersSubComponent() {
     }
     UsersSubComponent.prototype.ngOnInit = function () {
+        console.log("hhh");
         this.viewComp = 'All';
         this.title = 'Allusers List';
     };
