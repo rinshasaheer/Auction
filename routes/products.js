@@ -101,30 +101,48 @@ router.post('/addnew',function(req,res){
     newPro.start_date = req.body.start_date;
     newPro.end_date = req.body.end_date;
     newPro.image = fileName;
+
     // newPoll.answers = req.body.answers;
     newPro.save(function(err,insertedPro){
         if(err){
             console.log("Error " + err);
         }else{
-         
-
+                if(newPro.start_date > new Date()){
+                    console.log("startbid");
+                            io.sockets.emit("startbid", {
+                            prod_id : insertedPro._id
+                            });
+                }else   {
+                    console.log("upcomingbid");
+                            io.sockets.emit("upcomingnewbid", {
+                            prod_id : insertedPro._id
+                            });
+                        }
             res.json(insertedPro);
         }
     })
 
 });
-//PRODUCT INFO CLOSE
+//notification info 3001 updateapp
+router.get('/inform-notifi-user/:id',(req,res,next)=>{
+    // console.log('yes');
+   console.log("noti"+req.params.id);
+    io.sockets.emit("notification", {
+        user_id : req.params.id
+    });
+});
+//PRODUCT INFO CLOSE BID info 3001  updateapp
 router.get('/inform-closedproduct/:id',(req,res,next)=>{
     // console.log('yes');
-    // console.log(req.params.id);
+   console.log("clo"+req.params.id);
     io.sockets.emit("closebid", {
         prod_id : req.params.id
     });
 });
-//PRODUCT INFO START
+//PRODUCT INFO START BID info 3001  updateapp
 router.get('/inform-startproduct/:id',(req,res,next)=>{
     // console.log('no');
-    // console.log(req.params.id);
+     console.log(req.params.id);
     io.sockets.emit("startbid", {
         prod_id : req.params.id
     });

@@ -65,6 +65,11 @@ module.exports.getDisabledUsers = function(callback){
     User.find({role:'user',block_status:'true',delete_status:'false'},callback);
    
 }
+//all active users
+module.exports.getActiveUsers = function(callback){
+    User.find({role:'user',block_status:'false',delete_status:'false'},callback);
+   
+}
 //all deleted users
 module.exports.getDeletedUsers = function(callback){
     User.find({role:'user',delete_status:'true'},callback);

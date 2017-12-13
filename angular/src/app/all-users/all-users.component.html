@@ -1,75 +1,92 @@
-<body>
+<div class="example-header">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div>
   
-      <div id="wrapper">
+  <div class="example-container mat-elevation-z8">
   
-          <!-- Navigation -->
-<side-bar></side-bar>
+    <mat-table [dataSource]="dataSource" matSort>
   
-          <div id="page-wrapper">
   
-              <div class="container-fluid">
   
-                  <!-- Page Heading -->
-                  <header-title [title]="'Users'"></header-title>
-                 
-                  <!-- /.row -->
+   
   
-              </div>
-              
-              <!-- /.container-fluid -->
-              
-<table class="table table-striped table-hover table-bordered">
-    <thead class="thead-dark">
-      <tr>
-        <th>Slno</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Status</th>
-        <!--<th>Action</th>-->
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody *ngIf="users">
-      <tr  *ngFor="let user1 of users;let i = index;">
-        <td>{{i+1}}</td>
-        <td>{{user1.name}}</td>
-         <td>{{user1.email}}</td>
-         <td>{{user1.phone}}</td>
-        <td *ngIf="user1.delete_status=='true'">deleted user</td>
-        <td *ngIf="user1.delete_status=='false' && user1.block_status=='false'">active user</td>
-        <td *ngIf="user1.block_status=='true' && user1.delete_status=='false'">blocked user</td>
-        <!--<td><a (click)="deleteUser(user1._id)" class="btn btn-danger">Delete</a>
-          <a (click)="deletedisUser(user1._id)" class="btn btn-danger">Disable</a></td>-->
-          <td>
-            <div class="btn-group">
-             
-              <button type="button" class="test" data-toggle="dropdown">
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+      </ng-container>
+  
+   <!-- Name Column -->
+   <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
+  </ng-container>
+    <!-- Progress Column -->
+    <ng-container matColumnDef="phone">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Phone </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.phone}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <div *ngIf="row.block_status=='false' && row.delete_status=='false'"> Active User</div>
+          <div *ngIf="row.block_status=='true' && row.delete_status=='false'"> Block User</div>
+          <div *ngIf="row.block_status=='true' && row.delete_status=='true'"> Delete User</div>
+          <div *ngIf="row.delete_status=='true'  && !row.block_status=='true' "> Delete User</div>
+          
+        </mat-cell>
+      </ng-container>
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>
+      <mat-cell *matCellDef="let row">
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button *ngIf="row.delete_status=='false'" mat-menu-item >
                
-                <span class="sr-only">Toggle Dropdown</span>
+                <span><a  (click)="deleteUser(row.action)">Delete</a></span>
               </button>
-              <ul class="dropdown-menu" role="menu">
-  
-                <li *ngIf="user1.delete_status=='false'"><a href="#"  (click)="deleteUser(user1._id)">Delete</a></li>
-                <li *ngIf="user1.delete_status=='true'"><a >Deleted</a></li>
-                <li *ngIf="user1.block_status=='false' && user1.delete_status=='false'"><a  (click)="blockUser(user1._id)">Block</a></li>
-                <li *ngIf="user1.block_status=='true' && user1.delete_status=='false'"><a  (click)="unblockUser(user1._id)">Unblock</a></li>
+              <button *ngIf="row.delete_status=='true'" mat-menu-item disabled>
+                  
+                  <span>deleted</span>
+                </button>
+              <button *ngIf="row.block_status=='false' && row.delete_status=='false'" mat-menu-item>
                 
-              </ul>
-            </div>
-          </td>
-      </tr>
-    </tbody>
-  <tbody *ngIf="users?.length == 0">
-      <tr >
-          <td colspan="4">No User Found</td>
-        </tr>
-     </tbody>
-  </table>  
-          </div>
-          <!-- /#page-wrapper -->
+                <span><a  (click)="blockUser(row._id)">Block</a></span>
+              </button>
+              <button  *ngIf="row.block_status=='true' && row.delete_status=='false'" mat-menu-item>
+                
+                <span><a  (click)="unblockUser(row._id)">Unblock</a></span>
+              </button>
+            </mat-menu>
+         <!-- <div class="btn-group">
+            
+             <button type="button" class="test" data-toggle="dropdown">
+              
+               <span class="sr-only">Toggle Dropdown</span>
+             </button>
+             <ul class="dropdown-menu" role="menu">
   
-      </div>
-
-      <footer></footer> 
-  </body>
+               <li *ngIf="row.delete_status=='false'"><a  (click)="deleteUser(row.action)">Delete</a></li>
+               <li *ngIf="row.delete_status=='true'"><a >Deleted</a></li>
+               <li *ngIf="row.block_status=='false' && row.delete_status=='false'"><a  (click)="blockUser(row._id)">Block</a></li>
+               <li *ngIf="row.block_status=='true' && row.delete_status=='false'"><a  (click)="unblockUser(row._id)">Unblock</a></li>
+               
+             </ul>
+           </div> -->
+        </mat-cell>
+    </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </div>
+  
+  
+  

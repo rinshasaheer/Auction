@@ -2,6 +2,8 @@ import 'core-js/es7/reflect';
 import 'zone.js';
 import 'reflect-metadata';
 import { BrowserModule } from '@angular/platform-browser';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {UserService} from './services/user.service';
@@ -72,12 +74,47 @@ import { ManageProductComponent } from './manage-product/manage-product.componen
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductPipe } from './product.pipe';
 import { AdminviewedComponent } from './adminviewed/adminviewed.component';
-import { NgDatepickerModule } from 'ng2-datepicker';
+//import { NgDatepickerModule } from 'ng2-datepicker';
 import { UploadComponent } from './upload/upload.component';
 // import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 
 import { ImageUploadModule } from "angular2-image-upload";//file upload
 import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
+import { UsersSubComponent } from './users-sub/users-sub.component';
+import { ActiveUsersComponent } from './active-users/active-users.component';
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatStepperModule,
+} from '@angular/material';
 
 const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
@@ -111,11 +148,51 @@ const appRoutes: Routes = [
   {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
   {path:'running-auction', component:RunningAuctionBackComponent},
   {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
+  {path:'users-sub', component:UsersSubComponent},
+  {path:'active-users', component:ActiveUsersComponent},
 
   {path:'upload', component:UploadComponent}//file upload
 
 ]
+import {CdkTableModule} from '@angular/cdk/table';
 
+@NgModule({
+  exports: [
+    CdkTableModule,
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+  ]
+})
+export class DemoMaterialModule {}
 @NgModule({
   declarations: [
     AppComponent,
@@ -156,7 +233,9 @@ const appRoutes: Routes = [
     ProductPipe,
     AdminviewedComponent,
     UploadComponent,
-    FileSelectDirective
+    FileSelectDirective,
+    UsersSubComponent,
+    ActiveUsersComponent
   ],
   imports: [
     BrowserModule,
@@ -178,7 +257,10 @@ const appRoutes: Routes = [
     Ng2PageScrollModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    NgDatepickerModule
+    BrowserAnimationsModule,
+    DemoMaterialModule
+    
+   // NgDatepickerModule
     // DataTablesModule,
     // ImageUploadModule,
     // NKDatetimeModule,
@@ -197,3 +279,4 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+platformBrowserDynamic().bootstrapModule(AppModule);

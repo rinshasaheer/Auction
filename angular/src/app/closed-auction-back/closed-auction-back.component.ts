@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { Router} from '@angular/router';
 import { UserService} from '../services/user.service';
-import { DatepickerOptions } from 'ng2-datepicker';
-import * as frLocale from 'date-fns/locale/fr';
+
 
 // options: DatepickerOptions = {
 //   minYear: 1970,
