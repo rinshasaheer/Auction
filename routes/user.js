@@ -35,7 +35,7 @@ router.post('/register',(req,res)=>{
             res.json({success: false, msg : "Failed"});
         }
         else{
-            User.find( { $and: [ { email: req.body.email}, {google: {$exists: false }}, {facebook : {$exists: false }} ] } , function (err, doc){
+            User.find( { $and: [ { email: req.body.email} ] } , function (err, doc){
                 if(doc.length!=0){
                     res.json({success: false, msg : "Failed"});
                 }
