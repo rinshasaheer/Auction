@@ -3,15 +3,15 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {UserService} from '../services/user.service';
 import {Router} from '@angular/router';
 
+
 @Component({
-  selector: 'all-users',
-  templateUrl: './all-users.component.html',
-  styleUrls: ['./all-users.component.css'],
- 
+  selector: 'active-users',
+  templateUrl: './active-users.component.html',
+  styleUrls: ['./active-users.component.css']
 })
-export class AllUsersComponent implements OnInit {
+export class ActiveUsersComponent implements OnInit{
  
-  displayedColumns = [ 'name', 'phone','email','status','action'];
+   displayedColumns = [ 'name', 'phone','email','action'];
   dataSource: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -25,7 +25,7 @@ export class AllUsersComponent implements OnInit {
   }
   refresh(){
     const users = [];
-    this.userService.getAllUser().subscribe(data=>{
+    this.userService.getActiveUsers().subscribe(data=>{
         // data.forEach((item, index) => {
         //   users.push({
         //   //slno:index+1,
@@ -40,12 +40,11 @@ export class AllUsersComponent implements OnInit {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
   });
+
   }
 ngOnInit() {
-  this.refresh();
 
-    
-
+    this.refresh();
 }
 
 
@@ -57,7 +56,7 @@ ngOnInit() {
 
   deleteUser(id){  
     this.userService.deleteUser(id).subscribe(data=>{
-      // console.log(data);
+      console.log(data);
       if(data.success){
         this.refresh();
        // this.refresh();
@@ -72,7 +71,7 @@ ngOnInit() {
 
   blockUser(id){  
     this.userService.blockUser(id).subscribe(data=>{
-      // console.log(data);
+      console.log(data);
       if(data.success){
         this.refresh();
        // this.refresh();
@@ -86,7 +85,7 @@ ngOnInit() {
   }
   unblockUser(id){
     this.userService.unblockUser(id).subscribe(data=>{
-      // console.log(data);
+      console.log(data);
       if(data.success){
         this.refresh();
        // this.refresh();
@@ -110,3 +109,5 @@ ngOnInit() {
 //   action:number;
  
 // }
+
+

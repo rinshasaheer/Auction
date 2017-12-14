@@ -12,7 +12,8 @@
             </li>
            
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
+                    <a routerLink="/users-sub"><i class="fa fa-users"></i> Users</a>
+                <!-- <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo" class="collapse">
                     <li>
                         <a routerLink="/all-users">All Users</a>
@@ -23,17 +24,17 @@
                     <li>
                         <a routerLink="/deleted-users">Deleted Users</a>
                     </li>
-                </ul>
+                </ul> -->
             </li>
-            <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-arrows-v"></i> Product <i class="fa fa-fw fa-caret-down"></i></a>
+            <li *ngIf="userService.loggedIn()">
+                <a  routerLink="/product-list" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-arrows-v"></i> Manage Product</a> 
                 <ul id="demo1" class="collapse">
-                    <li>
-                        <a routerLink="/product">Add Product</a>
-                    </li>
-                    <li>
+                    <!-- <li *ngIf="userService.loggedIn()">
+                        <a href="/product">Add Product</a>
+                    </li> -->
+                    <!-- <li *ngIf="userService.loggedIn()">
                         <a routerLink="/product-list">Manage Product</a>
-                    </li>
+                    </li> -->
                 </ul>
             </li>
             <li>

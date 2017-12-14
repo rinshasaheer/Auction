@@ -73,7 +73,7 @@ export class ProductService {
   deleteProduct(pid){
     let headers = new Headers({'Content-Type' : 'application/json'});
     let Options = new RequestOptions({headers : headers});
-    return this.http.put(this._deleteUrl + pid,Options)
+    return this.http.put(this._deleteUrl + pid,{},Options)
     .map(res =>res.json());
   }
  

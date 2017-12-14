@@ -38,6 +38,8 @@ export class ProductDetailComponent implements OnInit {
   end_date: Date;
   start  : Boolean = false;
   end  : Boolean = false;
+  imageSelected : Boolean = false;
+  greater :Boolean =false;
 
   // tableview: boolean = false;
   private updateProEvent = new EventEmitter();
@@ -75,8 +77,48 @@ export class ProductDetailComponent implements OnInit {
 
 
   }
-
+  imageOr(){
+    this.imageSelected = true;
+  }
   updateProduct(arr1){
+    if(this.imageSelected == true){
+      this.uploader.uploadAll();
+      this.uploader.onCompleteItem = (item:any, response:any, status:any, headers:any) => {
+        // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
+        response = JSON.parse(response);
+        this.arr1.image = response.filename;
+        console.log(this.arr1.image);
+
+        this._prductService.updateProduct(arr1).subscribe(data1 => {
+          
+         if(arr1.start_date == undefined){
+            this.start = true;
+          //  alert("Bid Start time is required");
+      
+         }
+        if(arr1.end_date == undefined){
+           this.end = true;
+          // alert("Bid End time is required");
+      
+        }
+
+        if(data1.start_date > data1.end_date){
+          this.greater =true;
+        }
+            else if(data1.start_date <= data1.end_date)
+            {
+              alert("Update Product Successfully");
+              this.router.navigate(['/product-list']);
+            }
+          
+          });
+
+
+
+
+    };
+    }
+    else if(this.imageSelected == false){
     this.uploader.uploadAll();
     this.uploader.onCompleteItem = (item:any, response:any, status:any, headers:any) => {
       // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
@@ -97,7 +139,10 @@ export class ProductDetailComponent implements OnInit {
     // alert("Bid End time is required");
 
   }
-      else if(arr1.start_date != undefined)
+  if(data1.start_date > data1.end_date){
+    this.greater =true;
+  }
+      else if(data1.start_date <= data1.end_date)
       {
         alert("Update Product Successfully");
         this.router.navigate(['/product-list']);
@@ -105,6 +150,7 @@ export class ProductDetailComponent implements OnInit {
     
     });
    }
+  }
   //  deleteProduct(arr1){
   
   //  }
@@ -153,8 +199,16 @@ datepickerOpts = {
   format: 'd MM yyyy',
   
 }
-
-
+datepickerOpts1 = {
+  startDate: new Date(Date.now()),
+ 
+  autoclose: true,
+  todayBtn: 'linked',
+  todayHighlight: true,
+  assumeNearbyYear: true,
+  format: 'd MM yyyy',
+  
+}
 
 
 

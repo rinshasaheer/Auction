@@ -1,103 +1,84 @@
-<br>
-<div id="wrapper">
-    
-            <!-- Navigation -->
-<side-bar></side-bar>
-    
-            <div id="page-wrapper">
-    
-                <div class="container-fluid">
-    
-                    <!-- Page Heading -->
-                   <header-title [title]="'Add Product'"></header-title>
-                    <!-- /.row -->
-    
-                </div>
-
-<div class="wrapper">
-        <div class="col-md-9 addpro">
-                <!--<h3 class="headng" >Add a Product</h3>-->
-               
-  <!-- <form class="well" role="form"   #f="ngForm" (ngSubmit)="f.form.valid && addProduct()" novalidate> -->
-        <form class="well" role="form"  #f="ngForm" (ngSubmit)="f.form.valid && addProduct();" novalidate>
-      <!-- <form #form='ngForm' (ngSubmit)="addProduct()" class="well" > -->
-            <div class="form-group" >
-                <label > Name *</label>
-                <input id="name" name="name" class="form-control"
-                required  autofocus
-                [(ngModel)]="newproduct.name" #name="ngModel" >
-                <div *ngIf="f.submitted && !name.valid "  class="alert alert-danger"> ! Name is required</div>
-             
-            </div>
-            <div class="form-group">
-                <label for="single">Select Image</label>
-                <input type="file" class="" name="single" ng2FileSelect [uploader]="uploader" (change)="imageOr();"/>                                  
-             </div>
-              
-
-            <div class="form-group" >
-                    <label >  Bid Amount *</label>
-                    <input id="bid_amount" name="bid_amount" class="form-control"
-                    required  
-                    [(ngModel)]="newproduct.bid_amount" #bid_amount="ngModel" (keypress)="_keyPress($event)">
-                    <div *ngIf="f.submitted && !bid_amount.valid"  class="alert alert-danger"> ! Amount is required</div>
-           
-                </div>
-
-                <div class="form-group" >
-                        <label >  Minimum Bid Rate *</label>
-                        <input id="min_bid_rate" name="min_bid_rate" class="form-control"
-                        required  
-                        [(ngModel)]="newproduct.min_bid_rate" #min_bid_rate="ngModel" (keypress)="_keyPress($event)">
-                        <div *ngIf="f.submitted && !min_bid_rate.valid"  class="alert alert-danger"> ! Minimum Bid rate is required</div>
-               
-                    </div>
-        
-             <div class="form-group" >
-                    <label > Bid Start time *</label>
-                    <datetime name="start_date" required  [(ngModel)]="newproduct.start_date"  [datepicker]= "datepickerOpts" [hasClearButton]="true" ></datetime>
-                    <div *ngIf="f.submitted && !newproduct.start_date"  class="alert alert-danger"> !Start time is required</div>
-                </div>
-                <div class="form-group" >
-                        <label > Bid End time *</label>
-                        <datetime name = "end_date"  required [(ngModel)]="newproduct.end_date" [datepicker]= "datepickerOpts" [hasClearButton]="true"></datetime>
-                        <div *ngIf="f.submitted && !newproduct.end_date"  class="alert alert-danger"> !End time is required</div>
-                    </div>
-
-            
-                    <!-- <image-upload></image-upload> -->
-            <!-- <div>
-                <label > Image</label>
-                <input type="file"  name="pollqtn"   required />
-            </div> -->
-           
-           
-            <!-- <img class="mythumbnail" ng-src="{{ thumbnail.dataUrl || default }}"> -->
-            <!-- <img ng-src= "{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}"> -->
-            
-            <!-- <label class="btn btn-success colorbtn"> Browse</label> -->
-            
-            <!-- <input type="file" name ="myfile" ng-disabled="uploading" style="display: none"> -->
-
-            <div class="form-group" >
-                <label > Description</label>
-                <br>
-                <textarea rows="4" cols="70" name="desc" [(ngModel)]="newproduct.desc" ></textarea>
-            </div>
-           
-                
-            <!-- <input type="submit" class="btn btn-info blakbtn" value="Submit"  > -->
-            <button type= "submit" class="btn btn-primary">Submit</button>
-           
-        </form>
+<div class="example-header">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div>
   
+  <div class="example-container mat-elevation-z8">
+  
+    <mat-table [dataSource]="dataSource" matSort>
+  
+  
+  
+      <!-- Progress Column -->
+      <ng-container matColumnDef="action">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>
+        <mat-cell *matCellDef="let row"> 
+          <a href ="/product-detail/{{row.id}}" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="auto" title="Edit"><i class="fa fa-pencil"></i></a>
+          <a href="#" class="btn btn-primary btn-xs" data-target="#myModal" data-toggle="modal" ><i class="fa fa-trash-o"></i></a>
+          <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+          
+              <!-- Modal content-->
+              <div class="modal-content">
+                <!-- <div class="modal-header"> -->
+                  <!-- <h4 class="modal-title">Are you sure to delete?</h4> -->
+                <!-- </div> -->
+                <div class="modal-body">
+                    <h4 class="modal-title">Are you sure to delete?</h4>
+                
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" (click)="deleteProduct(row.id)" class="btn btn-default" data-dismiss="modal">Delete</button>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+          
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.desc}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="enddate">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> End Date </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.end_date}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="startdate">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Start Date </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.start_date}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="rate">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Minimum Bid rate </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.min_bid_rate}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="amount">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Bid Amount </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.bid_amount}}</mat-cell>
+      </ng-container>
       
-   
-    </div>
-    <!-- /#page-wrapper -->
-   
-               
-</div>
-
-<footer></footer> 
-      
+      <ng-container matColumnDef="image">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Image </mat-header-cell>
+        <mat-cell *matCellDef="let row"><img class="proimg" src="assets/uploads/{{row.image}}" alt="" ></mat-cell>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+      </ng-container>
+  
+  
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </div>
+  
+  

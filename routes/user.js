@@ -97,6 +97,15 @@ router.get('/disabledusers',(req,res,next)=>{
        
     })    
 });
+//all active users
+router.get('/activeusers',(req,res,next)=>{
+    User.getActiveUsers((err,user)=>{
+        if(err) throw err;
+        return res.json(user);
+       
+    })    
+});
+
 
 //all deleted users
 router.get('/deletedusers',(req,res,next)=>{

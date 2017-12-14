@@ -16,65 +16,104 @@
 <div class="col-md-9 tab" >
 <br>
 
-  <label class="search" >Search Product: </label>
-  <input type="text" [(ngModel)]="term" />
+<button type="button" class="btn btn-primary addnew" data-toggle="modal" data-target="#myModal">+Add New</button>
 
-<br>
-<br>
-
-<table class="table table-striped">
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Bid Amount</th>
-      <th>Minimum Bid Rate</th>
-      <th>Start date</th>
-      <th>End Date</th>
-      <th>Description</th>
-  
-      <th>Action</th>
-    </tr>
+<div id="myModal"  class="modal fade">
+    <div class="modal-dialog">
     
-    <tr  *ngFor="let pro of arr1 | filter:term ">
-  
-    <td>{{pro.name}}</td>
-    <!-- <td><img src="assets/uploads/{{product.image||'default.png'}}" alt="" class="image"></td> -->
-    <td><img src="assets/uploads/{{pro.image || 'defualt1.jpg'}}" alt="" class="image"></td>
-    <td>{{pro.bid_amount}}</td>
-    <td>{{pro.min_bid_rate}}</td>
-    <td>{{pro.start_date}}</td>
-    <td>{{pro.end_date}}</td>
-    <td>{{pro.desc}}</td>
-  
-  
-    <td> 
-      <a [routerLink]="['/product-detail/'+pro._id]" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="auto" title="Edit"><i class="fa fa-pencil"></i></a>
-      <!-- <a (click)="deleteProduct(pro._id)" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="auto" title="Delete"><i class="fa fa-trash-o"></i></a> -->
-      <a href="#" class="btn btn-primary btn-xs" data-target="#myModal" data-toggle="modal" ><i class="fa fa-trash-o"></i></a>
-    </td>
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-      
-          <!-- Modal content-->
-          <div class="modal-content">
-            <!-- <div class="modal-header"> -->
-              <!-- <h4 class="modal-title">Are you sure to delete?</h4> -->
-            <!-- </div> -->
-            <div class="modal-body">
-                <h4 class="modal-title">Are you sure to delete?</h4>
-            
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" (click)="deleteProduct(pro._id)" class="btn btn-default" data-dismiss="modal">Save</button>
-            </div>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add New Product</h4>
+        </div>
+        <div class="modal-body">
+          
+      <form class="well" role="form"  #f="ngForm" (ngSubmit)="f.form.valid && addProduct();" novalidate>
+              <!-- <flash-messages></flash-messages> -->
+              <div *ngIf="showSuccess" class="alert alert-success">
+                  <strong>Product Add Successfully</strong>
+                </div>
+          <div class="form-group" >
+              <label > Name *</label>
+              <input id="name" name="name" class="form-control"
+              required  autofocus
+              [(ngModel)]="newproduct.name" #name="ngModel" >
+              <div *ngIf="f.submitted && !name.valid "  class="alert alert-danger"> ! Name is required</div>
+           
           </div>
+          <div class="form-group">
+              <label for="single">Select Image</label>
+              <input type="file" class="" name="single" ng2FileSelect [uploader]="uploader" (change)="imageOr();"/>                                  
+           </div>
+            
+
+          <div class="form-group" >
+                  <label >  Bid Amount *</label>
+                  <input id="bid_amount" name="bid_amount" class="form-control"
+                  required  
+                  [(ngModel)]="newproduct.bid_amount" #bid_amount="ngModel" (keypress)="_keyPress($event)">
+                  <div *ngIf="f.submitted && !bid_amount.valid"  class="alert alert-danger"> ! Amount is required</div>
+         
+              </div>
+
+              <div class="form-group" >
+                      <label >  Minimum Bid Rate *</label>
+                      <input id="min_bid_rate" name="min_bid_rate" class="form-control"
+                      required  
+                      [(ngModel)]="newproduct.min_bid_rate" #min_bid_rate="ngModel" (keypress)="_keyPress($event)">
+                      <div *ngIf="f.submitted && !min_bid_rate.valid"  class="alert alert-danger"> ! Minimum Bid rate is required</div>
+             
+                  </div>
       
+           <div class="form-group" >
+                  <label > Bid Start time *</label>
+                  <datetime name="start_date" required  [(ngModel)]="newproduct.start_date"  [datepicker]= "datepickerOpts" [hasClearButton]="true" ></datetime>
+                  <div *ngIf="f.submitted && !newproduct.start_date"  class="alert alert-danger"> !Start time is required</div>
+              
+              </div>
+              <div class="form-group" >
+                      <label > Bid End time *</label>
+                      <datetime name = "end_date"  required [(ngModel)]="newproduct.end_date" [hasClearButton]="true"  [datepicker]= "datepickerOpts" ></datetime>
+                      <div *ngIf="f.submitted && !newproduct.end_date"  class="alert alert-danger"> !End time is required</div>
+                      <div *ngIf="greater">
+                          <div class="alert alert-danger"> !End time must be after the Start time</div>
+                      </div>
+                  </div>
+
+          <div class="form-group" >
+              <label > Description</label>
+              <br>
+              <textarea rows="4" cols="70" name="desc" [(ngModel)]="newproduct.desc" ></textarea>
+          </div>
+
+          <button type= "submit" class="btn btn-primary" >Submit</button>
+         
+      </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
+      
+    </div>
+  </div>
 
-    </tr>
-  </table>
+
+    <!-- Trigger the modal with a button -->
+ 
+  
+    <!-- Modal -->
+   
+ 
+
+<br>
+<br>
+
+<app-product></app-product>
+  
+ 
+    
 </div>
    
 </div>
