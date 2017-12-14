@@ -4121,9 +4121,11 @@ var ProductComponent = (function () {
         this.productservice.deleteProduct(pid).subscribe(function (data1) {
             if (data1) {
                 // console.log(data1);
+                _this.DeleteSuccess = true;
                 setTimeout(function () {
-                    _this.DeleteSuccess = true;
-                    window.location.reload();
+                    _this.DeleteSuccess = false;
+                    _this.loadData();
+                    // window.location.reload();
                     // console.log("Error created user");
                 }, 1000);
                 //  alert("Delete Product Successfully");

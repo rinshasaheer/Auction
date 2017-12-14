@@ -93,10 +93,11 @@ loadData(){
       this.productservice.deleteProduct(pid).subscribe(data1 => {
               if(data1){
                 // console.log(data1);
-                
+                this.DeleteSuccess = true;
                 setTimeout(() => {  
-                  this.DeleteSuccess = true;
-                  window.location.reload();
+                  this.DeleteSuccess = false;
+                  this.loadData();
+                 // window.location.reload();
                   // console.log("Error created user");
                 }, 1000);
               //  alert("Delete Product Successfully");
