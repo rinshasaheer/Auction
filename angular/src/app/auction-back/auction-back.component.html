@@ -19,9 +19,9 @@
                       <div class="col-md-2">
                             <nav class="nav-sidebar">
                                 <ul class="nav tabs">
-                                      <li [ngClass]="{'active1': viewComp == 'Running'}"><a (click)="updateView('Running')" href="#tab1" data-toggle="tab">Running Auction</a></li>
-                                      <li [ngClass]="{'active1': viewComp == 'Upcoming'}"><a (click)="updateView('Upcoming')" href="#tab2" data-toggle="tab">Upcoming auction</a></li>
-                                      <li [ngClass]="{'active1': viewComp == 'Closed'}"><a (click)="updateView('Closed')" href="#tab3" data-toggle="tab">Closed auction</a></li>                               
+                                      <li [ngClass]="{'active1': viewComp == 'Running'}"><a (click)="updateView('Running')" data-toggle="tab">Running Auction</a></li>
+                                      <li [ngClass]="{'active1': viewComp == 'Upcoming'}"><a (click)="updateView('Upcoming')" data-toggle="tab">Upcoming auction</a></li>
+                                      <li [ngClass]="{'active1': viewComp == 'Closed'}"><a (click)="updateView('Closed')" data-toggle="tab">Closed auction</a></li>                               
                                 </ul>
                               </nav>
                       </div>
