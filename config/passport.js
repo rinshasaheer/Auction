@@ -52,23 +52,34 @@ passport.deserializeUser(function(id, done) {
   },
   function(req, token, refreshToken, profile, done) {
     process.nextTick(function() {
-        if(!req.user){
-            User.findOne({ 'facebook.id' : profile.id }, function(err, user) {
+        // if(!req.user){
+            // User.findOne({ 'facebook.id' : profile.id }, function(err, user) {
+            User.findOne({ 'email' : profile.emails[0].value }, function(err, user) {
                 if (err)
                     return done(err);
                 if (user) {
-                    if (!user.facebook.token) {
-                        user.facebook.token = token;
-                        user.facebook.name  = profile.name.givenName + ' ' + profile.name.familyName;
-                        user.facebook.email = profile.emails[0].value;
+                    user.facebook.id    = profile.id;
+                    user.facebook.token = token;
+                    user.facebook.name  = profile.displayName;
+                    user.facebook.email = profile.emails[0].value;
+                    user.verified = "true";
+                    user.save(function(err) {
+                    if (err)
+                        throw err;
+                    return done(null, user);
+                    });
+                    // if (!user.facebook.token) {
+                    //     user.facebook.token = token;
+                    //     user.facebook.name  = profile.name.givenName + ' ' + profile.name.familyName;
+                    //     user.facebook.email = profile.emails[0].value;
 
-                        user.save(function(err) {
-                            if (err)
-                                throw err;
-                            return done(null, user);
-                        });
-                    }
-                    return done(null, user); 
+                    //     user.save(function(err) {
+                    //         if (err)
+                    //             throw err;
+                    //         return done(null, user);
+                    //     });
+                    // }
+                    // return done(null, user); 
                 } else {
                           
                           var newUser            = new User();
@@ -87,24 +98,24 @@ passport.deserializeUser(function(id, done) {
                       }
       
                   });
-        }else {
+        // }else {
             // user already exists and is logged in, we have to link accounts
-            var user            = req.user; // pull the user out of the session
+            // var user            = req.user; // pull the user out of the session
 
-            user.facebook.id    = profile.id;
-            user.facebook.token = token;
-            user.facebook.name  = profile.name.givenName;
-            user.facebook.email = profile.emails[0].value;
-            user.name = profile.name.givenName;
-            user.email = profile.emails[0].value;
-            user.verified = "true";
-            user.save(function(err) {
-                if (err)
-                    throw err;
-                return done(null, user);
-            });
+            // user.facebook.id    = profile.id;
+            // user.facebook.token = token;
+            // user.facebook.name  = profile.name.givenName;
+            // user.facebook.email = profile.emails[0].value;
+            // user.name = profile.name.givenName;
+            // user.email = profile.emails[0].value;
+            // user.verified = "true";
+            // user.save(function(err) {
+            //     if (err)
+            //         throw err;
+            //     return done(null, user);
+            // });
 
-        }
+        // }
     });
       
   }));

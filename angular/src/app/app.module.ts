@@ -176,7 +176,6 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatTooltipModule,
   ],
-  //declarations: [ProductDeleteComponent]
 })
 export class DemoMaterialModule {}
 
