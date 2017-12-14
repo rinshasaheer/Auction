@@ -176,14 +176,12 @@ router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),functio
         try {
             decoded = jwt.verify(authorization, config.secret);
             // console.log(decoded);
-            let lastwinner = {};
+            let lastwinner;
             Product.getProductById(req.body.pid,(err, product)=>{
                 if(product.bidders.length != 0){
                     User.getUserById(product.bidders[product.bidders.length-1].user_id,(err, user)=>{
-                        console.log(user);
                         lastwinner = user;
                     });
-                    //lastwinnerId = product.bidders[product.bidders.length-1].user_id;
                 }
             });
             Product.findOneAndUpdate(
@@ -194,7 +192,6 @@ router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),functio
                     if(err){
                         res.json({success: false, msg : "Failed, went somthing wrong "});
                     }else{
-
                         if(lastwinner){
                             nodemailer.createTestAccount((err, account) => {
                                 let mailOptions = {
@@ -213,13 +210,7 @@ router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),functio
                                 });
                             });
                         }
-                        // write code to emit socket    
-                        // io.sockets.on('connection', function (socket) {
-                        //     console.log('New User Connected');
-                        //     // socket.on('newBid', function (data) {
-                        //     //   console.log(data);
-                        //     // });
-                        // });
+                   
                         io.sockets.emit("newbid", {
                             prod_id : req.body.pid
                         });

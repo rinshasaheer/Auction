@@ -33,7 +33,7 @@
                     <div *ngIf="isError" class="text-danger text-left">
                            {{msg}}
                       </div>
-                <input [disabled]="btnDisbled" value="{{formatedAmount}}" [(ngModel)]="amount" (keyup)="validateAmount()"  class="form-control " type="text" placeholder="Minimum bid amount {{(product.lastBidprice  * 1 ) + product.min_bid_rate | number:'1.2-2'}}">
+                <input [disabled]="btnDisbled" value="{{formatedAmount}}" [(ngModel)]="amount" (keydown)=onKeydownEvent($event) (keyup)="validateAmount($event)"   class="form-control " type="text" placeholder="Minimum bid amount {{(product.lastBidprice  * 1 ) + product.min_bid_rate | number:'1.2-2'}}">
                 
             </div>
            

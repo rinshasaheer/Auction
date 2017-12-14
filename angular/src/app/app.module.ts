@@ -109,6 +109,7 @@ import { Config } from './../../config/config';
 import { MaterialComponent } from './material/material.component';
 import { MyauctiontableComponent } from './myauctiontable/myauctiontable.component';
 import { SearchPipe } from './search.pipe';
+//import { ProductDeleteComponent } from './product-delete/product-delete.component';
 // import { FlashMessagesModule } from 'angular2-flash-messages';
 
 
@@ -174,7 +175,8 @@ const appRoutes: Routes = [
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-  ]
+  ],
+  //declarations: [ProductDeleteComponent]
 })
 export class DemoMaterialModule {}
 

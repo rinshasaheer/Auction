@@ -7,10 +7,10 @@ export class DateSearchPipe implements PipeTransform {
 
   transform(value: any, startFrom?: any,startUpto?: any,endFrom?:any,endUpto?:any): any {
    // console.log(startDate);
-    console.log(startFrom);
-    console.log(startUpto);
-    console.log(endFrom);
-    console.log(endUpto);
+    // console.log(startFrom);
+    // console.log(startUpto);
+    // console.log(endFrom);
+    // console.log(endUpto);
     // console.log(new Date(startFrom));
    // return value;
     return value.filter(function (el: any) {
