@@ -125,7 +125,7 @@ var returnRouter = function(io) {
      
 
 router.post('/addnew',function(req,res){
-    console.log("Insert a Product");
+    //console.log(req.body);
     var newPro = new pro();
     newPro.name = req.body.name;
     newPro.desc = req.body.desc;
@@ -133,7 +133,7 @@ router.post('/addnew',function(req,res){
     newPro.min_bid_rate = req.body.min_bid_rate;
     newPro.start_date = req.body.start_date;
     newPro.end_date = req.body.end_date;
-    newPro.image = fileName;
+    newPro.image = req.body.image;
 
     // newPoll.answers = req.body.answers;
     newPro.save(function(err,insertedPro){

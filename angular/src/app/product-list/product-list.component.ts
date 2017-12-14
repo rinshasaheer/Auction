@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter, ElementRef,ViewChild,} from '@angular/core';
 import * as $ from 'jquery';
 // import { FlashMessagesService } from 'angular2-flash-messages';
 import { ProductService } from './../services/product.service';
@@ -6,7 +6,7 @@ import { FilterPipe } from '../filter.pipe';
 import { pro } from '../pro';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
-
+//import { ProductComponent } from './../product/product.component';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CanActivate } from '@angular/router';
 
@@ -31,6 +31,9 @@ import { FileUploader } from 'ng2-file-upload'; // File Upload
   //  pipes: [ProductPipe],
 })
 export class ProductListComponent implements OnInit {
+  @ViewChild('closeBtn') closeBtn: ElementRef;
+  @ViewChild('f') f: any;
+  @ViewChild('imgFile') imgFile: any;
   showSuccess : Boolean = false;
   pros: any;
   prodata: any;
@@ -38,8 +41,10 @@ export class ProductListComponent implements OnInit {
   arr1 : any;
   start_date :Date
   end_date : Date
+  btnDisbled:boolean = false;
   // private deleteProEvent = new EventEmitter();
   public SelectPro = new EventEmitter();
+  //  myEvent = new EventEmitter();
   form: FormGroup;
   public uploader:FileUploader = new FileUploader({url:'http://localhost:3000/products/upload'});
   imageselect : Boolean =false;
@@ -81,21 +86,7 @@ export class ProductListComponent implements OnInit {
   //  });
   // this.prodata = data1;
       });
-    this._userService.getLoggedUSerDetails().subscribe(info =>{
-      if(info.role !="admin"){
-        this.router.navigate(['/login']);
-      }
-    });
-    this._prductService.getProducts().subscribe(data1 => {
-      this.arr1 = data1;
-   
-      console.log(data1);
-    //  data1.forEach(function(item) {
-    //   this.arr1.push(item);
-    //   console.log(this.arr1);
-    //  });
-    // this.prodata = data1;
-        });
+
 
 
   }
@@ -125,9 +116,10 @@ imageOr(){
 }
 addProduct(){
   // console.log("here");
+  this.btnDisbled = true
   if(this.newproduct.start_date > this.newproduct.end_date){
     this.greater =true;
-    
+    this.btnDisbled = false
   }else{
     this.greater =false;
     if(this.imageselect ==true){
@@ -139,13 +131,30 @@ addProduct(){
         this._prductService.addProduct(this.newproduct).subscribe(data1 => {
           if(data1){
             this.showSuccess = true;
+            //this.myEvent.emit(null)
+            //app-product.loadData();
             setTimeout(() => {  
-      
+              this.closeBtn.nativeElement.click();
               this.showSuccess = false;
-             
+              this.newproduct ={
+                name : '',
+                desc : '',
+                bid_amount :'',
+                min_bid_rate :'',
+                 start_date :'',
+                 end_date :'',
+                image :''
+            
+              };
+              this.imageselect = false;
+              this.imgFile.nativeElement.value = '';
+              this.f.submitted = false;
+              this.btnDisbled = false;
+              //ProductComponent.loadData();
+             window.location.reload();
               // console.log("Error created user");
             }, 1000);
-            window.location.reload();
+            
          }else {
               alert("Error");
               console.log("error")
@@ -159,26 +168,43 @@ addProduct(){
    
     if(this.newproduct.start_date > this.newproduct.end_date){
       this.greater =true;
-  
+      this.btnDisbled = false
       // this._userService.sendmail().subscribe(data => { });
      }
   
     
    
     else if(this.newproduct.start_date <= this.newproduct.end_date){
+      this.newproduct.image = '';
       this.greater =false;
       this._prductService.addProduct(this.newproduct).subscribe(data => {
         if(data){
           this.showSuccess = true;
           setTimeout(() => {  
     
+            this.closeBtn.nativeElement.click();
             this.showSuccess = false;
-           
+            this.newproduct ={
+              name : '',
+              desc : '',
+              bid_amount :'',
+              min_bid_rate :'',
+               start_date :'',
+               end_date :'',
+              image :''
+          
+            };
+            // this.imageselect = false;
+            // this.imgFile.nativeElement.value = '';
+            // this.f.submitted = false;
+            // this.btnDisbled = false;
+            window.location.reload();
             // console.log("Error created user");
           }, 1000);
-          window.location.reload();
+          // window.location.reload();
        }else {
-            alert("Error");
+          this.btnDisbled = false;
+            //alert("Error");
             console.log("error")
           }
         });
@@ -199,10 +225,9 @@ addProduct(){
 }
 
 _keyPress(event: any) {
-  const pattern = /[0-9]/;
+  const pattern = /[0-9/.]/;
   let inputChar = String.fromCharCode(event.charCode);
-
-  if (!pattern.test(inputChar)) {
+  if (!pattern.test(inputChar) && event.charCode != 0) {
     // invalid character, prevent input
     event.preventDefault();
   }
@@ -227,16 +252,16 @@ format: 'd MM yyyy',
 
 }
 
-deleteProduct(pid){
-  console.log(pid);
-    this._prductService.deleteProduct(pid).subscribe(data1 => {
-            if(data1){
-              // console.log(data1);
-             alert("Delete Product Successfully");
-             location.reload();
-             this.router.navigate(['/product-list'])
-            }
+// deleteProduct(pid){
+//   console.log(pid);
+//     this._prductService.deleteProduct(pid).subscribe(data1 => {
+//             if(data1){
+//               // console.log(data1);
+//              alert("Delete Product Successfully");
+//              location.reload();
+//              this.router.navigate(['/product-list'])
+//             }
       
-          });
-}
+//           });
+// }
 }

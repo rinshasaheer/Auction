@@ -52,30 +52,34 @@ ngOnInit() {
       this.router.navigate(['/login']);
     }
   });
-    const users: any[] = [];
-    this.productservice.getProducts().subscribe(data=>{
-        data.forEach((item, index) => {
-          users.push({
-          id :item._id,
-          name: item.name,
-          image : item.image,
-          bid_amount : item.bid_amount,
-          min_bid_rate :item.min_bid_rate,
-          start_date :item.start_date,
-          end_date :item.end_date,
-          desc:item.desc
 
-
-        
-        });
-        });
-        this.dataSource = new MatTableDataSource(users);
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-  });
-
+  this.loadData();
 }
 
+loadData(){
+  //console.log('loading table....');
+  const users: any[] = [];
+  this.productservice.getProducts().subscribe(data=>{
+      data.forEach((item, index) => {
+        users.push({
+        id :item._id,
+        name: item.name,
+        image : item.image,
+        bid_amount : item.bid_amount,
+        min_bid_rate :item.min_bid_rate,
+        start_date :item.start_date,
+        end_date :item.end_date,
+        desc:item.desc
+
+
+      
+      });
+      });
+      this.dataSource = new MatTableDataSource(users);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+});
+}
 
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace
