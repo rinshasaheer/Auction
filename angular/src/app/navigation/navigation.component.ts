@@ -42,9 +42,10 @@ export class NavigationComponent implements OnInit {
         // console.log(info);
         this.userInfo = info;
         this.loading = false;
+        this.getNotification();
       }
     });
-    this.getNotification();
+    
     this.socket.on('notification', (data) => {
       if(this.userInfo._id == data.user_id){
         this.getNotification();

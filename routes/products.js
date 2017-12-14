@@ -195,7 +195,7 @@ router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),functio
                         res.json({success: false, msg : "Failed, went somthing wrong "});
                     }else{
 
-                        if(lastwinnerEmail != ''){
+                        if(lastwinner){
                             nodemailer.createTestAccount((err, account) => {
                                 let mailOptions = {
                                     from: 'mean.symptots@gmail.com', // sender address

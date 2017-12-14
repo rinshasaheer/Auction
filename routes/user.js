@@ -55,7 +55,7 @@ router.post('/register',(req,res)=>{
                                         to: req.body.email, // list of receivers
                                         subject: 'Please log in to your account', // Subject line
                                         text: '', // plain text body
-                                        html: '<b><h3>Hi '+req.body.name+' ,</h3><br/>We’re excited to get you started using Auction! You’re on your way to being fully set up, but first, you must finish your account verification by clicking the below link:<br/>Username: '+req.body.email+'<br/>Password: '+req.body.password+'<br/>Verification Link:</a> http://192.168.1.9:3000/email-verification/'+req.body.verification_code+'</a><br/> Thank You!</b>' // html body
+                                        html: '<b><h3>Hi '+req.body.name+' ,</h3><br/>We’re excited to get you started using Auction! You’re on your way to being fully set up, but first, you must finish your account verification by clicking the below link:<br/>Username: '+req.body.email+'<br/>Password: '+req.body.password+'<br/>Verification Link:</a> http://localhost:3000/email-verification/'+req.body.verification_code+'</a><br/> Thank You!</b>' // html body
                                     };
                                 
                                     // send mail with defined transport object
@@ -82,7 +82,7 @@ router.post('/register',(req,res)=>{
 
 //all users
 router.get('/users',(req,res,next)=>{
-    User.getUsers((err,user)=>{
+    User.getAllUsers((err,user)=>{
       //  console.log(user);
        if(err) throw err;
     //    return res.json(user);
@@ -439,7 +439,7 @@ router.put('/sendmailtowinner/:id',(req,res,next)=>{
                 to: user.email,
                 subject: 'Congratulations! You have won an auction', // Subject line
                 text: '', // plain text body
-                html: '<b><h3>Congratulations,</h3><br/>Yours was the winning bid on Auction. You got a great deal! I am looking forward to a pleasant transaction and positive feedback for both of us. <br/>You can confirm or reject your item on link: </a> http://192.168.1.9:3000/email-verification/'+req.body.pid+'</a><br/>I am delighted to be dealing with you and know you will enjoy your purchase. I’d also like to invite you to check out my other items available on Auction.<br/> Thank You!</b>' // html body
+                html: '<b><h3>Congratulations,</h3><br/>Yours was the winning bid on Auction. You got a great deal! I am looking forward to a pleasant transaction and positive feedback for both of us. <br/>You can confirm or reject your item on link: </a> http://localhost:3000/email-verification/'+req.body.pid+'</a><br/>I am delighted to be dealing with you and know you will enjoy your purchase. I’d also like to invite you to check out my other items available on Auction.<br/> Thank You!</b>' // html body
             };
             transporter.sendMail(mailOptions, (error, info) => {
                 if (error) {

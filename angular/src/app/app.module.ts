@@ -9,7 +9,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {UserService} from './services/user.service';
 import { HttpModule } from '@angular/http';
 // import { DataTablesModule } from 'angular-datatables';
-
+import 'hammerjs';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -116,16 +116,16 @@ const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'registration', component:RegistrationComponent},
   {path:'product-detail/:id', component:ProductDetailComponent},
-   {path:'product', component:ProductComponent},
+  //  {path:'product', component:ProductComponent},
   {path:'product-list', component:ProductListComponent},
-  {path:'email-verification/:id', component:EmailVerificationComponent},
+
   {path:'login', component:LoginComponent},  
   {path:'socialmedia/:id', component:SocialmediaComponent},
   {path:'adminviewed/:id', component:AdminviewedComponent},
   {path:'dashboard', component: DashboardComponent},
-  {path:'all-users', component: AllUsersComponent},
-  {path:'disabled-users', component: DisabledUsersComponent},
-  {path:'deleted-users', component: DeletedUsersComponent},
+  //{path:'all-users', component: AllUsersComponent},
+  // {path:'disabled-users', component: DisabledUsersComponent},
+  // {path:'deleted-users', component: DeletedUsersComponent},
   {path:'upcomingauction', component: UpcomingauctionsComponent},
   {path:'finishedauction', component: FinishedauctionComponent},
   {path:'runningauction', component: RunningauctionComponent},
@@ -134,9 +134,11 @@ const appRoutes: Routes = [
   {path:'email-verification/:id', component:EmailVerificationComponent},
   {path:'auctions', component:AuctionBackComponent},
   {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
+  
+  {path:'upload', component:UploadComponent},
+  {path:'material', component:MaterialComponent},
+  {path:'users-sub', component:UsersSubComponent},
   { path: '**', component: LoginComponent },
-  {path:'upload', component:UploadComponent},//file upload
-  {path:'material', component:MaterialComponent}//file upload
 ]
 @NgModule({
   exports: [
@@ -270,7 +272,7 @@ export class DemoMaterialModule {}
     UserService,
     AuthGuard,
     ProductService,
-    // Config
+    Config
   ],
  
   bootstrap: [AppComponent],

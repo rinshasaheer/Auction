@@ -344,6 +344,7 @@ var AllUsersComponent = (function () {
             //   action:item._id
             // });
             // });
+            console.log(data);
             _this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatTableDataSource */](data);
             console.log(_this.dataSource);
             _this.dataSource.paginator = _this.paginator;
@@ -510,65 +511,68 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_cdk_table__ = __webpack_require__("../../../cdk/esm5/table.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__top_bar_top_bar_component__ = __webpack_require__("../../../../../src/app/top-bar/top-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__side_bar_side_bar_component__ = __webpack_require__("../../../../../src/app/side-bar/side-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__all_users_all_users_component__ = __webpack_require__("../../../../../src/app/all-users/all-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__header_title_header_title_component__ = __webpack_require__("../../../../../src/app/header-title/header-title.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__disabled_users_disabled_users_component__ = __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__deleted_users_deleted_users_component__ = __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__product_product_component__ = __webpack_require__("../../../../../src/app/product/product.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__finishedauction_finishedauction_component__ = __webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__upcomingauctions_upcomingauctions_component__ = __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__equal_validator_directive__ = __webpack_require__("../../../../../src/app/equal-validator.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__email_verification_email_verification_component__ = __webpack_require__("../../../../../src/app/email-verification/email-verification.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__closed_auction_back_closed_auction_back_component__ = __webpack_require__("../../../../../src/app/closed-auction-back/closed-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__upcoming_auction_back_upcoming_auction_back_component__ = __webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__running_auction_back_running_auction_back_component__ = __webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__socialmedia_socialmedia_component__ = __webpack_require__("../../../../../src/app/socialmedia/socialmedia.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__read_more_read_more_component__ = __webpack_require__("../../../../../src/app/read-more/read-more.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__count_down_timer_count_down_timer_component__ = __webpack_require__("../../../../../src/app/count-down-timer/count-down-timer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__services_product_service_service__ = __webpack_require__("../../../../../src/app/services/product-service.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__myauctions_myauctions_component__ = __webpack_require__("../../../../../src/app/myauctions/myauctions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__capitalize_pipe__ = __webpack_require__("../../../../../src/app/capitalize.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__runningauction_runningauction_component__ = __webpack_require__("../../../../../src/app/runningauction/runningauction.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__card_running_card_running_component__ = __webpack_require__("../../../../../src/app/card-running/card-running.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__winnerconfirm_winnerconfirm_component__ = __webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47_ng2_datetime_ng2_datetime__ = __webpack_require__("../../../../ng2-datetime/ng2-datetime.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__product_list_product_list_component__ = __webpack_require__("../../../../../src/app/product-list/product-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__filter_pipe__ = __webpack_require__("../../../../../src/app/filter.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__manage_product_manage_product_component__ = __webpack_require__("../../../../../src/app/manage-product/manage-product.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__product_detail_product_detail_component__ = __webpack_require__("../../../../../src/app/product-detail/product-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__product_pipe__ = __webpack_require__("../../../../../src/app/product.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__ng_datepicker_ng_datepicker_component__ = __webpack_require__("../../../../../src/app/ng-datepicker/ng-datepicker.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__adminviewed_adminviewed_component__ = __webpack_require__("../../../../../src/app/adminviewed/adminviewed.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__upload_upload_component__ = __webpack_require__("../../../../../src/app/upload/upload.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56_angular2_image_upload__ = __webpack_require__("../../../../angular2-image-upload/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_57_ng2_file_upload__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__users_sub_users_sub_component__ = __webpack_require__("../../../../../src/app/users-sub/users-sub.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__active_users_active_users_component__ = __webpack_require__("../../../../../src/app/active-users/active-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60_ngx_slimscroll__ = __webpack_require__("../../../../ngx-slimscroll/dist/ngx-slimscroll.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__date_search_pipe__ = __webpack_require__("../../../../../src/app/date-search.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__ = __webpack_require__("../../../../../src/app/auction-back/auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker__ = __webpack_require__("../../../../ng2-daterangepicker/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__material_material_component__ = __webpack_require__("../../../../../src/app/material/material.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__myauctiontable_myauctiontable_component__ = __webpack_require__("../../../../../src/app/myauctiontable/myauctiontable.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__search_pipe__ = __webpack_require__("../../../../../src/app/search.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_hammerjs__ = __webpack_require__("../../../../hammerjs/hammer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_hammerjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_cdk_table__ = __webpack_require__("../../../cdk/esm5/table.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__top_bar_top_bar_component__ = __webpack_require__("../../../../../src/app/top-bar/top-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__side_bar_side_bar_component__ = __webpack_require__("../../../../../src/app/side-bar/side-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__all_users_all_users_component__ = __webpack_require__("../../../../../src/app/all-users/all-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__header_title_header_title_component__ = __webpack_require__("../../../../../src/app/header-title/header-title.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__disabled_users_disabled_users_component__ = __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__deleted_users_deleted_users_component__ = __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__product_product_component__ = __webpack_require__("../../../../../src/app/product/product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__finishedauction_finishedauction_component__ = __webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__upcomingauctions_upcomingauctions_component__ = __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__equal_validator_directive__ = __webpack_require__("../../../../../src/app/equal-validator.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__email_verification_email_verification_component__ = __webpack_require__("../../../../../src/app/email-verification/email-verification.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__closed_auction_back_closed_auction_back_component__ = __webpack_require__("../../../../../src/app/closed-auction-back/closed-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__upcoming_auction_back_upcoming_auction_back_component__ = __webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__running_auction_back_running_auction_back_component__ = __webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__socialmedia_socialmedia_component__ = __webpack_require__("../../../../../src/app/socialmedia/socialmedia.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__read_more_read_more_component__ = __webpack_require__("../../../../../src/app/read-more/read-more.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__count_down_timer_count_down_timer_component__ = __webpack_require__("../../../../../src/app/count-down-timer/count-down-timer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__services_product_service_service__ = __webpack_require__("../../../../../src/app/services/product-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__myauctions_myauctions_component__ = __webpack_require__("../../../../../src/app/myauctions/myauctions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__capitalize_pipe__ = __webpack_require__("../../../../../src/app/capitalize.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__runningauction_runningauction_component__ = __webpack_require__("../../../../../src/app/runningauction/runningauction.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__card_running_card_running_component__ = __webpack_require__("../../../../../src/app/card-running/card-running.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__winnerconfirm_winnerconfirm_component__ = __webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48_ng2_datetime_ng2_datetime__ = __webpack_require__("../../../../ng2-datetime/ng2-datetime.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__product_list_product_list_component__ = __webpack_require__("../../../../../src/app/product-list/product-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__filter_pipe__ = __webpack_require__("../../../../../src/app/filter.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__manage_product_manage_product_component__ = __webpack_require__("../../../../../src/app/manage-product/manage-product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__product_detail_product_detail_component__ = __webpack_require__("../../../../../src/app/product-detail/product-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__product_pipe__ = __webpack_require__("../../../../../src/app/product.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__ng_datepicker_ng_datepicker_component__ = __webpack_require__("../../../../../src/app/ng-datepicker/ng-datepicker.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__adminviewed_adminviewed_component__ = __webpack_require__("../../../../../src/app/adminviewed/adminviewed.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__upload_upload_component__ = __webpack_require__("../../../../../src/app/upload/upload.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57_angular2_image_upload__ = __webpack_require__("../../../../angular2-image-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_58_ng2_file_upload__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__users_sub_users_sub_component__ = __webpack_require__("../../../../../src/app/users-sub/users-sub.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__active_users_active_users_component__ = __webpack_require__("../../../../../src/app/active-users/active-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61_ngx_slimscroll__ = __webpack_require__("../../../../ngx-slimscroll/dist/ngx-slimscroll.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__date_search_pipe__ = __webpack_require__("../../../../../src/app/date-search.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__auction_back_auction_back_component__ = __webpack_require__("../../../../../src/app/auction-back/auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64_ng2_daterangepicker__ = __webpack_require__("../../../../ng2-daterangepicker/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64_ng2_daterangepicker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_64_ng2_daterangepicker__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__config_config__ = __webpack_require__("../../../../../config/config.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__material_material_component__ = __webpack_require__("../../../../../src/app/material/material.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_67__myauctiontable_myauctiontable_component__ = __webpack_require__("../../../../../src/app/myauctiontable/myauctiontable.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_68__search_pipe__ = __webpack_require__("../../../../../src/app/search.pipe.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -631,6 +635,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 //import { NgDatepickerModule } from 'ng2-datepicker';
 
  //file upload
@@ -644,32 +649,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 // import { FlashMessagesModule } from 'angular2-flash-messages';
 var appRoutes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_46__registration_registration_component__["a" /* RegistrationComponent */] },
-    { path: 'product-detail/:id', component: __WEBPACK_IMPORTED_MODULE_51__product_detail_product_detail_component__["a" /* ProductDetailComponent */] },
-    { path: 'product', component: __WEBPACK_IMPORTED_MODULE_20__product_product_component__["a" /* ProductComponent */] },
-    { path: 'product-list', component: __WEBPACK_IMPORTED_MODULE_48__product_list_product_list_component__["a" /* ProductListComponent */] },
-    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_33__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_32__login_login_component__["a" /* LoginComponent */] },
-    { path: 'socialmedia/:id', component: __WEBPACK_IMPORTED_MODULE_37__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */] },
-    { path: 'adminviewed/:id', component: __WEBPACK_IMPORTED_MODULE_54__adminviewed_adminviewed_component__["a" /* AdminviewedComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */] },
-    { path: 'all-users', component: __WEBPACK_IMPORTED_MODULE_16__all_users_all_users_component__["a" /* AllUsersComponent */] },
-    { path: 'disabled-users', component: __WEBPACK_IMPORTED_MODULE_18__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */] },
-    { path: 'deleted-users', component: __WEBPACK_IMPORTED_MODULE_19__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */] },
-    { path: 'upcomingauction', component: __WEBPACK_IMPORTED_MODULE_28__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */] },
-    { path: 'finishedauction', component: __WEBPACK_IMPORTED_MODULE_26__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */] },
-    { path: 'runningauction', component: __WEBPACK_IMPORTED_MODULE_43__runningauction_runningauction_component__["a" /* RunningauctionComponent */] },
-    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_24__home_home_component__["a" /* HomeComponent */] },
-    { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_41__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
-    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_33__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
-    { path: 'auctions', component: __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__["a" /* AuctionBackComponent */] },
-    { path: 'winnerconfirm/:id', component: __WEBPACK_IMPORTED_MODULE_45__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */] },
-    { path: '**', component: __WEBPACK_IMPORTED_MODULE_32__login_login_component__["a" /* LoginComponent */] },
-    { path: 'upload', component: __WEBPACK_IMPORTED_MODULE_55__upload_upload_component__["a" /* UploadComponent */] },
-    { path: 'material', component: __WEBPACK_IMPORTED_MODULE_64__material_material_component__["a" /* MaterialComponent */] } //file upload
+    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_47__registration_registration_component__["a" /* RegistrationComponent */] },
+    { path: 'product-detail/:id', component: __WEBPACK_IMPORTED_MODULE_52__product_detail_product_detail_component__["a" /* ProductDetailComponent */] },
+    //  {path:'product', component:ProductComponent},
+    { path: 'product-list', component: __WEBPACK_IMPORTED_MODULE_49__product_list_product_list_component__["a" /* ProductListComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_33__login_login_component__["a" /* LoginComponent */] },
+    { path: 'socialmedia/:id', component: __WEBPACK_IMPORTED_MODULE_38__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */] },
+    { path: 'adminviewed/:id', component: __WEBPACK_IMPORTED_MODULE_55__adminviewed_adminviewed_component__["a" /* AdminviewedComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_13__dashboard_dashboard_component__["a" /* DashboardComponent */] },
+    //{path:'all-users', component: AllUsersComponent},
+    // {path:'disabled-users', component: DisabledUsersComponent},
+    // {path:'deleted-users', component: DeletedUsersComponent},
+    { path: 'upcomingauction', component: __WEBPACK_IMPORTED_MODULE_29__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */] },
+    { path: 'finishedauction', component: __WEBPACK_IMPORTED_MODULE_27__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */] },
+    { path: 'runningauction', component: __WEBPACK_IMPORTED_MODULE_44__runningauction_runningauction_component__["a" /* RunningauctionComponent */] },
+    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_25__home_home_component__["a" /* HomeComponent */] },
+    { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_42__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
+    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_34__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
+    { path: 'auctions', component: __WEBPACK_IMPORTED_MODULE_63__auction_back_auction_back_component__["a" /* AuctionBackComponent */] },
+    { path: 'winnerconfirm/:id', component: __WEBPACK_IMPORTED_MODULE_46__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */] },
+    { path: 'upload', component: __WEBPACK_IMPORTED_MODULE_56__upload_upload_component__["a" /* UploadComponent */] },
+    { path: 'material', component: __WEBPACK_IMPORTED_MODULE_66__material_material_component__["a" /* MaterialComponent */] },
+    { path: 'users-sub', component: __WEBPACK_IMPORTED_MODULE_59__users_sub_users_sub_component__["a" /* UsersSubComponent */] },
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_33__login_login_component__["a" /* LoginComponent */] },
 ];
 var DemoMaterialModule = (function () {
     function DemoMaterialModule() {
@@ -677,38 +683,38 @@ var DemoMaterialModule = (function () {
     DemoMaterialModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["NgModule"])({
             exports: [
-                __WEBPACK_IMPORTED_MODULE_11__angular_cdk_table__["m" /* CdkTableModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["a" /* MatAutocompleteModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["b" /* MatButtonModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["c" /* MatButtonToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["d" /* MatCardModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["e" /* MatCheckboxModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["f" /* MatChipsModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["C" /* MatStepperModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["g" /* MatDatepickerModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["h" /* MatDialogModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["i" /* MatExpansionModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["j" /* MatGridListModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["k" /* MatIconModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["l" /* MatInputModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["m" /* MatListModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["n" /* MatMenuModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["o" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["q" /* MatPaginatorModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["r" /* MatProgressBarModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["s" /* MatProgressSpinnerModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["t" /* MatRadioModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["u" /* MatRippleModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["v" /* MatSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["w" /* MatSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["y" /* MatSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["x" /* MatSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["z" /* MatSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["B" /* MatSortModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["E" /* MatTableModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["F" /* MatTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["G" /* MatToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["H" /* MatTooltipModule */],
+                __WEBPACK_IMPORTED_MODULE_12__angular_cdk_table__["m" /* CdkTableModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["a" /* MatAutocompleteModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["b" /* MatButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["c" /* MatButtonToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["d" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["e" /* MatCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["f" /* MatChipsModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["C" /* MatStepperModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["g" /* MatDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["h" /* MatDialogModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["i" /* MatExpansionModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["j" /* MatGridListModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["k" /* MatIconModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["l" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["m" /* MatListModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["n" /* MatMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["o" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["q" /* MatPaginatorModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["r" /* MatProgressBarModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["s" /* MatProgressSpinnerModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["t" /* MatRadioModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["u" /* MatRippleModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["v" /* MatSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["w" /* MatSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["y" /* MatSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["x" /* MatSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["z" /* MatSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["B" /* MatSortModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["E" /* MatTableModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["F" /* MatTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["G" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["H" /* MatTooltipModule */],
             ]
         })
     ], DemoMaterialModule);
@@ -721,79 +727,79 @@ var AppModule = (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_22__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__product_product_component__["a" /* ProductComponent */],
-                __WEBPACK_IMPORTED_MODULE_46__registration_registration_component__["a" /* RegistrationComponent */],
-                __WEBPACK_IMPORTED_MODULE_48__product_list_product_list_component__["a" /* ProductListComponent */],
-                __WEBPACK_IMPORTED_MODULE_49__filter_pipe__["a" /* FilterPipe */],
-                __WEBPACK_IMPORTED_MODULE_50__manage_product_manage_product_component__["a" /* ManageProductComponent */],
-                __WEBPACK_IMPORTED_MODULE_51__product_detail_product_detail_component__["a" /* ProductDetailComponent */],
-                __WEBPACK_IMPORTED_MODULE_32__login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__navigation_navigation_component__["a" /* NavigationComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__card_card_component__["a" /* CardComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */],
-                __WEBPACK_IMPORTED_MODULE_41__myauctions_myauctions_component__["a" /* MyauctionsComponent */],
-                __WEBPACK_IMPORTED_MODULE_31__equal_validator_directive__["a" /* EqualValidator */],
-                __WEBPACK_IMPORTED_MODULE_42__capitalize_pipe__["a" /* CapitalizePipe */],
-                __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__side_bar_side_bar_component__["a" /* SideBarComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__top_bar_top_bar_component__["a" /* TopBarComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__header_title_header_title_component__["a" /* HeaderTitleComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__footer_footer_component__["a" /* FooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__all_users_all_users_component__["a" /* AllUsersComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */],
-                __WEBPACK_IMPORTED_MODULE_33__email_verification_email_verification_component__["a" /* EmailVerificationComponent */],
-                __WEBPACK_IMPORTED_MODULE_34__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */],
-                __WEBPACK_IMPORTED_MODULE_35__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */],
-                __WEBPACK_IMPORTED_MODULE_36__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */],
-                __WEBPACK_IMPORTED_MODULE_37__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */],
-                __WEBPACK_IMPORTED_MODULE_57_ng2_file_upload__["FileSelectDirective"],
-                __WEBPACK_IMPORTED_MODULE_38__read_more_read_more_component__["a" /* ReadMoreComponent */],
-                __WEBPACK_IMPORTED_MODULE_39__count_down_timer_count_down_timer_component__["a" /* CountDownTimerComponent */],
-                __WEBPACK_IMPORTED_MODULE_43__runningauction_runningauction_component__["a" /* RunningauctionComponent */],
-                __WEBPACK_IMPORTED_MODULE_44__card_running_card_running_component__["a" /* CardRunningComponent */],
-                __WEBPACK_IMPORTED_MODULE_45__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */],
-                __WEBPACK_IMPORTED_MODULE_52__product_pipe__["a" /* ProductPipe */],
-                __WEBPACK_IMPORTED_MODULE_54__adminviewed_adminviewed_component__["a" /* AdminviewedComponent */],
-                __WEBPACK_IMPORTED_MODULE_55__upload_upload_component__["a" /* UploadComponent */],
-                __WEBPACK_IMPORTED_MODULE_57_ng2_file_upload__["FileSelectDirective"],
-                __WEBPACK_IMPORTED_MODULE_58__users_sub_users_sub_component__["a" /* UsersSubComponent */],
-                __WEBPACK_IMPORTED_MODULE_59__active_users_active_users_component__["a" /* ActiveUsersComponent */],
-                __WEBPACK_IMPORTED_MODULE_53__ng_datepicker_ng_datepicker_component__["a" /* NgDatepickerComponent */],
-                __WEBPACK_IMPORTED_MODULE_61__date_search_pipe__["a" /* DateSearchPipe */],
-                __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__["a" /* AuctionBackComponent */],
-                __WEBPACK_IMPORTED_MODULE_65__myauctiontable_myauctiontable_component__["a" /* MyauctiontableComponent */],
-                __WEBPACK_IMPORTED_MODULE_66__search_pipe__["a" /* SearchPipe */],
-                __WEBPACK_IMPORTED_MODULE_64__material_material_component__["a" /* MaterialComponent */]
+                __WEBPACK_IMPORTED_MODULE_23__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__product_product_component__["a" /* ProductComponent */],
+                __WEBPACK_IMPORTED_MODULE_47__registration_registration_component__["a" /* RegistrationComponent */],
+                __WEBPACK_IMPORTED_MODULE_49__product_list_product_list_component__["a" /* ProductListComponent */],
+                __WEBPACK_IMPORTED_MODULE_50__filter_pipe__["a" /* FilterPipe */],
+                __WEBPACK_IMPORTED_MODULE_51__manage_product_manage_product_component__["a" /* ManageProductComponent */],
+                __WEBPACK_IMPORTED_MODULE_52__product_detail_product_detail_component__["a" /* ProductDetailComponent */],
+                __WEBPACK_IMPORTED_MODULE_33__login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__navigation_navigation_component__["a" /* NavigationComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__card_card_component__["a" /* CardComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */],
+                __WEBPACK_IMPORTED_MODULE_42__myauctions_myauctions_component__["a" /* MyauctionsComponent */],
+                __WEBPACK_IMPORTED_MODULE_32__equal_validator_directive__["a" /* EqualValidator */],
+                __WEBPACK_IMPORTED_MODULE_43__capitalize_pipe__["a" /* CapitalizePipe */],
+                __WEBPACK_IMPORTED_MODULE_13__dashboard_dashboard_component__["a" /* DashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__side_bar_side_bar_component__["a" /* SideBarComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__top_bar_top_bar_component__["a" /* TopBarComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__header_title_header_title_component__["a" /* HeaderTitleComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__all_users_all_users_component__["a" /* AllUsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_34__email_verification_email_verification_component__["a" /* EmailVerificationComponent */],
+                __WEBPACK_IMPORTED_MODULE_35__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */],
+                __WEBPACK_IMPORTED_MODULE_36__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */],
+                __WEBPACK_IMPORTED_MODULE_37__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */],
+                __WEBPACK_IMPORTED_MODULE_38__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */],
+                __WEBPACK_IMPORTED_MODULE_58_ng2_file_upload__["FileSelectDirective"],
+                __WEBPACK_IMPORTED_MODULE_39__read_more_read_more_component__["a" /* ReadMoreComponent */],
+                __WEBPACK_IMPORTED_MODULE_40__count_down_timer_count_down_timer_component__["a" /* CountDownTimerComponent */],
+                __WEBPACK_IMPORTED_MODULE_44__runningauction_runningauction_component__["a" /* RunningauctionComponent */],
+                __WEBPACK_IMPORTED_MODULE_45__card_running_card_running_component__["a" /* CardRunningComponent */],
+                __WEBPACK_IMPORTED_MODULE_46__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */],
+                __WEBPACK_IMPORTED_MODULE_53__product_pipe__["a" /* ProductPipe */],
+                __WEBPACK_IMPORTED_MODULE_55__adminviewed_adminviewed_component__["a" /* AdminviewedComponent */],
+                __WEBPACK_IMPORTED_MODULE_56__upload_upload_component__["a" /* UploadComponent */],
+                __WEBPACK_IMPORTED_MODULE_58_ng2_file_upload__["FileSelectDirective"],
+                __WEBPACK_IMPORTED_MODULE_59__users_sub_users_sub_component__["a" /* UsersSubComponent */],
+                __WEBPACK_IMPORTED_MODULE_60__active_users_active_users_component__["a" /* ActiveUsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_54__ng_datepicker_ng_datepicker_component__["a" /* NgDatepickerComponent */],
+                __WEBPACK_IMPORTED_MODULE_62__date_search_pipe__["a" /* DateSearchPipe */],
+                __WEBPACK_IMPORTED_MODULE_63__auction_back_auction_back_component__["a" /* AuctionBackComponent */],
+                __WEBPACK_IMPORTED_MODULE_67__myauctiontable_myauctiontable_component__["a" /* MyauctiontableComponent */],
+                __WEBPACK_IMPORTED_MODULE_68__search_pipe__["a" /* SearchPipe */],
+                __WEBPACK_IMPORTED_MODULE_66__material_material_component__["a" /* MaterialComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
-                __WEBPACK_IMPORTED_MODULE_27_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_forms__["c" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_forms__["h" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_28_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
-                __WEBPACK_IMPORTED_MODULE_47_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
-                __WEBPACK_IMPORTED_MODULE_27_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
+                __WEBPACK_IMPORTED_MODULE_48_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_forms__["c" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_forms__["h" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_28_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
                 __WEBPACK_IMPORTED_MODULE_7__angular_router__["f" /* RouterModule */].forRoot(appRoutes),
                 __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 DemoMaterialModule,
                 // NgDatepickerModule
-                __WEBPACK_IMPORTED_MODULE_60_ngx_slimscroll__["a" /* NgSlimScrollModule */],
+                __WEBPACK_IMPORTED_MODULE_61_ngx_slimscroll__["a" /* NgSlimScrollModule */],
                 //  NgDatepickerModule
-                __WEBPACK_IMPORTED_MODULE_56_angular2_image_upload__["a" /* ImageUploadModule */],
-                __WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker__["Daterangepicker"],
+                __WEBPACK_IMPORTED_MODULE_57_angular2_image_upload__["a" /* ImageUploadModule */],
+                __WEBPACK_IMPORTED_MODULE_64_ng2_daterangepicker__["Daterangepicker"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["o" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_material__["o" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_forms__["h" /* ReactiveFormsModule */],
                 DemoMaterialModule
                 // FlashMessagesModule.forRoot(),
                 // NKDatetimeModule,
@@ -806,12 +812,13 @@ var AppModule = (function () {
                 // MatNativeDateModule,
                 // ReactiveFormsModule,
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_40__services_product_service_service__["a" /* ProductServiceService */],
+            providers: [__WEBPACK_IMPORTED_MODULE_41__services_product_service_service__["a" /* ProductServiceService */],
                 __WEBPACK_IMPORTED_MODULE_8__services_user_service__["a" /* UserService */],
-                __WEBPACK_IMPORTED_MODULE_30__guards_auth_guard__["a" /* AuthGuard */],
-                __WEBPACK_IMPORTED_MODULE_29__services_product_service__["a" /* ProductService */],
+                __WEBPACK_IMPORTED_MODULE_31__guards_auth_guard__["a" /* AuthGuard */],
+                __WEBPACK_IMPORTED_MODULE_30__services_product_service__["a" /* ProductService */],
+                __WEBPACK_IMPORTED_MODULE_65__config_config__["a" /* Config */]
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_22__app_component__["a" /* AppComponent */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_23__app_component__["a" /* AppComponent */]],
         })
     ], AppModule);
     return AppModule;
@@ -3185,9 +3192,9 @@ var NavigationComponent = (function () {
                 // console.log(info);
                 _this.userInfo = info;
                 _this.loading = false;
+                _this.getNotification();
             }
         });
-        this.getNotification();
         this.socket.on('notification', function (data) {
             if (_this.userInfo._id == data.user_id) {
                 _this.getNotification();
@@ -5070,7 +5077,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/side-bar/side-bar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\r\n<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\r\n    <!-- Brand and toggle get grouped for better mobile display -->\r\n    \r\n    <top-bar></top-bar>\r\n    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\r\n        <ul class=\"nav navbar-nav side-nav\">\r\n            <li>\r\n                <a routerLink=\"/dashboard\"><i class=\"fa fa-fw fa-dashboard\"></i> Dashboard</a>\r\n            </li>\r\n           \r\n            <li>\r\n                    <a routerLink=\"/users-sub\"><i class=\"fa fa-users\"></i> Users</a>\r\n                <!-- <a href=\"javascript:;\" data-toggle=\"collapse\" data-target=\"#demo\"><i class=\"fa fa-fw fa-arrows-v\"></i> Users <i class=\"fa fa-fw fa-caret-down\"></i></a>\r\n                <ul id=\"demo\" class=\"collapse\">\r\n                    <li>\r\n                        <a routerLink=\"/all-users\">All Users</a>\r\n                    </li>\r\n                    <li>\r\n                        <a routerLink=\"/disabled-users\">Disabled Users</a>\r\n                    </li>\r\n                    <li>\r\n                        <a routerLink=\"/deleted-users\">Deleted Users</a>\r\n                    </li>\r\n                </ul> -->\r\n            </li>\r\n            <li *ngIf=\"userService.loggedIn()\">\r\n                <a  routerLink=\"/product-list\" data-toggle=\"collapse\" data-target=\"#demo1\"><i class=\"fa fa-product-hunt\"></i> Manage Product</a> \r\n                <ul id=\"demo1\" class=\"collapse\">\r\n                    <!-- <li *ngIf=\"userService.loggedIn()\">\r\n                        <a href=\"/product\">Add Product</a>\r\n                    </li> -->\r\n                    <!-- <li *ngIf=\"userService.loggedIn()\">\r\n                        <a routerLink=\"/product-list\">Manage Product</a>\r\n                    </li> -->\r\n                </ul>\r\n            </li>\r\n            <li>\r\n                <a routerLink=\"/auctions\" ><i class=\"fa fa-fw fa-arrows-v\"></i> Auctions </a>\r\n                <!-- <ul id=\"demo3\" class=\"collapse\">\r\n                    <li>\r\n                        <a routerLink=\"/running-auction\">Running Auction</a>\r\n                    </li>\r\n                    <li>\r\n                        <a routerLink=\"/upcoming-auction\"> Upcoming Auction</a>\r\n                    </li>\r\n                    <li>\r\n                        <a routerLink=\"/closed-auction\">closed Product</a>\r\n                    </li>\r\n                </ul> -->\r\n            </li>\r\n        </ul>\r\n    </div>\r\n    <!-- /.navbar-collapse -->\r\n</nav>\r\n"
+module.exports = "\r\n\r\n<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\r\n    <!-- Brand and toggle get grouped for better mobile display -->\r\n    \r\n    <top-bar></top-bar>\r\n    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\r\n        <ul class=\"nav navbar-nav side-nav\">\r\n            <li>\r\n                <a routerLink=\"/dashboard\"><i class=\"fa fa-fw fa-dashboard\"></i> Dashboard</a>\r\n            </li>\r\n           \r\n            <li>\r\n                    <a routerLink=\"/users-sub\"><i class=\"fa fa-users\"></i> Users</a>\r\n               \r\n            </li>\r\n            <li>\r\n                <a  routerLink=\"/product-list\" ><i class=\"fa fa-product-hunt\"></i> Manage Product</a> \r\n                \r\n            </li>\r\n            <li>\r\n                <a routerLink=\"/auctions\" ><i class=\"fa fa-fw fa-arrows-v\"></i> Auctions </a>\r\n               \r\n            </li>\r\n        </ul>\r\n    </div>\r\n    <!-- /.navbar-collapse -->\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -5645,6 +5652,7 @@ var UsersSubComponent = (function () {
     function UsersSubComponent() {
     }
     UsersSubComponent.prototype.ngOnInit = function () {
+        console.log("hhh");
         this.viewComp = 'All';
         this.title = 'Allusers List';
     };

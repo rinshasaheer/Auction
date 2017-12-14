@@ -35,6 +35,7 @@ export class AllUsersComponent implements OnInit {
         //   action:item._id
         // });
         // });
+        console.log(data);
         this.dataSource = new MatTableDataSource(data);
         console.log(this.dataSource);
         this.dataSource.paginator = this.paginator;
