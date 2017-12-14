@@ -2,6 +2,8 @@ import 'core-js/es7/reflect';
 import 'zone.js';
 import 'reflect-metadata';
 import { BrowserModule } from '@angular/platform-browser';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {UserService} from './services/user.service';
@@ -43,7 +45,6 @@ import { CardRunningComponent } from './card-running/card-running.component';
 import { WinnerconfirmComponent } from './winnerconfirm/winnerconfirm.component'
 import { RegistrationComponent } from './registration/registration.component';
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
-
 import * as $ from 'jquery';
 import { ProductListComponent } from './product-list/product-list.component';
 import { FilterPipe } from './filter.pipe';
@@ -52,53 +53,21 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductPipe } from './product.pipe';
 import { NgDatepickerComponent } from './ng-datepicker/ng-datepicker.component';
 import { AdminviewedComponent } from './adminviewed/adminviewed.component';
-import { NgDatepickerModule } from 'ng2-datepicker';
+//import { NgDatepickerModule } from 'ng2-datepicker';
 import { UploadComponent } from './upload/upload.component';
 import { ImageUploadModule } from "angular2-image-upload";//file upload
 import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
 import { CommonModule } from '@angular/common';
 import { NgSlimScrollModule } from 'ngx-slimscroll';
 import { DateSearchPipe } from './date-search.pipe';
+import { AuctionBackComponent } from './auction-back/auction-back.component';
+import { Daterangepicker } from 'ng2-daterangepicker';
 import { Config } from './../../config/config';
+import { MaterialComponent } from './material/material.component';
 import { MyauctiontableComponent } from './myauctiontable/myauctiontable.component';
 import { SearchPipe } from './search.pipe';
+// import { FlashMessagesModule } from 'angular2-flash-messages';
 
-import {
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatStepperModule,
-} from '@angular/material';
-import {CdkTableModule} from '@angular/cdk/table';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MaterialComponent } from './material/material.component';//angularmaterial
 
 const appRoutes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
@@ -120,15 +89,12 @@ const appRoutes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'myauctions', component:MyauctionsComponent},
   {path:'email-verification/:id', component:EmailVerificationComponent},
-  {path:'closed-auction', component:ClosedAuctionBackComponent},
-  {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
-  {path:'running-auction', component:RunningAuctionBackComponent},
+  {path:'auctions', component:AuctionBackComponent},
   {path:'winnerconfirm/:id', component:WinnerconfirmComponent},
   { path: '**', component: LoginComponent },
   {path:'upload', component:UploadComponent},//file upload
   {path:'material', component:MaterialComponent}//file upload
 ]
-
 @NgModule({
   exports: [
     CdkTableModule,
@@ -168,7 +134,6 @@ const appRoutes: Routes = [
 export class DemoMaterialModule {}
 
 @NgModule({
-  
   declarations: [
     AppComponent,
     ProductComponent,
@@ -200,7 +165,6 @@ export class DemoMaterialModule {}
     RunningAuctionBackComponent,
     SocialmediaComponent,
     FileSelectDirective,
-
     ReadMoreComponent,
     CountDownTimerComponent,
     RunningauctionComponent,
@@ -210,8 +174,11 @@ export class DemoMaterialModule {}
     AdminviewedComponent,
     UploadComponent,
     FileSelectDirective,
+    UsersSubComponent,
+    ActiveUsersComponent,
     NgDatepickerComponent,
     DateSearchPipe,
+    AuctionBackComponent,
     MyauctiontableComponent,
     SearchPipe,
     MaterialComponent
@@ -228,29 +195,43 @@ export class DemoMaterialModule {}
     Ng2PageScrollModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule,
+    DemoMaterialModule,
+    
+   // NgDatepickerModule
     NgSlimScrollModule,
   //  NgDatepickerModule
     ImageUploadModule,
+    Daterangepicker,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    DemoMaterialModule
+    // FlashMessagesModule.forRoot(),
+    
     // NKDatetimeModule,
     //  DataTablesModule
     // Ng2DatetimePickerModule
     //ImageUploadModule.forRoot(), //file upload
-    BrowserAnimationsModule,
-    DemoMaterialModule,
-    MatNativeDateModule,
-    ReactiveFormsModule,
-     //angular material
+    // Daterangepicker,
+    // BrowserAnimationsModule,
+    // DemoMaterialModule,
+    // MatNativeDateModule,
+    // ReactiveFormsModule,
   ],
   
   providers: [ProductServiceService,
     UserService,
     AuthGuard,
     ProductService,
-    Config
+    // Config
   ],
  
   bootstrap: [AppComponent],
-  //exports: [ NgDatepickerComponent, CommonModule, FormsModule, NgSlimScrollModule ]
   
 })
 export class AppModule { }
+platformBrowserDynamic().bootstrapModule(AppModule);

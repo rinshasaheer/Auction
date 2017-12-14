@@ -63,7 +63,7 @@ export class CardRunningComponent implements OnInit {
     var lastBiduserId = '';
 
     this.product.bidders.forEach((bidder, i) => {
-      console.log(bidder);
+     // console.log(bidder);
       if(bidder.amount >= lastBidprice){
          lastBidprice = bidder.amount;
          lastBiduser = this.users[bidder.user_id].name;

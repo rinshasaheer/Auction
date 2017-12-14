@@ -58,6 +58,9 @@ module.exports.getUserById = function(id,callback){
 //all users
 module.exports.getUsers = function(callback){
     User.find({role:'user', "delete_status": { "$ne": "true"}, "block_status": { "$ne": "true"}, "verified" : { "$ne": "false"}},callback);
+}
+module.exports.getAllUsers = function(callback){
+    User.find({role:'user'},callback);
     //User.find({role:'user',verified:'true'},callback);
     // User.find({role:'user',verified:'true'},callback);
    
@@ -65,6 +68,11 @@ module.exports.getUsers = function(callback){
 //all disabled users
 module.exports.getDisabledUsers = function(callback){
     User.find({role:'user',block_status:'true',delete_status:'false'},callback);
+   
+}
+//all active users
+module.exports.getActiveUsers = function(callback){
+    User.find({role:'user',block_status:'false',delete_status:'false'},callback);
    
 }
 //all deleted users
@@ -87,9 +95,9 @@ module.exports.unblockUser = function(id,callback){
 
 
 
-module.exports.getUsers1 = function(callback){
-    User.find({},callback);
-}
+// module.exports.getUsers1 = function(callback){
+//     User.find({},callback);
+// }
 
 module.exports.getUserByUsername = function(email,callback){
     const query = { email: email}

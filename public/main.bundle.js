@@ -29,6 +29,163 @@ webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
 webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy recursive";
+<<<<<<< HEAD
+=======
+
+/***/ }),
+
+/***/ "../../../../../src/app/active-users/active-users.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\r\n.example-container {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    min-width: 300px;\r\n  }\r\n  \r\n  .example-header {\r\n    min-height: 64px;\r\n    padding: 8px 24px 0;\r\n  }\r\n  \r\n  .mat-form-field {\r\n    font-size: 14px;\r\n    width: 100%;\r\n  }\r\n  \r\n  .mat-table {\r\n    overflow: auto;\r\n    max-height: 500px;\r\n  }\r\n  .table-striped > tbody > tr:nth-of-type(2n+1) {\r\n    background-color: #fff;\r\n  }\r\n  \r\n  .table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {\r\n    border: none\r\n  }\r\n.test:after {\r\n    content: '\\2807';\r\n    font-size:25px;\r\n    }\r\n\r\nbody {\r\n    margin-top: 100px;\r\n    background-color: #222;\r\n}\r\n\r\n@media(min-width:768px) {\r\n    body {\r\n        margin-top: 50px;\r\n    }\r\n}\r\n\r\n#wrapper {\r\n    padding-left: 0;\r\n}\r\n\r\n#page-wrapper {\r\n    width: 100%;\r\n    padding: 0;\r\n    background-color: #fff;\r\n}\r\n\r\n.huge {\r\n    font-size: 50px;\r\n    line-height: normal;\r\n}\r\n\r\n@media(min-width:768px) {\r\n    #wrapper {\r\n        padding-left: 225px;\r\n    }\r\n\r\n    #page-wrapper {\r\n        padding: 10px;\r\n    }\r\n}\r\n\r\n/* Top Navigation */\r\n\r\n.top-nav {\r\n    padding: 0 15px;\r\n}\r\n\r\n.top-nav>li {\r\n    display: inline-block;\r\n    float: left;\r\n}\r\n\r\n.top-nav>li>a {\r\n    padding-top: 15px;\r\n    padding-bottom: 15px;\r\n    line-height: 20px;\r\n    color: #999;\r\n}\r\n\r\n.top-nav>li>a:hover,\r\n.top-nav>li>a:focus,\r\n.top-nav>.open>a,\r\n.top-nav>.open>a:hover,\r\n.top-nav>.open>a:focus {\r\n    color: #fff;\r\n    background-color: #000;\r\n}\r\n\r\n.top-nav>.open>.dropdown-menu {\r\n    float: left;\r\n    position: absolute;\r\n    margin-top: 0;\r\n    border: 1px solid rgba(0,0,0,.15);\r\n    border-top-left-radius: 0;\r\n    border-top-right-radius: 0;\r\n    background-color: #fff;\r\n    box-shadow: 0 6px 12px rgba(0,0,0,.175);\r\n}\r\n\r\n.top-nav>.open>.dropdown-menu>li>a {\r\n    white-space: normal;\r\n}\r\n\r\nul.message-dropdown {\r\n    padding: 0;\r\n    max-height: 250px;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n}\r\n\r\nli.message-preview {\r\n    width: 275px;\r\n    border-bottom: 1px solid rgba(0,0,0,.15);\r\n}\r\n\r\nli.message-preview>a {\r\n    padding-top: 15px;\r\n    padding-bottom: 15px;\r\n}\r\n\r\nli.message-footer {\r\n    margin: 5px 0;\r\n}\r\n\r\nul.alert-dropdown {\r\n    width: 200px;\r\n}\r\n\r\n/* Side Navigation */\r\n\r\n@media(min-width:768px) {\r\n    .side-nav {\r\n        position: fixed;\r\n        top: 51px;\r\n        left: 225px;\r\n        width: 225px;\r\n        margin-left: -225px;\r\n        border: none;\r\n        border-radius: 0;\r\n        overflow-y: auto;\r\n        background-color: #222;\r\n        bottom: 0;\r\n        overflow-x: hidden;\r\n        padding-bottom: 40px;\r\n    }\r\n\r\n    .side-nav>li>a {\r\n        width: 225px;\r\n    }\r\n\r\n    .side-nav li a:hover,\r\n    .side-nav li a:focus {\r\n        outline: none;\r\n        background-color: #000 !important;\r\n    }\r\n}\r\n\r\n.side-nav>li>ul {\r\n    padding: 0;\r\n}\r\n\r\n.side-nav>li>ul>li>a {\r\n    display: block;\r\n    padding: 10px 15px 10px 38px;\r\n    text-decoration: none;\r\n    color: #999;\r\n}\r\n\r\n.side-nav>li>ul>li>a:hover {\r\n    color: #fff;\r\n}\r\n\r\n/* Flot Chart Containers */\r\n\r\n.flot-chart {\r\n    display: block;\r\n    height: 400px;\r\n}\r\n\r\n.flot-chart-content {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n/* Custom Colored Panels */\r\n\r\n.huge {\r\n    font-size: 40px;\r\n}\r\n\r\n.panel-green {\r\n    border-color: #5cb85c;\r\n}\r\n\r\n.panel-green > .panel-heading {\r\n    border-color: #5cb85c;\r\n    color: #fff;\r\n    background-color: #5cb85c;\r\n}\r\n\r\n.panel-green > a {\r\n    color: #5cb85c;\r\n}\r\n\r\n.panel-green > a:hover {\r\n    color: #3d8b3d;\r\n}\r\n\r\n.panel-red {\r\n    border-color: #d9534f;\r\n}\r\n\r\n.panel-red > .panel-heading {\r\n    border-color: #d9534f;\r\n    color: #fff;\r\n    background-color: #d9534f;\r\n}\r\n\r\n.panel-red > a {\r\n    color: #d9534f;\r\n}\r\n\r\n.panel-red > a:hover {\r\n    color: #b52b27;\r\n}\r\n\r\n.panel-yellow {\r\n    border-color: #f0ad4e;\r\n}\r\n\r\n.panel-yellow > .panel-heading {\r\n    border-color: #f0ad4e;\r\n    color: #fff;\r\n    background-color: #f0ad4e;\r\n}\r\n\r\n.panel-yellow > a {\r\n    color: #f0ad4e;\r\n}\r\n\r\n.panel-yellow > a:hover {\r\n    color: #df8a13;\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/active-users/active-users.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"example-header\">\r\n  <mat-form-field>\r\n    <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n  </mat-form-field>\r\n</div>\r\n\r\n<div class=\"example-container mat-elevation-z8\">\r\n\r\n  <mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n\r\n\r\n \r\n\r\n    <!-- Name Column -->\r\n    <ng-container matColumnDef=\"name\">\r\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.name}} </mat-cell>\r\n    </ng-container>\r\n\r\n <!-- Name Column -->\r\n <ng-container matColumnDef=\"email\">\r\n  <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>\r\n  <mat-cell *matCellDef=\"let row\"> {{row.email}} </mat-cell>\r\n</ng-container>\r\n  <!-- Progress Column -->\r\n  <ng-container matColumnDef=\"phone\">\r\n    <mat-header-cell *matHeaderCellDef mat-sort-header> Phone </mat-header-cell>\r\n    <mat-cell *matCellDef=\"let row\"> {{row.phone}}</mat-cell>\r\n  </ng-container>\r\n  <ng-container matColumnDef=\"action\">\r\n    <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\r\n    <mat-cell *matCellDef=\"let row\">\r\n        <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n            <mat-icon>more_vert</mat-icon>\r\n          </button>\r\n          <mat-menu #menu=\"matMenu\">\r\n            <button *ngIf=\"row.delete_status=='false'\" mat-menu-item >\r\n             \r\n              <span><a  (click)=\"deleteUser(row.action)\">Delete</a></span>\r\n            </button>\r\n            <button *ngIf=\"row.delete_status=='true'\" mat-menu-item>\r\n                \r\n                <span><a >Deleted</a></span>\r\n              </button>\r\n            <button *ngIf=\"row.block_status=='false' && row.delete_status=='false'\" mat-menu-item>\r\n              \r\n              <span><a  (click)=\"blockUser(row._id)\">Block</a></span>\r\n            </button>\r\n            <button  *ngIf=\"row.block_status=='true' && row.delete_status=='false'\" mat-menu-item>\r\n              \r\n              <span><a  (click)=\"unblockUser(row._id)\">Unblock</a></span>\r\n            </button>\r\n          </mat-menu>\r\n       <!-- <div class=\"btn-group\">\r\n          \r\n           <button type=\"button\" class=\"test\" data-toggle=\"dropdown\">\r\n            \r\n             <span class=\"sr-only\">Toggle Dropdown</span>\r\n           </button>\r\n           <ul class=\"dropdown-menu\" role=\"menu\">\r\n\r\n             <li *ngIf=\"row.delete_status=='false'\"><a  (click)=\"deleteUser(row.action)\">Delete</a></li>\r\n             <li *ngIf=\"row.delete_status=='true'\"><a >Deleted</a></li>\r\n             <li *ngIf=\"row.block_status=='false' && row.delete_status=='false'\"><a  (click)=\"blockUser(row._id)\">Block</a></li>\r\n             <li *ngIf=\"row.block_status=='true' && row.delete_status=='false'\"><a  (click)=\"unblockUser(row._id)\">Unblock</a></li>\r\n             \r\n           </ul>\r\n         </div> -->\r\n      </mat-cell>\r\n  </ng-container>\r\n\r\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\r\n    </mat-row>\r\n  </mat-table>\r\n\r\n  <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n</div>\r\n\r\n\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/active-users/active-users.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActiveUsersComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ActiveUsersComponent = (function () {
+    function ActiveUsersComponent(userService, router) {
+        // Create 100 users
+        this.userService = userService;
+        this.router = router;
+        this.displayedColumns = ['name', 'phone', 'email', 'action'];
+    }
+    ActiveUsersComponent.prototype.refresh = function () {
+        var _this = this;
+        var users = [];
+        this.userService.getActiveUsers().subscribe(function (data) {
+            // data.forEach((item, index) => {
+            //   users.push({
+            //   //slno:index+1,
+            //   name: item.name,
+            //   phone: item.phone.toString(),
+            //   email: item.email,
+            //   action:item._id
+            // });
+            // });
+            _this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatTableDataSource */](data);
+            console.log(_this.dataSource);
+            _this.dataSource.paginator = _this.paginator;
+            _this.dataSource.sort = _this.sort;
+        });
+    };
+    ActiveUsersComponent.prototype.ngOnInit = function () {
+        this.refresh();
+    };
+    ActiveUsersComponent.prototype.applyFilter = function (filterValue) {
+        filterValue = filterValue.trim(); // Remove whitespace
+        filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+        this.dataSource.filter = filterValue;
+    };
+    ActiveUsersComponent.prototype.deleteUser = function (id) {
+        var _this = this;
+        this.userService.deleteUser(id).subscribe(function (data) {
+            console.log(data);
+            if (data.success) {
+                _this.refresh();
+                // this.refresh();
+                //  this.router.navigate(['/deleted-users']);
+            }
+            else {
+                // this.router.navigate(['/deleted-users']);
+            }
+        });
+    };
+    ActiveUsersComponent.prototype.blockUser = function (id) {
+        var _this = this;
+        this.userService.blockUser(id).subscribe(function (data) {
+            console.log(data);
+            if (data.success) {
+                _this.refresh();
+                // this.refresh();
+                //this.router.navigate(['/disabled-users']);
+            }
+            else {
+                // this.router.navigate(['/all-users']);
+            }
+        });
+    };
+    ActiveUsersComponent.prototype.unblockUser = function (id) {
+        var _this = this;
+        this.userService.unblockUser(id).subscribe(function (data) {
+            console.log(data);
+            if (data.success) {
+                _this.refresh();
+                // this.refresh();
+                //  this.router.navigate(['/all-users']);
+            }
+            else {
+                // this.router.navigate(['/disabled-users']);
+            }
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */])
+    ], ActiveUsersComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */])
+    ], ActiveUsersComponent.prototype, "sort", void 0);
+    ActiveUsersComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'active-users',
+            template: __webpack_require__("../../../../../src/app/active-users/active-users.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/active-users/active-users.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]])
+    ], ActiveUsersComponent);
+    return ActiveUsersComponent;
+}());
+
+// export interface UserData {
+//  // slno:number;
+//   name: string;
+//   phone: string;
+//   email: string;
+//   action:number;
+// }
+
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 
 /***/ }),
 
@@ -144,7 +301,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/all-users/all-users.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body>\r\n  \r\n      <div id=\"wrapper\">\r\n  \r\n          <!-- Navigation -->\r\n<side-bar></side-bar>\r\n  \r\n          <div id=\"page-wrapper\">\r\n  \r\n              <div class=\"container-fluid\">\r\n  \r\n                  <!-- Page Heading -->\r\n                  <header-title [title]=\"'Users'\"></header-title>\r\n                 \r\n                  <!-- /.row -->\r\n  \r\n              </div>\r\n              \r\n              <!-- /.container-fluid -->\r\n              \r\n<table class=\"table table-striped table-hover table-bordered\">\r\n    <thead class=\"thead-dark\">\r\n      <tr>\r\n        <th>Slno</th>\r\n        <th>Name</th>\r\n        <th>Email</th>\r\n        <th>Phone</th>\r\n        <th>Status</th>\r\n        <!--<th>Action</th>-->\r\n        <th>Action</th>\r\n      </tr>\r\n    </thead>\r\n    <tbody *ngIf=\"users\">\r\n      <tr  *ngFor=\"let user1 of users;let i = index;\">\r\n        <td>{{i+1}}</td>\r\n        <td>{{user1.name}}</td>\r\n         <td>{{user1.email}}</td>\r\n         <td>{{user1.phone}}</td>\r\n        <td *ngIf=\"user1.delete_status=='true'\">deleted user</td>\r\n        <td *ngIf=\"user1.delete_status=='false' && user1.block_status=='false'\">active user</td>\r\n        <td *ngIf=\"user1.block_status=='true' && user1.delete_status=='false'\">blocked user</td>\r\n        <!--<td><a (click)=\"deleteUser(user1._id)\" class=\"btn btn-danger\">Delete</a>\r\n          <a (click)=\"deletedisUser(user1._id)\" class=\"btn btn-danger\">Disable</a></td>-->\r\n          <td>\r\n            <div class=\"btn-group\">\r\n             \r\n              <button type=\"button\" class=\"test\" data-toggle=\"dropdown\">\r\n               \r\n                <span class=\"sr-only\">Toggle Dropdown</span>\r\n              </button>\r\n              <ul class=\"dropdown-menu\" role=\"menu\">\r\n  \r\n                <li *ngIf=\"user1.delete_status=='false'\"><a (click)=\"deleteUser(user1._id)\">Delete</a></li>\r\n                <li *ngIf=\"user1.delete_status=='true'\"><a >Deleted</a></li>\r\n                <li *ngIf=\"user1.block_status=='false' && user1.delete_status=='false'\"><a  (click)=\"blockUser(user1._id)\">Block</a></li>\r\n                <li *ngIf=\"user1.block_status=='true' && user1.delete_status=='false'\"><a  (click)=\"unblockUser(user1._id)\">Unblock</a></li>\r\n                \r\n              </ul>\r\n            </div>\r\n          </td>\r\n      </tr>\r\n    </tbody>\r\n  <tbody *ngIf=\"users?.length == 0\">\r\n      <tr >\r\n          <td colspan=\"4\">No User Found</td>\r\n        </tr>\r\n     </tbody>\r\n  </table>  \r\n          </div>\r\n          <!-- /#page-wrapper -->\r\n  \r\n      </div>\r\n\r\n      <footer></footer> \r\n  </body>\r\n"
+module.exports = "<div class=\"example-header\">\r\n    <mat-form-field>\r\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n    </mat-form-field>\r\n  </div>\r\n  \r\n  <div class=\"example-container mat-elevation-z8\">\r\n  \r\n    <mat-table [dataSource]=\"dataSource\" matSort>\r\n  \r\n  \r\n  \r\n   \r\n  \r\n      <!-- Name Column -->\r\n      <ng-container matColumnDef=\"name\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.name}} </mat-cell>\r\n      </ng-container>\r\n  \r\n   <!-- Name Column -->\r\n   <ng-container matColumnDef=\"email\">\r\n    <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>\r\n    <mat-cell *matCellDef=\"let row\"> {{row.email}} </mat-cell>\r\n  </ng-container>\r\n    <!-- Progress Column -->\r\n    <ng-container matColumnDef=\"phone\">\r\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Phone </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.phone}}</mat-cell>\r\n    </ng-container>\r\n    <ng-container matColumnDef=\"status\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\">\r\n          <div *ngIf=\"row.block_status=='false' && row.delete_status=='false'\"> Active User</div>\r\n          <div *ngIf=\"row.block_status=='true' && row.delete_status=='false'\"> Block User</div>\r\n          <div *ngIf=\"row.block_status=='true' && row.delete_status=='true'\"> Delete User</div>\r\n          <div *ngIf=\"row.delete_status=='true'  && !row.block_status=='true' \"> Delete User</div>\r\n          \r\n        </mat-cell>\r\n      </ng-container>\r\n    <ng-container matColumnDef=\"action\">\r\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\">\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n              <mat-icon>more_vert</mat-icon>\r\n            </button>\r\n            <mat-menu #menu=\"matMenu\">\r\n              <button *ngIf=\"row.delete_status=='false'\" mat-menu-item >\r\n               \r\n                <span><a  (click)=\"deleteUser(row.action)\">Delete</a></span>\r\n              </button>\r\n              <button *ngIf=\"row.delete_status=='true'\" mat-menu-item disabled>\r\n                  \r\n                  <span>deleted</span>\r\n                </button>\r\n              <button *ngIf=\"row.block_status=='false' && row.delete_status=='false'\" mat-menu-item>\r\n                \r\n                <span><a  (click)=\"blockUser(row._id)\">Block</a></span>\r\n              </button>\r\n              <button  *ngIf=\"row.block_status=='true' && row.delete_status=='false'\" mat-menu-item>\r\n                \r\n                <span><a  (click)=\"unblockUser(row._id)\">Unblock</a></span>\r\n              </button>\r\n            </mat-menu>\r\n         <!-- <div class=\"btn-group\">\r\n            \r\n             <button type=\"button\" class=\"test\" data-toggle=\"dropdown\">\r\n              \r\n               <span class=\"sr-only\">Toggle Dropdown</span>\r\n             </button>\r\n             <ul class=\"dropdown-menu\" role=\"menu\">\r\n  \r\n               <li *ngIf=\"row.delete_status=='false'\"><a  (click)=\"deleteUser(row.action)\">Delete</a></li>\r\n               <li *ngIf=\"row.delete_status=='true'\"><a >Deleted</a></li>\r\n               <li *ngIf=\"row.block_status=='false' && row.delete_status=='false'\"><a  (click)=\"blockUser(row._id)\">Block</a></li>\r\n               <li *ngIf=\"row.block_status=='true' && row.delete_status=='false'\"><a  (click)=\"unblockUser(row._id)\">Unblock</a></li>\r\n               \r\n             </ul>\r\n           </div> -->\r\n        </mat-cell>\r\n    </ng-container>\r\n  \r\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\r\n      </mat-row>\r\n    </mat-table>\r\n  \r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n  </div>\r\n  \r\n  \r\n  "
 
 /***/ }),
 
@@ -154,8 +311,14 @@ module.exports = "<body>\r\n  \r\n      <div id=\"wrapper\">\r\n  \r\n          
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AllUsersComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -168,32 +331,52 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AllUsersComponent = (function () {
     function AllUsersComponent(userService, router) {
+        // Create 100 users
         this.userService = userService;
         this.router = router;
+        this.displayedColumns = ['name', 'phone', 'email', 'status', 'action'];
     }
-    AllUsersComponent.prototype.ngOnInit = function () {
+    AllUsersComponent.prototype.refresh = function () {
         var _this = this;
-        this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.role != "admin") {
-                _this.router.navigate(['/login']);
-            }
-        });
+        var users = [];
         this.userService.getAllUser().subscribe(function (data) {
-            _this.users = data;
-            //  console.log(data);
+            // data.forEach((item, index) => {
+            //   users.push({
+            //   //slno:index+1,
+            //   name: item.name,
+            //   phone: item.phone.toString(),
+            //   email: item.email,
+            //   action:item._id
+            // });
+            // });
+            _this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatTableDataSource */](data);
+            console.log(_this.dataSource);
+            _this.dataSource.paginator = _this.paginator;
+            _this.dataSource.sort = _this.sort;
         });
+    };
+    AllUsersComponent.prototype.ngOnInit = function () {
+        this.refresh();
+    };
+    AllUsersComponent.prototype.applyFilter = function (filterValue) {
+        filterValue = filterValue.trim(); // Remove whitespace
+        filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+        this.dataSource.filter = filterValue;
     };
     AllUsersComponent.prototype.deleteUser = function (id) {
         var _this = this;
         this.userService.deleteUser(id).subscribe(function (data) {
             // console.log(data);
             if (data.success) {
-                _this.router.navigate(['/deleted-users']);
+                _this.refresh();
+                // this.refresh();
+                //  this.router.navigate(['/deleted-users']);
             }
             else {
-                _this.router.navigate(['/deleted-users']);
+                // this.router.navigate(['/deleted-users']);
             }
         });
     };
@@ -202,10 +385,12 @@ var AllUsersComponent = (function () {
         this.userService.blockUser(id).subscribe(function (data) {
             // console.log(data);
             if (data.success) {
-                _this.router.navigate(['/disabled-users']);
+                _this.refresh();
+                // this.refresh();
+                //this.router.navigate(['/disabled-users']);
             }
             else {
-                _this.router.navigate(['/all-users']);
+                // this.router.navigate(['/all-users']);
             }
         });
     };
@@ -214,25 +399,53 @@ var AllUsersComponent = (function () {
         this.userService.unblockUser(id).subscribe(function (data) {
             // console.log(data);
             if (data.success) {
-                _this.router.navigate(['/all-users']);
+                _this.refresh();
+                // this.refresh();
+                //  this.router.navigate(['/all-users']);
             }
             else {
-                _this.router.navigate(['/disabled-users']);
+                // this.router.navigate(['/disabled-users']);
             }
         });
     };
+<<<<<<< HEAD
+=======
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */])
+    ], AllUsersComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */])
+    ], AllUsersComponent.prototype, "sort", void 0);
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     AllUsersComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'all-users',
             template: __webpack_require__("../../../../../src/app/all-users/all-users.component.html"),
             styles: [__webpack_require__("../../../../../src/app/all-users/all-users.component.css")],
         }),
+<<<<<<< HEAD
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */]])
+=======
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]])
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], AllUsersComponent);
     return AllUsersComponent;
 }());
 
+<<<<<<< HEAD
+=======
+// export interface UserData {
+//  // slno:number;
+//   name: string;
+//   phone: string;
+//   email: string;
+//   action:number;
+// }
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 
 
 /***/ }),
@@ -310,6 +523,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_reflect_metadata__ = __webpack_require__("../../../../reflect-metadata/Reflect.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_reflect_metadata___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_reflect_metadata__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
@@ -370,6 +584,71 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__angular_cdk_table__ = __webpack_require__("../../../cdk/esm5/table.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__material_material_component__ = __webpack_require__("../../../../../src/app/material/material.component.ts");
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/esm5/platform-browser-dynamic.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_cdk_table__ = __webpack_require__("../../../cdk/esm5/table.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__top_bar_top_bar_component__ = __webpack_require__("../../../../../src/app/top-bar/top-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__side_bar_side_bar_component__ = __webpack_require__("../../../../../src/app/side-bar/side-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__all_users_all_users_component__ = __webpack_require__("../../../../../src/app/all-users/all-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__header_title_header_title_component__ = __webpack_require__("../../../../../src/app/header-title/header-title.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__disabled_users_disabled_users_component__ = __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__deleted_users_deleted_users_component__ = __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__product_product_component__ = __webpack_require__("../../../../../src/app/product/product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__finishedauction_finishedauction_component__ = __webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__upcomingauctions_upcomingauctions_component__ = __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__equal_validator_directive__ = __webpack_require__("../../../../../src/app/equal-validator.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__email_verification_email_verification_component__ = __webpack_require__("../../../../../src/app/email-verification/email-verification.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__closed_auction_back_closed_auction_back_component__ = __webpack_require__("../../../../../src/app/closed-auction-back/closed-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__upcoming_auction_back_upcoming_auction_back_component__ = __webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__running_auction_back_running_auction_back_component__ = __webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__socialmedia_socialmedia_component__ = __webpack_require__("../../../../../src/app/socialmedia/socialmedia.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__read_more_read_more_component__ = __webpack_require__("../../../../../src/app/read-more/read-more.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__count_down_timer_count_down_timer_component__ = __webpack_require__("../../../../../src/app/count-down-timer/count-down-timer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__services_product_service_service__ = __webpack_require__("../../../../../src/app/services/product-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__myauctions_myauctions_component__ = __webpack_require__("../../../../../src/app/myauctions/myauctions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__capitalize_pipe__ = __webpack_require__("../../../../../src/app/capitalize.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__runningauction_runningauction_component__ = __webpack_require__("../../../../../src/app/runningauction/runningauction.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__card_running_card_running_component__ = __webpack_require__("../../../../../src/app/card-running/card-running.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__winnerconfirm_winnerconfirm_component__ = __webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47_ng2_datetime_ng2_datetime__ = __webpack_require__("../../../../ng2-datetime/ng2-datetime.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__product_list_product_list_component__ = __webpack_require__("../../../../../src/app/product-list/product-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__filter_pipe__ = __webpack_require__("../../../../../src/app/filter.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__manage_product_manage_product_component__ = __webpack_require__("../../../../../src/app/manage-product/manage-product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__product_detail_product_detail_component__ = __webpack_require__("../../../../../src/app/product-detail/product-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__product_pipe__ = __webpack_require__("../../../../../src/app/product.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__ng_datepicker_ng_datepicker_component__ = __webpack_require__("../../../../../src/app/ng-datepicker/ng-datepicker.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__adminviewed_adminviewed_component__ = __webpack_require__("../../../../../src/app/adminviewed/adminviewed.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__upload_upload_component__ = __webpack_require__("../../../../../src/app/upload/upload.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56_angular2_image_upload__ = __webpack_require__("../../../../angular2-image-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_57_ng2_file_upload__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__users_sub_users_sub_component__ = __webpack_require__("../../../../../src/app/users-sub/users-sub.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__active_users_active_users_component__ = __webpack_require__("../../../../../src/app/active-users/active-users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60_ngx_slimscroll__ = __webpack_require__("../../../../ngx-slimscroll/dist/ngx-slimscroll.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__date_search_pipe__ = __webpack_require__("../../../../../src/app/date-search.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__ = __webpack_require__("../../../../../src/app/auction-back/auction-back.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__material_material_component__ = __webpack_require__("../../../../../src/app/material/material.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__myauctiontable_myauctiontable_component__ = __webpack_require__("../../../../../src/app/myauctiontable/myauctiontable.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__search_pipe__ = __webpack_require__("../../../../../src/app/search.pipe.ts");
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -384,6 +663,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+<<<<<<< HEAD
+=======
+
+
+// import { DataTablesModule } from 'angular-datatables';
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
+
+
+
+
+
+
+
+
+
+
+<<<<<<< HEAD
+=======
+
+// import { ProductDetailComponent } from './product-detail/product-detail.component';
+// import { DataTablesModule } from 'angular-datatables';
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 
 
 
@@ -414,19 +715,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+<<<<<<< HEAD
+=======
+
+// import { ProductDetailComponent } from './product-detail/product-detail.component';
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 
 
 
-
-
-
-
-
-
-
-
-
-
+//import { NgDatepickerModule } from 'ng2-datepicker';
 
  //file upload
 
@@ -438,9 +735,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
- //angularmaterial
+// import { FlashMessagesModule } from 'angular2-flash-messages';
 var appRoutes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
+<<<<<<< HEAD
     { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__["a" /* RegistrationComponent */] },
     { path: 'product-detail/:id', component: __WEBPACK_IMPORTED_MODULE_47__product_detail_product_detail_component__["a" /* ProductDetailComponent */] },
     { path: 'product', component: __WEBPACK_IMPORTED_MODULE_16__product_product_component__["a" /* ProductComponent */] },
@@ -466,11 +764,40 @@ var appRoutes = [
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_28__login_login_component__["a" /* LoginComponent */] },
     { path: 'upload', component: __WEBPACK_IMPORTED_MODULE_51__upload_upload_component__["a" /* UploadComponent */] },
     { path: 'material', component: __WEBPACK_IMPORTED_MODULE_62__material_material_component__["a" /* MaterialComponent */] } //file upload
+=======
+    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_46__registration_registration_component__["a" /* RegistrationComponent */] },
+    { path: 'product-detail/:id', component: __WEBPACK_IMPORTED_MODULE_51__product_detail_product_detail_component__["a" /* ProductDetailComponent */] },
+    { path: 'product', component: __WEBPACK_IMPORTED_MODULE_20__product_product_component__["a" /* ProductComponent */] },
+    { path: 'product-list', component: __WEBPACK_IMPORTED_MODULE_48__product_list_product_list_component__["a" /* ProductListComponent */] },
+    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_33__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_32__login_login_component__["a" /* LoginComponent */] },
+    { path: 'socialmedia/:id', component: __WEBPACK_IMPORTED_MODULE_37__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */] },
+    { path: 'adminviewed/:id', component: __WEBPACK_IMPORTED_MODULE_54__adminviewed_adminviewed_component__["a" /* AdminviewedComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */] },
+    { path: 'all-users', component: __WEBPACK_IMPORTED_MODULE_16__all_users_all_users_component__["a" /* AllUsersComponent */] },
+    { path: 'disabled-users', component: __WEBPACK_IMPORTED_MODULE_18__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */] },
+    { path: 'deleted-users', component: __WEBPACK_IMPORTED_MODULE_19__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */] },
+    { path: 'upcomingauction', component: __WEBPACK_IMPORTED_MODULE_28__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */] },
+    { path: 'finishedauction', component: __WEBPACK_IMPORTED_MODULE_26__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */] },
+    { path: 'runningauction', component: __WEBPACK_IMPORTED_MODULE_43__runningauction_runningauction_component__["a" /* RunningauctionComponent */] },
+    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_24__home_home_component__["a" /* HomeComponent */] },
+    { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_41__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
+    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_33__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
+    // {path:'closed-auction', component:ClosedAuctionBackComponent},
+    // {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
+    // {path:'running-auction', component:RunningAuctionBackComponent},
+    { path: 'auctions', component: __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__["a" /* AuctionBackComponent */] },
+    { path: 'winnerconfirm/:id', component: __WEBPACK_IMPORTED_MODULE_45__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */] },
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_32__login_login_component__["a" /* LoginComponent */] },
+    { path: 'upload', component: __WEBPACK_IMPORTED_MODULE_55__upload_upload_component__["a" /* UploadComponent */] },
+    { path: 'material', component: __WEBPACK_IMPORTED_MODULE_63__material_material_component__["a" /* MaterialComponent */] } //file upload
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 ];
 var DemoMaterialModule = (function () {
     function DemoMaterialModule() {
     }
     DemoMaterialModule = __decorate([
+<<<<<<< HEAD
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["NgModule"])({
             exports: [
                 __WEBPACK_IMPORTED_MODULE_60__angular_cdk_table__["m" /* CdkTableModule */],
@@ -505,6 +832,42 @@ var DemoMaterialModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_59__angular_material__["F" /* MatTabsModule */],
                 __WEBPACK_IMPORTED_MODULE_59__angular_material__["G" /* MatToolbarModule */],
                 __WEBPACK_IMPORTED_MODULE_59__angular_material__["H" /* MatTooltipModule */],
+=======
+        Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["NgModule"])({
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_11__angular_cdk_table__["m" /* CdkTableModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["a" /* MatAutocompleteModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["b" /* MatButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["c" /* MatButtonToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["d" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["e" /* MatCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["f" /* MatChipsModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["C" /* MatStepperModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["g" /* MatDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["h" /* MatDialogModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["i" /* MatExpansionModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["j" /* MatGridListModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["k" /* MatIconModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["l" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["m" /* MatListModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["n" /* MatMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["o" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["q" /* MatPaginatorModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["r" /* MatProgressBarModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["s" /* MatProgressSpinnerModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["t" /* MatRadioModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["u" /* MatRippleModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["v" /* MatSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["w" /* MatSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["y" /* MatSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["x" /* MatSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["z" /* MatSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["B" /* MatSortModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["E" /* MatTableModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["F" /* MatTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["G" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["H" /* MatTooltipModule */],
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
             ]
         })
     ], DemoMaterialModule);
@@ -515,6 +878,7 @@ var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
+<<<<<<< HEAD
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_18__app_component__["a" /* AppComponent */],
@@ -577,10 +941,101 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_54_ngx_slimscroll__["a" /* NgSlimScrollModule */],
                 //  NgDatepickerModule
                 __WEBPACK_IMPORTED_MODULE_52_angular2_image_upload__["a" /* ImageUploadModule */],
+=======
+        Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_22__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__product_product_component__["a" /* ProductComponent */],
+                __WEBPACK_IMPORTED_MODULE_46__registration_registration_component__["a" /* RegistrationComponent */],
+                __WEBPACK_IMPORTED_MODULE_48__product_list_product_list_component__["a" /* ProductListComponent */],
+                __WEBPACK_IMPORTED_MODULE_49__filter_pipe__["a" /* FilterPipe */],
+                __WEBPACK_IMPORTED_MODULE_50__manage_product_manage_product_component__["a" /* ManageProductComponent */],
+                __WEBPACK_IMPORTED_MODULE_51__product_detail_product_detail_component__["a" /* ProductDetailComponent */],
+                __WEBPACK_IMPORTED_MODULE_32__login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__navigation_navigation_component__["a" /* NavigationComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__card_card_component__["a" /* CardComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */],
+                __WEBPACK_IMPORTED_MODULE_41__myauctions_myauctions_component__["a" /* MyauctionsComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__equal_validator_directive__["a" /* EqualValidator */],
+                __WEBPACK_IMPORTED_MODULE_42__capitalize_pipe__["a" /* CapitalizePipe */],
+                __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__side_bar_side_bar_component__["a" /* SideBarComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__top_bar_top_bar_component__["a" /* TopBarComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__header_title_header_title_component__["a" /* HeaderTitleComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__all_users_all_users_component__["a" /* AllUsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_33__email_verification_email_verification_component__["a" /* EmailVerificationComponent */],
+                __WEBPACK_IMPORTED_MODULE_34__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */],
+                __WEBPACK_IMPORTED_MODULE_35__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */],
+                __WEBPACK_IMPORTED_MODULE_36__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */],
+                __WEBPACK_IMPORTED_MODULE_37__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */],
+                __WEBPACK_IMPORTED_MODULE_57_ng2_file_upload__["FileSelectDirective"],
+                __WEBPACK_IMPORTED_MODULE_38__read_more_read_more_component__["a" /* ReadMoreComponent */],
+                __WEBPACK_IMPORTED_MODULE_39__count_down_timer_count_down_timer_component__["a" /* CountDownTimerComponent */],
+                __WEBPACK_IMPORTED_MODULE_43__runningauction_runningauction_component__["a" /* RunningauctionComponent */],
+                __WEBPACK_IMPORTED_MODULE_44__card_running_card_running_component__["a" /* CardRunningComponent */],
+                __WEBPACK_IMPORTED_MODULE_45__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */],
+                __WEBPACK_IMPORTED_MODULE_52__product_pipe__["a" /* ProductPipe */],
+                __WEBPACK_IMPORTED_MODULE_54__adminviewed_adminviewed_component__["a" /* AdminviewedComponent */],
+                __WEBPACK_IMPORTED_MODULE_55__upload_upload_component__["a" /* UploadComponent */],
+                __WEBPACK_IMPORTED_MODULE_57_ng2_file_upload__["FileSelectDirective"],
+                __WEBPACK_IMPORTED_MODULE_58__users_sub_users_sub_component__["a" /* UsersSubComponent */],
+                __WEBPACK_IMPORTED_MODULE_59__active_users_active_users_component__["a" /* ActiveUsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_53__ng_datepicker_ng_datepicker_component__["a" /* NgDatepickerComponent */],
+                __WEBPACK_IMPORTED_MODULE_61__date_search_pipe__["a" /* DateSearchPipe */],
+                __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__["a" /* AuctionBackComponent */],
+                //DaterangePickerModule
+                __WEBPACK_IMPORTED_MODULE_64__myauctiontable_myauctiontable_component__["a" /* MyauctiontableComponent */],
+                __WEBPACK_IMPORTED_MODULE_65__search_pipe__["a" /* SearchPipe */],
+                __WEBPACK_IMPORTED_MODULE_63__material_material_component__["a" /* MaterialComponent */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
+                // DataTablesModule,
+                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_27_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
+                __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
+                // ImageUploadModule,
+                // DataTablesModule,
+                // NKDatetimeModule,
+                __WEBPACK_IMPORTED_MODULE_47_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
+                //  DataTablesModule
+                // Ng2DatetimePickerModule
+                //BrowserModule,
+                // DataTablesModule,
+                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_27_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
+                __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
+                // ImageUploadModule,
+                __WEBPACK_IMPORTED_MODULE_7__angular_router__["f" /* RouterModule */].forRoot(appRoutes),
+                __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                DemoMaterialModule,
+                // NgDatepickerModule
+                __WEBPACK_IMPORTED_MODULE_60_ngx_slimscroll__["a" /* NgSlimScrollModule */],
+                //  NgDatepickerModule
+                // DataTablesModule,
+                __WEBPACK_IMPORTED_MODULE_56_angular2_image_upload__["a" /* ImageUploadModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["o" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
+                DemoMaterialModule,
+                // FlashMessagesModule.forRoot(),
+                // NKDatetimeModule,
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
                 // NKDatetimeModule,
                 //  DataTablesModule
                 // Ng2DatetimePickerModule
                 //ImageUploadModule.forRoot(), //file upload
+<<<<<<< HEAD
                 __WEBPACK_IMPORTED_MODULE_61__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 DemoMaterialModule,
                 __WEBPACK_IMPORTED_MODULE_59__angular_material__["o" /* MatNativeDateModule */],
@@ -593,11 +1048,105 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_56__config_config__["a" /* Config */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_18__app_component__["a" /* AppComponent */]],
+=======
+                // Daterangepicker,
+                __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                DemoMaterialModule,
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["o" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
+            ],
+            providers: [__WEBPACK_IMPORTED_MODULE_40__services_product_service_service__["a" /* ProductServiceService */],
+                __WEBPACK_IMPORTED_MODULE_8__services_user_service__["a" /* UserService */],
+                __WEBPACK_IMPORTED_MODULE_30__guards_auth_guard__["a" /* AuthGuard */],
+                __WEBPACK_IMPORTED_MODULE_29__services_product_service__["a" /* ProductService */],
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_22__app_component__["a" /* AppComponent */]],
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
         })
     ], AppModule);
     return AppModule;
 }());
 
+<<<<<<< HEAD
+=======
+Object(__WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(AppModule);
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/auction-back/auction-back.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\r\n\r\n.bg-dark\r\n{   \r\n    background: #343a40;\r\n    padding:2em 0;  \r\n}\r\nbody {\r\n    margin-top: 100px;\r\n    background-color: #222;\r\n}\r\n\r\n@media(min-width:768px) {\r\n    body {\r\n        margin-top: 50px;\r\n    }\r\n}\r\n\r\n#wrapper {\r\n    padding-left: 0;\r\n}\r\n\r\n#page-wrapper {\r\n    width: 100%;\r\n    padding: 0;\r\n    background-color: #fff;\r\n}\r\n\r\n.huge {\r\n    font-size: 50px;\r\n    line-height: normal;\r\n}\r\n\r\n@media(min-width:768px) {\r\n    #wrapper {\r\n        padding-left: 225px;\r\n    }\r\n\r\n    #page-wrapper {\r\n        padding: 10px;\r\n    }\r\n}\r\n\r\n/* Top Navigation */\r\n\r\n.top-nav {\r\n    padding: 0 15px;\r\n}\r\n\r\n.top-nav>li {\r\n    display: inline-block;\r\n    float: left;\r\n}\r\n\r\n.top-nav>li>a {\r\n    padding-top: 15px;\r\n    padding-bottom: 15px;\r\n    line-height: 20px;\r\n    color: #999;\r\n}\r\n\r\n.top-nav>li>a:hover,\r\n.top-nav>li>a:focus,\r\n.top-nav>.open>a,\r\n.top-nav>.open>a:hover,\r\n.top-nav>.open>a:focus {\r\n    color: #fff;\r\n    background-color: #000;\r\n}\r\n\r\n.top-nav>.open>.dropdown-menu {\r\n    float: left;\r\n    position: absolute;\r\n    margin-top: 0;\r\n    border: 1px solid rgba(0,0,0,.15);\r\n    border-top-left-radius: 0;\r\n    border-top-right-radius: 0;\r\n    background-color: #fff;\r\n    box-shadow: 0 6px 12px rgba(0,0,0,.175);\r\n}\r\n\r\n.top-nav>.open>.dropdown-menu>li>a {\r\n    white-space: normal;\r\n}\r\n\r\nul.message-dropdown {\r\n    padding: 0;\r\n    max-height: 250px;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n}\r\n\r\nli.message-preview {\r\n    width: 275px;\r\n    border-bottom: 1px solid rgba(0,0,0,.15);\r\n}\r\n\r\nli.message-preview>a {\r\n    padding-top: 15px;\r\n    padding-bottom: 15px;\r\n}\r\n\r\nli.message-footer {\r\n    margin: 5px 0;\r\n}\r\n\r\nul.alert-dropdown {\r\n    width: 200px;\r\n}\r\n\r\n/* Side Navigation */\r\n\r\n@media(min-width:768px) {\r\n    .side-nav {\r\n        position: fixed;\r\n        top: 51px;\r\n        left: 225px;\r\n        width: 225px;\r\n        margin-left: -225px;\r\n        border: none;\r\n        border-radius: 0;\r\n        overflow-y: auto;\r\n        background-color: #222;\r\n        bottom: 0;\r\n        overflow-x: hidden;\r\n        padding-bottom: 40px;\r\n    }\r\n\r\n    .side-nav>li>a {\r\n        width: 225px;\r\n    }\r\n\r\n    .side-nav li a:hover,\r\n    .side-nav li a:focus {\r\n        outline: none;\r\n        background-color: #000 !important;\r\n    }\r\n}\r\n\r\n.side-nav>li>ul {\r\n    padding: 0;\r\n}\r\n\r\n.side-nav>li>ul>li>a {\r\n    display: block;\r\n    padding: 10px 15px 10px 38px;\r\n    text-decoration: none;\r\n    color: #999;\r\n}\r\n\r\n.side-nav>li>ul>li>a:hover {\r\n    color: #fff;\r\n}\r\n\r\n/* Flot Chart Containers */\r\n\r\n.flot-chart {\r\n    display: block;\r\n    height: 400px;\r\n}\r\n\r\n.flot-chart-content {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n/* Custom Colored Panels */\r\n\r\n.huge {\r\n    font-size: 40px;\r\n}\r\n\r\n.panel-green {\r\n    border-color: #5cb85c;\r\n}\r\n\r\n.panel-green > .panel-heading {\r\n    border-color: #5cb85c;\r\n    color: #fff;\r\n    background-color: #5cb85c;\r\n}\r\n\r\n.panel-green > a {\r\n    color: #5cb85c;\r\n}\r\n\r\n.panel-green > a:hover {\r\n    color: #3d8b3d;\r\n}\r\n\r\n.panel-red {\r\n    border-color: #d9534f;\r\n}\r\n\r\n.panel-red > .panel-heading {\r\n    border-color: #d9534f;\r\n    color: #fff;\r\n    background-color: #d9534f;\r\n}\r\n\r\n.panel-red > a {\r\n    color: #d9534f;\r\n}\r\n\r\n.panel-red > a:hover {\r\n    color: #b52b27;\r\n}\r\n\r\n.panel-yellow {\r\n    border-color: #f0ad4e;\r\n}\r\n\r\n.panel-yellow > .panel-heading {\r\n    border-color: #f0ad4e;\r\n    color: #fff;\r\n    background-color: #f0ad4e;\r\n}\r\n\r\n.panel-yellow > a {\r\n    color: #f0ad4e;\r\n}\r\n\r\n.panel-yellow > a:hover {\r\n    color: #df8a13;\r\n}\r\n.margn{\r\n    margin-bottom: 15px;\r\n}\r\nhr {\r\n    margin-top: 10px;\r\n    margin-bottom: 10px;\r\n    border: 0;\r\n    border-top: 1px solid #eee;\r\n}\r\n.list-group-item-text{\r\n    text-align: justify;\r\n}\r\n.alert {\r\n    margin-bottom: 8px;\r\n    padding: 5px;\r\n}\r\n.lead {\r\n    margin-bottom: 10px;\r\n}   \r\n\r\n.brdr label{\r\n    float: left;\r\npadding-right: 10px;\r\npadding-top: 6px;\r\n} \r\n.btn2{border-radius:0px;    padding: 11px 20px; }\r\n.brdr{border:1px solid #ccc;padding:5px 20px; } \r\n.active1{\r\n    background-color: #eee;\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/auction-back/auction-back.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n \r\n <body>\r\n    \r\n              <div id=\"wrapper\">\r\n          \r\n                  <!-- Navigation -->\r\n      <side-bar></side-bar>\r\n          \r\n                  <div id=\"page-wrapper\">\r\n                      <div class=\"container-fluid\">\r\n                              \r\n                                          <!-- Page Heading -->\r\n                                         <header-title [title]=\"'AUCTIONS'\"></header-title>\r\n                                    \r\n                                          <!-- /.row -->\r\n                          \r\n                                      </div>\r\n                      <div class=\"col-md-2\">\r\n                            <nav class=\"nav-sidebar\">\r\n                                <ul class=\"nav tabs\">\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Running'}\"><a (click)=\"updateView('Running')\" href=\"#tab1\" data-toggle=\"tab\">Running Auction</a></li>\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Upcoming'}\"><a (click)=\"updateView('Upcoming')\" href=\"#tab2\" data-toggle=\"tab\">Upcoming auction</a></li>\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Closed'}\"><a (click)=\"updateView('Closed')\" href=\"#tab3\" data-toggle=\"tab\">Closed auction</a></li>                               \r\n                                </ul>\r\n                              </nav>\r\n                      </div>\r\n                      <div class=\"col-md-10\">\r\n                          <ol class=\"breadcrumb\">\r\n                              <li>\r\n                                  <i class=\"fa fa-dashboard\"></i>  <a href=\"dashboard\">dashboard</a>\r\n                              </li>\r\n                              <li class=\"active\">\r\n                                  <i class=\"fa fa-file\"></i> {{title}}\r\n                              </li>\r\n                          </ol>\r\n\r\n                          <div *ngIf=\"viewComp == 'Running'\">\r\n                            <app-running-auction-back [startFrom]=\"startFrom\" [startUpto]=\"startUpto\"  [endFrom]=\"endFrom\"  [endUpto]=\"endUpto\"  ></app-running-auction-back>\r\n                          </div>\r\n                          <div *ngIf=\"viewComp == 'Upcoming'\">\r\n                            <app-upcoming-auction-back></app-upcoming-auction-back>\r\n                          </div>\r\n                          <div *ngIf=\"viewComp == 'Closed'\">\r\n                            <app-closed-auction-back></app-closed-auction-back>\r\n                          </div>\r\n                      </div>\r\n                      \r\n\r\n                    </div>\r\n                    <!-- /#page-wrapper -->\r\n                    \r\n                               \r\n                    </div>\r\n                    \r\n                    <footer></footer> \r\n                      \r\n                    </body>\r\n                                         "
+
+/***/ }),
+
+/***/ "../../../../../src/app/auction-back/auction-back.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuctionBackComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AuctionBackComponent = (function () {
+    function AuctionBackComponent() {
+        this.startFrom = '';
+        this.startUpto = '';
+        this.endFrom = '';
+        this.endUpto = '';
+        this.daterange = {};
+        this.options = {
+            locale: { format: 'DD-MM-YYYY' },
+            alwaysShowCalendars: false,
+        };
+    }
+    AuctionBackComponent.prototype.ngOnInit = function () {
+        this.viewComp = 'Running';
+        this.title = 'Running Auction';
+    };
+    AuctionBackComponent.prototype.updateView = function (page) {
+        this.viewComp = page;
+        this.title = page + ' Auction';
+    };
+    AuctionBackComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-auction-back',
+            template: __webpack_require__("../../../../../src/app/auction-back/auction-back.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/auction-back/auction-back.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AuctionBackComponent);
+    return AuctionBackComponent;
+}());
+
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 
 
 /***/ }),
@@ -729,7 +1278,7 @@ var CardRunningComponent = (function () {
         var lastBidTime = '';
         var lastBiduserId = '';
         this.product.bidders.forEach(function (bidder, i) {
-            console.log(bidder);
+            // console.log(bidder);
             if (bidder.amount >= lastBidprice) {
                 lastBidprice = bidder.amount;
                 lastBiduser = _this.users[bidder.user_id].name;
@@ -985,7 +1534,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/closed-auction-back/closed-auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n \r\n <body>\r\n  \r\n            <div id=\"wrapper\">\r\n        \r\n                <!-- Navigation -->\r\n    <side-bar></side-bar>\r\n        \r\n                <div id=\"page-wrapper\">\r\n        \r\n                    <div class=\"container-fluid\">\r\n        \r\n                        <!-- Page Heading -->\r\n                       <header-title [title]=\"'Closed Auction'\"></header-title>\r\n                        <!-- /.row -->\r\n        \r\n                    </div>\r\n    \r\n                \r\n    \r\n\r\n\r\n\r\n        <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n                <div class=\"container\" style=\"padding-top:20px;\">\r\n                        <div class=\"col-md-9 col-xs-9 brdr\">\r\n                            <div class=\"row\">\r\n                                    <div class=\"col-md-6 col-xs-6\">\r\n                                        <div class=\"row\">\r\n                                            <div class=\"col-md-4 col-xs-4\">\r\n                                                <select [(ngModel)]=\"start\" class=\"form-control\">\r\n                                                    <option  value=\"start_date\">Start</option>\r\n                                                    <option value=\"end_date\">End</option>\r\n                                                </select>\r\n                                            </div>\r\n                                            <div class=\"col-md-8 col-xs-8\">\r\n                                                <label>From</label>\r\n                                                <ng-datepicker [(ngModel)]=\"startDate\" [options]=\"options\" ></ng-datepicker>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class=\"col-md-6 col-xs-6\">\r\n                                            <div class=\"row\">\r\n                                                    <div class=\"col-md-4 col-xs-4\">\r\n                                                        <select [(ngModel)]=\"end\" class=\"form-control\">\r\n                                                            <option  value=\"start_date\">Start</option>\r\n                                                            <option  value=\"end_date\">End</option>\r\n                                                        </select>\r\n                                                    </div>\r\n                                                    <div class=\"col-md-8 col-xs-8\">\r\n                                                        <label>Upto</label>\r\n                                                        <ng-datepicker [(ngModel)]=\"endDate\" [options]=\"options\" ></ng-datepicker>\r\n                                                    </div>\r\n                                                </div>\r\n                                        \r\n                                    </div>\r\n                                    \r\n                            </div>   \r\n                        </div>\r\n                        <!-- <div class=\"col-md-1 col-xs-2\">\r\n                            <div class=\"row\">\r\n                                <input type=\"button\" value=\"search\" class=\"btn btn-primary btn2\">\r\n                            </div>\r\n                        </div> -->\r\n                        <br>\r\n                        <br>\r\n                        <br>\r\n                        <div class=\"clearfix\"></div>\r\n\r\n            <div  *ngFor=\"let product of  (products | dateSearch:startDate:endDate:start:end)\" class=\"item  col-xs-4 col-lg-4\">\r\n                <div class=\"thumbnail\">\r\n                    \r\n                    <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                    <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n               \r\n                    <div class=\"caption\">\r\n                        <h4 class=\"group inner list-group-item-heading text-center\">\r\n                            {{product.name}}</h4>\r\n                            <hr>\r\n                            <p class=\"group inner list-group-item-text\" style=\"min-height: 60px;\">\r\n                            <read-more [text]=\"product.desc\" [maxLength]=\"80\"></read-more>\r\n                          </p>\r\n                        <hr>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Start Price\r\n                                <p class=\"lead\">{{product.bid_amount | number:'1.2-2'}}</p>\r\n                            </div>\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Last Bid Price\r\n                                \r\n                                <p *ngIf=\"product.bidders.length > 0\" class=\"lead\">{{product.lastBidprice | number:'1.2-2'}}</p>\r\n                                <p *ngIf=\"product.bidders.length == 0 \" class=\"alert-danger lead\">No bid</p>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Started On<br>\r\n                                <b>\r\n                                  {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                                  <br>\r\n                                  {{product.start_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                             <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Ended On<br>\r\n                                <b>\r\n                                    {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                    <br>\r\n                                    {{product.end_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                        </div>\r\n                        <hr>\r\n                        <div class=\"row margn\" >\r\n                          \r\n                          <div class=\"col-xs-12 col-md-12 text-center\">\r\n                             <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.user_details.length}}</a>\r\n                             \r\n                          </div>\r\n                          <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                              <div class=\"modal-dialog\">\r\n                            \r\n                                <!-- Modal content-->\r\n                                <div class=\"modal-content\">\r\n                                  <div class=\"modal-header\">\r\n                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                    <h4 class=\"modal-title\">User Involved - {{involvedUsers.user_details.length}}</h4>\r\n                                  </div>\r\n                                  <div class=\"modal-body\">\r\n                                      <table class=\"table\">\r\n                                          <thead class=\"thead-inverse\">\r\n                                      <tr>\r\n                                        <th>Slno</th>\r\n                                        <th>Name</th>\r\n                                        <th>Bid Amount</th>\r\n                                        <th>Time</th>\r\n                                        <th>Status</th>\r\n                                      \r\n                                      </tr>\r\n                                    </thead>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length ==0\">\r\n                                        <tr >\r\n                                              <td colspan=\"5\" class=\"text-center\">No User Involved</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length > 0\" >\r\n                                  \r\n                                        <tr  *ngFor=\"let usr of involvedUsers.bidders;let i = index\" >\r\n                                              <td >{{i+1}}</td>\r\n                                              <td >{{users[usr.user_id].name}}</td>\r\n                                              <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                              <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                              <td >{{usr.bid_status}}</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    </table>\r\n                                  \r\n                                  </div>\r\n                                  <div class=\"modal-footer\">\r\n                                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                                  </div>\r\n                                </div>\r\n                            \r\n                              </div>\r\n                            </div>\r\n                      </div>\r\n                      \r\n                        <div class=\"row\">\r\n                            \r\n                            <div class=\"col-xs-12 col-md-12\">\r\n                                <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center \">\r\n                                  <div *ngIf=\"product.is_bid_completed\">\r\n                                      <div class=\"alert alert-success text-center \">\r\n                                          Winner! \r\n                                          <br> <strong> {{product.lastBiduser}}</strong>\r\n                                          <br>\r\n                                          {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                       </div> \r\n                                  </div>\r\n                                  <div *ngIf=\"!product.is_bid_completed\">\r\n                                  <div class=\"alert alert-success text-center \">\r\n                                    Last Bidder\r\n                                    <br> <strong> {{product.lastBiduser}}</strong>\r\n                                    <br>\r\n                                    {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                 </div> \r\n                                  </div>\r\n                              </div>\r\n                                <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                                    <div>\r\n                                    <div class=\"alert alert-dangertext-center \">\r\n                                    No bidder Found\r\n                                    <br> <strong><a [routerLink]=\"['/product-detail/'+product._id]\" class=\"alert-danger\" >Re-submit</a></strong>\r\n                                    <br>\r\n                                    Bid closed : {{product.end_date | date: 'dd-MM-yyyy h:mm a'}}\r\n                                </div>\r\n                                </div>\r\n                              </div>\r\n                           \r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n           \r\n      \r\n        </div>\r\n        </div>\r\n      \r\n        <div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n            <h3 class=\"text-center\"> No Product Found</h3>\r\n        </div>\r\n        </div>\r\n        \r\n    \r\n    </div>\r\n    <!-- /#page-wrapper -->\r\n    \r\n               \r\n    </div>\r\n    \r\n    <footer></footer> \r\n      \r\n    </body>\r\n     \r\n    \r\n       "
+module.exports = "\r\n\r\n    \r\n\r\n\r\n\r\n        <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n                <div class=\"container\" >\r\n                        <div class=\"col-md-9 col-xs-9 brdr\">\r\n                                <div class=\"row\">\r\n                                        <div class=\"col-md-6 col-xs-6\">\r\n                                            <div class=\"row\">\r\n                                                <div class=\"col-md-4 col-xs-4\">\r\n                                                    <label>Start Date</label>\r\n                                                  </div>\r\n                                                    <div class=\"col-md-8 col-xs-8\">\r\n            \r\n                                                    <!-- <input type=\"text\" class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"options\" (selected)=\"selectedStartDate($event, daterange)\" /> -->\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                        <div class=\"col-md-6 col-xs-6\">\r\n                                                <div class=\"row\">\r\n                                                        <div class=\"col-md-4 col-xs-4\">\r\n                                                            <label>End Date</label>\r\n                                                          </div>\r\n                                                          <div class=\"col-md-8 col-xs-8\">\r\n                                                            <!-- <input type=\"text\"  class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"optionsEnd\" (selected)=\"selectedEndDate($event, daterange)\" /> -->\r\n                                                        </div>\r\n                                                    </div>\r\n                                            \r\n                                        </div>\r\n                                        \r\n                                </div>   \r\n                            </div>\r\n                            <br>\r\n                            <br>\r\n                            <br>\r\n                            <div class=\"clearfix\"></div> \r\n\r\n            <div  *ngFor=\"let product of  (products | dateSearch:startFrom:startUpto:endFrom:endUpto)\" class=\"item  col-xs-4 col-lg-4\">\r\n                <div class=\"thumbnail\">\r\n                    \r\n                    <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                    <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n               \r\n                    <div class=\"caption\">\r\n                        <h4 class=\"group inner list-group-item-heading text-center\">\r\n                            {{product.name}}</h4>\r\n                            <hr>\r\n                            <p class=\"group inner list-group-item-text\" style=\"min-height: 60px;\">\r\n                            <read-more [text]=\"product.desc\" [maxLength]=\"80\"></read-more>\r\n                          </p>\r\n                        <hr>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Start Price\r\n                                <p class=\"lead\">{{product.bid_amount | number:'1.2-2'}}</p>\r\n                            </div>\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Last Bid Price\r\n                                \r\n                                <p *ngIf=\"product.bidders.length > 0\" class=\"lead\">{{product.lastBidprice | number:'1.2-2'}}</p>\r\n                                <p *ngIf=\"product.bidders.length == 0 \" class=\"alert-danger lead\">No bid</p>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Started On<br>\r\n                                <b>\r\n                                  {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                                  <br>\r\n                                  {{product.start_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                             <div class=\"col-xs-12 col-md-6\">\r\n                                Bid Ended On<br>\r\n                                <b>\r\n                                    {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                    <br>\r\n                                    {{product.end_date | date : 'mediumTime'}}\r\n                                </b>\r\n                            </div>\r\n                        </div>\r\n                        <hr>\r\n                        <div class=\"row margn\" >\r\n                          \r\n                          <div class=\"col-xs-12 col-md-12 text-center\">\r\n                             <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.user_details.length}}</a>\r\n                             \r\n                          </div>\r\n                          <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                              <div class=\"modal-dialog\">\r\n                            \r\n                                <!-- Modal content-->\r\n                                <div class=\"modal-content\">\r\n                                  <div class=\"modal-header\">\r\n                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                    <h4 class=\"modal-title\">User Involved - {{involvedUsers.user_details.length}}</h4>\r\n                                  </div>\r\n                                  <div class=\"modal-body\">\r\n                                      <table class=\"table\">\r\n                                          <thead class=\"thead-inverse\">\r\n                                      <tr>\r\n                                        <th>Slno</th>\r\n                                        <th>Name</th>\r\n                                        <th>Bid Amount</th>\r\n                                        <th>Time</th>\r\n                                        <th>Status</th>\r\n                                      \r\n                                      </tr>\r\n                                    </thead>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length ==0\">\r\n                                        <tr >\r\n                                              <td colspan=\"5\" class=\"text-center\">No User Involved</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    <tbody *ngIf=\"involvedUsers.bidders.length > 0\" >\r\n                                  \r\n                                        <tr  *ngFor=\"let usr of involvedUsers.bidders;let i = index\" >\r\n                                              <td >{{i+1}}</td>\r\n                                              <td >{{users[usr.user_id].name}}</td>\r\n                                              <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                              <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                              <td >{{usr.bid_status}}</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                    </table>\r\n                                  \r\n                                  </div>\r\n                                  <div class=\"modal-footer\">\r\n                                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                                  </div>\r\n                                </div>\r\n                            \r\n                              </div>\r\n                            </div>\r\n                      </div>\r\n                      \r\n                        <div class=\"row\">\r\n                            \r\n                            <div class=\"col-xs-12 col-md-12\">\r\n                                <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center \">\r\n                                  <div *ngIf=\"product.is_bid_completed\">\r\n                                      <div class=\"alert alert-success text-center \">\r\n                                          Winner! \r\n                                          <br> <strong> {{product.lastBiduser}}</strong>\r\n                                          <br>\r\n                                          {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                       </div> \r\n                                  </div>\r\n                                  <div *ngIf=\"!product.is_bid_completed\">\r\n                                  <div class=\"alert alert-success text-center \">\r\n                                    Last Bidder\r\n                                    <br> <strong> {{product.lastBiduser}}</strong>\r\n                                    <br>\r\n                                    {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                                 </div> \r\n                                  </div>\r\n                              </div>\r\n                                <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                                    <div>\r\n                                    <div class=\"alert alert-dangertext-center \">\r\n                                    No bidder Found\r\n                                    <br> <strong><a [routerLink]=\"['/product-detail/'+product._id]\" class=\"alert-danger\" >Re-submit</a></strong>\r\n                                    <br>\r\n                                    Bid closed : {{product.end_date | date: 'dd-MM-yyyy h:mm a'}}\r\n                                </div>\r\n                                </div>\r\n                              </div>\r\n                           \r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n           \r\n      \r\n        </div>\r\n        </div>\r\n      \r\n        <div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n            <h3 class=\"text-center\"> No Product Found</h3>\r\n        </div>\r\n        </div>\r\n        \r\n   \r\n    \r\n       "
 
 /***/ }),
 
@@ -998,11 +1547,9 @@ module.exports = "\r\n \r\n <body>\r\n  \r\n            <div id=\"wrapper\">\r\n
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_date_fns_locale_en__ = __webpack_require__("../../../../date-fns/locale/en/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_date_fns_locale_en___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_date_fns_locale_en__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_socket_io_client__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config_config__ = __webpack_require__("../../../../../config/config.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_socket_io_client__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1016,7 +1563,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
+// import { DatepickerOptions } from 'ng2-datepicker';
+// import * as enLocale from 'date-fns/locale/en';
 
 
 var ClosedAuctionBackComponent = (function () {
@@ -1026,24 +1574,27 @@ var ClosedAuctionBackComponent = (function () {
         this.router = router;
         this.config = config;
         this.involvedUsers = [];
-        //options:DatepickerOptions;
+        this.startFrom = '';
+        this.startUpto = '';
+        this.endFrom = '';
+        this.endUpto = '';
         this.options = {
-            minYear: 1970,
-            maxYear: 2030,
-            displayFormat: 'DD-MM-YYYY',
-            barTitleFormat: 'MMMM YYYY',
-            firstCalendarDay: 0,
-            locale: __WEBPACK_IMPORTED_MODULE_4_date_fns_locale_en__
+            locale: { format: 'DD-MM-YYYY' },
+            alwaysShowCalendars: false,
         };
-        this.socket = __WEBPACK_IMPORTED_MODULE_5_socket_io_client__(config.socketURL);
+        this.optionsEnd = {
+            locale: { format: 'DD-MM-YYYY' },
+            alwaysShowCalendars: false,
+        };
+        this.socket = __WEBPACK_IMPORTED_MODULE_4_socket_io_client__(config.socketURL);
     }
     ClosedAuctionBackComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.role != "admin") {
-                _this.router.navigate(['/login']);
-            }
-        });
+        // this.userService.getLoggedUSerDetails().subscribe(info =>{
+        //   if(info.role !="admin"){
+        //     this.router.navigate(['/login']);
+        //   }
+        // });
         this.startDate = new Date();
         this.endDate = new Date();
         this.userService.getAllUsersById().subscribe(function (data) {
@@ -1086,6 +1637,17 @@ var ClosedAuctionBackComponent = (function () {
         this.involvedUsers = product;
         console.log(this.involvedUsers);
     };
+<<<<<<< HEAD
+=======
+    ClosedAuctionBackComponent.prototype.selectedStartDate = function (value, datepicker) {
+        this.startFrom = value.start;
+        this.startUpto = value.end;
+    };
+    ClosedAuctionBackComponent.prototype.selectedEndDate = function (value, datepicker) {
+        this.endFrom = value.start;
+        this.endUpto = value.end;
+    };
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ClosedAuctionBackComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-closed-auction-back',
@@ -1095,7 +1657,11 @@ var ClosedAuctionBackComponent = (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */],
             __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */],
+<<<<<<< HEAD
             __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */]])
+=======
+            __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]])
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], ClosedAuctionBackComponent);
     return ClosedAuctionBackComponent;
 }());
@@ -1235,12 +1801,11 @@ var DashboardComponent = (function () {
         this.router = router;
     }
     DashboardComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.role != "admin") {
-                _this.router.navigate(['/login']);
-            }
-        });
+        // this.userService.getLoggedUSerDetails().subscribe(info =>{
+        //   if(info.role !="admin"){
+        //     this.router.navigate(['/login']);
+        //   }
+        // });
     };
     DashboardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1273,21 +1838,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var DateSearchPipe = (function () {
     function DateSearchPipe() {
     }
-    DateSearchPipe.prototype.transform = function (value, startDate, endDate, start, end) {
+    DateSearchPipe.prototype.transform = function (value, startFrom, startUpto, endFrom, endUpto) {
         // console.log(startDate);
-        console.log(start);
-        console.log(end);
+        console.log(startFrom);
+        console.log(startUpto);
+        console.log(endFrom);
+        console.log(endUpto);
+        // console.log(new Date(startFrom));
         // return value;
         return value.filter(function (el) {
             // console.log(startDate);
             // console.log(new Date(el.start_date));
-            var end1 = new Date(endDate);
-            end1.setHours(23, 59, 59, 999);
-            if ((!start || new Date(el[start]) >= new Date(startDate)) && (!end || new Date(el[end]) <= end1)) {
+            if (startFrom != '') {
+                var startFrom1 = new Date(startFrom);
+                var startUpto1 = new Date(startUpto);
+                startUpto1.setHours(23, 59, 59, 999);
+            }
+            if (endFrom != '') {
+                var endFrom1 = new Date(endFrom);
+                var endUpto1 = new Date(endUpto);
+                endUpto1.setHours(23, 59, 59, 999);
+            }
+            if ((startFrom == '' || ((new Date(el.start_date) >= startFrom1) && (new Date(el.start_date) <= startUpto1))) &&
+                (endFrom == '' || ((new Date(el.end_date) >= endFrom1) && (new Date(el.end_date) <= endUpto1)))) {
                 return true;
             }
+            // if(
+            //   (new Date(el.start_date) >= new Date(startFrom)) && 
+            //   (new Date(el.start_date) >= new Date(startFrom)) && 
+            //   (new Date(el.start_date) >= new Date(startFrom)) && 
+            //   (new Date(el.start_date) >= new Date(startFrom)) 
+            // ){
+            //   return true;
+            // }
             //    return el.pollqtn.toLowerCase().indexOf(args) > -1;
         });
+        //return value;
     };
     DateSearchPipe = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
@@ -1322,7 +1908,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/deleted-users/deleted-users.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body>\r\n  \r\n      <div id=\"wrapper\">\r\n  \r\n          <!-- Navigation -->\r\n<side-bar></side-bar>\r\n  \r\n          <div id=\"page-wrapper\">\r\n  \r\n              <div class=\"container-fluid\">\r\n  \r\n                  <!-- Page Heading -->\r\n                  <header-title [title]=\"'Deleted Users'\"></header-title>\r\n                 \r\n                  <!-- /.row -->\r\n  \r\n              </div>\r\n              \r\n              <!-- /.container-fluid -->\r\n              <table class=\"table table-striped table-hover table-bordered\">\r\n                <thead class=\"thead-dark\">\r\n                  <tr>\r\n                    <th>Slno</th>\r\n                    <th>Name</th>\r\n                    <th>Email</th>\r\n                    <th>phone</th>\r\n                   \r\n                  </tr>\r\n                </thead>\r\n                <tbody *ngIf=\"users\">\r\n                  <tr  *ngFor=\"let user1 of users;let i = index;\">\r\n                    <td>{{i+1}}</td>\r\n                    <td>{{user1.name}}</td>\r\n                    <td>{{user1.email}}</td>\r\n                    <td>{{user1.phone}}</td>\r\n                    \r\n                   \r\n                  </tr>\r\n                </tbody>\r\n              <tbody *ngIf=\"users?.length == 0\">\r\n                  <tr >\r\n                      <td colspan=\"4\">No Delete User Found</td>\r\n                    </tr>\r\n                 </tbody>\r\n              </table>  \r\n          </div>\r\n          <!-- /#page-wrapper -->\r\n  \r\n      </div>\r\n\r\n      <footer></footer> \r\n  </body>\r\n"
+module.exports = "<div class=\"example-header\">\r\n    <mat-form-field>\r\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n    </mat-form-field>\r\n  </div>\r\n  \r\n  <div class=\"example-container mat-elevation-z8\">\r\n  \r\n    <mat-table [dataSource]=\"dataSource\" matSort>\r\n  \r\n      <!-- Name Column -->\r\n      <ng-container matColumnDef=\"name\">\r\n          <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"> {{row.name}} </mat-cell>\r\n        </ng-container>\r\n  \r\n      <!-- Progress Column -->\r\n      <ng-container matColumnDef=\"phone\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Phone </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.phone}}</mat-cell>\r\n      </ng-container>\r\n  \r\n  \r\n  \r\n  <!-- Name Column -->\r\n  <ng-container matColumnDef=\"email\">\r\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.email}} </mat-cell>\r\n    </ng-container>\r\n  \r\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\r\n      </mat-row>\r\n    </mat-table>\r\n  \r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n  </div>\r\n  \r\n  \r\n "
 
 /***/ }),
 
@@ -1332,8 +1918,14 @@ module.exports = "<body>\r\n  \r\n      <div id=\"wrapper\">\r\n  \r\n          
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeletedUsersComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1346,31 +1938,59 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var DeletedUsersComponent = (function () {
     function DeletedUsersComponent(userService, router) {
+        // Create 100 users
         this.userService = userService;
         this.router = router;
+        this.displayedColumns = ['name', 'phone', 'email'];
     }
     DeletedUsersComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.role != "admin") {
-                _this.router.navigate(['/login']);
-            }
-        });
+        var users = [];
         this.userService.getDeletedUsers().subscribe(function (data) {
-            _this.users = data;
-            console.log(data);
+            data.forEach(function (item, index) {
+                users.push({
+                    name: item.name,
+                    phone: item.phone.toString(),
+                    email: item.email
+                });
+            });
+            _this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatTableDataSource */](users);
+            _this.dataSource.paginator = _this.paginator;
+            _this.dataSource.sort = _this.sort;
         });
     };
+<<<<<<< HEAD
+=======
+    DeletedUsersComponent.prototype.applyFilter = function (filterValue) {
+        filterValue = filterValue.trim(); // Remove whitespace
+        filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+        this.dataSource.filter = filterValue;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */])
+    ], DeletedUsersComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */])
+    ], DeletedUsersComponent.prototype, "sort", void 0);
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     DeletedUsersComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'deleted-users',
             template: __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.html"),
             styles: [__webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.css")]
         }),
+<<<<<<< HEAD
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */]])
+=======
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]])
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], DeletedUsersComponent);
     return DeletedUsersComponent;
 }());
@@ -1400,7 +2020,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/disabled-users/disabled-users.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body>\r\n  \r\n      <div id=\"wrapper\">\r\n  \r\n          <!-- Navigation -->\r\n<side-bar></side-bar>\r\n  \r\n          <div id=\"page-wrapper\">\r\n  \r\n              <div class=\"container-fluid\">\r\n  \r\n                  <!-- Page Heading -->\r\n                  <header-title [title]=\"'Disabled Users'\"></header-title>\r\n                 \r\n                  <!-- /.row -->\r\n  \r\n              </div>\r\n              \r\n              <!-- /.container-fluid -->\r\n              <table class=\"table table-striped table-hover table-bordered\">\r\n                <thead class=\"thead-dark\">\r\n                  <tr>\r\n                    <th>Slno</th>\r\n                    <th>Name</th>\r\n                    <th>Email</th>\r\n                    <th>Phone</th>\r\n                    <th>Action</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody *ngIf=\"users\">\r\n                  <tr  *ngFor=\"let user1 of users;let i = index;\">\r\n                    <td>{{i+1}}</td>\r\n                    <td>{{user1.name}}</td>\r\n                    <td>{{user1.email}}</td>\r\n                    <td>{{user1.phone}}</td>\r\n                    <td>\r\n                        <div class=\"btn-group\">\r\n                         \r\n                          <button type=\"button\" class=\"test\" data-toggle=\"dropdown\">\r\n                           \r\n                            <span class=\"sr-only\">Toggle Dropdown</span>\r\n                          </button>\r\n                          <ul class=\"dropdown-menu\" role=\"menu\">\r\n                            <li *ngIf=\"user1.block_status=='true' && user1.delete_status=='false'\"><a   (click)=\"unblockUser(user1._id)\">Unblock</a></li>\r\n                            \r\n                          </ul>\r\n                        </div>\r\n                      </td>\r\n                  </tr>\r\n                </tbody>\r\n              <tbody *ngIf=\"users?.length == 0\">\r\n                  <tr >\r\n                      <td colspan=\"5\">No Blocked User Found</td>\r\n                    </tr>\r\n                 </tbody>\r\n              </table>  \r\n          </div>\r\n          <!-- /#page-wrapper -->\r\n  \r\n      </div>\r\n\r\n      <footer></footer> \r\n  </body>\r\n"
+module.exports = "<div class=\"example-header\">\r\n    <mat-form-field>\r\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n    </mat-form-field>\r\n  </div>\r\n  \r\n  <div class=\"example-container mat-elevation-z8\">\r\n  \r\n    <mat-table [dataSource]=\"dataSource\" matSort>\r\n  \r\n  \r\n  \r\n   \r\n  \r\n      <!-- Name Column -->\r\n      <ng-container matColumnDef=\"name\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.name}} </mat-cell>\r\n      </ng-container>\r\n  \r\n   <!-- Name Column -->\r\n   <ng-container matColumnDef=\"email\">\r\n    <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>\r\n    <mat-cell *matCellDef=\"let row\"> {{row.email}} </mat-cell>\r\n  </ng-container>\r\n    <!-- Progress Column -->\r\n    <ng-container matColumnDef=\"phone\">\r\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Phone </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.phone}}</mat-cell>\r\n    </ng-container>\r\n    <ng-container matColumnDef=\"action\">\r\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\">\r\n          <button mat-icon-button [matMenuTriggerFor]=\"menu\">\r\n              <mat-icon>more_vert</mat-icon>\r\n            </button>\r\n            <mat-menu #menu=\"matMenu\">\r\n              <button *ngIf=\"row.block_status=='true' && row.delete_status=='false'\" mat-menu-item >\r\n               \r\n                <span><a  (click)=\"unblockUser(row._id)\">Unblock</a></span>\r\n              </button>\r\n              \r\n              \r\n             \r\n            </mat-menu>\r\n        \r\n        </mat-cell>\r\n    </ng-container>\r\n  \r\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\r\n      </mat-row>\r\n    </mat-table>\r\n  \r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n  </div>\r\n  \r\n  \r\n  \r\n                    <!-- <td>\r\n                        <div class=\"btn-group\">\r\n                         \r\n                          <button type=\"button\" class=\"test\" data-toggle=\"dropdown\">\r\n                           \r\n                            <span class=\"sr-only\">Toggle Dropdown</span>\r\n                          </button>\r\n                          <ul class=\"dropdown-menu\" role=\"menu\">\r\n                            <li *ngIf=\"user1.block_status=='true' && user1.delete_status=='false'\"><a   (click)=\"unblockUser(user1._id)\">Unblock</a></li>\r\n                            \r\n                          </ul>\r\n                        </div>\r\n                      </td> -->\r\n                \r\n     "
 
 /***/ }),
 
@@ -1410,8 +2030,14 @@ module.exports = "<body>\r\n  \r\n      <div id=\"wrapper\">\r\n  \r\n          
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DisabledUsersComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1424,11 +2050,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var DisabledUsersComponent = (function () {
     function DisabledUsersComponent(userService, router) {
+        // Create 100 users
         this.userService = userService;
         this.router = router;
+        this.displayedColumns = ['name', 'phone', 'email', 'action'];
     }
+    DisabledUsersComponent.prototype.refresh = function () {
+        var _this = this;
+        var users = [];
+        this.userService.getDisabledUsers().subscribe(function (data) {
+            // data.forEach((item, index) => {
+            //   users.push({
+            //   //slno:index+1,
+            //   name: item.name,
+            //   phone: item.phone.toString(),
+            //   email: item.email,
+            //   action:item._id
+            // });
+            // });
+            _this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatTableDataSource */](data);
+            console.log(_this.dataSource);
+            _this.dataSource.paginator = _this.paginator;
+            _this.dataSource.sort = _this.sort;
+        });
+    };
     DisabledUsersComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getLoggedUSerDetails().subscribe(function (info) {
@@ -1436,31 +2084,50 @@ var DisabledUsersComponent = (function () {
                 _this.router.navigate(['/login']);
             }
         });
-        this.userService.getDisabledUsers().subscribe(function (data) {
-            _this.users = data;
-            console.log(data);
-        });
+        this.refresh();
+    };
+    DisabledUsersComponent.prototype.applyFilter = function (filterValue) {
+        filterValue = filterValue.trim(); // Remove whitespace
+        filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+        this.dataSource.filter = filterValue;
     };
     DisabledUsersComponent.prototype.unblockUser = function (id) {
         var _this = this;
         this.userService.unblockUser(id).subscribe(function (data) {
             console.log(data);
             if (data.success) {
-                _this.router.navigate(['/all-users']);
+                _this.refresh();
+                //  this.router.navigate(['/all-users']);
             }
             else {
-                _this.router.navigate(['/disabled-users']);
+                // this.router.navigate(['/disabled-users']);
             }
         });
     };
+<<<<<<< HEAD
+=======
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */])
+    ], DisabledUsersComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */])
+    ], DisabledUsersComponent.prototype, "sort", void 0);
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     DisabledUsersComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'disabled-users',
             template: __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.html"),
             styles: [__webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.css")]
         }),
+<<<<<<< HEAD
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */]])
+=======
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]])
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], DisabledUsersComponent);
     return DisabledUsersComponent;
 }());
@@ -1904,7 +2571,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/header-title/header-title.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-lg-12\">\r\n      <h1 class=\"page-header\">\r\n          AUCTION \r\n          \r\n      </h1>\r\n      <ol class=\"breadcrumb\">\r\n          <li>\r\n              <i class=\"fa fa-dashboard\"></i>  <a href=\"index.html\">dashboard</a>\r\n          </li>\r\n          <li class=\"active\">\r\n              <i class=\"fa fa-file\"></i> {{title}}\r\n          </li>\r\n      </ol>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-lg-12\">\r\n      <h1 class=\"page-header\">\r\n          {{title}}\r\n      </h1>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -3137,7 +3804,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product-detail/product-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation -->\r\n<side-bar></side-bar>\r\n    \r\n            <div id=\"page-wrapper\">\r\n    \r\n                <div class=\"container-fluid\">\r\n    \r\n                    <!-- Page Heading -->\r\n                   <header-title [title]=\"'Manage Products'\"></header-title>\r\n                    <!-- /.row -->\r\n    \r\n                </div>\r\n                <!-- /.container-fluid -->\r\n              \r\n          \r\n<div class=\"wrapper\">\r\n        <div class=\"col-md-9 shadow\">\r\n                <!-- <h3 class=\"headng\" >Edit a Product</h3>\r\n                <br> -->\r\n  \r\n  <!-- <form class=\"well\" role=\"form\"   #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct()\" novalidate> -->\r\n        <form class=\"well\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && updateProduct(arr1);\" novalidate>\r\n      <!-- <form #form='ngForm' (ngSubmit)=\"addProduct()\" class=\"well\" > -->\r\n            <div class=\"form-group\" >\r\n                <label > Name *</label>\r\n                <input id=\"name\" name=\"name\" class=\"form-control\"\r\n                required  autofocus\r\n                [(ngModel)]=\"arr1.name\" #name=\"ngModel\" (keypress)=_keyPress1($event)>\r\n                <div *ngIf=\"f.submitted && !name.valid \"  class=\"alert alert-danger\"> ! Name is required</div>\r\n             \r\n            </div>\r\n        \r\n            <td><img src=\"assets/uploads/{{arr1.image || 'default.png'}}\" alt=\"\" class=\"image\"></td>\r\n            <div class=\"form-group\">\r\n                <label for=\"single\">Select Image</label>\r\n                <input type=\"file\" class=\"\" name=\"single\" ng2FileSelect [uploader]=\"uploader\" (change)=\"imageOr();\"  />                                  \r\n             </div>\r\n            <div class=\"form-group\" >\r\n                    <label >  Bid Amount *</label>\r\n                    <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n                    required  \r\n                    [(ngModel)]=\"arr1.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                    <div *ngIf=\"f.submitted && !bid_amount.valid\"  class=\"alert alert-danger\"> ! Amount is required</div>\r\n           \r\n                </div>\r\n\r\n                <div class=\"form-group\" >\r\n                        <label >  Minimum Bid Rate *</label>\r\n                        <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                        required  \r\n                        [(ngModel)]=\"arr1.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                        <div *ngIf=\"f.submitted && !min_bid_rate.valid\"  class=\"alert alert-danger\"> ! Minimum Bid rate is required</div>\r\n               \r\n                    </div>\r\n        \r\n             <div class=\"form-group\" >\r\n                    <label > Bid Start time *</label>\r\n                    <datetime id=\"start_date\" name=\"start_date\"  [(ngModel)]=\"start_date\" [(ngModel)]=\"arr1.start_date\" [hasClearButton]=\"true\"  [datepicker]= \"datepickerOpts\"></datetime>\r\n                </div>\r\n                    <div *ngIf=\"start\">\r\n                    <div class=\"alert alert-danger\"> ! Start time is required</div>\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                        <label > Bid End time *</label>\r\n                        <datetime name = \"end_date\"  [(ngModel)]=\"end_date\" [(ngModel)]=\"arr1.end_date\" [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\"></datetime>\r\n                        <div *ngIf=\"end\">\r\n                        <div  class=\"alert alert-danger\"> ! End time is required</div>\r\n                    </div>\r\n                    </div>\r\n\r\n            \r\n                    <!-- <image-upload></image-upload> -->\r\n            <!-- <div>\r\n                <label > Image</label>\r\n                <input type=\"file\"  name=\"pollqtn\"   required />\r\n            </div> -->\r\n           \r\n\r\n           \r\n            <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n            <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n            \r\n            <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n            \r\n            <input type=\"file\" name =\"myfile\" ng-disabled=\"uploading\" style=\"display: none\">\r\n\r\n            <div class=\"form-group\" >\r\n                <label > Description</label>\r\n                <br>\r\n                <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"arr1.desc\" ></textarea>\r\n            </div>\r\n           \r\n            <!-- <input type=\"submit\" class=\"btn btn-info blakbtn\" value=\"Submit\"  > -->\r\n            <button type= \"submit\" class=\"btn btn-primary\">Update</button>\r\n            <!-- <input type=\"submit\" class=\"btn btn-primary\"  value=\"Update\"  > -->\r\n            <!-- <input type=\"button\" class=\"btn btn-primary\" (click)=\"clickMethod(arr1)\"  value=\"Delete\"  > -->\r\n           \r\n        </form>\r\n  \r\n      </div>\r\n     \r\n    </div>\r\n\r\n   \r\n     \r\n</div>\r\n<!-- /#page-wrapper -->\r\n\r\n           \r\n</div>\r\n\r\n<footer></footer> \r\n  "
+module.exports = "<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation -->\r\n<side-bar></side-bar>\r\n    \r\n            <div id=\"page-wrapper\">\r\n    \r\n                <div class=\"container-fluid\">\r\n    \r\n                    <!-- Page Heading -->\r\n                   <header-title [title]=\"'Manage Products'\"></header-title>\r\n                    <!-- /.row -->\r\n    \r\n                </div>\r\n                <!-- /.container-fluid -->\r\n              \r\n          \r\n<div class=\"wrapper\">\r\n        <div class=\"col-md-9 shadow\">\r\n                <!-- <h3 class=\"headng\" >Edit a Product</h3>\r\n                <br> -->\r\n  \r\n  <!-- <form class=\"well\" role=\"form\"   #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct()\" novalidate> -->\r\n        <form class=\"well\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && updateProduct(arr1);\" novalidate>\r\n      <!-- <form #form='ngForm' (ngSubmit)=\"addProduct()\" class=\"well\" > -->\r\n            <div class=\"form-group\" >\r\n                <label > Name *</label>\r\n                <input id=\"name\" name=\"name\" class=\"form-control\"\r\n                required  autofocus\r\n                [(ngModel)]=\"arr1.name\" #name=\"ngModel\" (keypress)=_keyPress1($event)>\r\n                <div *ngIf=\"f.submitted && !name.valid \"  class=\"alert alert-danger\"> ! Name is required</div>\r\n             \r\n            </div>\r\n        \r\n            <td><img src=\"assets/uploads/{{arr1.image || 'defualt.png'}}\" alt=\"\" class=\"image\"></td>\r\n            <div class=\"form-group\">\r\n                <label for=\"single\">Select Image</label>\r\n                <input type=\"file\" class=\"\" name=\"single\" ng2FileSelect [uploader]=\"uploader\" (change)=\"imageOr();\"  />                                  \r\n             </div>\r\n            <div class=\"form-group\" >\r\n                    <label >  Bid Amount *</label>\r\n                    <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n                    required  \r\n                    [(ngModel)]=\"arr1.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                    <div *ngIf=\"f.submitted && !bid_amount.valid\"  class=\"alert alert-danger\"> ! Amount is required</div>\r\n           \r\n                </div>\r\n\r\n                <div class=\"form-group\" >\r\n                        <label >  Minimum Bid Rate *</label>\r\n                        <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                        required  \r\n                        [(ngModel)]=\"arr1.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                        <div *ngIf=\"f.submitted && !min_bid_rate.valid\"  class=\"alert alert-danger\"> ! Minimum Bid rate is required</div>\r\n               \r\n                    </div>\r\n        \r\n             <div class=\"form-group\" >\r\n                    <label > Bid Start time *</label>\r\n                    <datetime id=\"start_date\" name=\"start_date\"  [(ngModel)]=\"start_date\" [(ngModel)]=\"arr1.start_date\" [hasClearButton]=\"true\"  [datepicker]= \"datepickerOpts\"></datetime>\r\n                </div>\r\n                    <div *ngIf=\"start\">\r\n                    <div class=\"alert alert-danger\"> ! Start time is required</div>\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                        <label > Bid End time *</label>\r\n                        <datetime name = \"end_date\"  [(ngModel)]=\"end_date\" [(ngModel)]=\"arr1.end_date\" [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\"></datetime>\r\n                        <div *ngIf=\"end\">\r\n                        <div  class=\"alert alert-danger\"> ! End time is required</div>\r\n                    </div>\r\n                    <div *ngIf=\"greater\">\r\n                        <div class=\"alert alert-danger\"> !End time must be after the Start time</div>\r\n                    </div>\r\n                    </div>\r\n\r\n            \r\n                    <!-- <image-upload></image-upload> -->\r\n            <!-- <div>\r\n                <label > Image</label>\r\n                <input type=\"file\"  name=\"pollqtn\"   required />\r\n            </div> -->\r\n           \r\n\r\n           \r\n            <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n            <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n            \r\n            <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n            \r\n            <input type=\"file\" name =\"myfile\" ng-disabled=\"uploading\" style=\"display: none\">\r\n\r\n            <div class=\"form-group\" >\r\n                <label > Description</label>\r\n                <br>\r\n                <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"arr1.desc\" ></textarea>\r\n            </div>\r\n           \r\n            <!-- <input type=\"submit\" class=\"btn btn-info blakbtn\" value=\"Submit\"  > -->\r\n            <button type= \"submit\" class=\"btn btn-primary\">Update</button>\r\n            <!-- <input type=\"submit\" class=\"btn btn-primary\"  value=\"Update\"  > -->\r\n            <!-- <input type=\"button\" class=\"btn btn-primary\" (click)=\"clickMethod(arr1)\"  value=\"Delete\"  > -->\r\n           \r\n        </form>\r\n  \r\n      </div>\r\n     \r\n    </div>\r\n\r\n   \r\n     \r\n</div>\r\n<!-- /#page-wrapper -->\r\n\r\n           \r\n</div>\r\n\r\n<footer></footer> \r\n  "
 
 /***/ }),
 
@@ -3151,8 +3818,11 @@ module.exports = "<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation --
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
+=======
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3166,16 +3836,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
  // File Upload
 
-
-
 var ProductDetailComponent = (function () {
-    function ProductDetailComponent(_prductService, route, router, userService, config) {
+    function ProductDetailComponent(_prductService, route, router) {
         this._prductService = _prductService;
         this.route = route;
         this.router = router;
-        this.userService = userService;
-        this.config = config;
-        this.uploader = new __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__["FileUploader"]({ url: this.config.fileUploadURL });
+        this.uploader = new __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__["FileUploader"]({ url: 'http://localhost:3000/products/upload' });
         this.arr1 = {
             name: String,
             start_date: Date,
@@ -3184,10 +3850,20 @@ var ProductDetailComponent = (function () {
         };
         this.start = false;
         this.end = false;
+        this.imageSelected = false;
+        this.greater = false;
         // tableview: boolean = false;
         this.updateProEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.deleteProEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.datepickerOpts = {
+            startDate: new Date(Date.now()),
+            autoclose: true,
+            todayBtn: 'linked',
+            todayHighlight: true,
+            assumeNearbyYear: true,
+            format: 'd MM yyyy',
+        };
+        this.datepickerOpts1 = {
             startDate: new Date(Date.now()),
             autoclose: true,
             todayBtn: 'linked',
@@ -3216,30 +3892,64 @@ var ProductDetailComponent = (function () {
             });
         });
     };
+    ProductDetailComponent.prototype.imageOr = function () {
+        this.imageSelected = true;
+    };
     ProductDetailComponent.prototype.updateProduct = function (arr1) {
         var _this = this;
-        this.uploader.uploadAll();
-        this.uploader.onCompleteItem = function (item, response, status, headers) {
-            // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
-            response = JSON.parse(response);
-            _this.arr1.image = response.filename;
-            console.log(_this.arr1.image);
-        };
-        // console.log(arr1);
-        this._prductService.updateProduct(arr1).subscribe(function (data1) {
-            if (arr1.start_date == undefined) {
-                _this.start = true;
-                //  alert("Bid Start time is required");
-            }
-            if (arr1.end_date == undefined) {
-                _this.end = true;
-                // alert("Bid End time is required");
-            }
-            else if (arr1.start_date != undefined) {
-                alert("Update Product Successfully");
-                _this.router.navigate(['/product-list']);
-            }
-        });
+        if (this.imageSelected == true) {
+            this.uploader.uploadAll();
+            this.uploader.onCompleteItem = function (item, response, status, headers) {
+                // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
+                response = JSON.parse(response);
+                _this.arr1.image = response.filename;
+                console.log(_this.arr1.image);
+                _this._prductService.updateProduct(arr1).subscribe(function (data1) {
+                    if (arr1.start_date == undefined) {
+                        _this.start = true;
+                        //  alert("Bid Start time is required");
+                    }
+                    if (arr1.end_date == undefined) {
+                        _this.end = true;
+                        // alert("Bid End time is required");
+                    }
+                    if (data1.start_date > data1.end_date) {
+                        _this.greater = true;
+                    }
+                    else if (data1.start_date <= data1.end_date) {
+                        alert("Update Product Successfully");
+                        _this.router.navigate(['/product-list']);
+                    }
+                });
+            };
+        }
+        else if (this.imageSelected == false) {
+            this.uploader.uploadAll();
+            this.uploader.onCompleteItem = function (item, response, status, headers) {
+                // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
+                response = JSON.parse(response);
+                _this.arr1.image = response.filename;
+                console.log(_this.arr1.image);
+            };
+            // console.log(arr1);
+            this._prductService.updateProduct(arr1).subscribe(function (data1) {
+                if (arr1.start_date == undefined) {
+                    _this.start = true;
+                    //  alert("Bid Start time is required");
+                }
+                if (arr1.end_date == undefined) {
+                    _this.end = true;
+                    // alert("Bid End time is required");
+                }
+                if (data1.start_date > data1.end_date) {
+                    _this.greater = true;
+                }
+                else if (data1.start_date <= data1.end_date) {
+                    alert("Update Product Successfully");
+                    _this.router.navigate(['/product-list']);
+                }
+            });
+        }
     };
     //  deleteProduct(arr1){
     //  }
@@ -3280,11 +3990,15 @@ var ProductDetailComponent = (function () {
             inputs: ['pro'],
             outputs: ['updateProEvent', 'deleteProEvent']
         }),
+<<<<<<< HEAD
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */],
             __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */],
             __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */],
             __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]])
+=======
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]])
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], ProductDetailComponent);
     return ProductDetailComponent;
 }());
@@ -3301,7 +4015,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".tab{\r\n    \r\n         margin-left: 140px;\r\n       \r\n    }\r\n    \r\n    .bg-dark\r\n    {   \r\n        background: #343a40;\r\n        padding:2em 0;  \r\n    }\r\n    body {\r\n        margin-top: 100px;\r\n        background-color: #222;\r\n    }\r\n    \r\n    @media(min-width:768px) {\r\n        body {\r\n            margin-top: 50px;\r\n        }\r\n    }\r\n    \r\n    #wrapper {\r\n        padding-left: 0;\r\n    }\r\n    \r\n    #page-wrapper {\r\n        width: 100%;\r\n        padding: 0;\r\n        background-color: #fff;\r\n    }\r\n    \r\n    .huge {\r\n        font-size: 50px;\r\n        line-height: normal;\r\n    }\r\n    \r\n    @media(min-width:768px) {\r\n        #wrapper {\r\n            padding-left: 225px;\r\n        }\r\n    \r\n        #page-wrapper {\r\n            padding: 10px;\r\n        }\r\n    }\r\n    \r\n    /* Top Navigation */\r\n    \r\n    .top-nav {\r\n        padding: 0 15px;\r\n    }\r\n    \r\n    .top-nav>li {\r\n        display: inline-block;\r\n        float: left;\r\n    }\r\n    \r\n    .top-nav>li>a {\r\n        padding-top: 15px;\r\n        padding-bottom: 15px;\r\n        line-height: 20px;\r\n        color: #999;\r\n    }\r\n    \r\n    .top-nav>li>a:hover,\r\n    .top-nav>li>a:focus,\r\n    .top-nav>.open>a,\r\n    .top-nav>.open>a:hover,\r\n    .top-nav>.open>a:focus {\r\n        color: #fff;\r\n        background-color: #000;\r\n    }\r\n    \r\n    .top-nav>.open>.dropdown-menu {\r\n        float: left;\r\n        position: absolute;\r\n        margin-top: 0;\r\n        border: 1px solid rgba(0,0,0,.15);\r\n        border-top-left-radius: 0;\r\n        border-top-right-radius: 0;\r\n        background-color: #fff;\r\n        box-shadow: 0 6px 12px rgba(0,0,0,.175);\r\n    }\r\n    \r\n    .top-nav>.open>.dropdown-menu>li>a {\r\n        white-space: normal;\r\n    }\r\n    \r\n    ul.message-dropdown {\r\n        padding: 0;\r\n        max-height: 250px;\r\n        overflow-x: hidden;\r\n        overflow-y: auto;\r\n    }\r\n    \r\n    li.message-preview {\r\n        width: 275px;\r\n        border-bottom: 1px solid rgba(0,0,0,.15);\r\n    }\r\n    \r\n    li.message-preview>a {\r\n        padding-top: 15px;\r\n        padding-bottom: 15px;\r\n    }\r\n    \r\n    li.message-footer {\r\n        margin: 5px 0;\r\n    }\r\n    \r\n    ul.alert-dropdown {\r\n        width: 200px;\r\n    }\r\n    \r\n    /* Side Navigation */\r\n    \r\n    @media(min-width:768px) {\r\n        .side-nav {\r\n            position: fixed;\r\n            top: 51px;\r\n            left: 225px;\r\n            width: 225px;\r\n            margin-left: -225px;\r\n            border: none;\r\n            border-radius: 0;\r\n            overflow-y: auto;\r\n            background-color: #222;\r\n            bottom: 0;\r\n            overflow-x: hidden;\r\n            padding-bottom: 40px;\r\n        }\r\n    \r\n        .side-nav>li>a {\r\n            width: 225px;\r\n        }\r\n    \r\n        .side-nav li a:hover,\r\n        .side-nav li a:focus {\r\n            outline: none;\r\n            background-color: #000 !important;\r\n        }\r\n    }\r\n    \r\n    .side-nav>li>ul {\r\n        padding: 0;\r\n    }\r\n    \r\n    .side-nav>li>ul>li>a {\r\n        display: block;\r\n        padding: 10px 15px 10px 38px;\r\n        text-decoration: none;\r\n        color: #999;\r\n    }\r\n    \r\n    .side-nav>li>ul>li>a:hover {\r\n        color: #fff;\r\n    }\r\n    \r\n    /* Flot Chart Containers */\r\n    \r\n    .flot-chart {\r\n        display: block;\r\n        height: 400px;\r\n    }\r\n    \r\n    .flot-chart-content {\r\n        width: 100%;\r\n        height: 100%;\r\n    }\r\n    \r\n    /* Custom Colored Panels */\r\n    \r\n    .huge {\r\n        font-size: 40px;\r\n    }\r\n    \r\n    .panel-green {\r\n        border-color: #5cb85c;\r\n    }\r\n    \r\n    .panel-green > .panel-heading {\r\n        border-color: #5cb85c;\r\n        color: #fff;\r\n        background-color: #5cb85c;\r\n    }\r\n    \r\n    .panel-green > a {\r\n        color: #5cb85c;\r\n    }\r\n    \r\n    .panel-green > a:hover {\r\n        color: #3d8b3d;\r\n    }\r\n    \r\n    .panel-red {\r\n        border-color: #d9534f;\r\n    }\r\n    \r\n    .panel-red > .panel-heading {\r\n        border-color: #d9534f;\r\n        color: #fff;\r\n        background-color: #d9534f;\r\n    }\r\n    \r\n    .panel-red > a {\r\n        color: #d9534f;\r\n    }\r\n    \r\n    .panel-red > a:hover {\r\n        color: #b52b27;\r\n    }\r\n    \r\n    .panel-yellow {\r\n        border-color: #f0ad4e;\r\n    }\r\n    \r\n    .panel-yellow > .panel-heading {\r\n        border-color: #f0ad4e;\r\n        color: #fff;\r\n        background-color: #f0ad4e;\r\n    }\r\n    \r\n    .panel-yellow > a {\r\n        color: #f0ad4e;\r\n    }\r\n    \r\n    .panel-yellow > a:hover {\r\n        color: #df8a13;\r\n    }\r\n     .image{\r\n         width:150px;\r\n     }", ""]);
+exports.push([module.i, ".tab{\r\n    \r\n         margin-left: 140px;\r\n       \r\n    }\r\n    \r\n    .bg-dark\r\n    {   \r\n        background: #343a40;\r\n        padding:2em 0;  \r\n    }\r\n    body {\r\n        margin-top: 100px;\r\n        background-color: #222;\r\n    }\r\n    \r\n    @media(min-width:768px) {\r\n        body {\r\n            margin-top: 50px;\r\n        }\r\n    }\r\n    \r\n    #wrapper {\r\n        padding-left: 0;\r\n    }\r\n    \r\n    #page-wrapper {\r\n        width: 100%;\r\n        padding: 0;\r\n        background-color: #fff;\r\n    }\r\n    \r\n    .huge {\r\n        font-size: 50px;\r\n        line-height: normal;\r\n    }\r\n    \r\n    @media(min-width:768px) {\r\n        #wrapper {\r\n            padding-left: 225px;\r\n        }\r\n    \r\n        #page-wrapper {\r\n            padding: 10px;\r\n        }\r\n    }\r\n    \r\n    /* Top Navigation */\r\n    \r\n    .top-nav {\r\n        padding: 0 15px;\r\n    }\r\n    \r\n    .top-nav>li {\r\n        display: inline-block;\r\n        float: left;\r\n    }\r\n    \r\n    .top-nav>li>a {\r\n        padding-top: 15px;\r\n        padding-bottom: 15px;\r\n        line-height: 20px;\r\n        color: #999;\r\n    }\r\n    \r\n    .top-nav>li>a:hover,\r\n    .top-nav>li>a:focus,\r\n    .top-nav>.open>a,\r\n    .top-nav>.open>a:hover,\r\n    .top-nav>.open>a:focus {\r\n        color: #fff;\r\n        background-color: #000;\r\n    }\r\n    \r\n    .top-nav>.open>.dropdown-menu {\r\n        float: left;\r\n        position: absolute;\r\n        margin-top: 0;\r\n        border: 1px solid rgba(0,0,0,.15);\r\n        border-top-left-radius: 0;\r\n        border-top-right-radius: 0;\r\n        background-color: #fff;\r\n        box-shadow: 0 6px 12px rgba(0,0,0,.175);\r\n    }\r\n    \r\n    .top-nav>.open>.dropdown-menu>li>a {\r\n        white-space: normal;\r\n    }\r\n    \r\n    ul.message-dropdown {\r\n        padding: 0;\r\n        max-height: 250px;\r\n        overflow-x: hidden;\r\n        overflow-y: auto;\r\n    }\r\n    \r\n    li.message-preview {\r\n        width: 275px;\r\n        border-bottom: 1px solid rgba(0,0,0,.15);\r\n    }\r\n    \r\n    li.message-preview>a {\r\n        padding-top: 15px;\r\n        padding-bottom: 15px;\r\n    }\r\n    \r\n    li.message-footer {\r\n        margin: 5px 0;\r\n    }\r\n    \r\n    ul.alert-dropdown {\r\n        width: 200px;\r\n    }\r\n    \r\n    /* Side Navigation */\r\n    \r\n    @media(min-width:768px) {\r\n        .side-nav {\r\n            position: fixed;\r\n            top: 51px;\r\n            left: 225px;\r\n            width: 225px;\r\n            margin-left: -225px;\r\n            border: none;\r\n            border-radius: 0;\r\n            overflow-y: auto;\r\n            background-color: #222;\r\n            bottom: 0;\r\n            overflow-x: hidden;\r\n            padding-bottom: 40px;\r\n        }\r\n    \r\n        .side-nav>li>a {\r\n            width: 225px;\r\n        }\r\n    \r\n        .side-nav li a:hover,\r\n        .side-nav li a:focus {\r\n            outline: none;\r\n            background-color: #000 !important;\r\n        }\r\n    }\r\n    \r\n    .side-nav>li>ul {\r\n        padding: 0;\r\n    }\r\n    \r\n    .side-nav>li>ul>li>a {\r\n        display: block;\r\n        padding: 10px 15px 10px 38px;\r\n        text-decoration: none;\r\n        color: #999;\r\n    }\r\n    \r\n    .side-nav>li>ul>li>a:hover {\r\n        color: #fff;\r\n    }\r\n    \r\n    /* Flot Chart Containers */\r\n    \r\n    .flot-chart {\r\n        display: block;\r\n        height: 400px;\r\n    }\r\n    \r\n    .flot-chart-content {\r\n        width: 100%;\r\n        height: 100%;\r\n    }\r\n    \r\n    /* Custom Colored Panels */\r\n    \r\n    .huge {\r\n        font-size: 40px;\r\n    }\r\n    \r\n    .panel-green {\r\n        border-color: #5cb85c;\r\n    }\r\n    \r\n    .panel-green > .panel-heading {\r\n        border-color: #5cb85c;\r\n        color: #fff;\r\n        background-color: #5cb85c;\r\n    }\r\n    \r\n    .panel-green > a {\r\n        color: #5cb85c;\r\n    }\r\n    \r\n    .panel-green > a:hover {\r\n        color: #3d8b3d;\r\n    }\r\n    \r\n    .panel-red {\r\n        border-color: #d9534f;\r\n    }\r\n    \r\n    .panel-red > .panel-heading {\r\n        border-color: #d9534f;\r\n        color: #fff;\r\n        background-color: #d9534f;\r\n    }\r\n    \r\n    .panel-red > a {\r\n        color: #d9534f;\r\n    }\r\n    \r\n    .panel-red > a:hover {\r\n        color: #b52b27;\r\n    }\r\n    \r\n    .panel-yellow {\r\n        border-color: #f0ad4e;\r\n    }\r\n    \r\n    .panel-yellow > .panel-heading {\r\n        border-color: #f0ad4e;\r\n        color: #fff;\r\n        background-color: #f0ad4e;\r\n    }\r\n    \r\n    .panel-yellow > a {\r\n        color: #f0ad4e;\r\n    }\r\n    \r\n    .panel-yellow > a:hover {\r\n        color: #df8a13;\r\n    }\r\n     .image{\r\n         width:150px;\r\n     }\r\n     .example-button-row {\r\n        display: -webkit-box;\r\n        display: -ms-flexbox;\r\n        display: flex;\r\n        -webkit-box-align: center;\r\n            -ms-flex-align: center;\r\n                align-items: center;\r\n        -ms-flex-pack: distribute;\r\n            justify-content: space-around;\r\n      }\r\n      .addnew{\r\n          width:150px;\r\n      }\r\n      .search1{\r\n          float:right;\r\n      }\r\n      .search{\r\n        float:right;\r\n    }", ""]);
 
 // exports
 
@@ -3314,7 +4028,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product-list/product-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\r\n<div id=\"wrapper\">\r\n  \r\n<side-bar></side-bar>\r\n  \r\n          <div id=\"page-wrapper\">\r\n  \r\n              <div class=\"container-fluid\">\r\n  \r\n            \r\n                 <header-title [title]=\"'List Products'\"></header-title>\r\n             \r\n  \r\n              </div>\r\n<div class=\"col-md-9 tab\" >\r\n<br>\r\n\r\n  <label class=\"search\" >Search Product: </label>\r\n  <input type=\"text\" [(ngModel)]=\"term\" />\r\n\r\n<br>\r\n<br>\r\n\r\n<table class=\"table table-striped\">\r\n    <tr>\r\n      <th>Name</th>\r\n      <th>Image</th>\r\n      <th>Bid Amount</th>\r\n      <th>Minimum Bid Rate</th>\r\n      <th>Start date</th>\r\n      <th>End Date</th>\r\n      <th>Description</th>\r\n  \r\n      <th>Action</th>\r\n    </tr>\r\n    \r\n    <tr  *ngFor=\"let pro of arr1 | filter:term \">\r\n  \r\n    <td>{{pro.name}}</td>\r\n    <!-- <td><img src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"\" class=\"image\"></td> -->\r\n    <td><img src=\"assets/uploads/{{pro.image || 'defualt1.jpg'}}\" alt=\"\" class=\"image\"></td>\r\n    <td>{{pro.bid_amount}}</td>\r\n    <td>{{pro.min_bid_rate}}</td>\r\n    <td>{{pro.start_date}}</td>\r\n    <td>{{pro.end_date}}</td>\r\n    <td>{{pro.desc}}</td>\r\n  \r\n  \r\n    <td> \r\n      <a [routerLink]=\"['/product-detail/'+pro._id]\" class=\"btn btn-primary btn-xs\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Edit\"><i class=\"fa fa-pencil\"></i></a>\r\n      <!-- <a (click)=\"deleteProduct(pro._id)\" class=\"btn btn-primary btn-xs\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Delete\"><i class=\"fa fa-trash-o\"></i></a> -->\r\n      <a href=\"#\" class=\"btn btn-primary btn-xs\" data-target=\"#myModal\" data-toggle=\"modal\" ><i class=\"fa fa-trash-o\"></i></a>\r\n    </td>\r\n    <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n        <div class=\"modal-dialog\">\r\n      \r\n          <!-- Modal content-->\r\n          <div class=\"modal-content\">\r\n            <!-- <div class=\"modal-header\"> -->\r\n              <!-- <h4 class=\"modal-title\">Are you sure to delete?</h4> -->\r\n            <!-- </div> -->\r\n            <div class=\"modal-body\">\r\n                <h4 class=\"modal-title\">Are you sure to delete?</h4>\r\n            \r\n            </div>\r\n            <div class=\"modal-footer\">\r\n              <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n              <button type=\"button\" (click)=\"deleteProduct(pro._id)\" class=\"btn btn-default\" data-dismiss=\"modal\">Save</button>\r\n            </div>\r\n          </div>\r\n      \r\n        </div>\r\n      </div>\r\n\r\n    </tr>\r\n  </table>\r\n</div>\r\n   \r\n</div>\r\n\r\n           \r\n</div>\r\n\r\n\r\n<footer></footer> "
+module.exports = "\r\n\r\n<div id=\"wrapper\">\r\n  \r\n<side-bar></side-bar>\r\n  \r\n          <div id=\"page-wrapper\">\r\n  \r\n              <div class=\"container-fluid\">\r\n  \r\n            \r\n                 <header-title [title]=\"'Manage Products'\"></header-title>\r\n             \r\n  \r\n              </div>\r\n<div class=\"col-md-9 tab\" >\r\n<br>\r\n\r\n<button type=\"button\" class=\"btn btn-primary addnew\" data-toggle=\"modal\" data-target=\"#myModal\">+Add New</button>\r\n\r\n<div id=\"myModal\"  class=\"modal fade\">\r\n    <div class=\"modal-dialog\">\r\n    \r\n      <!-- Modal content-->\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n          <h4 class=\"modal-title\">Add New Product</h4>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          \r\n      <form class=\"well\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct();\" novalidate>\r\n              <!-- <flash-messages></flash-messages> -->\r\n              <div *ngIf=\"showSuccess\" class=\"alert alert-success\">\r\n                  <strong>Product Add Successfully</strong>\r\n                </div>\r\n          <div class=\"form-group\" >\r\n              <label > Name *</label>\r\n              <input id=\"name\" name=\"name\" class=\"form-control\"\r\n              required  autofocus\r\n              [(ngModel)]=\"newproduct.name\" #name=\"ngModel\" >\r\n              <div *ngIf=\"f.submitted && !name.valid \"  class=\"alert alert-danger\"> ! Name is required</div>\r\n           \r\n          </div>\r\n          <div class=\"form-group\">\r\n              <label for=\"single\">Select Image</label>\r\n              <input type=\"file\" class=\"\" name=\"single\" ng2FileSelect [uploader]=\"uploader\" (change)=\"imageOr();\"/>                                  \r\n           </div>\r\n            \r\n\r\n          <div class=\"form-group\" >\r\n                  <label >  Bid Amount *</label>\r\n                  <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n                  required  \r\n                  [(ngModel)]=\"newproduct.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                  <div *ngIf=\"f.submitted && !bid_amount.valid\"  class=\"alert alert-danger\"> ! Amount is required</div>\r\n         \r\n              </div>\r\n\r\n              <div class=\"form-group\" >\r\n                      <label >  Minimum Bid Rate *</label>\r\n                      <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                      required  \r\n                      [(ngModel)]=\"newproduct.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                      <div *ngIf=\"f.submitted && !min_bid_rate.valid\"  class=\"alert alert-danger\"> ! Minimum Bid rate is required</div>\r\n             \r\n                  </div>\r\n      \r\n           <div class=\"form-group\" >\r\n                  <label > Bid Start time *</label>\r\n                  <datetime name=\"start_date\" required  [(ngModel)]=\"newproduct.start_date\"  [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\" ></datetime>\r\n                  <div *ngIf=\"f.submitted && !newproduct.start_date\"  class=\"alert alert-danger\"> !Start time is required</div>\r\n              \r\n              </div>\r\n              <div class=\"form-group\" >\r\n                      <label > Bid End time *</label>\r\n                      <datetime name = \"end_date\"  required [(ngModel)]=\"newproduct.end_date\" [hasClearButton]=\"true\"  [datepicker]= \"datepickerOpts\" ></datetime>\r\n                      <div *ngIf=\"f.submitted && !newproduct.end_date\"  class=\"alert alert-danger\"> !End time is required</div>\r\n                      <div *ngIf=\"greater\">\r\n                          <div class=\"alert alert-danger\"> !End time must be after the Start time</div>\r\n                      </div>\r\n                  </div>\r\n\r\n          <div class=\"form-group\" >\r\n              <label > Description</label>\r\n              <br>\r\n              <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"newproduct.desc\" ></textarea>\r\n          </div>\r\n\r\n          <button type= \"submit\" class=\"btn btn-primary\" >Submit</button>\r\n         \r\n      </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n        </div>\r\n      </div>\r\n      \r\n    </div>\r\n  </div>\r\n\r\n\r\n    <!-- Trigger the modal with a button -->\r\n \r\n  \r\n    <!-- Modal -->\r\n   \r\n \r\n\r\n<br>\r\n<br>\r\n\r\n<app-product></app-product>\r\n  \r\n \r\n    \r\n</div>\r\n   \r\n</div>\r\n\r\n           \r\n</div>\r\n\r\n\r\n<footer></footer> "
 
 /***/ }),
 
@@ -3327,6 +4041,9 @@ module.exports = "\r\n\r\n<div id=\"wrapper\">\r\n  \r\n<side-bar></side-bar>\r\
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_file_upload__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3337,18 +4054,53 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+// import { FlashMessagesService } from 'angular2-flash-messages';
 
 
 
+
+
+ // File Upload
 var ProductListComponent = (function () {
-    function ProductListComponent(_prductService, router, userService) {
+    // constructor( private _flashMessagesService: FlashMessagesService, private _prductService : ProductService, private router: Router, private _userService : UserService ) { }
+    function ProductListComponent(_prductService, router, _userService) {
         this._prductService = _prductService;
         this.router = router;
-        this.userService = userService;
+        this._userService = _userService;
+        this.showSuccess = false;
         this.tableview = true;
         // private deleteProEvent = new EventEmitter();
         this.SelectPro = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.uploader = new __WEBPACK_IMPORTED_MODULE_5_ng2_file_upload__["FileUploader"]({ url: 'http://localhost:3000/products/upload' });
+        this.imageselect = false;
+        this.greater = false;
+        this.hideModal = false;
+        this.newproduct = {
+            name: '',
+            desc: '',
+            bid_amount: '',
+            min_bid_rate: '',
+            start_date: '',
+            end_date: '',
+            image: ''
+        };
         this.datepickerOpts1 = {
+            startDate: new Date(Date.now()),
+            autoclose: true,
+            todayBtn: 'linked',
+            todayHighlight: true,
+            assumeNearbyYear: true,
+            format: 'd MM yyyy',
+        };
+        // _keyPress1(event: any) {
+        //   const pattern = /[a-z,A-Z,1-9  ]/;
+        //   let inputChar = String.fromCharCode(event.charCode);
+        //   if (!pattern.test(inputChar)) {
+        //     // invalid character, prevent input
+        //     event.preventDefault();
+        //   }
+        // }
+        this.datepickerOpts = {
             startDate: new Date(Date.now()),
             autoclose: true,
             todayBtn: 'linked',
@@ -3358,7 +4110,6 @@ var ProductListComponent = (function () {
         };
     }
     ProductListComponent.prototype.ngOnInit = function () {
-        var _this = this;
         // this.userService.getLoggedUSerDetails().subscribe(info =>{
         //   if(info.status!=true){
         //     this.router.navigate(['/login']);
@@ -3367,6 +4118,7 @@ var ProductListComponent = (function () {
         //     this.router.navigate(['/login']);
         //   }
         // });
+        var _this = this;
         // this.arr1=[];
         this._prductService.getProducts().subscribe(function (data1) {
             _this.arr1 = data1;
@@ -3377,7 +4129,7 @@ var ProductListComponent = (function () {
             //  });
             // this.prodata = data1;
         });
-        this.userService.getLoggedUSerDetails().subscribe(function (info) {
+        this._userService.getLoggedUSerDetails().subscribe(function (info) {
             if (info.role != "admin") {
                 _this.router.navigate(['/login']);
             }
@@ -3396,6 +4148,87 @@ var ProductListComponent = (function () {
         // this.router.navigate(['/product-detail'+prodata.id])
         // this.tableview = false;
     };
+    ProductListComponent.prototype.imageOr = function () {
+        this.imageselect = true;
+    };
+    ProductListComponent.prototype.addProduct = function () {
+        var _this = this;
+        if (this.imageselect == true) {
+            this.uploader.uploadAll();
+            this.uploader.onCompleteItem = function (item, response, status, headers) {
+                response = JSON.parse(response);
+                _this.newproduct.image = response.filename;
+                _this._prductService.addProduct(_this.newproduct).subscribe(function (data) {
+                    if (data) {
+                        if (data.start_date > data.end_date) {
+                            _this.greater = true;
+                            // alert('error! Start date is greater than end date');
+                            // this._userService.sendmail().subscribe(data1 => { });
+                        }
+                        else if (data.start_date <= data.end_date) {
+                            _this._userService.sendmail().subscribe(function (data1) {
+                            });
+                            // this._flashMessagesService.show('Product Added Successfully!', { cssClass: 'alert-success', timeout: 1000 });
+                            // this.hideModal = true;
+                            //  alert("Add Product Successfully");
+                            _this.showSuccess = true;
+                            setTimeout(function () {
+                                _this.showSuccess = false;
+                                window.location.reload();
+                                // console.log("Error created user");
+                            }, 1000);
+                            //  s
+                        }
+                    }
+                    else {
+                        alert("Error");
+                        console.log("error");
+                    }
+                });
+                // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
+            };
+        }
+        else if (this.imageselect == false) {
+            this._prductService.addProduct(this.newproduct).subscribe(function (data) {
+                if (data) {
+                    if (data.start_date > data.end_date) {
+                        _this.greater = true;
+                        // alert('error! Start date is greater than end date');
+                        _this._userService.sendmail().subscribe(function (data1) { });
+                    }
+                    else if (data.start_date <= data.end_date) {
+                        // this._flashMessagesService.show('Product Added Successfully!', { cssClass: 'alert-success', timeout: 1000 });
+                        // this.hideModal = true;
+                        _this.showSuccess = true;
+                        setTimeout(function () {
+                            _this.showSuccess = false;
+                            window.location.reload();
+                            // console.log("Error created user");
+                        }, 1000);
+                        //  alert("Add Product Successfully");
+                        //  this.router.navigate(['/product-list']);
+                        //  window.location.reload();
+                        //  this.router.navigate(['/product-list']);
+                        //  this.hideModal =true;
+                        //  jQuery("#myModal").modal("hide");
+                        //  
+                    }
+                }
+                else {
+                    alert("Error");
+                    console.log("error");
+                }
+            });
+        }
+    };
+    ProductListComponent.prototype._keyPress = function (event) {
+        var pattern = /[0-9]/;
+        var inputChar = String.fromCharCode(event.charCode);
+        if (!pattern.test(inputChar)) {
+            // invalid character, prevent input
+            event.preventDefault();
+        }
+    };
     ProductListComponent.prototype.deleteProduct = function (pid) {
         var _this = this;
         console.log(pid);
@@ -3413,7 +4246,11 @@ var ProductListComponent = (function () {
             selector: 'product-list',
             template: __webpack_require__("../../../../../src/app/product-list/product-list.component.html"),
             styles: [__webpack_require__("../../../../../src/app/product-list/product-list.component.css")],
+<<<<<<< HEAD
             providers: [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]],
+=======
+            providers: [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]],
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
             // pipes :[]
             inputs: ['pros'],
             outputs: ['SelectPro'],
@@ -3471,7 +4308,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".addpro{\r\n\r\n     margin-left: 140px;\r\n   \r\n}\r\n\r\n.bg-dark\r\n{   \r\n    background: #343a40;\r\n    padding:2em 0;  \r\n}\r\nbody {\r\n    margin-top: 100px;\r\n    background-color: #222;\r\n}\r\n\r\n@media(min-width:768px) {\r\n    body {\r\n        margin-top: 50px;\r\n    }\r\n}\r\n\r\n#wrapper {\r\n    padding-left: 0;\r\n}\r\n\r\n#page-wrapper {\r\n    width: 100%;\r\n    padding: 0;\r\n    background-color: #fff;\r\n}\r\n\r\n.huge {\r\n    font-size: 50px;\r\n    line-height: normal;\r\n}\r\n\r\n@media(min-width:768px) {\r\n    #wrapper {\r\n        padding-left: 225px;\r\n    }\r\n\r\n    #page-wrapper {\r\n        padding: 10px;\r\n    }\r\n}\r\n\r\n/* Top Navigation */\r\n\r\n.top-nav {\r\n    padding: 0 15px;\r\n}\r\n\r\n.top-nav>li {\r\n    display: inline-block;\r\n    float: left;\r\n}\r\n\r\n.top-nav>li>a {\r\n    padding-top: 15px;\r\n    padding-bottom: 15px;\r\n    line-height: 20px;\r\n    color: #999;\r\n}\r\n\r\n.top-nav>li>a:hover,\r\n.top-nav>li>a:focus,\r\n.top-nav>.open>a,\r\n.top-nav>.open>a:hover,\r\n.top-nav>.open>a:focus {\r\n    color: #fff;\r\n    background-color: #000;\r\n}\r\n\r\n.top-nav>.open>.dropdown-menu {\r\n    float: left;\r\n    position: absolute;\r\n    margin-top: 0;\r\n    border: 1px solid rgba(0,0,0,.15);\r\n    border-top-left-radius: 0;\r\n    border-top-right-radius: 0;\r\n    background-color: #fff;\r\n    box-shadow: 0 6px 12px rgba(0,0,0,.175);\r\n}\r\n\r\n.top-nav>.open>.dropdown-menu>li>a {\r\n    white-space: normal;\r\n}\r\n\r\nul.message-dropdown {\r\n    padding: 0;\r\n    max-height: 250px;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n}\r\n\r\nli.message-preview {\r\n    width: 275px;\r\n    border-bottom: 1px solid rgba(0,0,0,.15);\r\n}\r\n\r\nli.message-preview>a {\r\n    padding-top: 15px;\r\n    padding-bottom: 15px;\r\n}\r\n\r\nli.message-footer {\r\n    margin: 5px 0;\r\n}\r\n\r\nul.alert-dropdown {\r\n    width: 200px;\r\n}\r\n\r\n/* Side Navigation */\r\n\r\n@media(min-width:768px) {\r\n    .side-nav {\r\n        position: fixed;\r\n        top: 51px;\r\n        left: 225px;\r\n        width: 225px;\r\n        margin-left: -225px;\r\n        border: none;\r\n        border-radius: 0;\r\n        overflow-y: auto;\r\n        background-color: #222;\r\n        bottom: 0;\r\n        overflow-x: hidden;\r\n        padding-bottom: 40px;\r\n    }\r\n\r\n    .side-nav>li>a {\r\n        width: 225px;\r\n    }\r\n\r\n    .side-nav li a:hover,\r\n    .side-nav li a:focus {\r\n        outline: none;\r\n        background-color: #000 !important;\r\n    }\r\n}\r\n\r\n.side-nav>li>ul {\r\n    padding: 0;\r\n}\r\n\r\n.side-nav>li>ul>li>a {\r\n    display: block;\r\n    padding: 10px 15px 10px 38px;\r\n    text-decoration: none;\r\n    color: #999;\r\n}\r\n\r\n.side-nav>li>ul>li>a:hover {\r\n    color: #fff;\r\n}\r\n\r\n/* Flot Chart Containers */\r\n\r\n.flot-chart {\r\n    display: block;\r\n    height: 400px;\r\n}\r\n\r\n.flot-chart-content {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n/* Custom Colored Panels */\r\n\r\n.huge {\r\n    font-size: 40px;\r\n}\r\n\r\n.panel-green {\r\n    border-color: #5cb85c;\r\n}\r\n\r\n.panel-green > .panel-heading {\r\n    border-color: #5cb85c;\r\n    color: #fff;\r\n    background-color: #5cb85c;\r\n}\r\n\r\n.panel-green > a {\r\n    color: #5cb85c;\r\n}\r\n\r\n.panel-green > a:hover {\r\n    color: #3d8b3d;\r\n}\r\n\r\n.panel-red {\r\n    border-color: #d9534f;\r\n}\r\n\r\n.panel-red > .panel-heading {\r\n    border-color: #d9534f;\r\n    color: #fff;\r\n    background-color: #d9534f;\r\n}\r\n\r\n.panel-red > a {\r\n    color: #d9534f;\r\n}\r\n\r\n.panel-red > a:hover {\r\n    color: #b52b27;\r\n}\r\n\r\n.panel-yellow {\r\n    border-color: #f0ad4e;\r\n}\r\n\r\n.panel-yellow > .panel-heading {\r\n    border-color: #f0ad4e;\r\n    color: #fff;\r\n    background-color: #f0ad4e;\r\n}\r\n\r\n.panel-yellow > a {\r\n    color: #f0ad4e;\r\n}\r\n\r\n.panel-yellow > a:hover {\r\n    color: #df8a13;\r\n}\r\n ", ""]);
+exports.push([module.i, ".example-container {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    min-width: 300px;\r\n  }\r\n  \r\n  .example-header {\r\n    min-height: 64px;\r\n    padding: 8px 24px 0;\r\n  }\r\n  \r\n  .mat-form-field {\r\n    font-size: 14px;\r\n    width: 100%;\r\n  }\r\n  \r\n  .mat-table {\r\n    overflow: auto;\r\n    max-height: 500px;\r\n  }\r\n  .proimg{\r\n    width: 100px;\r\n  }", ""]);
 
 // exports
 
@@ -3484,7 +4321,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product/product.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<br>\r\n<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation -->\r\n<side-bar></side-bar>\r\n    \r\n            <div id=\"page-wrapper\">\r\n    \r\n                <div class=\"container-fluid\">\r\n    \r\n                    <!-- Page Heading -->\r\n                   <header-title [title]=\"'Add Product'\"></header-title>\r\n                    <!-- /.row -->\r\n    \r\n                </div>\r\n\r\n<div class=\"wrapper\">\r\n        <div class=\"col-md-9 addpro\">\r\n                <!--<h3 class=\"headng\" >Add a Product</h3>-->\r\n               \r\n  <!-- <form class=\"well\" role=\"form\"   #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct()\" novalidate> -->\r\n        <form class=\"well\" role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct();\" novalidate>\r\n      <!-- <form #form='ngForm' (ngSubmit)=\"addProduct()\" class=\"well\" > -->\r\n            <div class=\"form-group\" >\r\n                <label > Name *</label>\r\n                <input id=\"name\" name=\"name\" class=\"form-control\"\r\n                required  autofocus\r\n                [(ngModel)]=\"newproduct.name\" #name=\"ngModel\" >\r\n                <div *ngIf=\"f.submitted && !name.valid \"  class=\"alert alert-danger\"> ! Name is required</div>\r\n             \r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"single\">Select Image</label>\r\n                <input type=\"file\" class=\"\" name=\"single\" ng2FileSelect [uploader]=\"uploader\" (change)=\"imageOr();\"/>                                  \r\n             </div>\r\n              \r\n\r\n            <div class=\"form-group\" >\r\n                    <label >  Bid Amount *</label>\r\n                    <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n                    required  \r\n                    [(ngModel)]=\"newproduct.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                    <div *ngIf=\"f.submitted && !bid_amount.valid\"  class=\"alert alert-danger\"> ! Amount is required</div>\r\n           \r\n                </div>\r\n\r\n                <div class=\"form-group\" >\r\n                        <label >  Minimum Bid Rate *</label>\r\n                        <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                        required  \r\n                        [(ngModel)]=\"newproduct.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                        <div *ngIf=\"f.submitted && !min_bid_rate.valid\"  class=\"alert alert-danger\"> ! Minimum Bid rate is required</div>\r\n               \r\n                    </div>\r\n        \r\n             <div class=\"form-group\" >\r\n                    <label > Bid Start time *</label>\r\n                    <datetime name=\"start_date\" required  [(ngModel)]=\"newproduct.start_date\"  [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\" ></datetime>\r\n                    <div *ngIf=\"f.submitted && !newproduct.start_date\"  class=\"alert alert-danger\"> !Start time is required</div>\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                        <label > Bid End time *</label>\r\n                        <datetime name = \"end_date\"  required [(ngModel)]=\"newproduct.end_date\" [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\"></datetime>\r\n                        <div *ngIf=\"f.submitted && !newproduct.end_date\"  class=\"alert alert-danger\"> !End time is required</div>\r\n                    </div>\r\n\r\n            \r\n                    <!-- <image-upload></image-upload> -->\r\n            <!-- <div>\r\n                <label > Image</label>\r\n                <input type=\"file\"  name=\"pollqtn\"   required />\r\n            </div> -->\r\n           \r\n           \r\n            <!-- <img class=\"mythumbnail\" ng-src=\"{{ thumbnail.dataUrl || default }}\"> -->\r\n            <!-- <img ng-src= \"{{ thumbnail.dataUrl || 'https://www.camboexpo.com/ctg/images/default.jpg' }}\"> -->\r\n            \r\n            <!-- <label class=\"btn btn-success colorbtn\"> Browse</label> -->\r\n            \r\n            <!-- <input type=\"file\" name =\"myfile\" ng-disabled=\"uploading\" style=\"display: none\"> -->\r\n\r\n            <div class=\"form-group\" >\r\n                <label > Description</label>\r\n                <br>\r\n                <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"newproduct.desc\" ></textarea>\r\n            </div>\r\n           \r\n                \r\n            <!-- <input type=\"submit\" class=\"btn btn-info blakbtn\" value=\"Submit\"  > -->\r\n            <button type= \"submit\" class=\"btn btn-primary\">Submit</button>\r\n           \r\n        </form>\r\n  \r\n      \r\n   \r\n    </div>\r\n    <!-- /#page-wrapper -->\r\n   \r\n               \r\n</div>\r\n\r\n<footer></footer> \r\n      "
+module.exports = "<div class=\"example-header\">\r\n    <mat-form-field>\r\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n    </mat-form-field>\r\n  </div>\r\n  \r\n  <div class=\"example-container mat-elevation-z8\">\r\n  \r\n    <mat-table [dataSource]=\"dataSource\" matSort>\r\n  \r\n  \r\n  \r\n      <!-- Progress Column -->\r\n      <ng-container matColumnDef=\"action\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> \r\n          <a href =\"/product-detail/{{row.id}}\" class=\"btn btn-primary btn-xs\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Edit\"><i class=\"fa fa-pencil\"></i></a>\r\n          <a href=\"#\" class=\"btn btn-primary btn-xs\" data-target=\"#myModal1\" data-toggle=\"modal\" ><i class=\"fa fa-trash-o\"></i></a>\r\n          <div id=\"myModal1\" class=\"modal fade\" role=\"dialog\">\r\n            <div class=\"modal-dialog\">\r\n          \r\n              <!-- Modal content-->\r\n              <div class=\"modal-content\">\r\n                <!-- <div class=\"modal-header\"> -->\r\n                  <!-- <h4 class=\"modal-title\">Are you sure to delete?</h4> -->\r\n                <!-- </div> -->\r\n                <div class=\"modal-body\">\r\n                    <h4 class=\"modal-title\">Are you sure to delete?</h4>\r\n                \r\n                </div>\r\n                <div class=\"modal-footer\">\r\n                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                  <button type=\"button\" (click)=\"deleteProduct(row.id)\" class=\"btn btn-default\" data-dismiss=\"modal\">Delete</button>\r\n                </div>\r\n              </div>\r\n          \r\n            </div>\r\n          </div>\r\n          \r\n        </mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"description\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.desc}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"enddate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> End Date </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.end_date | date: 'dd-MM-yyyy h:mm a'}}</mat-cell>\r\n        \r\n      </ng-container>\r\n      <ng-container matColumnDef=\"startdate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Start Date </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.start_date | date: 'dd-MM-yyyy h:mm a'}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"rate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Minimum Bid rate </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.min_bid_rate}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"amount\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Bid Amount </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.bid_amount}}</mat-cell>\r\n      </ng-container>\r\n      \r\n      <ng-container matColumnDef=\"image\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Image </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"><img class=\"proimg\" src=\"assets/uploads/{{row.image}}\" alt=\"\" ></mat-cell>\r\n      </ng-container>\r\n  \r\n      <!-- Name Column -->\r\n      <ng-container matColumnDef=\"name\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.name}} </mat-cell>\r\n      </ng-container>\r\n  \r\n  \r\n  \r\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\r\n      </mat-row>\r\n    </mat-table>\r\n  \r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n  </div>\r\n  \r\n  "
 
 /***/ }),
 
@@ -3496,11 +4333,17 @@ module.exports = "<br>\r\n<div id=\"wrapper\">\r\n    \r\n            <!-- Navig
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng2_file_upload__);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3511,24 +4354,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+// import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 // import { FileUploader } from 'ng2-file-upload';
 
 
+// import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 
 // import { FileUploader } from 'ng2-file-upload';
 
-// import { FormGroup } from '@angular/forms';
-// import { ProductService } from '../services/product.service';
-// import { Poll } from '../poll';
-// import { FormsModule, FormControl, FormGroup, Validators }   from '@angular/forms';
-// import { answer } from './../answer';
-
- // File Upload
 var ProductComponent = (function () {
-    function ProductComponent(_prductService, _userService, router, config) {
-        this._prductService = _prductService;
-        this._userService = _userService;
+    function ProductComponent(productservice, router) {
+        // Create 100 users
+        this.productservice = productservice;
         this.router = router;
+<<<<<<< HEAD
         this.config = config;
         this.uploader = new __WEBPACK_IMPORTED_MODULE_6_ng2_file_upload__["FileUploader"]({ url: this.config.fileUploadURL });
         this.imageselect = false;
@@ -3635,6 +4475,56 @@ var ProductComponent = (function () {
             event.preventDefault();
         }
     };
+=======
+        this.displayedColumns = ['name', 'image', 'amount', 'rate', 'startdate', 'enddate', 'description', 'action'];
+    }
+    ProductComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var users = [];
+        this.productservice.getProducts().subscribe(function (data) {
+            data.forEach(function (item, index) {
+                users.push({
+                    id: item._id,
+                    name: item.name,
+                    image: item.image,
+                    bid_amount: item.bid_amount,
+                    min_bid_rate: item.min_bid_rate,
+                    start_date: item.start_date,
+                    end_date: item.end_date,
+                    desc: item.desc
+                });
+            });
+            _this.dataSource = new __WEBPACK_IMPORTED_MODULE_3__angular_material__["D" /* MatTableDataSource */](users);
+            _this.dataSource.paginator = _this.paginator;
+            _this.dataSource.sort = _this.sort;
+        });
+    };
+    ProductComponent.prototype.applyFilter = function (filterValue) {
+        filterValue = filterValue.trim(); // Remove whitespace
+        filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+        this.dataSource.filter = filterValue;
+    };
+    ProductComponent.prototype.deleteProduct = function (pid) {
+        var _this = this;
+        console.log(pid);
+        this.productservice.deleteProduct(pid).subscribe(function (data1) {
+            if (data1) {
+                // console.log(data1);
+                alert("Delete Product Successfully");
+                location.reload();
+                _this.router.navigate(['/product-list']);
+            }
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3__angular_material__["p" /* MatPaginator */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3__angular_material__["p" /* MatPaginator */])
+    ], ProductComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3__angular_material__["A" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3__angular_material__["A" /* MatSort */])
+    ], ProductComponent.prototype, "sort", void 0);
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ProductComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-product',
@@ -3643,10 +4533,14 @@ var ProductComponent = (function () {
             providers: [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]]
             // providers: [ProductService]
         }),
+<<<<<<< HEAD
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */],
             __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */],
             __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]])
+=======
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_4__angular_router__["e" /* Router */]])
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], ProductComponent);
     return ProductComponent;
 }());
@@ -3849,7 +4743,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/running-auction-back/running-auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body>\r\n    \r\n        <div id=\"wrapper\">\r\n    \r\n            <!-- Navigation -->\r\n<side-bar></side-bar>\r\n    \r\n            <div id=\"page-wrapper\">\r\n    \r\n                <div class=\"container-fluid\">\r\n    \r\n                    <!-- Page Heading -->\r\n                   <header-title [title]=\"'Running Auction'\"></header-title>\r\n                    <!-- /.row -->\r\n    \r\n                </div>\r\n                <!-- /.container-fluid -->\r\n\r\n\r\n\r\n                \r\n\r\n\r\n\r\n\r\n\r\n\r\n    <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n            <div class=\"container\" style=\"padding-top:20px;\">\r\n                    \r\n                            <div class=\"col-md-9 col-xs-9 brdr\">\r\n                                    <div class=\"row\">\r\n                                            <div class=\"col-md-6 col-xs-6\">\r\n                                                <div class=\"row\">\r\n                                                    <div class=\"col-md-4 col-xs-4\">\r\n                                                        <select [(ngModel)]=\"start\" class=\"form-control\">\r\n                                                            <option  value=\"start_date\">Start</option>\r\n                                                            <option value=\"end_date\">End</option>\r\n                                                        </select>\r\n                                                    </div>\r\n                                                    <div class=\"col-md-8 col-xs-8\">\r\n                                                        <label>From</label>\r\n                                                        <ng-datepicker [(ngModel)]=\"startDate\" [options]=\"options\" ></ng-datepicker>\r\n                                                    </div>\r\n                                                </div>\r\n                                            </div>\r\n                                            <div class=\"col-md-6 col-xs-6\">\r\n                                                    <div class=\"row\">\r\n                                                            <div class=\"col-md-4 col-xs-4\">\r\n                                                                <select [(ngModel)]=\"end\" class=\"form-control\">\r\n                                                                    <option  value=\"start_date\">Start</option>\r\n                                                                    <option  value=\"end_date\">End</option>\r\n                                                                </select>\r\n                                                            </div>\r\n                                                            <div class=\"col-md-8 col-xs-8\">\r\n                                                                <label>Upto</label>\r\n                                                                <ng-datepicker [(ngModel)]=\"endDate\" [options]=\"options\" ></ng-datepicker>\r\n                                                            </div>\r\n                                                        </div>\r\n                                                \r\n                                            </div>\r\n                                            \r\n                                    </div>   \r\n                                </div>\r\n                                <!-- <div class=\"col-md-1 col-xs-2\">\r\n                                    <div class=\"row\">\r\n                                        <input type=\"button\" value=\"search\" class=\"btn btn-primary btn2\">\r\n                                    </div>\r\n                                </div> -->\r\n                                <br>\r\n                                <br>\r\n                                <br>\r\n                                <div class=\"clearfix\"></div>\r\n        \r\n        <div *ngFor=\"let product of (products | dateSearch:startDate:endDate:start:end)\"  class=\"item  col-xs-4 col-lg-4\">\r\n            <div class=\"thumbnail\">\r\n                \r\n                <img class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n                <div class=\"caption\">\r\n                    <h4 class=\"group inner list-group-item-heading text-center\">\r\n                        {{product.name}}</h4>\r\n                        <hr>\r\n                        <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                        <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                      </p>\r\n                    <hr>\r\n                    <div class=\"row text-center\">\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                            Bid Start Price\r\n                            <p class=\"lead\"> {{product.bid_amount | number:'1.2-2'}}</p>\r\n                        </div>\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                          Ends In\r\n                            <p class=\"lead\">\r\n                              <!-- {{product.end_date | date: 'dd-mm-yyyy h:mm:ss'}} -->\r\n                              <app-count-down-timer (onTimeOver)=\"timeOver()\" [inputDate]=\"product.end_date\"></app-count-down-timer>\r\n                              <!-- <app-count-down-timer inputDate=\"product.end_date | date: 'MMMM dd, yyyy h:mm:ss'\"></app-count-down-timer> -->\r\n\r\n                             \r\n                              \r\n                              <!-- <app-count-down-timer inputDate=\"product.end_date\"></app-count-down-timer> -->\r\n                            </p>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row margn\" >\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12 text-center\">\r\n                           <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.user_details.length}}</a>\r\n                           \r\n                        </div>\r\n                        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                            <div class=\"modal-dialog\">\r\n                          \r\n                              <!-- Modal content-->\r\n                              <div class=\"modal-content\">\r\n                                <div class=\"modal-header\">\r\n                                  <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                  <h4 class=\"modal-title\">User Involved - {{involvedUsers.user_details.length}}</h4>\r\n                                </div>\r\n                                <div class=\"modal-body\">\r\n                                    <table class=\"table\">\r\n                                        <thead class=\"thead-inverse\">\r\n                                    <tr>\r\n                                      <th>Slno</th>\r\n                                      <th>Name</th>\r\n                                      <th>Bid Amount</th>\r\n                                      <th>Time</th>\r\n                                      <th>Status</th>\r\n                                    \r\n                                    </tr>\r\n                                  </thead>\r\n                                  <tbody *ngIf=\"involvedUsers.bidders.length ==0\">\r\n                                      <tr >\r\n                                            <td colspan=\"4\" class=\"text-center\">No User Involved</td>\r\n                                      </tr>\r\n                                  </tbody>\r\n                                  <tbody *ngIf=\"involvedUsers.bidders.length > 0\" >\r\n                                \r\n                                      <tr  *ngFor=\"let usr of involvedUsers.bidders;let i = index\" >\r\n                                            <td >{{i+1}}</td>\r\n                                            <td >{{users[usr.user_id].name}}</td>\r\n                                            <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                            <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                            <td >{{usr.bid_status}}</td>\r\n                                      </tr>\r\n                                  </tbody>\r\n                                  </table>\r\n                                \r\n                                </div>\r\n                                <div class=\"modal-footer\">\r\n                                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                                </div>\r\n                              </div>\r\n                          \r\n                            </div>\r\n                          </div>\r\n                    </div>\r\n                    <hr>\r\n                    <div class=\"row\">\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12\">\r\n                            <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center margn\">\r\n                                <strong>Last Bid Amount - {{product.lastBidprice | number:'1.2-2'}}</strong>\r\n                                 <br>\r\n                                 {{product.lastBiduser}} \r\n                                 <br> {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                      \r\n                        </div>\r\n                        <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                           No bidder Found\r\n                          </div>\r\n               \r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        </div>\r\n\r\n</div>\r\n\r\n</div>\r\n<div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n        <h3 class=\"text-center\"> No Product Found</h3>\r\n    </div>\r\n</div>\r\n<!-- /#page-wrapper -->\r\n\r\n           \r\n</div>\r\n\r\n<footer></footer> \r\n  \r\n</body>"
+module.exports = "\r\n\r\n\r\n                 \r\n<div class=\"container\" >\r\n\r\n\r\n\r\n    <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n            <div class=\"col-md-9 col-xs-9 brdr\">\r\n                    <div class=\"row\">\r\n                            <div class=\"col-md-6 col-xs-6\">\r\n                                <div class=\"row\">\r\n                                    <div class=\"col-md-4 col-xs-4\">\r\n                                        <label>Start Date</label>\r\n                                      </div>\r\n                                        <div class=\"col-md-8 col-xs-8\">\r\n\r\n                                        <!-- <input type=\"text\" class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"options\" (selected)=\"selectedStartDate($event, daterange)\" /> -->\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"col-md-6 col-xs-6\">\r\n                                    <div class=\"row\">\r\n                                            <div class=\"col-md-4 col-xs-4\">\r\n                                                <label>End Date</label>\r\n                                              </div>\r\n                                              <div class=\"col-md-8 col-xs-8\">\r\n                                                <!-- <input type=\"text\"  class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"optionsEnd\" (selected)=\"selectedEndDate($event, daterange)\" /> -->\r\n                                            </div>\r\n                                        </div>\r\n                                \r\n                            </div>\r\n                            \r\n                    </div>   \r\n                </div>\r\n                <br>\r\n                <br>\r\n                <br>\r\n                <div class=\"clearfix\"></div> \r\n\r\n        <div *ngFor=\"let product of (products | dateSearch:startFrom:startUpto:endFrom:endUpto)\"  class=\"item  col-xs-4 col-lg-4\">\r\n            <div class=\"thumbnail\">\r\n                \r\n                <img class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n                <div class=\"caption\">\r\n                    <h4 class=\"group inner list-group-item-heading text-center\">\r\n                        {{product.name}}</h4>\r\n                        <hr>\r\n                        <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                        <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                      </p>\r\n                    <hr>\r\n                    <div class=\"row text-center\">\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                            Bid Start Price\r\n                            <p class=\"lead\"> {{product.bid_amount | number:'1.2-2'}}</p>\r\n                        </div>\r\n                        <div class=\"col-xs-12 col-md-6\">\r\n                          Ends In\r\n                            <p class=\"lead\">\r\n                              <!-- {{product.end_date | date: 'dd-mm-yyyy h:mm:ss'}} -->\r\n                              <app-count-down-timer (onTimeOver)=\"timeOver()\" [inputDate]=\"product.end_date\"></app-count-down-timer>\r\n                              <!-- <app-count-down-timer inputDate=\"product.end_date | date: 'MMMM dd, yyyy h:mm:ss'\"></app-count-down-timer> -->\r\n\r\n                             \r\n                              \r\n                              <!-- <app-count-down-timer inputDate=\"product.end_date\"></app-count-down-timer> -->\r\n                            </p>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row margn\" >\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12 text-center\">\r\n                           <a href=\"#\" (click)=\"updateInvolved(product)\" data-target=\"#myModal\" data-toggle=\"modal\" > Users Involved - {{product.user_details.length}}</a>\r\n                           \r\n                        </div>\r\n                        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\r\n                            <div class=\"modal-dialog\">\r\n                          \r\n                              <!-- Modal content-->\r\n                              <div class=\"modal-content\">\r\n                                <div class=\"modal-header\">\r\n                                  <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n                                  <h4 class=\"modal-title\">User Involved - {{involvedUsers.user_details.length}}</h4>\r\n                                </div>\r\n                                <div class=\"modal-body\">\r\n                                    <table class=\"table\">\r\n                                        <thead class=\"thead-inverse\">\r\n                                    <tr>\r\n                                      <th>Slno</th>\r\n                                      <th>Name</th>\r\n                                      <th>Bid Amount</th>\r\n                                      <th>Time</th>\r\n                                      <th>Status</th>\r\n                                    \r\n                                    </tr>\r\n                                  </thead>\r\n                                  <tbody *ngIf=\"involvedUsers.bidders.length ==0\">\r\n                                      <tr >\r\n                                            <td colspan=\"4\" class=\"text-center\">No User Involved</td>\r\n                                      </tr>\r\n                                  </tbody>\r\n                                  <tbody *ngIf=\"involvedUsers.bidders.length > 0\" >\r\n                                \r\n                                      <tr  *ngFor=\"let usr of involvedUsers.bidders;let i = index\" >\r\n                                            <td >{{i+1}}</td>\r\n                                            <td >{{users[usr.user_id].name}}</td>\r\n                                            <td >{{usr.amount | number:'1.2-2'}}</td>\r\n                                            <td >{{usr.date_time | date: 'dd-MM-yyyy h:mm a'}}</td>\r\n                                            <td >{{usr.bid_status}}</td>\r\n                                      </tr>\r\n                                  </tbody>\r\n                                  </table>\r\n                                \r\n                                </div>\r\n                                <div class=\"modal-footer\">\r\n                                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                                </div>\r\n                              </div>\r\n                          \r\n                            </div>\r\n                          </div>\r\n                    </div>\r\n                    <hr>\r\n                    <div class=\"row\">\r\n                        \r\n                        <div class=\"col-xs-12 col-md-12\">\r\n                            <div *ngIf=\"product.bidders.length > 0\" class=\"alert alert-success text-center margn\">\r\n                                <strong>Last Bid Amount - {{product.lastBidprice | number:'1.2-2'}}</strong>\r\n                                 <br>\r\n                                 {{product.lastBiduser}} \r\n                                 <br> {{product.lastBidTime | date: 'dd-MM-yyyy h:mm a'}}\r\n                      \r\n                        </div>\r\n                        <div *ngIf=\"product.bidders.length == 0\" class=\"alert alert-danger text-center \">\r\n                           No bidder Found\r\n                          </div>\r\n               \r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        </div>\r\n\r\n\r\n\r\n</div>\r\n<div *ngIf=\"products?.length == 0\" class=\"row list-group\">\r\n        <h3 class=\"text-center\"> No Product Found</h3>\r\n    </div>\r\n    </div>\r\n"
 
 /***/ }),
 
@@ -3864,9 +4758,7 @@ module.exports = "<body>\r\n    \r\n        <div id=\"wrapper\">\r\n    \r\n    
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_socket_io_client__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_date_fns_locale_en__ = __webpack_require__("../../../../date-fns/locale/en/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_date_fns_locale_en___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_date_fns_locale_en__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config_config__ = __webpack_require__("../../../../../config/config.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3882,7 +4774,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var RunningAuctionBackComponent = (function () {
     function RunningAuctionBackComponent(productService, userService, router, config) {
         this.productService = productService;
@@ -3890,28 +4781,33 @@ var RunningAuctionBackComponent = (function () {
         this.router = router;
         this.config = config;
         this.involvedUsers = [];
+        this.startFrom = '';
+        this.startUpto = '';
+        this.endFrom = '';
+        this.endUpto = '';
         this.options = {
-            minYear: 1970,
-            maxYear: 2030,
-            displayFormat: 'DD-MM-YYYY',
-            barTitleFormat: 'MMMM YYYY',
-            firstCalendarDay: 0,
-            locale: __WEBPACK_IMPORTED_MODULE_5_date_fns_locale_en__
+            locale: { format: 'DD-MM-YYYY' },
+            alwaysShowCalendars: false,
+        };
+        this.optionsEnd = {
+            locale: { format: 'DD-MM-YYYY' },
+            alwaysShowCalendars: false,
         };
         this.socket = __WEBPACK_IMPORTED_MODULE_4_socket_io_client__(config.socketURL);
     }
     RunningAuctionBackComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.role != "admin") {
-                _this.router.navigate(['/login']);
-            }
-        });
-        this.startDate = new Date();
-        this.endDate = new Date();
+        //  this.picker.datePicker.setStartDate('2017-03-27');
+        // this.userService.getLoggedUSerDetails().subscribe(info =>{
+        //   if(info.role !="admin"){
+        //     this.router.navigate(['/login']);
+        //   }
+        // });
+        // this.startDate = new Date();
+        // this.endDate = new Date();
         this.userService.getAllUsersById().subscribe(function (data) {
             _this.users = data;
-            // console.log(this.users);
+            console.log(_this.users);
         });
         this.socket.on('userbidreject', function (data) {
             _this.getAllproduct();
@@ -3920,28 +4816,6 @@ var RunningAuctionBackComponent = (function () {
             _this.getAllproduct();
         });
         this.socket.on('startbid', function (data) {
-            // console.log(data);
-            //  this.productService.getProduct(data.prod_id).subscribe(data=>{
-            //   var lastBidprice = data.bid_amount;
-            //   var lastBiduser = '';
-            //   var lastBidTime = '';
-            //   var lastBiduserId = '';
-            //   data.bidders.forEach((bidder, i) => {
-            //     //console.log(bidder);
-            //     if(bidder.amount >= lastBidprice){
-            //        lastBidprice = bidder.amount;
-            //        lastBiduser = this.users[bidder.user_id].name;
-            //        lastBiduserId = this.users[bidder.user_id]._id;
-            //        lastBidTime = bidder.date_time;
-            //     }
-            //   });
-            //   data.lastBidprice = lastBidprice;
-            //   data.lastBiduser = lastBiduser;
-            //   data.lastBidTime = lastBidTime;
-            //   data.lastBiduserId = lastBiduserId;
-            //    this.products.push(data);
-            //    //this.getlastbidder();
-            //  });
             _this.getAllproduct();
         });
         this.getAllproduct();
@@ -3981,16 +4855,36 @@ var RunningAuctionBackComponent = (function () {
     RunningAuctionBackComponent.prototype.timeOver = function () {
         this.getAllproduct();
     };
+<<<<<<< HEAD
+=======
+    RunningAuctionBackComponent.prototype.selectedStartDate = function (value, datepicker) {
+        this.startFrom = value.start;
+        this.startUpto = value.end;
+    };
+    RunningAuctionBackComponent.prototype.selectedEndDate = function (value, datepicker) {
+        this.endFrom = value.start;
+        this.endUpto = value.end;
+    };
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     RunningAuctionBackComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-running-auction-back',
             template: __webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.html"),
+<<<<<<< HEAD
             styles: [__webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.css")]
+=======
+            styles: [__webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.css")],
+            inputs: ["startFrom", "startUpto", "endFrom", "endUpto"],
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */],
             __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */],
+<<<<<<< HEAD
             __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */]])
+=======
+            __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]])
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], RunningAuctionBackComponent);
     return RunningAuctionBackComponent;
 }());
@@ -4079,11 +4973,11 @@ var RunningauctionComponent = (function () {
         });
         this.userService.getLoggedUSerDetails().subscribe(function (data) {
             _this.user = data;
-            //console.log(this.user._id);
+            console.log(_this.user);
         });
         this.userService.getAllUsersById().subscribe(function (data) {
             _this.users = data;
-            //  console.log(this.users);
+            console.log(_this.users);
         });
         this.productService.getAllrunningProduct().subscribe(function (data) {
             console.log(data);
@@ -4331,7 +5225,7 @@ var ProductService = (function () {
     ProductService.prototype.deleteProduct = function (pid) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]({ 'Content-Type': 'application/json' });
         var Options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({ headers: headers });
-        return this.http.put(this._deleteUrl + pid, Options)
+        return this.http.put(this._deleteUrl + pid, {}, Options)
             .map(function (res) { return res.json(); });
     };
     ProductService.prototype.getAllrunningProduct = function () {
@@ -4476,6 +5370,13 @@ var UserService = (function () {
         return this.http.get(this.url + 'user/users', { headers: headers })
             .map(function (res) { return res.json(); });
     };
+    //all active users
+    UserService.prototype.getActiveUsers = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get(this.url + 'user/activeusers', { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
     //deleteded users
     UserService.prototype.getDeletedUsers = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
@@ -4606,7 +5507,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/side-bar/side-bar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\r\n<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\r\n    <!-- Brand and toggle get grouped for better mobile display -->\r\n    \r\n    <top-bar></top-bar>\r\n    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\r\n        <ul class=\"nav navbar-nav side-nav\">\r\n            <li *ngIf=\"userService.loggedIn()\">\r\n                <a routerLink=\"/dashboard\"><i class=\"fa fa-fw fa-dashboard\"></i> Dashboard</a>\r\n            </li>\r\n           \r\n            <li *ngIf=\"userService.loggedIn()\">\r\n                <a href=\"javascript:;\" data-toggle=\"collapse\" data-target=\"#demo\"><i class=\"fa fa-fw fa-arrows-v\"></i> Users <i class=\"fa fa-fw fa-caret-down\"></i></a>\r\n                <ul id=\"demo\" class=\"collapse\">\r\n                    <li *ngIf=\"userService.loggedIn()\">\r\n                        <a routerLink=\"/all-users\">All Users</a>\r\n                    </li>\r\n                    <li *ngIf=\"userService.loggedIn()\">\r\n                        <a routerLink=\"/disabled-users\">Disabled Users</a>\r\n                    </li>\r\n                    <li *ngIf=\"userService.loggedIn()\">\r\n                        <a routerLink=\"/deleted-users\">Deleted Users</a>\r\n                    </li>\r\n                </ul>\r\n            </li>\r\n            <li *ngIf=\"userService.loggedIn()\">\r\n                <a href=\"javascript:;\" data-toggle=\"collapse\" data-target=\"#demo1\"><i class=\"fa fa-fw fa-arrows-v\"></i> Product <i class=\"fa fa-fw fa-caret-down\"></i></a>\r\n                <ul id=\"demo1\" class=\"collapse\">\r\n                    <li *ngIf=\"userService.loggedIn()\">\r\n                        <a routerLink=\"/product\">Add Product</a>\r\n                    </li>\r\n                    <li *ngIf=\"userService.loggedIn()\">\r\n                        <a routerLink=\"/product-list\">Manage Product</a>\r\n                    </li>\r\n                </ul>\r\n            </li>\r\n            <li *ngIf=\"userService.loggedIn()\">\r\n                <a href=\"javascript:;\" data-toggle=\"collapse\" data-target=\"#demo3\"><i class=\"fa fa-fw fa-arrows-v\"></i> Auction <i class=\"fa fa-fw fa-caret-down\"></i></a>\r\n                <ul id=\"demo3\" class=\"collapse\">\r\n                    <li *ngIf=\"userService.loggedIn()\">\r\n                        <a routerLink=\"/running-auction\">Running Auction</a>\r\n                    </li>\r\n                    <li *ngIf=\"userService.loggedIn()\">\r\n                        <a routerLink=\"/upcoming-auction\"> Upcoming Auction</a>\r\n                    </li>\r\n                    <li *ngIf=\"userService.loggedIn()\">\r\n                        <a routerLink=\"/closed-auction\">closed Product</a>\r\n                    </li>\r\n                </ul>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n    <!-- /.navbar-collapse -->\r\n</nav>\r\n"
+module.exports = "\r\n\r\n<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\r\n    <!-- Brand and toggle get grouped for better mobile display -->\r\n    \r\n    <top-bar></top-bar>\r\n    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\r\n        <ul class=\"nav navbar-nav side-nav\">\r\n            <li>\r\n                <a routerLink=\"/dashboard\"><i class=\"fa fa-fw fa-dashboard\"></i> Dashboard</a>\r\n            </li>\r\n           \r\n            <li>\r\n                    <a routerLink=\"/users-sub\"><i class=\"fa fa-users\"></i> Users</a>\r\n                <!-- <a href=\"javascript:;\" data-toggle=\"collapse\" data-target=\"#demo\"><i class=\"fa fa-fw fa-arrows-v\"></i> Users <i class=\"fa fa-fw fa-caret-down\"></i></a>\r\n                <ul id=\"demo\" class=\"collapse\">\r\n                    <li>\r\n                        <a routerLink=\"/all-users\">All Users</a>\r\n                    </li>\r\n                    <li>\r\n                        <a routerLink=\"/disabled-users\">Disabled Users</a>\r\n                    </li>\r\n                    <li>\r\n                        <a routerLink=\"/deleted-users\">Deleted Users</a>\r\n                    </li>\r\n                </ul> -->\r\n            </li>\r\n            <li *ngIf=\"userService.loggedIn()\">\r\n                <a  routerLink=\"/product-list\" data-toggle=\"collapse\" data-target=\"#demo1\"><i class=\"fa fa-product-hunt\"></i> Manage Product</a> \r\n                <ul id=\"demo1\" class=\"collapse\">\r\n                    <!-- <li *ngIf=\"userService.loggedIn()\">\r\n                        <a href=\"/product\">Add Product</a>\r\n                    </li> -->\r\n                    <!-- <li *ngIf=\"userService.loggedIn()\">\r\n                        <a routerLink=\"/product-list\">Manage Product</a>\r\n                    </li> -->\r\n                </ul>\r\n            </li>\r\n            <li>\r\n                <a routerLink=\"/auctions\" ><i class=\"fa fa-fw fa-arrows-v\"></i> Auctions </a>\r\n                <!-- <ul id=\"demo3\" class=\"collapse\">\r\n                    <li>\r\n                        <a routerLink=\"/running-auction\">Running Auction</a>\r\n                    </li>\r\n                    <li>\r\n                        <a routerLink=\"/upcoming-auction\"> Upcoming Auction</a>\r\n                    </li>\r\n                    <li>\r\n                        <a routerLink=\"/closed-auction\">closed Product</a>\r\n                    </li>\r\n                </ul> -->\r\n            </li>\r\n        </ul>\r\n    </div>\r\n    <!-- /.navbar-collapse -->\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -4636,12 +5537,11 @@ var SideBarComponent = (function () {
         this.router = router;
     }
     SideBarComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.role != "admin") {
-                _this.router.navigate(['/login']);
-            }
-        });
+        // this.userService.getLoggedUSerDetails().subscribe(info =>{
+        //   if(info.role !="admin"){
+        //     this.router.navigate(['/login']);
+        //   }
+        // })
     };
     SideBarComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -4763,7 +5663,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/top-bar/top-bar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"navbar-header\">\r\n       \r\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n    </button>\r\n    <img src=\"./assets/logo/logo.png\" style=\"float: left\" > <a class=\"navbar-brand\" routerLink=\"/dashboard\"> AUCTION</a>\r\n</div>\r\n<!-- Top Menu Items -->\r\n<ul class=\"nav navbar-right top-nav\">\r\n    <li class=\"dropdown\" *ngFor= \"let item of info\">\r\n            \r\n        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"fa fa-bell\"><div class=\"notify-count\">{{count}}</div></i> <b class=\"caret\"></b></a>\r\n        <ul class=\"dropdown-menu message-dropdown\">\r\n            <li class=\"message-preview\"  >\r\n                <a  [routerLink]=\"['/adminviewed/'+item?._id]\">\r\n                    <div class=\"media\">\r\n                        <div class=\"row\">\r\n                        <div class=\"col-md-4\">\r\n                        <span class=\"pull-left\">\r\n                            <img class=\"media-object\" src=\"../../assets/uploads/{{item?.image||'default.png'}}\" alt=\"\">\r\n                        </span>\r\n                       </div>\r\n                       <div class=\"col-md-8\">\r\n                        <div class=\"media-body\">\r\n                            <h5 class=\"media-heading\">\r\n                                <strong>{{item.name}}</strong>\r\n                            </h5>\r\n                            \r\n                            <p>Item confirmed by bidder</p>\r\n                        </div>\r\n                        </div>\r\n                        </div>\r\n                    </div>\r\n                </a>\r\n            </li>\r\n            <!-- <li class=\"message-footer\">\r\n                <a href=\"#\">Read All New Messages</a>\r\n            </li> -->\r\n        </ul>\r\n    </li>\r\n    \r\n    <li class=\"dropdown\" *ngIf=\"userService.loggedIn()\">\r\n        <a href=\"#\" (click)=\"logout()\" ><i class=\"fa fa-sign-out\"></i> LogOut </a>\r\n        \r\n    </li>\r\n</ul>\r\n"
+module.exports = "\r\n<div class=\"navbar-header\">\r\n       \r\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n    </button>\r\n    <img src=\"./assets/logo/logo.png\" style=\"float: left\" > <a class=\"navbar-brand\" routerLink=\"/dashboard\"> AUCTION</a>\r\n</div>\r\n<!-- Top Menu Items -->\r\n<ul class=\"nav navbar-right top-nav\">\r\n    <li class=\"dropdown\" *ngFor= \"let item of info\">\r\n            \r\n        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"fa fa-bell\"><div class=\"notify-count\">{{count}}</div></i> <b class=\"caret\"></b></a>\r\n        <ul class=\"dropdown-menu message-dropdown\">\r\n            <li class=\"message-preview\"  >\r\n                <a  [routerLink]=\"['/adminviewed/'+item?._id]\">\r\n                    <div class=\"media\">\r\n                        <div class=\"row\">\r\n                        <div class=\"col-md-4\">\r\n                        <span class=\"pull-left\">\r\n                            <img class=\"media-object\" src=\"../../assets/uploads/{{item?.image||'default.png'}}\" alt=\"\">\r\n                        </span>\r\n                       </div>\r\n                       <div class=\"col-md-8\">\r\n                        <div class=\"media-body\">\r\n                            <h5 class=\"media-heading\">\r\n                                <strong>{{item.name}}</strong>\r\n                            </h5>\r\n                            \r\n                            <p>Item confirmed by bidder</p>\r\n                        </div>\r\n                        </div>\r\n                        </div>\r\n                    </div>\r\n                </a>\r\n            </li>\r\n            <!-- <li class=\"message-footer\">\r\n                <a href=\"#\">Read All New Messages</a>\r\n            </li> -->\r\n        </ul>\r\n    </li>\r\n    \r\n    <li class=\"dropdown\">\r\n        <a  (click)=\"logout()\" ><i class=\"fa fa-sign-out\"></i> LogOut </a>\r\n        \r\n    </li>\r\n</ul>\r\n"
 
 /***/ }),
 
@@ -4796,25 +5696,24 @@ var TopBarComponent = (function () {
         this.router = router;
     }
     TopBarComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.role != "admin") {
-                _this.router.navigate(['/login']);
-            }
-        });
+        // this.userService.getLoggedUSerDetails().subscribe(info =>{
+        //   if(info.role !="admin"){
+        //     this.router.navigate(['/login']);
+        //   }
+        // });
         var details = [];
         this.info = [];
         this.count = 0;
-        this.productService.getProducts().subscribe(function (data3) {
-            data3.forEach(function (element) {
-                // console.log(element);
-                if (element.admin_notification.user_id && element.admin_notification.is_viewed == false) {
-                    _this.info.push(element);
-                    _this.count++;
-                    console.log(_this.info);
-                }
-            });
-        });
+        //   this.productService.getProducts().subscribe(data3 => {   
+        //     data3.forEach(element => {
+        //       // console.log(element);
+        //       if(element.admin_notification.user_id && element.admin_notification.is_viewed == false){
+        //         this.info.push(element);
+        //         this.count++;
+        //         console.log(this.info);
+        //       }
+        //     });
+        // });
     };
     TopBarComponent.prototype.logout = function () {
         this.userService.logout();
@@ -4859,7 +5758,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body>\r\n    \r\n        <div id=\"wrapper\">\r\n    \r\n            <!-- Navigation -->\r\n<side-bar></side-bar>\r\n    \r\n            <div id=\"page-wrapper\">\r\n    \r\n                <div class=\"container-fluid\">\r\n    \r\n                    <!-- Page Heading -->\r\n                   <header-title [title]=\"'Upcoming Auction'\"></header-title>\r\n                    <!-- /.row -->\r\n    \r\n                </div>\r\n                <!-- /.container-fluid -->\r\n<div class=\"container\" style=\"padding-top:20px;\">\r\n\r\n\r\n       \r\n    \r\n      <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n            <div class=\"col-md-9 col-xs-9 brdr\">\r\n                    <div class=\"row\">\r\n                            <div class=\"col-md-6 col-xs-6\">\r\n                                <div class=\"row\">\r\n                                    <div class=\"col-md-4 col-xs-4\">\r\n                                        <select [(ngModel)]=\"start\" class=\"form-control\">\r\n                                            <option  value=\"start_date\">Start</option>\r\n                                            <option value=\"end_date\">End</option>\r\n                                        </select>\r\n                                    </div>\r\n                                    <div class=\"col-md-8 col-xs-8\">\r\n                                        <label>From</label>\r\n                                        <ng-datepicker [(ngModel)]=\"startDate\" [options]=\"options\" ></ng-datepicker>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"col-md-6 col-xs-6\">\r\n                                    <div class=\"row\">\r\n                                            <div class=\"col-md-4 col-xs-4\">\r\n                                                <select [(ngModel)]=\"end\" class=\"form-control\">\r\n                                                    <option  value=\"start_date\">Start</option>\r\n                                                    <option  value=\"end_date\">End</option>\r\n                                                </select>\r\n                                            </div>\r\n                                            <div class=\"col-md-8 col-xs-8\">\r\n                                                <label>Upto</label>\r\n                                                <ng-datepicker [(ngModel)]=\"endDate\" [options]=\"options\" ></ng-datepicker>\r\n                                            </div>\r\n                                        </div>\r\n                                \r\n                            </div>\r\n                            \r\n                    </div>   \r\n                </div>\r\n                <!-- <div class=\"col-md-1 col-xs-2\">\r\n                    <div class=\"row\">\r\n                        <input type=\"button\" value=\"search\" class=\"btn btn-primary btn2\">\r\n                    </div>\r\n                </div> -->\r\n                <br>\r\n                <br>\r\n                <br>\r\n                <div class=\"clearfix\"></div>\r\n\r\n          <div  *ngFor=\"let product of (products | dateSearch:startDate:endDate:start:end);let i = index;\" class=\"item  col-xs-4 col-lg-4\">\r\n              <div class=\"thumbnail\">\r\n                  \r\n                  <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                  <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n             \r\n                  <div class=\"caption\">\r\n                      <h4 class=\"group inner list-group-item-heading text-center\">\r\n                          {{product.name}}</h4>\r\n                          <hr>\r\n                          <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                          <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                        </p>\r\n                      <hr>\r\n            \r\n                      <div class=\"row text-center\">\r\n                          <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                              Bid Start On<br>\r\n                              <b>\r\n                                {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                                <br>\r\n                                {{product.start_date | date : 'mediumTime'}}\r\n                              </b>\r\n                          </div>\r\n                           <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                              Bid End On<br>\r\n                              <b>\r\n                                  {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                  <br>\r\n                                  {{product.end_date | date : 'mediumTime'}}\r\n                              </b>\r\n                          </div>\r\n                      </div>\r\n                      <hr>\r\n                      <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-12\">\r\n                              Starts In\r\n                                <p class=\"lead\">\r\n                                  <app-count-down-timer (onTimeOver)=\"timeOver()\" [inputDate]=\"product.start_date\"></app-count-down-timer>\r\n                                </p>\r\n                            </div>\r\n                        </div>\r\n                      <hr>\r\n                      <div class=\"row \">\r\n                          \r\n                          <div class=\"col-xs-12 col-md-12\">\r\n                              <div  class=\"alert alert-success text-center \">\r\n                                <div >\r\n                                <strong>Bid Start Price - {{product.bid_amount | number:'1.2-2'}}</strong>\r\n                                </div>\r\n                            </div>\r\n                      </div>\r\n                  </div>\r\n              </div>\r\n          </div>\r\n    \r\n      </div>\r\n    </div>\r\n      <div *ngIf=\"products?.length == 0\" id=\"products\" class=\"row list-group\">\r\n       <h3 class=\"text-center\"> No Product Found</h3>\r\n      </div>\r\n      </div>\r\n\r\n    </div>\r\n    <!-- /#page-wrapper -->\r\n   \r\n               \r\n</div>\r\n\r\n<footer></footer> \r\n      \r\n</body>\r\n          \r\n         "
+module.exports = "\r\n<div class=\"container\">\r\n\r\n    \r\n      <div *ngIf=\"products?.length > 0\" id=\"products\" class=\"row list-group\">\r\n\r\n            <div class=\"col-md-9 col-xs-9 brdr\">\r\n                    <div class=\"row\">\r\n                            <div class=\"col-md-6 col-xs-6\">\r\n                                <div class=\"row\">\r\n                                    <div class=\"col-md-4 col-xs-4\">\r\n                                        <label>Start Date</label>\r\n                                      </div>\r\n                                        <div class=\"col-md-8 col-xs-8\">\r\n\r\n                                        <!-- <input type=\"text\" class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"options\" (selected)=\"selectedStartDate($event, daterange)\" /> -->\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"col-md-6 col-xs-6\">\r\n                                    <div class=\"row\">\r\n                                            <div class=\"col-md-4 col-xs-4\">\r\n                                                <label>End Date</label>\r\n                                              </div>\r\n                                              <div class=\"col-md-8 col-xs-8\">\r\n                                                <!-- <input type=\"text\"  class=\"form-control\" name=\"daterangeInput\" daterangepicker [options]=\"optionsEnd\" (selected)=\"selectedEndDate($event, daterange)\" /> -->\r\n                                            </div>\r\n                                        </div>\r\n                                \r\n                            </div>\r\n                            \r\n                    </div>   \r\n                </div>\r\n                <br>\r\n                <br>\r\n                <br>\r\n                <div class=\"clearfix\"></div> \r\n\r\n          <div  *ngFor=\"let product of (products | dateSearch:startFrom:startUpto:endFrom:endUpto);let i = index;\" class=\"item  col-xs-4 col-lg-4\">\r\n              <div class=\"thumbnail\">\r\n                  \r\n                  <!-- <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/ccc/fff\" alt=\"\" /> -->\r\n                  <img  class=\"group list-group-image\" src=\"assets/uploads/{{product.image||'default.png'}}\" alt=\"{{product.name}}\" />\r\n             \r\n                  <div class=\"caption\">\r\n                      <h4 class=\"group inner list-group-item-heading text-center\">\r\n                          {{product.name}}</h4>\r\n                          <hr>\r\n                          <p class=\"group inner list-group-item-text\" style=\"min-height: 50px;\">\r\n                          <read-more [text]=\"product.desc\" [maxLength]=\"100\"></read-more>\r\n                        </p>\r\n                      <hr>\r\n            \r\n                      <div class=\"row text-center\">\r\n                          <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                              Bid Start On<br>\r\n                              <b>\r\n                                {{product.start_date | date: 'dd-MM-yyyy'}}\r\n                                <br>\r\n                                {{product.start_date | date : 'mediumTime'}}\r\n                              </b>\r\n                          </div>\r\n                           <div class=\"col-xs-12 col-md-4 col-md-offset-1\">\r\n                              Bid End On<br>\r\n                              <b>\r\n                                  {{product.end_date | date: 'dd-MM-yyyy'}}\r\n                                  <br>\r\n                                  {{product.end_date | date : 'mediumTime'}}\r\n                              </b>\r\n                          </div>\r\n                      </div>\r\n                      <hr>\r\n                      <div class=\"row text-center\">\r\n                            <div class=\"col-xs-12 col-md-12\">\r\n                              Starts In\r\n                                <p class=\"lead\">\r\n                                  <app-count-down-timer (onTimeOver)=\"timeOver()\" [inputDate]=\"product.start_date\"></app-count-down-timer>\r\n                                </p>\r\n                            </div>\r\n                        </div>\r\n                      <hr>\r\n                      <div class=\"row \">\r\n                          \r\n                          <div class=\"col-xs-12 col-md-12\">\r\n                              <div  class=\"alert alert-success text-center \">\r\n                                <div >\r\n                                <strong>Bid Start Price - {{product.bid_amount | number:'1.2-2'}}</strong>\r\n                                </div>\r\n                            </div>\r\n                      </div>\r\n                  </div>\r\n              </div>\r\n          </div>\r\n    \r\n      </div>\r\n    </div>\r\n      <div *ngIf=\"products?.length == 0\" id=\"products\" class=\"row list-group\">\r\n       <h3 class=\"text-center\"> No Product Found</h3>\r\n      </div>\r\n      </div>\r\n\r\n  \r\n          \r\n         "
 
 /***/ }),
 
@@ -4871,12 +5770,19 @@ module.exports = "<body>\r\n    \r\n        <div id=\"wrapper\">\r\n    \r\n    
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_date_fns_locale_en__ = __webpack_require__("../../../../date-fns/locale/en/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_date_fns_locale_en___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_date_fns_locale_en__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_socket_io_client__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config_config__ = __webpack_require__("../../../../../config/config.ts");
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_socket_io_client__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4889,7 +5795,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
+// import { DatepickerOptions } from 'ng2-datepicker';
+// import * as enLocale from 'date-fns/locale/en';
 
 
 
@@ -4899,23 +5806,27 @@ var UpcomingAuctionBackComponent = (function () {
         this.userService = userService;
         this.router = router;
         this.config = config;
+        this.startFrom = '';
+        this.startUpto = '';
+        this.endFrom = '';
+        this.endUpto = '';
         this.options = {
-            minYear: 1970,
-            maxYear: 2030,
-            displayFormat: 'DD-MM-YYYY',
-            barTitleFormat: 'MMMM YYYY',
-            firstCalendarDay: 0,
-            locale: __WEBPACK_IMPORTED_MODULE_3_date_fns_locale_en__
+            locale: { format: 'DD-MM-YYYY' },
+            alwaysShowCalendars: false,
         };
-        this.socket = __WEBPACK_IMPORTED_MODULE_4_socket_io_client__(config.socketURL);
+        this.optionsEnd = {
+            locale: { format: 'DD-MM-YYYY' },
+            alwaysShowCalendars: false,
+        };
+        this.socket = __WEBPACK_IMPORTED_MODULE_3_socket_io_client__(config.socketURL);
     }
     UpcomingAuctionBackComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.role != "admin") {
-                _this.router.navigate(['/login']);
-            }
-        });
+        // this.userService.getLoggedUSerDetails().subscribe(info =>{
+        //   if(info.role !="admin"){
+        //     this.router.navigate(['/login']);
+        //   }
+        // });
         this.startDate = new Date();
         this.endDate = new Date();
         this.getAllproduct();
@@ -4933,6 +5844,17 @@ var UpcomingAuctionBackComponent = (function () {
     UpcomingAuctionBackComponent.prototype.timeOver = function () {
         this.getAllproduct();
     };
+<<<<<<< HEAD
+=======
+    UpcomingAuctionBackComponent.prototype.selectedStartDate = function (value, datepicker) {
+        this.startFrom = value.start;
+        this.startUpto = value.end;
+    };
+    UpcomingAuctionBackComponent.prototype.selectedEndDate = function (value, datepicker) {
+        this.endFrom = value.start;
+        this.endUpto = value.end;
+    };
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     UpcomingAuctionBackComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-upcoming-auction-back',
@@ -4940,9 +5862,15 @@ var UpcomingAuctionBackComponent = (function () {
             styles: [__webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */],
+<<<<<<< HEAD
             __WEBPACK_IMPORTED_MODULE_5__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */],
             __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */]])
+=======
+            __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]])
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], UpcomingAuctionBackComponent);
     return UpcomingAuctionBackComponent;
 }());
@@ -5124,6 +6052,76 @@ var UploadComponent = (function () {
 }());
 
 
+<<<<<<< HEAD
+=======
+
+/***/ }),
+
+/***/ "../../../../../src/app/users-sub/users-sub.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\r\n.test:after {\r\n    content: '\\2807';\r\n    font-size:25px;\r\n    }\r\n\r\nbody {\r\n    margin-top: 100px;\r\n    background-color: #222;\r\n}\r\n\r\n@media(min-width:768px) {\r\n    body {\r\n        margin-top: 50px;\r\n    }\r\n}\r\n\r\n#wrapper {\r\n    padding-left: 0;\r\n}\r\n\r\n#page-wrapper {\r\n    width: 100%;\r\n    padding: 0;\r\n    background-color: #fff;\r\n}\r\n\r\n.huge {\r\n    font-size: 50px;\r\n    line-height: normal;\r\n}\r\n\r\n@media(min-width:768px) {\r\n    #wrapper {\r\n        padding-left: 225px;\r\n    }\r\n\r\n    #page-wrapper {\r\n        padding: 10px;\r\n    }\r\n}\r\n\r\n/* Top Navigation */\r\n\r\n.top-nav {\r\n    padding: 0 15px;\r\n}\r\n\r\n.top-nav>li {\r\n    display: inline-block;\r\n    float: left;\r\n}\r\n\r\n.top-nav>li>a {\r\n    padding-top: 15px;\r\n    padding-bottom: 15px;\r\n    line-height: 20px;\r\n    color: #999;\r\n}\r\n\r\n.top-nav>li>a:hover,\r\n.top-nav>li>a:focus,\r\n.top-nav>.open>a,\r\n.top-nav>.open>a:hover,\r\n.top-nav>.open>a:focus {\r\n    color: #fff;\r\n    background-color: #000;\r\n}\r\n\r\n.top-nav>.open>.dropdown-menu {\r\n    float: left;\r\n    position: absolute;\r\n    margin-top: 0;\r\n    border: 1px solid rgba(0,0,0,.15);\r\n    border-top-left-radius: 0;\r\n    border-top-right-radius: 0;\r\n    background-color: #fff;\r\n    box-shadow: 0 6px 12px rgba(0,0,0,.175);\r\n}\r\n\r\n.top-nav>.open>.dropdown-menu>li>a {\r\n    white-space: normal;\r\n}\r\n\r\nul.message-dropdown {\r\n    padding: 0;\r\n    max-height: 250px;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n}\r\n\r\nli.message-preview {\r\n    width: 275px;\r\n    border-bottom: 1px solid rgba(0,0,0,.15);\r\n}\r\n\r\nli.message-preview>a {\r\n    padding-top: 15px;\r\n    padding-bottom: 15px;\r\n}\r\n\r\nli.message-footer {\r\n    margin: 5px 0;\r\n}\r\n\r\nul.alert-dropdown {\r\n    width: 200px;\r\n}\r\n\r\n/* Side Navigation */\r\n\r\n@media(min-width:768px) {\r\n    .side-nav {\r\n        position: fixed;\r\n        top: 51px;\r\n        left: 225px;\r\n        width: 225px;\r\n        margin-left: -225px;\r\n        border: none;\r\n        border-radius: 0;\r\n        overflow-y: auto;\r\n        background-color: #222;\r\n        bottom: 0;\r\n        overflow-x: hidden;\r\n        padding-bottom: 40px;\r\n    }\r\n\r\n    .side-nav>li>a {\r\n        width: 225px;\r\n    }\r\n\r\n    .side-nav li a:hover,\r\n    .side-nav li a:focus {\r\n        outline: none;\r\n        background-color: #000 !important;\r\n    }\r\n}\r\n\r\n.side-nav>li>ul {\r\n    padding: 0;\r\n}\r\n\r\n.side-nav>li>ul>li>a {\r\n    display: block;\r\n    padding: 10px 15px 10px 38px;\r\n    text-decoration: none;\r\n    color: #999;\r\n}\r\n\r\n.side-nav>li>ul>li>a:hover {\r\n    color: #fff;\r\n}\r\n\r\n/* Flot Chart Containers */\r\n\r\n.flot-chart {\r\n    display: block;\r\n    height: 400px;\r\n}\r\n\r\n.flot-chart-content {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n/* Custom Colored Panels */\r\n\r\n.huge {\r\n    font-size: 40px;\r\n}\r\n\r\n.panel-green {\r\n    border-color: #5cb85c;\r\n}\r\n\r\n.panel-green > .panel-heading {\r\n    border-color: #5cb85c;\r\n    color: #fff;\r\n    background-color: #5cb85c;\r\n}\r\n\r\n.panel-green > a {\r\n    color: #5cb85c;\r\n}\r\n\r\n.panel-green > a:hover {\r\n    color: #3d8b3d;\r\n}\r\n\r\n.panel-red {\r\n    border-color: #d9534f;\r\n}\r\n\r\n.panel-red > .panel-heading {\r\n    border-color: #d9534f;\r\n    color: #fff;\r\n    background-color: #d9534f;\r\n}\r\n\r\n.panel-red > a {\r\n    color: #d9534f;\r\n}\r\n\r\n.panel-red > a:hover {\r\n    color: #b52b27;\r\n}\r\n\r\n.panel-yellow {\r\n    border-color: #f0ad4e;\r\n}\r\n\r\n.panel-yellow > .panel-heading {\r\n    border-color: #f0ad4e;\r\n    color: #fff;\r\n    background-color: #f0ad4e;\r\n}\r\n\r\n.panel-yellow > a {\r\n    color: #f0ad4e;\r\n}\r\n\r\n.panel-yellow > a:hover {\r\n    color: #df8a13;\r\n}\r\n.active1{\r\n    background-color: #eee;\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/users-sub/users-sub.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<body>\r\n  \r\n            <div id=\"wrapper\">\r\n        \r\n                <!-- Navigation -->\r\n    <side-bar></side-bar>\r\n        \r\n                <div id=\"page-wrapper\">\r\n                    <div class=\"container-fluid\">\r\n                            \r\n                                        <!-- Page Heading -->\r\n                                       <header-title [title]=\"'Users'\"></header-title>\r\n                                  \r\n                                        <!-- /.row -->\r\n                        \r\n                                    </div>\r\n                    <div class=\"col-md-2\">\r\n                          <nav class=\"nav-sidebar\">\r\n                              <ul class=\"nav tabs\">\r\n                                    <li [ngClass]=\"{'active1': viewComp == 'All'}\"><a (click)=\"updateView('All')\" href=\"#tab1\" data-toggle=\"tab\">All Users</a></li>\r\n                                    <li [ngClass]=\"{'active1': viewComp == 'Active'}\"><a (click)=\"updateView('Active')\" href=\"#tab4\" data-toggle=\"tab\">Active Users</a></li> \r\n                                    <li [ngClass]=\"{'active1': viewComp == 'Blocked'}\"><a (click)=\"updateView('Blocked')\" href=\"#tab2\" data-toggle=\"tab\">Blocked Users</a></li>\r\n                                    <li [ngClass]=\"{'active1': viewComp == 'Delete'}\"><a (click)=\"updateView('Delete')\" href=\"#tab3\" data-toggle=\"tab\">Delete Users</a></li>  \r\n                                                                 \r\n                              </ul>\r\n                            </nav>\r\n                    </div>\r\n                    <div class=\"col-md-10\">\r\n                        <ol class=\"breadcrumb\">\r\n                            <li>\r\n                                <i class=\"fa fa-dashboard\"></i>  <a href=\"dashboard\">dashboard</a>\r\n                            </li>\r\n                            <li class=\"active\">\r\n                                <i class=\"fa fa-file\"></i> {{title}}\r\n                            </li>\r\n                        </ol>\r\n                      \r\n\r\n                        <div *ngIf=\"viewComp == 'All'\">\r\n                          <all-users></all-users>\r\n                        </div>\r\n                        <div *ngIf=\"viewComp == 'Active'\">\r\n                            <active-users></active-users>\r\n                          </div>\r\n                        <div *ngIf=\"viewComp == 'Blocked'\">\r\n                          <disabled-users></disabled-users>\r\n                        </div>\r\n                        <div *ngIf=\"viewComp == 'Delete'\">\r\n                          <deleted-users></deleted-users>\r\n                        </div>\r\n                    </div>\r\n                    \r\n                  </div>\r\n                  <!-- /#page-wrapper -->\r\n                  \r\n                             \r\n                  </div>\r\n                  \r\n                  <footer></footer> \r\n                    \r\n                  </body>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/users-sub/users-sub.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersSubComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var UsersSubComponent = (function () {
+    function UsersSubComponent() {
+    }
+    UsersSubComponent.prototype.ngOnInit = function () {
+        this.viewComp = 'All';
+        this.title = 'Allusers List';
+    };
+    UsersSubComponent.prototype.updateView = function (page) {
+        this.viewComp = page;
+        this.title = page + ' Users List';
+    };
+    UsersSubComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'users-sub',
+            template: __webpack_require__("../../../../../src/app/users-sub/users-sub.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/users-sub/users-sub.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], UsersSubComponent);
+    return UsersSubComponent;
+}());
+
+
+>>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 
 /***/ }),
 

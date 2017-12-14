@@ -51,6 +51,14 @@ getAllUser(){
   .map(res =>res.json());
 
 }
+//all active users
+getActiveUsers(){
+  let headers = new Headers();
+  headers.append('Content-Type', 'application/json');
+  return this.http.get(this.url + 'user/activeusers',{headers:headers})
+  .map(res =>res.json());
+
+}
 //deleteded users
 getDeletedUsers(){
   let headers = new Headers();

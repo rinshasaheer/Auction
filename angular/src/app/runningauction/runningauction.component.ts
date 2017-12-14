@@ -48,11 +48,11 @@ export class RunningauctionComponent implements OnInit {
 
     this.userService.getLoggedUSerDetails().subscribe(data=>{
         this.user = data;
-        //console.log(this.user._id);
+        console.log(this.user);
     });
     this.userService.getAllUsersById().subscribe(data=>{
         this.users = data;
-      //  console.log(this.users);
+       console.log(this.users);
     });
     this.productService.getAllrunningProduct().subscribe(data=>{
       console.log(data);

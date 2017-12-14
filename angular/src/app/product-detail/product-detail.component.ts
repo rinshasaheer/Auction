@@ -6,10 +6,6 @@ import { FileUploader } from 'ng2-file-upload'; // File Upload
 
 
 import { CanActivate, ActivatedRoute, Router } from '@angular/router';
-import { UserService } from '../services/user.service';
-
-import { Config } from './../../../config/config';
-
 @Component({
   selector: 'product-detail',
   templateUrl: './product-detail.component.html',
@@ -21,7 +17,7 @@ import { Config } from './../../../config/config';
   
 })
 export class ProductDetailComponent implements OnInit {
-  public uploader:FileUploader = new FileUploader({url:this.config.fileUploadURL});
+  public uploader:FileUploader = new FileUploader({url:'http://localhost:3000/products/upload'});
   arr1= {
     name: String,
     start_date: Date,
@@ -38,17 +34,13 @@ export class ProductDetailComponent implements OnInit {
   end_date: Date;
   start  : Boolean = false;
   end  : Boolean = false;
+  imageSelected : Boolean = false;
+  greater :Boolean =false;
 
   // tableview: boolean = false;
   private updateProEvent = new EventEmitter();
   private deleteProEvent = new EventEmitter();
-
-  constructor(private _prductService : ProductService, 
-    private route: ActivatedRoute,
-    private router: Router,
-    private userService: UserService,
-    private config: Config
-  ) { }
+  constructor(private _prductService : ProductService, private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit() {
 
@@ -75,8 +67,48 @@ export class ProductDetailComponent implements OnInit {
 
 
   }
-
+  imageOr(){
+    this.imageSelected = true;
+  }
   updateProduct(arr1){
+    if(this.imageSelected == true){
+      this.uploader.uploadAll();
+      this.uploader.onCompleteItem = (item:any, response:any, status:any, headers:any) => {
+        // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
+        response = JSON.parse(response);
+        this.arr1.image = response.filename;
+        console.log(this.arr1.image);
+
+        this._prductService.updateProduct(arr1).subscribe(data1 => {
+          
+         if(arr1.start_date == undefined){
+            this.start = true;
+          //  alert("Bid Start time is required");
+      
+         }
+        if(arr1.end_date == undefined){
+           this.end = true;
+          // alert("Bid End time is required");
+      
+        }
+
+        if(data1.start_date > data1.end_date){
+          this.greater =true;
+        }
+            else if(data1.start_date <= data1.end_date)
+            {
+              alert("Update Product Successfully");
+              this.router.navigate(['/product-list']);
+            }
+          
+          });
+
+
+
+
+    };
+    }
+    else if(this.imageSelected == false){
     this.uploader.uploadAll();
     this.uploader.onCompleteItem = (item:any, response:any, status:any, headers:any) => {
       // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
@@ -97,7 +129,10 @@ export class ProductDetailComponent implements OnInit {
     // alert("Bid End time is required");
 
   }
-      else if(arr1.start_date != undefined)
+  if(data1.start_date > data1.end_date){
+    this.greater =true;
+  }
+      else if(data1.start_date <= data1.end_date)
       {
         alert("Update Product Successfully");
         this.router.navigate(['/product-list']);
@@ -105,25 +140,26 @@ export class ProductDetailComponent implements OnInit {
     
     });
    }
+  }
   //  deleteProduct(arr1){
   
   //  }
-  //  clickMethod(arr1) {
-  //   if(confirm("Are you sure to delete the product?")) {
+   clickMethod(arr1) {
+    if(confirm("Are you sure to delete the product?")) {
 
-  //     this._prductService.deleteProduct(arr1).subscribe(data1 => {
-  //       if(data1){
-  //         // console.log(data1);
-  //        alert("Delete Product Successfully");
-  //        this.router.navigate(['/product-list'])
-  //       }
+      this._prductService.deleteProduct(arr1).subscribe(data1 => {
+        if(data1){
+          // console.log(data1);
+         alert("Delete Product Successfully");
+         this.router.navigate(['/product-list'])
+        }
   
-  //     });
+      });
 
 
-  //     // this.deleteProEvent.emit(this.pro);
-  //   }
-  // }
+      // this.deleteProEvent.emit(this.pro);
+    }
+  }
   _keyPress(event: any) {
     const pattern = /[0-9]/;
     let inputChar = String.fromCharCode(event.charCode);
@@ -153,8 +189,16 @@ datepickerOpts = {
   format: 'd MM yyyy',
   
 }
-
-
+datepickerOpts1 = {
+  startDate: new Date(Date.now()),
+ 
+  autoclose: true,
+  todayBtn: 'linked',
+  todayHighlight: true,
+  assumeNearbyYear: true,
+  format: 'd MM yyyy',
+  
+}
 
 
 

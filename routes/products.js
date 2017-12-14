@@ -36,7 +36,7 @@ var storage = multer.diskStorage({ //multers disk storage settings
     
             destination: function (req, file, cb) {
     
-                cb(null, './angular/src/assets/uploads/');
+                cb(null, './public/assets/uploads/');
     
             },
     
@@ -91,32 +91,50 @@ var returnRouter = function(io) {
         
      
 
-            router.post('/addnew',function(req,res){
-                console.log("Insert a Product");
-                var newPro = new pro();
-                newPro.name = req.body.name;
-                newPro.desc = req.body.desc;
-                newPro.bid_amount = req.body.bid_amount;
-                newPro.min_bid_rate = req.body.min_bid_rate;
-                newPro.start_date = req.body.start_date;
-                newPro.end_date = req.body.end_date;
-                newPro.image = req.body.image;
-                // newPoll.answers = req.body.answers;
-                newPro.save(function(err,insertedPro){
-                    if(err){
-                        console.log("Error " + err);
-                    }else{
-                        
-            
-                        res.json(insertedPro);
-                    }
-                })
-            
-            });
-//PRODUCT INFO CLOSE info 3001 updateapp
+router.post('/addnew',function(req,res){
+    console.log("Insert a Product");
+    var newPro = new pro();
+    newPro.name = req.body.name;
+    newPro.desc = req.body.desc;
+    newPro.bid_amount = req.body.bid_amount;
+    newPro.min_bid_rate = req.body.min_bid_rate;
+    newPro.start_date = req.body.start_date;
+    newPro.end_date = req.body.end_date;
+    newPro.image = fileName;
+
+    // newPoll.answers = req.body.answers;
+    newPro.save(function(err,insertedPro){
+        if(err){
+            console.log("Error " + err);
+        }else{
+                if(newPro.start_date > new Date()){
+                    console.log("startbid");
+                            io.sockets.emit("startbid", {
+                            prod_id : insertedPro._id
+                            });
+                }else   {
+                    console.log("upcomingbid");
+                            io.sockets.emit("upcomingnewbid", {
+                            prod_id : insertedPro._id
+                            });
+                        }
+            res.json(insertedPro);
+        }
+    })
+
+});
+//notification info 3001 updateapp
+router.get('/inform-notifi-user/:id',(req,res,next)=>{
+    // console.log('yes');
+   console.log("noti"+req.params.id);
+    io.sockets.emit("notification", {
+        user_id : req.params.id
+    });
+});
+//PRODUCT INFO CLOSE BID info 3001  updateapp
 router.get('/inform-closedproduct/:id',(req,res,next)=>{
     // console.log('yes');
-    console.log(req.params.id);
+   console.log("clo"+req.params.id);
     io.sockets.emit("closebid", {
         prod_id : req.params.id
     });
@@ -150,7 +168,7 @@ router.get('/inform-notifi-user/:id',(req,res,next)=>{
 
 router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),function(req,res,next){
 
-    console.log(req.body);
+    //console.log(req.body);
 
     if (req.headers && req.headers.authorization) {
 
@@ -158,14 +176,43 @@ router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),functio
         try {
             decoded = jwt.verify(authorization, config.secret);
             // console.log(decoded);
+            let lastwinner = {};
+            Product.getProductById(req.body.pid,(err, product)=>{
+                if(product.bidders.length != 0){
+                    User.getUserById(product.bidders[product.bidders.length-1].user_id,(err, user)=>{
+                        console.log(user);
+                        lastwinner = user;
+                    });
+                    //lastwinnerId = product.bidders[product.bidders.length-1].user_id;
+                }
+            });
             Product.findOneAndUpdate(
-                {"_id" : req.body.pid},
+                {"_id" : req.body.pid,},
                 { $push:{"bidders": {user_id: decoded._id, amount:req.body.amount }} },
                 { new : true },
                 (err, user)=>{
                     if(err){
                         res.json({success: false, msg : "Failed, went somthing wrong "});
                     }else{
+
+                        if(lastwinnerEmail != ''){
+                            nodemailer.createTestAccount((err, account) => {
+                                let mailOptions = {
+                                    from: 'mean.symptots@gmail.com', // sender address
+                                    to: lastwinner.email,
+                                    subject: 'Alert! Come up with a new bid. Somebody has overtaken you.', // Subject line
+                                    text: '', // plain text body
+                                    html: '<b><h3>Dear ' + lastwinner.name + ',</h3><br/>We have now evaluated that some other bidder have overtaken you. We would be happy to inform that, new submissions from you are welcome until the bid time is closed.  Come up on and got a chance to win. </b>' // html body
+                                };
+                                transporter.sendMail(mailOptions, (error, info) => {
+                                    if (error) {
+                                        // console.log('error');
+                                        return console.log(error);
+                                    }
+                                
+                                });
+                            });
+                        }
                         // write code to emit socket    
                         // io.sockets.on('connection', function (socket) {
                         //     console.log('New User Connected');
@@ -539,9 +586,9 @@ router.put('/statusreject/:id',(req,res,next)=>{
                                     io.sockets.emit("userbidreject", {
                                         prod_id : req.params.id
                                     });
-                                    io.sockets.emit("notification", {
-                                        user_id : id1
-                                    });
+                                    // io.sockets.emit("notification", {
+                                    //     user_id : id1
+                                    // });
                                     return res.json(doc);
 
                                 }

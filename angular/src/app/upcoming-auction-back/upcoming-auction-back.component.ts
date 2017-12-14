@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { Router} from '@angular/router';
-import { DatepickerOptions } from 'ng2-datepicker';
-import * as enLocale from 'date-fns/locale/en';
+// import { DatepickerOptions } from 'ng2-datepicker';
+// import * as enLocale from 'date-fns/locale/en';
 import * as socketIo from 'socket.io-client';
 import { UserService } from '../services/user.service';
+import { DaterangePickerComponent } from 'ng2-daterangepicker';
 import { Config } from './../../../config/config';
 
 @Component({
@@ -17,15 +18,24 @@ export class UpcomingAuctionBackComponent implements OnInit {
   startDate:Date;
   endDate:Date;
   private socket: any; 
-  options:DatepickerOptions = {
-    
-        minYear: 1970,
-        maxYear: 2030,
-        displayFormat: 'DD-MM-YYYY',
-        barTitleFormat: 'MMMM YYYY',
-        firstCalendarDay: 0, // 0 - Sunday, 1 - Monday
-        locale: enLocale
-      };
+  startFrom :any = '';
+  startUpto  :any = '';
+  endFrom :any = '';
+  endUpto :any = '';
+  public options: any = {
+      locale: { format: 'DD-MM-YYYY' },
+      alwaysShowCalendars: false,
+      
+  };
+  public optionsEnd: any = {
+      locale: { format: 'DD-MM-YYYY' },
+      alwaysShowCalendars: false,
+      // startDate: '24-12-2017',
+      // endDate: '28-12-2017',
+     // disableUntil: {year: this.currentYear, month: this.currentMonth, day: this.currentDate}
+     // start: new Date('12/24/2017')
+      
+  };
   constructor(
     private productService: ProductService,
     private userService: UserService,
@@ -37,11 +47,11 @@ export class UpcomingAuctionBackComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.userService.getLoggedUSerDetails().subscribe(info =>{
-      if(info.role !="admin"){
-        this.router.navigate(['/login']);
-      }
-    });
+    // this.userService.getLoggedUSerDetails().subscribe(info =>{
+    //   if(info.role !="admin"){
+    //     this.router.navigate(['/login']);
+    //   }
+    // });
     this.startDate = new Date();
     this.endDate = new Date();
     this.getAllproduct(); 
@@ -59,4 +69,13 @@ export class UpcomingAuctionBackComponent implements OnInit {
   timeOver(){
     this.getAllproduct(); 
   }
+
+  public selectedStartDate(value: any, datepicker?: any) {
+    this.startFrom =  value.start;
+    this.startUpto =  value.end;
+}
+  public selectedEndDate(value: any, datepicker?: any) {
+    this.endFrom =  value.start;
+    this.endUpto =  value.end;
+}
 }
