@@ -3759,7 +3759,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product-list/product-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\r\n<div id=\"wrapper\">\r\n  \r\n<side-bar></side-bar>\r\n  \r\n          <div id=\"page-wrapper\">\r\n  \r\n              <div class=\"container-fluid\">\r\n  \r\n            \r\n                 <header-title [title]=\"'Manage Products'\"></header-title>\r\n             \r\n  \r\n              </div>\r\n<div class=\"col-md-9 tab\" >\r\n<br>\r\n\r\n<button type=\"button\" class=\"btn btn-primary addnew\" data-toggle=\"modal\" data-target=\"#myModal\">+Add New</button>\r\n\r\n<div id=\"myModal\"  class=\"modal fade\">\r\n    <div class=\"modal-dialog\">\r\n    \r\n      <!-- Modal content-->\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n          <h4 class=\"modal-title\">Add New Product</h4>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          \r\n      <form  role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct();\" novalidate>\r\n              <!-- <flash-messages></flash-messages> -->\r\n              <div *ngIf=\"showSuccess\" class=\"alert alert-success\">\r\n                  <strong>Product Added Successfully</strong>\r\n                </div>\r\n          <div class=\"form-group\" >\r\n              <label > Name *</label>\r\n              <input id=\"name\" name=\"name\" class=\"form-control\"\r\n              required  autofocus\r\n              [(ngModel)]=\"newproduct.name\" #name=\"ngModel\" >\r\n              <div *ngIf=\"f.submitted && !name.valid \"  class=\"alert alert-danger\"> ! Name is required</div>\r\n           \r\n          </div>\r\n          <div class=\"form-group\">\r\n              <label for=\"single\">Select Image</label>\r\n              <input type=\"file\" class=\"\" name=\"single\" ng2FileSelect [uploader]=\"uploader\" (change)=\"imageOr();\"/>                                  \r\n           </div>\r\n            \r\n\r\n          <div class=\"form-group\" >\r\n                  <label >  Bid Amount *</label>\r\n                  <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n                  required  \r\n                  [(ngModel)]=\"newproduct.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                  <div *ngIf=\"f.submitted && !bid_amount.valid\"  class=\"alert alert-danger\"> ! Amount is required</div>\r\n         \r\n              </div>\r\n\r\n              <div class=\"form-group\" >\r\n                      <label >  Minimum Bid Rate *</label>\r\n                      <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                      required  \r\n                      [(ngModel)]=\"newproduct.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                      <div *ngIf=\"f.submitted && !min_bid_rate.valid\"  class=\"alert alert-danger\"> ! Minimum Bid rate is required</div>\r\n             \r\n                  </div>\r\n      \r\n           <div class=\"form-group\" >\r\n                  <label > Bid Start time *</label>\r\n                  <datetime name=\"start_date\" required  [(ngModel)]=\"newproduct.start_date\"  [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\" ></datetime>\r\n                  <div *ngIf=\"f.submitted && !newproduct.start_date\"  class=\"alert alert-danger\"> !Start time is required</div>\r\n              \r\n              </div>\r\n              <div class=\"form-group\" >\r\n                      <label > Bid End time *</label>\r\n                      <datetime name = \"end_date\"  required [(ngModel)]=\"newproduct.end_date\" [hasClearButton]=\"true\"  [datepicker]= \"datepickerOpts\" ></datetime>\r\n                      <div *ngIf=\"f.submitted && !newproduct.end_date\"  class=\"alert alert-danger\"> !End time is required</div>\r\n                      <div *ngIf=\"greater\">\r\n                          <div class=\"alert alert-danger\"> !End time must be after the Start time</div>\r\n                      </div>\r\n                  </div>\r\n\r\n          <div class=\"form-group\" >\r\n              <label > Description</label>\r\n              <br>\r\n              <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"newproduct.desc\" ></textarea>\r\n          </div>\r\n\r\n          <button type= \"submit\" class=\"btn btn-primary\" >Submit</button>\r\n         \r\n      </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n        </div>\r\n      </div>\r\n      \r\n    </div>\r\n  </div>\r\n\r\n\r\n    <!-- Trigger the modal with a button -->\r\n \r\n  \r\n    <!-- Modal -->\r\n   \r\n \r\n\r\n<br>\r\n<br>\r\n\r\n<app-product></app-product>\r\n  \r\n \r\n    \r\n</div>\r\n   \r\n</div>\r\n\r\n           \r\n</div>\r\n\r\n\r\n<footer></footer> "
+module.exports = "\r\n\r\n<div id=\"wrapper\">\r\n  \r\n<side-bar></side-bar>\r\n  \r\n          <div id=\"page-wrapper\">\r\n  \r\n              <div class=\"container-fluid\">\r\n  \r\n            \r\n                 <header-title [title]=\"'Manage Products'\"></header-title>\r\n             \r\n  \r\n              </div>\r\n<div class=\"col-md-9 tab\" >\r\n<br>\r\n\r\n<button type=\"button\" class=\"btn btn-primary addnew\" data-toggle=\"modal\" data-target=\"#myModal\">+Add New</button>\r\n\r\n<div id=\"myModal\"  class=\"modal fade\">\r\n    <div class=\"modal-dialog\">\r\n    \r\n      <!-- Modal content-->\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n          <h4 class=\"modal-title\">Add New Product</h4>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          \r\n      <form  role=\"form\"  #f=\"ngForm\" (ngSubmit)=\"f.form.valid && addProduct();\" novalidate>\r\n              <!-- <flash-messages></flash-messages> -->\r\n              <div *ngIf=\"showSuccess\" class=\"alert alert-success\">\r\n                  <strong>Product Added Successfully</strong>\r\n                </div>\r\n          <div class=\"form-group\" >\r\n              <label > Name *</label>\r\n              <input id=\"name\" name=\"name\" class=\"form-control\"\r\n              required  autofocus\r\n              [(ngModel)]=\"newproduct.name\" #name=\"ngModel\" >\r\n              <div *ngIf=\"f.submitted && !name.valid \"  class=\"alert alert-danger\"> ! Name is required</div>\r\n           \r\n          </div>\r\n          <div class=\"form-group\">\r\n              <label for=\"single\">Select Image</label>\r\n              <input type=\"file\" #imgFile class=\"\" name=\"single\" ng2FileSelect [uploader]=\"uploader\" (change)=\"imageOr();\"/>                                  \r\n           </div>\r\n            \r\n\r\n          <div class=\"form-group\" >\r\n                  <label >  Bid Amount *</label>\r\n                  <input id=\"bid_amount\" name=\"bid_amount\" class=\"form-control\"\r\n                  required  \r\n                  [(ngModel)]=\"newproduct.bid_amount\" #bid_amount=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                  <div *ngIf=\"f.submitted && !bid_amount.valid\"  class=\"alert alert-danger\"> ! Amount is required</div>\r\n         \r\n              </div>\r\n\r\n              <div class=\"form-group\" >\r\n                      <label >  Minimum Bid Rate *</label>\r\n                      <input id=\"min_bid_rate\" name=\"min_bid_rate\" class=\"form-control\"\r\n                      required  \r\n                      [(ngModel)]=\"newproduct.min_bid_rate\" #min_bid_rate=\"ngModel\" (keypress)=\"_keyPress($event)\">\r\n                      <div *ngIf=\"f.submitted && !min_bid_rate.valid\"  class=\"alert alert-danger\"> ! Minimum Bid rate is required</div>\r\n             \r\n                  </div>\r\n      \r\n           <div class=\"form-group\" >\r\n                  <label > Bid Start time *</label>\r\n                  <datetime name=\"start_date\" required  [(ngModel)]=\"newproduct.start_date\"  [datepicker]= \"datepickerOpts\" [hasClearButton]=\"true\" ></datetime>\r\n                  <div *ngIf=\"f.submitted && !newproduct.start_date\"  class=\"alert alert-danger\"> !Start time is required</div>\r\n              \r\n              </div>\r\n              <div class=\"form-group\" >\r\n                      <label > Bid End time *</label>\r\n                      <datetime name = \"end_date\"  required [(ngModel)]=\"newproduct.end_date\" [hasClearButton]=\"true\"  [datepicker]= \"datepickerOpts\" ></datetime>\r\n                      <div *ngIf=\"f.submitted && !newproduct.end_date\"  class=\"alert alert-danger\"> !End time is required</div>\r\n                      <div *ngIf=\"greater\">\r\n                          <div class=\"alert alert-danger\"> !End time must be after the Start time</div>\r\n                      </div>\r\n                  </div>\r\n\r\n          <div class=\"form-group\" >\r\n              <label > Description</label>\r\n              <br>\r\n              <textarea rows=\"4\" cols=\"70\" name=\"desc\" [(ngModel)]=\"newproduct.desc\" ></textarea>\r\n          </div>\r\n\r\n          <button type= \"submit\" [disabled]=\"btnDisbled\"  class=\"btn btn-primary\" >Submit</button>\r\n         \r\n      </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" #closeBtn>Close</button>\r\n        </div>\r\n      </div>\r\n      \r\n    </div>\r\n  </div>\r\n\r\n\r\n    <!-- Trigger the modal with a button -->\r\n \r\n  \r\n    <!-- Modal -->\r\n   \r\n \r\n\r\n<br>\r\n<br>\r\n\r\n<app-product></app-product>\r\n  \r\n \r\n    \r\n</div>\r\n   \r\n</div>\r\n\r\n           \r\n</div>\r\n\r\n\r\n<footer></footer> "
 
 /***/ }),
 
@@ -3800,6 +3800,7 @@ var ProductListComponent = (function () {
         this._userService = _userService;
         this.showSuccess = false;
         this.tableview = true;
+        this.btnDisbled = false;
         // private deleteProEvent = new EventEmitter();
         this.SelectPro = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.uploader = new __WEBPACK_IMPORTED_MODULE_5_ng2_file_upload__["FileUploader"]({ url: 'http://localhost:3000/products/upload' });
@@ -3857,20 +3858,6 @@ var ProductListComponent = (function () {
             //  });
             // this.prodata = data1;
         });
-        this._userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.role != "admin") {
-                _this.router.navigate(['/login']);
-            }
-        });
-        this._prductService.getProducts().subscribe(function (data1) {
-            _this.arr1 = data1;
-            console.log(data1);
-            //  data1.forEach(function(item) {
-            //   this.arr1.push(item);
-            //   console.log(this.arr1);
-            //  });
-            // this.prodata = data1;
-        });
     };
     ProductListComponent.prototype.onSelect = function () {
         // this.router.navigate(['/product-detail'+prodata.id])
@@ -3882,8 +3869,10 @@ var ProductListComponent = (function () {
     ProductListComponent.prototype.addProduct = function () {
         var _this = this;
         // console.log("here");
+        this.btnDisbled = true;
         if (this.newproduct.start_date > this.newproduct.end_date) {
             this.greater = true;
+            this.btnDisbled = false;
         }
         else {
             this.greater = false;
@@ -3895,11 +3884,28 @@ var ProductListComponent = (function () {
                     _this._prductService.addProduct(_this.newproduct).subscribe(function (data1) {
                         if (data1) {
                             _this.showSuccess = true;
+                            //this.myEvent.emit(null)
+                            //app-product.loadData();
                             setTimeout(function () {
+                                _this.closeBtn.nativeElement.click();
                                 _this.showSuccess = false;
+                                _this.newproduct = {
+                                    name: '',
+                                    desc: '',
+                                    bid_amount: '',
+                                    min_bid_rate: '',
+                                    start_date: '',
+                                    end_date: '',
+                                    image: ''
+                                };
+                                _this.imageselect = false;
+                                _this.imgFile.nativeElement.value = '';
+                                _this.f.submitted = false;
+                                _this.btnDisbled = false;
+                                //ProductComponent.loadData();
+                                window.location.reload();
                                 // console.log("Error created user");
                             }, 1000);
-                            window.location.reload();
                         }
                         else {
                             alert("Error");
@@ -3912,21 +3918,39 @@ var ProductListComponent = (function () {
             else if (this.imageselect == false) {
                 if (this.newproduct.start_date > this.newproduct.end_date) {
                     this.greater = true;
+                    this.btnDisbled = false;
                     // this._userService.sendmail().subscribe(data => { });
                 }
                 else if (this.newproduct.start_date <= this.newproduct.end_date) {
+                    this.newproduct.image = '';
                     this.greater = false;
                     this._prductService.addProduct(this.newproduct).subscribe(function (data) {
                         if (data) {
                             _this.showSuccess = true;
                             setTimeout(function () {
+                                _this.closeBtn.nativeElement.click();
                                 _this.showSuccess = false;
+                                _this.newproduct = {
+                                    name: '',
+                                    desc: '',
+                                    bid_amount: '',
+                                    min_bid_rate: '',
+                                    start_date: '',
+                                    end_date: '',
+                                    image: ''
+                                };
+                                // this.imageselect = false;
+                                // this.imgFile.nativeElement.value = '';
+                                // this.f.submitted = false;
+                                // this.btnDisbled = false;
+                                window.location.reload();
                                 // console.log("Error created user");
                             }, 1000);
-                            window.location.reload();
+                            // window.location.reload();
                         }
                         else {
-                            alert("Error");
+                            _this.btnDisbled = false;
+                            //alert("Error");
                             console.log("error");
                         }
                     });
@@ -3942,25 +3966,25 @@ var ProductListComponent = (function () {
         }
     };
     ProductListComponent.prototype._keyPress = function (event) {
-        var pattern = /[0-9]/;
+        var pattern = /[0-9/.]/;
         var inputChar = String.fromCharCode(event.charCode);
-        if (!pattern.test(inputChar)) {
+        if (!pattern.test(inputChar) && event.charCode != 0) {
             // invalid character, prevent input
             event.preventDefault();
         }
     };
-    ProductListComponent.prototype.deleteProduct = function (pid) {
-        var _this = this;
-        console.log(pid);
-        this._prductService.deleteProduct(pid).subscribe(function (data1) {
-            if (data1) {
-                // console.log(data1);
-                alert("Delete Product Successfully");
-                location.reload();
-                _this.router.navigate(['/product-list']);
-            }
-        });
-    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('closeBtn'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
+    ], ProductListComponent.prototype, "closeBtn", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('f'),
+        __metadata("design:type", Object)
+    ], ProductListComponent.prototype, "f", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('imgFile'),
+        __metadata("design:type", Object)
+    ], ProductListComponent.prototype, "imgFile", void 0);
     ProductListComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'product-list',
@@ -4087,6 +4111,11 @@ var ProductComponent = (function () {
                 _this.router.navigate(['/login']);
             }
         });
+        this.loadData();
+    };
+    ProductComponent.prototype.loadData = function () {
+        var _this = this;
+        //console.log('loading table....');
         var users = [];
         this.productservice.getProducts().subscribe(function (data) {
             data.forEach(function (item, index) {
