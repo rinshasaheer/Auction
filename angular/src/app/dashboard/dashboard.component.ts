@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     // this.userService.getLoggedUSerDetails().subscribe(info =>{
     //   if(info.role !="admin"){
-    //     this.router.navigate(['/login']);
+        this.router.navigate(['/auctions']);
     //   }
     // });
   }
