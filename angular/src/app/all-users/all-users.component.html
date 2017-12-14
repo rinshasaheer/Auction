@@ -1,8 +1,9 @@
+<div *ngIf="!existStatus"><h4>No Users Found!</h4></div>
 <div class="example-header">
-    <mat-form-field>
-      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-    </mat-form-field>
-  </div>
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+</div>
   
   <div class="example-container mat-elevation-z8">
   
@@ -33,8 +34,8 @@
         <mat-cell *matCellDef="let row">
           <div *ngIf="row.block_status=='false' && row.delete_status=='false'"> Active User</div>
           <div *ngIf="row.block_status=='true' && row.delete_status=='false'"> Block User</div>
-          <div *ngIf="row.block_status=='true' && row.delete_status=='true'"> Delete User</div>
-          <div *ngIf="row.delete_status=='true'  && !row.block_status=='true' "> Delete User</div>
+          <div *ngIf=" row.delete_status=='true' "> Delete User</div>
+      
           
         </mat-cell>
       </ng-container>
@@ -47,9 +48,9 @@
             <mat-menu #menu="matMenu">
               <button *ngIf="row.delete_status=='false'" mat-menu-item >
                
-                <span><a  (click)="deleteUser(row.action)">Delete</a></span>
+                <span><a  (click)="deleteUser(row._id)">Delete</a></span>
               </button>
-              <button *ngIf="row.delete_status=='true'" mat-menu-item disabled>
+              <button *ngIf="row.delete_status=='true' " mat-menu-item disabled>
                   
                   <span>deleted</span>
                 </button>
@@ -87,6 +88,3 @@
   
     <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
   </div>
-  
-  
-  

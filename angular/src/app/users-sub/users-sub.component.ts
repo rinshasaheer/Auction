@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from '../services/user.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'users-sub',
@@ -8,10 +10,16 @@ import { Component, OnInit } from '@angular/core';
 export class UsersSubComponent implements OnInit {
   viewComp : string;
   title : any;
-  constructor() { }
+  constructor(private userService: UserService,
+    
+     private router: Router) { }
 
   ngOnInit() {
-    console.log("hhh");
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="admin"){
+        this.router.navigate(['/login']);
+      }
+    });   
     this.viewComp = 'All';
     this.title = 'Allusers List';
   }

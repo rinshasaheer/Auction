@@ -14,8 +14,8 @@
   export class DeletedUsersComponent implements OnInit{
    
      displayedColumns = [ 'name', 'phone','email'];
-    dataSource: MatTableDataSource<UserData>;
-  
+    dataSource: MatTableDataSource<any>;
+    existStatus =false;
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
   
@@ -27,24 +27,34 @@
     }
    
   ngOnInit() {
-    
-      const users: UserData[] = [];
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="admin"){
+        this.router.navigate(['/login']);
+      }
+    });
+      const users: any[] = [];
       this.userService.getDeletedUsers().subscribe(data=>{
-          data.forEach((item, index) => {
-            users.push({
-            name: item.name,
-            phone: item.phone.toString(),
-            email:item.email
-          });
-          });
-          this.dataSource = new MatTableDataSource(users);
+          // data.forEach((item, index) => {
+          //   users.push({
+          //   name: item.name,
+          //   phone: item.phone.toString(),
+          //   email:item.email
+          // });
+          // });
+          if(data != '')
+          {
+            this.existStatus = true;
+          }
+          this.dataSource = new MatTableDataSource(data);
           this.dataSource.paginator = this.paginator;
           this.dataSource.sort = this.sort;
+          
     });
   
    
      
   }
+  
   
   
     applyFilter(filterValue: string) {
@@ -55,8 +65,8 @@
   }
   
   
-  export interface UserData {
-    name: string;
-    phone: string;
-    email:string;
-  }
+  // export interface UserData {
+  //   name: string;
+  //   phone: string;
+  //   email:string;
+  // }

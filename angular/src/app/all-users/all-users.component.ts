@@ -13,7 +13,7 @@ export class AllUsersComponent implements OnInit {
  
   displayedColumns = [ 'name', 'phone','email','status','action'];
   dataSource: MatTableDataSource<any>;
-
+  existStatus =false;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
@@ -35,7 +35,12 @@ export class AllUsersComponent implements OnInit {
         //   action:item._id
         // });
         // });
-        console.log(data);
+        // console.log(data);
+        if(data != '')
+        {
+          this.existStatus = true;
+        }
+        console.log(this.existStatus);
         this.dataSource = new MatTableDataSource(data);
         console.log(this.dataSource);
         this.dataSource.paginator = this.paginator;
@@ -43,6 +48,11 @@ export class AllUsersComponent implements OnInit {
   });
   }
 ngOnInit() {
+  this.userService.getLoggedUSerDetails().subscribe(info =>{
+    if(info.role !="admin"){
+      this.router.navigate(['/login']);
+    }
+  });
   this.refresh();
 
     
@@ -58,7 +68,7 @@ ngOnInit() {
 
   deleteUser(id){  
     this.userService.deleteUser(id).subscribe(data=>{
-      // console.log(data);
+      console.log(data);
       if(data.success){
         this.refresh();
        // this.refresh();
@@ -73,7 +83,7 @@ ngOnInit() {
 
   blockUser(id){  
     this.userService.blockUser(id).subscribe(data=>{
-      // console.log(data);
+      console.log(data);
       if(data.success){
         this.refresh();
        // this.refresh();
@@ -87,7 +97,7 @@ ngOnInit() {
   }
   unblockUser(id){
     this.userService.unblockUser(id).subscribe(data=>{
-      // console.log(data);
+      console.log(data);
       if(data.success){
         this.refresh();
        // this.refresh();
