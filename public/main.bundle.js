@@ -29,8 +29,6 @@ webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
 webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy recursive";
-<<<<<<< HEAD
-=======
 
 /***/ }),
 
@@ -185,7 +183,6 @@ var ActiveUsersComponent = (function () {
 //   action:number;
 // }
 
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 
 /***/ }),
 
@@ -311,14 +308,9 @@ module.exports = "<div class=\"example-header\">\r\n    <mat-form-field>\r\n    
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AllUsersComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -408,8 +400,6 @@ var AllUsersComponent = (function () {
             }
         });
     };
-<<<<<<< HEAD
-=======
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */])
@@ -418,26 +408,18 @@ var AllUsersComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */])
     ], AllUsersComponent.prototype, "sort", void 0);
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     AllUsersComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'all-users',
             template: __webpack_require__("../../../../../src/app/all-users/all-users.component.html"),
             styles: [__webpack_require__("../../../../../src/app/all-users/all-users.component.css")],
         }),
-<<<<<<< HEAD
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */]])
-=======
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]])
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], AllUsersComponent);
     return AllUsersComponent;
 }());
 
-<<<<<<< HEAD
-=======
 // export interface UserData {
 //  // slno:number;
 //   name: string;
@@ -445,7 +427,6 @@ var AllUsersComponent = (function () {
 //   email: string;
 //   action:number;
 // }
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 
 
 /***/ }),
@@ -523,68 +504,6 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_reflect_metadata__ = __webpack_require__("../../../../reflect-metadata/Reflect.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_reflect_metadata___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_reflect_metadata__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__top_bar_top_bar_component__ = __webpack_require__("../../../../../src/app/top-bar/top-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__side_bar_side_bar_component__ = __webpack_require__("../../../../../src/app/side-bar/side-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__all_users_all_users_component__ = __webpack_require__("../../../../../src/app/all-users/all-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__header_title_header_title_component__ = __webpack_require__("../../../../../src/app/header-title/header-title.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__ = __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__ = __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__product_product_component__ = __webpack_require__("../../../../../src/app/product/product.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/navigation/navigation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__card_card_component__ = __webpack_require__("../../../../../src/app/card/card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__finishedauction_finishedauction_component__ = __webpack_require__("../../../../../src/app/finishedauction/finishedauction.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__upcomingauctions_upcomingauctions_component__ = __webpack_require__("../../../../../src/app/upcomingauctions/upcomingauctions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__equal_validator_directive__ = __webpack_require__("../../../../../src/app/equal-validator.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__email_verification_email_verification_component__ = __webpack_require__("../../../../../src/app/email-verification/email-verification.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__closed_auction_back_closed_auction_back_component__ = __webpack_require__("../../../../../src/app/closed-auction-back/closed-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__upcoming_auction_back_upcoming_auction_back_component__ = __webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__running_auction_back_running_auction_back_component__ = __webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__socialmedia_socialmedia_component__ = __webpack_require__("../../../../../src/app/socialmedia/socialmedia.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__read_more_read_more_component__ = __webpack_require__("../../../../../src/app/read-more/read-more.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__count_down_timer_count_down_timer_component__ = __webpack_require__("../../../../../src/app/count-down-timer/count-down-timer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__services_product_service_service__ = __webpack_require__("../../../../../src/app/services/product-service.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__myauctions_myauctions_component__ = __webpack_require__("../../../../../src/app/myauctions/myauctions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__capitalize_pipe__ = __webpack_require__("../../../../../src/app/capitalize.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__runningauction_runningauction_component__ = __webpack_require__("../../../../../src/app/runningauction/runningauction.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__card_running_card_running_component__ = __webpack_require__("../../../../../src/app/card-running/card-running.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__winnerconfirm_winnerconfirm_component__ = __webpack_require__("../../../../../src/app/winnerconfirm/winnerconfirm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43_ng2_datetime_ng2_datetime__ = __webpack_require__("../../../../ng2-datetime/ng2-datetime.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__product_list_product_list_component__ = __webpack_require__("../../../../../src/app/product-list/product-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__filter_pipe__ = __webpack_require__("../../../../../src/app/filter.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__manage_product_manage_product_component__ = __webpack_require__("../../../../../src/app/manage-product/manage-product.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__product_detail_product_detail_component__ = __webpack_require__("../../../../../src/app/product-detail/product-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__product_pipe__ = __webpack_require__("../../../../../src/app/product.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__ng_datepicker_ng_datepicker_component__ = __webpack_require__("../../../../../src/app/ng-datepicker/ng-datepicker.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__adminviewed_adminviewed_component__ = __webpack_require__("../../../../../src/app/adminviewed/adminviewed.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__upload_upload_component__ = __webpack_require__("../../../../../src/app/upload/upload.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52_angular2_image_upload__ = __webpack_require__("../../../../angular2-image-upload/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_53_ng2_file_upload__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54_ngx_slimscroll__ = __webpack_require__("../../../../ngx-slimscroll/dist/ngx-slimscroll.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__date_search_pipe__ = __webpack_require__("../../../../../src/app/date-search.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__config_config__ = __webpack_require__("../../../../../config/config.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__myauctiontable_myauctiontable_component__ = __webpack_require__("../../../../../src/app/myauctiontable/myauctiontable.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__search_pipe__ = __webpack_require__("../../../../../src/app/search.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__angular_cdk_table__ = __webpack_require__("../../../cdk/esm5/table.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__material_material_component__ = __webpack_require__("../../../../../src/app/material/material.component.ts");
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/esm5/platform-browser-dynamic.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
@@ -645,10 +564,11 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_60_ngx_slimscroll__ = __webpack_require__("../../../../ngx-slimscroll/dist/ngx-slimscroll.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__date_search_pipe__ = __webpack_require__("../../../../../src/app/date-search.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__ = __webpack_require__("../../../../../src/app/auction-back/auction-back.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__material_material_component__ = __webpack_require__("../../../../../src/app/material/material.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__myauctiontable_myauctiontable_component__ = __webpack_require__("../../../../../src/app/myauctiontable/myauctiontable.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__search_pipe__ = __webpack_require__("../../../../../src/app/search.pipe.ts");
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker__ = __webpack_require__("../../../../ng2-daterangepicker/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__material_material_component__ = __webpack_require__("../../../../../src/app/material/material.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__myauctiontable_myauctiontable_component__ = __webpack_require__("../../../../../src/app/myauctiontable/myauctiontable.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__search_pipe__ = __webpack_require__("../../../../../src/app/search.pipe.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -663,28 +583,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-<<<<<<< HEAD
-=======
 
 
 // import { DataTablesModule } from 'angular-datatables';
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-=======
-
-// import { ProductDetailComponent } from './product-detail/product-detail.component';
-// import { DataTablesModule } from 'angular-datatables';
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 
 
 
@@ -715,11 +616,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-<<<<<<< HEAD
-=======
 
-// import { ProductDetailComponent } from './product-detail/product-detail.component';
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -735,36 +643,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 // import { FlashMessagesModule } from 'angular2-flash-messages';
 var appRoutes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-<<<<<<< HEAD
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__["a" /* RegistrationComponent */] },
-    { path: 'product-detail/:id', component: __WEBPACK_IMPORTED_MODULE_47__product_detail_product_detail_component__["a" /* ProductDetailComponent */] },
-    { path: 'product', component: __WEBPACK_IMPORTED_MODULE_16__product_product_component__["a" /* ProductComponent */] },
-    { path: 'product-list', component: __WEBPACK_IMPORTED_MODULE_44__product_list_product_list_component__["a" /* ProductListComponent */] },
-    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_29__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_28__login_login_component__["a" /* LoginComponent */] },
-    { path: 'socialmedia/:id', component: __WEBPACK_IMPORTED_MODULE_33__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */] },
-    { path: 'adminviewed/:id', component: __WEBPACK_IMPORTED_MODULE_50__adminviewed_adminviewed_component__["a" /* AdminviewedComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_8__dashboard_dashboard_component__["a" /* DashboardComponent */] },
-    { path: 'all-users', component: __WEBPACK_IMPORTED_MODULE_12__all_users_all_users_component__["a" /* AllUsersComponent */] },
-    { path: 'disabled-users', component: __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */] },
-    { path: 'deleted-users', component: __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */] },
-    { path: 'upcomingauction', component: __WEBPACK_IMPORTED_MODULE_24__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */] },
-    { path: 'finishedauction', component: __WEBPACK_IMPORTED_MODULE_22__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */] },
-    { path: 'runningauction', component: __WEBPACK_IMPORTED_MODULE_39__runningauction_runningauction_component__["a" /* RunningauctionComponent */] },
-    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_20__home_home_component__["a" /* HomeComponent */] },
-    { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_37__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
-    { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_29__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
-    { path: 'closed-auction', component: __WEBPACK_IMPORTED_MODULE_30__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */] },
-    { path: 'upcoming-auction', component: __WEBPACK_IMPORTED_MODULE_31__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */] },
-    { path: 'running-auction', component: __WEBPACK_IMPORTED_MODULE_32__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */] },
-    { path: 'winnerconfirm/:id', component: __WEBPACK_IMPORTED_MODULE_41__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */] },
-    { path: '**', component: __WEBPACK_IMPORTED_MODULE_28__login_login_component__["a" /* LoginComponent */] },
-    { path: 'upload', component: __WEBPACK_IMPORTED_MODULE_51__upload_upload_component__["a" /* UploadComponent */] },
-    { path: 'material', component: __WEBPACK_IMPORTED_MODULE_62__material_material_component__["a" /* MaterialComponent */] } //file upload
-=======
     { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_46__registration_registration_component__["a" /* RegistrationComponent */] },
     { path: 'product-detail/:id', component: __WEBPACK_IMPORTED_MODULE_51__product_detail_product_detail_component__["a" /* ProductDetailComponent */] },
     { path: 'product', component: __WEBPACK_IMPORTED_MODULE_20__product_product_component__["a" /* ProductComponent */] },
@@ -783,56 +665,16 @@ var appRoutes = [
     { path: 'home', component: __WEBPACK_IMPORTED_MODULE_24__home_home_component__["a" /* HomeComponent */] },
     { path: 'myauctions', component: __WEBPACK_IMPORTED_MODULE_41__myauctions_myauctions_component__["a" /* MyauctionsComponent */] },
     { path: 'email-verification/:id', component: __WEBPACK_IMPORTED_MODULE_33__email_verification_email_verification_component__["a" /* EmailVerificationComponent */] },
-    // {path:'closed-auction', component:ClosedAuctionBackComponent},
-    // {path:'upcoming-auction', component:UpcomingAuctionBackComponent},
-    // {path:'running-auction', component:RunningAuctionBackComponent},
     { path: 'auctions', component: __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__["a" /* AuctionBackComponent */] },
     { path: 'winnerconfirm/:id', component: __WEBPACK_IMPORTED_MODULE_45__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */] },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_32__login_login_component__["a" /* LoginComponent */] },
     { path: 'upload', component: __WEBPACK_IMPORTED_MODULE_55__upload_upload_component__["a" /* UploadComponent */] },
-    { path: 'material', component: __WEBPACK_IMPORTED_MODULE_63__material_material_component__["a" /* MaterialComponent */] } //file upload
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
+    { path: 'material', component: __WEBPACK_IMPORTED_MODULE_64__material_material_component__["a" /* MaterialComponent */] } //file upload
 ];
 var DemoMaterialModule = (function () {
     function DemoMaterialModule() {
     }
     DemoMaterialModule = __decorate([
-<<<<<<< HEAD
-        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["NgModule"])({
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_60__angular_cdk_table__["m" /* CdkTableModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["a" /* MatAutocompleteModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["b" /* MatButtonModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["c" /* MatButtonToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["d" /* MatCardModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["e" /* MatCheckboxModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["f" /* MatChipsModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["C" /* MatStepperModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["g" /* MatDatepickerModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["h" /* MatDialogModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["i" /* MatExpansionModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["j" /* MatGridListModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["k" /* MatIconModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["l" /* MatInputModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["m" /* MatListModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["n" /* MatMenuModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["o" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["q" /* MatPaginatorModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["r" /* MatProgressBarModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["s" /* MatProgressSpinnerModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["t" /* MatRadioModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["u" /* MatRippleModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["v" /* MatSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["w" /* MatSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["y" /* MatSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["x" /* MatSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["z" /* MatSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["B" /* MatSortModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["E" /* MatTableModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["F" /* MatTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["G" /* MatToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["H" /* MatTooltipModule */],
-=======
         Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["NgModule"])({
             exports: [
                 __WEBPACK_IMPORTED_MODULE_11__angular_cdk_table__["m" /* CdkTableModule */],
@@ -867,7 +709,6 @@ var DemoMaterialModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_10__angular_material__["F" /* MatTabsModule */],
                 __WEBPACK_IMPORTED_MODULE_10__angular_material__["G" /* MatToolbarModule */],
                 __WEBPACK_IMPORTED_MODULE_10__angular_material__["H" /* MatTooltipModule */],
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
             ]
         })
     ], DemoMaterialModule);
@@ -878,70 +719,6 @@ var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-<<<<<<< HEAD
-        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["NgModule"])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_18__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__product_product_component__["a" /* ProductComponent */],
-                __WEBPACK_IMPORTED_MODULE_42__registration_registration_component__["a" /* RegistrationComponent */],
-                __WEBPACK_IMPORTED_MODULE_44__product_list_product_list_component__["a" /* ProductListComponent */],
-                __WEBPACK_IMPORTED_MODULE_45__filter_pipe__["a" /* FilterPipe */],
-                __WEBPACK_IMPORTED_MODULE_46__manage_product_manage_product_component__["a" /* ManageProductComponent */],
-                __WEBPACK_IMPORTED_MODULE_47__product_detail_product_detail_component__["a" /* ProductDetailComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__navigation_navigation_component__["a" /* NavigationComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__card_card_component__["a" /* CardComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__finishedauction_finishedauction_component__["a" /* FinishedauctionComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__upcomingauctions_upcomingauctions_component__["a" /* UpcomingauctionsComponent */],
-                __WEBPACK_IMPORTED_MODULE_37__myauctions_myauctions_component__["a" /* MyauctionsComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__equal_validator_directive__["a" /* EqualValidator */],
-                __WEBPACK_IMPORTED_MODULE_38__capitalize_pipe__["a" /* CapitalizePipe */],
-                __WEBPACK_IMPORTED_MODULE_8__dashboard_dashboard_component__["a" /* DashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__side_bar_side_bar_component__["a" /* SideBarComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__top_bar_top_bar_component__["a" /* TopBarComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__header_title_header_title_component__["a" /* HeaderTitleComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__footer_footer_component__["a" /* FooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__all_users_all_users_component__["a" /* AllUsersComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__disabled_users_disabled_users_component__["a" /* DisabledUsersComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__deleted_users_deleted_users_component__["a" /* DeletedUsersComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__email_verification_email_verification_component__["a" /* EmailVerificationComponent */],
-                __WEBPACK_IMPORTED_MODULE_30__closed_auction_back_closed_auction_back_component__["a" /* ClosedAuctionBackComponent */],
-                __WEBPACK_IMPORTED_MODULE_31__upcoming_auction_back_upcoming_auction_back_component__["a" /* UpcomingAuctionBackComponent */],
-                __WEBPACK_IMPORTED_MODULE_32__running_auction_back_running_auction_back_component__["a" /* RunningAuctionBackComponent */],
-                __WEBPACK_IMPORTED_MODULE_33__socialmedia_socialmedia_component__["a" /* SocialmediaComponent */],
-                __WEBPACK_IMPORTED_MODULE_53_ng2_file_upload__["FileSelectDirective"],
-                __WEBPACK_IMPORTED_MODULE_34__read_more_read_more_component__["a" /* ReadMoreComponent */],
-                __WEBPACK_IMPORTED_MODULE_35__count_down_timer_count_down_timer_component__["a" /* CountDownTimerComponent */],
-                __WEBPACK_IMPORTED_MODULE_39__runningauction_runningauction_component__["a" /* RunningauctionComponent */],
-                __WEBPACK_IMPORTED_MODULE_40__card_running_card_running_component__["a" /* CardRunningComponent */],
-                __WEBPACK_IMPORTED_MODULE_41__winnerconfirm_winnerconfirm_component__["a" /* WinnerconfirmComponent */],
-                __WEBPACK_IMPORTED_MODULE_48__product_pipe__["a" /* ProductPipe */],
-                __WEBPACK_IMPORTED_MODULE_50__adminviewed_adminviewed_component__["a" /* AdminviewedComponent */],
-                __WEBPACK_IMPORTED_MODULE_51__upload_upload_component__["a" /* UploadComponent */],
-                __WEBPACK_IMPORTED_MODULE_53_ng2_file_upload__["FileSelectDirective"],
-                __WEBPACK_IMPORTED_MODULE_49__ng_datepicker_ng_datepicker_component__["a" /* NgDatepickerComponent */],
-                __WEBPACK_IMPORTED_MODULE_55__date_search_pipe__["a" /* DateSearchPipe */],
-                __WEBPACK_IMPORTED_MODULE_57__myauctiontable_myauctiontable_component__["a" /* MyauctiontableComponent */],
-                __WEBPACK_IMPORTED_MODULE_58__search_pipe__["a" /* SearchPipe */],
-                __WEBPACK_IMPORTED_MODULE_62__material_material_component__["a" /* MaterialComponent */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_forms__["c" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_forms__["h" /* ReactiveFormsModule */],
-                __WEBPACK_IMPORTED_MODULE_23_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
-                __WEBPACK_IMPORTED_MODULE_7__angular_http__["HttpModule"],
-                __WEBPACK_IMPORTED_MODULE_43_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_forms__["c" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_forms__["h" /* ReactiveFormsModule */],
-                __WEBPACK_IMPORTED_MODULE_23_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
-                __WEBPACK_IMPORTED_MODULE_7__angular_http__["HttpModule"],
-                __WEBPACK_IMPORTED_MODULE_5__angular_router__["f" /* RouterModule */].forRoot(appRoutes),
-                __WEBPACK_IMPORTED_MODULE_54_ngx_slimscroll__["a" /* NgSlimScrollModule */],
-                //  NgDatepickerModule
-                __WEBPACK_IMPORTED_MODULE_52_angular2_image_upload__["a" /* ImageUploadModule */],
-=======
         Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_22__app_component__["a" /* AppComponent */],
@@ -988,72 +765,46 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_53__ng_datepicker_ng_datepicker_component__["a" /* NgDatepickerComponent */],
                 __WEBPACK_IMPORTED_MODULE_61__date_search_pipe__["a" /* DateSearchPipe */],
                 __WEBPACK_IMPORTED_MODULE_62__auction_back_auction_back_component__["a" /* AuctionBackComponent */],
-                //DaterangePickerModule
-                __WEBPACK_IMPORTED_MODULE_64__myauctiontable_myauctiontable_component__["a" /* MyauctiontableComponent */],
-                __WEBPACK_IMPORTED_MODULE_65__search_pipe__["a" /* SearchPipe */],
-                __WEBPACK_IMPORTED_MODULE_63__material_material_component__["a" /* MaterialComponent */]
+                __WEBPACK_IMPORTED_MODULE_65__myauctiontable_myauctiontable_component__["a" /* MyauctiontableComponent */],
+                __WEBPACK_IMPORTED_MODULE_66__search_pipe__["a" /* SearchPipe */],
+                __WEBPACK_IMPORTED_MODULE_64__material_material_component__["a" /* MaterialComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
-                // DataTablesModule,
                 __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_27_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
-                // ImageUploadModule,
-                // DataTablesModule,
-                // NKDatetimeModule,
                 __WEBPACK_IMPORTED_MODULE_47_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
-                //  DataTablesModule
-                // Ng2DatetimePickerModule
-                //BrowserModule,
-                // DataTablesModule,
                 __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_27_ng2_page_scroll__["a" /* Ng2PageScrollModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
-                // ImageUploadModule,
                 __WEBPACK_IMPORTED_MODULE_7__angular_router__["f" /* RouterModule */].forRoot(appRoutes),
                 __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 DemoMaterialModule,
                 // NgDatepickerModule
                 __WEBPACK_IMPORTED_MODULE_60_ngx_slimscroll__["a" /* NgSlimScrollModule */],
                 //  NgDatepickerModule
-                // DataTablesModule,
                 __WEBPACK_IMPORTED_MODULE_56_angular2_image_upload__["a" /* ImageUploadModule */],
+                __WEBPACK_IMPORTED_MODULE_63_ng2_daterangepicker__["Daterangepicker"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_21__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_http__["HttpModule"],
                 __WEBPACK_IMPORTED_MODULE_10__angular_material__["o" /* MatNativeDateModule */],
                 __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
-                DemoMaterialModule,
+                DemoMaterialModule
                 // FlashMessagesModule.forRoot(),
-                // NKDatetimeModule,
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
                 // NKDatetimeModule,
                 //  DataTablesModule
                 // Ng2DatetimePickerModule
                 //ImageUploadModule.forRoot(), //file upload
-<<<<<<< HEAD
-                __WEBPACK_IMPORTED_MODULE_61__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                DemoMaterialModule,
-                __WEBPACK_IMPORTED_MODULE_59__angular_material__["o" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_forms__["h" /* ReactiveFormsModule */],
-            ],
-            providers: [__WEBPACK_IMPORTED_MODULE_36__services_product_service_service__["a" /* ProductServiceService */],
-                __WEBPACK_IMPORTED_MODULE_6__services_user_service__["a" /* UserService */],
-                __WEBPACK_IMPORTED_MODULE_26__guards_auth_guard__["a" /* AuthGuard */],
-                __WEBPACK_IMPORTED_MODULE_25__services_product_service__["a" /* ProductService */],
-                __WEBPACK_IMPORTED_MODULE_56__config_config__["a" /* Config */]
-            ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_18__app_component__["a" /* AppComponent */]],
-=======
                 // Daterangepicker,
-                __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                DemoMaterialModule,
-                __WEBPACK_IMPORTED_MODULE_10__angular_material__["o" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_forms__["h" /* ReactiveFormsModule */],
+                // BrowserAnimationsModule,
+                // DemoMaterialModule,
+                // MatNativeDateModule,
+                // ReactiveFormsModule,
             ],
             providers: [__WEBPACK_IMPORTED_MODULE_40__services_product_service_service__["a" /* ProductServiceService */],
                 __WEBPACK_IMPORTED_MODULE_8__services_user_service__["a" /* UserService */],
@@ -1061,14 +812,11 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_29__services_product_service__["a" /* ProductService */],
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_22__app_component__["a" /* AppComponent */]],
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
         })
     ], AppModule);
     return AppModule;
 }());
 
-<<<<<<< HEAD
-=======
 Object(__WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(AppModule);
 
 
@@ -1095,7 +843,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/auction-back/auction-back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n \r\n <body>\r\n    \r\n              <div id=\"wrapper\">\r\n          \r\n                  <!-- Navigation -->\r\n      <side-bar></side-bar>\r\n          \r\n                  <div id=\"page-wrapper\">\r\n                      <div class=\"container-fluid\">\r\n                              \r\n                                          <!-- Page Heading -->\r\n                                         <header-title [title]=\"'AUCTIONS'\"></header-title>\r\n                                    \r\n                                          <!-- /.row -->\r\n                          \r\n                                      </div>\r\n                      <div class=\"col-md-2\">\r\n                            <nav class=\"nav-sidebar\">\r\n                                <ul class=\"nav tabs\">\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Running'}\"><a (click)=\"updateView('Running')\" href=\"#tab1\" data-toggle=\"tab\">Running Auction</a></li>\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Upcoming'}\"><a (click)=\"updateView('Upcoming')\" href=\"#tab2\" data-toggle=\"tab\">Upcoming auction</a></li>\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Closed'}\"><a (click)=\"updateView('Closed')\" href=\"#tab3\" data-toggle=\"tab\">Closed auction</a></li>                               \r\n                                </ul>\r\n                              </nav>\r\n                      </div>\r\n                      <div class=\"col-md-10\">\r\n                          <ol class=\"breadcrumb\">\r\n                              <li>\r\n                                  <i class=\"fa fa-dashboard\"></i>  <a href=\"dashboard\">dashboard</a>\r\n                              </li>\r\n                              <li class=\"active\">\r\n                                  <i class=\"fa fa-file\"></i> {{title}}\r\n                              </li>\r\n                          </ol>\r\n\r\n                          <div *ngIf=\"viewComp == 'Running'\">\r\n                            <app-running-auction-back [startFrom]=\"startFrom\" [startUpto]=\"startUpto\"  [endFrom]=\"endFrom\"  [endUpto]=\"endUpto\"  ></app-running-auction-back>\r\n                          </div>\r\n                          <div *ngIf=\"viewComp == 'Upcoming'\">\r\n                            <app-upcoming-auction-back></app-upcoming-auction-back>\r\n                          </div>\r\n                          <div *ngIf=\"viewComp == 'Closed'\">\r\n                            <app-closed-auction-back></app-closed-auction-back>\r\n                          </div>\r\n                      </div>\r\n                      \r\n\r\n                    </div>\r\n                    <!-- /#page-wrapper -->\r\n                    \r\n                               \r\n                    </div>\r\n                    \r\n                    <footer></footer> \r\n                      \r\n                    </body>\r\n                                         "
+module.exports = "\r\n \r\n <body>\r\n    \r\n              <div id=\"wrapper\">\r\n          \r\n                  <!-- Navigation -->\r\n      <side-bar></side-bar>\r\n          \r\n                  <div id=\"page-wrapper\">\r\n                      <div class=\"container-fluid\">\r\n                              \r\n                                          <!-- Page Heading -->\r\n                                         <header-title [title]=\"'AUCTIONS'\"></header-title>\r\n                                    \r\n                                          <!-- /.row -->\r\n                          \r\n                                      </div>\r\n                      <div class=\"col-md-2\">\r\n                            <nav class=\"nav-sidebar\">\r\n                                <ul class=\"nav tabs\">\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Running'}\"><a (click)=\"updateView('Running')\" data-toggle=\"tab\">Running Auction</a></li>\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Upcoming'}\"><a (click)=\"updateView('Upcoming')\" data-toggle=\"tab\">Upcoming auction</a></li>\r\n                                      <li [ngClass]=\"{'active1': viewComp == 'Closed'}\"><a (click)=\"updateView('Closed')\" data-toggle=\"tab\">Closed auction</a></li>                               \r\n                                </ul>\r\n                              </nav>\r\n                      </div>\r\n                      <div class=\"col-md-10\">\r\n                          <ol class=\"breadcrumb\">\r\n                              <li>\r\n                                  <i class=\"fa fa-dashboard\"></i>  <a href=\"dashboard\">dashboard</a>\r\n                              </li>\r\n                              <li class=\"active\">\r\n                                  <i class=\"fa fa-file\"></i> {{title}}\r\n                              </li>\r\n                          </ol>\r\n\r\n                          <div *ngIf=\"viewComp == 'Running'\">\r\n                            <app-running-auction-back [startFrom]=\"startFrom\" [startUpto]=\"startUpto\"  [endFrom]=\"endFrom\"  [endUpto]=\"endUpto\"  ></app-running-auction-back>\r\n                          </div>\r\n                          <div *ngIf=\"viewComp == 'Upcoming'\">\r\n                            <app-upcoming-auction-back></app-upcoming-auction-back>\r\n                          </div>\r\n                          <div *ngIf=\"viewComp == 'Closed'\">\r\n                            <app-closed-auction-back></app-closed-auction-back>\r\n                          </div>\r\n                      </div>\r\n                      \r\n\r\n                    </div>\r\n                    <!-- /#page-wrapper -->\r\n                    \r\n                               \r\n                    </div>\r\n                    \r\n                    <footer></footer> \r\n                      \r\n                    </body>\r\n                                         "
 
 /***/ }),
 
@@ -1146,7 +894,6 @@ var AuctionBackComponent = (function () {
     return AuctionBackComponent;
 }());
 
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 
 
 /***/ }),
@@ -1637,8 +1384,6 @@ var ClosedAuctionBackComponent = (function () {
         this.involvedUsers = product;
         console.log(this.involvedUsers);
     };
-<<<<<<< HEAD
-=======
     ClosedAuctionBackComponent.prototype.selectedStartDate = function (value, datepicker) {
         this.startFrom = value.start;
         this.startUpto = value.end;
@@ -1647,7 +1392,6 @@ var ClosedAuctionBackComponent = (function () {
         this.endFrom = value.start;
         this.endUpto = value.end;
     };
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ClosedAuctionBackComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-closed-auction-back',
@@ -1657,11 +1401,7 @@ var ClosedAuctionBackComponent = (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */],
             __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */],
-<<<<<<< HEAD
-            __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */]])
-=======
             __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]])
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], ClosedAuctionBackComponent);
     return ClosedAuctionBackComponent;
 }());
@@ -1918,14 +1658,9 @@ module.exports = "<div class=\"example-header\">\r\n    <mat-form-field>\r\n    
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeletedUsersComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1962,8 +1697,6 @@ var DeletedUsersComponent = (function () {
             _this.dataSource.sort = _this.sort;
         });
     };
-<<<<<<< HEAD
-=======
     DeletedUsersComponent.prototype.applyFilter = function (filterValue) {
         filterValue = filterValue.trim(); // Remove whitespace
         filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
@@ -1977,20 +1710,14 @@ var DeletedUsersComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */])
     ], DeletedUsersComponent.prototype, "sort", void 0);
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     DeletedUsersComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'deleted-users',
             template: __webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.html"),
             styles: [__webpack_require__("../../../../../src/app/deleted-users/deleted-users.component.css")]
         }),
-<<<<<<< HEAD
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */]])
-=======
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]])
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], DeletedUsersComponent);
     return DeletedUsersComponent;
 }());
@@ -2030,14 +1757,9 @@ module.exports = "<div class=\"example-header\">\r\n    <mat-form-field>\r\n    
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DisabledUsersComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2104,8 +1826,6 @@ var DisabledUsersComponent = (function () {
             }
         });
     };
-<<<<<<< HEAD
-=======
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginator */])
@@ -2114,20 +1834,14 @@ var DisabledUsersComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatSort */])
     ], DisabledUsersComponent.prototype, "sort", void 0);
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     DisabledUsersComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'disabled-users',
             template: __webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.html"),
             styles: [__webpack_require__("../../../../../src/app/disabled-users/disabled-users.component.css")]
         }),
-<<<<<<< HEAD
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */]])
-=======
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]])
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], DisabledUsersComponent);
     return DisabledUsersComponent;
 }());
@@ -3818,11 +3532,6 @@ module.exports = "<div id=\"wrapper\">\r\n    \r\n            <!-- Navigation --
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_file_upload__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
-=======
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3953,18 +3662,19 @@ var ProductDetailComponent = (function () {
     };
     //  deleteProduct(arr1){
     //  }
-    //  clickMethod(arr1) {
-    //   if(confirm("Are you sure to delete the product?")) {
-    //     this._prductService.deleteProduct(arr1).subscribe(data1 => {
-    //       if(data1){
-    //         // console.log(data1);
-    //        alert("Delete Product Successfully");
-    //        this.router.navigate(['/product-list'])
-    //       }
-    //     });
-    //     // this.deleteProEvent.emit(this.pro);
-    //   }
-    // }
+    ProductDetailComponent.prototype.clickMethod = function (arr1) {
+        var _this = this;
+        if (confirm("Are you sure to delete the product?")) {
+            this._prductService.deleteProduct(arr1).subscribe(function (data1) {
+                if (data1) {
+                    // console.log(data1);
+                    alert("Delete Product Successfully");
+                    _this.router.navigate(['/product-list']);
+                }
+            });
+            // this.deleteProEvent.emit(this.pro);
+        }
+    };
     ProductDetailComponent.prototype._keyPress = function (event) {
         var pattern = /[0-9]/;
         var inputChar = String.fromCharCode(event.charCode);
@@ -3990,15 +3700,7 @@ var ProductDetailComponent = (function () {
             inputs: ['pro'],
             outputs: ['updateProEvent', 'deleteProEvent']
         }),
-<<<<<<< HEAD
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */],
-            __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]])
-=======
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]])
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], ProductDetailComponent);
     return ProductDetailComponent;
 }());
@@ -4246,11 +3948,7 @@ var ProductListComponent = (function () {
             selector: 'product-list',
             template: __webpack_require__("../../../../../src/app/product-list/product-list.component.html"),
             styles: [__webpack_require__("../../../../../src/app/product-list/product-list.component.css")],
-<<<<<<< HEAD
-            providers: [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */]],
-=======
             providers: [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]],
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
             // pipes :[]
             inputs: ['pros'],
             outputs: ['SelectPro'],
@@ -4333,17 +4031,9 @@ module.exports = "<div class=\"example-header\">\r\n    <mat-form-field>\r\n    
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng2_file_upload__);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4368,114 +4058,6 @@ var ProductComponent = (function () {
         // Create 100 users
         this.productservice = productservice;
         this.router = router;
-<<<<<<< HEAD
-        this.config = config;
-        this.uploader = new __WEBPACK_IMPORTED_MODULE_6_ng2_file_upload__["FileUploader"]({ url: this.config.fileUploadURL });
-        this.imageselect = false;
-        this.newproduct = {
-            name: '',
-            desc: '',
-            bid_amount: '',
-            min_bid_rate: '',
-            start_date: '',
-            end_date: '',
-            image: ''
-        };
-        // _keyPress1(event: any) {
-        //   const pattern = /[a-z,A-Z,1-9  ]/;
-        //   let inputChar = String.fromCharCode(event.charCode);
-        //   if (!pattern.test(inputChar)) {
-        //     // invalid character, prevent input
-        //     event.preventDefault();
-        //   }
-        // }
-        this.datepickerOpts = {
-            startDate: new Date(Date.now()),
-            autoclose: true,
-            todayBtn: 'linked',
-            todayHighlight: true,
-            assumeNearbyYear: true,
-            format: 'd MM yyyy',
-        };
-    }
-    ProductComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        // this._userService.getLoggedUSerDetails().subscribe(info =>{
-        //   if(info.status!=true){
-        //     this.router.navigate(['/login']);
-        //   }
-        //   else if(info.role == "user"){
-        //     this.router.navigate(['/login']);
-        //   }
-        // });
-        this._userService.getLoggedUSerDetails().subscribe(function (info) {
-            if (info.role != "admin") {
-                _this.router.navigate(['/login']);
-            }
-        });
-    };
-    ProductComponent.prototype.imageOr = function () {
-        this.imageselect = true;
-    };
-    ProductComponent.prototype.addProduct = function () {
-        var _this = this;
-        console.log("image selected or not");
-        console.log(this.imageselect);
-        if (this.imageselect == true) {
-            this.uploader.uploadAll();
-            this.uploader.onCompleteItem = function (item, response, status, headers) {
-                response = JSON.parse(response);
-                _this.newproduct.image = response.filename;
-                console.log("before saving");
-                console.log(_this.newproduct);
-                _this._prductService.addProduct(_this.newproduct).subscribe(function (data) {
-                    if (data) {
-                        // console.log(this.newproduct);
-                        console.log(_this.newproduct.image);
-                        _this._userService.sendmail().subscribe(function (data1) {
-                        });
-                        alert("Add Product Successfully");
-                        _this.router.navigate(['/product-list']);
-                        //  window.location.reload();
-                        //  
-                    }
-                    else {
-                        alert("Error");
-                        console.log("error");
-                    }
-                });
-                // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
-            };
-        }
-        else if (this.imageselect == false) {
-            console.log("before saving");
-            this._prductService.addProduct(this.newproduct).subscribe(function (data) {
-                if (data) {
-                    // console.log(this.newproduct);
-                    console.log(_this.newproduct.image);
-                    _this._userService.sendmail().subscribe(function (data1) {
-                    });
-                    alert("Add Product Successfully");
-                    _this.router.navigate(['/product-list']);
-                    //  window.location.reload();
-                    //  
-                }
-                else {
-                    alert("Error");
-                    console.log("error");
-                }
-            });
-        }
-    };
-    ProductComponent.prototype._keyPress = function (event) {
-        var pattern = /[0-9]/;
-        var inputChar = String.fromCharCode(event.charCode);
-        if (!pattern.test(inputChar)) {
-            // invalid character, prevent input
-            event.preventDefault();
-        }
-    };
-=======
         this.displayedColumns = ['name', 'image', 'amount', 'rate', 'startdate', 'enddate', 'description', 'action'];
     }
     ProductComponent.prototype.ngOnInit = function () {
@@ -4524,7 +4106,6 @@ var ProductComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3__angular_material__["A" /* MatSort */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3__angular_material__["A" /* MatSort */])
     ], ProductComponent.prototype, "sort", void 0);
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ProductComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-product',
@@ -4533,14 +4114,7 @@ var ProductComponent = (function () {
             providers: [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]]
             // providers: [ProductService]
         }),
-<<<<<<< HEAD
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */],
-            __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */],
-            __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]])
-=======
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_4__angular_router__["e" /* Router */]])
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], ProductComponent);
     return ProductComponent;
 }());
@@ -4855,8 +4429,6 @@ var RunningAuctionBackComponent = (function () {
     RunningAuctionBackComponent.prototype.timeOver = function () {
         this.getAllproduct();
     };
-<<<<<<< HEAD
-=======
     RunningAuctionBackComponent.prototype.selectedStartDate = function (value, datepicker) {
         this.startFrom = value.start;
         this.startUpto = value.end;
@@ -4865,26 +4437,17 @@ var RunningAuctionBackComponent = (function () {
         this.endFrom = value.start;
         this.endUpto = value.end;
     };
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     RunningAuctionBackComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-running-auction-back',
             template: __webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.html"),
-<<<<<<< HEAD
-            styles: [__webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.css")]
-=======
             styles: [__webpack_require__("../../../../../src/app/running-auction-back/running-auction-back.component.css")],
             inputs: ["startFrom", "startUpto", "endFrom", "endUpto"],
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */],
             __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */],
-<<<<<<< HEAD
-            __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */]])
-=======
             __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]])
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], RunningAuctionBackComponent);
     return RunningAuctionBackComponent;
 }());
@@ -5770,19 +5333,10 @@ module.exports = "\r\n<div class=\"container\">\r\n\r\n    \r\n      <div *ngIf=
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_date_fns_locale_en__ = __webpack_require__("../../../../date-fns/locale/en/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_date_fns_locale_en___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_date_fns_locale_en__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_socket_io_client__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config_config__ = __webpack_require__("../../../../../config/config.ts");
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_socket_io_client__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__("../../../../../config/config.ts");
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5844,8 +5398,6 @@ var UpcomingAuctionBackComponent = (function () {
     UpcomingAuctionBackComponent.prototype.timeOver = function () {
         this.getAllproduct();
     };
-<<<<<<< HEAD
-=======
     UpcomingAuctionBackComponent.prototype.selectedStartDate = function (value, datepicker) {
         this.startFrom = value.start;
         this.startUpto = value.end;
@@ -5854,7 +5406,6 @@ var UpcomingAuctionBackComponent = (function () {
         this.endFrom = value.start;
         this.endUpto = value.end;
     };
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     UpcomingAuctionBackComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-upcoming-auction-back',
@@ -5862,15 +5413,9 @@ var UpcomingAuctionBackComponent = (function () {
             styles: [__webpack_require__("../../../../../src/app/upcoming-auction-back/upcoming-auction-back.component.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_product_service__["a" /* ProductService */],
-<<<<<<< HEAD
-            __WEBPACK_IMPORTED_MODULE_5__services_user_service__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */],
-            __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */]])
-=======
             __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["e" /* Router */],
             __WEBPACK_IMPORTED_MODULE_5__config_config__["a" /* Config */]])
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
     ], UpcomingAuctionBackComponent);
     return UpcomingAuctionBackComponent;
 }());
@@ -6052,8 +5597,6 @@ var UploadComponent = (function () {
 }());
 
 
-<<<<<<< HEAD
-=======
 
 /***/ }),
 
@@ -6121,7 +5664,6 @@ var UsersSubComponent = (function () {
 }());
 
 
->>>>>>> 0108cf191986a40013216c34b601e8d2933cfbc6
 
 /***/ }),
 
@@ -6338,6 +5880,259 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
 
+
+/***/ }),
+
+/***/ "../../../../moment/locale recursive ^\\.\\/.*$":
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "../../../../moment/locale/af.js",
+	"./af.js": "../../../../moment/locale/af.js",
+	"./ar": "../../../../moment/locale/ar.js",
+	"./ar-dz": "../../../../moment/locale/ar-dz.js",
+	"./ar-dz.js": "../../../../moment/locale/ar-dz.js",
+	"./ar-kw": "../../../../moment/locale/ar-kw.js",
+	"./ar-kw.js": "../../../../moment/locale/ar-kw.js",
+	"./ar-ly": "../../../../moment/locale/ar-ly.js",
+	"./ar-ly.js": "../../../../moment/locale/ar-ly.js",
+	"./ar-ma": "../../../../moment/locale/ar-ma.js",
+	"./ar-ma.js": "../../../../moment/locale/ar-ma.js",
+	"./ar-sa": "../../../../moment/locale/ar-sa.js",
+	"./ar-sa.js": "../../../../moment/locale/ar-sa.js",
+	"./ar-tn": "../../../../moment/locale/ar-tn.js",
+	"./ar-tn.js": "../../../../moment/locale/ar-tn.js",
+	"./ar.js": "../../../../moment/locale/ar.js",
+	"./az": "../../../../moment/locale/az.js",
+	"./az.js": "../../../../moment/locale/az.js",
+	"./be": "../../../../moment/locale/be.js",
+	"./be.js": "../../../../moment/locale/be.js",
+	"./bg": "../../../../moment/locale/bg.js",
+	"./bg.js": "../../../../moment/locale/bg.js",
+	"./bn": "../../../../moment/locale/bn.js",
+	"./bn.js": "../../../../moment/locale/bn.js",
+	"./bo": "../../../../moment/locale/bo.js",
+	"./bo.js": "../../../../moment/locale/bo.js",
+	"./br": "../../../../moment/locale/br.js",
+	"./br.js": "../../../../moment/locale/br.js",
+	"./bs": "../../../../moment/locale/bs.js",
+	"./bs.js": "../../../../moment/locale/bs.js",
+	"./ca": "../../../../moment/locale/ca.js",
+	"./ca.js": "../../../../moment/locale/ca.js",
+	"./cs": "../../../../moment/locale/cs.js",
+	"./cs.js": "../../../../moment/locale/cs.js",
+	"./cv": "../../../../moment/locale/cv.js",
+	"./cv.js": "../../../../moment/locale/cv.js",
+	"./cy": "../../../../moment/locale/cy.js",
+	"./cy.js": "../../../../moment/locale/cy.js",
+	"./da": "../../../../moment/locale/da.js",
+	"./da.js": "../../../../moment/locale/da.js",
+	"./de": "../../../../moment/locale/de.js",
+	"./de-at": "../../../../moment/locale/de-at.js",
+	"./de-at.js": "../../../../moment/locale/de-at.js",
+	"./de-ch": "../../../../moment/locale/de-ch.js",
+	"./de-ch.js": "../../../../moment/locale/de-ch.js",
+	"./de.js": "../../../../moment/locale/de.js",
+	"./dv": "../../../../moment/locale/dv.js",
+	"./dv.js": "../../../../moment/locale/dv.js",
+	"./el": "../../../../moment/locale/el.js",
+	"./el.js": "../../../../moment/locale/el.js",
+	"./en-au": "../../../../moment/locale/en-au.js",
+	"./en-au.js": "../../../../moment/locale/en-au.js",
+	"./en-ca": "../../../../moment/locale/en-ca.js",
+	"./en-ca.js": "../../../../moment/locale/en-ca.js",
+	"./en-gb": "../../../../moment/locale/en-gb.js",
+	"./en-gb.js": "../../../../moment/locale/en-gb.js",
+	"./en-ie": "../../../../moment/locale/en-ie.js",
+	"./en-ie.js": "../../../../moment/locale/en-ie.js",
+	"./en-nz": "../../../../moment/locale/en-nz.js",
+	"./en-nz.js": "../../../../moment/locale/en-nz.js",
+	"./eo": "../../../../moment/locale/eo.js",
+	"./eo.js": "../../../../moment/locale/eo.js",
+	"./es": "../../../../moment/locale/es.js",
+	"./es-do": "../../../../moment/locale/es-do.js",
+	"./es-do.js": "../../../../moment/locale/es-do.js",
+	"./es.js": "../../../../moment/locale/es.js",
+	"./et": "../../../../moment/locale/et.js",
+	"./et.js": "../../../../moment/locale/et.js",
+	"./eu": "../../../../moment/locale/eu.js",
+	"./eu.js": "../../../../moment/locale/eu.js",
+	"./fa": "../../../../moment/locale/fa.js",
+	"./fa.js": "../../../../moment/locale/fa.js",
+	"./fi": "../../../../moment/locale/fi.js",
+	"./fi.js": "../../../../moment/locale/fi.js",
+	"./fo": "../../../../moment/locale/fo.js",
+	"./fo.js": "../../../../moment/locale/fo.js",
+	"./fr": "../../../../moment/locale/fr.js",
+	"./fr-ca": "../../../../moment/locale/fr-ca.js",
+	"./fr-ca.js": "../../../../moment/locale/fr-ca.js",
+	"./fr-ch": "../../../../moment/locale/fr-ch.js",
+	"./fr-ch.js": "../../../../moment/locale/fr-ch.js",
+	"./fr.js": "../../../../moment/locale/fr.js",
+	"./fy": "../../../../moment/locale/fy.js",
+	"./fy.js": "../../../../moment/locale/fy.js",
+	"./gd": "../../../../moment/locale/gd.js",
+	"./gd.js": "../../../../moment/locale/gd.js",
+	"./gl": "../../../../moment/locale/gl.js",
+	"./gl.js": "../../../../moment/locale/gl.js",
+	"./gom-latn": "../../../../moment/locale/gom-latn.js",
+	"./gom-latn.js": "../../../../moment/locale/gom-latn.js",
+	"./he": "../../../../moment/locale/he.js",
+	"./he.js": "../../../../moment/locale/he.js",
+	"./hi": "../../../../moment/locale/hi.js",
+	"./hi.js": "../../../../moment/locale/hi.js",
+	"./hr": "../../../../moment/locale/hr.js",
+	"./hr.js": "../../../../moment/locale/hr.js",
+	"./hu": "../../../../moment/locale/hu.js",
+	"./hu.js": "../../../../moment/locale/hu.js",
+	"./hy-am": "../../../../moment/locale/hy-am.js",
+	"./hy-am.js": "../../../../moment/locale/hy-am.js",
+	"./id": "../../../../moment/locale/id.js",
+	"./id.js": "../../../../moment/locale/id.js",
+	"./is": "../../../../moment/locale/is.js",
+	"./is.js": "../../../../moment/locale/is.js",
+	"./it": "../../../../moment/locale/it.js",
+	"./it.js": "../../../../moment/locale/it.js",
+	"./ja": "../../../../moment/locale/ja.js",
+	"./ja.js": "../../../../moment/locale/ja.js",
+	"./jv": "../../../../moment/locale/jv.js",
+	"./jv.js": "../../../../moment/locale/jv.js",
+	"./ka": "../../../../moment/locale/ka.js",
+	"./ka.js": "../../../../moment/locale/ka.js",
+	"./kk": "../../../../moment/locale/kk.js",
+	"./kk.js": "../../../../moment/locale/kk.js",
+	"./km": "../../../../moment/locale/km.js",
+	"./km.js": "../../../../moment/locale/km.js",
+	"./kn": "../../../../moment/locale/kn.js",
+	"./kn.js": "../../../../moment/locale/kn.js",
+	"./ko": "../../../../moment/locale/ko.js",
+	"./ko.js": "../../../../moment/locale/ko.js",
+	"./ky": "../../../../moment/locale/ky.js",
+	"./ky.js": "../../../../moment/locale/ky.js",
+	"./lb": "../../../../moment/locale/lb.js",
+	"./lb.js": "../../../../moment/locale/lb.js",
+	"./lo": "../../../../moment/locale/lo.js",
+	"./lo.js": "../../../../moment/locale/lo.js",
+	"./lt": "../../../../moment/locale/lt.js",
+	"./lt.js": "../../../../moment/locale/lt.js",
+	"./lv": "../../../../moment/locale/lv.js",
+	"./lv.js": "../../../../moment/locale/lv.js",
+	"./me": "../../../../moment/locale/me.js",
+	"./me.js": "../../../../moment/locale/me.js",
+	"./mi": "../../../../moment/locale/mi.js",
+	"./mi.js": "../../../../moment/locale/mi.js",
+	"./mk": "../../../../moment/locale/mk.js",
+	"./mk.js": "../../../../moment/locale/mk.js",
+	"./ml": "../../../../moment/locale/ml.js",
+	"./ml.js": "../../../../moment/locale/ml.js",
+	"./mr": "../../../../moment/locale/mr.js",
+	"./mr.js": "../../../../moment/locale/mr.js",
+	"./ms": "../../../../moment/locale/ms.js",
+	"./ms-my": "../../../../moment/locale/ms-my.js",
+	"./ms-my.js": "../../../../moment/locale/ms-my.js",
+	"./ms.js": "../../../../moment/locale/ms.js",
+	"./my": "../../../../moment/locale/my.js",
+	"./my.js": "../../../../moment/locale/my.js",
+	"./nb": "../../../../moment/locale/nb.js",
+	"./nb.js": "../../../../moment/locale/nb.js",
+	"./ne": "../../../../moment/locale/ne.js",
+	"./ne.js": "../../../../moment/locale/ne.js",
+	"./nl": "../../../../moment/locale/nl.js",
+	"./nl-be": "../../../../moment/locale/nl-be.js",
+	"./nl-be.js": "../../../../moment/locale/nl-be.js",
+	"./nl.js": "../../../../moment/locale/nl.js",
+	"./nn": "../../../../moment/locale/nn.js",
+	"./nn.js": "../../../../moment/locale/nn.js",
+	"./pa-in": "../../../../moment/locale/pa-in.js",
+	"./pa-in.js": "../../../../moment/locale/pa-in.js",
+	"./pl": "../../../../moment/locale/pl.js",
+	"./pl.js": "../../../../moment/locale/pl.js",
+	"./pt": "../../../../moment/locale/pt.js",
+	"./pt-br": "../../../../moment/locale/pt-br.js",
+	"./pt-br.js": "../../../../moment/locale/pt-br.js",
+	"./pt.js": "../../../../moment/locale/pt.js",
+	"./ro": "../../../../moment/locale/ro.js",
+	"./ro.js": "../../../../moment/locale/ro.js",
+	"./ru": "../../../../moment/locale/ru.js",
+	"./ru.js": "../../../../moment/locale/ru.js",
+	"./sd": "../../../../moment/locale/sd.js",
+	"./sd.js": "../../../../moment/locale/sd.js",
+	"./se": "../../../../moment/locale/se.js",
+	"./se.js": "../../../../moment/locale/se.js",
+	"./si": "../../../../moment/locale/si.js",
+	"./si.js": "../../../../moment/locale/si.js",
+	"./sk": "../../../../moment/locale/sk.js",
+	"./sk.js": "../../../../moment/locale/sk.js",
+	"./sl": "../../../../moment/locale/sl.js",
+	"./sl.js": "../../../../moment/locale/sl.js",
+	"./sq": "../../../../moment/locale/sq.js",
+	"./sq.js": "../../../../moment/locale/sq.js",
+	"./sr": "../../../../moment/locale/sr.js",
+	"./sr-cyrl": "../../../../moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "../../../../moment/locale/sr-cyrl.js",
+	"./sr.js": "../../../../moment/locale/sr.js",
+	"./ss": "../../../../moment/locale/ss.js",
+	"./ss.js": "../../../../moment/locale/ss.js",
+	"./sv": "../../../../moment/locale/sv.js",
+	"./sv.js": "../../../../moment/locale/sv.js",
+	"./sw": "../../../../moment/locale/sw.js",
+	"./sw.js": "../../../../moment/locale/sw.js",
+	"./ta": "../../../../moment/locale/ta.js",
+	"./ta.js": "../../../../moment/locale/ta.js",
+	"./te": "../../../../moment/locale/te.js",
+	"./te.js": "../../../../moment/locale/te.js",
+	"./tet": "../../../../moment/locale/tet.js",
+	"./tet.js": "../../../../moment/locale/tet.js",
+	"./th": "../../../../moment/locale/th.js",
+	"./th.js": "../../../../moment/locale/th.js",
+	"./tl-ph": "../../../../moment/locale/tl-ph.js",
+	"./tl-ph.js": "../../../../moment/locale/tl-ph.js",
+	"./tlh": "../../../../moment/locale/tlh.js",
+	"./tlh.js": "../../../../moment/locale/tlh.js",
+	"./tr": "../../../../moment/locale/tr.js",
+	"./tr.js": "../../../../moment/locale/tr.js",
+	"./tzl": "../../../../moment/locale/tzl.js",
+	"./tzl.js": "../../../../moment/locale/tzl.js",
+	"./tzm": "../../../../moment/locale/tzm.js",
+	"./tzm-latn": "../../../../moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "../../../../moment/locale/tzm-latn.js",
+	"./tzm.js": "../../../../moment/locale/tzm.js",
+	"./uk": "../../../../moment/locale/uk.js",
+	"./uk.js": "../../../../moment/locale/uk.js",
+	"./ur": "../../../../moment/locale/ur.js",
+	"./ur.js": "../../../../moment/locale/ur.js",
+	"./uz": "../../../../moment/locale/uz.js",
+	"./uz-latn": "../../../../moment/locale/uz-latn.js",
+	"./uz-latn.js": "../../../../moment/locale/uz-latn.js",
+	"./uz.js": "../../../../moment/locale/uz.js",
+	"./vi": "../../../../moment/locale/vi.js",
+	"./vi.js": "../../../../moment/locale/vi.js",
+	"./x-pseudo": "../../../../moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "../../../../moment/locale/x-pseudo.js",
+	"./yo": "../../../../moment/locale/yo.js",
+	"./yo.js": "../../../../moment/locale/yo.js",
+	"./zh-cn": "../../../../moment/locale/zh-cn.js",
+	"./zh-cn.js": "../../../../moment/locale/zh-cn.js",
+	"./zh-hk": "../../../../moment/locale/zh-hk.js",
+	"./zh-hk.js": "../../../../moment/locale/zh-hk.js",
+	"./zh-tw": "../../../../moment/locale/zh-tw.js",
+	"./zh-tw.js": "../../../../moment/locale/zh-tw.js"
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "../../../../moment/locale recursive ^\\.\\/.*$";
 
 /***/ }),
 

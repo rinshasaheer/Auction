@@ -8,6 +8,44 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {UserService} from './services/user.service';
 import { HttpModule } from '@angular/http';
+// import { DataTablesModule } from 'angular-datatables';
+
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatStepperModule,
+} from '@angular/material';
+import {CdkTableModule} from '@angular/cdk/table';
+
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -45,6 +83,7 @@ import { CardRunningComponent } from './card-running/card-running.component';
 import { WinnerconfirmComponent } from './winnerconfirm/winnerconfirm.component'
 import { RegistrationComponent } from './registration/registration.component';
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+
 import * as $ from 'jquery';
 import { ProductListComponent } from './product-list/product-list.component';
 import { FilterPipe } from './filter.pipe';
@@ -57,6 +96,10 @@ import { AdminviewedComponent } from './adminviewed/adminviewed.component';
 import { UploadComponent } from './upload/upload.component';
 import { ImageUploadModule } from "angular2-image-upload";//file upload
 import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
+import { UsersSubComponent } from './users-sub/users-sub.component';
+import { ActiveUsersComponent } from './active-users/active-users.component';
+
+
 import { CommonModule } from '@angular/common';
 import { NgSlimScrollModule } from 'ngx-slimscroll';
 import { DateSearchPipe } from './date-search.pipe';
@@ -83,7 +126,7 @@ const appRoutes: Routes = [
   {path:'all-users', component: AllUsersComponent},
   {path:'disabled-users', component: DisabledUsersComponent},
   {path:'deleted-users', component: DeletedUsersComponent},
- {path:'upcomingauction', component: UpcomingauctionsComponent},
+  {path:'upcomingauction', component: UpcomingauctionsComponent},
   {path:'finishedauction', component: FinishedauctionComponent},
   {path:'runningauction', component: RunningauctionComponent},
   {path:'home', component:HomeComponent},

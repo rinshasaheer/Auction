@@ -45,6 +45,7 @@
     "md-data-table": "^2.2.0",
     "ng2-datepicker": "^2.1.6",
     "ng2-datepicker-bootstrap": "^1.0.0",
+    "ng2-daterangepicker": "^2.0.12",
     "ng2-datetime": "^1.4.0",
     "ng2-datetime-picker": "^0.15.1",
     "ng2-eonasdan-datetimepicker": "0.0.8",
