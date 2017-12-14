@@ -22,6 +22,9 @@
   
   <!-- <form class="well" role="form"   #f="ngForm" (ngSubmit)="f.form.valid && addProduct()" novalidate> -->
         <form class="well" role="form"  #f="ngForm" (ngSubmit)="f.form.valid && updateProduct(arr1);" novalidate>
+                <div *ngIf="showUpdate" class="alert alert-success">
+                        <strong>Update Product Successfully</strong>
+                      </div>
       <!-- <form #form='ngForm' (ngSubmit)="addProduct()" class="well" > -->
             <div class="form-group" >
                 <label > Name *</label>
