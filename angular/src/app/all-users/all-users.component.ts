@@ -26,6 +26,7 @@ export class AllUsersComponent implements OnInit {
   refresh(){
     const users = [];
     this.userService.getAllUser().subscribe(data=>{
+      console.log(data);
         // data.forEach((item, index) => {
         //   users.push({
         //   //slno:index+1,
@@ -35,7 +36,6 @@ export class AllUsersComponent implements OnInit {
         //   action:item._id
         // });
         // });
-        console.log(data);
         this.dataSource = new MatTableDataSource(data);
         console.log(this.dataSource);
         this.dataSource.paginator = this.paginator;
@@ -57,8 +57,9 @@ ngOnInit() {
   }
 
   deleteUser(id){  
+    console.log(id);
     this.userService.deleteUser(id).subscribe(data=>{
-      // console.log(data);
+      console.log(data);
       if(data.success){
         this.refresh();
        // this.refresh();
@@ -72,8 +73,9 @@ ngOnInit() {
   }
 
   blockUser(id){  
+    console.log("hi");
     this.userService.blockUser(id).subscribe(data=>{
-      // console.log(data);
+      console.log(data);
       if(data.success){
         this.refresh();
        // this.refresh();
@@ -87,7 +89,7 @@ ngOnInit() {
   }
   unblockUser(id){
     this.userService.unblockUser(id).subscribe(data=>{
-      // console.log(data);
+      console.log(data);
       if(data.success){
         this.refresh();
        // this.refresh();

@@ -31,29 +31,29 @@ export class MyauctionsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userService.getLoggedUSerDetails().subscribe(info =>{
-      if(info.role !="user"){
-        this.router.navigate(['/login']);
-      }
-    });
-    this.loadAuctions();
-    this.socket.on('newbid', (data) => {
-      // console.log(data);
-      // console.log('mycll');
-      this.product.forEach(function(item, index, object){
-        if(item._id == data){
-          object.splice(index, 1);
-        }
-      });
+    // this.userService.getLoggedUSerDetails().subscribe(info =>{
+    //   if(info.role !="user"){
+    //     this.router.navigate(['/login']);
+    //   }
+    // });
+    // this.loadAuctions();
+    // this.socket.on('newbid', (data) => {
+    //   // console.log(data);
+    //   // console.log('mycll');
+    //   this.product.forEach(function(item, index, object){
+    //     if(item._id == data){
+    //       object.splice(index, 1);
+    //     }
+    //   });
       
       
-      this.loadAuctions();
-    })
-    this.socket.on('closebid', (data) => {
-      // console.log(data);
+    //   this.loadAuctions();
+    // })
+    // this.socket.on('closebid', (data) => {
+    //   // console.log(data);
     
-      this.loadAuctions();
-    })
+    //   this.loadAuctions();
+    // })
     // this.socket.on('userbidreject', (data) => {
     //   console.log(data);
     
@@ -63,72 +63,72 @@ export class MyauctionsComponent implements OnInit {
     
   }
 
-  loadAuctions(){
-    this.loadUserId();
-    this._productService.loadMyAuctionProduct()
-    .subscribe(resProducts => {
-     this.product = resProducts;
-    //   console.log('fetch all my product');
-    //   console.log(resProducts);
-      if(resProducts.length > 0){
-        this.existStatus = true;
-      }
-      this.product = resProducts;
-      console.log(this.existStatus);
-        let uId = this._productService.loadUserId();
-      this.product.forEach((item, index) => {
-        var lastBidprice = item.bid_amount;
-        var lastBiduser = '';
-        var lastBidTime = '';
-        var lastBiduserId = '';
-        var bidstatus = '';
-        var bgClr = '';
-        let mybid = [];
-        item.bidders.forEach((bidder, i) => {
-          // console.log(bidder);
-          if(bidder.amount >= lastBidprice && bidder.bid_status != 'rejected'){
-             lastBidprice = bidder.amount;
-            //  lastBiduser = this.users[bidder.user_id].name;
-              lastBiduserId = bidder.user_id;
-             lastBidTime = bidder.date_time;
-          }
-          if(bidder.user_id == uId){
-            mybid.push(bidder);
-          }
-         // if(bidder.bid_status == "rejected")
-        });
-        if(lastBiduserId  == uId && item.is_bid_completed){
-          var bidstatus = 'Winner';
-          var bgClr = '#00ab5d';
-        }
-        if(lastBiduserId  != uId && item.is_bid_completed){
-          var bidstatus = 'Participated';
-          var bgClr = '#da1515';
-        }
-        if(lastBiduserId  == uId && !item.is_bid_completed){
-          var bidstatus = 'Participated';
-          var bgClr = '#00ab5d';
-        }
-        if(lastBiduserId  != uId && !item.is_bid_completed){
-          var bidstatus = 'Participated';
-          var bgClr = '#da1515';
-        }
-        this.product[index].bidstatus = bidstatus;
-        this.product[index].mybid = mybid;
-        this.product[index].bgClr = bgClr;
-        this.product[index].mybid = mybid;
-        this.product[index].topbid = lastBidprice;
-        this.product[index].lastBiduser = lastBiduser;
-        this.product[index].lastBidTime = lastBidTime;
-        this.product[index].lastBiduserId = lastBiduserId;
-      });
-      console.log(this.product);
+  // loadAuctions(){
+  //   this.loadUserId();
+  //   this._productService.loadMyAuctionProduct()
+  //   .subscribe(resProducts => {
+  //    this.product = resProducts;
+  //   //   console.log('fetch all my product');
+  //   //   console.log(resProducts);
+  //     if(resProducts.length > 0){
+  //       this.existStatus = true;
+  //     }
+  //     this.product = resProducts;
+  //     console.log(this.existStatus);
+  //       let uId = this._productService.loadUserId();
+  //     this.product.forEach((item, index) => {
+  //       var lastBidprice = item.bid_amount;
+  //       var lastBiduser = '';
+  //       var lastBidTime = '';
+  //       var lastBiduserId = '';
+  //       var bidstatus = '';
+  //       var bgClr = '';
+  //       let mybid = [];
+  //       item.bidders.forEach((bidder, i) => {
+  //         // console.log(bidder);
+  //         if(bidder.amount >= lastBidprice && bidder.bid_status != 'rejected'){
+  //            lastBidprice = bidder.amount;
+  //           //  lastBiduser = this.users[bidder.user_id].name;
+  //             lastBiduserId = bidder.user_id;
+  //            lastBidTime = bidder.date_time;
+  //         }
+  //         if(bidder.user_id == uId){
+  //           mybid.push(bidder);
+  //         }
+  //        // if(bidder.bid_status == "rejected")
+  //       });
+  //       if(lastBiduserId  == uId && item.is_bid_completed){
+  //         var bidstatus = 'Winner';
+  //         var bgClr = '#00ab5d';
+  //       }
+  //       if(lastBiduserId  != uId && item.is_bid_completed){
+  //         var bidstatus = 'Participated';
+  //         var bgClr = '#da1515';
+  //       }
+  //       if(lastBiduserId  == uId && !item.is_bid_completed){
+  //         var bidstatus = 'Participated';
+  //         var bgClr = '#00ab5d';
+  //       }
+  //       if(lastBiduserId  != uId && !item.is_bid_completed){
+  //         var bidstatus = 'Participated';
+  //         var bgClr = '#da1515';
+  //       }
+  //       this.product[index].bidstatus = bidstatus;
+  //       this.product[index].mybid = mybid;
+  //       this.product[index].bgClr = bgClr;
+  //       this.product[index].mybid = mybid;
+  //       this.product[index].topbid = lastBidprice;
+  //       this.product[index].lastBiduser = lastBiduser;
+  //       this.product[index].lastBidTime = lastBidTime;
+  //       this.product[index].lastBiduserId = lastBiduserId;
+  //     });
+  //     console.log(this.product);
       
-    });
-  }
+  //   });
+  // }
 
-  loadUserId(){
-    this.authUser = JSON.parse(localStorage.getItem('user'));
-    return this.authUser.id;
-  }
+  // loadUserId(){
+  //   this.authUser = JSON.parse(localStorage.getItem('user'));
+  //   return this.authUser.id;
+  // }
 }

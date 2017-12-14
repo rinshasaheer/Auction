@@ -1,4 +1,8 @@
-<div class="example-header" *ngIf="stat">
+
+<div *ngIf="existStatus">
+    <h4 style="text-align:center">No items to display!</h4>
+</div>
+  <div class="example-header" *ngIf="stat" >
     <mat-form-field>
       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
     </mat-form-field>
@@ -42,10 +46,11 @@
   
     <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
   </div>
+
+
   
   
   <!-- Copyright 2017 Google Inc. All Rights Reserved.
       Use of this source code is governed by an MIT-style license that
       can be found in the LICENSE file at http://angular.io/license -->
-  
   

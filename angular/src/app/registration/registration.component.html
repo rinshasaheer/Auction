@@ -4,6 +4,7 @@
 <div class="wrapper center">
   <br>
   <form class="form-horizontal" role="form"  #f="ngForm" (ngSubmit)="f.form.valid && onRegisterSubmit();" novalidate>
+    <h2 style="text-align:center;padding-bottom:22px;color: #307ab3;font-weight:bold;">Sign up here</h2>
     <div *ngIf="showSuccess" class="alert alert-success">
       <strong>Account created successfully, Please verify your Email address</strong>
     </div>
