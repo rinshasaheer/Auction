@@ -33,6 +33,7 @@ import { FileUploader } from 'ng2-file-upload'; // File Upload
 
 })
 export class ProductComponent {
+  pid : any;
   displayedColumns = [ 'name','image','amount','rate','startdate','enddate','description','action'];
   dataSource: MatTableDataSource<any>;
 
@@ -41,6 +42,7 @@ export class ProductComponent {
 
   constructor( private productservice: ProductService, private router: Router) {
     // Create 100 users
+    
 
   }
 ngOnInit() {
@@ -88,6 +90,9 @@ ngOnInit() {
               }
         
             });
+  }
+  product_det(id){
+    this.pid = id;
   }
 }
 

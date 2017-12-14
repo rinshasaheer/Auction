@@ -15,7 +15,7 @@
         <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>
         <mat-cell *matCellDef="let row"> 
           <a href ="/product-detail/{{row.id}}" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="auto" title="Edit"><i class="fa fa-pencil"></i></a>
-          <a href="#" class="btn btn-primary btn-xs" data-target="#myModal1" data-toggle="modal" ><i class="fa fa-trash-o"></i></a>
+          <a href="#" class="btn btn-primary btn-xs" data-target="#myModal1" (click)="product_det(row.id)"  data-toggle="modal" ><i class="fa fa-trash-o"></i></a>
           <div id="myModal1" class="modal fade" role="dialog">
             <div class="modal-dialog">
           
@@ -30,7 +30,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" (click)="deleteProduct(row.id)" class="btn btn-default" data-dismiss="modal">Delete</button>
+                  <button type="button" (click)="deleteProduct(pid)" class="btn btn-default" data-dismiss="modal">Delete</button>
                 </div>
               </div>
           

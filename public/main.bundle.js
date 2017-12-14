@@ -715,7 +715,7 @@ var DemoMaterialModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_11__angular_material__["F" /* MatTabsModule */],
                 __WEBPACK_IMPORTED_MODULE_11__angular_material__["G" /* MatToolbarModule */],
                 __WEBPACK_IMPORTED_MODULE_11__angular_material__["H" /* MatTooltipModule */],
-            ]
+            ],
         })
     ], DemoMaterialModule);
     return DemoMaterialModule;
@@ -1878,7 +1878,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/email-verification/email-verification.component.html":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "<div *ngIf=\"showSuccess\" class=\"alert alert-success\">\r\n    <strong>Success, Redirecting ...</strong>\r\n  </div>\r\n<div *ngIf=\"showDanger\" class=\"alert alert-danger\">\r\n    <strong>Error on verification</strong>\r\n  </div>"
 
 /***/ }),
 
@@ -1907,6 +1907,8 @@ var EmailVerificationComponent = (function () {
         this.userService = userService;
         this.route = route;
         this.router = router;
+        this.showDanger = false;
+        this.showSuccess = false;
     }
     EmailVerificationComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1914,14 +1916,20 @@ var EmailVerificationComponent = (function () {
             _this.userService.verifyUser(params.id).subscribe(function (data) {
                 console.log(data);
                 if (data.success) {
-                    alert("Success, Redirecting ...");
-                    _this.router.navigate(['/home']);
-                    console.log("successfull verified user");
+                    //  alert("Success, Redirecting ...");
+                    _this.showSuccess = true;
+                    setTimeout(function () {
+                        _this.router.navigate(['/login']);
+                        console.log("successfull verified user");
+                    }, 3000);
                 }
                 else {
-                    alert("Error on verification");
-                    _this.router.navigate(['/login']);
-                    console.log("error verified user");
+                    // alert("Error on verification");
+                    _this.showDanger = true;
+                    setTimeout(function () {
+                        _this.router.navigate(['/login']);
+                        console.log("error verified user");
+                    }, 3000);
                 }
             });
         });
@@ -2427,7 +2435,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body style=\"background-color : #f3f3f3;padding:  5% 0 17% 0;\">\n<div class=\"container\">\n  <div class=\"row\">\n\n    <div class=\"main\">\n\n      <h3>Please Log In, or <a [routerLink]=\"['/registration']\">Sign Up</a></h3>\n      <div class=\"row\">\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\n          <a href=\"/auth/facebook\" target=\"_blank\" class=\"btn btn-lg btn-primary btn-block\">Facebook</a>\n        </div>\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\n          <a href=\"/auth/google\" class=\"btn btn-lg btn-info btn-block\">Google</a>\n        </div>\n      </div>\n      <div class=\"login-or\">\n        <hr class=\"hr-or\">\n        <span class=\"span-or\">or</span>\n      </div>\n\n      <form role=\"form\" #f=\"ngForm\" (ngSubmit)=\"f.form.valid && login()\" novalidate>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\n          <label for=\"inputUsernameEmail\">Username or email</label>\n          <input type=\"text\" class=\"form-control\" id=\"inputUsernameEmail\" required [(ngModel)]=\"newLogin.email\" name=\"email\" #email=\"ngModel\">\n          <div *ngIf=\"f.submitted && !email.valid\" class=\"help-block\">Username is required</div>\n        </div>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\n          <label for=\"inputPassword\">Password</label>\n          <input type=\"password\" class=\"form-control\" id=\"inputPassword\" required [(ngModel)]=\"newLogin.password\" name=\"password\" #password=\"ngModel\">\n          <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\n        </div>\n        <button type=\"submit\" class=\"btn btn btn-primary\">\n          Log In\n        </button>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && status }\">\n            <div *ngIf=\"status\" class=\"help-block\">!{{msg}}</div>\n       </div> \n      </form>\n      \n    </div>\n    \n  </div>\n</div>\n</body>\n"
+module.exports = "<body style=\"background-color : #f3f3f3;padding:  5% 0 17% 0; \n\">\n<div class=\"container\">\n  <div class=\"row\">\n\n    <div class=\"main\">\n\n      <h3>Please Log In, or <a [routerLink]=\"['/registration']\">Sign Up</a></h3>\n      <div class=\"row\">\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\n          <a href=\"/auth/facebook\" target=\"_blank\" class=\"btn btn-lg btn-primary btn-block\">Facebook</a>\n        </div>\n        <div class=\"col-xs-6 col-sm-6 col-md-6\">\n          <a href=\"/auth/google\" class=\"btn btn-lg btn-info btn-block\">Google</a>\n        </div>\n      </div>\n      <div class=\"login-or\">\n        <hr class=\"hr-or\">\n        <span class=\"span-or\">or</span>\n      </div>\n\n      <form role=\"form\" #f=\"ngForm\" (ngSubmit)=\"f.form.valid && login()\" novalidate>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !email.valid }\">\n          <label for=\"inputUsernameEmail\">Username or email</label>\n          <input type=\"text\" class=\"form-control\" id=\"inputUsernameEmail\" required [(ngModel)]=\"newLogin.email\" name=\"email\" #email=\"ngModel\">\n          <div *ngIf=\"f.submitted && !email.valid\" class=\"help-block\">Username is required</div>\n        </div>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\n          <label for=\"inputPassword\">Password</label>\n          <input type=\"password\" class=\"form-control\" id=\"inputPassword\" required [(ngModel)]=\"newLogin.password\" name=\"password\" #password=\"ngModel\">\n          <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\n        </div>\n        <button type=\"submit\" class=\"btn btn btn-primary\">\n          Log In\n        </button>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && status }\">\n            <div *ngIf=\"status\" class=\"help-block\">!{{msg}}</div>\n       </div> \n      </form>\n      \n    </div>\n    \n  </div>\n</div>\n</body>\n"
 
 /***/ }),
 
@@ -4026,7 +4034,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product/product.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"example-header\">\r\n    <mat-form-field>\r\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n    </mat-form-field>\r\n  </div>\r\n  \r\n  <div class=\"example-container mat-elevation-z8\">\r\n  \r\n    <mat-table [dataSource]=\"dataSource\" matSort>\r\n  \r\n  \r\n  \r\n      <!-- Progress Column -->\r\n      <ng-container matColumnDef=\"action\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> \r\n          <a href =\"/product-detail/{{row.id}}\" class=\"btn btn-primary btn-xs\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Edit\"><i class=\"fa fa-pencil\"></i></a>\r\n          <a href=\"#\" class=\"btn btn-primary btn-xs\" data-target=\"#myModal1\" data-toggle=\"modal\" ><i class=\"fa fa-trash-o\"></i></a>\r\n          <div id=\"myModal1\" class=\"modal fade\" role=\"dialog\">\r\n            <div class=\"modal-dialog\">\r\n          \r\n              <!-- Modal content-->\r\n              <div class=\"modal-content\">\r\n                <!-- <div class=\"modal-header\"> -->\r\n                  <!-- <h4 class=\"modal-title\">Are you sure to delete?</h4> -->\r\n                <!-- </div> -->\r\n                <div class=\"modal-body\">\r\n                    <h4 class=\"modal-title\">Are you sure to delete?</h4>\r\n                \r\n                </div>\r\n                <div class=\"modal-footer\">\r\n                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                  <button type=\"button\" (click)=\"deleteProduct(row.id)\" class=\"btn btn-default\" data-dismiss=\"modal\">Delete</button>\r\n                </div>\r\n              </div>\r\n          \r\n            </div>\r\n          </div>\r\n          \r\n        </mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"description\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.desc}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"enddate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> End Date </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.end_date | date: 'dd-MM-yyyy h:mm a'}}</mat-cell>\r\n        \r\n      </ng-container>\r\n      <ng-container matColumnDef=\"startdate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Start Date </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.start_date | date: 'dd-MM-yyyy h:mm a'}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"rate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Minimum Bid rate </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.min_bid_rate}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"amount\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Bid Amount </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.bid_amount}}</mat-cell>\r\n      </ng-container>\r\n      \r\n      <ng-container matColumnDef=\"image\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Image </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"><img class=\"proimg\" src=\"assets/uploads/{{row.image}}\" alt=\"\" ></mat-cell>\r\n      </ng-container>\r\n  \r\n      <!-- Name Column -->\r\n      <ng-container matColumnDef=\"name\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.name}} </mat-cell>\r\n      </ng-container>\r\n  \r\n  \r\n  \r\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\r\n      </mat-row>\r\n    </mat-table>\r\n  \r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n  </div>\r\n  \r\n  "
+module.exports = "<div class=\"example-header\">\r\n    <mat-form-field>\r\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n    </mat-form-field>\r\n  </div>\r\n  \r\n  <div class=\"example-container mat-elevation-z8\">\r\n  \r\n    <mat-table [dataSource]=\"dataSource\" matSort>\r\n  \r\n  \r\n  \r\n      <!-- Progress Column -->\r\n      <ng-container matColumnDef=\"action\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> \r\n          <a href =\"/product-detail/{{row.id}}\" class=\"btn btn-primary btn-xs\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Edit\"><i class=\"fa fa-pencil\"></i></a>\r\n          <a href=\"#\" class=\"btn btn-primary btn-xs\" data-target=\"#myModal1\" (click)=\"product_det(row.id)\"  data-toggle=\"modal\" ><i class=\"fa fa-trash-o\"></i></a>\r\n          <div id=\"myModal1\" class=\"modal fade\" role=\"dialog\">\r\n            <div class=\"modal-dialog\">\r\n          \r\n              <!-- Modal content-->\r\n              <div class=\"modal-content\">\r\n                <!-- <div class=\"modal-header\"> -->\r\n                  <!-- <h4 class=\"modal-title\">Are you sure to delete?</h4> -->\r\n                <!-- </div> -->\r\n                <div class=\"modal-body\">\r\n                    <h4 class=\"modal-title\">Are you sure to delete?</h4>\r\n                \r\n                </div>\r\n                <div class=\"modal-footer\">\r\n                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                  <button type=\"button\" (click)=\"deleteProduct(pid)\" class=\"btn btn-default\" data-dismiss=\"modal\">Delete</button>\r\n                </div>\r\n              </div>\r\n          \r\n            </div>\r\n          </div>\r\n          \r\n        </mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"description\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.desc}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"enddate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> End Date </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.end_date | date: 'dd-MM-yyyy h:mm a'}}</mat-cell>\r\n        \r\n      </ng-container>\r\n      <ng-container matColumnDef=\"startdate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Start Date </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.start_date | date: 'dd-MM-yyyy h:mm a'}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"rate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Minimum Bid rate </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.min_bid_rate}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"amount\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Bid Amount </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.bid_amount}}</mat-cell>\r\n      </ng-container>\r\n      \r\n      <ng-container matColumnDef=\"image\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Image </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"><img class=\"proimg\" src=\"assets/uploads/{{row.image}}\" alt=\"\" ></mat-cell>\r\n      </ng-container>\r\n  \r\n      <!-- Name Column -->\r\n      <ng-container matColumnDef=\"name\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.name}} </mat-cell>\r\n      </ng-container>\r\n  \r\n  \r\n  \r\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\r\n      </mat-row>\r\n    </mat-table>\r\n  \r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n  </div>\r\n  \r\n  "
 
 /***/ }),
 
@@ -4104,6 +4112,9 @@ var ProductComponent = (function () {
                 _this.router.navigate(['/product-list']);
             }
         });
+    };
+    ProductComponent.prototype.product_det = function (id) {
+        this.pid = id;
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3__angular_material__["p" /* MatPaginator */]),
