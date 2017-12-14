@@ -58,6 +58,33 @@ var storage = multer.diskStorage({ //multers disk storage settings
     
                     }).single('file');
 
+var storage1 = multer.diskStorage({ //multers disk storage settings
+    
+            destination: function (req, file, cb) {
+    
+                cb(null, './angular/src/assets/uploads/');
+    
+            },
+    
+            filename:  function (req, file, cb) {
+                
+                           // var datetimestamp = Date.now();
+                
+                            cb(null, fileName);
+                          //  fileName = file.fieldname + '-' + datetimestamp + '.' + file.originalname.split('.')[file.originalname.split('.').length -1];
+                        }
+                
+    
+        });
+    
+    
+    
+        var upload1 = multer({ //multer settings
+    
+                        storage: storage1
+    
+                    }).single('file');
+
 
 var returnRouter = function(io) { 
 
@@ -65,10 +92,8 @@ var returnRouter = function(io) {
     router.post('/upload', function(req,res){
         'use strict';
 
-
-
-    upload(req,res,function(err){
-        console.log(req.body);
+        upload(req,res,function(err){
+            console.log(req.body);
                     // console.log(req.file);
         
                     if(err){
@@ -81,9 +106,17 @@ var returnRouter = function(io) {
                         console.log(fileName);
                      res.json({error_code:0,err_desc:null, filename:fileName});
                     
-                });
+        });
+
+        upload1(req,res,function(err){
+            console.log(req.body);
+            if(err){
+
+                    return;
+            }
+        });
         
-            });
+    });
             
 
         
@@ -176,14 +209,12 @@ router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),functio
         try {
             decoded = jwt.verify(authorization, config.secret);
             // console.log(decoded);
-            let lastwinner = {};
+            let lastwinner;
             Product.getProductById(req.body.pid,(err, product)=>{
                 if(product.bidders.length != 0){
                     User.getUserById(product.bidders[product.bidders.length-1].user_id,(err, user)=>{
-                        console.log(user);
                         lastwinner = user;
                     });
-                    //lastwinnerId = product.bidders[product.bidders.length-1].user_id;
                 }
             });
             Product.findOneAndUpdate(
@@ -194,7 +225,6 @@ router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),functio
                     if(err){
                         res.json({success: false, msg : "Failed, went somthing wrong "});
                     }else{
-
                         if(lastwinner){
                             nodemailer.createTestAccount((err, account) => {
                                 let mailOptions = {
@@ -213,13 +243,7 @@ router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),functio
                                 });
                             });
                         }
-                        // write code to emit socket    
-                        // io.sockets.on('connection', function (socket) {
-                        //     console.log('New User Connected');
-                        //     // socket.on('newBid', function (data) {
-                        //     //   console.log(data);
-                        //     // });
-                        // });
+                   
                         io.sockets.emit("newbid", {
                             prod_id : req.body.pid
                         });

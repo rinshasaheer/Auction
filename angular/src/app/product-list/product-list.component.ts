@@ -45,7 +45,7 @@ export class ProductListComponent implements OnInit {
   imageselect : Boolean =false;
   greater : Boolean = false;
   hideModal: boolean = false;
- 
+  
   polls: Array<pro>;
   newproduct ={
     name : '',
@@ -64,15 +64,11 @@ export class ProductListComponent implements OnInit {
 
      
   
-
-    // this.userService.getLoggedUSerDetails().subscribe(info =>{
-    //   if(info.status!=true){
-    //     this.router.navigate(['/login']);
-    //   }
-    //   else if(info.role == "user"){
-    //     this.router.navigate(['/login']);
-    //   }
-    // });
+    this._userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="admin"){
+        this.router.navigate(['/login']);
+      }
+    });
  
     // this.arr1=[];
   this._prductService.getProducts().subscribe(data1 => {
@@ -128,91 +124,77 @@ imageOr(){
   this.imageselect = true;
 }
 addProduct(){
-
-
-if(this.imageselect ==true){
-
-  this.uploader.uploadAll();
-  this.uploader.onCompleteItem = (item:any, response:any, status:any, headers:any) => {
-    response = JSON.parse(response);
-    this.newproduct.image = response.filename;
-   this._prductService.addProduct(this.newproduct).subscribe(data => {
-      if(data){
-        if(data.start_date > data.end_date){
-          this.greater =true;
-          // alert('error! Start date is greater than end date');
-          // this._userService.sendmail().subscribe(data1 => { });
-         }
-        // console.log(this.newproduct);
-        
-       
-        else if(data.start_date <= data.end_date){
-              this._userService.sendmail().subscribe(data1 => {
-           
-          });
-  
-          // this._flashMessagesService.show('Product Added Successfully!', { cssClass: 'alert-success', timeout: 1000 });
-      
-          // this.hideModal = true;
-        //  alert("Add Product Successfully");
-        this.showSuccess = true;
-        setTimeout(() => {  
-          this.showSuccess = false;
-          window.location.reload();
-          // console.log("Error created user");
-        }, 1000);
-      //  s
-        }
-      
-        }else {
-          alert("Error");
-          console.log("error")
-        }
-      });
-    // console.log("ImageUpload:uploaded:", item, status, JSON.parse(response));
-   
-  
-};
-
-}
-else if(this.imageselect ==false){
-
-  this._prductService.addProduct(this.newproduct).subscribe(data => {
-    if(data){
-      if(data.start_date > data.end_date){
-        this.greater =true;
-        // alert('error! Start date is greater than end date');
-        this._userService.sendmail().subscribe(data1 => { });
-       }
-      // console.log(this.newproduct);
-      
-     
-      else if(data.start_date <= data.end_date){
-
-        // this._flashMessagesService.show('Product Added Successfully!', { cssClass: 'alert-success', timeout: 1000 });
-        // this.hideModal = true;
-        this.showSuccess = true;
-        setTimeout(() => {  
-          this.showSuccess = false;
-          window.location.reload();
-          // console.log("Error created user");
-        }, 1000);
-        //  alert("Add Product Successfully");
-        //  this.router.navigate(['/product-list']);
-        //  window.location.reload();
-      //  this.router.navigate(['/product-list']);
-      //  this.hideModal =true;
-      //  jQuery("#myModal").modal("hide");
-       
-    //  
-      }
+  // console.log("here");
+  if(this.newproduct.start_date > this.newproduct.end_date){
+    this.greater =true;
     
-      }else {
-        alert("Error");
-        console.log("error")
-      }
-    });
-}
+  }else{
+    this.greater =false;
+    if(this.imageselect ==true){
+      this.uploader.uploadAll();
+      this.uploader.onCompleteItem = (item:any, response:any, status:any, headers:any) => {
+      response = JSON.parse(response);
+      this.newproduct.image = response.filename;
+      
+        this._prductService.addProduct(this.newproduct).subscribe(data1 => {
+          if(data1){
+            this.showSuccess = true;
+            setTimeout(() => {  
+      
+              this.showSuccess = false;
+             
+              // console.log("Error created user");
+            }, 1000);
+            window.location.reload();
+         }else {
+              alert("Error");
+              console.log("error")
+            }
+          }); 
+          console.log( this.greater)
+  
+  };
+  }
+      else if(this.imageselect ==false){
+   
+    if(this.newproduct.start_date > this.newproduct.end_date){
+      this.greater =true;
+  
+      // this._userService.sendmail().subscribe(data => { });
+     }
+  
+    
+   
+    else if(this.newproduct.start_date <= this.newproduct.end_date){
+      this.greater =false;
+      this._prductService.addProduct(this.newproduct).subscribe(data => {
+        if(data){
+          this.showSuccess = true;
+          setTimeout(() => {  
+    
+            this.showSuccess = false;
+           
+            // console.log("Error created user");
+          }, 1000);
+          window.location.reload();
+       }else {
+            alert("Error");
+            console.log("error")
+          }
+        });
+     
+      //  alert("Add Product Successfully");
+      //  this.router.navigate(['/product-list']);
+      //  window.location.reload();
+    //  this.router.navigate(['/product-list']);
+    //  this.hideModal =true;
+    //  jQuery("#myModal").modal("hide");
+     
+  //  
+    }
+  }
+  }
+
  
 }
 

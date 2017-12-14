@@ -82,10 +82,10 @@ router.post('/register',(req,res)=>{
 
 //all users
 router.get('/users',(req,res,next)=>{
-    User.getAllUsers((err,user)=>{
+    User.AllActivegetUsers((err,user)=>{
       //  console.log(user);
        if(err) throw err;
-       return res.json(user);
+        return res.json(user);
     })    
 });
 
@@ -313,7 +313,7 @@ router.get('/users_id_as_index',(req,res,next)=>{
     User.getAllUsers((err,user)=>{
         if(err) throw err;
         var users = {};
-        console.log(user);
+     //   console.log(user);
         user.forEach((usr, i) => {
             tmp = {};
             tmp._id = usr._id;

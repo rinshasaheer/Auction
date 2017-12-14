@@ -1,9 +1,13 @@
+
+  <div *ngIf="DeleteSuccess" class="alert alert-success">
+    <strong>Deleted Successfully</strong>
+  </div>
 <div class="example-header">
     <mat-form-field>
       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
     </mat-form-field>
   </div>
-  
+
   <div class="example-container mat-elevation-z8">
   
     <mat-table [dataSource]="dataSource" matSort>
@@ -28,6 +32,7 @@
                     <h4 class="modal-title">Are you sure to delete?</h4>
                 
                 </div>
+              
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                   <button type="button" (click)="deleteProduct(pid)" class="btn btn-default" data-dismiss="modal">Delete</button>

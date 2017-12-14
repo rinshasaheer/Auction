@@ -38,10 +38,13 @@ export class CardRunningComponent implements OnInit {
     this.userService.getLoggedUSerDetails().subscribe(info =>{
       if(info.role !="user"){
         this.router.navigate(['/login']);
+      }else{
+        this.user = info;
+        this.getlastbidder();
       }
     });
     this.socket.on('newbid', (data) => {
-      console.log(data);
+     // console.log(data);
       if(this.product._id == data.prod_id){
         this.productService.getProduct(data.prod_id).subscribe(data=>{
           this.product = data;
@@ -49,8 +52,8 @@ export class CardRunningComponent implements OnInit {
         });
       }
     })   
-     console.log(this.product);
-     this.getlastbidder();
+   //  console.log(this.product);
+   
         
       
      
@@ -81,7 +84,7 @@ export class CardRunningComponent implements OnInit {
       this.formatedAmount = this.product.lastBidprice
       this.btnLabel = 'Your Bid On Progress';
       this.btnClass = 'btn-success';
-      console.log(this.formatedAmount);
+     // console.log(this.formatedAmount);
      }else{
       this.btnDisbled = false;
       this.formatedAmount = '';
@@ -95,8 +98,8 @@ export class CardRunningComponent implements OnInit {
     this.btnDisbled = true;
     
     this.validateAmount();
-    console.log(this.product);
-    console.log(this.amount);
+ //   console.log(this.product);
+  //  console.log(this.amount);
     if(!this.isError){
       this.formatedAmount = this.amount;
       let data = {
@@ -104,7 +107,7 @@ export class CardRunningComponent implements OnInit {
         amount : Number(this.amount),
       }
        this.productService.bidProduct(data).subscribe(data=>{ 
-         console.log(data);
+    //     console.log(data);
          this.msg = data.msg;
          if(data.success){
             this.isSuccess = true;
@@ -128,10 +131,15 @@ export class CardRunningComponent implements OnInit {
      }, 3000);
   }
 
+  onKeydownEvent(event: KeyboardEvent): void {
+    if (event.keyCode === 13) {
+        this.bidbtnClicked();
+    }
+ }
   validateAmount(){
     this.isError = false;
     if(Number(this.amount)){
-      console.log( this.product.min_bid_rate * 1 + this.product.lastBidprice* 1 );
+     // console.log( this.product.min_bid_rate * 1 + this.product.lastBidprice* 1 );
       if(Number(this.amount) < ( this.product.min_bid_rate * 1 + this.product.lastBidprice* 1 )){
         this.isError = true;
         this.msg = "You Can Bid Only From " + ( this.product.min_bid_rate * 1 + this.product.lastBidprice* 1 ).toFixed(2);

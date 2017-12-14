@@ -33,25 +33,30 @@ import { FileUploader } from 'ng2-file-upload'; // File Upload
 
 })
 export class ProductComponent {
-  pid : any;
+  pid :any;
+  DeleteSuccess : Boolean = false;
   displayedColumns = [ 'name','image','amount','rate','startdate','enddate','description','action'];
   dataSource: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor( private productservice: ProductService, private router: Router) {
+  constructor( private productservice: ProductService, private router: Router,private _userService : UserService) {
     // Create 100 users
     
 
   }
 ngOnInit() {
-
+  this._userService.getLoggedUSerDetails().subscribe(info =>{
+    if(info.role !="admin"){
+      this.router.navigate(['/login']);
+    }
+  });
     const users: any[] = [];
     this.productservice.getProducts().subscribe(data=>{
         data.forEach((item, index) => {
           users.push({
-            id :item._id,
+          id :item._id,
           name: item.name,
           image : item.image,
           bid_amount : item.bid_amount,
@@ -84,9 +89,19 @@ ngOnInit() {
       this.productservice.deleteProduct(pid).subscribe(data1 => {
               if(data1){
                 // console.log(data1);
-               alert("Delete Product Successfully");
-               location.reload();
-               this.router.navigate(['/product-list'])
+                
+                setTimeout(() => {  
+                  this.DeleteSuccess = true;
+                  window.location.reload();
+                  // console.log("Error created user");
+                }, 1000);
+              //  alert("Delete Product Successfully");
+              // window.location.reload();
+              //  this.router.navigate(['/product-list'])
+          
+                
+      
+               
               }
         
             });
