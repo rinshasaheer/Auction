@@ -13,7 +13,7 @@ export class ActiveUsersComponent implements OnInit{
  
    displayedColumns = [ 'name', 'phone','email','action'];
   dataSource: MatTableDataSource<any>;
-
+  existStatus =false;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
@@ -35,6 +35,11 @@ export class ActiveUsersComponent implements OnInit{
         //   action:item._id
         // });
         // });
+        if(data != '')
+        {
+          this.existStatus = true;
+        }
+        console.log(data);
         this.dataSource = new MatTableDataSource(data);
         console.log(this.dataSource);
         this.dataSource.paginator = this.paginator;
@@ -43,7 +48,11 @@ export class ActiveUsersComponent implements OnInit{
 
   }
 ngOnInit() {
-
+  this.userService.getLoggedUSerDetails().subscribe(info =>{
+    if(info.role !="admin"){
+      this.router.navigate(['/login']);
+    }
+  });
     this.refresh();
 }
 
@@ -109,5 +118,3 @@ ngOnInit() {
 //   action:number;
  
 // }
-
-

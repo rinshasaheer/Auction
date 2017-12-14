@@ -50,9 +50,9 @@
                 
         </ng-template>
       <div class="row">
-        <div class="btn-primary tg-adprice" *ngIf="startDate else divclosed">Basic Price: ${{item?.bid_amount}}</div>
+        <div class="btn-primary tg-adprice" *ngIf="startDate else divclosed">Basic Price: {{item?.bid_amount}}</div>
         <ng-template #divclosed>
-                <div class="btn-primary tg-adprice" *ngIf="myauction else divmy">Last Bid Price: ${{highest}}</div>                
+                <div class="btn-primary tg-adprice" *ngIf="myauction else divmy">Last Bid Price: {{highest}}</div>                
         </ng-template>
         <ng-template #divmy>
                 <div class="btn-primary tg-adprice">Final Price: ${{highest}}</div>                

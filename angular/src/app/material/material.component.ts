@@ -65,24 +65,19 @@ export class MaterialComponent implements OnInit {
   }
 
 
-
-
-
-
-
-
  loadAuctions(){
     this.loadUserId();
     this._productService.loadMyAuctionProduct()
     .subscribe(resProducts => {
      this.product = resProducts;
     //   console.log('fetch all my product');
-      // console.log(resProducts);
-      if(resProducts.length > 0){
+      console.log(resProducts);
+      if(this.product == ''){
         this.existStatus = true;
+
       }
-      this.product = resProducts;
       console.log(this.existStatus);
+      this.product = resProducts;
         let uId = this._productService.loadUserId();
       this.product.forEach((item, index) => {
         var lastBidprice = item.bid_amount;
@@ -135,7 +130,9 @@ export class MaterialComponent implements OnInit {
       this.dataSource.sort = this.sort;
       // console.log(this.product);
       this.stat = true;
+      
     });
+    
   }
   
   loadUserId(){

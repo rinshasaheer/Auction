@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 export class DisabledUsersComponent implements OnInit {
   displayedColumns = [ 'name', 'phone','email','action'];
   dataSource: MatTableDataSource<any>;
-
+  existStatus =false;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
@@ -32,6 +32,10 @@ export class DisabledUsersComponent implements OnInit {
         //   action:item._id
         // });
         // });
+        if(data != '')
+        {
+          this.existStatus = true;
+        }
         this.dataSource = new MatTableDataSource(data);
         console.log(this.dataSource);
         this.dataSource.paginator = this.paginator;
