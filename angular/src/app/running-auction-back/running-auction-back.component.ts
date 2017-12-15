@@ -58,7 +58,7 @@ export class RunningAuctionBackComponent implements OnInit {
     // this.endDate = new Date();
       this.userService.getAllUsersById().subscribe(data=>{
           this.users = data;
-          console.log(this.users);
+          // console.log(this.users);
            
           this.getAllproduct(); 
       });
@@ -106,12 +106,12 @@ getAllproduct(){
       data[index].lastBiduserId = lastBiduserId;
     });
     this.products = data;
-    console.log(this.products);
+    // console.log(this.products);
   });
   }
   updateInvolved(product){
     this.involvedUsers = product;
-    console.log(this.involvedUsers);
+    // console.log(this.involvedUsers);
   }
   timeOver(){
     this.getAllproduct(); 

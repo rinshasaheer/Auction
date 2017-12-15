@@ -19,9 +19,22 @@ export class EmailVerificationComponent implements OnInit {
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.userService.verifyUser(params.id).subscribe(data => {
-        console.log(data);
+        // console.log(data);
         if(data.success){
         //  alert("Success, Redirecting ...");
+        // this.userService.generateToken(params.id).subscribe(data => {
+        //   console.log(data);
+        //   if(data.success){
+        //     this.userService.storeUserData(data.token, data.user);
+        //     if(data.user.role=="user"){
+              
+        //       this.router.navigate(['/home']);
+        //     }
+        //     if(data.user.role=="admin"){
+        //       this.router.navigate(['/dashboard']);
+        //     }
+        //   }
+        // });
          this.showSuccess = true;
          setTimeout(() => {  
            this.router.navigate(['/login']);

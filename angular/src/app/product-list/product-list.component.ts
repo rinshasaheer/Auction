@@ -38,6 +38,7 @@ export class ProductListComponent implements OnInit {
   @ViewChild('closeBtn') closeBtn: ElementRef;
   @ViewChild('f') f: any;
   @ViewChild('imgFile') imgFile: any;
+ 
   showSuccess : Boolean = false;
   pros: any;
   prodata: any;

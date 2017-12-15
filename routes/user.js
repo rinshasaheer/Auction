@@ -439,7 +439,7 @@ router.put('/sendmailtowinner/:id',(req,res,next)=>{
                 to: user.email,
                 subject: 'Congratulations! You have won an auction', // Subject line
                 text: '', // plain text body
-                html: '<b><h3>Congratulations,</h3><br/>Yours was the winning bid on Auction. You got a great deal! I am looking forward to a pleasant transaction and positive feedback for both of us. <br/>You can confirm or reject your item on link: </a> http://localhost:3000/email-verification/'+req.body.pid+'</a><br/>I am delighted to be dealing with you and know you will enjoy your purchase. I’d also like to invite you to check out my other items available on Auction.<br/> Thank You!</b>' // html body
+                html: '<b><h3>Congratulations,</h3><br/>Yours was the winning bid on Auction. You got a great deal! I am looking forward to a pleasant transaction and positive feedback for both of us. <br/>You can confirm or reject your item on link: </a> http://localhost:3000/winnerconfirm/'+req.body.pid+'</a><br/>I am delighted to be dealing with you and know you will enjoy your purchase. I’d also like to invite you to check out my other items available on Auction.<br/> Thank You!</b>' // html body
             };
             transporter.sendMail(mailOptions, (error, info) => {
                 if (error) {

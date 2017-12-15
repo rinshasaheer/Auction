@@ -184,8 +184,8 @@ router.get('/inform-closedproduct/:id',(req,res,next)=>{
 });
 //PRODUCT INFO START info 3001 updateapp
 router.get('/inform-startproduct/:id',(req,res,next)=>{
-     console.log('new start');
-    // console.log(req.params.id);
+    //  console.log('new start');
+    console.log("st"+req.params.id);
     io.sockets.emit("startbid", {
         prod_id : req.params.id
     });
@@ -576,7 +576,11 @@ router.put('/statusconfirm/:id',(req,res,next)=>{
                                     return res.json({success:false, msg: 'Error'});
                                 }
                                 else{
+                                    io.sockets.emit("admin_notification", {
+                                        // prod_id : req.params.id
+                                    });
                                     return res.json({success:true, msg: 'Confirmed'});
+                                    
                                 }
                          });
                     }

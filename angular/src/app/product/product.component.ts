@@ -34,6 +34,7 @@ import { FileUploader } from 'ng2-file-upload'; // File Upload
 })
 export class ProductComponent {
   pid :any;
+  existStatus :Boolean =false;
   DeleteSuccess : Boolean = false;
   displayedColumns = [ 'name','image','amount','rate','startdate','enddate','description','action'];
   dataSource: MatTableDataSource<any>;
@@ -60,6 +61,10 @@ loadData(){
   //console.log('loading table....');
   const users: any[] = [];
   this.productservice.getProducts().subscribe(data=>{
+    if(data != '')
+    {
+      this.existStatus = true;
+    }
       data.forEach((item, index) => {
         users.push({
         id :item._id,

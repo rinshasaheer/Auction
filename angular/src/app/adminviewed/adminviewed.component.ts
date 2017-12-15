@@ -11,6 +11,7 @@ import { ProductService} from '../services/product.service';
 export class AdminviewedComponent implements OnInit {
   
   private sub: any;
+  showSuccess : Boolean =false;
   constructor(private userService: UserService,private productService: ProductService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
@@ -22,9 +23,13 @@ export class AdminviewedComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       this.productService.adminViewed(params.id).subscribe(data => {
         if(data.success){
-         alert("Success, Redirecting ...");
-         this.router.navigate(['/dashboard']);
-          console.log("successfull");
+           this.showSuccess = true;
+          setTimeout(() => {  
+            this.router.navigate(['/dashboard']);
+            // this.showSuccess = false;
+          }, 2000);
+        //  this.router.navigate(['/dashboard']);
+        //   console.log("successfull");
         
         } else {
           alert("Error...!");

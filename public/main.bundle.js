@@ -219,7 +219,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/adminviewed/adminviewed.component.html":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "<div *ngIf=\"showSuccess\" class=\"alert alert-success\">\r\n        <strong>Success...</strong>\r\n      </div>"
 
 /***/ }),
 
@@ -251,6 +251,7 @@ var AdminviewedComponent = (function () {
         this.productService = productService;
         this.route = route;
         this.router = router;
+        this.showSuccess = false;
     }
     AdminviewedComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -262,9 +263,13 @@ var AdminviewedComponent = (function () {
         this.sub = this.route.params.subscribe(function (params) {
             _this.productService.adminViewed(params.id).subscribe(function (data) {
                 if (data.success) {
-                    alert("Success, Redirecting ...");
-                    _this.router.navigate(['/dashboard']);
-                    console.log("successfull");
+                    _this.showSuccess = true;
+                    setTimeout(function () {
+                        _this.router.navigate(['/dashboard']);
+                        // this.showSuccess = false;
+                    }, 2000);
+                    //  this.router.navigate(['/dashboard']);
+                    //   console.log("successfull");
                 }
                 else {
                     alert("Error...!");
@@ -1980,9 +1985,21 @@ var EmailVerificationComponent = (function () {
         var _this = this;
         this.sub = this.route.params.subscribe(function (params) {
             _this.userService.verifyUser(params.id).subscribe(function (data) {
-                console.log(data);
+                // console.log(data);
                 if (data.success) {
                     //  alert("Success, Redirecting ...");
+                    // this.userService.generateToken(params.id).subscribe(data => {
+                    //   console.log(data);
+                    //   if(data.success){
+                    //     this.userService.storeUserData(data.token, data.user);
+                    //     if(data.user.role=="user"){
+                    //       this.router.navigate(['/home']);
+                    //     }
+                    //     if(data.user.role=="admin"){
+                    //       this.router.navigate(['/dashboard']);
+                    //     }
+                    //   }
+                    // });
                     _this.showSuccess = true;
                     setTimeout(function () {
                         _this.router.navigate(['/login']);
@@ -3147,7 +3164,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/navigation/navigation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header *ngIf=\"!loading\">\r\n  \r\n  <div class=\"fluid-container\">\r\n    <nav class=\"navbar navbar-default  navbar-fixed-top\">\r\n        <div class=\"box\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                     <!-- <div class=\"col-lg-8 col-md-8\">\r\n                        <p class=\"title1\">Free phone: <strong>800-2345-6789</strong></p>\r\n                        <p class=\"title2\">Hours:  8am-8pm PST M-Th;   6am-3pm PST Fri</p>\r\n                    </div> -->\r\n                    \r\n\r\n                    <div class=\"pull-right\">\r\n                        <li class=\"dropdown\" *ngIf=\"userService.loggedIn()\">\r\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{userInfo.name | capitalize}} <span class=\"caret\"></span></a>\r\n                        <ul class=\"dropdown-menu\">\r\n                          \r\n                          <li *ngIf=\"userService.loggedIn()\"><a [routerLink]=\"['/myauctions']\">My Bids</a></li>\r\n                          <li *ngIf=\"userService.loggedIn()\"><a (click)=\"logout()\" href=\"#\">Log Out</a></li>\r\n                          \r\n                        </ul>\r\n                      </li>\r\n                        <!-- <a href=\"#\" class=\"btn-default btn1\">Sign In</a> -->\r\n                    </div>\r\n\r\n                    <div class=\"pull-right notify-cont\">\r\n\r\n                        <li *ngIf=\"count\" class=\"dropdown notify\" >\r\n                          <div class=\"notify-count\">{{countNumber}}</div>\r\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><i class=\"fa fa-bell\" aria-hidden=\"true\"></i></a>\r\n                        <ul class=\"dropdown-menu\" id=\"notify-menu\">\r\n                          \r\n                          <li *ngFor=\"let item of info\">\r\n                            <a [routerLink]=\"['/winnerconfirm/'+item?._id]\" class=\"ovrflow-h\" id=\"notify-head-a\">\r\n                             <div class=\"col-md-12\">\r\n                                <div class=\"row\">\r\n                                  <div class=\"col-md-12\">\r\n                                    <h4 id=\"won-head\">You Won a Bid!</h4>\r\n                                  </div>\r\n                                 \r\n                                    <div class=\"col-md-3\">\r\n                                      <div class=\"row\">\r\n                                          <img  class=\"noftify-pro-img\" src=\"../../assets/uploads/{{item?.image||'default.png'}}\" alt=\"pro\">\r\n                                        </div>\r\n                                      </div>\r\n                                      \r\n                                    <div class=\"col-md-9\">\r\n                                          <h4 class=\"noftify-pro-h4\">{{item?.name}}</h4>\r\n                                          <!-- <p>Amount: $1000</p> -->\r\n                                      \r\n                                 \r\n                                  </div>\r\n                                </div>\r\n                                  \r\n                              </div>\r\n                              \r\n                              \r\n                            </a>\r\n                          </li>\r\n                    \r\n                          <!-- <li><a (click)=\"logout()\" href=\"#\">Log Out</a></li> -->\r\n                          \r\n                        </ul>\r\n                      </li>\r\n                        <!-- <a href=\"#\" class=\"btn-default btn1\">Sign In</a> -->\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div> \r\n      <div class=\"container\">\r\n        <div class=\"container-fluid\">\r\n          <!-- Brand and toggle get grouped for better mobile display -->\r\n          <div class=\"navbar-header\">\r\n            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n              <span class=\"sr-only\">Toggle navigation</span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n            </button>\r\n            <a class=\"navbar-brand\" [routerLink]=\"['/home']\"><img src=\"../../assets/images/brand.png\" alt=\"brand\"></a>\r\n          </div>\r\n      \r\n          <!-- Collect the nav links, forms, and other content for toggling -->\r\n          <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n            \r\n           \r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n                <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a  [routerLink]=\"['/home']\">Home <span class=\"sr-only\">(current)</span></a></li>\r\n                <!-- <li class=\"dropdown\" >\r\n                  <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Manage <span class=\"caret\"></span></a>\r\n                  <ul class=\"dropdown-menu\">\r\n                    \r\n                    <li><a href=\"#\">Users</a></li>\r\n                    <li><a href=\"#\">Polls</a></li>\r\n                    <li><a href=\"#\">Asign Poll</a></li>\r\n                    \r\n                  </ul>\r\n                </li> -->\r\n                \r\n                    <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/runningauction']\" >Running Auctions</a></li>\r\n                    <!-- <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/registration']\">Registration</a></li> -->\r\n                    <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/finishedauction']\" >Closed Auctions</a></li>\r\n                    <!-- <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/register']\">Register</a></li> -->\r\n                    <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/upcomingauction']\" >Upcoming Auctions</a></li>\r\n                \r\n                \r\n            </ul>\r\n          </div><!-- /.navbar-collapse -->\r\n        </div><!-- /.container-fluid -->\r\n      </div>\r\n    </nav>\r\n  \r\n    \r\n</div>\r\n</header>"
+module.exports = "<header *ngIf=\"!loading\">\r\n  \r\n  <div class=\"fluid-container\">\r\n    <nav class=\"navbar navbar-default  navbar-fixed-top\">\r\n        <div class=\"box\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                     <!-- <div class=\"col-lg-8 col-md-8\">\r\n                        <p class=\"title1\">Free phone: <strong>800-2345-6789</strong></p>\r\n                        <p class=\"title2\">Hours:  8am-8pm PST M-Th;   6am-3pm PST Fri</p>\r\n                    </div> -->\r\n                    \r\n\r\n                    <div class=\"pull-right\">\r\n                        <li class=\"dropdown\" >\r\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{userInfo.name | capitalize}} <span class=\"caret\"></span></a>\r\n                        <ul class=\"dropdown-menu\">\r\n                          \r\n                          <li ><a [routerLink]=\"['/myauctions']\">My Bids</a></li>\r\n                          <li ><a (click)=\"logout()\" href=\"#\">Log Out</a></li>\r\n                          \r\n                        </ul>\r\n                      </li>\r\n                        <!-- <a href=\"#\" class=\"btn-default btn1\">Sign In</a> -->\r\n                    </div>\r\n\r\n                    <div class=\"pull-right notify-cont\">\r\n\r\n                        <li *ngIf=\"count\" class=\"dropdown notify\" >\r\n                          <div class=\"notify-count\">{{countNumber}}</div>\r\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><i class=\"fa fa-bell\" aria-hidden=\"true\"></i></a>\r\n                        <ul class=\"dropdown-menu\" id=\"notify-menu\">\r\n                          \r\n                          <li *ngFor=\"let item of info\">\r\n                            <a [routerLink]=\"['/winnerconfirm/'+item?._id]\" class=\"ovrflow-h\" id=\"notify-head-a\">\r\n                             <div class=\"col-md-12\">\r\n                                <div class=\"row\">\r\n                                  <div class=\"col-md-12\">\r\n                                    <h4 id=\"won-head\">You Won a Bid!</h4>\r\n                                  </div>\r\n                                 \r\n                                    <div class=\"col-md-3\">\r\n                                      <div class=\"row\">\r\n                                          <img  class=\"noftify-pro-img\" src=\"../../assets/uploads/{{item?.image||'default.png'}}\" alt=\"pro\">\r\n                                        </div>\r\n                                      </div>\r\n                                      \r\n                                    <div class=\"col-md-9\">\r\n                                          <h4 class=\"noftify-pro-h4\">{{item?.name}}</h4>\r\n                                          <!-- <p>Amount: $1000</p> -->\r\n                                      \r\n                                 \r\n                                  </div>\r\n                                </div>\r\n                                  \r\n                              </div>\r\n                              \r\n                              \r\n                            </a>\r\n                          </li>\r\n                    \r\n                          <!-- <li><a (click)=\"logout()\" href=\"#\">Log Out</a></li> -->\r\n                          \r\n                        </ul>\r\n                      </li>\r\n                        <!-- <a href=\"#\" class=\"btn-default btn1\">Sign In</a> -->\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div> \r\n      <div class=\"container\">\r\n        <div class=\"container-fluid\">\r\n          <!-- Brand and toggle get grouped for better mobile display -->\r\n          <div class=\"navbar-header\">\r\n            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n              <span class=\"sr-only\">Toggle navigation</span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n            </button>\r\n            <a class=\"navbar-brand\" [routerLink]=\"['/home']\"><img src=\"../../assets/images/brand.png\" alt=\"brand\"></a>\r\n          </div>\r\n      \r\n          <!-- Collect the nav links, forms, and other content for toggling -->\r\n          <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n            \r\n           \r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n                <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a  [routerLink]=\"['/home']\">Home <span class=\"sr-only\">(current)</span></a></li>\r\n                <!-- <li class=\"dropdown\" >\r\n                  <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Manage <span class=\"caret\"></span></a>\r\n                  <ul class=\"dropdown-menu\">\r\n                    \r\n                    <li><a href=\"#\">Users</a></li>\r\n                    <li><a href=\"#\">Polls</a></li>\r\n                    <li><a href=\"#\">Asign Poll</a></li>\r\n                    \r\n                  </ul>\r\n                </li> -->\r\n                \r\n                    <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/runningauction']\" >Running Auctions</a></li>\r\n                    <!-- <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/registration']\">Registration</a></li> -->\r\n                    <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/finishedauction']\" >Closed Auctions</a></li>\r\n                    <!-- <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/register']\">Register</a></li> -->\r\n                    <li *ngIf=\"userService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/upcomingauction']\" >Upcoming Auctions</a></li>\r\n                \r\n                \r\n            </ul>\r\n          </div><!-- /.navbar-collapse -->\r\n        </div><!-- /.container-fluid -->\r\n      </div>\r\n    </nav>\r\n  \r\n    \r\n</div>\r\n</header>"
 
 /***/ }),
 
@@ -4052,7 +4069,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".example-container {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    min-width: 300px;\r\n  }\r\n  \r\n  .example-header {\r\n    min-height: 64px;\r\n    padding: 8px 24px 0;\r\n  }\r\n  \r\n  .mat-form-field {\r\n    font-size: 14px;\r\n    width: 100%;\r\n  }\r\n  \r\n  .mat-table {\r\n    overflow: auto;\r\n    max-height: 500px;\r\n  }\r\n  .proimg{\r\n    width: 100px;\r\n  }", ""]);
+exports.push([module.i, ".example-container {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    min-width: 300px;\r\n  }\r\n  \r\n  .example-header {\r\n    min-height: 64px;\r\n    padding: 8px 24px 0;\r\n  }\r\n  \r\n  .mat-form-field {\r\n    font-size: 14px;\r\n    width: 100%;\r\n  }\r\n  \r\n  .mat-table {\r\n    overflow: auto;\r\n    max-height: 500px;\r\n  }\r\n  .proimg{\r\n    width: 100px;\r\n  }\r\n  .products{\r\n    text-align: center;\r\n  }", ""]);
 
 // exports
 
@@ -4065,7 +4082,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product/product.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n  <div *ngIf=\"DeleteSuccess\" class=\"alert alert-success\">\r\n    <strong>Deleted Successfully</strong>\r\n  </div>\r\n<div class=\"example-header\">\r\n    <mat-form-field>\r\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n    </mat-form-field>\r\n  </div>\r\n\r\n  <div class=\"example-container mat-elevation-z8\">\r\n  \r\n    <mat-table [dataSource]=\"dataSource\" matSort>\r\n  \r\n  \r\n  \r\n      <!-- Progress Column -->\r\n      <ng-container matColumnDef=\"action\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> \r\n          <a href =\"/product-detail/{{row.id}}\" class=\"btn btn-primary btn-xs\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Edit\"><i class=\"fa fa-pencil\"></i></a>\r\n          <a href=\"#\" class=\"btn btn-primary btn-xs\" data-target=\"#myModal1\" (click)=\"product_det(row.id)\"  data-toggle=\"modal\" ><i class=\"fa fa-trash-o\"></i></a>\r\n          <div id=\"myModal1\" class=\"modal fade\" role=\"dialog\">\r\n            <div class=\"modal-dialog\">\r\n          \r\n              <!-- Modal content-->\r\n              <div class=\"modal-content\">\r\n                <!-- <div class=\"modal-header\"> -->\r\n                  <!-- <h4 class=\"modal-title\">Are you sure to delete?</h4> -->\r\n                <!-- </div> -->\r\n                <div class=\"modal-body\">\r\n                    <h4 class=\"modal-title\">Are you sure to delete?</h4>\r\n                \r\n                </div>\r\n              \r\n                <div class=\"modal-footer\">\r\n                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                  <button type=\"button\" (click)=\"deleteProduct(pid)\" class=\"btn btn-default\" data-dismiss=\"modal\">Delete</button>\r\n                </div>\r\n              </div>\r\n          \r\n            </div>\r\n          </div>\r\n          \r\n        </mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"description\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> \r\n            <read-more [text]=\"row.desc\" [maxLength]=\"20\"></read-more>\r\n        </mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"enddate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> End Date </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\">\r\n           {{row.end_date | date: 'dd-MM-yyyy'}}\r\n           <br>\r\n           {{row.end_date | date : 'mediumTime'}}\r\n          </mat-cell>\r\n        \r\n      </ng-container>\r\n      <ng-container matColumnDef=\"startdate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Start Date </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\">\r\n           {{row.start_date | date: 'dd-MM-yyyy'}}\r\n           <br>\r\n           {{row.start_date | date : 'mediumTime'}}\r\n          </mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"rate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Minimum Bid rate </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.min_bid_rate}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"amount\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Bid Amount </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.bid_amount}}</mat-cell>\r\n      </ng-container>\r\n      \r\n      <ng-container matColumnDef=\"image\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Image </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"><img class=\"proimg\" src=\"assets/uploads/{{row.image ||'default.png'}}\" alt=\"\" ></mat-cell>\r\n      </ng-container>\r\n  \r\n      <!-- Name Column -->\r\n      <ng-container matColumnDef=\"name\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.name}} </mat-cell>\r\n      </ng-container>\r\n  \r\n  \r\n  \r\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\r\n      </mat-row>\r\n    </mat-table>\r\n  \r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n  </div>\r\n  \r\n  "
+module.exports = "\r\n  <div *ngIf=\"DeleteSuccess\" class=\"alert alert-success\">\r\n    <strong>Deleted Successfully</strong>\r\n  </div>\r\n<div class=\"example-header\">\r\n    <mat-form-field>\r\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n    </mat-form-field>\r\n  </div>\r\n  <div class=\"products\" *ngIf=\"!existStatus\"><h4>No Products Found!</h4></div>\r\n  <div class=\"example-container mat-elevation-z8\">\r\n  \r\n    <mat-table [dataSource]=\"dataSource\" matSort>\r\n  \r\n  \r\n  \r\n      <!-- Progress Column -->\r\n      <ng-container matColumnDef=\"action\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> \r\n          <a href =\"/product-detail/{{row.id}}\" class=\"btn btn-primary btn-xs\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Edit\"><i class=\"fa fa-pencil\"></i></a>\r\n          <a href=\"#\" class=\"btn btn-primary btn-xs\" data-target=\"#myModal1\" (click)=\"product_det(row.id)\"  data-toggle=\"modal\" ><i class=\"fa fa-trash-o\"></i></a>\r\n          <div id=\"myModal1\" class=\"modal fade\" role=\"dialog\">\r\n            <div class=\"modal-dialog\">\r\n          \r\n              <!-- Modal content-->\r\n              <div class=\"modal-content\">\r\n                <!-- <div class=\"modal-header\"> -->\r\n                  <!-- <h4 class=\"modal-title\">Are you sure to delete?</h4> -->\r\n                <!-- </div> -->\r\n                <div class=\"modal-body\">\r\n                    <h4 class=\"modal-title\">Are you sure to delete?</h4>\r\n                \r\n                </div>\r\n              \r\n                <div class=\"modal-footer\">\r\n                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n                  <button type=\"button\" (click)=\"deleteProduct(pid)\" class=\"btn btn-default\" data-dismiss=\"modal\">Delete</button>\r\n                </div>\r\n              </div>\r\n          \r\n            </div>\r\n          </div>\r\n          \r\n        </mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"description\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> \r\n            <read-more [text]=\"row.desc\" [maxLength]=\"20\"></read-more>\r\n        </mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"enddate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> End Date </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\">\r\n           {{row.end_date | date: 'dd-MM-yyyy'}}\r\n           <br>\r\n           {{row.end_date | date : 'mediumTime'}}\r\n          </mat-cell>\r\n        \r\n      </ng-container>\r\n      <ng-container matColumnDef=\"startdate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Start Date </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\">\r\n           {{row.start_date | date: 'dd-MM-yyyy'}}\r\n           <br>\r\n           {{row.start_date | date : 'mediumTime'}}\r\n          </mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"rate\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Minimum Bid rate </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.min_bid_rate}}</mat-cell>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"amount\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Bid Amount </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.bid_amount}}</mat-cell>\r\n      </ng-container>\r\n      \r\n      <ng-container matColumnDef=\"image\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Image </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"><img class=\"proimg\" src=\"assets/uploads/{{row.image ||'default.png'}}\" alt=\"\" ></mat-cell>\r\n      </ng-container>\r\n  \r\n      <!-- Name Column -->\r\n      <ng-container matColumnDef=\"name\">\r\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\r\n        <mat-cell *matCellDef=\"let row\"> {{row.name}} </mat-cell>\r\n      </ng-container>\r\n  \r\n  \r\n  \r\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\r\n      </mat-row>\r\n    </mat-table>\r\n  \r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n  </div>\r\n  \r\n  "
 
 /***/ }),
 
@@ -4105,6 +4122,7 @@ var ProductComponent = (function () {
         this.productservice = productservice;
         this.router = router;
         this._userService = _userService;
+        this.existStatus = false;
         this.DeleteSuccess = false;
         this.displayedColumns = ['name', 'image', 'amount', 'rate', 'startdate', 'enddate', 'description', 'action'];
     }
@@ -4122,6 +4140,9 @@ var ProductComponent = (function () {
         //console.log('loading table....');
         var users = [];
         this.productservice.getProducts().subscribe(function (data) {
+            if (data != '') {
+                _this.existStatus = true;
+            }
             data.forEach(function (item, index) {
                 users.push({
                     id: item._id,
@@ -4452,7 +4473,7 @@ var RunningAuctionBackComponent = (function () {
         // this.endDate = new Date();
         this.userService.getAllUsersById().subscribe(function (data) {
             _this.users = data;
-            console.log(_this.users);
+            // console.log(this.users);
             _this.getAllproduct();
         });
         this.socket.on('userbidreject', function (data) {
@@ -4490,12 +4511,12 @@ var RunningAuctionBackComponent = (function () {
                 data[index].lastBiduserId = lastBiduserId;
             });
             _this.products = data;
-            console.log(_this.products);
+            // console.log(this.products);
         });
     };
     RunningAuctionBackComponent.prototype.updateInvolved = function (product) {
         this.involvedUsers = product;
-        console.log(this.involvedUsers);
+        // console.log(this.involvedUsers);
     };
     RunningAuctionBackComponent.prototype.timeOver = function () {
         this.getAllproduct();
@@ -5297,7 +5318,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/top-bar/top-bar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"navbar-header\">\r\n       \r\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n    </button>\r\n    <img src=\"./assets/logo/logo.png\" style=\"float: left\" > <a class=\"navbar-brand\" routerLink=\"/dashboard\"> AUCTION</a>\r\n</div>\r\n<!-- Top Menu Items -->\r\n<ul class=\"nav navbar-right top-nav\">\r\n    <li class=\"dropdown\" *ngFor= \"let item of info\">\r\n            \r\n        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"fa fa-bell\"><div class=\"notify-count\">{{count}}</div></i> <b class=\"caret\"></b></a>\r\n        <ul class=\"dropdown-menu message-dropdown\">\r\n            <li class=\"message-preview\"  >\r\n                <a  [routerLink]=\"['/adminviewed/'+item?._id]\">\r\n                    <div class=\"media\">\r\n                        <div class=\"row\">\r\n                        <div class=\"col-md-4\">\r\n                        <span class=\"pull-left\">\r\n                            <img class=\"media-object\" src=\"../../assets/uploads/{{item?.image||'default.png'}}\" alt=\"\">\r\n                        </span>\r\n                       </div>\r\n                       <div class=\"col-md-8\">\r\n                        <div class=\"media-body\">\r\n                            <h5 class=\"media-heading\">\r\n                                <strong>{{item.name}}</strong>\r\n                            </h5>\r\n                            \r\n                            <p>Item confirmed by bidder</p>\r\n                        </div>\r\n                        </div>\r\n                        </div>\r\n                    </div>\r\n                </a>\r\n            </li>\r\n            <!-- <li class=\"message-footer\">\r\n                <a href=\"#\">Read All New Messages</a>\r\n            </li> -->\r\n        </ul>\r\n    </li>\r\n    \r\n    <li class=\"dropdown\">\r\n        <a  (click)=\"logout()\" ><i class=\"fa fa-sign-out\"></i> LogOut </a>\r\n        \r\n    </li>\r\n</ul>\r\n"
+module.exports = "\r\n<div class=\"navbar-header\">\r\n    \r\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n    </button>\r\n    <img src=\"./assets/logo/logo.png\" style=\"float: left\" > <a class=\"navbar-brand\" routerLink=\"/dashboard\"> AUCTION</a>\r\n</div>\r\n<!-- Top Menu Items -->\r\n<ul class=\"nav navbar-right top-nav\" >\r\n    <li class=\"dropdown\" >\r\n            \r\n        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"fa fa-bell\"><div class=\"notify-count\">{{count}}</div></i> <b class=\"caret\"></b></a>\r\n        <ul class=\"dropdown-menu message-dropdown\">\r\n            <li class=\"message-preview\" *ngFor= \"let item of info\">\r\n                <a  [routerLink]=\"['/adminviewed/'+item?._id]\">\r\n                    <div class=\"media\">\r\n                        <div class=\"row\">\r\n                        <div class=\"col-md-4\">\r\n                        <span class=\"pull-left\">\r\n                            <img class=\"media-object\" src=\"../../assets/uploads/{{item?.image||'default.png'}}\" alt=\"\">\r\n                        </span>\r\n                       </div>\r\n                       <div class=\"col-md-8\">\r\n                        <div class=\"media-body\">\r\n                            <h5 class=\"media-heading\">\r\n                                <strong>{{item.name}}</strong>\r\n                            </h5>\r\n                            \r\n                            <p>Item confirmed by bidder</p>\r\n                        </div>\r\n                        </div>\r\n                        </div>\r\n                    </div>\r\n                </a>\r\n            </li>\r\n            <!-- <li class=\"message-footer\">\r\n                <a href=\"#\">Read All New Messages</a>\r\n            </li> -->\r\n        </ul>\r\n    </li>\r\n    \r\n    <li class=\"dropdown\">\r\n        <a  (click)=\"logout()\" ><i class=\"fa fa-sign-out\"></i> LogOut </a>\r\n        \r\n    </li>\r\n</ul>\r\n"
 
 /***/ }),
 
@@ -5310,6 +5331,9 @@ module.exports = "\r\n<div class=\"navbar-header\">\r\n       \r\n    <button ty
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_product_service__ = __webpack_require__("../../../../../src/app/services/product.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__config_config__ = __webpack_require__("../../../../../config/config.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_socket_io_client__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5323,31 +5347,53 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var TopBarComponent = (function () {
-    function TopBarComponent(userService, productService, router) {
+    function TopBarComponent(userService, productService, router, config) {
         this.userService = userService;
         this.productService = productService;
         this.router = router;
+        this.config = config;
+        this.showSuccess = false;
+        this.socket = __WEBPACK_IMPORTED_MODULE_5_socket_io_client__(config.socketURL);
     }
     TopBarComponent.prototype.ngOnInit = function () {
-        // this.userService.getLoggedUSerDetails().subscribe(info =>{
-        //   if(info.role !="admin"){
-        //     this.router.navigate(['/login']);
-        //   }
-        // });
+        var _this = this;
         var details = [];
         this.info = [];
         this.count = 0;
-        //   this.productService.getProducts().subscribe(data3 => {   
-        //     data3.forEach(element => {
-        //       // console.log(element);
-        //       if(element.admin_notification.user_id && element.admin_notification.is_viewed == false){
-        //         this.info.push(element);
-        //         this.count++;
-        //         console.log(this.info);
-        //       }
-        //     });
-        // });
+        this.userService.getLoggedUSerDetails().subscribe(function (info) {
+            if (info.role != "admin") {
+                _this.router.navigate(['/login']);
+            }
+            else {
+                // this.userInfo = info;
+                _this.getNotification();
+            }
+        });
+        this.socket.on('admin_notification', function (data) {
+            // if(this.userInfo._id == data.user_id){
+            _this.getNotification();
+            // }
+        });
+    };
+    TopBarComponent.prototype.getNotification = function () {
+        var _this = this;
+        // console.log("hw");
+        // this.info = [];
+        this.productService.getProducts().subscribe(function (data3) {
+            console.log(data3);
+            data3.forEach(function (element) {
+                // console.log(element.admin_notification.user_id);
+                if (element.admin_notification.is_viewed != true && element.admin_notification.user_id) {
+                    _this.info.push(element);
+                    _this.count++;
+                    // console.log(this.info);
+                }
+                // console.log(this.count)
+            });
+        });
     };
     TopBarComponent.prototype.logout = function () {
         this.userService.logout();
@@ -5362,7 +5408,8 @@ var TopBarComponent = (function () {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_2__services_product_service__["a" /* ProductService */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */]])
+            __WEBPACK_IMPORTED_MODULE_3__angular_router__["e" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_4__config_config__["a" /* Config */]])
     ], TopBarComponent);
     return TopBarComponent;
 }());
