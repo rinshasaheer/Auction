@@ -93,17 +93,17 @@ var returnRouter = function(io) {
         'use strict';
 
         upload(req,res,function(err){
-            console.log(req.body);
+          //  console.log(req.body);
                     // console.log(req.file);
         
                     if(err){
-                        console.log("h");
+                        //console.log("h");
                          res.json({error_code:1,err_desc:err});
         
                          return;
         
                     }
-                        console.log(fileName);
+                       // console.log(fileName);
                      res.json({error_code:0,err_desc:null, filename:fileName});
                     
         });
@@ -140,17 +140,27 @@ router.post('/addnew',function(req,res){
         if(err){
             console.log("Error " + err);
         }else{
-                if(newPro.start_date > new Date()){
-                    console.log("startbid");
+            // console.log(newPro);
+            // console.log(newPro.start_date);
+            // console.log(new Date(newPro.start_date));
+            // console.log(new Date());
+            
+                if(newPro.start_date <= new Date() && newPro.end_date > new Date()){
+                    //console.log("startbid");
                             io.sockets.emit("startbid", {
                             prod_id : insertedPro._id
                             });
-                }else   {
-                    console.log("upcomingbid");
+                }else if(newPro.start_date > new Date() && newPro.end_date > new Date())  {
+                   // console.log("upcomingbid");
                             io.sockets.emit("upcomingnewbid", {
                             prod_id : insertedPro._id
                             });
-                        }
+                } else if(newPro.start_date < new Date() && newPro.end_date < new Date())  {
+                   // console.log("closed bid");
+                            io.sockets.emit("closebid", {
+                            prod_id : insertedPro._id
+                            });
+                }
             res.json(insertedPro);
         }
     })
@@ -181,14 +191,7 @@ router.get('/inform-startproduct/:id',(req,res,next)=>{
     });
 });
 
-//notification info 3001 updateapp
-router.get('/inform-notifi-user/:id',(req,res,next)=>{
-    // console.log('yes');
-//    console.log("noti"+req.params.id);
-    io.sockets.emit("notification", {
-        user_id : req.params.id
-    });
-});
+
 
 //var async = require('async');
 
@@ -199,7 +202,7 @@ router.get('/inform-notifi-user/:id',(req,res,next)=>{
 // Date : 4-12-2017
 // Last Modified : 4-12-2017
 
-router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),function(req,res,next){
+router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),function(req,res){
 
     //console.log(req.body);
 
@@ -210,47 +213,58 @@ router.put('/bid_a_product',passport.authenticate('jwt',{session:false}),functio
             decoded = jwt.verify(authorization, config.secret);
             // console.log(decoded);
             let lastwinner;
-            Product.getProductById(req.body.pid,(err, product)=>{
+            Product.findOneAndUpdate({"_id" : req.body.pid, "anyBidProgress" : false},
+                {"anyBidProgress" : true},
+                { new : true },
+                 (err, product)=>{
+                     console.log(product)
+                if(product){
+                
                 if(product.bidders.length != 0){
                     User.getUserById(product.bidders[product.bidders.length-1].user_id,(err, user)=>{
                         lastwinner = user;
                     });
                 }
-            });
-            Product.findOneAndUpdate(
-                {"_id" : req.body.pid,},
-                { $push:{"bidders": {user_id: decoded._id, amount:req.body.amount }} },
-                { new : true },
-                (err, user)=>{
-                    if(err){
-                        res.json({success: false, msg : "Failed, went somthing wrong "});
-                    }else{
-                        if(lastwinner){
-                            nodemailer.createTestAccount((err, account) => {
-                                let mailOptions = {
-                                    from: 'mean.symptots@gmail.com', // sender address
-                                    to: lastwinner.email,
-                                    subject: 'Alert! Come up with a new bid. Somebody has overtaken you.', // Subject line
-                                    text: '', // plain text body
-                                    html: '<b><h3>Dear ' + lastwinner.name + ',</h3><br/>We have now evaluated that some other bidder have overtaken you. We would be happy to inform that, new submissions from you are welcome until the bid time is closed.  Come up on and got a chance to win. </b>' // html body
-                                };
-                                transporter.sendMail(mailOptions, (error, info) => {
-                                    if (error) {
-                                        // console.log('error');
-                                        return console.log(error);
-                                    }
-                                
+                Product.findOneAndUpdate(
+                    {"_id" : req.body.pid}, 
+                    {$set: {"anyBidProgress": false},$push:{"bidders": {user_id: decoded._id, amount:req.body.amount }} },
+                    { new : true },
+                    (err, user)=>{
+                        if(err){
+                            res.json({success: false, msg : "Failed, went somthing wrong "});
+                        }else{
+                            if(lastwinner){
+                                nodemailer.createTestAccount((err, account) => {
+                                    let mailOptions = {
+                                        from: 'mean.symptots@gmail.com', // sender address
+                                        to: lastwinner.email,
+                                        subject: 'Alert! Come up with a new bid. Somebody has overtaken you.', // Subject line
+                                        text: '', // plain text body
+                                        html: '<b><h3>Dear ' + lastwinner.name + ',</h3><br/>We have now evaluated that some other bidder have overtaken you. We would be happy to inform that, new submissions from you are welcome until the bid time is closed.  Come up on and got a chance to win. </b>' // html body
+                                    };
+                                    transporter.sendMail(mailOptions, (error, info) => {
+                                        if (error) {
+                                            // console.log('error');
+                                            return console.log(error);
+                                        }
+                                    
+                                    });
                                 });
+                            }
+                       
+                            io.sockets.emit("newbid", {
+                                prod_id : req.body.pid
                             });
+                            res.json({success: true, msg : "Your bid Submitted successfully"});
                         }
-                   
-                        io.sockets.emit("newbid", {
-                            prod_id : req.body.pid
-                        });
-                        res.json({success: true, msg : "Your bid Submitted successfully"});
-                    }
+                });
+                }else{
+                    return res.json({success: false, msg : "Another User Bid onProgress TryAgain"});
+                } 
             });
-
+           
+         
+        
         } catch (e) {
             return res.status(401).send('unauthorized 123');
         }
@@ -500,7 +514,7 @@ router.put('/updateInterested/:id',passport.authenticate('jwt',{session:false}),
             decoded;
             try {
                 decoded = jwt.verify(authorization, config.secret);
-                console.log(decoded);
+               // console.log(decoded);
                 Product.findOneAndUpdate({"_id" : req.params.id},
                 {
                     $push:{"intrested_ids": {user_id: decoded._id}}
@@ -596,7 +610,7 @@ router.put('/statusreject/:id',(req,res,next)=>{
                                          }
                                    } 
                         });
-                         console.log(id1);
+                        // console.log(id1);
                          Product.findOneAndUpdate({"bidders._id" : id1},
                             { $set: {"bidders.$.bid_status" : "rejected", "user_notification.status" : false}},
                             { new: true }, 

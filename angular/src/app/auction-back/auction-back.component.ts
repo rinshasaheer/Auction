@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-
+import { UserService} from '../services/user.service';
+import { Router} from '@angular/router';
 @Component({
   selector: 'app-auction-back',
   templateUrl: './auction-back.component.html',
@@ -18,9 +18,14 @@ export class AuctionBackComponent implements OnInit {
       locale: { format: 'DD-MM-YYYY' },
       alwaysShowCalendars: false,
   };
-  constructor() { }
+  constructor(private userService:UserService,private router: Router) { }
 
   ngOnInit() {
+    this.userService.getLoggedUSerDetails().subscribe(info =>{
+      if(info.role !="admin"){
+        this.router.navigate(['/login']);
+      }
+    });
     this.viewComp = 'Running';
     this.title = 'Running Auction';
   }

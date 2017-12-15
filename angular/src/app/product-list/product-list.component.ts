@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, ElementRef,ViewChild,} from '@angular/core';
+import { Component, OnInit, EventEmitter, ElementRef,ViewChild} from '@angular/core';
 import * as $ from 'jquery';
 // import { FlashMessagesService } from 'angular2-flash-messages';
 import { ProductService } from './../services/product.service';
@@ -9,6 +9,7 @@ import { UserService } from '../services/user.service';
 //import { ProductComponent } from './../product/product.component';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CanActivate } from '@angular/router';
+//import { ProductComponent } from './../product/product.component';
 
 import 'rxjs/add/operator/map';
 
@@ -22,15 +23,18 @@ import { FileUploader } from 'ng2-file-upload'; // File Upload
 @Component({
   selector: 'product-list',
   templateUrl: './product-list.component.html',
+ // directives: [ProductComponent],
   styleUrls: ['./product-list.component.css'],
   providers: [ProductService,UserService],
   // pipes :[]
  
   inputs :['pros'],
   outputs : ['SelectPro'],
+  
   //  pipes: [ProductPipe],
 })
 export class ProductListComponent implements OnInit {
+  @ViewChild('child') child:any;
   @ViewChild('closeBtn') closeBtn: ElementRef;
   @ViewChild('f') f: any;
   @ViewChild('imgFile') imgFile: any;
@@ -133,6 +137,7 @@ addProduct(){
             this.showSuccess = true;
             //this.myEvent.emit(null)
             //app-product.loadData();
+            this.child.loadData();
             setTimeout(() => {  
               this.closeBtn.nativeElement.click();
               this.showSuccess = false;
@@ -151,7 +156,7 @@ addProduct(){
               this.f.submitted = false;
               this.btnDisbled = false;
               //ProductComponent.loadData();
-             window.location.reload();
+            // window.location.reload();
               // console.log("Error created user");
             }, 1000);
             
@@ -180,6 +185,7 @@ addProduct(){
       this._prductService.addProduct(this.newproduct).subscribe(data => {
         if(data){
           this.showSuccess = true;
+          this.child.loadData();
           setTimeout(() => {  
     
             this.closeBtn.nativeElement.click();
@@ -194,11 +200,15 @@ addProduct(){
               image :''
           
             };
+            this.imageselect = false;
+            this.imgFile.nativeElement.value = '';
+            this.f.submitted = false;
+            this.btnDisbled = false;
             // this.imageselect = false;
             // this.imgFile.nativeElement.value = '';
             // this.f.submitted = false;
             // this.btnDisbled = false;
-            window.location.reload();
+           // window.location.reload();
             // console.log("Error created user");
           }, 1000);
           // window.location.reload();

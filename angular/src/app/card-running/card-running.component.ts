@@ -118,7 +118,7 @@ export class CardRunningComponent implements OnInit {
             this.btnClass = 'btn-success';
          }else{
           this.isError = true;
-         
+          this.btnDisbled = false;
          }
        });
     }else{

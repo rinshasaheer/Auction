@@ -84,6 +84,10 @@ const ProductsSchema = mongoose.Schema({
             type : Boolean,
             default: true
         },
+        anyBidProgress : {
+            type : Boolean,
+            default: false
+        },
 });
 
 const Product = module.exports = mongoose.model('Product', ProductsSchema, 'products');

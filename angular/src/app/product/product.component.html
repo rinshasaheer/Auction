@@ -46,16 +46,26 @@
       </ng-container>
       <ng-container matColumnDef="description">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.desc}}</mat-cell>
+        <mat-cell *matCellDef="let row"> 
+            <read-more [text]="row.desc" [maxLength]="20"></read-more>
+        </mat-cell>
       </ng-container>
       <ng-container matColumnDef="enddate">
         <mat-header-cell *matHeaderCellDef mat-sort-header> End Date </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.end_date | date: 'dd-MM-yyyy h:mm a'}}</mat-cell>
+        <mat-cell *matCellDef="let row">
+           {{row.end_date | date: 'dd-MM-yyyy'}}
+           <br>
+           {{row.end_date | date : 'mediumTime'}}
+          </mat-cell>
         
       </ng-container>
       <ng-container matColumnDef="startdate">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Start Date </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.start_date | date: 'dd-MM-yyyy h:mm a'}}</mat-cell>
+        <mat-cell *matCellDef="let row">
+           {{row.start_date | date: 'dd-MM-yyyy'}}
+           <br>
+           {{row.start_date | date : 'mediumTime'}}
+          </mat-cell>
       </ng-container>
       <ng-container matColumnDef="rate">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Minimum Bid rate </mat-header-cell>
@@ -68,7 +78,7 @@
       
       <ng-container matColumnDef="image">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Image </mat-header-cell>
-        <mat-cell *matCellDef="let row"><img class="proimg" src="assets/uploads/{{row.image}}" alt="" ></mat-cell>
+        <mat-cell *matCellDef="let row"><img class="proimg" src="assets/uploads/{{row.image ||'default.png'}}" alt="" ></mat-cell>
       </ng-container>
   
       <!-- Name Column -->

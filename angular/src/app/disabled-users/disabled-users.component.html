@@ -36,9 +36,9 @@
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
-              <button *ngIf="row.block_status=='true' && row.delete_status=='false'" mat-menu-item >
+              <button *ngIf="row.block_status=='true' && row.delete_status=='false'" (click)="unblockUser(row._id)" mat-menu-item >
                
-                <span><a  (click)="unblockUser(row._id)">Unblock</a></span>
+                <span>Unblock</span>
               </button>
               
               
