@@ -35,6 +35,7 @@ export class ActiveUsersComponent implements OnInit{
         //   action:item._id
         // });
         // });
+       // console.log()
         if(data != '')
         {
           this.existStatus = true;

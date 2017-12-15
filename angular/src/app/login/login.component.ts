@@ -9,7 +9,7 @@ import { CanActivate, Router } from '@angular/router';
   providers : [UserService]
 })
 export class LoginComponent implements OnInit {
-  
+  btnDisbled:boolean = false;
   newLogin = {
     email : '',
     password : '',
@@ -31,10 +31,12 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
+    this.btnDisbled = true;
     this.userService.authenticateUser(this.newLogin).subscribe(data => {
       // console.log('after auth');
       console.log(data);
       if(data.success==false){
+        this.btnDisbled = false;
         this.status= true;
       }
       if(data.success){
@@ -57,6 +59,7 @@ export class LoginComponent implements OnInit {
         })
       } else {
         // console.log(data.msg);
+        this.btnDisbled = false;
         this.msg = data.msg;
         // this.routes.navigate(['/registration']);
       }

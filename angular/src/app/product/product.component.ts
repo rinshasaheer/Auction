@@ -52,30 +52,34 @@ ngOnInit() {
       this.router.navigate(['/login']);
     }
   });
-    const users: any[] = [];
-    this.productservice.getProducts().subscribe(data=>{
-        data.forEach((item, index) => {
-          users.push({
-          id :item._id,
-          name: item.name,
-          image : item.image,
-          bid_amount : item.bid_amount,
-          min_bid_rate :item.min_bid_rate,
-          start_date :item.start_date,
-          end_date :item.end_date,
-          desc:item.desc
 
-
-        
-        });
-        });
-        this.dataSource = new MatTableDataSource(users);
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-  });
-
+  this.loadData();
 }
 
+loadData(){
+  //console.log('loading table....');
+  const users: any[] = [];
+  this.productservice.getProducts().subscribe(data=>{
+      data.forEach((item, index) => {
+        users.push({
+        id :item._id,
+        name: item.name,
+        image : item.image,
+        bid_amount : item.bid_amount,
+        min_bid_rate :item.min_bid_rate,
+        start_date :item.start_date,
+        end_date :item.end_date,
+        desc:item.desc
+
+
+      
+      });
+      });
+      this.dataSource = new MatTableDataSource(users);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+});
+}
 
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace
@@ -89,10 +93,11 @@ ngOnInit() {
       this.productservice.deleteProduct(pid).subscribe(data1 => {
               if(data1){
                 // console.log(data1);
-                
+                this.DeleteSuccess = true;
                 setTimeout(() => {  
-                  this.DeleteSuccess = true;
-                  window.location.reload();
+                  this.DeleteSuccess = false;
+                  this.loadData();
+                 // window.location.reload();
                   // console.log("Error created user");
                 }, 1000);
               //  alert("Delete Product Successfully");

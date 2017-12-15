@@ -16,6 +16,7 @@ import { CanActivate, Router } from '@angular/router';
 export class RegistrationComponent implements OnInit {
   showSuccess : Boolean = false;
   showDanger : Boolean = false;
+  btnDisbled:boolean = false;
   timestamp = new Date().getTime().toString();
   newUser = {
     name : '',
@@ -38,6 +39,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   onRegisterSubmit(){
+    this.btnDisbled = true;
     console.log(this.newUser);
     this.userService.registerUser(this.newUser).subscribe(data => {
       if(data.success==true){
@@ -50,6 +52,7 @@ export class RegistrationComponent implements OnInit {
       
       } else {
         // this._flashMessagesService.show('The email address you specified is already in use. Please login to continue', { cssClass: 'alert-danger', timeout: 4000 });
+        this.btnDisbled = false;
         this.showDanger = true;
         setTimeout(() => {  
           this.showDanger = false;

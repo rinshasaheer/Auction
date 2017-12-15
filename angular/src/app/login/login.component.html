@@ -29,7 +29,7 @@
           <input type="password" class="form-control" id="inputPassword" required [(ngModel)]="newLogin.password" name="password" #password="ngModel">
           <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
         </div>
-        <button type="submit" class="btn btn btn-primary">
+        <button [disabled]="btnDisbled" type="submit" class="btn btn btn-primary">
           Log In
         </button>
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && status }">
