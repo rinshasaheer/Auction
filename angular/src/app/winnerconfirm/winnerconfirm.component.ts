@@ -88,11 +88,13 @@ export class WinnerconfirmComponent implements OnInit {
              if(this.high_amount1 <= temp ){
                this.high_amount1 = temp;
                this.user_id1 = data1.bidders[i].user_id;
+               
              }
        } 
      }
-    //  console.log(this.user_id1);
-    if(this.user_id1!=null || this.user_id1!=''){
+     console.log(this.user_id1);
+    if(this.user_id1 != null){
+      console.log(this.user_id1);
      this.userService.sendMailtoWinner(this.user_id1, this.newproduct.pid).subscribe(data2 =>{
      });
      this.productService.updateNotif(this.user_id1, this.newproduct.pid).subscribe(data5 =>{

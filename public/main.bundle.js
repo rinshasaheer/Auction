@@ -5927,8 +5927,9 @@ var WinnerconfirmComponent = (function () {
                     }
                 }
             }
-            //  console.log(this.user_id1);
-            if (_this.user_id1 != null || _this.user_id1 != '') {
+            console.log(_this.user_id1);
+            if (_this.user_id1 != null) {
+                console.log(_this.user_id1);
                 _this.userService.sendMailtoWinner(_this.user_id1, _this.newproduct.pid).subscribe(function (data2) {
                 });
                 _this.productService.updateNotif(_this.user_id1, _this.newproduct.pid).subscribe(function (data5) {
